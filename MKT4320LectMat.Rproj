@@ -13,3 +13,4 @@ RnwWeave: knitr
 LaTeX: XeLaTeX
 
 BuildType: Website
+WebsitePath: C:/Users/jdmeyer/Dropbox/_DATA/Teaching/MKT4320/MKT4320LectMat

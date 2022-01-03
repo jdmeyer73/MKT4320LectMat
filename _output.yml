@@ -8,6 +8,6 @@ bookdown::gitbook:
       scroll_highlight: yes
       before: null
       after: null
-    edit: false
+    edit: null
     download: false
     number_sections: false
