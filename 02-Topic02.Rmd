@@ -28,6 +28,9 @@ library(dplyr)         # Easier programming
 load("Topic02/advtsales.rdata")
 load("Topic02/deptstoresales.rdata")
 ```
+[Download advtsales.rdata](Topic02/advtsales.rdata)  
+[Download deptstoresales.rdata](Topic02/deptstoresales.rdata)
+
 
 ## Understanding Regression Analysis
 

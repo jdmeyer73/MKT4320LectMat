@@ -23,6 +23,8 @@ library(sjPlot)      # Easily create cross-tabs
 load("Topic01/airlinesat.rdata")
 ```
 
+[Download airlinesat.rdata](Topic01/airlinesat.rdata)
+
 ## Describing Data
 
 How we examine and summarize data depends on:
