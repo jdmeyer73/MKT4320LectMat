@@ -59,7 +59,6 @@ results
 r-output
 regression-results-concise
 standard-results
-testing-overall-model-significance
 assessing-overall-model-fit
 individual-independent-variables
 model-prediction-1

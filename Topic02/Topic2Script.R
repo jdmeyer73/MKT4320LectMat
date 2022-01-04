@@ -1,16 +1,16 @@
 library(ggplot2)       # Advanced graphing capabilities
-library(dplyr)         # Easier programming
 library(tidyr)         # Easier programming   
 library(scales)        # Control appearance of axes and legend labels
-library(questionr)     # Easier frequency tables
 library(htmlTable)     # Better HTML Tables
-library(mosaic)        # Statistical functions
-library(sjPlot)        # Easily create cross-tabs
-library(summarytools)  # Easily create summary statistics
 library(reshape2)      # Easily convert wide data to long data
 library(GGally)        # ggplot extension; for scatterplot matrix
-library(broom)         # Tidy regression results
-library(QuantPsyc)     # Easily get standardized betas
+library(summarytools)  # Summary statistics
+library(effects)       # Help with linear predictions
+library(cowplot)       # Arrange separate plots in a grid
+library(ggtext)        # Annotate ggplots
+library(lubridate)     # Easily work with dates
+library(jtools)        # Concise regression results
+library(dplyr)         # Easier programming
 load("Topic02/advtsales.rdata")
 set.seed(123)
 temp <- advtsales %>% sample_n(30)

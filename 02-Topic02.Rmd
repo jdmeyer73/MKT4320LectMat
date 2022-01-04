@@ -25,6 +25,7 @@ library(ggtext)        # Annotate ggplots
 library(lubridate)     # Easily work with dates
 library(jtools)        # Concise regression results
 library(dplyr)         # Easier programming
+library(broom)         # Extract values from model
 load("Topic02/advtsales.rdata")
 load("Topic02/deptstoresales.rdata")
 ```
@@ -122,11 +123,6 @@ addHtmlTableStyle(css.cell=mat2, htmlTable(mat1))
 ```
 
 ### Model Interpetation
-
-*Testing Overall Model Significance*
-
-* Relationship between DV and combined effects of IVs
-* $H_0:\beta_1=\beta_2=\beta_3=0$ *vs.* $H_a: \text{at least one } \beta_k\ne0$
 
 *Assessing Overall Model Fit*
 
@@ -234,7 +230,7 @@ melt(lrreg1) %>%  # Use package 'reshape2' to reshape the data for facet plot
 
 <div class="hr" id="t22">
 ***Table 2.2: Regression Results (Concise)***
-``` {r t2results1, echo=FALSE, comment=NA, cache=TRUE}
+``` {r t2results1, echo=FALSE, cache=TRUE, comment=NA}
 # Run linear model and save as 'results'
 results <- lm(sales ~ ad_tv + ad_radio + ad_paper, data = advtsales)
 summ(results, digits=4, model.info=FALSE)
@@ -254,14 +250,6 @@ summary(results)
 ```
 [R Code](#table23)
 </div><p>
-
-#### Testing Overall Model Significance
-
-* Relationship between DV and combined effects of IVs
-* $H_0:\beta_1=\beta_2=\beta_3=0$  
-    $H_a: \text{at least one } \beta_k\ne0$
-* Use $F\text{-statistic}$ to test
-* Conclusion:  With a $F\text{-statistic}=570.3$ and a $p\text{-value}<0.001$, we conclude that at least one $\beta_k$ is significant
 
 #### Assessing Overall Model Fit
 
@@ -900,7 +888,7 @@ ggplot(aes(x=size,  # levels of 'size' for x-axis
    scale_color_manual(name="Quarter", values=c("darkred", "darkblue", "darkgreen", "darkorange")) +
    scale_fill_manual(name="Quarter", values=c("red", "blue", "green", "orange")) +
    # Next two commands scale x and y axes
-   scale_x_continuous(breaks=seq(0,240000,40000), expand=expansion(mult=c(.2,.3)), minor_breaks=NULL) +
+   scale_x_continuous(breaks=seq(0,240000,40000), expand=expansion(mult=c(.2,.4)), minor_breaks=NULL) +
    scale_y_continuous(limits=c(-10000,45000), expand=c(.025,.025), 
                       breaks=seq(-10000,40000,10000), minor_breaks=NULL) +
    # Position legend at bottom with title over legend; change text size

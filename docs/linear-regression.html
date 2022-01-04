@@ -210,10 +210,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="linear-regression.html"><a href="linear-regression.html#results"><i class="fa fa-check"></i><b>2.5.3</b> Results</a>
 <ul>
 <li class="chapter" data-level="2.5.3.1" data-path="linear-regression.html"><a href="linear-regression.html#r-output"><i class="fa fa-check"></i><b>2.5.3.1</b> R Output</a></li>
-<li class="chapter" data-level="2.5.3.2" data-path="linear-regression.html"><a href="linear-regression.html#testing-overall-model-significance"><i class="fa fa-check"></i><b>2.5.3.2</b> Testing Overall Model Significance</a></li>
-<li class="chapter" data-level="2.5.3.3" data-path="linear-regression.html"><a href="linear-regression.html#assessing-overall-model-fit"><i class="fa fa-check"></i><b>2.5.3.3</b> Assessing Overall Model Fit</a></li>
-<li class="chapter" data-level="2.5.3.4" data-path="linear-regression.html"><a href="linear-regression.html#individual-independent-variables"><i class="fa fa-check"></i><b>2.5.3.4</b> Individual Independent Variables</a></li>
-<li class="chapter" data-level="2.5.3.5" data-path="linear-regression.html"><a href="linear-regression.html#model-prediction-1"><i class="fa fa-check"></i><b>2.5.3.5</b> Model Prediction</a></li>
+<li class="chapter" data-level="2.5.3.2" data-path="linear-regression.html"><a href="linear-regression.html#assessing-overall-model-fit"><i class="fa fa-check"></i><b>2.5.3.2</b> Assessing Overall Model Fit</a></li>
+<li class="chapter" data-level="2.5.3.3" data-path="linear-regression.html"><a href="linear-regression.html#individual-independent-variables"><i class="fa fa-check"></i><b>2.5.3.3</b> Individual Independent Variables</a></li>
+<li class="chapter" data-level="2.5.3.4" data-path="linear-regression.html"><a href="linear-regression.html#model-prediction-1"><i class="fa fa-check"></i><b>2.5.3.4</b> Model Prediction</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="linear-regression.html"><a href="linear-regression.html#categorical-ivs"><i class="fa fa-check"></i><b>2.6</b> Categorical IVs</a>
@@ -299,8 +298,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb18-11"><a href="linear-regression.html#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)     <span class="co"># Easily work with dates</span></span>
 <span id="cb18-12"><a href="linear-regression.html#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)        <span class="co"># Concise regression results</span></span>
 <span id="cb18-13"><a href="linear-regression.html#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
-<span id="cb18-14"><a href="linear-regression.html#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic02/advtsales.rdata&quot;</span>)</span>
-<span id="cb18-15"><a href="linear-regression.html#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic02/deptstoresales.rdata&quot;</span>)</span></code></pre></div>
+<span id="cb18-14"><a href="linear-regression.html#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)         <span class="co"># Extract values from model</span></span>
+<span id="cb18-15"><a href="linear-regression.html#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic02/advtsales.rdata&quot;</span>)</span>
+<span id="cb18-16"><a href="linear-regression.html#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic02/deptstoresales.rdata&quot;</span>)</span></code></pre></div>
 <p><a href="Topic02/advtsales.rdata">Download advtsales.rdata</a><br />
 <a href="Topic02/deptstoresales.rdata">Download deptstoresales.rdata</a></p>
 </div>
@@ -442,11 +442,6 @@ Stat &gt; Regression &gt; Regression
 </div>
 <div id="model-interpetation" class="section level3" number="2.4.4">
 <h3><span class="header-section-number">2.4.4</span> Model Interpetation</h3>
-<p><em>Testing Overall Model Significance</em></p>
-<ul>
-<li>Relationship between DV and combined effects of IVs</li>
-<li><span class="math inline">\(H_0:\beta_1=\beta_2=\beta_3=0\)</span> <em>vs.</em> <span class="math inline">\(H_a: \text{at least one } \beta_k\ne0\)</span></li>
-</ul>
 <p><em>Assessing Overall Model Fit</em></p>
 <ul>
 <li>How much variation in the DV is explained by the model</li>
@@ -792,18 +787,8 @@ F-statistic: 570.3 on 3 and 196 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>
 </div>
 </div>
-<div id="testing-overall-model-significance" class="section level4" number="2.5.3.2">
-<h4><span class="header-section-number">2.5.3.2</span> Testing Overall Model Significance</h4>
-<ul>
-<li>Relationship between DV and combined effects of IVs</li>
-<li><span class="math inline">\(H_0:\beta_1=\beta_2=\beta_3=0\)</span><br />
-<span class="math inline">\(H_a: \text{at least one } \beta_k\ne0\)</span></li>
-<li>Use <span class="math inline">\(F\text{-statistic}\)</span> to test</li>
-<li>Conclusion: With a <span class="math inline">\(F\text{-statistic}=570.3\)</span> and a <span class="math inline">\(p\text{-value}&lt;0.001\)</span>, we conclude that at least one <span class="math inline">\(\beta_k\)</span> is significant</li>
-</ul>
-</div>
-<div id="assessing-overall-model-fit" class="section level4" number="2.5.3.3">
-<h4><span class="header-section-number">2.5.3.3</span> Assessing Overall Model Fit</h4>
+<div id="assessing-overall-model-fit" class="section level4" number="2.5.3.2">
+<h4><span class="header-section-number">2.5.3.2</span> Assessing Overall Model Fit</h4>
 <ul>
 <li>How much variation in the DV is explained by the model</li>
 <li>Use <span class="math inline">\(R^2\)</span> to assess</li>
@@ -811,8 +796,8 @@ F-statistic: 570.3 on 3 and 196 DF,  p-value: &lt; 2.2e-16</code></pre>
 <li>Conclusion: Based on the <span class="math inline">\(R^2\)</span>, about <span class="math inline">\(90\%\)</span> of the variance in <span class="math inline">\(sales\)</span> is explained by the model</li>
 </ul>
 </div>
-<div id="individual-independent-variables" class="section level4" number="2.5.3.4">
-<h4><span class="header-section-number">2.5.3.4</span> Individual Independent Variables</h4>
+<div id="individual-independent-variables" class="section level4" number="2.5.3.3">
+<h4><span class="header-section-number">2.5.3.3</span> Individual Independent Variables</h4>
 <ul>
 <li>Relationship between DV and each IV
 <ul>
@@ -877,8 +862,8 @@ ad_paper
 </div>
 <p>
 </div>
-<div id="model-prediction-1" class="section level4" number="2.5.3.5">
-<h4><span class="header-section-number">2.5.3.5</span> Model Prediction</h4>
+<div id="model-prediction-1" class="section level4" number="2.5.3.4">
+<h4><span class="header-section-number">2.5.3.4</span> Model Prediction</h4>
 <ul>
 <li>For simplicity, use only <span class="math inline">\(ad\_tv\)</span> and <span class="math inline">\(ad\_radio\)</span></li>
 </ul>
