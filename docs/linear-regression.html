@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Linear Regression | MKT 4320: Marketing Analytics</title>
   <meta name="description" content="Lecture materials for MKT 4320 in bookdown style." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Linear Regression | MKT 4320: Marketing Analytics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeffrey Meyer" />
 
 
-<meta name="date" content="2022-01-03" />
+<meta name="date" content="2022-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="examining-and-summarizing-data.html"/>
-
+<link rel="next" href="logistic-regression.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -254,6 +254,39 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.9.18" data-path="linear-regression.html"><a href="linear-regression.html#figure29"><i class="fa fa-check"></i><b>2.9.18</b> Figure 2.9</a></li>
 <li class="chapter" data-level="2.9.19" data-path="linear-regression.html"><a href="linear-regression.html#figure210"><i class="fa fa-check"></i><b>2.9.19</b> Figure 2.10</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="logistic-regression.html"><a href="logistic-regression.html"><i class="fa fa-check"></i><b>3</b> Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="logistic-regression.html"><a href="logistic-regression.html#motivation-2"><i class="fa fa-check"></i><b>3.1</b> Motivation</a></li>
+<li class="chapter" data-level="3.2" data-path="logistic-regression.html"><a href="logistic-regression.html#r-packages-and-datasets-for-topic-2-1"><i class="fa fa-check"></i><b>3.2</b> R Packages and Datasets for Topic 2</a></li>
+<li class="chapter" data-level="3.3" data-path="logistic-regression.html"><a href="logistic-regression.html#why-not-use-linear-regression"><i class="fa fa-check"></i><b>3.3</b> Why not use linear regression?</a></li>
+<li class="chapter" data-level="3.4" data-path="logistic-regression.html"><a href="logistic-regression.html#understanding-logistic-regression"><i class="fa fa-check"></i><b>3.4</b> Understanding Logistic Regression</a></li>
+<li class="chapter" data-level="3.5" data-path="logistic-regression.html"><a href="logistic-regression.html#conducting-logistic-regression"><i class="fa fa-check"></i><b>3.5</b> Conducting Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="logistic-regression.html"><a href="logistic-regression.html#model-estimation-1"><i class="fa fa-check"></i><b>3.5.1</b> Model Estimation</a></li>
+<li class="chapter" data-level="3.5.2" data-path="logistic-regression.html"><a href="logistic-regression.html#assessing-model-fit"><i class="fa fa-check"></i><b>3.5.2</b> Assessing Model Fit</a>
+<ul>
+<li class="chapter" data-level="3.5.2.1" data-path="logistic-regression.html"><a href="logistic-regression.html#goodness-of-fit-measures"><i class="fa fa-check"></i><b>3.5.2.1</b> Goodness-of-Fit Measures</a></li>
+<li class="chapter" data-level="3.5.2.2" data-path="logistic-regression.html"><a href="logistic-regression.html#classification-matrix"><i class="fa fa-check"></i><b>3.5.2.2</b> Classification Matrix</a></li>
+<li class="chapter" data-level="3.5.2.3" data-path="logistic-regression.html"><a href="logistic-regression.html#roc-curve"><i class="fa fa-check"></i><b>3.5.2.3</b> ROC Curve</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5.3" data-path="logistic-regression.html"><a href="logistic-regression.html#interpreting-coefficients"><i class="fa fa-check"></i><b>3.5.3</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="3.5.4" data-path="logistic-regression.html"><a href="logistic-regression.html#gain-and-lift"><i class="fa fa-check"></i><b>3.5.4</b> Gain and Lift</a>
+<ul>
+<li class="chapter" data-level="3.5.4.1" data-path="logistic-regression.html"><a href="logistic-regression.html#gain"><i class="fa fa-check"></i><b>3.5.4.1</b> Gain</a></li>
+<li class="chapter" data-level="3.5.4.2" data-path="logistic-regression.html"><a href="logistic-regression.html#lift"><i class="fa fa-check"></i><b>3.5.4.2</b> Lift</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="logistic-regression.html"><a href="logistic-regression.html#logistic-regression-example"><i class="fa fa-check"></i><b>3.6</b> Logistic Regression Example</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="logistic-regression.html"><a href="logistic-regression.html#overview-3"><i class="fa fa-check"></i><b>3.6.1</b> Overview</a></li>
+<li class="chapter" data-level="3.6.2" data-path="logistic-regression.html"><a href="logistic-regression.html#estimation-results"><i class="fa fa-check"></i><b>3.6.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="3.6.3" data-path="logistic-regression.html"><a href="logistic-regression.html#overall-model-fit"><i class="fa fa-check"></i><b>3.6.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="3.6.4" data-path="logistic-regression.html"><a href="logistic-regression.html#interpreting-coefficients-1"><i class="fa fa-check"></i><b>3.6.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="3.6.5" data-path="logistic-regression.html"><a href="logistic-regression.html#gain-1"><i class="fa fa-check"></i><b>3.6.5</b> Gain</a></li>
+<li class="chapter" data-level="3.6.6" data-path="logistic-regression.html"><a href="logistic-regression.html#lift-1"><i class="fa fa-check"></i><b>3.6.6</b> Lift</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="logistic-regression.html"><a href="logistic-regression.html#r-code-2"><i class="fa fa-check"></i><b>3.7</b> R Code</a></li>
 </ul></li>
 </ul>
 
@@ -2181,8 +2214,8 @@ quarter3
           </div>
         </div>
       </div>
-<a href="examining-and-summarizing-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="examining-and-summarizing-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="logistic-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

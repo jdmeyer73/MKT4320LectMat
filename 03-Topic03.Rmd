@@ -1,0 +1,958 @@
+```{r echo=FALSE}
+knitr::opts_chunk$set(comment=NA)
+```
+
+# Logistic Regression
+
+## Motivation
+
+* Marketers often observe binary outcomes
+    * Did a customer:
+        * purchase?
+        * subscribe?
+        * renew?
+        * respond?
+* Using linear regression is not appropriate…
+* …But logistic regression still allows us to:
+    * Understand IV/DV relationships
+    * Make predictions
+
+
+
+## R Packages and Datasets for Topic 2
+
+``` {r t3packagesdata, message=FALSE}
+library(ggplot2)       # Advanced graphing capabilities
+library(tidyr)         # Easier programming   
+library(scales)        # Control appearance of axes and legend labels
+library(flextable)     # Better HTML Tables
+library(htmlTable)     # Better HTML Tables
+library(reshape2)      # Easily convert wide data to long data
+library(GGally)        # ggplot extension; for scatterplot matrix
+library(summarytools)  # Summary statistics
+library(cowplot)       # Arrange separate plots in a grid
+library(ggtext)        # Annotate ggplots
+library(lubridate)     # Easily work with dates
+library(jtools)        # Concise regression results
+library(dplyr)         # Easier programming
+library(caret)         # Create data partitions
+library(tibble)        # 
+load("Topic03/directmktg.rdata")
+source("Topic03/or_table.R")
+source("Topic03/logreg_cm.R")
+source("Topic03/logreg_roc.R")
+source("Topic03/gainlift.R")
+```
+[Download directmktg.rdata](Topic03/directmktg.rdata)
+
+## Why not use linear regression?
+
+Want to see how $age$ affects $buy$
+
+* $buy=\begin{cases}1\text{ if yes/true}\\0\text{ if no/false}\end{cases}$
+
+Examine relationship with a scatterplot
+
+* What do we see?
+    ```{r t3scatter01, echo=FALSE, cache=TRUE, fig.cap="Scatterplot with binary DV ([R code](#figure-reffigt3scatter01))"}
+    directmktg %>%
+        mutate(buy01=as.numeric(buy)-1) %>%
+        ggplot(aes(x=age, y=buy01)) +
+            geom_point(size=3, color="red") +
+            theme(text=element_text(size=15)) +
+            labs(x="Age", y="Buy")
+    ```
+
+
+* Try linear regression: $buy=\alpha+\beta_1 age$  
+<caption>(\#tab:t3linreg01) Linear Regression Results ([R code](#table-reftabt3linreg01))</caption>
+    ```{r t3linreg01, echo=FALSE, cache=TRUE}
+    model <- directmktg %>%
+        mutate(buy=as.numeric(buy)-1) %>%
+        lm(buy ~ age, .)
+    summ(model, model.info=FALSE, digits=4)
+    ```
+
+* Good $R^2$ and $age$ is highly significant
+* So what's the problem?
+
+* Predict $buy$ from linear regression results:<br>
+$\hat{buy}=-.7154+.0285age$
+
+* Prediction line shown in plot
+    ```{r t3scatter02, echo=FALSE, cache=TRUE, fig.cap="Predicted Values from Linear Regression ([R code](#figure-reffigt3scatter02))"}
+    directmktg %>%
+        select(age) %>%
+        mutate(yhat=predict.lm(model,.)) %>%
+        mutate(neg=as.factor(ifelse(yhat<0,"Yes","No"))) %>%
+        ggplot(aes(x=age, y=yhat, color=neg)) +
+            geom_point(size=3) +
+            scale_color_manual(values=c("Yes"="red",
+                                        "No"="black"),
+                               guide="none") +
+        theme(text=element_text(size=15)) +
+        labs(x="Age", y="Linear Prediction")
+    ```
+
+* Add $age$ categories and plot mean $buy$ for each category
+    * What "shape" does this resemble?
+    * Can we use this "shape" to model the relationship?
+
+    ```{r t3lineshape, echo=FALSE, cache=TRUE, fig.cap="Buy for Age Groups ([R code](#figure-reffigt3lineshape))"}
+    # Create data frame grouped by age
+    dmgrp <- directmktg %>%
+        # 'cut' breaks a continuous variable into groups of each width
+        # 'as.numeric' keeps the new variable as integer (vs. factor)
+        mutate(agegrp = as.numeric(cut(age, 9))) %>%
+        group_by(agegrp) %>%
+        summarise(age=mean(age), buy=mean(as.numeric(buy)-1))
+    
+    # Run logistic model to create prediction to make s-curve
+    binmod <- glm(buy~age, directmktg, family="binomial")
+    # Create dataframe with predicted values
+    dmpred <- directmktg %>%
+        select(age, buy) %>%
+        mutate(yhat=predict(binmod, type="response"),
+               buy=as.numeric(buy)-1)
+    
+    # Create combined plot; each geom with separate data
+    ggplot() + 
+        geom_point(data=directmktg, 
+                   aes(x=age, y=(as.numeric(buy)-1)), 
+                   size=3, color="red") + 
+        geom_line(data=dmgrp, 
+                  aes(x=age, y=buy), 
+                  size=1.5, color="midnightblue") +
+        geom_line(data=dmpred, 
+                  aes(x=age, y=yhat), 
+                  size=1.5, color="darkorange") +
+        theme(text=element_text(size=15)) + 
+        labs(x="Age", y="Buy")
+    ```
+
+## Understanding Logistic Regression
+
+* Uses the logistic function:<br>
+$f(z)=\frac{e^u}{1+e^u}$  
+    * $f(z)$ is the probability of event happening
+    * $u$ is a linear function, such as: $\alpha+\beta x$
+* Ensures predictions are never above 1 or below 0
+    ```{r t3logitcurve, echo=FALSE, cache=TRUE, fig.cap="Logistic Function ([R code](#figure-reffigt3logitcurve))"}
+    # Create simulated data frame based on logistic function
+    u=seq(-7,7,.05)
+    fz=exp(u)/(1+exp(u))
+    ufz=data.frame(u=u, fz=fz)
+    # Plot function
+    ufz %>%
+        ggplot(aes(x=u, y=fz)) +
+            geom_line(color="darkorange", size=1.5) +
+            theme(text=element_text(size=15),
+                  panel.grid.major.x = element_blank()) +
+            scale_x_continuous(breaks=0, minor_breaks=NULL) +
+            scale_y_continuous(breaks=seq(0,1,1), minor_breaks=NULL) +
+            labs(x="u", y="f(z)")
+    ```
+
+* Probability of event success vs. failure $=\frac{f(z)}{1-f(z)}=$ Odds Ratio ($OR$)
+    * Suppose probability of success $=.01$, then:<br>
+    $OR=\frac{.01}{1-.01}=.0101$
+        * Suppose probability of success $=.001$, then:<br>
+    $OR=\frac{.001}{1-.001}=.0010$
+        * Suppose probability of success $=.99$, then:<br>
+    $OR=\frac{.99}{1-.99}=99$
+        * Suppose probability of success $=.999$, then:<br>
+    $OR=\frac{.999}{1-.999}=999$
+        * Suppose probability of success $=.5$, then:<br>
+    $OR=\frac{.5}{1-.5}=1$
+* Substituting logistic function for $f(z)$ into Odds Ratio $\Rightarrow$<br>
+$OR=e^u=e^{\alpha+betax}$
+    * $\frac{f(z)}{1-f(z)}=\frac{\frac{e^u}{1+e^u}}{1-\frac{e^u}{1+e^u}}=\frac{\frac{e^u}{1+e^u}}{\frac{1+e^u}{1+e^u}-\frac{e^u}{1+e^u}}=\frac{\frac{e^u}{1+e^u}}{\frac{1}{1+e^u}}=e^u$
+* Can transform exponential function into linear $\Rightarrow$<br>
+$Logit=\ln(OR)=\alpha+\beta x$
+
+## Conducting Logistic Regression
+
+* Model Estimation
+* Assessing Model Fit
+    * Goodness of Fit Measures
+    * Classification Matrix
+    * ROC Curve
+* Interpreting Coefficients
+* Gains and Lift
+
+### Model Estimation
+
+* Best to use training data and holdout data  
+    * Estimate model on training data (~75% of sample)
+    * Check prediction accuracy on holdout data (~25%)
+* Can estimate either (1) $OR$ or (2) $Logit$ formulation
+    (1) $OR=e^{\alpha+\beta_1x_1+\cdots+\beta_kx_k}$
+    (2) $Logit=\alpha+\beta_1x_1+\cdots+\beta_kx_k$
+* Independent variables:
+    * Can be one or more
+    * Can be continuous or categorical/factor
+
+### Assessing Model Fit
+
+#### Goodness-of-Fit Measures
+
+* Overall significance based on $-2LL$
+    * Lower (closer to $0$) $-2LL$ indicates a better fit
+    * Compare $-2LL$ of estimated model with "null" model
+* McFadden's Pseudo-$R^2$
+    * Values range from 0 to 1 like linear regression
+    * Interpreted in a similar manner
+        * Amount of variation in DV explained by IVs
+
+#### Classification Matrix
+
+* How does the model do in predicting outcomes?
+* Generate predicted probability of success, $p(\text{SUCCESS})$, for each observation
+    * If $p(\text{SUCCESS})\ge0.5$, predict $\text{SUCCESS}=1$
+    * If $p(\text{SUCCESS})<0.5$, predict $\text{SUCCESS}=0$, or $\text{FAILURE}$
+* Check predictions against actual outcomes
+    * Examine both training and holdout data
+    
+```{r t3classmatimg, echo=FALSE, fig.cap="Classification Matrix"}
+knitr::include_graphics("Topic03/ClassMat.png")
+```
+* Three main measures
+    * Sensitivity: Predicted success given actual success
+        * $p(\hat{+}|+)=a/(a+c)$
+    * Specificity: Predicted failure given actual failure
+        * $p(\hat{-}|-)=d/(b+d)$
+    * Overall correctly classified
+        * $(a+d)/(a+b+c+d)$
+* Sensitivity vs. Specificity
+    * Ideally, want both to be high, but...<br>
+    the $p(\text{SUCCESS})\ge\pi$ threshold can be changed
+    * Why change $\pi$? Avoid false positives or negatives
+    * By default:
+        * Increasing sensitivity decreases specificity
+        * Increasing specificity decreases sensitivity
+* Overall correctly classified
+    * Compare with *Proportional Chance Criterion (*$PCC$*)*
+        * $PCC$ is the "average" probability of classification based on group sizes
+    * $PCC=p^2+(1-p)^2$ where $p$ is the proportion of sample in the $\text{SUCCESS}$ group
+    * Overall correctly classified $>PCC$ considered good fit when examining holdout data
+    
+#### ROC Curve
+
+* Plot sensitivity by $1-$ specificity as $\pi$ goes from $0$ to $1$
+* More area under curve means better model
+<table style="text-align: center;"><tr><td><strong>Area under Curve</strong></td><td><strong>Discrimination</strong></td></tr>
+<tr><td style="font-family: cambria;"><em>AUC</em> = .5</td><td>None</td></tr>
+<tr><td style="font-family: cambria;">.5 < <em>AUC</em> < .7</td><td>Poor</td></tr>
+<tr><td style="font-family: cambria;">.7 &le; <em>AUC</em> < .8</td><td>Acceptable</td></tr>
+<tr><td style="font-family: cambria;">.8 &le; <em>AUC</em> < .9</td><td>Excellent</td></tr>
+<tr><td style="font-family: cambria;"><em>AUC</em> &ge; .9</td><td>Outstanding</td></tr>
+</table>
+    ```{r t3sampleroc, echo=FALSE, fig.cap="Sample ROC Curve"}
+    spec <- seq(0,1,.001)
+    sens <- sqrt(1-spec^2)
+    df <- data.frame(spec,sens)
+    data.frame(spec,sens) %>% 
+        mutate(sens=ifelse(sens>1,1,sens)) %>%
+        mutate(sens=ifelse(sens<0,0,sens)) %>%
+        ggplot(aes(x=spec, y=sens)) +
+            geom_line(color="darkorange", size=2) +
+            scale_x_reverse() + 
+            geom_segment(x=-1, y=0, xend=0, yend=1, 
+                         color="forestgreen", size=2) + 
+            geom_segment(x=-.495, y=.495, xend=-.375, yend=.375,
+                         arrow=arrow(ends="first")) +
+            annotate("text", x=.375, y=.35, 
+                     label="Chance Model", size=6) +
+            theme(text=element_text(size=15)) +
+            labs(x="Specificity", y="Sensitivity")
+    ```
+ 
+### Interpreting Coefficients
+
+* Relationship between DV and each IV
+* $H_0: \beta_k=0$ *vs.* $H_a: \beta_k\ne0$
+* Interpret significant relationships
+    * Interpretation depends on $OR$ or $Logit$ estimation
+    * Direction of relationship:
+        * $Logit$ estimation: $\beta_k>0$ for positive, $\beta_k<0$ for negative
+        * $OR$ estimation: $\beta_k>1$ for positive, $\beta_k<1$ for negative
+    * Magnitude of change:
+        * $Logit$ estimation: coefficients are not particularly useful
+        * $OR$ estimation:
+            * Percentage change in odds
+            * Compare probabilities between groups
+            
+### Gain and Lift
+
+* Evaluate performance of classification
+* Example:
+    * Suppose $10\%$ of $2000$ customers will accept offer
+    * For $100$ random customers, expect $10$ accepted offers
+    * Model predicts some customers more likely to accept
+    * Instead of contacting $100$ random customers…<br>Contact $100$ most likely to accept based on model
+    * Continue doing this in groups of $100$ (or $200$, etc.)
+* Gain and lift provide measures of how much better the model performs vs. no model/random
+* Process
+    1) Predict $p(\text{SUCCESS}) for each observation and sort descending
+    2) Split into 10 (deciles) or 20 (demi-deciles) ordered groups
+    3) Calculate $\%$ observations and $\%$ successes for each group
+
+#### Gain
+
+* Cumulative successes up to that group divided by total successes across all groups
+* Plot on $y$-axis, with cumulative percent of observations on $x$-axis
+    ```{r t3typgain, echo=FALSE, fig.cap="Typical Gain Chart Shape"}
+    pcc <- seq(.05,1,.01)
+    pcp <- .3376*log(pcc)+1.0944
+
+    data.frame(pcc,pcp) %>%
+        mutate(pcp=ifelse(pcp>1,1,pcp)) %>%
+        ggplot(aes(x=pcc, y=pcp)) +
+            geom_line(color="midnightblue", size=1) + 
+            scale_x_continuous("Proportion Customers Contacted",
+                              limits=c(.05,1), breaks=seq(.1,1,.1)) +
+            scale_y_continuous("Proportion Customers Positive",
+                              limits=c(.05,1), breaks=seq(.1,1,.1)) +
+            geom_segment(x=.05, y=.05, xend=1, yend=1, 
+                         color="red", size=1) +
+            geom_segment(x=.9, y=.775, xend=.9, yend=.895,
+                         arrow=arrow(ends="last")) +
+            annotate("text", x=.9, y=.765, 
+                     label="Baseline Model", size=5) +
+            theme(text=element_text(size=15)) +
+            geom_segment(x=.2, y=0, xend=.2, yend=.55105376, 
+                         linetype=2, color="darkorange", size=.75) +
+            geom_segment(x=0, y=.2, xend=.2, yend=.2, 
+                         linetype=2, color="darkorange", size=.75) +
+            geom_segment(x=0, y=.55105376, xend=.2, yend=.55105376,
+                         linetype=2, color="darkorange", size=.75)
+    ```
+
+#### Lift
+
+* Ratio of cumulative success up to that group divided by expected success from no model
+* Plot on $y$-axis, with cumulative percent of observations on $x$-axis
+    ```{r t3typlift, echo=FALSE, fig.cap="Typical Lift Chart Shape"}
+    lift <- 2.7863*pcc^3-4.5901*pcc^2+.2319*pcc+2.5673
+    data.frame(pcc,lift) %>%
+        mutate(lift=ifelse(lift<1,1,lift)) %>%
+        ggplot(aes(x=pcc, y=lift)) +
+            geom_line(color="midnightblue", size=1) + 
+            scale_x_continuous("Proportion Customers Contacted",
+                               limits=c(.05,1), breaks=seq(.1,1,.1)) +
+            scale_y_continuous("Lift",
+                               limits=c(1,2.6), breaks=seq(1,2.5,.25)) +
+            geom_segment(x=.05, y=1, xend=1, yend=1, color="red", size=1) +
+            geom_segment(x=.5, y=1, xend=.5, yend=1.25,
+                         arrow=arrow(ends="first")) +      
+            annotate("text", x=.5, y=1.3, label="Baseline Model", size=5) +
+            theme(text=element_text(size=15)) +   
+            geom_segment(x=.2, y=1, xend=.2, yend=2.452366, 
+                         linetype=2, color="darkorange", size=.75) +
+            geom_segment(x=0, y=2.452366, xend=.2, yend=2.452366, 
+                         linetype=2, color="darkorange", size=.75)
+    ```
+  
+## Logistic Regression Example
+
+### Overview
+
+* Purchase data for direct marketing campaign
+    * 400 observations of individual responses
+    * DV: Purchase made, $buy$ (factor: Yes, No)
+    * IVs:
+        * Age, $age$
+        * Estimated Salary ($000s), $salary$
+        * Gender, $gender$ (factor: Male, Female)
+* Predict likelihood of purchase
+
+### Estimation Results
+
+* Logit formulation results  
+<caption>(\#tab:t3logit01) Logistic Regression Results (Logit Formulation) ([R code](#table-reftabt3logit01))</caption>
+    ``` {r t3logit01, echo=FALSE, cache=TRUE}
+    # Use 'caret' package to create training and test/holdout samples
+    # This will create two separate dataframes: train and test
+    set.seed(4320)
+    inTrain <- createDataPartition(y=directmktg$buy, p=.75, list=FALSE)
+    train <- directmktg[inTrain,]
+    test <- directmktg[-inTrain,]
+    
+    # Estimate the model on the training data
+    model <- glm(buy ~ age + salary + gender, train, family="binomial")
+    summ(model, model.info=FALSE, digits=4)
+    ```
+
+
+
+* Odds Ratio Coefficients  
+<caption>(\#tab:t3logit01or) Logistic Regression Odds Ratio Coefficients ([R code](#table-reftabt3logit01or))</caption>
+
+    ```{r t3logit01or, echo=FALSE, cache=TRUE}
+    # Use the 'or_table.R' user-defined script
+    # It was loaded above with the packages
+    flextable(or_table(model))
+    ```
+
+### Overall Model Fit
+
+* Based on the likelihood ratio $\chi^2$ test with a $p\text{-value}<.0001$, the overall model is significant (see Table \@ref(tab:t3logit01))
+* McFadden's Pseudo-$R^2$ of $.464$ means that the model explains about $46\%$ of the variation between buyers/non-buyers (see Table \@ref(tab:t3logit01))
+* Classification Matrix for the Training Sample shows:
+    * High sensitivity ($72.2\%$)
+    * High specificity ($91.2\%$)
+    * Correctly classified ($84.4\%$) > PCC ($54.0\%$)  
+    
+    <caption>(\#tab:t3cmtrain) Classification Matrix for Training Data ([R code](#table-reftabt3cmtrain))</caption>
+    ```{r t3cmtrain, echo=FALSE, cache=TRUE}
+    # Use the 'logreg_cm.R' user-defined script
+    # It was loaded above with the packages
+    # Requires package 'caret'
+    logreg_cm(model,      # Object with model results
+              train,      # Data to use (i.e., training vs. testing)
+              "Yes")      # Factor level for "True"
+    ```
+
+* Classification Matrix for the Test/Holdout Sample shows:
+    * High sensitivity ($77.1\%$)
+    * High specificity ($90.6\%$)
+    * Correctly classified ($85.9\%$) > PCC ($54.3\%$)  
+
+    <caption>(\#tab:t3cmtest) Classification Matrix for Test/Holdout Data ([R code](#table-reftabt3cmtest))</caption>
+    ```{r t3cmtest, echo=FALSE, cache=TRUE}
+    # Use the 'logreg_cm.R' user-defined script
+    # It was loaded above with the packages
+    # Requires package 'caret'
+    logreg_cm(model,      # Object with model results
+              test,      # Data to use (i.e., training vs. testing)
+              "Yes")      # Factor level for "True"
+    ```
+
+* ROC Curve for Training Sample
+    * Area $>.90$ suggests an outstanding model fit
+
+    ```{r t3roctrain, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve fro Training Data ([R code](#figure-reffigt3roctrain))"}
+    # Use the 'logreg_roc.R' user-defined script
+    # It was loaded above with the packages
+    # Requires package 'pROC' and 'ggplot2
+    logreg_roc(model,      # Object with model results
+               train)      # Data to use (i.e., training vs. testing)
+    ```
+
+* ROC Curve for Training Sample
+    * Area $>.90$ suggests an outstanding model fit
+
+    ```{r t3roctest, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve fro Test/Holdout Data ([R code](#figure-reffigt3roctest))"}
+    # Use the 'logreg_roc.R' user-defined script
+    # It was loaded above with the packages
+    # Requires package 'pROC' and 'ggplot2
+    logreg_roc(model,      # Object with model results
+               test)      # Data to use (i.e., training vs. testing)
+    ```    
+
+### Interpreting Coefficients
+
+* $age$ is positive ($OR>1$) and significant ($p<.001$)
+    * $1$ year increase in $age$ increases odds of buying by a factor of $1.28$ (or odds of buying increase by $25\%$)
+* $salary$ is positive ($OR>1$) and significant ($p<.001$)
+    * $\$1000$ increase in $salary$ increases odds of buying by a factor of $1.04$ (or odds of buying increase by $4\%$)
+* $gender$ is negative ($OR<1$), but not significant ($p=.245$)
+    * Had it been significant...
+    Being female decreases odds of buying by a factor of $.67$ (or odds of buying decrease by $33\%$)
+* Can visually examine how $\Pr(buy)$ changes with a variable for continuous IVs
+    * Factor variables can be separate lines (see \@ref(fig:t3mpage01) or separate plots (see \@ref(fig:t3mpage02)
+    ```{r t3mpage01, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Lines for Gender) ([R code](#figure-reffigt3mpage01))"}
+    # Create new data for prediction with 'age' as focus
+    # This will be used for the next two figures
+    age.pred <-
+        crossing(age=seq(18,60,2),
+                 salary=mean(train$salary), 
+                 gender=c("Male", "Female"))
+    # Create data frame with predicted values and confidence bands
+    train.pred <- 
+        # 'cbind' combines objects by columns
+        cbind(age.pred, 
+              predict(model, # Model to predict values with
+                      age.pred, # New data to use for IVs
+                      type="link", # Return log-odds predictions
+                      se=TRUE)) %>%  # Get std.err. for CIs
+    mutate(pred=plogis(fit), # Calculate pr(buy)
+           upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
+           lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
+           gender=as.factor(gender))  # Save gender as factor
+    
+    # Create plot with gender on same plot
+    ggplot(aes(x=age, y=pred), data=train.pred) +
+        geom_line(aes(color=gender), size=1) +
+        geom_ribbon(aes(ymin=lwr, ymax=upr, 
+                        color=gender, fill=gender), alpha=.2) +
+        theme(text=element_text(size=15), 
+              legend.position="none",
+              plot.caption=element_text(size=8)) +
+        scale_color_manual(values=c("red4", "navy")) +
+        scale_fill_manual(values=c("pink", "cyan")) +
+        labs(x="Age", y="Pr(Buy)", caption="Calculated at mean value of salary")
+    ```
+    
+    ```{r t3mpage02, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Plots for Gender) ([R code](#figure-reffigt3mpage02))"}
+    # Create plot with gender on same plot
+    ggplot(aes(x=age, y=pred), data=train.pred) +
+        geom_line(aes(color=gender), size=1) +
+        geom_ribbon(aes(ymin=lwr, ymax=upr, 
+                        color=gender, fill=gender), alpha=.2) +
+        facet_grid(~gender) +
+        theme(text=element_text(size=15), 
+              legend.position="none",
+              plot.caption=element_text(size=8)) +
+        scale_color_manual(values=c("red4", "navy")) +
+        scale_fill_manual(values=c("pink", "cyan")) +
+        labs(x="Age", y="Pr(Buy)", caption="Calculated at mean value of salary")
+    ```
+
+    * Can create different lines for specific levels of another continuous IV
+        * See \@ref(fig:t3mpage03 for $age$ with different levels of $salary$
+        * See \@ref(fig:t3mpage04 for $salary$ with different levels of $age$
+
+    ```{r t3mpage03, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age at at Different Levels of Salary ([R code](#figure-reffigt3mpage03))"}
+    # Create new data for prediction with 'age' as focus
+    msal <- mean(train$salary)  # Assign for less clutter below
+    sdsal <- sd(train$salary)  # Assign for less clutter below
+    age.pred <-
+        crossing(age=seq(18,60,2),
+                 salary=c(msal-1.5*sdsal,  # Mean-1.5SD
+                          msal,  # Mean
+                          msal+1.5*sdsal),  # Mean+1.5SD
+                 gender=c("Male", "Female"))
+    # Create data frame with predicted values and confidence bands
+    train.pred <- 
+        # 'cbind' combines objects by columns
+        cbind(age.pred, 
+              predict(model, # Model to predict values with
+                      age.pred, # New data to use for IVs
+                      type="link", # Return log-odds predictions
+                      se=TRUE)) %>%  # Get std.err. for CIs
+        mutate(pred=plogis(fit), # Calculate pr(buy)
+               upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
+               lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
+               gender=as.factor(gender),  # Factor for plot
+               salary=as.factor(round(salary,0)))  # Factor for plot
+
+    ggplot(aes(x=age, y=pred), data=train.pred) +
+        geom_line(aes(color=salary), size=1) +
+        geom_ribbon(aes(ymin=lwr, ymax=upr, 
+                        color=salary, fill=salary), alpha=.2) +
+        facet_grid(.~gender) +  # Create separate plots for gender
+        theme(text=element_text(size=15),
+              legend.position="bottom") +
+        scale_color_manual("Salary",
+                           values=c("red4", "navy", "forestgreen"),
+                           labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+        scale_fill_manual("Salary",
+                           values=c("pink", "cyan", "lawngreen"),
+                           labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+        labs(x="Age", y="Pr(Buy)")
+    ```    
+
+    ```{r t3mpage04, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Salary at at Different Levels of Age ([R code](#figure-reffigt3mpage04))"}
+    # Create new data for prediction with 'age' as focus
+    mage <- mean(train$age)  # Assign for less clutter below
+    sdage <- sd(train$age)  # Assign for less clutter below
+    sal.pred <-
+        crossing(salary=seq(15,150,5),
+                 age=c(mage-1.5*sdage,  # Mean-1.5SD
+                       mage,  # Mean
+                       mage+1.5*sdage),  # Mean+1.5SD
+                 gender=c("Male", "Female"))
+    # Create data frame with predicted values and confidence bands
+    train.pred <- 
+        # 'cbind' combines objects by columns
+        cbind(sal.pred, 
+              predict(model, # Model to predict values with
+                      sal.pred, # New data to use for IVs
+                      type="link", # Return log-odds predictions
+                      se=TRUE)) %>%  # Get std.err. for CIs
+        mutate(pred=plogis(fit), # Calculate pr(buy)
+               upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
+               lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
+               gender=as.factor(gender),  # Factor for plot
+               age=as.factor(round(age,0)))  # Factor for plot
+
+    ggplot(aes(x=salary, y=pred), data=train.pred) +
+        geom_line(aes(color=age), size=1) +
+        geom_ribbon(aes(ymin=lwr, ymax=upr, 
+                        color=age, fill=age), alpha=.2) +
+        facet_grid(.~gender) +  # Create separate plots for gender
+        theme(text=element_text(size=15),
+              legend.position="bottom") +
+        scale_color_manual("Age",
+                           values=c("red4", "navy", "forestgreen"),
+                           labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+        scale_fill_manual("Age",
+                           values=c("pink", "cyan", "lawngreen"),
+                           labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+        labs(x="Salary", y="Pr(Buy)")
+    ```    
+
+### Gain
+
+* Can examine gain for both the training and holdout samples...
+* But using holdout is more informative
+* Contacting the top $25\%$ of predicted buyers yields nearly $60\%$ of actual buyers
+    
+    <caption>(\#tab:t3gaintable) Gain Table for Training and Test/Holdout Data ([R code](#table-reftabt3gaintable))</caption>
+
+    ```{r t3gaintable, echo=FALSE}
+    # Use the 'gainlift.R' user-defined script
+    # It was loaded above with the packages
+    # Requires packages 'ggplot2', 'dplyr', and 'tidyr'
+    # Returns a list of four things:
+    #   gainplot, liftplot, gaintable, lifttable
+    glresults <- gainlift(model, train, test, "Yes")
+    glresults$gaintable
+    ```
+
+    ```{r t3gainplot, echo=FALSE, fig.cap="Gain Chart for Training and Test/Holdout Data ([R code](#figure-reffigt3gainplot))"}
+    # Plot was already returned in the previous call to 'gainlift'
+    glresults$gainplot
+    ```
+
+### Lift
+
+* Can examine gain for both the training and holdout samples...
+* But using holdout is more informative
+* Contacting the top $25\%$ of predicted buyers provides lift of nearly
+
+    <caption>(\#tab:t3lifttable) Lift Table for Training and Test/Holdout Data ([R code](#table-reftabt3lifttable))</caption>
+
+    ```{r t3lifttable, echo=FALSE}
+    # Table was already returned in the previous call to 'gainlift'
+    glresults$lifttable
+    ```
+
+    ```{r t3liftplot, echo=FALSE, fig.cap="Lift Chart for Training and Test/Holdout Data ([R code](#figure-reffigt3liftplot))"}
+    # Plot was already returned in the previous call to 'gainlift'
+    glresults$liftplot
+    ```
+
+## R Code
+
+### Figure \@ref(fig:t3scatter01) {.unlisted .unnumbered}
+
+```{r t3scatter01code, eval=FALSE}
+directmktg %>%
+    mutate(buy01=as.numeric(buy)-1) %>%  # Change 'buy' to 0-1
+    ggplot(aes(x=age, y=buy01)) +
+        geom_point(size=2) +
+        labs(x="Age", y="Buy")
+```
+
+### Figure \@ref(fig:t3scatter02) {.unlisted .unnumbered}
+
+```{r t3scatter02code, eval=FALSE}
+directmktg %>%
+    select(age) %>%  # Select only the age variable
+    mutate(yhat=predict.lm(model,.)) %>%  # Predict y from model
+    # Next line creates variable to highlight negative predictions
+    mutate(neg=as.factor(ifelse(yhat<0,"Yes","No"))) %>% 
+    ggplot(aes(x=age, y=yhat, color=neg)) +
+        geom_point(size=3) +
+        scale_color_manual(values=c("Yes"="red",   # Manually set point colors
+                                    "No"="black"),
+                           guide="none") +
+        labs(x="Age", y="Linear Prediction")
+```
+
+### Figure \@ref(fig:t3lineshape) {.unlisted .unnumbered}
+
+```{r t3lineshapecode, eval=FALSE}
+# Create data frame grouped by age
+dmgrp <- directmktg %>%
+    # 'cut' breaks a continuous variable into groups of each width
+    # 'as.numeric' keeps the new variable as integer (vs. factor)
+    mutate(agegrp = as.numeric(cut(age, 9))) %>%
+    group_by(agegrp) %>%
+    summarise(age=mean(age), buy=mean(as.numeric(buy)-1))
+
+# Run logistic model to create prediction to make s-curve
+binmod <- glm(buy~age, directmktg, family="binomial")
+# Create dataframe with predicted values
+dmpred <- directmktg %>%
+    select(age, buy) %>%
+    mutate(yhat=predict(binmod, type="response"),
+           buy=as.numeric(buy)-1)
+
+# Create combined plot; each geom with separate data
+ggplot() + 
+    geom_point(data=directmktg, 
+               aes(x=age, y=(as.numeric(buy)-1)), 
+               size=3, color="red") + 
+    geom_line(data=dmgrp, 
+              aes(x=age, y=buy), 
+              size=1.5, color="midnightblue") +
+    geom_line(data=dmpred, 
+              aes(x=age, y=yhat), 
+              size=1.5, color="darkorange") +
+    theme(text=element_text(size=15)) + 
+    labs(x="Age", y="Buy")
+```
+
+### Figure \@ref(fig:t3logitcurve) {.unlisted .unnumbered}
+
+```{r t3logitcurvecode, eval=FALSE}
+# Create simulated data frame based on logistic function
+u=seq(-7,7,.05)
+fz=exp(u)/(1+exp(u))
+ufz=data.frame(u=u, fz=fz)
+# Plot function
+ufz %>%
+    ggplot(aes(x=u, y=fz)) +
+        geom_line(color="darkorange", size=1.5) +
+        theme(text=element_text(size=15),
+              panel.grid.major.x = element_blank()) +
+        scale_x_continuous(breaks=0, minor_breaks=NULL) +
+        scale_y_continuous(breaks=seq(0,1,1), minor_breaks=NULL) +
+        labs(x="u", y="f(z)")
+```
+
+### Figure \@ref(fig:t3roctrain) {.unlisted .unnumbered}
+
+```{r t3roctraincode, eval=FALSE}
+# Use the 'logreg_roc.R' user-defined script
+# It was loaded above with the packages
+# Requires package 'pROC' and 'ggplot2
+logreg_roc(model,      # Object with model results
+           train)      # Data to use (i.e., training vs. testing)
+```
+
+### Figure \@ref(fig:t3roctest) {.unlisted .unnumbered}
+
+```{r t3roctestcode, eval=FALSE}
+# Use the 'logreg_roc.R' user-defined script
+# It was loaded above with the packages
+# Requires package 'pROC' and 'ggplot2
+logreg_roc(model,      # Object with model results
+           test)      # Data to use (i.e., training vs. testing)
+```
+
+### Figure \@ref(fig:t3mpage01) {.unlisted .unnumbered}
+
+```{r t3mpage01code, eval=FALSE}
+# Create new data for prediction with 'age' as focus
+# This will be used for the next two figures
+age.pred <-
+    crossing(age=seq(18,60,2),
+             salary=mean(train$salary), 
+             gender=c("Male", "Female"))
+# Create data frame with predicted values and confidence bands
+train.pred <- 
+    # 'cbind' combines objects by columns
+    cbind(age.pred, 
+          predict(model, # Model to predict values with
+                  age.pred, # New data to use for IVs
+                  type="link", # Return log-odds predictions
+                  se=TRUE)) %>%  # Get std.err. for CIs
+mutate(pred=plogis(fit), # Calculate pr(buy)
+       upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
+       lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
+       gender=as.factor(gender))  # Save gender as factor
+    
+# Create plot with gender on same plot
+ggplot(aes(x=age, y=pred), data=train.pred2) +
+    geom_line(aes(color=gender), size=1) +
+    geom_ribbon(aes(ymin=lwr, ymax=upr, 
+                    color=gender, fill=gender), alpha=.2) +
+    theme(legend.position="none",
+          plot.caption=element_text(size=8)) +
+    scale_color_manual(values=c("red4", "navy")) +
+    scale_fill_manual(values=c("pink", "cyan")) +
+    labs(x="Age", y="Pr(Buy)", caption="Calculated at mean value of salary")
+```
+
+### Figure \@ref(fig:t3mpage02) {.unlisted .unnumbered}
+    
+```{r t3mpage02code, eval=FALSE}
+# Create plot with gender on same plot
+ggplot(aes(x=age, y=pred), data=train.pred) +
+    geom_line(aes(color=gender), size=1) +
+    geom_ribbon(aes(ymin=lwr, ymax=upr, 
+                    color=gender, fill=gender), alpha=.2) +
+    facet_grid(~gender) +
+    theme(legend.position="none",
+          plot.caption=element_text(size=8)) +
+    scale_color_manual(values=c("red4", "navy")) +
+    scale_fill_manual(values=c("pink", "cyan")) +
+    labs(x="Age", y="Pr(Buy)", caption="Calculated at mean value of salary")
+```
+
+### Figure \@ref(fig:t3mpage03) {.unlisted .unnumbered}
+
+```{r t3mpage03code, eval=FALSE}
+# Create new data for prediction with 'age' as focus
+msal <- mean(train$salary)  # Assign for less clutter below
+sdsal <- sd(train$salary)  # Assign for less clutter below
+age.pred <-
+    crossing(age=seq(18,60,2),
+             salary=c(msal-1.5*sdsal,  # Mean-1.5SD
+                      msal,  # Mean
+                      msal+1.5*sdsal),  # Mean+1.5SD
+             gender=c("Male", "Female"))
+# Create data frame with predicted values and confidence bands
+train.pred <- 
+    # 'cbind' combines objects by columns
+    cbind(age.pred, 
+          predict(model, # Model to predict values with
+                  age.pred, # New data to use for IVs
+                  type="link", # Return log-odds predictions
+                  se=TRUE)) %>%  # Get std.err. for CIs
+    mutate(pred=plogis(fit), # Calculate pr(buy)
+           upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
+           lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
+           gender=as.factor(gender),  # Factor for plot
+           salary=as.factor(round(salary,0)))  # Factor for plot
+ggplot(aes(x=age, y=pred), data=train.pred) +
+    geom_line(aes(color=salary), size=1) +
+    geom_ribbon(aes(ymin=lwr, ymax=upr, 
+                    color=salary, fill=salary), alpha=.2) +
+    facet_grid(.~gender) +  # Create separate plots for gender
+    theme(text=element_text(size=15),
+          legend.position="bottom") +
+    scale_color_manual("Salary",
+                       values=c("red4", "navy", "forestgreen"),
+                       labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+    scale_fill_manual("Salary",
+                       values=c("pink", "cyan", "lawngreen"),
+                       labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+    labs(x="Age", y="Pr(Buy)")
+```    
+
+### Figure \@ref(fig:t3mpage04) {.unlisted .unnumbered}
+
+```{r t3mpage04code, eval=FALSE}
+# Create new data for prediction with 'age' as focus
+mage <- mean(train$age)  # Assign for less clutter below
+sdage <- sd(train$age)  # Assign for less clutter below
+sal.pred <-
+    crossing(salary=seq(15,150,5),
+             age=c(mage-1.5*sdage,  # Mean-1.5SD
+                   mage,  # Mean
+                   mage+1.5*sdage),  # Mean+1.5SD
+             gender=c("Male", "Female"))
+# Create data frame with predicted values and confidence bands
+train.pred <- 
+    # 'cbind' combines objects by columns
+    cbind(sal.pred, 
+          predict(model, # Model to predict values with
+                  sal.pred, # New data to use for IVs
+                  type="link", # Return log-odds predictions
+                  se=TRUE)) %>%  # Get std.err. for CIs
+    mutate(pred=plogis(fit), # Calculate pr(buy)
+           upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
+           lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
+           gender=as.factor(gender),  # Factor for plot
+           age=as.factor(round(age,0)))  # Factor for plot
+ggplot(aes(x=salary, y=pred), data=train.pred) +
+    geom_line(aes(color=age), size=1) +
+    geom_ribbon(aes(ymin=lwr, ymax=upr, 
+                    color=age, fill=age), alpha=.2) +
+    facet_grid(.~gender) +  # Create separate plots for gender
+    theme(text=element_text(size=15),
+          legend.position="bottom") +
+    scale_color_manual("Age",
+                       values=c("red4", "navy", "forestgreen"),
+                       labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+    scale_fill_manual("Age",
+                       values=c("pink", "cyan", "lawngreen"),
+                       labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+    labs(x="Salary", y="Pr(Buy)")
+```    
+
+### Figure \@ref(fig:t3gainplot) {.unlisted .unnumbered}
+
+```{r t3gainplotcode, eval=FALSE}
+# Plot was already returned in the previous call to 'gainlift'
+glresults$gainplot
+```
+
+### Figure \@ref(fig:t3liftplot) {.unlisted .unnumbered}
+
+```{r t3liftplotcode, eval=FALSE}
+# Plot was already returned in the previous call to 'gainlift'
+glresults$gainlift
+```
+
+### Table \@ref(tab:t3linreg01) {.unlisted .unnumbered}
+
+```{r t3linreg01code, eval=FALSE}
+model <- directmktg %>%
+    mutate(buy=as.numeric(buy)-1) %>%
+    lm(buy ~ age, .)
+# NOTE: 'summ' uses the 'jtools' package
+summ(model, model.info=FALSE, digits=4)
+# For virtual environment, use 'summary' from Base R
+```
+
+### Table \@ref(tab:t3logit01) {.unlisted .unnumbered}
+
+``` {r t3logit01code, eval=FALSE}
+# Use 'caret' package to create training and test/holdout samples
+# This will create two separate dataframes: train and test
+set.seed(4320)
+inTrain <- createDataPartition(y=directmktg$buy, p=.75, list=FALSE)
+train <- directmktg[inTrain,]
+test <- directmktg[-inTrain,]
+
+# Estimate the model on the training data
+model <- glm(buy ~ age + salary + gender, train, family="binomial")
+# NOTE: 'summ' uses the 'jtools' package
+summ(model, model.info=FALSE, digits=4)
+# For virtual environment, use 'summary' from Base R
+```
+
+### Table \@ref(tab:t3logit01or) {.unlisted .unnumbered}
+
+```{r t3logit01orcode, eval=FALSE}
+# Use the 'or_table.R' user-defined script
+# It was loaded above with the packages
+flextable(or_table(model))
+```
+
+### Table \@ref(tab:t3cmtrain) {.unlisted .unnumbered}
+
+```{r t3cmtraincode, eval=FALSE}
+# Use the 'logreg_cm.R' user-defined script
+# It was loaded above with the packages
+# Requires package 'caret'
+logreg_cm(model,      # Object with model results
+          train,      # Data to use (i.e., training vs. testing)
+          "Yes")      # Factor level for "True"
+```
+
+### Table \@ref(tab:t3cmtest) {.unlisted .unnumbered}
+
+```{r t3cmtestcode, eval=FALSE}
+# Use the 'logreg_cm.R' user-defined script
+# It was loaded above with the packages
+# Requires package 'caret'
+logreg_cm(model,      # Object with model results
+          test,      # Data to use (i.e., training vs. testing)
+          "Yes")      # Factor level for "True"
+```
+
+### Table \@ref(tab:t3gaintable) {.unlisted .unnumbered}
+
+```{r t3gaintablecode, eval=FALSE}
+# Use the 'gainlift.R' user-defined script
+# It was loaded above with the packages
+# Requires packages 'ggplot2', 'dplyr', and 'tidyr'
+# Returns a list of four things:
+#   gainplot, liftplot, gaintable, lifttable
+glresults <- gainlift(model, train, test, "Yes")
+glresults$gaintable
+```
+
+### Table \@ref(tab:t3lifttable) {.unlisted .unnumbered}
+
+```{r t3;lifttablecode, eval=FALSE}
+# Table was already returned in the previous call to 'gainlift'
+glresults$lifttable
+```

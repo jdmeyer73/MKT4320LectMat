@@ -12,6 +12,9 @@ description: |
   Lecture materials for MKT 4320 in bookdown style.
 link-citations: yes
 ---
+```{r echo=FALSE}
+knitr::opts_chunk$set(comment=NA)
+```
 
 # Introduction {-}
 
