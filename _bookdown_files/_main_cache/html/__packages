@@ -22,3 +22,7 @@ lubridate
 jtools
 summarytools
 broom
+flextable
+caret
+tibble
+pROC
