@@ -381,9 +381,13 @@ knitr::include_graphics("Topic03/ClassMat.png")
     # Estimate the model on the training data
     model <- glm(buy ~ age + salary + gender, train, family="binomial")
     summ(model, model.info=FALSE, digits=4)
+    
+    # Get p-value
+    p <- with(model, pchisq(null.deviance - deviance,
+                       df.null-df.residual,
+                       lower.tail=FALSE))
+    cat("Model p-value =",sprintf("%.4f",p))
     ```
-
-
 
 * Odds Ratio Coefficients  
 <caption>(\#tab:t3logit01or) Logistic Regression Odds Ratio Coefficients ([R code](#table-reftabt3logit01or))</caption>
@@ -403,7 +407,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
     * High specificity ($91.2\%$)
     * Correctly classified ($84.4\%$) > PCC ($54.0\%$)  
     
-    <caption>(\#tab:t3cmtrain) Classification Matrix for Training Data ([R code](#table-reftabt3cmtrain))</caption>
+    <caption>(\#tab:t3cmtrain) Classification Matrix for Training Sample ([R code](#table-reftabt3cmtrain))</caption>
     ```{r t3cmtrain, echo=FALSE, cache=TRUE}
     # Use the 'logreg_cm.R' user-defined script
     # It was loaded above with the packages
@@ -431,7 +435,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
 * ROC Curve for Training Sample
     * Area $>.90$ suggests an outstanding model fit
 
-    ```{r t3roctrain, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve fro Training Data ([R code](#figure-reffigt3roctrain))"}
+    ```{r t3roctrain, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve for Training Sample ([R code](#figure-reffigt3roctrain))"}
     # Use the 'logreg_roc.R' user-defined script
     # It was loaded above with the packages
     # Requires package 'pROC' and 'ggplot2
@@ -442,7 +446,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
 * ROC Curve for Training Sample
     * Area $>.90$ suggests an outstanding model fit
 
-    ```{r t3roctest, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve fro Test/Holdout Data ([R code](#figure-reffigt3roctest))"}
+    ```{r t3roctest, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve for Test/Holdout Sample ([R code](#figure-reffigt3roctest))"}
     # Use the 'logreg_roc.R' user-defined script
     # It was loaded above with the packages
     # Requires package 'pROC' and 'ggplot2
@@ -460,7 +464,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
     * Had it been significant...
     Being female decreases odds of buying by a factor of $.67$ (or odds of buying decrease by $33\%$)
 * Can visually examine how $\Pr(buy)$ changes with a variable for continuous IVs
-    * Factor variables can be separate lines (see \@ref(fig:t3mpage01) or separate plots (see \@ref(fig:t3mpage02)
+    * Factor variables can be separate lines (see \@ref(fig:t3mpage01) or separate plots see \@ref(fig:t3mpage02))
     ```{r t3mpage01, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Lines for Gender) ([R code](#figure-reffigt3mpage01))"}
     # Create new data for prediction with 'age' as focus
     # This will be used for the next two figures
@@ -487,11 +491,12 @@ knitr::include_graphics("Topic03/ClassMat.png")
         geom_ribbon(aes(ymin=lwr, ymax=upr, 
                         color=gender, fill=gender), alpha=.2) +
         theme(text=element_text(size=15), 
-              legend.position="none",
+              legend.position="bottom",
               plot.caption=element_text(size=8)) +
         scale_color_manual(values=c("red4", "navy")) +
         scale_fill_manual(values=c("pink", "cyan")) +
-        labs(x="Age", y="Pr(Buy)", caption="Calculated at mean value of salary")
+        labs(x="Age", y="Pr(Buy)", color="Gender", fill="Gender",
+             caption="Calculated at mean value of salary")
     ```
     
     ```{r t3mpage02, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Plots for Gender) ([R code](#figure-reffigt3mpage02))"}
@@ -510,10 +515,10 @@ knitr::include_graphics("Topic03/ClassMat.png")
     ```
 
     * Can create different lines for specific levels of another continuous IV
-        * See \@ref(fig:t3mpage03 for $age$ with different levels of $salary$
-        * See \@ref(fig:t3mpage04 for $salary$ with different levels of $age$
+        * See \@ref(fig:t3mpage03) for $age$ with different levels of $salary$
+        * See \@ref(fig:t3mpage04) for $salary$ with different levels of $age$
 
-    ```{r t3mpage03, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age at at Different Levels of Salary ([R code](#figure-reffigt3mpage03))"}
+    ```{r t3mpage03, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age at Different Levels of Salary ([R code](#figure-reffigt3mpage03))"}
     # Create new data for prediction with 'age' as focus
     msal <- mean(train$salary)  # Assign for less clutter below
     sdsal <- sd(train$salary)  # Assign for less clutter below
@@ -553,7 +558,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
         labs(x="Age", y="Pr(Buy)")
     ```    
 
-    ```{r t3mpage04, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Salary at at Different Levels of Age ([R code](#figure-reffigt3mpage04))"}
+    ```{r t3mpage04, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Salary at Different Levels of Age ([R code](#figure-reffigt3mpage04))"}
     # Create new data for prediction with 'age' as focus
     mage <- mean(train$age)  # Assign for less clutter below
     sdage <- sd(train$age)  # Assign for less clutter below
@@ -599,7 +604,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
 * But using holdout is more informative
 * Contacting the top $25\%$ of predicted buyers yields nearly $60\%$ of actual buyers
     
-    <caption>(\#tab:t3gaintable) Gain Table for Training and Test/Holdout Data ([R code](#table-reftabt3gaintable))</caption>
+    <caption>(\#tab:t3gaintable) Gain Table for Training and Test/Holdout Samples ([R code](#table-reftabt3gaintable))</caption>
 
     ```{r t3gaintable, echo=FALSE}
     # Use the 'gainlift.R' user-defined script
@@ -611,7 +616,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
     glresults$gaintable
     ```
 
-    ```{r t3gainplot, echo=FALSE, fig.cap="Gain Chart for Training and Test/Holdout Data ([R code](#figure-reffigt3gainplot))"}
+    ```{r t3gainplot, echo=FALSE, fig.cap="Gain Chart for Training and Test/Holdout Samples ([R code](#figure-reffigt3gainplot))"}
     # Plot was already returned in the previous call to 'gainlift'
     glresults$gainplot
     ```
@@ -620,16 +625,16 @@ knitr::include_graphics("Topic03/ClassMat.png")
 
 * Can examine gain for both the training and holdout samples...
 * But using holdout is more informative
-* Contacting the top $25\%$ of predicted buyers provides lift of nearly
+* Contacting the top $25\%$ of predicted buyers provides lift of nearly 2.5
 
-    <caption>(\#tab:t3lifttable) Lift Table for Training and Test/Holdout Data ([R code](#table-reftabt3lifttable))</caption>
+    <caption>(\#tab:t3lifttable) Lift Table for Training and Test/Holdout Samples ([R code](#table-reftabt3lifttable))</caption>
 
     ```{r t3lifttable, echo=FALSE}
     # Table was already returned in the previous call to 'gainlift'
     glresults$lifttable
     ```
 
-    ```{r t3liftplot, echo=FALSE, fig.cap="Lift Chart for Training and Test/Holdout Data ([R code](#figure-reffigt3liftplot))"}
+    ```{r t3liftplot, echo=FALSE, fig.cap="Lift Chart for Training and Test/Holdout Samples ([R code](#figure-reffigt3liftplot))"}
     # Plot was already returned in the previous call to 'gainlift'
     glresults$liftplot
     ```
@@ -639,7 +644,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
 * *R for Marketing Research and Analytics. 2nd Edition* (2019). Chapman, Chris; McDonnel Feit, Elea
     * BGSU Library Link:<br><a href="http://maurice.bgsu.edu/record=b4966554~S9" target="_blank" rel="noopener noreferrer">http://maurice.bgsu.edu/record=b4966554~S9</a>
     * eBook through BGSU Library:<br><a href="https://link-springer-com.ezproxy.bgsu.edu/book/10.1007%2F978-3-030-14316-9" target="_blank" rel="noopener noreferrer">https://link-springer-com.ezproxy.bgsu.edu/book/10.1007%2F978-3-030-14316-9</a>
-    * Chapter 9.2
+    * Chapter 9.2: Linear Models for Binary Outcomes: Logistic Regression
 * *OpenIntro Statistics. 4th Edition* (2019). Diez, David; Cetinkaya-Rundel, Mine; Barr, Christopher D.
     * Available at OpenIntro.org:<br><a href="https://www.openintro.org/book/os/" target="_blank" rel="noopener noreferrer">https://www.openintro.org/book/os/</a>
     * Chapter 9: Multiple and logistic regression
@@ -777,11 +782,12 @@ ggplot(aes(x=age, y=pred), data=train.pred2) +
     geom_line(aes(color=gender), size=1) +
     geom_ribbon(aes(ymin=lwr, ymax=upr, 
                     color=gender, fill=gender), alpha=.2) +
-    theme(legend.position="none",
+    theme(legend.position="bottom",
           plot.caption=element_text(size=8)) +
     scale_color_manual(values=c("red4", "navy")) +
     scale_fill_manual(values=c("pink", "cyan")) +
-    labs(x="Age", y="Pr(Buy)", caption="Calculated at mean value of salary")
+    labs(x="Age", y="Pr(Buy)", color="Gender", fill="Gender",
+         caption="Calculated at mean value of salary")
 ```
 
 ### Figure \@ref(fig:t3mpage02) {.unlisted .unnumbered}
