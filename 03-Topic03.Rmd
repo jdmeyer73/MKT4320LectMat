@@ -634,6 +634,22 @@ knitr::include_graphics("Topic03/ClassMat.png")
     glresults$liftplot
     ```
 
+## Suggested Readings
+
+* *R for Marketing Research and Analytics. 2nd Edition* (2019). Chapman, Chris; McDonnel Feit, Elea
+    * BGSU Library Link:<br><a href="http://maurice.bgsu.edu/record=b4966554~S9" target="_blank" rel="noopener noreferrer">http://maurice.bgsu.edu/record=b4966554~S9</a>
+    * eBook through BGSU Library:<br><a href="https://link-springer-com.ezproxy.bgsu.edu/book/10.1007%2F978-3-030-14316-9" target="_blank" rel="noopener noreferrer">https://link-springer-com.ezproxy.bgsu.edu/book/10.1007%2F978-3-030-14316-9</a>
+    * Chapter 9.2
+* *OpenIntro Statistics. 4th Edition* (2019). Diez, David; Cetinkaya-Rundel, Mine; Barr, Christopher D.
+    * Available at OpenIntro.org:<br><a href="https://www.openintro.org/book/os/" target="_blank" rel="noopener noreferrer">https://www.openintro.org/book/os/</a>
+    * Chapter 9: Multiple and logistic regression
+    
+* *Multivariate Data Analysis*. Hair, Joseph F.; Black, William C.; Babin, Barry J.; Anderson, Rolph E.
+    * 7th Edition: Search for “multivariate data analysis 7th edition hair”
+        Chapter 6: Logistic Regression with a Binary Dependent Variable
+    * 5th Edition: Course reserves
+        * Chapter 5: Multiple Discriminant Analysis and Logistic Regression (pp. 276-281; 314-321)
+
 ## R Code
 
 ### Figure \@ref(fig:t3scatter01) {.unlisted .unnumbered}
