@@ -388,7 +388,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
 * Odds Ratio Coefficients  
 <caption>(\#tab:t3logit01or) Logistic Regression Odds Ratio Coefficients ([R code](#table-reftabt3logit01or))</caption>
 
-    ```{r t3logit01or, echo=FALSE, cache=TRUE}
+    ```{r t3logit01or, echo=FALSE}
     # Use the 'or_table.R' user-defined script
     # It was loaded above with the packages
     flextable(or_table(model))
