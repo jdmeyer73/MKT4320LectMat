@@ -11,6 +11,7 @@ fig:t3classmatimg
 fig:t3sampleroc
 fig:t3typgain
 fig:t3typlift
+fig:t3sensspecplot
 tab:t3logit01
 tab:t3logit01or
 tab:t3cmtrain
@@ -25,6 +26,8 @@ tab:t3gaintable
 fig:t3gainplot
 tab:t3lifttable
 fig:t3liftplot
+fig:t3sensspec01
+fig:t3sensspec02
 examining-and-summarizing-data
 motivation
 r-packages-and-datasets-for-topic-1
@@ -133,6 +136,7 @@ interpreting-coefficients
 gain-and-lift
 gain
 lift
+sensitivityspecificity-plots
 logistic-regression-example
 overview-3
 estimation-results
@@ -140,5 +144,6 @@ overall-model-fit
 interpreting-coefficients-1
 gain-1
 lift-1
+sensitivityspecificity-plots-1
 suggested-readings-2
 r-code-2

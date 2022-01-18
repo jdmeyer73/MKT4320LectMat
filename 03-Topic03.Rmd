@@ -42,6 +42,7 @@ source("Topic03/or_table.R")
 source("Topic03/logreg_cm.R")
 source("Topic03/logreg_roc.R")
 source("Topic03/gainlift.R")
+source("Topic03/logreg_cut.R")
 ```
 [Download directmktg.rdata](Topic03/directmktg.rdata)
 
@@ -353,6 +354,38 @@ knitr::include_graphics("Topic03/ClassMat.png")
                          linetype=2, color="darkorange", size=.75)
     ```
   
+### Sensitivity/Specificity Plots
+
+* Sensitivity, Specificity, and Accuracy depend on the cutoff value for predicting SUCCESS/ FAILURE
+    * While 0.5 is the most common threshold, it might not be the best threshold for prediction
+* Sensitivity/Specificity Plots can show the analyst how each changes with different cutoff values
+    * The analyst can try to balance the three depending on the purpose of project
+    ``` {r t3sensspecplot, echo=FALSE, fig.cap="Sample Sensitivy/Specificity Plot"}
+    pcc <- seq(0,1,.01)
+    sens <- 1.0189-.01678*pcc-.8349*pcc^2
+    spec <- 1.9211*pcc-.8349*pcc^2-.0778
+    acc <- .45+1.6*pcc-1.6*pcc^2
+    data.frame(pcc, sens, spec, acc) %>%
+   mutate(sens=ifelse(sens>1,1,sens)) %>%
+   mutate(spec=ifelse(spec<0,0,spec)) %>%
+   mutate(spec=ifelse(spec>1,1,spec)) %>%
+   ggplot(aes(x=pcc)) + 
+   geom_line(aes(y=acc), color="red4", size=1.2) +
+   geom_line(aes(y=sens), color="forestgreen", size=.7) + 
+   geom_line(aes(y=spec), color="blue", size=.7) +
+   geom_point(aes(y=sens), color="forestgreen") +
+   geom_point(aes(y=spec), color="blue") + 
+   scale_x_continuous("Cutoff Value", breaks=seq(0,1,.1)) +
+   scale_y_continuous("Measure Value", breaks=seq(0,1,.1)) +
+   geom_segment(x=.3, y=.423, xend=.4, yend=.3, arrow=arrow(ends="first")) +
+   annotate("text", x=.4, y=.28, label="Specificity", size=5) + 
+   geom_segment(x=.85, y=0.401, xend=.75, yend=.3, arrow=arrow(ends="first"))+
+   annotate("text", x=.75, y=.28, label="Sensitivity", size=5) + 
+   geom_segment(x=.2, y=.706, xend=.1, yend=.82, arrow=arrow(ends="first"))+
+   annotate("text", x=.1, y=.85, label="Accuracy", size=5) +
+   theme(text=element_text(size=15))
+    ```
+
 ## Logistic Regression Example
 
 ### Overview
@@ -464,7 +497,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
     * Had it been significant...
     Being female decreases odds of buying by a factor of $.67$ (or odds of buying decrease by $33\%$)
 * Can visually examine how $\Pr(buy)$ changes with a variable for continuous IVs
-    * Factor variables can be separate lines (see \@ref(fig:t3mpage01) or separate plots see \@ref(fig:t3mpage02))
+    * Factor variables can be separate lines (see Figure \@ref(fig:t3mpage01) or separate plots see \@ref(fig:t3mpage02))
     ```{r t3mpage01, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Lines for Gender) ([R code](#figure-reffigt3mpage01))"}
     # Create new data for prediction with 'age' as focus
     # This will be used for the next two figures
@@ -639,6 +672,25 @@ knitr::include_graphics("Topic03/ClassMat.png")
     glresults$liftplot
     ```
 
+### Sensitivity/Specificity Plots
+
+* Examine to see if different thresholds are warranted
+    * Looking at the plots for both the training sample (see Figure \@ref(fig:t3sensspec01)) and the test/holdout sample (see Figure \@ref(fig:t3sensspec02)), it might be worthwhile to try a cutoff threshold between 0.35 and 0.40
+        * Doing so will balance specificity and sensitivity without hurting accuracy
+    ```{r t3sensspec01, echo=FALSE, fig.cap="Sensitivity/Specificity Plot for Training Sample ([R code](#figure-reffigt3sensspec01))"}
+    # Use the 'logreg_cut.R' user-defined script
+    # It was loaded above with the packages
+    # Requires packages 'ggplot2'
+    logreg_cut(model, train, "Yes")
+    ```
+    ```{r t3sensspec02, echo=FALSE, fig.cap="Sensitivity/Specificity Plot for Test/Holdout Sample ([R code](#figure-reffigt3sensspec02))"}
+    # Use the 'logreg_cut.R' user-defined script
+    # It was loaded above with the packages
+    # Requires packages 'ggplot2'
+    logreg_cut(model, test, "Yes")
+    ```
+    
+    
 ## Suggested Readings
 
 * *R for Marketing Research and Analytics. 2nd Edition* (2019). Chapman, Chris; McDonnel Feit, Elea
@@ -900,6 +952,24 @@ glresults$gainplot
 ```{r t3liftplotcode, eval=FALSE}
 # Plot was already returned in the previous call to 'gainlift'
 glresults$gainlift
+```
+
+### Figure \@ref(fig:t3sensspec01) {.unlisted .unnumbered}
+
+```{r t3sensspec01code, eval=FALSE}
+# Use the 'logreg_cut.R' user-defined script
+# It was loaded above with the packages
+# Requires packages 'ggplot2'
+logreg_cut(model, train, "Yes")
+```
+
+### Figure \@ref(fig:t3sensspec02) {.unlisted .unnumbered}
+
+```{r t3sensspec02code, eval=FALSE}
+# Use the 'logreg_cut.R' user-defined script
+# It was loaded above with the packages
+# Requires packages 'ggplot2'
+logreg_cut(model, test, "Yes")
 ```
 
 ### Table \@ref(tab:t3linreg01) {.unlisted .unnumbered}
