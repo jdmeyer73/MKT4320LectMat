@@ -980,7 +980,11 @@ model <- directmktg %>%
     lm(buy ~ age, .)
 # NOTE: 'summ' uses the 'jtools' package
 summ(model, model.info=FALSE, digits=4)
-# For virtual environment, use 'summary' from Base R
+# For virtual environment, use 'summary' from Base R,
+# but manually calculate McFadden's Pseudo-Rsq
+summary(model)
+Mrsq <- 1-model$deviance/model$null.deviance
+cat("McFadden's Pseudo-Rsquared = ", round(Mrsq, digits=4)
 ```
 
 ### Table \@ref(tab:t3logit01) {.unlisted .unnumbered}
