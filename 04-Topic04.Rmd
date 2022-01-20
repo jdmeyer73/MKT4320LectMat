@@ -1,0 +1,226 @@
+```{r echo=FALSE}
+knitr::opts_chunk$set(comment=NA)
+```
+
+# Targeting and Retaining Customers
+
+## R Packages and Datasets for Topic 4
+
+``` {r t4packagesdata, message=FALSE}
+library(ggplot2)       # Advanced graphing capabilities
+library(tidyr)         # Easier programming 
+library(GGally)        # Scatterplot matrix
+library(flextable)     # Better HTML Tables
+library(htmlTable)     # Better HTML Tables
+library(jtools)        # Concise regression results
+library(huxtable)      # Nice tables using jtools
+library(dplyr)         # Easier programming
+library(caret)         # Create data partitions
+library(cowplot)
+load("Topic04/bankmktg.rdata")
+load("Topic04/telecom.rdata")
+```
+
+## Targeting Customers
+
+* One-to-One Marketing
+    * Time consuming
+    * Costly
+* Mass Marketing
+    * Customer needs not being met
+* Target Marketing
+    * Market to those likely to...
+
+### Goal
+
+Target customers with the highest likelihood of a favorable outcome using explanatory variables
+
+* Outcome variable could be:
+    * Purchase
+    * Sales
+    * Costs
+    * Profitability
+    * CLV
+* Explanatory variables could be:
+    * Demographics
+    * Behaviors
+    * Usage
+    * Lifestyles
+    
+The outcome variable will dictate the type of analysis we can perform
+
+* Continuous outcome variables have a meaningful magnitude
+    * Use linear regression
+* Categorical outcome variables do not have a meaningful magnitude
+    * Use logistic regression
+    
+## Retaining Customers
+
+Importance of retention:
+
+> Reducing defections $5\%$ boosts profits $25\%$ to $85\%$.  — Frederick F. Reichheld and W. Earl Sasser, Jr.
+
+### Goal
+
+Identify factors (i.e., independent variables) that increase the likelihood of retention (or decrease the likelihood of churn)
+
+* Retention (or Churn) is the outcome or dependent variable
+    * DV = Binary, so Method = Logistic Regression
+    
+## Targeting Customers (Linear Regression) Example
+
+### Overview
+
+* Customer revenue, usage, and demographics for a cell phone provider
+* DV:
+    * Mean monthly revenue (prior 6 months), `avg6rev`
+* IVs:
+    * Mean monthly minutes (prior 6 months), `avg6mou`
+    * Mean monthly customer care calls, `cc`
+    * Mean monthly directory assistance calls, `da`
+    * Mean monthly overage minutes, `ovrmou`
+    * Household income (dollars), `income`
+    * Own home (Yes; No), `own`
+    
+### Summarize Data
+
+* Useful to examine data prior to specifying the model
+    * Summary Statistics
+    <caption>(\#tab:t4summstat01) Summary Statistics ([R code](#table-reftabt4summstat01))</caption>
+    ``` {r t4summstat01, echo=FALSE}
+    summary(telecom)
+    ```
+
+    * Scatterplot Matrix (with Correlations)
+    ```{r t4scatmat01, echo=FALSE, fig.cap="Scatterplot Matrix with Correlations ([R code](#figure-reffigt4scatmat01))", message=FALSE, cache=TRUE}
+    ggpairs(telecom[,1:6],  # Select first 6 columns of data set
+            lower=list(continuous=
+                      wrap("smooth", method="lm", se=FALSE, # Add fit line
+                           color="midnightblue")),  # Set dot color
+            diag=list(continuous="blankDiag"))  # Set diagonals to be blank
+    ```
+
+### Model Specification
+
+* Goal: Determine what behaviors and demographics are associated with high revenue customers
+* IVs are expected to be ones that are related to revenue
+* Model: $avg6rev=\alpha+\beta_1avg6mou+\beta_2cc+\beta_3da+\beta_4ovrmou+\beta_5income+\beta_6own$
+
+### Model Interpretation
+
+#### Results
+
+<caption>(\#tab:t4lr01) Linear Regression Results ([R code](#table-reftabt4lr01))</caption>
+```{r t4lr01, echo=FALSE, cache=TRUE}
+target <- lm(avg6rev ~ avg6mou + cc + da + ovrmou + income + own,
+             data=telecom)
+summary(target)
+
+```
+$avg6rev=31.593+.049avg6mou-1.279cc+1.814da+.178ovrmou-.014income-4.081own$
+
+#### Testing Overall Model Significance
+
+* Relationship between DV and combined effects of IVs
+* $H_0: \text{all }\beta_k=0$ vs. $H_a: \text{at least one }\beta_k\ne0$
+* Use F-statistic to test
+* Conclusion:  With a F-statistic of $921.4$ and a $p<.001$, we conclude that at least one $\beta_k$ is significant
+
+#### Assessing overall model fit
+
+* How much variation in the DV is explained by the model
+* Use $R^2$ to assess
+* Use Adjusted $R^2$ to compare models
+* Conclusion: Based on the $R^2$, about $70\%$ of the variance in `avg6rev` is explained by the model
+
+#### Interpret Individual IVs
+
+* Relationship between DV and each IV
+* $H_0: \beta_k=0$ vs. $H_a: \beta_k\ne0$
+* Interpret significant relationships
+    * `avg6mou`
+        * With $p<.001$, `avg6mou` has a significant effect on `avg6rev`.
+        * A one unit increase in `avg6mou` is predicted to increase `avg6rev` by $.049$ units.
+    * `cc`
+        * With $p<.001$, `cc` has a significant effect on `avg6rev`.
+        * A one unit increase in `cc` is predicted to decrease `avg6rev` by $1.279$ units.
+    * `da`
+        * With $p<.001$, `da` has a significant effect on `avg6rev`.
+        * A one unit increase in `da` is predicted to increase `avg6rev` by $1.814$ units.
+    * `ovrmou`
+        * With $p<.001$, `ovrmou` has a significant effect on `avg6rev`.
+        * A one unit increase in `ovrmou` is predicted to increase `avg6rev` by $.017$ units.
+    * `own`
+        * With $p<.001$, `own` has a significant effect on `avg6rev`.
+        * Those that own their home have $4.081$ units less revenue per month than those that do not.
+* A standardized $\beta$ is the effect of a single standard deviation change in the IV on the DV
+    * Higher absolute values are more important
+    * Conclusion: `avg6mou` is the biggest driver of avg6rev
+
+    <caption>(\#tab:t4stdbeta1) Standardized Beta Coefficients ([R code](#table-reftabt4stdbeta1))</caption>
+    ```{r t4lrstdbeta1, echo=FALSE}
+    # Use user-defined function 'lm_beta.R'
+    source("Topic02/lm_beta.R")
+    htmlTable(lm_beta(target, digits=4))
+    ```
+
+* Sometimes helps to visually examine the IVs for interpretation
+* Plots show predicted DV at different levels of significant IVs 
+
+    ```{r t4marginplots01, echo=FALSE}
+    # Calculate mean values for continuous variables
+    av6mou <- mean(telecom$avg6mou)
+    cc <- mean(telecom$cc)
+    da <- mean(telecom$da)
+    ovrmou <- mean(telecom$ovrmou)
+    income <- mean(telecom$income)
+    # Create dataframe for prediction at different levels of 'avg6mou'
+    a6m.pred <- crossing(avg6mou=seq(0,700,50), # 15 levels
+                         cc=cc, da=da, ovrmou=ovrmou, income=income,
+                         own=c("Yes","No"))
+    # Append linear prediction and confidence intervals to new data frame
+    a6m.pred$p <- as.data.frame(
+       predict.lm(target, 
+                  a6m.pred,
+                  interval="confidence")
+    )
+    ```
+       
+
+
+
+## R Code
+
+### Figure \@ref(fig:t4scatmat01) {.unlisted .unnumbered}
+
+```{r t4scatmat01code, eval=FALSE}
+ggpairs(telecom[,1:6],  # Select first 6 columns of data set
+        lower=list(continuous=
+                   wrap("smooth", method="lm", se=FALSE, # Add fit line
+                        color="midnightblue")),  # Set dot color
+        diag=list(continuous="blankDiag"))  # Set diagonals to be blank
+```   
+
+### Table \@ref(tab:t4summstat01) {.unlisted .unnumbered}
+
+``` {r t4summstat01code, eval=FALSE}
+summary(telecom)
+```
+
+### Table \@ref(tab:t4lr01) {.unlisted .unnumbered}
+
+```{r t4lr01code, eval=FALSE}
+target <- lm(avg6rev ~ avg6mou + cc + da + ovrmou + income + own,
+             data=telecom)
+summary(target)
+
+```
+
+### Table \@ref(tab:t4stdbeta11) {.unlisted .unnumbered}
+
+    ```{r t4lrstdbeta1code, eval=FALSE}
+    # Use user-defined function 'lm_beta.R'
+    source("Topic02/lm_beta.R")
+    htmlTable(lm_beta(target, digits=4))
+    ```
+

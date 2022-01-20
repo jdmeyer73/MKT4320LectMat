@@ -19,24 +19,16 @@ knitr::opts_chunk$set(comment=NA)
 
 
 
-## R Packages and Datasets for Topic 2
+## R Packages and Datasets for Topic 3
 
 ``` {r t3packagesdata, message=FALSE}
 library(ggplot2)       # Advanced graphing capabilities
 library(tidyr)         # Easier programming   
-library(scales)        # Control appearance of axes and legend labels
 library(flextable)     # Better HTML Tables
 library(htmlTable)     # Better HTML Tables
-library(reshape2)      # Easily convert wide data to long data
-library(GGally)        # ggplot extension; for scatterplot matrix
-library(summarytools)  # Summary statistics
-library(cowplot)       # Arrange separate plots in a grid
-library(ggtext)        # Annotate ggplots
-library(lubridate)     # Easily work with dates
 library(jtools)        # Concise regression results
 library(dplyr)         # Easier programming
 library(caret)         # Create data partitions
-library(tibble)        # 
 load("Topic03/directmktg.rdata")
 source("Topic03/or_table.R")
 source("Topic03/logreg_cm.R")

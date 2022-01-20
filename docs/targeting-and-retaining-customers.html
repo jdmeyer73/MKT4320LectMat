@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MKT 4320: Marketing Analytics</title>
+  <title>Topic 4 Targeting and Retaining Customers | MKT 4320: Marketing Analytics</title>
   <meta name="description" content="Lecture materials for MKT 4320 in bookdown style." />
   <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="MKT 4320: Marketing Analytics" />
+  <meta property="og:title" content="Topic 4 Targeting and Retaining Customers | MKT 4320: Marketing Analytics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MKT 4320: Marketing Analytics" />
+  <meta name="twitter:title" content="Topic 4 Targeting and Retaining Customers | MKT 4320: Marketing Analytics" />
   
   <meta name="twitter:description" content="Lecture materials for MKT 4320 in bookdown style." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="logistic-regression.html"/>
 
-<link rel="next" href="examining-and-summarizing-data.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -335,24 +335,359 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">MKT 4320: Marketing Analytics</h1>
-<h2 class="subtitle"><em>Lecture Materials</em></h2>
-<p class="author"><em>Jeffrey Meyer</em></p>
-<p class="date"><em>2022-01-19</em></p>
+<div id="targeting-and-retaining-customers" class="section level1" number="4">
+<h1><span class="header-section-number">Topic 4</span> Targeting and Retaining Customers</h1>
+<div id="r-packages-and-datasets-for-topic-4" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> R Packages and Datasets for Topic 4</h2>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="targeting-and-retaining-customers.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb64-2"><a href="targeting-and-retaining-customers.html#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)         <span class="co"># Easier programming </span></span>
+<span id="cb64-3"><a href="targeting-and-retaining-customers.html#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)        <span class="co"># Scatterplot matrix</span></span>
+<span id="cb64-4"><a href="targeting-and-retaining-customers.html#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb64-5"><a href="targeting-and-retaining-customers.html#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmlTable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb64-6"><a href="targeting-and-retaining-customers.html#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)        <span class="co"># Concise regression results</span></span>
+<span id="cb64-7"><a href="targeting-and-retaining-customers.html#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(huxtable)      <span class="co"># Nice tables using jtools</span></span>
+<span id="cb64-8"><a href="targeting-and-retaining-customers.html#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb64-9"><a href="targeting-and-retaining-customers.html#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)         <span class="co"># Create data partitions</span></span>
+<span id="cb64-10"><a href="targeting-and-retaining-customers.html#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb64-11"><a href="targeting-and-retaining-customers.html#cb64-11" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic04/bankmktg.rdata&quot;</span>)</span>
+<span id="cb64-12"><a href="targeting-and-retaining-customers.html#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic04/telecom.rdata&quot;</span>)</span></code></pre></div>
 </div>
-<div id="introduction" class="section level1 unnumbered">
-<h1>Introduction</h1>
-<p>This web-book will serve as your copies of the lecture slides. Because the software used in this class is R and RStudio, traditional lecture slides for students are not useful, because I want to provide the code that generated the output seen on the slides. Each topic covered is a “chapter” in this web-book and will begin with a motivation section, followed by the R packages and datasets used in that topic. The sections after that will provide an web version of the material on the lecture slides used in class.</p>
+<div id="targeting-customers" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Targeting Customers</h2>
+<ul>
+<li>One-to-One Marketing
+<ul>
+<li>Time consuming</li>
+<li>Costly</li>
+</ul></li>
+<li>Mass Marketing
+<ul>
+<li>Customer needs not being met</li>
+</ul></li>
+<li>Target Marketing
+<ul>
+<li>Market to those likely to…</li>
+</ul></li>
+</ul>
+<div id="goal" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Goal</h3>
+<p>Target customers with the highest likelihood of a favorable outcome using explanatory variables</p>
+<ul>
+<li>Outcome variable could be:
+<ul>
+<li>Purchase</li>
+<li>Sales</li>
+<li>Costs</li>
+<li>Profitability</li>
+<li>CLV</li>
+</ul></li>
+<li>Explanatory variables could be:
+<ul>
+<li>Demographics</li>
+<li>Behaviors</li>
+<li>Usage</li>
+<li>Lifestyles</li>
+</ul></li>
+</ul>
+<p>The outcome variable will dictate the type of analysis we can perform</p>
+<ul>
+<li>Continuous outcome variables have a meaningful magnitude
+<ul>
+<li>Use linear regression</li>
+</ul></li>
+<li>Categorical outcome variables do not have a meaningful magnitude
+<ul>
+<li>Use logistic regression</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="retaining-customers" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Retaining Customers</h2>
+<p>Importance of retention:</p>
+<blockquote>
+<p>Reducing defections <span class="math inline">\(5\%\)</span> boosts profits <span class="math inline">\(25\%\)</span> to <span class="math inline">\(85\%\)</span>. — Frederick F. Reichheld and W. Earl Sasser, Jr.</p>
+</blockquote>
+<div id="goal-1" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Goal</h3>
+<p>Identify factors (i.e., independent variables) that increase the likelihood of retention (or decrease the likelihood of churn)</p>
+<ul>
+<li>Retention (or Churn) is the outcome or dependent variable
+<ul>
+<li>DV = Binary, so Method = Logistic Regression</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="targeting-customers-linear-regression-example" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Targeting Customers (Linear Regression) Example</h2>
+<div id="overview-4" class="section level3" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Overview</h3>
+<ul>
+<li>Customer revenue, usage, and demographics for a cell phone provider</li>
+<li>DV:
+<ul>
+<li>Mean monthly revenue (prior 6 months), <code>avg6rev</code></li>
+</ul></li>
+<li>IVs:
+<ul>
+<li>Mean monthly minutes (prior 6 months), <code>avg6mou</code></li>
+<li>Mean monthly customer care calls, <code>cc</code></li>
+<li>Mean monthly directory assistance calls, <code>da</code></li>
+<li>Mean monthly overage minutes, <code>ovrmou</code></li>
+<li>Household income (dollars), <code>income</code></li>
+<li>Own home (Yes; No), <code>own</code></li>
+</ul></li>
+</ul>
+</div>
+<div id="summarize-data-1" class="section level3" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Summarize Data</h3>
+<ul>
+<li>Useful to examine data prior to specifying the model
+<ul>
+<li>Summary Statistics
+<caption>
+<span id="tab:t4summstat01">Table 4.1: </span> Summary Statistics (<a href="targeting-and-retaining-customers.html#table-reftabt4summstat01">R code</a>)
+</caption></li>
+</ul>
+<pre><code>    avg6rev          avg6mou             cc               da         
+ Min.   :  2.00   Min.   :   0.0   Min.   : 0.000   Min.   : 0.0000  
+ 1st Qu.: 33.00   1st Qu.: 143.0   1st Qu.: 0.000   1st Qu.: 0.0000  
+ Median : 45.00   Median : 324.0   Median : 0.000   Median : 0.0000  
+ Mean   : 57.36   Mean   : 466.9   Mean   : 1.484   Mean   : 0.7267  
+ 3rd Qu.: 68.00   3rd Qu.: 615.8   3rd Qu.: 1.000   3rd Qu.: 1.0000  
+ Max.   :726.00   Max.   :5321.0   Max.   :63.000   Max.   :48.0000  
+     ovrmou            income        own      
+ Min.   :   0.00   Min.   : 10.00   No : 709  
+ 1st Qu.:   0.00   1st Qu.: 38.00   Yes:1673  
+ Median :   1.00   Median : 59.00             
+ Mean   :  41.17   Mean   : 63.54             
+ 3rd Qu.:  37.00   3rd Qu.: 83.00             
+ Max.   :2239.00   Max.   :180.00             </code></pre>
+<ul>
+<li>Scatterplot Matrix (with Correlations)
+<div class="figure"><span style="display:block;" id="fig:t4scatmat01"></span>
+<img src="_main_files/figure-html/t4scatmat01-1.png" alt="Scatterplot Matrix with Correlations ([R code](#figure-reffigt4scatmat01))" width="672" />
+<p class="caption">
+Figure 4.1: Scatterplot Matrix with Correlations (<a href="targeting-and-retaining-customers.html#figure-reffigt4scatmat01">R code</a>)
+</p>
+</div></li>
+</ul></li>
+</ul>
+</div>
+<div id="model-specification-1" class="section level3" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> Model Specification</h3>
+<ul>
+<li>Goal: Determine what behaviors and demographics are associated with high revenue customers</li>
+<li>IVs are expected to be ones that are related to revenue</li>
+<li>Model: <span class="math inline">\(avg6rev=\alpha+\beta_1avg6mou+\beta_2cc+\beta_3da+\beta_4ovrmou+\beta_5income+\beta_6own\)</span></li>
+</ul>
+</div>
+<div id="model-interpretation" class="section level3" number="4.4.4">
+<h3><span class="header-section-number">4.4.4</span> Model Interpretation</h3>
+<div id="results-1" class="section level4" number="4.4.4.1">
+<h4><span class="header-section-number">4.4.4.1</span> Results</h4>
+<caption>
+<span id="tab:t4lr01">Table 4.2: </span> Linear Regression Results (<a href="targeting-and-retaining-customers.html#table-reftabt4lr01">R code</a>)
+</caption>
+<pre><code>
+Call:
+lm(formula = avg6rev ~ avg6mou + cc + da + ovrmou + income + 
+    own, data = telecom)
 
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-151.670  -10.263   -1.447    7.212  289.046 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 31.593234   1.403596  22.509  &lt; 2e-16 ***
+avg6mou      0.048721   0.001377  35.371  &lt; 2e-16 ***
+cc          -1.279358   0.149733  -8.544  &lt; 2e-16 ***
+da           1.813647   0.267716   6.775 1.57e-11 ***
+ovrmou       0.178307   0.005823  30.621  &lt; 2e-16 ***
+income      -0.013760   0.014379  -0.957 0.338674    
+ownYes      -4.080660   1.118011  -3.650 0.000268 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 24.76 on 2375 degrees of freedom
+Multiple R-squared:  0.6995,    Adjusted R-squared:  0.6987 
+F-statistic: 921.4 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p><span class="math inline">\(avg6rev=31.593+.049avg6mou-1.279cc+1.814da+.178ovrmou-.014income-4.081own\)</span></p>
+</div>
+<div id="testing-overall-model-significance" class="section level4" number="4.4.4.2">
+<h4><span class="header-section-number">4.4.4.2</span> Testing Overall Model Significance</h4>
+<ul>
+<li>Relationship between DV and combined effects of IVs</li>
+<li><span class="math inline">\(H_0: \text{all }\beta_k=0\)</span> vs. <span class="math inline">\(H_a: \text{at least one }\beta_k\ne0\)</span></li>
+<li>Use F-statistic to test</li>
+<li>Conclusion: With a F-statistic of <span class="math inline">\(921.4\)</span> and a <span class="math inline">\(p&lt;.001\)</span>, we conclude that at least one <span class="math inline">\(\beta_k\)</span> is significant</li>
+</ul>
+</div>
+<div id="assessing-overall-model-fit-1" class="section level4" number="4.4.4.3">
+<h4><span class="header-section-number">4.4.4.3</span> Assessing overall model fit</h4>
+<ul>
+<li>How much variation in the DV is explained by the model</li>
+<li>Use <span class="math inline">\(R^2\)</span> to assess</li>
+<li>Use Adjusted <span class="math inline">\(R^2\)</span> to compare models</li>
+<li>Conclusion: Based on the <span class="math inline">\(R^2\)</span>, about <span class="math inline">\(70\%\)</span> of the variance in <code>avg6rev</code> is explained by the model</li>
+</ul>
+</div>
+<div id="interpret-individual-ivs" class="section level4" number="4.4.4.4">
+<h4><span class="header-section-number">4.4.4.4</span> Interpret Individual IVs</h4>
+<ul>
+<li>Relationship between DV and each IV</li>
+<li><span class="math inline">\(H_0: \beta_k=0\)</span> vs. <span class="math inline">\(H_a: \beta_k\ne0\)</span></li>
+<li>Interpret significant relationships
+<ul>
+<li><code>avg6mou</code>
+<ul>
+<li>With <span class="math inline">\(p&lt;.001\)</span>, <code>avg6mou</code> has a significant effect on <code>avg6rev</code>.</li>
+<li>A one unit increase in <code>avg6mou</code> is predicted to increase <code>avg6rev</code> by <span class="math inline">\(.049\)</span> units.</li>
+</ul></li>
+<li><code>cc</code>
+<ul>
+<li>With <span class="math inline">\(p&lt;.001\)</span>, <code>cc</code> has a significant effect on <code>avg6rev</code>.</li>
+<li>A one unit increase in <code>cc</code> is predicted to decrease <code>avg6rev</code> by <span class="math inline">\(1.279\)</span> units.</li>
+</ul></li>
+<li><code>da</code>
+<ul>
+<li>With <span class="math inline">\(p&lt;.001\)</span>, <code>da</code> has a significant effect on <code>avg6rev</code>.</li>
+<li>A one unit increase in <code>da</code> is predicted to increase <code>avg6rev</code> by <span class="math inline">\(1.814\)</span> units.</li>
+</ul></li>
+<li><code>ovrmou</code>
+<ul>
+<li>With <span class="math inline">\(p&lt;.001\)</span>, <code>ovrmou</code> has a significant effect on <code>avg6rev</code>.</li>
+<li>A one unit increase in <code>ovrmou</code> is predicted to increase <code>avg6rev</code> by <span class="math inline">\(.017\)</span> units.</li>
+</ul></li>
+<li><code>own</code>
+<ul>
+<li>With <span class="math inline">\(p&lt;.001\)</span>, <code>own</code> has a significant effect on <code>avg6rev</code>.</li>
+<li>Those that own their home have <span class="math inline">\(4.081\)</span> units less revenue per month than those that do not.</li>
+</ul></li>
+</ul></li>
+<li>A standardized <span class="math inline">\(\beta\)</span> is the effect of a single standard deviation change in the IV on the DV
+<ul>
+<li>Higher absolute values are more important</li>
+<li>Conclusion: <code>avg6mou</code> is the biggest driver of avg6rev</li>
+</ul>
+<caption>
+<span id="tab:t4stdbeta1">Table 4.3: </span> Standardized Beta Coefficients (<a href="#table-reftabt4stdbeta1">R code</a>)
+</caption>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid grey; border-top: 2px solid grey;">
+</th>
+<th style="margin: 0; padding: 0; font-weight: 900; vertical-align: middle; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Std.Beta
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="margin: 0; padding: 0; text-align: left;">
+(Intercept)
+</td>
+<td style="margin: 0; padding: 0; text-align: center;">
+0
+</td>
+</tr>
+<tr>
+<td style="margin: 0; padding: 0; text-align: left;">
+avg6mou
+</td>
+<td style="margin: 0; padding: 0; text-align: center;">
+0.5264
+</td>
+</tr>
+<tr>
+<td style="margin: 0; padding: 0; text-align: left;">
+cc
+</td>
+<td style="margin: 0; padding: 0; text-align: center;">
+-0.1071
+</td>
+</tr>
+<tr>
+<td style="margin: 0; padding: 0; text-align: left;">
+da
+</td>
+<td style="margin: 0; padding: 0; text-align: center;">
+0.0849
+</td>
+</tr>
+<tr>
+<td style="margin: 0; padding: 0; text-align: left;">
+ovrmou
+</td>
+<td style="margin: 0; padding: 0; text-align: center;">
+0.4153
+</td>
+</tr>
+<tr>
+<td style="margin: 0; padding: 0; text-align: left;">
+income
+</td>
+<td style="margin: 0; padding: 0; text-align: center;">
+-0.0108
+</td>
+</tr>
+<tr>
+<td style="margin: 0; padding: 0; border-bottom: 2px solid grey; text-align: left;">
+ownYes
+</td>
+<td style="margin: 0; padding: 0; border-bottom: 2px solid grey; text-align: center;">
+-0.0414
+</td>
+</tr>
+</tbody>
+</table></li>
+<li>Sometimes helps to visually examine the IVs for interpretation</li>
+<li>Plots show predicted DV at different levels of significant IVs</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="r-code-3" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> R Code</h2>
+<div id="figure-reffigt4scatmat01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="targeting-and-retaining-customers.html#fig:t4scatmat01">4.1</a></h3>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="targeting-and-retaining-customers.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggpairs</span>(telecom[,<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],  <span class="co"># Select first 6 columns of data set</span></span>
+<span id="cb67-2"><a href="targeting-and-retaining-customers.html#cb67-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">lower=</span><span class="fu">list</span>(<span class="at">continuous=</span></span>
+<span id="cb67-3"><a href="targeting-and-retaining-customers.html#cb67-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">wrap</span>(<span class="st">&quot;smooth&quot;</span>, <span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="co"># Add fit line</span></span>
+<span id="cb67-4"><a href="targeting-and-retaining-customers.html#cb67-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">color=</span><span class="st">&quot;midnightblue&quot;</span>)),  <span class="co"># Set dot color</span></span>
+<span id="cb67-5"><a href="targeting-and-retaining-customers.html#cb67-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">diag=</span><span class="fu">list</span>(<span class="at">continuous=</span><span class="st">&quot;blankDiag&quot;</span>))  <span class="co"># Set diagonals to be blank</span></span></code></pre></div>
+</div>
+<div id="table-reftabt4summstat01" class="section level3 unlisted unnumbered">
+<h3>Table <a href="targeting-and-retaining-customers.html#tab:t4summstat01">4.1</a></h3>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="targeting-and-retaining-customers.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(telecom)</span></code></pre></div>
+</div>
+<div id="table-reftabt4lr01" class="section level3 unlisted unnumbered">
+<h3>Table <a href="targeting-and-retaining-customers.html#tab:t4lr01">4.2</a></h3>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="targeting-and-retaining-customers.html#cb69-1" aria-hidden="true" tabindex="-1"></a>target <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg6rev <span class="sc">~</span> avg6mou <span class="sc">+</span> cc <span class="sc">+</span> da <span class="sc">+</span> ovrmou <span class="sc">+</span> income <span class="sc">+</span> own,</span>
+<span id="cb69-2"><a href="targeting-and-retaining-customers.html#cb69-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data=</span>telecom)</span>
+<span id="cb69-3"><a href="targeting-and-retaining-customers.html#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(target)</span></code></pre></div>
+</div>
+<div id="table-reftabt4stdbeta11" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t4stdbeta11"><strong>??</strong></a></h3>
+<pre><code>```r
+# Use user-defined function &#39;lm_beta.R&#39;
+source(&quot;Topic02/lm_beta.R&quot;)
+htmlTable(lm_beta(target, digits=4))
+```</code></pre>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="logistic-regression.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="examining-and-summarizing-data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
