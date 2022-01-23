@@ -7,16 +7,15 @@ knitr::opts_chunk$set(comment=NA)
 ## R Packages and Datasets for Topic 4
 
 ``` {r t4packagesdata, message=FALSE}
+library(cowplot)       # Arrange plots in grid
 library(ggplot2)       # Advanced graphing capabilities
 library(tidyr)         # Easier programming 
 library(GGally)        # Scatterplot matrix
 library(flextable)     # Better HTML Tables
 library(htmlTable)     # Better HTML Tables
 library(jtools)        # Concise regression results
-library(huxtable)      # Nice tables using jtools
 library(dplyr)         # Easier programming
 library(caret)         # Create data partitions
-library(cowplot)
 load("Topic04/bankmktg.rdata")
 load("Topic04/telecom.rdata")
 ```
@@ -92,12 +91,18 @@ Identify factors (i.e., independent variables) that increase the likelihood of r
     ```
 
     * Scatterplot Matrix (with Correlations)
-    ```{r t4scatmat01, echo=FALSE, fig.cap="Scatterplot Matrix with Correlations ([R code](#figure-reffigt4scatmat01))", message=FALSE, cache=TRUE}
-    ggpairs(telecom[,1:6],  # Select first 6 columns of data set
+    ```{r t4scatmat01, echo=FALSE, fig.cap="Scatterplot Matrix with Correlations ([R code](#figure-reffigt4scatmat01))", message=FALSE}
+    # Need to detach package 'cowplot' to prevent an error
+    detach("package:cowplot", unload = TRUE)  
+    ggpairs(telecom[,1:6], # Dataset
             lower=list(continuous=
-                      wrap("smooth", method="lm", se=FALSE, # Add fit line
+                           wrap("smooth", 
+                                method="lm", 
+                                se=FALSE, # Add fit line
                            color="midnightblue")),  # Set dot color
-            diag=list(continuous="blankDiag"))  # Set diagonals to be blank
+        diag=list(continuous="blankDiag"))  # Set diagonals to be blank
+    # Reload 'cowplot'
+    library(cowplot)
     ```
 
 ### Model Specification
@@ -111,7 +116,7 @@ Identify factors (i.e., independent variables) that increase the likelihood of r
 #### Results
 
 <caption>(\#tab:t4lr01) Linear Regression Results ([R code](#table-reftabt4lr01))</caption>
-```{r t4lr01, echo=FALSE, cache=TRUE}
+```{r t4lr01, echo=FALSE}
 target <- lm(avg6rev ~ avg6mou + cc + da + ovrmou + income + own,
              data=telecom)
 summary(target)
@@ -169,21 +174,73 @@ $avg6rev=31.593+.049avg6mou-1.279cc+1.814da+.178ovrmou-.014income-4.081own$
 
     ```{r t4marginplots01, echo=FALSE}
     # Calculate mean values for continuous variables
-    av6mou <- mean(telecom$avg6mou)
+    avg6mou <- mean(telecom$avg6mou)
     cc <- mean(telecom$cc)
     da <- mean(telecom$da)
     ovrmou <- mean(telecom$ovrmou)
     income <- mean(telecom$income)
     # Create dataframe for prediction at different levels of 'avg6mou'
-    a6m.pred <- crossing(avg6mou=seq(0,700,50), # 15 levels
-                         cc=cc, da=da, ovrmou=ovrmou, income=income,
+    a6m.pred <- crossing(avg6mou=seq(0,1500,100), # 14 levels
+                         cc=c(1.40, 1.17), da=da, ovrmou=ovrmou, income=income,
                          own=c("Yes","No"))
-    # Append linear prediction and confidence intervals to new data frame
+    # Use model results to predict dv for values in 'a6m.pred' data frame
+    # Predicted values and CIs get appended to data frame
+    # New variables are called:
+    #      'p$fit' = linear prediction from model
+    #      'p$lwr' = lower confidence interval for prediction
+    #      'p$upr' = upper confidcent interval for prediction
     a6m.pred$p <- as.data.frame(
-       predict.lm(target, 
+       predict.lm(target,    
                   a6m.pred,
-                  interval="confidence")
-    )
+                  interval="confidence"))
+    # Use ggplot to create margin plot
+    p1 <- ggplot(aes(x=avg6mou, y=p$fit, color=factor(own)), data=a6m.pred) +
+        geom_line(size=1) +
+        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr), alpha=0.2) +
+        labs(x="Mean Monthly Minutes", y="Linear Prediction") +
+        theme(legend.position="none")
+    
+    # Repeat for variable 'cc'
+    cc.pred <- crossing(avg6mou=avg6mou, cc=seq(0,10,1), da=da,
+                        ovrmou=ovrmou, income=income,
+                        own=c("Yes","No"))
+    cc.pred$p <- as.data.frame(predict.lm(target, cc.pred,
+                                          interval="confidence"))
+    p2 <- ggplot(aes(x=cc, y=p$fit, color=factor(own)), data=cc.pred) +
+        geom_line(size=1) +
+        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr), alpha=0.2) +
+        labs(x="Mean Monthly Customer Care Calls", y="Linear Prediction") +
+        theme(legend.position="none")
+ 
+    
+    # Repeat for variable 'da'
+    da.pred <- crossing(avg6mou=avg6mou, cc=cc, da=seq(0,10,1),
+                        ovrmou=ovrmou, income=income,
+                        own=c("Yes","No"))
+    da.pred$p <- as.data.frame(predict.lm(target, da.pred,
+                                          interval="confidence"))
+    p3 <- ggplot(aes(x=da, y=p$fit, color=factor(own)), data=da.pred) +
+        geom_line(size=1) +
+        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr), alpha=0.2) +
+        labs(x="Mean Monthly Directory Assistance Calls", 
+             y="Linear Prediction") +
+        theme(legend.position="none")
+    
+    # Repeat for variable 'ovrmou'
+    om.pred <- crossing(avg6mou=avg6mou, cc=cc, da=da,
+                        ovrmou=seq(0,300,25), income=income,
+                        own=c("Yes","No"))
+    om.pred$p <- as.data.frame(predict.lm(target, om.pred,
+                                          interval="confidence"))
+    p4 <- ggplot(aes(x=ovrmou, y=p$fit, color=factor(own)), data=om.pred) +
+        geom_line(size=1) +
+        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr), alpha=0.2) +
+        labs(x="Mean Monthly Overage Minutes", 
+             y="Linear Prediction") +
+        theme(legend.position="none")
+    prow <- plot_grid(p1, p2, p3, p4, nrow=2)
+    prow
+    
     ```
        
 

@@ -491,12 +491,21 @@ knitr::include_graphics("Topic03/ClassMat.png")
 * Can visually examine how $\Pr(buy)$ changes with a variable for continuous IVs
     * Factor variables can be separate lines (see Figure \@ref(fig:t3mpage01) or separate plots see \@ref(fig:t3mpage02))
     ```{r t3mpage01, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Lines for Gender) ([R code](#figure-reffigt3mpage01))"}
+    # Want to predict for different levels of IVs
+    # Because we often do this for other continuous variables, we first
+    #     create a df with mean values of all continuous IVs
+    #     at different levels of the factor variable (if there are any)
+    # NOTE: variable names must be EXACTLY the same as in model
+    m.ivs <- train %>%
+      group_by(gender) %>%
+      summarise(age=mean(age, na.rm=TRUE),
+                salary=mean(salary, na.rm=TRUE))
+    
     # Create new data for prediction with 'age' as focus
     # This will be used for the next two figures
-    age.pred <-
-        crossing(age=seq(18,60,2),
-                 salary=mean(train$salary), 
-                 gender=c("Male", "Female"))
+    age.pred <- merge(data.frame(age=seq(18,60,2)),
+                      m.ivs[ ,c("salary", "gender")])
+    
     # Create data frame with predicted values and confidence bands
     train.pred <- 
         # 'cbind' combines objects by columns
@@ -507,9 +516,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
                       se=TRUE)) %>%  # Get std.err. for CIs
     mutate(pred=plogis(fit), # Calculate pr(buy)
            upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-           lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
-           gender=as.factor(gender))  # Save gender as factor
-    
+           lwr=plogis(fit-(qnorm(0.975)*se.fit)))  # Lower CI
     # Create plot with gender on same plot
     ggplot(aes(x=age, y=pred), data=train.pred) +
         geom_line(aes(color=gender), size=1) +
@@ -525,12 +532,12 @@ knitr::include_graphics("Topic03/ClassMat.png")
     ```
     
     ```{r t3mpage02, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Plots for Gender) ([R code](#figure-reffigt3mpage02))"}
-    # Create plot with gender on same plot
+    # Create plot with gender on separate plots
     ggplot(aes(x=age, y=pred), data=train.pred) +
         geom_line(aes(color=gender), size=1) +
         geom_ribbon(aes(ymin=lwr, ymax=upr, 
                         color=gender, fill=gender), alpha=.2) +
-        facet_grid(~gender) +
+        facet_grid(~gender) + # Creates separate plots for each gender
         theme(text=element_text(size=15), 
               legend.position="none",
               plot.caption=element_text(size=8)) +
@@ -544,15 +551,26 @@ knitr::include_graphics("Topic03/ClassMat.png")
         * See \@ref(fig:t3mpage04) for $salary$ with different levels of $age$
 
     ```{r t3mpage03, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age at Different Levels of Salary ([R code](#figure-reffigt3mpage03))"}
-    # Create new data for prediction with 'age' as focus
-    msal <- mean(train$salary)  # Assign for less clutter below
-    sdsal <- sd(train$salary)  # Assign for less clutter below
-    age.pred <-
-        crossing(age=seq(18,60,2),
-                 salary=c(msal-1.5*sdsal,  # Mean-1.5SD
-                          msal,  # Mean
-                          msal+1.5*sdsal),  # Mean+1.5SD
-                 gender=c("Male", "Female"))
+    # Want to predict for different levels of IVs
+    # Because we often do this for other continuous variables, we first
+    #     create a df with values of all continuous IVs
+    #     at different levels of the factor variable (if there are any)
+    # NOTE: variable names must be EXACTLY the same as in model
+    msd.ivs <- train %>%
+      group_by(gender) %>%  # Group on factor variable
+      # Calculate values for different levels of IVs
+      summarise(age_mn15=mean(age, na.rm=TRUE)-1.5*sd(age, na.rm=TRUE),
+             age_m=mean(age, na.rm=TRUE),
+             age_mp15=mean(age, na.rm=TRUE)+1.5*sd(age, na.rm=TRUE),
+             salary_mn15=mean(salary, na.rm=TRUE)-1.5*sd(salary, na.rm=TRUE),
+             salary_m=mean(salary, na.rm=TRUE),
+             salary_mp15=mean(salary, na.rm=TRUE)+1.5*sd(salary, na.rm=TRUE)) %>%
+      # Convert data from wide to long
+      pivot_longer(cols=!gender, names_to=c(".value","measure"), names_sep="_")
+    
+    age.pred <- merge(data.frame(age=seq(18, 60, 2)), # Variable of interest
+                 msd.ivs[,c("gender", "salary", "measure")])
+        
     # Create data frame with predicted values and confidence bands
     train.pred <- 
         # 'cbind' combines objects by columns
@@ -565,7 +583,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
                upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
                lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
                gender=as.factor(gender),  # Factor for plot
-               salary=as.factor(round(salary,0)))  # Factor for plot
+               salary=as.factor(measure))  # Factor for plot
 
     ggplot(aes(x=age, y=pred), data=train.pred) +
         geom_line(aes(color=salary), size=1) +
@@ -576,23 +594,19 @@ knitr::include_graphics("Topic03/ClassMat.png")
               legend.position="bottom") +
         scale_color_manual("Salary",
                            values=c("red4", "navy", "forestgreen"),
-                           labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+                           labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
         scale_fill_manual("Salary",
                            values=c("pink", "cyan", "lawngreen"),
-                           labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+                           labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
         labs(x="Age", y="Pr(Buy)")
     ```    
 
     ```{r t3mpage04, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Salary at Different Levels of Age ([R code](#figure-reffigt3mpage04))"}
-    # Create new data for prediction with 'age' as focus
-    mage <- mean(train$age)  # Assign for less clutter below
-    sdage <- sd(train$age)  # Assign for less clutter below
-    sal.pred <-
-        crossing(salary=seq(15,150,5),
-                 age=c(mage-1.5*sdage,  # Mean-1.5SD
-                       mage,  # Mean
-                       mage+1.5*sdage),  # Mean+1.5SD
-                 gender=c("Male", "Female"))
+    # Use df 'msd.ivs' from above
+    
+    sal.pred <- merge(data.frame(salary=seq(15, 150, 5)), # Variable of interest
+                 msd.ivs[,c("gender", "age", "measure")])
+    
     # Create data frame with predicted values and confidence bands
     train.pred <- 
         # 'cbind' combines objects by columns
@@ -605,7 +619,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
                upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
                lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
                gender=as.factor(gender),  # Factor for plot
-               age=as.factor(round(age,0)))  # Factor for plot
+               age=as.factor(measure))  # Factor for plot
 
     ggplot(aes(x=salary, y=pred), data=train.pred) +
         geom_line(aes(color=age), size=1) +
@@ -616,10 +630,10 @@ knitr::include_graphics("Topic03/ClassMat.png")
               legend.position="bottom") +
         scale_color_manual("Age",
                            values=c("red4", "navy", "forestgreen"),
-                           labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+                           labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
         scale_fill_manual("Age",
                            values=c("pink", "cyan", "lawngreen"),
-                           labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+                           labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
         labs(x="Salary", y="Pr(Buy)")
     ```    
 
@@ -802,12 +816,21 @@ logreg_roc(model,      # Object with model results
 ### Figure \@ref(fig:t3mpage01) {.unlisted .unnumbered}
 
 ```{r t3mpage01code, eval=FALSE}
+# Want to predict for different levels of IVs
+# Because we often do this for other continuous variables, we first
+#     create a df with mean values of all continuous IVs
+#     at different levels of the factor variable (if there are any)
+# NOTE: variable names must be EXACTLY the same as in model
+m.ivs <- train %>%
+  group_by(gender) %>%
+  summarise(age=mean(age, na.rm=TRUE),
+            salary=mean(salary, na.rm=TRUE))
+
 # Create new data for prediction with 'age' as focus
 # This will be used for the next two figures
-age.pred <-
-    crossing(age=seq(18,60,2),
-             salary=mean(train$salary), 
-             gender=c("Male", "Female"))
+age.pred <- merge(data.frame(age=seq(18,60,2)),
+                  m.ivs[ ,c("salary", "gender")])
+    
 # Create data frame with predicted values and confidence bands
 train.pred <- 
     # 'cbind' combines objects by columns
@@ -818,11 +841,10 @@ train.pred <-
                   se=TRUE)) %>%  # Get std.err. for CIs
 mutate(pred=plogis(fit), # Calculate pr(buy)
        upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-       lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
-       gender=as.factor(gender))  # Save gender as factor
-    
+       lwr=plogis(fit-(qnorm(0.975)*se.fit)))  # Lower CI
+
 # Create plot with gender on same plot
-ggplot(aes(x=age, y=pred), data=train.pred2) +
+ggplot(aes(x=age, y=pred), data=train.pred) +
     geom_line(aes(color=gender), size=1) +
     geom_ribbon(aes(ymin=lwr, ymax=upr, 
                     color=gender, fill=gender), alpha=.2) +
@@ -853,15 +875,26 @@ ggplot(aes(x=age, y=pred), data=train.pred) +
 ### Figure \@ref(fig:t3mpage03) {.unlisted .unnumbered}
 
 ```{r t3mpage03code, eval=FALSE}
-# Create new data for prediction with 'age' as focus
-msal <- mean(train$salary)  # Assign for less clutter below
-sdsal <- sd(train$salary)  # Assign for less clutter below
-age.pred <-
-    crossing(age=seq(18,60,2),
-             salary=c(msal-1.5*sdsal,  # Mean-1.5SD
-                      msal,  # Mean
-                      msal+1.5*sdsal),  # Mean+1.5SD
-             gender=c("Male", "Female"))
+# Want to predict for different levels of IVs
+# Because we often do this for other continuous variables, we first
+#     create a df with values of all continuous IVs
+#     at different levels of the factor variable (if there are any)
+# NOTE: variable names must be EXACTLY the same as in model
+msd.ivs <- train %>%
+  group_by(gender) %>%  # Group on factor variable
+  # Calculate values for different levels of IVs
+  summarise(age_mn15=mean(age, na.rm=TRUE)-1.5*sd(age, na.rm=TRUE),
+            age_m=mean(age, na.rm=TRUE),
+            age_mp15=mean(age, na.rm=TRUE)+1.5*sd(age, na.rm=TRUE),
+            salary_mn15=mean(salary, na.rm=TRUE)-1.5*sd(salary, na.rm=TRUE),
+            salary_m=mean(salary, na.rm=TRUE),
+            salary_mp15=mean(salary, na.rm=TRUE)+1.5*sd(salary, na.rm=TRUE)) %>%
+  # Convert data from wide to long
+  pivot_longer(cols=!gender, names_to=c(".value","measure"), names_sep="_")
+    
+age.pred <- merge(data.frame(age=seq(18, 60, 2)), # Variable of interest
+                  msd.ivs[,c("gender", "salary", "measure")])
+        
 # Create data frame with predicted values and confidence bands
 train.pred <- 
     # 'cbind' combines objects by columns
@@ -874,35 +907,30 @@ train.pred <-
            upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
            lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
            gender=as.factor(gender),  # Factor for plot
-           salary=as.factor(round(salary,0)))  # Factor for plot
+           salary=as.factor(measure))  # Factor for plot
+
 ggplot(aes(x=age, y=pred), data=train.pred) +
     geom_line(aes(color=salary), size=1) +
     geom_ribbon(aes(ymin=lwr, ymax=upr, 
                     color=salary, fill=salary), alpha=.2) +
     facet_grid(.~gender) +  # Create separate plots for gender
-    theme(text=element_text(size=15),
-          legend.position="bottom") +
+    theme(legend.position="bottom") +
     scale_color_manual("Salary",
                        values=c("red4", "navy", "forestgreen"),
-                       labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+                       labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
     scale_fill_manual("Salary",
                        values=c("pink", "cyan", "lawngreen"),
-                       labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+                       labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
     labs(x="Age", y="Pr(Buy)")
 ```    
 
 ### Figure \@ref(fig:t3mpage04) {.unlisted .unnumbered}
 
 ```{r t3mpage04code, eval=FALSE}
-# Create new data for prediction with 'age' as focus
-mage <- mean(train$age)  # Assign for less clutter below
-sdage <- sd(train$age)  # Assign for less clutter below
-sal.pred <-
-    crossing(salary=seq(15,150,5),
-             age=c(mage-1.5*sdage,  # Mean-1.5SD
-                   mage,  # Mean
-                   mage+1.5*sdage),  # Mean+1.5SD
-             gender=c("Male", "Female"))
+# Use df 'msd.ivs' from above
+sal.pred <- merge(data.frame(salary=seq(15, 150, 5)), # Variable of interest
+                  msd.ivs[,c("gender", "age", "measure")])
+    
 # Create data frame with predicted values and confidence bands
 train.pred <- 
     # 'cbind' combines objects by columns
@@ -915,20 +943,20 @@ train.pred <-
            upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
            lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
            gender=as.factor(gender),  # Factor for plot
-           age=as.factor(round(age,0)))  # Factor for plot
+           age=as.factor(measure))  # Factor for plot
+
 ggplot(aes(x=salary, y=pred), data=train.pred) +
     geom_line(aes(color=age), size=1) +
     geom_ribbon(aes(ymin=lwr, ymax=upr, 
                     color=age, fill=age), alpha=.2) +
     facet_grid(.~gender) +  # Create separate plots for gender
-    theme(text=element_text(size=15),
-          legend.position="bottom") +
+    theme(legend.position="bottom") +
     scale_color_manual("Age",
                        values=c("red4", "navy", "forestgreen"),
-                       labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+                       labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
     scale_fill_manual("Age",
                        values=c("pink", "cyan", "lawngreen"),
-                       labels=c("Mean-1.5SD", "Mean", "Mean+1.5SD")) +
+                       labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
     labs(x="Salary", y="Pr(Buy)")
 ```    
 

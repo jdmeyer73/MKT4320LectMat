@@ -24,7 +24,7 @@
 <meta name="author" content="Jeffrey Meyer" />
 
 
-<meta name="date" content="2022-01-19" />
+<meta name="date" content="2022-01-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -339,18 +339,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Topic 4</span> Targeting and Retaining Customers</h1>
 <div id="r-packages-and-datasets-for-topic-4" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> R Packages and Datasets for Topic 4</h2>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="targeting-and-retaining-customers.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
-<span id="cb64-2"><a href="targeting-and-retaining-customers.html#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)         <span class="co"># Easier programming </span></span>
-<span id="cb64-3"><a href="targeting-and-retaining-customers.html#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)        <span class="co"># Scatterplot matrix</span></span>
-<span id="cb64-4"><a href="targeting-and-retaining-customers.html#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
-<span id="cb64-5"><a href="targeting-and-retaining-customers.html#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmlTable)     <span class="co"># Better HTML Tables</span></span>
-<span id="cb64-6"><a href="targeting-and-retaining-customers.html#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)        <span class="co"># Concise regression results</span></span>
-<span id="cb64-7"><a href="targeting-and-retaining-customers.html#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(huxtable)      <span class="co"># Nice tables using jtools</span></span>
-<span id="cb64-8"><a href="targeting-and-retaining-customers.html#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
-<span id="cb64-9"><a href="targeting-and-retaining-customers.html#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)         <span class="co"># Create data partitions</span></span>
-<span id="cb64-10"><a href="targeting-and-retaining-customers.html#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
-<span id="cb64-11"><a href="targeting-and-retaining-customers.html#cb64-11" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic04/bankmktg.rdata&quot;</span>)</span>
-<span id="cb64-12"><a href="targeting-and-retaining-customers.html#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic04/telecom.rdata&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="targeting-and-retaining-customers.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)       <span class="co"># Arrange plots in grid</span></span>
+<span id="cb66-2"><a href="targeting-and-retaining-customers.html#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb66-3"><a href="targeting-and-retaining-customers.html#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)         <span class="co"># Easier programming </span></span>
+<span id="cb66-4"><a href="targeting-and-retaining-customers.html#cb66-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)        <span class="co"># Scatterplot matrix</span></span>
+<span id="cb66-5"><a href="targeting-and-retaining-customers.html#cb66-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb66-6"><a href="targeting-and-retaining-customers.html#cb66-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmlTable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb66-7"><a href="targeting-and-retaining-customers.html#cb66-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)        <span class="co"># Concise regression results</span></span>
+<span id="cb66-8"><a href="targeting-and-retaining-customers.html#cb66-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb66-9"><a href="targeting-and-retaining-customers.html#cb66-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)         <span class="co"># Create data partitions</span></span>
+<span id="cb66-10"><a href="targeting-and-retaining-customers.html#cb66-10" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic04/bankmktg.rdata&quot;</span>)</span>
+<span id="cb66-11"><a href="targeting-and-retaining-customers.html#cb66-11" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic04/telecom.rdata&quot;</span>)</span></code></pre></div>
 </div>
 <div id="targeting-customers" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Targeting Customers</h2>
@@ -454,16 +453,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
  Min.   :  2.00   Min.   :   0.0   Min.   : 0.000   Min.   : 0.0000  
  1st Qu.: 33.00   1st Qu.: 143.0   1st Qu.: 0.000   1st Qu.: 0.0000  
  Median : 45.00   Median : 324.0   Median : 0.000   Median : 0.0000  
- Mean   : 57.36   Mean   : 466.9   Mean   : 1.484   Mean   : 0.7267  
- 3rd Qu.: 68.00   3rd Qu.: 615.8   3rd Qu.: 1.000   3rd Qu.: 1.0000  
- Max.   :726.00   Max.   :5321.0   Max.   :63.000   Max.   :48.0000  
+ Mean   : 57.36   Mean   : 466.9   Mean   : 1.494   Mean   : 0.8031  
+ 3rd Qu.: 68.00   3rd Qu.: 615.8   3rd Qu.: 1.000   3rd Qu.: 0.7425  
+ Max.   :726.00   Max.   :5321.0   Max.   :62.667   Max.   :47.5200  
      ovrmou            income        own      
- Min.   :   0.00   Min.   : 10.00   No : 709  
- 1st Qu.:   0.00   1st Qu.: 38.00   Yes:1673  
- Median :   1.00   Median : 59.00             
- Mean   :  41.17   Mean   : 63.54             
- 3rd Qu.:  37.00   3rd Qu.: 83.00             
- Max.   :2239.00   Max.   :180.00             </code></pre>
+ Min.   :   0.00   Min.   : 10.01   No : 709  
+ 1st Qu.:   0.00   1st Qu.: 38.41   Yes:1673  
+ Median :   1.25   Median : 59.43             
+ Mean   :  41.11   Mean   : 63.54             
+ 3rd Qu.:  36.50   3rd Qu.: 82.61             
+ Max.   :2239.25   Max.   :179.57             </code></pre>
 <ul>
 <li>Scatterplot Matrix (with Correlations)
 <div class="figure"><span style="display:block;" id="fig:t4scatmat01"></span>
@@ -497,23 +496,23 @@ lm(formula = avg6rev ~ avg6mou + cc + da + ovrmou + income +
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--151.670  -10.263   -1.447    7.212  289.046 
+-152.446  -10.334   -1.500    7.361  288.252 
 
 Coefficients:
              Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) 31.593234   1.403596  22.509  &lt; 2e-16 ***
-avg6mou      0.048721   0.001377  35.371  &lt; 2e-16 ***
-cc          -1.279358   0.149733  -8.544  &lt; 2e-16 ***
-da           1.813647   0.267716   6.775 1.57e-11 ***
-ovrmou       0.178307   0.005823  30.621  &lt; 2e-16 ***
-income      -0.013760   0.014379  -0.957 0.338674    
-ownYes      -4.080660   1.118011  -3.650 0.000268 ***
+(Intercept) 31.421222   1.404375  22.374  &lt; 2e-16 ***
+avg6mou      0.048503   0.001378  35.209  &lt; 2e-16 ***
+cc          -1.262511   0.149997  -8.417  &lt; 2e-16 ***
+da           1.924595   0.270331   7.119 1.43e-12 ***
+ovrmou       0.177919   0.005825  30.545  &lt; 2e-16 ***
+income      -0.012768   0.014377  -0.888  0.37456    
+ownYes      -4.086334   1.117271  -3.657  0.00026 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-Residual standard error: 24.76 on 2375 degrees of freedom
-Multiple R-squared:  0.6995,    Adjusted R-squared:  0.6987 
-F-statistic: 921.4 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
+Residual standard error: 24.74 on 2375 degrees of freedom
+Multiple R-squared:  0.6999,    Adjusted R-squared:  0.6991 
+F-statistic: 923.2 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><span class="math inline">\(avg6rev=31.593+.049avg6mou-1.279cc+1.814da+.178ovrmou-.014income-4.081own\)</span></p>
 </div>
 <div id="testing-overall-model-significance" class="section level4" number="4.4.4.2">
@@ -537,9 +536,9 @@ F-statistic: 921.4 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div id="interpret-individual-ivs" class="section level4" number="4.4.4.4">
 <h4><span class="header-section-number">4.4.4.4</span> Interpret Individual IVs</h4>
 <ul>
-<li>Relationship between DV and each IV</li>
-<li><span class="math inline">\(H_0: \beta_k=0\)</span> vs. <span class="math inline">\(H_a: \beta_k\ne0\)</span></li>
-<li>Interpret significant relationships
+<li><p>Relationship between DV and each IV</p></li>
+<li><p><span class="math inline">\(H_0: \beta_k=0\)</span> vs. <span class="math inline">\(H_a: \beta_k\ne0\)</span></p></li>
+<li><p>Interpret significant relationships</p>
 <ul>
 <li><code>avg6mou</code>
 <ul>
@@ -567,13 +566,13 @@ F-statistic: 921.4 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
 <li>Those that own their home have <span class="math inline">\(4.081\)</span> units less revenue per month than those that do not.</li>
 </ul></li>
 </ul></li>
-<li>A standardized <span class="math inline">\(\beta\)</span> is the effect of a single standard deviation change in the IV on the DV
+<li><p>A standardized <span class="math inline">\(\beta\)</span> is the effect of a single standard deviation change in the IV on the DV</p>
 <ul>
 <li>Higher absolute values are more important</li>
 <li>Conclusion: <code>avg6mou</code> is the biggest driver of avg6rev</li>
 </ul>
 <caption>
-<span id="tab:t4stdbeta1">Table 4.3: </span> Standardized Beta Coefficients (<a href="#table-reftabt4stdbeta1">R code</a>)
+<p><span id="tab:t4stdbeta1">Table 4.3: </span> Standardized Beta Coefficients (<a href="#table-reftabt4stdbeta1">R code</a>)</p>
 </caption>
 <table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
 <thead>
@@ -581,71 +580,72 @@ F-statistic: 921.4 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
 <th style="border-bottom: 1px solid grey; border-top: 2px solid grey;">
 </th>
 <th style="margin: 0; padding: 0; font-weight: 900; vertical-align: middle; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
-Std.Beta
+<p>Std.Beta</p>
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="margin: 0; padding: 0; text-align: left;">
-(Intercept)
+<p>(Intercept)</p>
 </td>
 <td style="margin: 0; padding: 0; text-align: center;">
-0
+<p>0</p>
 </td>
 </tr>
 <tr>
 <td style="margin: 0; padding: 0; text-align: left;">
-avg6mou
+<p>avg6mou</p>
 </td>
 <td style="margin: 0; padding: 0; text-align: center;">
-0.5264
+<p>0.5241</p>
 </td>
 </tr>
 <tr>
 <td style="margin: 0; padding: 0; text-align: left;">
-cc
+<p>cc</p>
 </td>
 <td style="margin: 0; padding: 0; text-align: center;">
--0.1071
+<p>-0.1054</p>
 </td>
 </tr>
 <tr>
 <td style="margin: 0; padding: 0; text-align: left;">
-da
+<p>da</p>
 </td>
 <td style="margin: 0; padding: 0; text-align: center;">
-0.0849
+<p>0.0895</p>
 </td>
 </tr>
 <tr>
 <td style="margin: 0; padding: 0; text-align: left;">
-ovrmou
+<p>ovrmou</p>
 </td>
 <td style="margin: 0; padding: 0; text-align: center;">
-0.4153
+<p>0.4143</p>
 </td>
 </tr>
 <tr>
 <td style="margin: 0; padding: 0; text-align: left;">
-income
+<p>income</p>
 </td>
 <td style="margin: 0; padding: 0; text-align: center;">
--0.0108
+<p>-0.0101</p>
 </td>
 </tr>
 <tr>
 <td style="margin: 0; padding: 0; border-bottom: 2px solid grey; text-align: left;">
-ownYes
+<p>ownYes</p>
 </td>
 <td style="margin: 0; padding: 0; border-bottom: 2px solid grey; text-align: center;">
--0.0414
+<p>-0.0414</p>
 </td>
 </tr>
 </tbody>
 </table></li>
-<li>Sometimes helps to visually examine the IVs for interpretation</li>
-<li>Plots show predicted DV at different levels of significant IVs</li>
+<li><p>Sometimes helps to visually examine the IVs for interpretation</p></li>
+<li><p>Plots show predicted DV at different levels of significant IVs</p>
+<p><img src="_main_files/figure-html/t4marginplots01-1.png" width="672" /></p></li>
 </ul>
 </div>
 </div>
@@ -654,21 +654,21 @@ ownYes
 <h2><span class="header-section-number">4.5</span> R Code</h2>
 <div id="figure-reffigt4scatmat01" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="targeting-and-retaining-customers.html#fig:t4scatmat01">4.1</a></h3>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="targeting-and-retaining-customers.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggpairs</span>(telecom[,<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],  <span class="co"># Select first 6 columns of data set</span></span>
-<span id="cb67-2"><a href="targeting-and-retaining-customers.html#cb67-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">lower=</span><span class="fu">list</span>(<span class="at">continuous=</span></span>
-<span id="cb67-3"><a href="targeting-and-retaining-customers.html#cb67-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">wrap</span>(<span class="st">&quot;smooth&quot;</span>, <span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="co"># Add fit line</span></span>
-<span id="cb67-4"><a href="targeting-and-retaining-customers.html#cb67-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">color=</span><span class="st">&quot;midnightblue&quot;</span>)),  <span class="co"># Set dot color</span></span>
-<span id="cb67-5"><a href="targeting-and-retaining-customers.html#cb67-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">diag=</span><span class="fu">list</span>(<span class="at">continuous=</span><span class="st">&quot;blankDiag&quot;</span>))  <span class="co"># Set diagonals to be blank</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="targeting-and-retaining-customers.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggpairs</span>(telecom[,<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],  <span class="co"># Select first 6 columns of data set</span></span>
+<span id="cb69-2"><a href="targeting-and-retaining-customers.html#cb69-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">lower=</span><span class="fu">list</span>(<span class="at">continuous=</span></span>
+<span id="cb69-3"><a href="targeting-and-retaining-customers.html#cb69-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">wrap</span>(<span class="st">&quot;smooth&quot;</span>, <span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="co"># Add fit line</span></span>
+<span id="cb69-4"><a href="targeting-and-retaining-customers.html#cb69-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">color=</span><span class="st">&quot;midnightblue&quot;</span>)),  <span class="co"># Set dot color</span></span>
+<span id="cb69-5"><a href="targeting-and-retaining-customers.html#cb69-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">diag=</span><span class="fu">list</span>(<span class="at">continuous=</span><span class="st">&quot;blankDiag&quot;</span>))  <span class="co"># Set diagonals to be blank</span></span></code></pre></div>
 </div>
 <div id="table-reftabt4summstat01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="targeting-and-retaining-customers.html#tab:t4summstat01">4.1</a></h3>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="targeting-and-retaining-customers.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(telecom)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="targeting-and-retaining-customers.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(telecom)</span></code></pre></div>
 </div>
 <div id="table-reftabt4lr01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="targeting-and-retaining-customers.html#tab:t4lr01">4.2</a></h3>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="targeting-and-retaining-customers.html#cb69-1" aria-hidden="true" tabindex="-1"></a>target <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg6rev <span class="sc">~</span> avg6mou <span class="sc">+</span> cc <span class="sc">+</span> da <span class="sc">+</span> ovrmou <span class="sc">+</span> income <span class="sc">+</span> own,</span>
-<span id="cb69-2"><a href="targeting-and-retaining-customers.html#cb69-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data=</span>telecom)</span>
-<span id="cb69-3"><a href="targeting-and-retaining-customers.html#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(target)</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="targeting-and-retaining-customers.html#cb71-1" aria-hidden="true" tabindex="-1"></a>target <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg6rev <span class="sc">~</span> avg6mou <span class="sc">+</span> cc <span class="sc">+</span> da <span class="sc">+</span> ovrmou <span class="sc">+</span> income <span class="sc">+</span> own,</span>
+<span id="cb71-2"><a href="targeting-and-retaining-customers.html#cb71-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data=</span>telecom)</span>
+<span id="cb71-3"><a href="targeting-and-retaining-customers.html#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(target)</span></code></pre></div>
 </div>
 <div id="table-reftabt4stdbeta11" class="section level3 unlisted unnumbered">
 <h3>Table <a href="#tab:t4stdbeta11"><strong>??</strong></a></h3>
