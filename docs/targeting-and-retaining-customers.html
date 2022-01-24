@@ -24,7 +24,7 @@
 <meta name="author" content="Jeffrey Meyer" />
 
 
-<meta name="date" content="2022-01-23" />
+<meta name="date" content="2022-01-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -315,8 +315,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.4.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#assessing-overall-model-fit-1"><i class="fa fa-check"></i><b>4.4.4.3</b> Assessing overall model fit</a></li>
 <li class="chapter" data-level="4.4.4.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpret-individual-ivs"><i class="fa fa-check"></i><b>4.4.4.4</b> Interpret Individual IVs</a></li>
 </ul></li>
+<li class="chapter" data-level="4.4.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#conclusion"><i class="fa fa-check"></i><b>4.4.5</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#r-code-3"><i class="fa fa-check"></i><b>4.5</b> R Code</a></li>
+<li class="chapter" data-level="4.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#targeting-customers-logistic-regression"><i class="fa fa-check"></i><b>4.5</b> Targeting Customers (Logistic Regression)</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#overview-5"><i class="fa fa-check"></i><b>4.5.1</b> Overview</a></li>
+<li class="chapter" data-level="4.5.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#estimation-results-1"><i class="fa fa-check"></i><b>4.5.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="4.5.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#overall-model-fit-1"><i class="fa fa-check"></i><b>4.5.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="4.5.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpreting-coefficients-2"><i class="fa fa-check"></i><b>4.5.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="4.5.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpreting-coefficients-visually"><i class="fa fa-check"></i><b>4.5.5</b> Interpreting Coefficients Visually</a></li>
+<li class="chapter" data-level="4.5.6" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#gain-chart"><i class="fa fa-check"></i><b>4.5.6</b> Gain Chart</a></li>
+<li class="chapter" data-level="4.5.7" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#lift-chart"><i class="fa fa-check"></i><b>4.5.7</b> Lift Chart</a></li>
+<li class="chapter" data-level="4.5.8" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#conclusion-1"><i class="fa fa-check"></i><b>4.5.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#suggested-readings-3"><i class="fa fa-check"></i><b>4.6</b> Suggested Readings</a></li>
+<li class="chapter" data-level="4.7" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#r-code-3"><i class="fa fa-check"></i><b>4.7</b> R Code</a></li>
 </ul></li>
 </ul>
 
@@ -513,7 +526,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 Residual standard error: 24.74 on 2375 degrees of freedom
 Multiple R-squared:  0.6999,    Adjusted R-squared:  0.6991 
 F-statistic: 923.2 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
-<p><span class="math inline">\(avg6rev=31.593+.049avg6mou-1.279cc+1.814da+.178ovrmou-.014income-4.081own\)</span></p>
+<p><span class="math inline">\(avg6rev=31.421+.049avg6mou-1.263cc+1.925da+.178ovrmou-.013income-4.086own\)</span></p>
 </div>
 <div id="testing-overall-model-significance" class="section level4" number="4.4.4.2">
 <h4><span class="header-section-number">4.4.4.2</span> Testing Overall Model Significance</h4>
@@ -521,7 +534,7 @@ F-statistic: 923.2 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
 <li>Relationship between DV and combined effects of IVs</li>
 <li><span class="math inline">\(H_0: \text{all }\beta_k=0\)</span> vs. <span class="math inline">\(H_a: \text{at least one }\beta_k\ne0\)</span></li>
 <li>Use F-statistic to test</li>
-<li>Conclusion: With a F-statistic of <span class="math inline">\(921.4\)</span> and a <span class="math inline">\(p&lt;.001\)</span>, we conclude that at least one <span class="math inline">\(\beta_k\)</span> is significant</li>
+<li>Conclusion: With a F-statistic of <span class="math inline">\(923.2\)</span> and a <span class="math inline">\(p&lt;.001\)</span>, we conclude that at least one <span class="math inline">\(\beta_k\)</span> is significant</li>
 </ul>
 </div>
 <div id="assessing-overall-model-fit-1" class="section level4" number="4.4.4.3">
@@ -548,22 +561,22 @@ F-statistic: 923.2 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
 <li><code>cc</code>
 <ul>
 <li>With <span class="math inline">\(p&lt;.001\)</span>, <code>cc</code> has a significant effect on <code>avg6rev</code>.</li>
-<li>A one unit increase in <code>cc</code> is predicted to decrease <code>avg6rev</code> by <span class="math inline">\(1.279\)</span> units.</li>
+<li>A one unit increase in <code>cc</code> is predicted to decrease <code>avg6rev</code> by <span class="math inline">\(1.263\)</span> units.</li>
 </ul></li>
 <li><code>da</code>
 <ul>
 <li>With <span class="math inline">\(p&lt;.001\)</span>, <code>da</code> has a significant effect on <code>avg6rev</code>.</li>
-<li>A one unit increase in <code>da</code> is predicted to increase <code>avg6rev</code> by <span class="math inline">\(1.814\)</span> units.</li>
+<li>A one unit increase in <code>da</code> is predicted to increase <code>avg6rev</code> by <span class="math inline">\(1.925\)</span> units.</li>
 </ul></li>
 <li><code>ovrmou</code>
 <ul>
 <li>With <span class="math inline">\(p&lt;.001\)</span>, <code>ovrmou</code> has a significant effect on <code>avg6rev</code>.</li>
-<li>A one unit increase in <code>ovrmou</code> is predicted to increase <code>avg6rev</code> by <span class="math inline">\(.017\)</span> units.</li>
+<li>A one unit increase in <code>ovrmou</code> is predicted to increase <code>avg6rev</code> by <span class="math inline">\(.178\)</span> units.</li>
 </ul></li>
 <li><code>own</code>
 <ul>
 <li>With <span class="math inline">\(p&lt;.001\)</span>, <code>own</code> has a significant effect on <code>avg6rev</code>.</li>
-<li>Those that own their home have <span class="math inline">\(4.081\)</span> units less revenue per month than those that do not.</li>
+<li>Those that own their home have <span class="math inline">\(4.086\)</span> units less revenue per month than those that do not.</li>
 </ul></li>
 </ul></li>
 <li><p>A standardized <span class="math inline">\(\beta\)</span> is the effect of a single standard deviation change in the IV on the DV</p>
@@ -644,39 +657,649 @@ F-statistic: 923.2 on 6 and 2375 DF,  p-value: &lt; 2.2e-16</code></pre>
 </tbody>
 </table></li>
 <li><p>Sometimes helps to visually examine the IVs for interpretation</p></li>
-<li><p>Plots show predicted DV at different levels of significant IVs</p>
-<p><img src="_main_files/figure-html/t4marginplots01-1.png" width="672" /></p></li>
+<li><p>Plots can show predicted DV at different levels of IVs</p>
+<div class="figure"><span style="display:block;" id="fig:t4marginplots01"></span>
+<img src="_main_files/figure-html/t4marginplots01-1.png" alt="Margin Plots for Significant IVs ([R code](#figure-reffigt4marginplots01))" width="672" />
+<p class="caption">
+Figure 4.2: Margin Plots for Significant IVs (<a href="targeting-and-retaining-customers.html#figure-reffigt4marginplots01">R code</a>)
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:t4marginplots02"></span>
+<img src="_main_files/figure-html/t4marginplots02-1.png" alt="Margin Plots for Insignificant IV ([R code](#figure-reffigt4marginplots02))" width="672" />
+<p class="caption">
+Figure 4.3: Margin Plots for Insignificant IV (<a href="targeting-and-retaining-customers.html#figure-reffigt4marginplots02">R code</a>)
+</p>
+</div></li>
+<li><p>Examine deciles of predicted values by the IVs</p>
+<ul>
+<li>Split sample into 10 groups based on predicted DV</li>
+<li>Look at mean values of IVs for each decile</li>
+</ul>
+<caption>
+<p><span id="tab:t4tgtdecile">Table 4.4: </span> IVs by Predicted Deciles (<a href="targeting-and-retaining-customers.html#table-reftabt4tgtdecile">R code</a>)</p>
+</caption>
+<template id="a138386b-fac4-4e2b-b558-7b64ffb25807"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-80415708{}.cl-803a7dde{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-803aa4d0{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-803acbc2{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-803acbc3{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-803acbc4{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-80415708'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-803acbc4"><p class="cl-803aa4d0"><span class="cl-803a7dde">yhat.dec</span></p></td><td class="cl-803acbc4"><p class="cl-803aa4d0"><span class="cl-803a7dde">avg6rev</span></p></td><td class="cl-803acbc4"><p class="cl-803aa4d0"><span class="cl-803a7dde">avg6mou</span></p></td><td class="cl-803acbc4"><p class="cl-803aa4d0"><span class="cl-803a7dde">cc</span></p></td><td class="cl-803acbc4"><p class="cl-803aa4d0"><span class="cl-803a7dde">da</span></p></td><td class="cl-803acbc4"><p class="cl-803aa4d0"><span class="cl-803a7dde">ovrmou</span></p></td><td class="cl-803acbc4"><p class="cl-803aa4d0"><span class="cl-803a7dde">income</span></p></td><td class="cl-803acbc4"><p class="cl-803aa4d0"><span class="cl-803a7dde">own</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">1</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">140.72689</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">1,441.11345</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">3.3949580</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">3.23101892</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">234.0168067</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">62.12881</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.5420168</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">2</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">79.76891</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">889.08403</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">2.7549020</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">1.63544117</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">70.8102241</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">68.83508</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.5924370</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">3</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">65.66387</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">659.97479</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">2.3179272</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.94216386</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">45.9810924</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">66.31542</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.6344538</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">4</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">53.73950</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">482.93277</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">1.1218487</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.61043067</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">24.8613445</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">65.67794</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.5924370</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">5</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">50.24790</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">382.63445</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">1.0266106</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.54942227</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">15.8291316</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">64.91030</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.7016807</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">6</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">45.14706</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">296.78151</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">1.0462185</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.39620798</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">9.9705882</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">66.70466</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.6596639</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">7</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">40.24790</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">223.65966</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.8417367</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.26309874</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">5.3851541</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">58.92695</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.7352941</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">8</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">36.64706</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">149.87815</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.6442577</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.24438025</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">1.8823529</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">58.29429</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.7184874</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">9</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">33.23431</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">97.42678</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.5843794</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.12116109</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">1.9093445</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">61.43260</span></p></td><td class="cl-803acbc2"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.8577406</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-803acbc3"><p class="cl-803aa4d0"><span class="cl-803a7dde">10</span></p></td><td class="cl-803acbc3"><p class="cl-803aa4d0"><span class="cl-803a7dde">28.40586</span></p></td><td class="cl-803acbc3"><p class="cl-803aa4d0"><span class="cl-803a7dde">48.94979</span></p></td><td class="cl-803acbc3"><p class="cl-803aa4d0"><span class="cl-803a7dde">1.2078103</span></p></td><td class="cl-803acbc3"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.04349372</span></p></td><td class="cl-803acbc3"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.7845188</span></p></td><td class="cl-803acbc3"><p class="cl-803aa4d0"><span class="cl-803a7dde">62.19047</span></p></td><td class="cl-803acbc3"><p class="cl-803aa4d0"><span class="cl-803a7dde">0.9874477</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="f48991da-0293-4e21-bcae-4e0f82f672d2"></div>
+<script>
+var dest = document.getElementById("f48991da-0293-4e21-bcae-4e0f82f672d2");
+var template = document.getElementById("a138386b-fac4-4e2b-b558-7b64ffb25807");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+</li>
 </ul>
 </div>
 </div>
+<div id="conclusion" class="section level3" number="4.4.5">
+<h3><span class="header-section-number">4.4.5</span> Conclusion</h3>
+<p>Recall our Goal:<br>
+Determine what behaviors and demographics are associated with high revenue customers</p>
+<p>What did we learn?</p>
+<ul>
+<li>We can identify our highest revenue customers by examining <code>avg6mou</code>, <code>cc</code>, <code>da</code>, <code>ovrmou</code> and <code>own</code></li>
+<li>Our highest revenue customers consumer over <span class="math inline">\(1000\)</span> minutes per month and have over <span class="math inline">\(200\)</span> overage minutes per month</li>
+<li>More directory assistance calls and fewer customer care calls are associated with higher revenue</li>
+</ul>
 </div>
-<div id="r-code-3" class="section level2" number="4.5">
-<h2><span class="header-section-number">4.5</span> R Code</h2>
+</div>
+<div id="targeting-customers-logistic-regression" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Targeting Customers (Logistic Regression)</h2>
+<div id="overview-5" class="section level3" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Overview</h3>
+<ul>
+<li>Bank marketing data for customers of a bank</li>
+<li>DV:
+<ul>
+<li>Open term deposit account, <code>response</code></li>
+</ul></li>
+<li>IVs:
+<ul>
+<li>Age, <code>age</code></li>
+<li>Average Yearly Balance, <code>balance</code></li>
+<li>Housing Loan (Yes, No), <code>housing</code></li>
+<li>Personal Loan (Yes, No), <code>loan</code></li>
+<li>Married (Yes, No), <code>married</code></li>
+</ul></li>
+<li>Predict current customers likely to buy
+<ul>
+<li>Use training (75%) and holdout (25%) samples</li>
+</ul></li>
+</ul>
+</div>
+<div id="estimation-results-1" class="section level3" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Estimation Results</h3>
+<caption>
+<span id="tab:t4lrestimation">Table 4.5: </span> Logistic Regression Estimation Results on Training Sample (<a href="targeting-and-retaining-customers.html#table-reftabt4lrestimation">R code</a>)
+</caption>
+<pre><code>
+Call:
+glm(formula = response ~ age + balance + housing + loan + married, 
+    family = &quot;binomial&quot;, data = train)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.8039  -0.4760  -0.4084  -0.3311   2.7149  
+
+Coefficients:
+               Estimate  Std. Error z value  Pr(&gt;|z|)    
+(Intercept) -2.42502380  0.28108855  -8.627   &lt; 2e-16 ***
+age          0.02063143  0.00658090   3.135   0.00172 ** 
+balance     -0.00001342  0.00002360  -0.569   0.56962    
+housingYes  -0.57512112  0.13736995  -4.187 0.0000283 ***
+loanYes     -0.67663138  0.22339652  -3.029   0.00245 ** 
+marriedYes  -0.57891627  0.14211504  -4.074 0.0000463 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1629.3  on 2652  degrees of freedom
+Residual deviance: 1580.0  on 2647  degrees of freedom
+AIC: 1592
+
+Number of Fisher Scoring iterations: 5</code></pre>
+<pre><code>Model p-value = 0.0000  </code></pre>
+<pre><code>McFadden&#39;s Pseudo-Rsquared =  0.0303</code></pre>
+<template id="b5b80e71-e513-468b-948e-16e76886f46f"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-805b5e0a{}.cl-80554704{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-80556df6{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-80556df7{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-805594f2{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-805594f3{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-805594f4{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-805594f5{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-805594f6{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-805594f7{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-805b5e0a'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-805594f7"><p class="cl-80556df6"><span class="cl-80554704">Parameter</span></p></td><td class="cl-805594f6"><p class="cl-80556df7"><span class="cl-80554704">OR Est</span></p></td><td class="cl-805594f6"><p class="cl-80556df7"><span class="cl-80554704">p</span></p></td><td class="cl-805594f6"><p class="cl-80556df7"><span class="cl-80554704">2.5%</span></p></td><td class="cl-805594f6"><p class="cl-80556df7"><span class="cl-80554704">97.5%</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-805594f3"><p class="cl-80556df6"><span class="cl-80554704">(Intercept)</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.0885</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.0000</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.0510</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.1535</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-805594f3"><p class="cl-80556df6"><span class="cl-80554704">age</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">1.0208</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.0017</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">1.0078</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">1.0341</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-805594f3"><p class="cl-80556df6"><span class="cl-80554704">balance</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">1.0000</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.5696</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.9999</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">1.0000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-805594f3"><p class="cl-80556df6"><span class="cl-80554704">housingYes</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.5626</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.0000</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.4298</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.7365</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-805594f3"><p class="cl-80556df6"><span class="cl-80554704">loanYes</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.5083</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.0025</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.3281</span></p></td><td class="cl-805594f2"><p class="cl-80556df7"><span class="cl-80554704">0.7876</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-805594f5"><p class="cl-80556df6"><span class="cl-80554704">marriedYes</span></p></td><td class="cl-805594f4"><p class="cl-80556df7"><span class="cl-80554704">0.5605</span></p></td><td class="cl-805594f4"><p class="cl-80556df7"><span class="cl-80554704">0.0000</span></p></td><td class="cl-805594f4"><p class="cl-80556df7"><span class="cl-80554704">0.4242</span></p></td><td class="cl-805594f4"><p class="cl-80556df7"><span class="cl-80554704">0.7405</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="d97748ee-ae82-470b-a8b3-c5d545813caf"></div>
+<script>
+var dest = document.getElementById("d97748ee-ae82-470b-a8b3-c5d545813caf");
+var template = document.getElementById("b5b80e71-e513-468b-948e-16e76886f46f");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+</div>
+<div id="overall-model-fit-1" class="section level3" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> Overall Model Fit</h3>
+<ul>
+<li><p>Based on the likelihood ratio test with p-value &lt; .0001, the overall model is significant</p></li>
+<li><p>McFadden’s Pseudo-<span class="math inline">\(R^2\)</span> of .030 means that the model explains only about 3% of variation between buyers/non-buyers</p></li>
+<li><p>Classification Matrix for Training Sample</p></li>
+<li><p>What’s the problem?</p>
+<caption>
+<p><span id="tab:t4cmtrain1">Table 4.6: </span> Classification Matrix for Training Sample (<a href="#table-reftabt4cmtrain1">R code</a>)</p>
+</caption>
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction   No  Yes
+       No  2409  244
+       Yes    0    0
+
+               Accuracy : 0.908           
+                 95% CI : (0.8964, 0.9188)
+    No Information Rate : 0.908           
+    P-Value [Acc &gt; NIR] : 0.517           
+
+                  Kappa : 0               
+
+ Mcnemar&#39;s Test P-Value : &lt;2e-16          
+
+            Sensitivity : 0.00000         
+            Specificity : 1.00000         
+         Pos Pred Value :     NaN         
+         Neg Pred Value : 0.90803         
+             Prevalence : 0.09197         
+         Detection Rate : 0.00000         
+   Detection Prevalence : 0.00000         
+      Balanced Accuracy : 0.50000         
+
+       &#39;Positive&#39; Class : Yes             
+
+PCC = 83.30%</code></pre></li>
+<li><p>Sensitivity/Specificity Plot</p>
+<div class="figure"><span style="display:block;" id="fig:t4sensspec01"></span>
+<img src="_main_files/figure-html/t4sensspec01-1.png" alt="Sensitivity/Specificity Plot for Training Sample ([R code](#figure-reffigt4sensspec01))" width="672" />
+<p class="caption">
+Figure 4.4: Sensitivity/Specificity Plot for Training Sample (<a href="#figure-reffigt4sensspec01">R code</a>)
+</p>
+</div></li>
+<li><p>Classificaiton Matrix for Holdout Sample</p>
+<caption>
+<p><span id="tab:t4cmtrain2">Table 4.7: </span> Classification Matrix for Training Sample with 0.1 Cutoff (<a href="#table-reftabt4cmtrain2">R code</a>)</p>
+</caption>
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction   No  Yes
+       No  1540  107
+       Yes  869  137
+
+               Accuracy : 0.6321          
+                 95% CI : (0.6134, 0.6505)
+    No Information Rate : 0.908           
+    P-Value [Acc &gt; NIR] : 1               
+
+                  Kappa : 0.0835          
+
+ Mcnemar&#39;s Test P-Value : &lt;2e-16          
+
+            Sensitivity : 0.56148         
+            Specificity : 0.63927         
+         Pos Pred Value : 0.13618         
+         Neg Pred Value : 0.93503         
+             Prevalence : 0.09197         
+         Detection Rate : 0.05164         
+   Detection Prevalence : 0.37919         
+      Balanced Accuracy : 0.60037         
+
+       &#39;Positive&#39; Class : Yes             
+
+PCC = 83.30%</code></pre></li>
+<li><p>Classification Matrix for Holdout Sample</p>
+<ul>
+<li>Results very similar for holdout sample</li>
+</ul>
+<caption>
+<p><span id="tab:t4cmtrain3">Table 4.8: </span> Classification Matrix for Holdout Sample with 0.1 Cutoff (<a href="#table-reftabt4cmtrain3">R code</a>)</p>
+</caption>
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction  No Yes
+       No  527  37
+       Yes 275  44
+
+               Accuracy : 0.6467          
+                 95% CI : (0.6141, 0.6782)
+    No Information Rate : 0.9083          
+    P-Value [Acc &gt; NIR] : 1               
+
+                  Kappa : 0.0863          
+
+ Mcnemar&#39;s Test P-Value : &lt;2e-16          
+
+            Sensitivity : 0.54321         
+            Specificity : 0.65711         
+         Pos Pred Value : 0.13793         
+         Neg Pred Value : 0.93440         
+             Prevalence : 0.09173         
+         Detection Rate : 0.04983         
+   Detection Prevalence : 0.36127         
+      Balanced Accuracy : 0.60016         
+
+       &#39;Positive&#39; Class : Yes             
+
+PCC = 83.34%</code></pre></li>
+<li><p>ROC Curve for Holdout Sample</p>
+<ul>
+<li>Area between <span class="math inline">\(.5\)</span> and <span class="math inline">\(.7\)</span> suggests poor model fit</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:t4roctest1"></span>
+<img src="_main_files/figure-html/t4roctest1-1.png" alt="ROC Curve for Test/Holdout Sample ([R code](#figure-reffigt4roctest1))" width="672" />
+<p class="caption">
+Figure 4.5: ROC Curve for Test/Holdout Sample (<a href="#figure-reffigt4roctest1">R code</a>)
+</p>
+</div></li>
+</ul>
+</div>
+<div id="interpreting-coefficients-2" class="section level3" number="4.5.4">
+<h3><span class="header-section-number">4.5.4</span> Interpreting Coefficients</h3>
+<ul>
+<li><code>age</code> is positive (<span class="math inline">\(OR&gt;1\)</span>) and significant (<span class="math inline">\(p=.0017\)</span>)
+<ul>
+<li><span class="math inline">\(1\)</span> year increase in age increases odds of buying by a factor of <span class="math inline">\(1.021\)</span> (or odds of buying increase by <span class="math inline">\(2.1\%\)</span>)</li>
+</ul></li>
+<li><code>married</code> is negative (<span class="math inline">\(OR&lt;1\)</span>) and significant (<span class="math inline">\(p&lt;.0001\)</span>)
+<ul>
+<li>Being married decreases odds of buying by factor of <span class="math inline">\(.56\)</span> (or odds of buying decrease by <span class="math inline">\(44\%\)</span>)</li>
+</ul></li>
+<li><code>housing</code> is negative (<span class="math inline">\(OR&lt;1\)</span>) and significant (<span class="math inline">\(p&lt;.0001\)</span>)
+<ul>
+<li>Having a home loan decreases odds of buying by factor of <span class="math inline">\(.56\)</span> (or odds of buying decrease by <span class="math inline">\(44\%\)</span>)</li>
+</ul></li>
+<li><code>loan</code> is negative (<span class="math inline">\(OR&lt;1\)</span>) and significant (<span class="math inline">\(p=.0025\)</span>)
+<ul>
+<li>Having a personal loan decreases odds of buying by factor of <span class="math inline">\(.50\)</span> (or odds of buying decrease by <span class="math inline">\(50\%\)</span>)</li>
+</ul></li>
+</ul>
+</div>
+<div id="interpreting-coefficients-visually" class="section level3" number="4.5.5">
+<h3><span class="header-section-number">4.5.5</span> Interpreting Coefficients Visually</h3>
+<div class="figure"><span style="display:block;" id="fig:t4lrmarginplots"></span>
+<img src="_main_files/figure-html/t4lrmarginplots-1.png" alt="Margin Plots for Age at Different Factor Levels ([R code](#figure-reffigt4lrmarginplots))" width="672" />
+<p class="caption">
+Figure 4.6: Margin Plots for Age at Different Factor Levels (<a href="targeting-and-retaining-customers.html#figure-reffigt4lrmarginplots">R code</a>)
+</p>
+</div>
+</div>
+<div id="gain-chart" class="section level3" number="4.5.6">
+<h3><span class="header-section-number">4.5.6</span> Gain Chart</h3>
+<ul>
+<li><p>Contacting top <span class="math inline">\(20\%\)</span> of predicted buyers yields about <span class="math inline">\(40\%\)</span> of actual buyers</p></li>
+<li><p>Contacting top <span class="math inline">\(30\%\)</span> of predicted buyers yields about <span class="math inline">\(52\%\)</span> of actual buyers</p>
+<div class="figure"><span style="display:block;" id="fig:t4gainlift01"></span>
+<img src="_main_files/figure-html/t4gainlift01-1.png" alt="Gain Chart ([R code](#figure-reffigt4gainlift01))" width="672" />
+<p class="caption">
+Figure 4.7: Gain Chart (<a href="targeting-and-retaining-customers.html#figure-reffigt4gainlift01">R code</a>)
+</p>
+</div></li>
+</ul>
+</div>
+<div id="lift-chart" class="section level3" number="4.5.7">
+<h3><span class="header-section-number">4.5.7</span> Lift Chart</h3>
+<ul>
+<li>Contacting top <span class="math inline">\(20\%\)</span> of predicted buyers provides a lift of about <span class="math inline">\(2\)</span>
+<div class="figure"><span style="display:block;" id="fig:t4gainlift02"></span>
+<img src="_main_files/figure-html/t4gainlift02-1.png" alt="Lift Chart ([R code](#figure-reffigt4gainlift02))" width="672" />
+<p class="caption">
+Figure 4.8: Lift Chart (<a href="targeting-and-retaining-customers.html#figure-reffigt4gainlift02">R code</a>)
+</p>
+</div></li>
+</ul>
+</div>
+<div id="conclusion-1" class="section level3" number="4.5.8">
+<h3><span class="header-section-number">4.5.8</span> Conclusion</h3>
+<p>Recall our goal:</p>
+<ul>
+<li>Predict current customers likely to buy</li>
+</ul>
+<p>What did we learn?</p>
+<ul>
+<li>We can identify those more likely to buy by examining <code>age</code>, <code>married</code>, <code>housing</code>, and <code>loan</code></li>
+<li>By targeting those customers that are more likely to purchase, we can better spend our limited resources</li>
+</ul>
+</div>
+</div>
+<div id="suggested-readings-3" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Suggested Readings</h2>
+<ul>
+<li><em>Marketing Data Science</em> (2015). Miller, Thomas W.
+<ul>
+<li>BGSU Library Link:<br><a href="http://maurice.bgsu.edu:2083/record=b41416968~S0" target="_blank" rel="noopener noreferrer">http://maurice.bgsu.edu:2083/record=b41416968~S0</a></li>
+<li>eBook through BGSU Library:<br><a href="https://learning.oreilly.com/library/view/marketing-data-science/9780133887662/?ar=" target="_blank" rel="noopener noreferrer">https://learning.oreilly.com/library/view/marketing-data-science/9780133887662/?ar=</a><br>Note: Might need to create an account; select “Not Listed. Click here” from the “Select your institution” drop down box. Use your BGSU email to create the account.</li>
+<li>Chapter 3: Targeting Current Customers</li>
+</ul></li>
+</ul>
+</div>
+<div id="r-code-3" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> R Code</h2>
 <div id="figure-reffigt4scatmat01" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="targeting-and-retaining-customers.html#fig:t4scatmat01">4.1</a></h3>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="targeting-and-retaining-customers.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggpairs</span>(telecom[,<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],  <span class="co"># Select first 6 columns of data set</span></span>
-<span id="cb69-2"><a href="targeting-and-retaining-customers.html#cb69-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">lower=</span><span class="fu">list</span>(<span class="at">continuous=</span></span>
-<span id="cb69-3"><a href="targeting-and-retaining-customers.html#cb69-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">wrap</span>(<span class="st">&quot;smooth&quot;</span>, <span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="co"># Add fit line</span></span>
-<span id="cb69-4"><a href="targeting-and-retaining-customers.html#cb69-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">color=</span><span class="st">&quot;midnightblue&quot;</span>)),  <span class="co"># Set dot color</span></span>
-<span id="cb69-5"><a href="targeting-and-retaining-customers.html#cb69-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">diag=</span><span class="fu">list</span>(<span class="at">continuous=</span><span class="st">&quot;blankDiag&quot;</span>))  <span class="co"># Set diagonals to be blank</span></span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="targeting-and-retaining-customers.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Need to detach package &#39;cowplot&#39; to prevent an error</span></span>
+<span id="cb75-2"><a href="targeting-and-retaining-customers.html#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(<span class="st">&quot;package:cowplot&quot;</span>, <span class="at">unload =</span> <span class="cn">TRUE</span>)  </span>
+<span id="cb75-3"><a href="targeting-and-retaining-customers.html#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggpairs</span>(telecom[,<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>], <span class="co"># Dataset</span></span>
+<span id="cb75-4"><a href="targeting-and-retaining-customers.html#cb75-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">lower=</span><span class="fu">list</span>(<span class="at">continuous=</span></span>
+<span id="cb75-5"><a href="targeting-and-retaining-customers.html#cb75-5" aria-hidden="true" tabindex="-1"></a>                       <span class="fu">wrap</span>(<span class="st">&quot;smooth&quot;</span>, </span>
+<span id="cb75-6"><a href="targeting-and-retaining-customers.html#cb75-6" aria-hidden="true" tabindex="-1"></a>                            <span class="at">method=</span><span class="st">&quot;lm&quot;</span>, </span>
+<span id="cb75-7"><a href="targeting-and-retaining-customers.html#cb75-7" aria-hidden="true" tabindex="-1"></a>                            <span class="at">se=</span><span class="cn">FALSE</span>, <span class="co"># Add fit line</span></span>
+<span id="cb75-8"><a href="targeting-and-retaining-customers.html#cb75-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">color=</span><span class="st">&quot;midnightblue&quot;</span>)),  <span class="co"># Set dot color</span></span>
+<span id="cb75-9"><a href="targeting-and-retaining-customers.html#cb75-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">diag=</span><span class="fu">list</span>(<span class="at">continuous=</span><span class="st">&quot;blankDiag&quot;</span>))  <span class="co"># Set diagonals to be blank</span></span>
+<span id="cb75-10"><a href="targeting-and-retaining-customers.html#cb75-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Reload &#39;cowplot&#39;</span></span>
+<span id="cb75-11"><a href="targeting-and-retaining-customers.html#cb75-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span></code></pre></div>
+</div>
+<div id="figure-reffigt4marginplots01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="targeting-and-retaining-customers.html#fig:t4marginplots01">4.2</a></h3>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="targeting-and-retaining-customers.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Want to predict for different levels of IVs</span></span>
+<span id="cb76-2"><a href="targeting-and-retaining-customers.html#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Because we often do this for other continuous variables, we first</span></span>
+<span id="cb76-3"><a href="targeting-and-retaining-customers.html#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     create a df with mean values of all continuous IVs</span></span>
+<span id="cb76-4"><a href="targeting-and-retaining-customers.html#cb76-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     at different levels of the factor variable (if there are any)</span></span>
+<span id="cb76-5"><a href="targeting-and-retaining-customers.html#cb76-5" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: variable names must be EXACTLY the same as in model</span></span>
+<span id="cb76-6"><a href="targeting-and-retaining-customers.html#cb76-6" aria-hidden="true" tabindex="-1"></a>m.ivs <span class="ot">&lt;-</span> telecom <span class="sc">%&gt;%</span></span>
+<span id="cb76-7"><a href="targeting-and-retaining-customers.html#cb76-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(own) <span class="sc">%&gt;%</span></span>
+<span id="cb76-8"><a href="targeting-and-retaining-customers.html#cb76-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg6mou=</span><span class="fu">mean</span>(avg6mou, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb76-9"><a href="targeting-and-retaining-customers.html#cb76-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">cc=</span><span class="fu">mean</span>(cc, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb76-10"><a href="targeting-and-retaining-customers.html#cb76-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">da=</span><span class="fu">mean</span>(da, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb76-11"><a href="targeting-and-retaining-customers.html#cb76-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">ovrmou=</span><span class="fu">mean</span>(ovrmou, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb76-12"><a href="targeting-and-retaining-customers.html#cb76-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">income=</span><span class="fu">mean</span>(income, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span>
+<span id="cb76-13"><a href="targeting-and-retaining-customers.html#cb76-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-14"><a href="targeting-and-retaining-customers.html#cb76-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe for prediction at different levels of &#39;avg6mou&#39;</span></span>
+<span id="cb76-15"><a href="targeting-and-retaining-customers.html#cb76-15" aria-hidden="true" tabindex="-1"></a>a6m.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">avg6mou=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1500</span>,<span class="dv">100</span>)), <span class="co"># variable of interest</span></span>
+<span id="cb76-16"><a href="targeting-and-retaining-customers.html#cb76-16" aria-hidden="true" tabindex="-1"></a>                     m.ivs[,<span class="fu">c</span>(<span class="st">&quot;cc&quot;</span>, <span class="st">&quot;da&quot;</span>, <span class="st">&quot;ovrmou&quot;</span>, <span class="st">&quot;income&quot;</span>, <span class="st">&quot;own&quot;</span>)])</span>
+<span id="cb76-17"><a href="targeting-and-retaining-customers.html#cb76-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-18"><a href="targeting-and-retaining-customers.html#cb76-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Use model results to predict dv for values in &#39;a6m.pred&#39; data frame</span></span>
+<span id="cb76-19"><a href="targeting-and-retaining-customers.html#cb76-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Predicted values and CIs get appended to data frame</span></span>
+<span id="cb76-20"><a href="targeting-and-retaining-customers.html#cb76-20" aria-hidden="true" tabindex="-1"></a><span class="co"># New variables are called:</span></span>
+<span id="cb76-21"><a href="targeting-and-retaining-customers.html#cb76-21" aria-hidden="true" tabindex="-1"></a><span class="co">#      &#39;p$fit&#39; = linear prediction from model</span></span>
+<span id="cb76-22"><a href="targeting-and-retaining-customers.html#cb76-22" aria-hidden="true" tabindex="-1"></a><span class="co">#      &#39;p$lwr&#39; = lower confidence interval for prediction</span></span>
+<span id="cb76-23"><a href="targeting-and-retaining-customers.html#cb76-23" aria-hidden="true" tabindex="-1"></a><span class="co">#      &#39;p$upr&#39; = upper confidcent interval for prediction</span></span>
+<span id="cb76-24"><a href="targeting-and-retaining-customers.html#cb76-24" aria-hidden="true" tabindex="-1"></a>a6m.pred<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(</span>
+<span id="cb76-25"><a href="targeting-and-retaining-customers.html#cb76-25" aria-hidden="true" tabindex="-1"></a>   <span class="fu">predict.lm</span>(target,    </span>
+<span id="cb76-26"><a href="targeting-and-retaining-customers.html#cb76-26" aria-hidden="true" tabindex="-1"></a>              a6m.pred,</span>
+<span id="cb76-27"><a href="targeting-and-retaining-customers.html#cb76-27" aria-hidden="true" tabindex="-1"></a>              <span class="at">interval=</span><span class="st">&quot;confidence&quot;</span>))</span>
+<span id="cb76-28"><a href="targeting-and-retaining-customers.html#cb76-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Use ggplot to create margin plot</span></span>
+<span id="cb76-29"><a href="targeting-and-retaining-customers.html#cb76-29" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>avg6mou, <span class="at">y=</span>p<span class="sc">$</span>fit, <span class="at">color=</span>own), <span class="at">data=</span>a6m.pred) <span class="sc">+</span></span>
+<span id="cb76-30"><a href="targeting-and-retaining-customers.html#cb76-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb76-31"><a href="targeting-and-retaining-customers.html#cb76-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>p<span class="sc">$</span>lwr, <span class="at">ymax=</span>p<span class="sc">$</span>upr, <span class="at">fill=</span>own), <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb76-32"><a href="targeting-and-retaining-customers.html#cb76-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Mean Monthly Minutes&quot;</span>, <span class="at">y=</span><span class="st">&quot;Linear Prediction&quot;</span>, </span>
+<span id="cb76-33"><a href="targeting-and-retaining-customers.html#cb76-33" aria-hidden="true" tabindex="-1"></a>         <span class="at">fill=</span><span class="st">&quot;Own&quot;</span>, <span class="at">color=</span><span class="st">&quot;Own&quot;</span>) <span class="sc">+</span></span>
+<span id="cb76-34"><a href="targeting-and-retaining-customers.html#cb76-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">120</span>), <span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">30</span>,<span class="dv">120</span>,<span class="dv">15</span>), </span>
+<span id="cb76-35"><a href="targeting-and-retaining-customers.html#cb76-35" aria-hidden="true" tabindex="-1"></a>                       <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb76-36"><a href="targeting-and-retaining-customers.html#cb76-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb76-37"><a href="targeting-and-retaining-customers.html#cb76-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-38"><a href="targeting-and-retaining-customers.html#cb76-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat for variable &#39;cc&#39;</span></span>
+<span id="cb76-39"><a href="targeting-and-retaining-customers.html#cb76-39" aria-hidden="true" tabindex="-1"></a>cc.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">cc=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">1</span>)), <span class="co"># variable of interest</span></span>
+<span id="cb76-40"><a href="targeting-and-retaining-customers.html#cb76-40" aria-hidden="true" tabindex="-1"></a>                     m.ivs[,<span class="fu">c</span>(<span class="st">&quot;avg6mou&quot;</span>, <span class="st">&quot;da&quot;</span>, <span class="st">&quot;ovrmou&quot;</span>, <span class="st">&quot;income&quot;</span>, <span class="st">&quot;own&quot;</span>)])</span>
+<span id="cb76-41"><a href="targeting-and-retaining-customers.html#cb76-41" aria-hidden="true" tabindex="-1"></a>cc.pred<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">predict.lm</span>(target, cc.pred,</span>
+<span id="cb76-42"><a href="targeting-and-retaining-customers.html#cb76-42" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">interval=</span><span class="st">&quot;confidence&quot;</span>))</span>
+<span id="cb76-43"><a href="targeting-and-retaining-customers.html#cb76-43" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>cc, <span class="at">y=</span>p<span class="sc">$</span>fit, <span class="at">color=</span>own), <span class="at">data=</span>cc.pred) <span class="sc">+</span></span>
+<span id="cb76-44"><a href="targeting-and-retaining-customers.html#cb76-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb76-45"><a href="targeting-and-retaining-customers.html#cb76-45" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>p<span class="sc">$</span>lwr, <span class="at">ymax=</span>p<span class="sc">$</span>upr, <span class="at">fill=</span>own), <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb76-46"><a href="targeting-and-retaining-customers.html#cb76-46" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Mean Monthly Customer Care Calls&quot;</span>, <span class="at">y=</span><span class="st">&quot;Linear Prediction&quot;</span>) <span class="sc">+</span></span>
+<span id="cb76-47"><a href="targeting-and-retaining-customers.html#cb76-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">120</span>), <span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">30</span>,<span class="dv">120</span>,<span class="dv">15</span>), </span>
+<span id="cb76-48"><a href="targeting-and-retaining-customers.html#cb76-48" aria-hidden="true" tabindex="-1"></a>                       <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb76-49"><a href="targeting-and-retaining-customers.html#cb76-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb76-50"><a href="targeting-and-retaining-customers.html#cb76-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-51"><a href="targeting-and-retaining-customers.html#cb76-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-52"><a href="targeting-and-retaining-customers.html#cb76-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat for variable &#39;da&#39;</span></span>
+<span id="cb76-53"><a href="targeting-and-retaining-customers.html#cb76-53" aria-hidden="true" tabindex="-1"></a>da.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">da=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">1</span>)), <span class="co"># variable of interest</span></span>
+<span id="cb76-54"><a href="targeting-and-retaining-customers.html#cb76-54" aria-hidden="true" tabindex="-1"></a>                     m.ivs[,<span class="fu">c</span>(<span class="st">&quot;cc&quot;</span>, <span class="st">&quot;avg6mou&quot;</span>, <span class="st">&quot;ovrmou&quot;</span>, <span class="st">&quot;income&quot;</span>, <span class="st">&quot;own&quot;</span>)])</span>
+<span id="cb76-55"><a href="targeting-and-retaining-customers.html#cb76-55" aria-hidden="true" tabindex="-1"></a>da.pred<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">predict.lm</span>(target, da.pred,</span>
+<span id="cb76-56"><a href="targeting-and-retaining-customers.html#cb76-56" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">interval=</span><span class="st">&quot;confidence&quot;</span>))</span>
+<span id="cb76-57"><a href="targeting-and-retaining-customers.html#cb76-57" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>da, <span class="at">y=</span>p<span class="sc">$</span>fit, <span class="at">color=</span>own), <span class="at">data=</span>da.pred) <span class="sc">+</span></span>
+<span id="cb76-58"><a href="targeting-and-retaining-customers.html#cb76-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb76-59"><a href="targeting-and-retaining-customers.html#cb76-59" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>p<span class="sc">$</span>lwr, <span class="at">ymax=</span>p<span class="sc">$</span>upr, <span class="at">fill=</span>own), <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb76-60"><a href="targeting-and-retaining-customers.html#cb76-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Mean Monthly Directory Assistance Calls&quot;</span>, </span>
+<span id="cb76-61"><a href="targeting-and-retaining-customers.html#cb76-61" aria-hidden="true" tabindex="-1"></a>         <span class="at">y=</span><span class="st">&quot;Linear Prediction&quot;</span>) <span class="sc">+</span></span>
+<span id="cb76-62"><a href="targeting-and-retaining-customers.html#cb76-62" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">120</span>), <span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">30</span>,<span class="dv">120</span>,<span class="dv">15</span>), </span>
+<span id="cb76-63"><a href="targeting-and-retaining-customers.html#cb76-63" aria-hidden="true" tabindex="-1"></a>                       <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb76-64"><a href="targeting-and-retaining-customers.html#cb76-64" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb76-65"><a href="targeting-and-retaining-customers.html#cb76-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-66"><a href="targeting-and-retaining-customers.html#cb76-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat for variable &#39;ovrmou&#39;</span></span>
+<span id="cb76-67"><a href="targeting-and-retaining-customers.html#cb76-67" aria-hidden="true" tabindex="-1"></a>om.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">ovrmou=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">300</span>,<span class="dv">25</span>)), <span class="co"># variable of interest</span></span>
+<span id="cb76-68"><a href="targeting-and-retaining-customers.html#cb76-68" aria-hidden="true" tabindex="-1"></a>                     m.ivs[,<span class="fu">c</span>(<span class="st">&quot;cc&quot;</span>, <span class="st">&quot;da&quot;</span>, <span class="st">&quot;avg6mou&quot;</span>, <span class="st">&quot;income&quot;</span>, <span class="st">&quot;own&quot;</span>)])</span>
+<span id="cb76-69"><a href="targeting-and-retaining-customers.html#cb76-69" aria-hidden="true" tabindex="-1"></a>om.pred<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">predict.lm</span>(target, om.pred,</span>
+<span id="cb76-70"><a href="targeting-and-retaining-customers.html#cb76-70" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">interval=</span><span class="st">&quot;confidence&quot;</span>))</span>
+<span id="cb76-71"><a href="targeting-and-retaining-customers.html#cb76-71" aria-hidden="true" tabindex="-1"></a>p4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>ovrmou, <span class="at">y=</span>p<span class="sc">$</span>fit, <span class="at">color=</span>own), <span class="at">data=</span>om.pred) <span class="sc">+</span></span>
+<span id="cb76-72"><a href="targeting-and-retaining-customers.html#cb76-72" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb76-73"><a href="targeting-and-retaining-customers.html#cb76-73" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>p<span class="sc">$</span>lwr, <span class="at">ymax=</span>p<span class="sc">$</span>upr, <span class="at">fill=</span>own), <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb76-74"><a href="targeting-and-retaining-customers.html#cb76-74" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Mean Monthly Overage Minutes&quot;</span>, </span>
+<span id="cb76-75"><a href="targeting-and-retaining-customers.html#cb76-75" aria-hidden="true" tabindex="-1"></a>         <span class="at">y=</span><span class="st">&quot;Linear Prediction&quot;</span>) <span class="sc">+</span></span>
+<span id="cb76-76"><a href="targeting-and-retaining-customers.html#cb76-76" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">120</span>), <span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">30</span>,<span class="dv">120</span>,<span class="dv">15</span>), </span>
+<span id="cb76-77"><a href="targeting-and-retaining-customers.html#cb76-77" aria-hidden="true" tabindex="-1"></a>                       <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb76-78"><a href="targeting-and-retaining-customers.html#cb76-78" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb76-79"><a href="targeting-and-retaining-customers.html#cb76-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Save Plots to a grid object using &#39;cowplot&#39;</span></span>
+<span id="cb76-80"><a href="targeting-and-retaining-customers.html#cb76-80" aria-hidden="true" tabindex="-1"></a>pgrid <span class="ot">&lt;-</span> <span class="fu">plot_grid</span>(p1, p2, p3, p4, <span class="at">nrow=</span><span class="dv">2</span>)</span>
+<span id="cb76-81"><a href="targeting-and-retaining-customers.html#cb76-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract legend from first plot</span></span>
+<span id="cb76-82"><a href="targeting-and-retaining-customers.html#cb76-82" aria-hidden="true" tabindex="-1"></a>legend <span class="ot">&lt;-</span> <span class="fu">get_legend</span>(p1 <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>))</span>
+<span id="cb76-83"><a href="targeting-and-retaining-customers.html#cb76-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine plot object and legend in a single column</span></span>
+<span id="cb76-84"><a href="targeting-and-retaining-customers.html#cb76-84" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(pgrid, legend, <span class="at">ncol=</span><span class="dv">1</span>, <span class="at">rel_heights=</span><span class="fu">c</span>(<span class="dv">1</span>,.<span class="dv">1</span>))</span></code></pre></div>
+</div>
+<div id="figure-reffigt4marginplots02" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="targeting-and-retaining-customers.html#fig:t4marginplots02">4.3</a></h3>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="targeting-and-retaining-customers.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe for prediction at different levels of &#39;avg6mou&#39;</span></span>
+<span id="cb77-2"><a href="targeting-and-retaining-customers.html#cb77-2" aria-hidden="true" tabindex="-1"></a>inc.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">income=</span><span class="fu">seq</span>(<span class="dv">10</span>,<span class="dv">200</span>,<span class="dv">10</span>)), <span class="co"># variable of interest</span></span>
+<span id="cb77-3"><a href="targeting-and-retaining-customers.html#cb77-3" aria-hidden="true" tabindex="-1"></a>                     m.ivs[,<span class="fu">c</span>(<span class="st">&quot;cc&quot;</span>, <span class="st">&quot;da&quot;</span>, <span class="st">&quot;ovrmou&quot;</span>, <span class="st">&quot;avg6mou&quot;</span>, <span class="st">&quot;own&quot;</span>)])</span>
+<span id="cb77-4"><a href="targeting-and-retaining-customers.html#cb77-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-5"><a href="targeting-and-retaining-customers.html#cb77-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Use model results to predict dv for values in &#39;a6m.pred&#39; data frame</span></span>
+<span id="cb77-6"><a href="targeting-and-retaining-customers.html#cb77-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Predicted values and CIs get appended to data frame</span></span>
+<span id="cb77-7"><a href="targeting-and-retaining-customers.html#cb77-7" aria-hidden="true" tabindex="-1"></a><span class="co"># New variables are called:</span></span>
+<span id="cb77-8"><a href="targeting-and-retaining-customers.html#cb77-8" aria-hidden="true" tabindex="-1"></a><span class="co">#      &#39;p$fit&#39; = linear prediction from model</span></span>
+<span id="cb77-9"><a href="targeting-and-retaining-customers.html#cb77-9" aria-hidden="true" tabindex="-1"></a><span class="co">#      &#39;p$lwr&#39; = lower confidence interval for prediction</span></span>
+<span id="cb77-10"><a href="targeting-and-retaining-customers.html#cb77-10" aria-hidden="true" tabindex="-1"></a><span class="co">#      &#39;p$upr&#39; = upper confidcent interval for prediction</span></span>
+<span id="cb77-11"><a href="targeting-and-retaining-customers.html#cb77-11" aria-hidden="true" tabindex="-1"></a>inc.pred<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(</span>
+<span id="cb77-12"><a href="targeting-and-retaining-customers.html#cb77-12" aria-hidden="true" tabindex="-1"></a>   <span class="fu">predict.lm</span>(target,    </span>
+<span id="cb77-13"><a href="targeting-and-retaining-customers.html#cb77-13" aria-hidden="true" tabindex="-1"></a>              inc.pred,</span>
+<span id="cb77-14"><a href="targeting-and-retaining-customers.html#cb77-14" aria-hidden="true" tabindex="-1"></a>              <span class="at">interval=</span><span class="st">&quot;confidence&quot;</span>))</span>
+<span id="cb77-15"><a href="targeting-and-retaining-customers.html#cb77-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Use ggplot to create margin plot</span></span>
+<span id="cb77-16"><a href="targeting-and-retaining-customers.html#cb77-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>income, <span class="at">y=</span>p<span class="sc">$</span>fit, <span class="at">color=</span>own), <span class="at">data=</span>inc.pred) <span class="sc">+</span></span>
+<span id="cb77-17"><a href="targeting-and-retaining-customers.html#cb77-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb77-18"><a href="targeting-and-retaining-customers.html#cb77-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>p<span class="sc">$</span>lwr, <span class="at">ymax=</span>p<span class="sc">$</span>upr, <span class="at">fill=</span>own), <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb77-19"><a href="targeting-and-retaining-customers.html#cb77-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Income (000s)&quot;</span>, <span class="at">y=</span><span class="st">&quot;Linear Prediction&quot;</span>, </span>
+<span id="cb77-20"><a href="targeting-and-retaining-customers.html#cb77-20" aria-hidden="true" tabindex="-1"></a>         <span class="at">fill=</span><span class="st">&quot;Own&quot;</span>, <span class="at">color=</span><span class="st">&quot;Own&quot;</span>) <span class="sc">+</span></span>
+<span id="cb77-21"><a href="targeting-and-retaining-customers.html#cb77-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">120</span>), <span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">30</span>,<span class="dv">120</span>,<span class="dv">15</span>), </span>
+<span id="cb77-22"><a href="targeting-and-retaining-customers.html#cb77-22" aria-hidden="true" tabindex="-1"></a>                       <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb77-23"><a href="targeting-and-retaining-customers.html#cb77-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>)</span></code></pre></div>
+</div>
+<div id="figure-reffigt4lrmarginplots" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="targeting-and-retaining-customers.html#fig:t4lrmarginplots">4.6</a></h3>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="targeting-and-retaining-customers.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create df will mean values of continuous IVs at levels of factor IVs</span></span>
+<span id="cb78-2"><a href="targeting-and-retaining-customers.html#cb78-2" aria-hidden="true" tabindex="-1"></a>m.ivs <span class="ot">&lt;-</span> train <span class="sc">%&gt;%</span></span>
+<span id="cb78-3"><a href="targeting-and-retaining-customers.html#cb78-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(housing, loan, married) <span class="sc">%&gt;%</span></span>
+<span id="cb78-4"><a href="targeting-and-retaining-customers.html#cb78-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">summarise</span>(<span class="at">age=</span><span class="fu">mean</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb78-5"><a href="targeting-and-retaining-customers.html#cb78-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">balance=</span><span class="fu">mean</span>(balance, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span>
+<span id="cb78-6"><a href="targeting-and-retaining-customers.html#cb78-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-7"><a href="targeting-and-retaining-customers.html#cb78-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create new data for prediction with &#39;age&#39; as focus</span></span>
+<span id="cb78-8"><a href="targeting-and-retaining-customers.html#cb78-8" aria-hidden="true" tabindex="-1"></a>age.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">age=</span><span class="fu">seq</span>(<span class="dv">15</span>,<span class="dv">85</span>,<span class="dv">5</span>)), </span>
+<span id="cb78-9"><a href="targeting-and-retaining-customers.html#cb78-9" aria-hidden="true" tabindex="-1"></a>                  m.ivs[ ,<span class="fu">c</span>(<span class="st">&quot;housing&quot;</span>, <span class="st">&quot;loan&quot;</span>, <span class="st">&quot;married&quot;</span>, <span class="st">&quot;balance&quot;</span>)])</span>
+<span id="cb78-10"><a href="targeting-and-retaining-customers.html#cb78-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-11"><a href="targeting-and-retaining-customers.html#cb78-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame with predicted values and confidence bands</span></span>
+<span id="cb78-12"><a href="targeting-and-retaining-customers.html#cb78-12" aria-hidden="true" tabindex="-1"></a>train.pred <span class="ot">&lt;-</span> </span>
+<span id="cb78-13"><a href="targeting-and-retaining-customers.html#cb78-13" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(age.pred,   <span class="co"># &#39;cbind&#39; combines objects by columns </span></span>
+<span id="cb78-14"><a href="targeting-and-retaining-customers.html#cb78-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">predict</span>(tgt.log, <span class="co"># Model to predict values with</span></span>
+<span id="cb78-15"><a href="targeting-and-retaining-customers.html#cb78-15" aria-hidden="true" tabindex="-1"></a>              age.pred, <span class="co"># New data to use for IVs</span></span>
+<span id="cb78-16"><a href="targeting-and-retaining-customers.html#cb78-16" aria-hidden="true" tabindex="-1"></a>              <span class="at">type=</span><span class="st">&quot;link&quot;</span>, <span class="co"># Return log-odds predictions</span></span>
+<span id="cb78-17"><a href="targeting-and-retaining-customers.html#cb78-17" aria-hidden="true" tabindex="-1"></a>              <span class="at">se=</span><span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span>  <span class="co"># Get std.err. for CIs</span></span>
+<span id="cb78-18"><a href="targeting-and-retaining-customers.html#cb78-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">pred=</span><span class="fu">plogis</span>(fit), <span class="co"># Calculate pr(response)</span></span>
+<span id="cb78-19"><a href="targeting-and-retaining-customers.html#cb78-19" aria-hidden="true" tabindex="-1"></a>           <span class="at">upr=</span><span class="fu">plogis</span>(fit<span class="sc">+</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>se.fit)),  <span class="co"># Upper CI</span></span>
+<span id="cb78-20"><a href="targeting-and-retaining-customers.html#cb78-20" aria-hidden="true" tabindex="-1"></a>           <span class="at">lwr=</span><span class="fu">plogis</span>(fit<span class="sc">-</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>se.fit)))  <span class="co"># Lower CI</span></span>
+<span id="cb78-21"><a href="targeting-and-retaining-customers.html#cb78-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-22"><a href="targeting-and-retaining-customers.html#cb78-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create plot grid with separate lines for &#39;housing&#39;</span></span>
+<span id="cb78-23"><a href="targeting-and-retaining-customers.html#cb78-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>pred), <span class="at">data=</span>train.pred) <span class="sc">+</span></span>
+<span id="cb78-24"><a href="targeting-and-retaining-customers.html#cb78-24" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>housing), <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb78-25"><a href="targeting-and-retaining-customers.html#cb78-25" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lwr, <span class="at">ymax=</span>upr, </span>
+<span id="cb78-26"><a href="targeting-and-retaining-customers.html#cb78-26" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span>housing, <span class="at">fill=</span>housing), <span class="at">alpha=</span>.<span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb78-27"><a href="targeting-and-retaining-customers.html#cb78-27" aria-hidden="true" tabindex="-1"></a>   <span class="fu">scale_y_continuous</span>(<span class="st">&quot;Pr(Response)&quot;</span>,<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,.<span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb78-28"><a href="targeting-and-retaining-customers.html#cb78-28" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
+<span id="cb78-29"><a href="targeting-and-retaining-customers.html#cb78-29" aria-hidden="true" tabindex="-1"></a>   <span class="co"># &#39;facet-grid&#39; creates separate plots in a grid of factor variable levels</span></span>
+<span id="cb78-30"><a href="targeting-and-retaining-customers.html#cb78-30" aria-hidden="true" tabindex="-1"></a>   <span class="fu">facet_grid</span>(<span class="at">rows=</span><span class="fu">vars</span>(married), <span class="at">cols=</span><span class="fu">vars</span>(loan),</span>
+<span id="cb78-31"><a href="targeting-and-retaining-customers.html#cb78-31" aria-hidden="true" tabindex="-1"></a>              <span class="at">labeller=</span><span class="fu">labeller</span>(<span class="at">married=</span><span class="fu">as_labeller</span>(<span class="fu">c</span>(<span class="st">&quot;No&quot;</span><span class="ot">=</span><span class="st">&quot;Married: No&quot;</span>, </span>
+<span id="cb78-32"><a href="targeting-and-retaining-customers.html#cb78-32" aria-hidden="true" tabindex="-1"></a>                                                      <span class="st">&quot;Yes&quot;</span><span class="ot">=</span><span class="st">&quot;Married: Yes&quot;</span>)),</span>
+<span id="cb78-33"><a href="targeting-and-retaining-customers.html#cb78-33" aria-hidden="true" tabindex="-1"></a>                                <span class="at">loan=</span><span class="fu">as_labeller</span>(<span class="fu">c</span>(<span class="st">&quot;No&quot;</span><span class="ot">=</span><span class="st">&quot;Personal Loan: No&quot;</span>, </span>
+<span id="cb78-34"><a href="targeting-and-retaining-customers.html#cb78-34" aria-hidden="true" tabindex="-1"></a>                                                   <span class="st">&quot;Yes&quot;</span><span class="ot">=</span><span class="st">&quot;Personal Loan: Yes&quot;</span>))),</span>
+<span id="cb78-35"><a href="targeting-and-retaining-customers.html#cb78-35" aria-hidden="true" tabindex="-1"></a>              <span class="at">switch=</span><span class="st">&quot;y&quot;</span>) <span class="sc">+</span></span>
+<span id="cb78-36"><a href="targeting-and-retaining-customers.html#cb78-36" aria-hidden="true" tabindex="-1"></a>   <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">color=</span><span class="st">&quot;Housing Loan&quot;</span>, <span class="at">fill=</span><span class="st">&quot;Housing Loan&quot;</span>)</span></code></pre></div>
+</div>
+<div id="figure-reffigt4gainlift01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="targeting-and-retaining-customers.html#fig:t4gainlift01">4.7</a></h3>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="targeting-and-retaining-customers.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load user-defined object &#39;gainlift&#39;</span></span>
+<span id="cb79-2"><a href="targeting-and-retaining-customers.html#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/gainlift.R&quot;</span>)</span>
+<span id="cb79-3"><a href="targeting-and-retaining-customers.html#cb79-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the function and assign to object named &#39;glresults&#39;</span></span>
+<span id="cb79-4"><a href="targeting-and-retaining-customers.html#cb79-4" aria-hidden="true" tabindex="-1"></a>glresults <span class="ot">&lt;-</span> <span class="fu">gainlift</span>(tgt.log,  <span class="co"># Name of the glm results object</span></span>
+<span id="cb79-5"><a href="targeting-and-retaining-customers.html#cb79-5" aria-hidden="true" tabindex="-1"></a>                      train,  <span class="co"># Name of the training data frame</span></span>
+<span id="cb79-6"><a href="targeting-and-retaining-customers.html#cb79-6" aria-hidden="true" tabindex="-1"></a>                      test,   <span class="co"># Name of the testing data frame</span></span>
+<span id="cb79-7"><a href="targeting-and-retaining-customers.html#cb79-7" aria-hidden="true" tabindex="-1"></a>                      <span class="st">&quot;Yes&quot;</span>)  <span class="co"># Level that represents success/true</span></span>
+<span id="cb79-8"><a href="targeting-and-retaining-customers.html#cb79-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb79-9"><a href="targeting-and-retaining-customers.html#cb79-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Output gainplot</span></span>
+<span id="cb79-10"><a href="targeting-and-retaining-customers.html#cb79-10" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>gainplot</span></code></pre></div>
+</div>
+<div id="figure-reffigt4gainlift02" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="targeting-and-retaining-customers.html#fig:t4gainlift02">4.8</a></h3>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="targeting-and-retaining-customers.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Output liftplot</span></span>
+<span id="cb80-2"><a href="targeting-and-retaining-customers.html#cb80-2" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>liftplot</span></code></pre></div>
 </div>
 <div id="table-reftabt4summstat01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="targeting-and-retaining-customers.html#tab:t4summstat01">4.1</a></h3>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="targeting-and-retaining-customers.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(telecom)</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="targeting-and-retaining-customers.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(telecom)</span></code></pre></div>
 </div>
 <div id="table-reftabt4lr01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="targeting-and-retaining-customers.html#tab:t4lr01">4.2</a></h3>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="targeting-and-retaining-customers.html#cb71-1" aria-hidden="true" tabindex="-1"></a>target <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg6rev <span class="sc">~</span> avg6mou <span class="sc">+</span> cc <span class="sc">+</span> da <span class="sc">+</span> ovrmou <span class="sc">+</span> income <span class="sc">+</span> own,</span>
-<span id="cb71-2"><a href="targeting-and-retaining-customers.html#cb71-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data=</span>telecom)</span>
-<span id="cb71-3"><a href="targeting-and-retaining-customers.html#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(target)</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="targeting-and-retaining-customers.html#cb82-1" aria-hidden="true" tabindex="-1"></a>target <span class="ot">&lt;-</span> <span class="fu">lm</span>(avg6rev <span class="sc">~</span> avg6mou <span class="sc">+</span> cc <span class="sc">+</span> da <span class="sc">+</span> ovrmou <span class="sc">+</span> income <span class="sc">+</span> own,</span>
+<span id="cb82-2"><a href="targeting-and-retaining-customers.html#cb82-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data=</span>telecom)</span>
+<span id="cb82-3"><a href="targeting-and-retaining-customers.html#cb82-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(target)</span></code></pre></div>
 </div>
 <div id="table-reftabt4stdbeta11" class="section level3 unlisted unnumbered">
 <h3>Table <a href="#tab:t4stdbeta11"><strong>??</strong></a></h3>
-<pre><code>```r
-# Use user-defined function &#39;lm_beta.R&#39;
-source(&quot;Topic02/lm_beta.R&quot;)
-htmlTable(lm_beta(target, digits=4))
-```</code></pre>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="targeting-and-retaining-customers.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use user-defined function &#39;lm_beta.R&#39;</span></span>
+<span id="cb83-2"><a href="targeting-and-retaining-customers.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic02/lm_beta.R&quot;</span>)</span>
+<span id="cb83-3"><a href="targeting-and-retaining-customers.html#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="fu">htmlTable</span>(<span class="fu">lm_beta</span>(target, <span class="at">digits=</span><span class="dv">4</span>))</span></code></pre></div>
+</div>
+<div id="table-reftabt4tgtdecile" class="section level3 unlisted unnumbered">
+<h3>Table <a href="targeting-and-retaining-customers.html#tab:t4tgtdecile">4.4</a></h3>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="targeting-and-retaining-customers.html#cb84-1" aria-hidden="true" tabindex="-1"></a>telecom <span class="sc">%&gt;%</span></span>
+<span id="cb84-2"><a href="targeting-and-retaining-customers.html#cb84-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cbind</span>(., <span class="at">yhat=</span><span class="fu">fitted</span>(target)) <span class="sc">%&gt;%</span>  <span class="co"># Append fitted values to data</span></span>
+<span id="cb84-3"><a href="targeting-and-retaining-customers.html#cb84-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">yhat.dec=</span><span class="dv">11</span><span class="sc">-</span><span class="fu">ntile</span>(yhat, <span class="dv">10</span>),  <span class="co"># Create deciles, but reverse order</span></span>
+<span id="cb84-4"><a href="targeting-and-retaining-customers.html#cb84-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">own=</span><span class="fu">as.numeric</span>(own)<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>  <span class="co"># Covert own to 1=yes, 0=no</span></span>
+<span id="cb84-5"><a href="targeting-and-retaining-customers.html#cb84-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(yhat.dec) <span class="sc">%&gt;%</span>  <span class="co"># Group by decile</span></span>
+<span id="cb84-6"><a href="targeting-and-retaining-customers.html#cb84-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="fu">across</span>(avg6rev<span class="sc">:</span>own, </span>
+<span id="cb84-7"><a href="targeting-and-retaining-customers.html#cb84-7" aria-hidden="true" tabindex="-1"></a>                <span class="sc">~</span><span class="fu">mean</span>(.x, <span class="at">na.rm=</span><span class="cn">TRUE</span>))) <span class="sc">%&gt;%</span>  <span class="co"># Calculate mean of each IV</span></span>
+<span id="cb84-8"><a href="targeting-and-retaining-customers.html#cb84-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">flextable</span>()  <span class="co"># Nice table</span></span></code></pre></div>
+</div>
+<div id="table-reftabt4lrestimation" class="section level3 unlisted unnumbered">
+<h3>Table <a href="targeting-and-retaining-customers.html#tab:t4lrestimation">4.5</a></h3>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="targeting-and-retaining-customers.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;caret&#39; package to create training and test/holdout samples</span></span>
+<span id="cb85-2"><a href="targeting-and-retaining-customers.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb85-3"><a href="targeting-and-retaining-customers.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This will create two separate dataframes: train and test</span></span>
+<span id="cb85-4"><a href="targeting-and-retaining-customers.html#cb85-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">9999</span>)</span>
+<span id="cb85-5"><a href="targeting-and-retaining-customers.html#cb85-5" aria-hidden="true" tabindex="-1"></a>inTrain <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(<span class="at">y=</span>bankmktg<span class="sc">$</span>response, <span class="at">p=</span>.<span class="dv">75</span>, <span class="at">list=</span><span class="cn">FALSE</span>)</span>
+<span id="cb85-6"><a href="targeting-and-retaining-customers.html#cb85-6" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> bankmktg[inTrain,]</span>
+<span id="cb85-7"><a href="targeting-and-retaining-customers.html#cb85-7" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> bankmktg[<span class="sc">-</span>inTrain,]</span>
+<span id="cb85-8"><a href="targeting-and-retaining-customers.html#cb85-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-9"><a href="targeting-and-retaining-customers.html#cb85-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate using training sample</span></span>
+<span id="cb85-10"><a href="targeting-and-retaining-customers.html#cb85-10" aria-hidden="true" tabindex="-1"></a>tgt.log <span class="ot">&lt;-</span> <span class="fu">glm</span>(response <span class="sc">~</span> age <span class="sc">+</span> balance <span class="sc">+</span> default <span class="sc">+</span> housing <span class="sc">+</span> educ <span class="sc">+</span> </span>
+<span id="cb85-11"><a href="targeting-and-retaining-customers.html#cb85-11" aria-hidden="true" tabindex="-1"></a>                          loan <span class="sc">+</span> married, <span class="at">data=</span>train, <span class="at">family=</span><span class="st">&quot;binomial&quot;</span>)</span>
+<span id="cb85-12"><a href="targeting-and-retaining-customers.html#cb85-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(tgt.log)</span>
+<span id="cb85-13"><a href="targeting-and-retaining-customers.html#cb85-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-14"><a href="targeting-and-retaining-customers.html#cb85-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Get p-value</span></span>
+<span id="cb85-15"><a href="targeting-and-retaining-customers.html#cb85-15" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">with</span>(tgt.log, <span class="fu">pchisq</span>(null.deviance <span class="sc">-</span> deviance,</span>
+<span id="cb85-16"><a href="targeting-and-retaining-customers.html#cb85-16" aria-hidden="true" tabindex="-1"></a>                   df.null<span class="sc">-</span>df.residual,</span>
+<span id="cb85-17"><a href="targeting-and-retaining-customers.html#cb85-17" aria-hidden="true" tabindex="-1"></a>                   <span class="at">lower.tail=</span><span class="cn">FALSE</span>))</span>
+<span id="cb85-18"><a href="targeting-and-retaining-customers.html#cb85-18" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Model p-value =&quot;</span>,<span class="fu">sprintf</span>(<span class="st">&quot;%.4f&quot;</span>,p),<span class="st">&quot;\ &quot;</span>)</span>
+<span id="cb85-19"><a href="targeting-and-retaining-customers.html#cb85-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-20"><a href="targeting-and-retaining-customers.html#cb85-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate McFadden&#39;s R-sq</span></span>
+<span id="cb85-21"><a href="targeting-and-retaining-customers.html#cb85-21" aria-hidden="true" tabindex="-1"></a>Mrsq <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">-</span>tgt.log<span class="sc">$</span>deviance<span class="sc">/</span>tgt.log<span class="sc">$</span>null.deviance</span>
+<span id="cb85-22"><a href="targeting-and-retaining-customers.html#cb85-22" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;McFadden&#39;s Pseudo-Rsquared = &quot;</span>, <span class="fu">round</span>(Mrsq, <span class="at">digits=</span><span class="dv">4</span>))</span>
+<span id="cb85-23"><a href="targeting-and-retaining-customers.html#cb85-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-24"><a href="targeting-and-retaining-customers.html#cb85-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;or_table.R&#39; user-defined script to get Odds Ratio estimates</span></span>
+<span id="cb85-25"><a href="targeting-and-retaining-customers.html#cb85-25" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/or_table.R&quot;</span>)</span>
+<span id="cb85-26"><a href="targeting-and-retaining-customers.html#cb85-26" aria-hidden="true" tabindex="-1"></a><span class="fu">flextable</span>(<span class="fu">or_table</span>(tgt.log))</span></code></pre></div>
 
 </div>
 </div>

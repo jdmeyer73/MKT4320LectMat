@@ -468,7 +468,7 @@ knitr::include_graphics("Topic03/ClassMat.png")
                train)      # Data to use (i.e., training vs. testing)
     ```
 
-* ROC Curve for Training Sample
+* ROC Curve for Holdout Sample
     * Area $>.90$ suggests an outstanding model fit
 
     ```{r t3roctest, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve for Test/Holdout Sample ([R code](#figure-reffigt3roctest))"}
