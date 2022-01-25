@@ -85,10 +85,11 @@ Identify factors (i.e., independent variables) that increase the likelihood of r
 ### Summarize Data
 
 * Useful to examine data prior to specifying the model
-    * Summary Statistics
+    * Summary Statistics  
     <caption>(\#tab:t4summstat01) Summary Statistics ([R code](#table-reftabt4summstat01))</caption>
-    ``` {r t4summstat01, echo=FALSE}
-    summary(telecom)
+    ``` {r t4summstat01, echo=FALSE, message=FALSE}
+    library(vtable)
+    htmlTable(sumtable(telecom, out="return"))
     ```
 
     * Scatterplot Matrix (with Correlations)
