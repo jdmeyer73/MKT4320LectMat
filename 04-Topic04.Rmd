@@ -89,7 +89,7 @@ Identify factors (i.e., independent variables) that increase the likelihood of r
     <caption>(\#tab:t4summstat01) Summary Statistics ([R code](#table-reftabt4summstat01))</caption>
     ``` {r t4summstat01, echo=FALSE, message=FALSE}
     library(vtable)
-    htmlTable(sumtable(telecom, out="return"))
+    sumtable(telecom, out="return") %>% kable(caption=NULL)
     ```
 
     * Scatterplot Matrix (with Correlations)
