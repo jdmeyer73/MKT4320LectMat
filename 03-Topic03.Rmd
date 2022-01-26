@@ -23,6 +23,7 @@ knitr::opts_chunk$set(comment=NA)
 
 ``` {r t3packagesdata, message=FALSE}
 library(ggplot2)       # Advanced graphing capabilities
+library(cowplot)       # Plots in grid
 library(tidyr)         # Easier programming   
 library(flextable)     # Better HTML Tables
 library(htmlTable)     # Better HTML Tables
@@ -488,154 +489,53 @@ knitr::include_graphics("Topic03/ClassMat.png")
 * $gender$ is negative ($OR<1$), but not significant ($p=.245$)
     * Had it been significant...
     Being female decreases odds of buying by a factor of $.67$ (or odds of buying decrease by $33\%$)
-* Can visually examine how $\Pr(buy)$ changes with a variable for continuous IVs
-    * Factor variables can be separate lines (see Figure \@ref(fig:t3mpage01) or separate plots see \@ref(fig:t3mpage02))
-    ```{r t3mpage01, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Lines for Gender) ([R code](#figure-reffigt3mpage01))"}
-    # Want to predict for different levels of IVs
-    # Because we often do this for other continuous variables, we first
-    #     create a df with mean values of all continuous IVs
-    #     at different levels of the factor variable (if there are any)
-    # NOTE: variable names must be EXACTLY the same as in model
-    m.ivs <- train %>%
-      group_by(gender) %>%
-      summarise(age=mean(age, na.rm=TRUE),
-                salary=mean(salary, na.rm=TRUE))
-    
-    # Create new data for prediction with 'age' as focus
-    # This will be used for the next two figures
-    age.pred <- merge(data.frame(age=seq(18,60,2)),
-                      m.ivs[ ,c("salary", "gender")])
-    
-    # Create data frame with predicted values and confidence bands
-    train.pred <- 
-        # 'cbind' combines objects by columns
-        cbind(age.pred, 
-              predict(model, # Model to predict values with
-                      age.pred, # New data to use for IVs
-                      type="link", # Return log-odds predictions
-                      se=TRUE)) %>%  # Get std.err. for CIs
-    mutate(pred=plogis(fit), # Calculate pr(buy)
-           upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-           lwr=plogis(fit-(qnorm(0.975)*se.fit)))  # Lower CI
-    # Create plot with gender on same plot
-    ggplot(aes(x=age, y=pred), data=train.pred) +
-        geom_line(aes(color=gender), size=1) +
-        geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                        color=gender, fill=gender), alpha=.2) +
-        theme(text=element_text(size=15), 
-              legend.position="bottom",
-              plot.caption=element_text(size=8)) +
-        scale_color_manual(values=c("red4", "navy")) +
-        scale_fill_manual(values=c("pink", "cyan")) +
-        labs(x="Age", y="Pr(Buy)", color="Gender", fill="Gender",
-             caption="Calculated at mean value of salary")
+* Can visually examine how $\Pr(buy)$ changes with IVs
+    ```{r t3mpage01, echo=FALSE, cache=TRUE, fig.cap="Margin Plots for Age, Salary, and Gender ([R code](#figure-reffigt3mpage01))"}
+    # Use 'effects' package
+    library(effects)
+
+    # Want to predict Pr(buy) for different levels of age
+    age.pred <- data.frame(predictorEffect("age",  # Focal variable
+                                           model))
+
+    # Use 'age.pred' for margin plot, assign to 'p1'
+    p1 <- age.pred %>%
+      ggplot(aes(x=age,   # ad_tv on x-axis
+                 y=fit)) +   # 'sales' prediction on y-axis
+        geom_line(size=1) +   # Draw predicted line
+        geom_ribbon(aes(ymin=lower,  # Draws the confidence interval bands
+                        ymax=upper),
+                        alpha=0.2) + # Sets transparency level
+        scale_y_continuous(limits=c(0,1)) +
+        labs(x="Age", y="Pr(Buy)") +
+        theme(text=element_text(size=15))
+
+    # Repeat for other two variables
+    sal.pred <- data.frame(predictorEffect("salary", model))
+    p2 <- sal.pred %>%
+      ggplot(aes(x=salary,   # ad_tv on x-axis
+                 y=fit)) +   # 'sales' prediction on y-axis
+        geom_line(size=1) +   # Draw predicted line
+        geom_ribbon(aes(ymin=lower,  # Draws the confidence interval bands
+                        ymax=upper),
+                        alpha=0.2) + # Sets transparency level
+        scale_y_continuous(limits=c(0,1)) +
+        labs(x="Salary", y="Pr(Buy)") +
+        theme(text=element_text(size=15))
+
+    g.pred <- data.frame(predictorEffect("gender", model))
+    p3 <- g.pred %>%
+      ggplot(aes(x=gender, y=fit, group=1)) +
+        geom_point(size=4) +
+        geom_line(color="orange") +
+        geom_errorbar(aes(ymin=lower, ymax=upper), width=0.2) +
+        scale_y_continuous(limits=c(0,1)) +
+        labs(x="Gender", y="Pr(Buy)") +
+        theme(text=element_text(size=15))
+
+    # Arrange three plots in a grid using package 'cowplot'
+    plot_grid(p1,p2,p3, nrow=2)
     ```
-    
-    ```{r t3mpage02, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age (Separate Plots for Gender) ([R code](#figure-reffigt3mpage02))"}
-    # Create plot with gender on separate plots
-    ggplot(aes(x=age, y=pred), data=train.pred) +
-        geom_line(aes(color=gender), size=1) +
-        geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                        color=gender, fill=gender), alpha=.2) +
-        facet_grid(~gender) + # Creates separate plots for each gender
-        theme(text=element_text(size=15), 
-              legend.position="none",
-              plot.caption=element_text(size=8)) +
-        scale_color_manual(values=c("red4", "navy")) +
-        scale_fill_manual(values=c("pink", "cyan")) +
-        labs(x="Age", y="Pr(Buy)", caption="Calculated at mean value of salary")
-    ```
-
-    * Can create different lines for specific levels of another continuous IV
-        * See \@ref(fig:t3mpage03) for $age$ with different levels of $salary$
-        * See \@ref(fig:t3mpage04) for $salary$ with different levels of $age$
-
-    ```{r t3mpage03, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Age at Different Levels of Salary ([R code](#figure-reffigt3mpage03))"}
-    # Want to predict for different levels of IVs
-    # Because we often do this for other continuous variables, we first
-    #     create a df with values of all continuous IVs
-    #     at different levels of the factor variable (if there are any)
-    # NOTE: variable names must be EXACTLY the same as in model
-    msd.ivs <- train %>%
-      group_by(gender) %>%  # Group on factor variable
-      # Calculate values for different levels of IVs
-      summarise(age_mn15=mean(age, na.rm=TRUE)-1.5*sd(age, na.rm=TRUE),
-             age_m=mean(age, na.rm=TRUE),
-             age_mp15=mean(age, na.rm=TRUE)+1.5*sd(age, na.rm=TRUE),
-             salary_mn15=mean(salary, na.rm=TRUE)-1.5*sd(salary, na.rm=TRUE),
-             salary_m=mean(salary, na.rm=TRUE),
-             salary_mp15=mean(salary, na.rm=TRUE)+1.5*sd(salary, na.rm=TRUE)) %>%
-      # Convert data from wide to long
-      pivot_longer(cols=!gender, names_to=c(".value","measure"), names_sep="_")
-    
-    age.pred <- merge(data.frame(age=seq(18, 60, 2)), # Variable of interest
-                 msd.ivs[,c("gender", "salary", "measure")])
-        
-    # Create data frame with predicted values and confidence bands
-    train.pred <- 
-        # 'cbind' combines objects by columns
-        cbind(age.pred, 
-              predict(model, # Model to predict values with
-                      age.pred, # New data to use for IVs
-                      type="link", # Return log-odds predictions
-                      se=TRUE)) %>%  # Get std.err. for CIs
-        mutate(pred=plogis(fit), # Calculate pr(buy)
-               upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-               lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
-               gender=as.factor(gender),  # Factor for plot
-               salary=as.factor(measure))  # Factor for plot
-
-    ggplot(aes(x=age, y=pred), data=train.pred) +
-        geom_line(aes(color=salary), size=1) +
-        geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                        color=salary, fill=salary), alpha=.2) +
-        facet_grid(.~gender) +  # Create separate plots for gender
-        theme(text=element_text(size=15),
-              legend.position="bottom") +
-        scale_color_manual("Salary",
-                           values=c("red4", "navy", "forestgreen"),
-                           labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
-        scale_fill_manual("Salary",
-                           values=c("pink", "cyan", "lawngreen"),
-                           labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
-        labs(x="Age", y="Pr(Buy)")
-    ```    
-
-    ```{r t3mpage04, echo=FALSE, cache=TRUE, fig.cap="Margin Plot for Salary at Different Levels of Age ([R code](#figure-reffigt3mpage04))"}
-    # Use df 'msd.ivs' from above
-    
-    sal.pred <- merge(data.frame(salary=seq(15, 150, 5)), # Variable of interest
-                 msd.ivs[,c("gender", "age", "measure")])
-    
-    # Create data frame with predicted values and confidence bands
-    train.pred <- 
-        # 'cbind' combines objects by columns
-        cbind(sal.pred, 
-              predict(model, # Model to predict values with
-                      sal.pred, # New data to use for IVs
-                      type="link", # Return log-odds predictions
-                      se=TRUE)) %>%  # Get std.err. for CIs
-        mutate(pred=plogis(fit), # Calculate pr(buy)
-               upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-               lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
-               gender=as.factor(gender),  # Factor for plot
-               age=as.factor(measure))  # Factor for plot
-
-    ggplot(aes(x=salary, y=pred), data=train.pred) +
-        geom_line(aes(color=age), size=1) +
-        geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                        color=age, fill=age), alpha=.2) +
-        facet_grid(.~gender) +  # Create separate plots for gender
-        theme(text=element_text(size=15),
-              legend.position="bottom") +
-        scale_color_manual("Age",
-                           values=c("red4", "navy", "forestgreen"),
-                           labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
-        scale_fill_manual("Age",
-                           values=c("pink", "cyan", "lawngreen"),
-                           labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
-        labs(x="Salary", y="Pr(Buy)")
-    ```    
 
 ### Gain
 
@@ -816,149 +716,48 @@ logreg_roc(model,      # Object with model results
 ### Figure \@ref(fig:t3mpage01) {.unlisted .unnumbered}
 
 ```{r t3mpage01code, eval=FALSE}
-# Want to predict for different levels of IVs
-# Because we often do this for other continuous variables, we first
-#     create a df with mean values of all continuous IVs
-#     at different levels of the factor variable (if there are any)
-# NOTE: variable names must be EXACTLY the same as in model
-m.ivs <- train %>%
-  group_by(gender) %>%
-  summarise(age=mean(age, na.rm=TRUE),
-            salary=mean(salary, na.rm=TRUE))
+# Use 'effects' package
+library(effects)
 
-# Create new data for prediction with 'age' as focus
-# This will be used for the next two figures
-age.pred <- merge(data.frame(age=seq(18,60,2)),
-                  m.ivs[ ,c("salary", "gender")])
-    
-# Create data frame with predicted values and confidence bands
-train.pred <- 
-    # 'cbind' combines objects by columns
-    cbind(age.pred, 
-          predict(model, # Model to predict values with
-                  age.pred, # New data to use for IVs
-                  type="link", # Return log-odds predictions
-                  se=TRUE)) %>%  # Get std.err. for CIs
-mutate(pred=plogis(fit), # Calculate pr(buy)
-       upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-       lwr=plogis(fit-(qnorm(0.975)*se.fit)))  # Lower CI
+# Want to predict Pr(buy) for different levels of age
+age.pred <- data.frame(predictorEffect("age",  # Focal variable
+                                       model))
 
-# Create plot with gender on same plot
-ggplot(aes(x=age, y=pred), data=train.pred) +
-    geom_line(aes(color=gender), size=1) +
-    geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                    color=gender, fill=gender), alpha=.2) +
-    theme(legend.position="bottom",
-          plot.caption=element_text(size=8)) +
-    scale_color_manual(values=c("red4", "navy")) +
-    scale_fill_manual(values=c("pink", "cyan")) +
-    labs(x="Age", y="Pr(Buy)", color="Gender", fill="Gender",
-         caption="Calculated at mean value of salary")
-```
-
-### Figure \@ref(fig:t3mpage02) {.unlisted .unnumbered}
-    
-```{r t3mpage02code, eval=FALSE}
-# Create plot with gender on same plot
-ggplot(aes(x=age, y=pred), data=train.pred) +
-    geom_line(aes(color=gender), size=1) +
-    geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                    color=gender, fill=gender), alpha=.2) +
-    facet_grid(~gender) +
-    theme(legend.position="none",
-          plot.caption=element_text(size=8)) +
-    scale_color_manual(values=c("red4", "navy")) +
-    scale_fill_manual(values=c("pink", "cyan")) +
-    labs(x="Age", y="Pr(Buy)", caption="Calculated at mean value of salary")
-```
-
-### Figure \@ref(fig:t3mpage03) {.unlisted .unnumbered}
-
-```{r t3mpage03code, eval=FALSE}
-# Want to predict for different levels of IVs
-# Because we often do this for other continuous variables, we first
-#     create a df with values of all continuous IVs
-#     at different levels of the factor variable (if there are any)
-# NOTE: variable names must be EXACTLY the same as in model
-msd.ivs <- train %>%
-  group_by(gender) %>%  # Group on factor variable
-  # Calculate values for different levels of IVs
-  summarise(age_mn15=mean(age, na.rm=TRUE)-1.5*sd(age, na.rm=TRUE),
-            age_m=mean(age, na.rm=TRUE),
-            age_mp15=mean(age, na.rm=TRUE)+1.5*sd(age, na.rm=TRUE),
-            salary_mn15=mean(salary, na.rm=TRUE)-1.5*sd(salary, na.rm=TRUE),
-            salary_m=mean(salary, na.rm=TRUE),
-            salary_mp15=mean(salary, na.rm=TRUE)+1.5*sd(salary, na.rm=TRUE)) %>%
-  # Convert data from wide to long
-  pivot_longer(cols=!gender, names_to=c(".value","measure"), names_sep="_")
-    
-age.pred <- merge(data.frame(age=seq(18, 60, 2)), # Variable of interest
-                  msd.ivs[,c("gender", "salary", "measure")])
-        
-# Create data frame with predicted values and confidence bands
-train.pred <- 
-    # 'cbind' combines objects by columns
-    cbind(age.pred, 
-          predict(model, # Model to predict values with
-                  age.pred, # New data to use for IVs
-                  type="link", # Return log-odds predictions
-                  se=TRUE)) %>%  # Get std.err. for CIs
-    mutate(pred=plogis(fit), # Calculate pr(buy)
-           upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-           lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
-           gender=as.factor(gender),  # Factor for plot
-           salary=as.factor(measure))  # Factor for plot
-
-ggplot(aes(x=age, y=pred), data=train.pred) +
-    geom_line(aes(color=salary), size=1) +
-    geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                    color=salary, fill=salary), alpha=.2) +
-    facet_grid(.~gender) +  # Create separate plots for gender
-    theme(legend.position="bottom") +
-    scale_color_manual("Salary",
-                       values=c("red4", "navy", "forestgreen"),
-                       labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
-    scale_fill_manual("Salary",
-                       values=c("pink", "cyan", "lawngreen"),
-                       labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
+# Use 'age.pred' for margin plot, assign to 'p1'
+p1 <- age.pred %>%
+  ggplot(aes(x=age,   # ad_tv on x-axis
+             y=fit)) +   # 'sales' prediction on y-axis
+    geom_line(size=1) +   # Draw predicted line
+    geom_ribbon(aes(ymin=lower,  # Draws the confidence interval bands
+                    ymax=upper),
+                    alpha=0.2) + # Sets transparency level
+    scale_y_continuous(limits=c(0,1)) +
     labs(x="Age", y="Pr(Buy)")
-```    
 
-### Figure \@ref(fig:t3mpage04) {.unlisted .unnumbered}
-
-```{r t3mpage04code, eval=FALSE}
-# Use df 'msd.ivs' from above
-sal.pred <- merge(data.frame(salary=seq(15, 150, 5)), # Variable of interest
-                  msd.ivs[,c("gender", "age", "measure")])
-    
-# Create data frame with predicted values and confidence bands
-train.pred <- 
-    # 'cbind' combines objects by columns
-    cbind(sal.pred, 
-          predict(model, # Model to predict values with
-                  sal.pred, # New data to use for IVs
-                  type="link", # Return log-odds predictions
-                  se=TRUE)) %>%  # Get std.err. for CIs
-    mutate(pred=plogis(fit), # Calculate pr(buy)
-           upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-           lwr=plogis(fit-(qnorm(0.975)*se.fit)),  # Lower CI
-           gender=as.factor(gender),  # Factor for plot
-           age=as.factor(measure))  # Factor for plot
-
-ggplot(aes(x=salary, y=pred), data=train.pred) +
-    geom_line(aes(color=age), size=1) +
-    geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                    color=age, fill=age), alpha=.2) +
-    facet_grid(.~gender) +  # Create separate plots for gender
-    theme(legend.position="bottom") +
-    scale_color_manual("Age",
-                       values=c("red4", "navy", "forestgreen"),
-                       labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
-    scale_fill_manual("Age",
-                       values=c("pink", "cyan", "lawngreen"),
-                       labels=c("Mean", "Mean-1.5SD", "Mean+1.5SD")) +
+# Repeat for other two variables
+sal.pred <- data.frame(predictorEffect("salary", model))
+p2 <- sal.pred %>%
+  ggplot(aes(x=salary,   # ad_tv on x-axis
+             y=fit)) +   # 'sales' prediction on y-axis
+    geom_line(size=1) +   # Draw predicted line
+    geom_ribbon(aes(ymin=lower,  # Draws the confidence interval bands
+                    ymax=upper),
+                    alpha=0.2) + # Sets transparency level
+    scale_y_continuous(limits=c(0,1)) +
     labs(x="Salary", y="Pr(Buy)")
-```    
+
+g.pred <- data.frame(predictorEffect("gender", model))
+p3 <- g.pred %>%
+  ggplot(aes(x=gender, y=fit, group=1)) +
+    geom_point(size=4) +
+    geom_line(color="orange") +
+    geom_errorbar(aes(ymin=lower, ymax=upper), width=0.2) +
+    scale_y_continuous(limits=c(0,1)) +
+    labs(x="Gender", y="Pr(Buy)")
+
+# Arrange three plots in a grid using package 'cowplot'
+plot_grid(p1,p2,p3, nrow=2)
+```
 
 ### Figure \@ref(fig:t3gainplot) {.unlisted .unnumbered}
 

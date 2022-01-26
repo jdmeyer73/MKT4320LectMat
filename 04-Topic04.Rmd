@@ -94,24 +94,18 @@ Identify factors (i.e., independent variables) that increase the likelihood of r
 
     * Scatterplot Matrix (with Correlations)
     ```{r t4scatmat01, echo=FALSE, fig.cap="Scatterplot Matrix with Correlations ([R code](#figure-reffigt4scatmat01))", message=FALSE}
-    # Need to detach package 'cowplot' to prevent an error
-    detach("package:cowplot", unload = TRUE)  
     ggpairs(telecom[,1:6], # Dataset
-            lower=list(continuous=
-                           wrap("smooth", 
-                                method="lm", 
-                                se=FALSE, # Add fit line
-                           color="midnightblue")),  # Set dot color
+            lower=list(continuous="smooth"),
         diag=list(continuous="blankDiag"))  # Set diagonals to be blank
     # Reload 'cowplot'
-    library(cowplot)
     ```
 
 ### Model Specification
 
 * Goal: Determine what behaviors and demographics are associated with high revenue customers
 * IVs are expected to be ones that are related to revenue
-* Model: $avg6rev=\alpha+\beta_1avg6mou+\beta_2cc+\beta_3da+\beta_4ovrmou+\beta_5income+\beta_6own$
+    * Expect an interaction between home ownership and overage minutes
+* Model: $avg6rev=\alpha+\beta_1avg6mou+\beta_2cc+\beta_3da+\beta_4income+\beta_5ovrmou+\beta_6own + \beta_7(ovrmou\times own)$
 
 ### Model Interpretation
 
@@ -119,19 +113,19 @@ Identify factors (i.e., independent variables) that increase the likelihood of r
 
 <caption>(\#tab:t4lr01) Linear Regression Results ([R code](#table-reftabt4lr01))</caption>
 ```{r t4lr01, echo=FALSE}
-target <- lm(avg6rev ~ avg6mou + cc + da + ovrmou + income + own,
+target <- lm(avg6rev ~ avg6mou + cc + da + income + ovrmou*own,
              data=telecom)
 summary(target)
 
 ```
-$avg6rev=31.421+.049avg6mou-1.263cc+1.925da+.178ovrmou-.013income-4.086own$
+$\hat{avg6rev}=33.742+.049avg6mou-1.332cc+1.895da-.013income+.135ovrmou-7.235own+0.066(ovrmou\times own)$
 
 #### Testing Overall Model Significance
 
 * Relationship between DV and combined effects of IVs
 * $H_0: \text{all }\beta_k=0$ vs. $H_a: \text{at least one }\beta_k\ne0$
 * Use F-statistic to test
-* Conclusion:  With a F-statistic of $923.2$ and a $p<.001$, we conclude that at least one $\beta_k$ is significant
+* Conclusion:  With a F-statistic of $811.5$ and a $p<.001$, we conclude that at least one $\beta_k$ is significant
 
 #### Assessing overall model fit
 
@@ -150,138 +144,95 @@ $avg6rev=31.421+.049avg6mou-1.263cc+1.925da+.178ovrmou-.013income-4.086own$
         * A one unit increase in `avg6mou` is predicted to increase `avg6rev` by $.049$ units.
     * `cc`
         * With $p<.001$, `cc` has a significant effect on `avg6rev`.
-        * A one unit increase in `cc` is predicted to decrease `avg6rev` by $1.263$ units.
+        * A one unit increase in `cc` is predicted to decrease `avg6rev` by $1.332$ units.
     * `da`
         * With $p<.001$, `da` has a significant effect on `avg6rev`.
-        * A one unit increase in `da` is predicted to increase `avg6rev` by $1.925$ units.
-    * `ovrmou`
-        * With $p<.001$, `ovrmou` has a significant effect on `avg6rev`.
-        * A one unit increase in `ovrmou` is predicted to increase `avg6rev` by $.178$ units.
-    * `own`
-        * With $p<.001$, `own` has a significant effect on `avg6rev`.
-        * Those that own their home have $4.086$ units less revenue per month than those that do not.
-* A standardized $\beta$ is the effect of a single standard deviation change in the IV on the DV
-    * Higher absolute values are more important
-    * Conclusion: `avg6mou` is the biggest driver of avg6rev
-
-    <caption>(\#tab:t4stdbeta1) Standardized Beta Coefficients ([R code](#table-reftabt4stdbeta1))</caption>
-    ```{r t4lrstdbeta1, echo=FALSE}
-    # Use user-defined function 'lm_beta.R'
-    source("Topic02/lm_beta.R")
-    htmlTable(lm_beta(target, digits=4))
-    ```
-
+        * A one unit increase in `da` is predicted to increase `avg6rev` by $1.895$ units.
+    * `ovrmou` and `own` interaction
+        * With $p<.001$, the effect of `ovrmou` on `avg6rev` is significantly different based on `own`.
+        * When the customer owns their home, a one unit increase in `ovrmou` is predicted to increase `avg6rev` by $.201$ units.
+        * When the customer does notown their home, a one unit increase in `ovrmou` is predicted to increase `avg6rev` by $.135$ units.
+    
 * Sometimes helps to visually examine the IVs for interpretation
 * Plots can show predicted DV at different levels of IVs 
 
-    ```{r t4marginplots01, echo=FALSE, fig.cap="Margin Plots for Significant IVs ([R code](#figure-reffigt4marginplots01))"}
-    # Want to predict for different levels of IVs
-    # Because we often do this for other continuous variables, we first
-    #     create a df with mean values of all continuous IVs
-    #     at different levels of the factor variable (if there are any)
-    # NOTE: variable names must be EXACTLY the same as in model
-    m.ivs <- telecom %>%
-      group_by(own) %>%
-      summarise(avg6mou=mean(avg6mou, na.rm=TRUE),
-                cc=mean(cc, na.rm=TRUE),
-                da=mean(da, na.rm=TRUE),
-                ovrmou=mean(ovrmou, na.rm=TRUE),
-                income=mean(income, na.rm=TRUE))
+    ```{r t4marginplots01, echo=FALSE, fig.cap="Margin Plots for Significant IVs (No Interaction) ([R code](#figure-reffigt4marginplots01))"}
+    # Use package 'effects'
+    library(effects)
     
-    # Create dataframe for prediction at different levels of 'avg6mou'
-    a6m.pred <- merge(data.frame(avg6mou=seq(0,1500,100)), # variable of interest
-                         m.ivs[,c("cc", "da", "ovrmou", "income", "own")])
+    # Create data frame of values to be plotted for 'avg6mou' as focal
+    a6.p <- data.frame(predictorEffect("avg6mou", target, 
+                                       focal.levels=seq(0,1500,30)))
     
-    # Use model results to predict dv for values in 'a6m.pred' data frame
-    # Predicted values and CIs get appended to data frame
-    # New variables are called:
-    #      'p$fit' = linear prediction from model
-    #      'p$lwr' = lower confidence interval for prediction
-    #      'p$upr' = upper confidcent interval for prediction
-    a6m.pred$p <- as.data.frame(
-       predict.lm(target,    
-                  a6m.pred,
-                  interval="confidence"))
-    # Use ggplot to create margin plot
-    p1 <- ggplot(aes(x=avg6mou, y=p$fit, color=own), data=a6m.pred) +
+    # Create plot and assign to p1
+    
+    p1 <- a6.p %>%
+      ggplot(aes(x=avg6mou, y=fit)) +
         geom_line(size=1) +
-        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
-        labs(x="Mean Monthly Minutes", y="Linear Prediction", 
-             fill="Own", color="Own") +
-        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                           minor_breaks=NULL) +
-        theme(legend.position="none")
+        geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+        labs(x="Mean Monthly Minutes", y="Linear Prediction") +
+        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
     
-    # Repeat for variable 'cc'
-    cc.pred <- merge(data.frame(cc=seq(0,10,1)), # variable of interest
-                         m.ivs[,c("avg6mou", "da", "ovrmou", "income", "own")])
-    cc.pred$p <- as.data.frame(predict.lm(target, cc.pred,
-                                          interval="confidence"))
-    p2 <- ggplot(aes(x=cc, y=p$fit, color=own), data=cc.pred) +
+    # Repeat for other Significant IVs
+    cc.p <- data.frame(predictorEffect("cc", target,
+                                       focal.levels=seq(0,10,.2)))
+    p2 <- cc.p %>%
+      ggplot(aes(x=cc, y=fit)) +
         geom_line(size=1) +
-        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
+        geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
         labs(x="Mean Monthly Customer Care Calls", y="Linear Prediction") +
-        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                           minor_breaks=NULL) +
-        theme(legend.position="none")
- 
+        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
     
-    # Repeat for variable 'da'
-    da.pred <- merge(data.frame(da=seq(0,10,1)), # variable of interest
-                         m.ivs[,c("cc", "avg6mou", "ovrmou", "income", "own")])
-    da.pred$p <- as.data.frame(predict.lm(target, da.pred,
-                                          interval="confidence"))
-    p3 <- ggplot(aes(x=da, y=p$fit, color=own), data=da.pred) +
+    da.p <- data.frame(predictorEffect("da", target,
+                                       focal.levels=seq(0,10,.2)))
+    p3 <- da.p %>%
+      ggplot(aes(x=da, y=fit)) +
         geom_line(size=1) +
-        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
-        labs(x="Mean Monthly Directory Assistance Calls", 
-             y="Linear Prediction") +
-        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                           minor_breaks=NULL) +
-        theme(legend.position="none")
+        geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+        labs(x="Mean Monthly Directory Assistance Calls", y="Linear Prediction") +
+        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
+
+    plot_grid(p1, p2, p3, nrow=2)
+    ```
+    ```{r t4marginplots01b, echo=FALSE, fig.cap="Margin Plots for Interaction ([R code](#figure-reffigt4marginplots01))"}
+    om.p <- data.frame(predictorEffect("ovrmou", target,
+                                       focal.levels=seq(0,300,6)))
+    p4 <- om.p %>%
+      ggplot(aes(x=ovrmou, y=fit, color=own, fill=own)) +
+        geom_line(size=1) +
+        geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+        labs(x="Mean Monthly Overage Minutes", y="Linear Prediction",
+             color="Homeowner", fill="Homeowner") +
+        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15)) +
+        theme(legend.position = "bottom")
     
-    # Repeat for variable 'ovrmou'
-    om.pred <- merge(data.frame(ovrmou=seq(0,300,25)), # variable of interest
-                         m.ivs[,c("cc", "da", "avg6mou", "income", "own")])
-    om.pred$p <- as.data.frame(predict.lm(target, om.pred,
-                                          interval="confidence"))
-    p4 <- ggplot(aes(x=ovrmou, y=p$fit, color=own), data=om.pred) +
-        geom_line(size=1) +
-        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
-        labs(x="Mean Monthly Overage Minutes", 
-             y="Linear Prediction") +
-        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                           minor_breaks=NULL) +
-        theme(legend.position="none")
-    pgrid <- plot_grid(p1, p2, p3, p4, nrow=2)
-    legend <- get_legend(p1 + theme(legend.position="bottom"))
-    plot_grid(pgrid, legend, ncol=1, rel_heights=c(1,.1))
+    own.p <- data.frame(predictorEffect("own", target,
+                                        xlevels=list(ovrmou=seq(0,300,100))))
+    p5 <- own.p %>%
+      ggplot(aes(x=own, y=fit, group=1)) +
+        geom_point(size=2) +
+        geom_line(color="orange") +
+        geom_errorbar(aes(ymin=lower, ymax=upper), width=.5) +
+        facet_wrap(~ovrmou) +
+        labs(x="Home Ownership", y="Linear Prediction") +
+        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
+    
+    plot_grid(p4, p5, nrow=1)
     ```
 
+
     ```{r t4marginplots02, echo=FALSE, fig.cap="Margin Plots for Insignificant IV ([R code](#figure-reffigt4marginplots02))"}
-    # Create dataframe for prediction at different levels of 'avg6mou'
-    inc.pred <- merge(data.frame(income=seq(10,200,10)), # variable of interest
-                         m.ivs[,c("cc", "da", "ovrmou", "avg6mou", "own")])
+     # Create data frame of values to be plotted for 'avg6mou' as focal
+    inc.p <- data.frame(predictorEffect("income", target))
     
-    # Use model results to predict dv for values in 'a6m.pred' data frame
-    # Predicted values and CIs get appended to data frame
-    # New variables are called:
-    #      'p$fit' = linear prediction from model
-    #      'p$lwr' = lower confidence interval for prediction
-    #      'p$upr' = upper confidcent interval for prediction
-    inc.pred$p <- as.data.frame(
-       predict.lm(target,    
-                  inc.pred,
-                  interval="confidence"))
-    # Use ggplot to create margin plot
-    ggplot(aes(x=income, y=p$fit, color=own), data=inc.pred) +
+    # Create plot
+    
+    inc.p %>%
+      ggplot(aes(x=income, y=fit)) +
         geom_line(size=1) +
-        geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
-        labs(x="Income (000s)", y="Linear Prediction", 
-             fill="Own", color="Own") +
-        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                           minor_breaks=NULL) +
-        theme(legend.position="bottom")
+        geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+        labs(x="Income (000s)", y="Linear Prediction") +
+        scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
     ```       
 * Examine deciles of predicted values by the IVs
     * Split sample into 10 groups based on predicted DV
@@ -431,43 +382,45 @@ flextable(or_table(tgt.log))
 
 ### Interpreting Coefficients Visually
 
-```{r t4lrmarginplots, echo=FALSE, message=FALSE, fig.cap="Margin Plots for Age at Different Factor Levels ([R code](#figure-reffigt4lrmarginplots))"}
-# Create df will mean values of continuous IVs at levels of factor IVs
-m.ivs <- train %>%
-   group_by(housing, loan, married) %>%
-   summarise(age=mean(age, na.rm=TRUE),
-             balance=mean(balance, na.rm=TRUE))
-
-# Create new data for prediction with 'age' as focus
-age.pred <- merge(data.frame(age=seq(15,85,5)), 
-                  m.ivs[ ,c("housing", "loan", "married", "balance")])
-
-# Create data frame with predicted values and confidence bands
-train.pred <- 
-cbind(age.pred,   # 'cbind' combines objects by columns 
-      predict(tgt.log, # Model to predict values with
-              age.pred, # New data to use for IVs
-              type="link", # Return log-odds predictions
-              se=TRUE)) %>%  # Get std.err. for CIs
-    mutate(pred=plogis(fit), # Calculate pr(response)
-           upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-           lwr=plogis(fit-(qnorm(0.975)*se.fit)))  # Lower CI
-
-# Create plot grid with separate lines for 'housing'
-ggplot(aes(x=age, y=pred), data=train.pred) +
-   geom_line(aes(color=housing), size=1) +
-   geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                   color=housing, fill=housing), alpha=.2) +
-   scale_y_continuous("Pr(Response)",limits=c(0,.5)) +
-   theme(legend.position="bottom") +
-   # 'facet-grid' creates separate plots in a grid of factor variable levels
-   facet_grid(rows=vars(married), cols=vars(loan),
-              labeller=labeller(married=as_labeller(c("No"="Married: No", 
-                                                      "Yes"="Married: Yes")),
-                                loan=as_labeller(c("No"="Personal Loan: No", 
-                                                   "Yes"="Personal Loan: Yes"))),
-              switch="y") +
-   labs(x="Age", color="Housing Loan", fill="Housing Loan")
+```{r t4lrmarginplots, echo=FALSE, message=FALSE, fig.cap="Margin Plots for Significant IVs ([R code](#figure-reffigt4lrmarginplots))"}
+    age.p <- data.frame(predictorEffect("age", tgt.log))
+    p6 <- age.p %>%
+      ggplot(aes(x=age, y=fit)) +
+        geom_line(size=1) +
+        geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+        labs(x="Age", y="Pr(Response)") +
+        scale_y_continuous(limits=c(0,.3))
+    
+    mar.p <- data.frame(predictorEffect("married", tgt.log))
+    p7 <- mar.p %>%
+      ggplot(aes(x=married, y=fit, group=1)) +
+        geom_point(size=4) + 
+        geom_line(color="orange") + 
+        geom_errorbar(aes(ymin=lower, ymax=upper), width=.5) +
+        labs(x="Married") +
+        theme(axis.title.y=element_blank()) +
+        scale_y_continuous(limits=c(0,.3))
+    
+    ln.p <- data.frame(predictorEffect("loan", tgt.log))
+    p8 <- ln.p %>%
+      ggplot(aes(x=loan, y=fit, group=1)) +
+        geom_point(size=4) + 
+        geom_line(color="orange") + 
+        geom_errorbar(aes(ymin=lower, ymax=upper), width=.5) +
+        labs(x="Personal Loan", y="Pr(Response)") +
+        scale_y_continuous(limits=c(0,.3))
+    
+    hl.p <- data.frame(predictorEffect("housing", tgt.log))
+    p9 <- hl.p %>%
+      ggplot(aes(x=housing, y=fit, group=1)) +
+        geom_point(size=4) + 
+        geom_line(color="orange") + 
+        geom_errorbar(aes(ymin=lower, ymax=upper), width=.5) +
+        labs(x="Housing Loan") +
+        theme(axis.title.y=element_blank()) +
+        scale_y_continuous(limits=c(0,.3))
+    
+    plot_grid(p6, p7, p8, p9, nrow=2)
 ```
 
 ### Gain Chart
@@ -538,159 +491,128 @@ library(cowplot)
 ### Figure \@ref(fig:t4marginplots01) {.unlisted .unnumbered}
 
 ```{r t4marginplots01code, eval=FALSE}
-# Want to predict for different levels of IVs
-# Because we often do this for other continuous variables, we first
-#     create a df with mean values of all continuous IVs
-#     at different levels of the factor variable (if there are any)
-# NOTE: variable names must be EXACTLY the same as in model
-m.ivs <- telecom %>%
-  group_by(own) %>%
-  summarise(avg6mou=mean(avg6mou, na.rm=TRUE),
-            cc=mean(cc, na.rm=TRUE),
-            da=mean(da, na.rm=TRUE),
-            ovrmou=mean(ovrmou, na.rm=TRUE),
-            income=mean(income, na.rm=TRUE))
-
-# Create dataframe for prediction at different levels of 'avg6mou'
-a6m.pred <- merge(data.frame(avg6mou=seq(0,1500,100)), # variable of interest
-                     m.ivs[,c("cc", "da", "ovrmou", "income", "own")])
-
-# Use model results to predict dv for values in 'a6m.pred' data frame
-# Predicted values and CIs get appended to data frame
-# New variables are called:
-#      'p$fit' = linear prediction from model
-#      'p$lwr' = lower confidence interval for prediction
-#      'p$upr' = upper confidcent interval for prediction
-a6m.pred$p <- as.data.frame(
-   predict.lm(target,    
-              a6m.pred,
-              interval="confidence"))
-# Use ggplot to create margin plot
-p1 <- ggplot(aes(x=avg6mou, y=p$fit, color=own), data=a6m.pred) +
+# Use package 'effects'
+library(effects)
+    
+# Create data frame of values to be plotted for 'avg6mou' as focal
+a6.p <- data.frame(predictorEffect("avg6mou", target, 
+                                   focal.levels=seq(0,1500,30)))
+    
+# Create plot and assign to p1
+p1 <- a6.p %>%
+  ggplot(aes(x=avg6mou, y=fit)) +
     geom_line(size=1) +
-    geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
-    labs(x="Mean Monthly Minutes", y="Linear Prediction", 
-         fill="Own", color="Own") +
-    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                       minor_breaks=NULL) +
-    theme(legend.position="none")
+    geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+    labs(x="Mean Monthly Minutes", y="Linear Prediction") +
+    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
 
-# Repeat for variable 'cc'
-cc.pred <- merge(data.frame(cc=seq(0,10,1)), # variable of interest
-                     m.ivs[,c("avg6mou", "da", "ovrmou", "income", "own")])
-cc.pred$p <- as.data.frame(predict.lm(target, cc.pred,
-                                      interval="confidence"))
-p2 <- ggplot(aes(x=cc, y=p$fit, color=own), data=cc.pred) +
+# Repeat for other Significant IVs
+cc.p <- data.frame(predictorEffect("cc", target,
+                                   focal.levels=seq(0,10,.2)))
+p2 <- cc.p %>%
+  ggplot(aes(x=cc, y=fit)) +
     geom_line(size=1) +
-    geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
+    geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
     labs(x="Mean Monthly Customer Care Calls", y="Linear Prediction") +
-    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                       minor_breaks=NULL) +
-    theme(legend.position="none")
-
-
-# Repeat for variable 'da'
-da.pred <- merge(data.frame(da=seq(0,10,1)), # variable of interest
-                     m.ivs[,c("cc", "avg6mou", "ovrmou", "income", "own")])
-da.pred$p <- as.data.frame(predict.lm(target, da.pred,
-                                      interval="confidence"))
-p3 <- ggplot(aes(x=da, y=p$fit, color=own), data=da.pred) +
+    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
+  
+da.p <- data.frame(predictorEffect("da", target,
+                                   focal.levels=seq(0,10,.2)))
+p3 <- da.p %>%
+  ggplot(aes(x=da, y=fit)) +
     geom_line(size=1) +
-    geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
-    labs(x="Mean Monthly Directory Assistance Calls", 
-         y="Linear Prediction") +
-    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                       minor_breaks=NULL) +
-    theme(legend.position="none")
+    geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+    labs(x="Mean Monthly Directory Assistance Calls", y="Linear Prediction") +
+    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
 
-# Repeat for variable 'ovrmou'
-om.pred <- merge(data.frame(ovrmou=seq(0,300,25)), # variable of interest
-                     m.ivs[,c("cc", "da", "avg6mou", "income", "own")])
-om.pred$p <- as.data.frame(predict.lm(target, om.pred,
-                                      interval="confidence"))
-p4 <- ggplot(aes(x=ovrmou, y=p$fit, color=own), data=om.pred) +
+#Arrange in grid using 'cowplot'
+plot_grid(p1, p2, p3, nrow=2)
+```
+
+### Figure \@ref(fig:t4marginplots01b) {.unlisted .unnumbered}
+
+```{r t4marginplots01bcode, eval=FALSE}
+om.p <- data.frame(predictorEffect("ovrmou", target,
+                                   focal.levels=seq(0,300,6)))
+p4 <- om.p %>%
+  ggplot(aes(x=ovrmou, y=fit, color=own, fill=own)) +
     geom_line(size=1) +
-    geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
-    labs(x="Mean Monthly Overage Minutes", 
-         y="Linear Prediction") +
-    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                       minor_breaks=NULL) +
-    theme(legend.position="none")
-# Save Plots to a grid object using 'cowplot'
-pgrid <- plot_grid(p1, p2, p3, p4, nrow=2)
-# Extract legend from first plot
-legend <- get_legend(p1 + theme(legend.position="bottom"))
-# Combine plot object and legend in a single column
-plot_grid(pgrid, legend, ncol=1, rel_heights=c(1,.1))
+    geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+    labs(x="Mean Monthly Overage Minutes", y="Linear Prediction",
+         color="Homeowner", fill="Homeowner") +
+    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15)) +
+    theme(legend.position = "bottom")
+    
+own.p <- data.frame(predictorEffect("own", target,
+                                    xlevels=list(ovrmou=seq(0,300,100))))
+p5 <- own.p %>%
+  ggplot(aes(x=own, y=fit, group=1)) +
+    geom_point(size=2) +
+    geom_line(color="orange") +
+    geom_errorbar(aes(ymin=lower, ymax=upper), width=.5) +
+    facet_wrap(~ovrmou) +
+    labs(x="Home Ownership", y="Linear Prediction") +
+    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
+    
+plot_grid(p4, p5, nrow=1)
 ```
 
 ### Figure \@ref(fig:t4marginplots02) {.unlisted .unnumbered}
 
 ```{r t4marginplots02code, eval=FALSE}
-# Create dataframe for prediction at different levels of 'avg6mou'
-inc.pred <- merge(data.frame(income=seq(10,200,10)), # variable of interest
-                     m.ivs[,c("cc", "da", "ovrmou", "avg6mou", "own")])
-
-# Use model results to predict dv for values in 'a6m.pred' data frame
-# Predicted values and CIs get appended to data frame
-# New variables are called:
-#      'p$fit' = linear prediction from model
-#      'p$lwr' = lower confidence interval for prediction
-#      'p$upr' = upper confidcent interval for prediction
-inc.pred$p <- as.data.frame(
-   predict.lm(target,    
-              inc.pred,
-              interval="confidence"))
-# Use ggplot to create margin plot
-ggplot(aes(x=income, y=p$fit, color=own), data=inc.pred) +
+# Create data frame of values to be plotted for 'avg6mou' as focal
+inc.p <- data.frame(predictorEffect("income", target))
+    
+# Create plot
+inc.p %>%
+  ggplot(aes(x=income, y=fit)) +
     geom_line(size=1) +
-    geom_ribbon(aes(ymin=p$lwr, ymax=p$upr, fill=own), alpha=0.2) +
-    labs(x="Income (000s)", y="Linear Prediction", 
-         fill="Own", color="Own") +
-    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15), 
-                       minor_breaks=NULL) +
-    theme(legend.position="bottom")
+    geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+    labs(x="Income (000s)", y="Linear Prediction") +
+    scale_y_continuous(limits=c(30,120), breaks=seq(30,120,15))
 ```       
 
 ### Figure \@ref(fig:t4lrmarginplots) {.unlisted .unnumbered}
 
 ```{r t4lrmarginplotscode, eval=FALSE}
-# Create df will mean values of continuous IVs at levels of factor IVs
-m.ivs <- train %>%
-   group_by(housing, loan, married) %>%
-   summarise(age=mean(age, na.rm=TRUE),
-             balance=mean(balance, na.rm=TRUE))
+age.p <- data.frame(predictorEffect("age", tgt.log))
+p6 <- age.p %>%
+  ggplot(aes(x=age, y=fit)) +
+    geom_line(size=1) +
+    geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+    labs(x="Age", y="Pr(Response)") +
+    scale_y_continuous(limits=c(0,.3))
+    
+mar.p <- data.frame(predictorEffect("married", tgt.log))
+p7 <- mar.p %>%
+  ggplot(aes(x=married, y=fit, group=1)) +
+    geom_point(size=4) + 
+    geom_line(color="orange") + 
+    geom_errorbar(aes(ymin=lower, ymax=upper), width=.5) +
+    labs(x="Married") +
+    theme(axis.title.y=element_blank()) +
+    scale_y_continuous(limits=c(0,.3))
+    
+ln.p <- data.frame(predictorEffect("loan", tgt.log))
+p8 <- ln.p %>%
+  ggplot(aes(x=loan, y=fit, group=1)) +
+    geom_point(size=4) + 
+    geom_line(color="orange") + 
+    geom_errorbar(aes(ymin=lower, ymax=upper), width=.5) +
+    labs(x="Personal Loan", y="Pr(Response)") +
+    scale_y_continuous(limits=c(0,.3))
 
-# Create new data for prediction with 'age' as focus
-age.pred <- merge(data.frame(age=seq(15,85,5)), 
-                  m.ivs[ ,c("housing", "loan", "married", "balance")])
-
-# Create data frame with predicted values and confidence bands
-train.pred <- 
-cbind(age.pred,   # 'cbind' combines objects by columns 
-      predict(tgt.log, # Model to predict values with
-              age.pred, # New data to use for IVs
-              type="link", # Return log-odds predictions
-              se=TRUE)) %>%  # Get std.err. for CIs
-    mutate(pred=plogis(fit), # Calculate pr(response)
-           upr=plogis(fit+(qnorm(0.975)*se.fit)),  # Upper CI
-           lwr=plogis(fit-(qnorm(0.975)*se.fit)))  # Lower CI
-
-# Create plot grid with separate lines for 'housing'
-ggplot(aes(x=age, y=pred), data=train.pred) +
-   geom_line(aes(color=housing), size=1) +
-   geom_ribbon(aes(ymin=lwr, ymax=upr, 
-                   color=housing, fill=housing), alpha=.2) +
-   scale_y_continuous("Pr(Response)",limits=c(0,.5)) +
-   theme(legend.position="bottom") +
-   # 'facet-grid' creates separate plots in a grid of factor variable levels
-   facet_grid(rows=vars(married), cols=vars(loan),
-              labeller=labeller(married=as_labeller(c("No"="Married: No", 
-                                                      "Yes"="Married: Yes")),
-                                loan=as_labeller(c("No"="Personal Loan: No", 
-                                                   "Yes"="Personal Loan: Yes"))),
-              switch="y") +
-   labs(x="Age", color="Housing Loan", fill="Housing Loan")
+hl.p <- data.frame(predictorEffect("housing", tgt.log))
+p9 <- hl.p %>%
+  ggplot(aes(x=housing, y=fit, group=1)) +
+    geom_point(size=4) + 
+    geom_line(color="orange") + 
+    geom_errorbar(aes(ymin=lower, ymax=upper), width=.5) +
+    labs(x="Housing Loan") +
+    theme(axis.title.y=element_blank()) +
+    scale_y_continuous(limits=c(0,.3))
+    
+plot_grid(p6, p7, p8, p9, nrow=2)
 ```
 
 ### Figure \@ref(fig:t4gainlift01) {.unlisted .unnumbered}
@@ -728,14 +650,6 @@ target <- lm(avg6rev ~ avg6mou + cc + da + ovrmou + income + own,
              data=telecom)
 summary(target)
 
-```
-
-### Table \@ref(tab:t4stdbeta11) {.unlisted .unnumbered}
-
-```{r t4lrstdbeta1code, eval=FALSE}
-# Use user-defined function 'lm_beta.R'
-source("Topic02/lm_beta.R")
-htmlTable(lm_beta(target, digits=4))
 ```
 
 ### Table \@ref(tab:t4tgtdecile) {.unlisted .unnumbered}

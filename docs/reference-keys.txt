@@ -19,9 +19,6 @@ tab:t3cmtest
 fig:t3roctrain
 fig:t3roctest
 fig:t3mpage01
-fig:t3mpage02
-fig:t3mpage03
-fig:t3mpage04
 tab:t3gaintable
 fig:t3gainplot
 tab:t3lifttable
@@ -31,8 +28,8 @@ fig:t3sensspec02
 tab:t4summstat01
 fig:t4scatmat01
 tab:t4lr01
-tab:t4stdbeta1
 fig:t4marginplots01
+fig:t4marginplots01b
 fig:t4marginplots02
 tab:t4tgtdecile
 tab:t4lrestimation

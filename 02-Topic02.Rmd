@@ -11,13 +11,13 @@ Regression allows marketers to:
 
 ## R Packages and Datasets for Topic 2
 
-``` {r t2packagesdata, message=FALSE}
+The following packages are used for this topic and are loaded when needed.
+
+``` {r t2packages, eval=FALSE, message=FALSE}
 library(ggplot2)       # Advanced graphing capabilities
 library(tidyr)         # Easier programming   
-library(scales)        # Control appearance of axes and legend labels
 library(htmlTable)     # Better HTML Tables
 library(reshape2)      # Easily convert wide data to long data
-library(GGally)        # ggplot extension; for scatterplot matrix
 library(summarytools)  # Summary statistics
 library(effects)       # Help with linear predictions
 library(cowplot)       # Arrange separate plots in a grid
@@ -25,7 +25,12 @@ library(ggtext)        # Annotate ggplots
 library(lubridate)     # Easily work with dates
 library(jtools)        # Concise regression results
 library(dplyr)         # Easier programming
-library(broom)         # Extract values from model
+library(GGally)        # Scatterplot Matrix
+```
+
+The following datasets are used for this topic and are loaded now.
+
+``` {r t2data, message=FALSE}
 load("Topic02/advtsales.rdata")
 load("Topic02/deptstoresales.rdata")
 ```
@@ -65,6 +70,8 @@ knitr:: include_graphics('Topic02/UnderstandingRegression2.png')
 * Note: The “best” fitted regression line is not always the line that best represents the data
 
 ``` {r t2scatterplot1, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+library(dplyr)
+library(ggplot2)
 data.frame(X=(0:20)) %>% 
    mutate(Y=-(X^2)+20*X) %>% 
    ggplot(aes(x=X, y=Y)) +
@@ -101,6 +108,7 @@ data.frame(X=(0:20)) %>%
 * All statistical packages can conduct regression
 
 ``` {r t2statpacktable, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+library(htmlTable)
 mat1data <- c("R", "Stata GUI", "Stata Command", "SPSS GUI", "SPSS Syntax", "SAS", "Minitab","lm(dv ~ iv1 + iv2 + ... + ivk)", "Statistics > Linear models and related > Linear Regression", "regress dv iv1 iv2 ... ivk", "Analyze > Regression > Linear", "regression/dependent dv/enter iv1 iv2 ... ivk", "proc reg; model dv = iv1 iv2 ... ivk;","Stat > Regression > Regression")
 mat1 <- matrix(mat1data, nrow=7, ncol=2, byrow=FALSE)
 mat2data <- c("font-family: Arial",
@@ -167,6 +175,7 @@ Prediction is a key use of regression
 <div class="hr" id="t21">
 ***Table 2.1: Summary Statistics***
 ``` {r t2univsummstats, echo=FALSE}
+library(summarytools)
 # Creates dataframe with only needed variables; Use 'dplyr::' before
 # 'select' to avoid conflict with other packages
 lrreg1 <- advtsales %>% dplyr::select(-id)
@@ -186,13 +195,16 @@ htmlTable(txtRound(descr(lrreg1, stats=stats, transpose=TRUE),2))
 <div class="hr" id="f21">
 ***Figure 2.1: Scatterplot Matrix with Correlation***
 ``` {r t2scattercorr1, echo=FALSE, cache=TRUE}
+# Need to detach package 'cowplot' to prevent an error
+library(GGally)
+
 # Use package GGally::ggpairs to easily create combination correlation
 # and scatterplot matrix
 ggpairs(lrreg1, # Dataset
-        lower=list(continuous=
-                      wrap("smooth", method="lm", se=FALSE, # Add fit line
-                           color="midnightblue")),  # Set dot color
+        lower=list(continuous="smooth"), 
         diag=list(continuous="blankDiag"))  # Set diagonals to be blank
+# Need to detach package 'cowplot' to prevent an error
+
 ```
 <br>[R Code](#figure21)
 </div><p>
@@ -202,6 +214,7 @@ ggpairs(lrreg1, # Dataset
 <div class="hr" id="f22">
 ***Figure 2.2: Box Plots***
 ``` {r t2boxplots, echo=FALSE, message=FALSE, cache=TRUE}
+library(reshape2)
 melt(lrreg1) %>%  # Use package 'reshape2' to reshape the data for facet plot
    # Begins plot with each variable as a factor and
    # value of the variable to be plotted
@@ -231,6 +244,7 @@ melt(lrreg1) %>%  # Use package 'reshape2' to reshape the data for facet plot
 <div class="hr" id="t22">
 ***Table 2.2: Regression Results (Concise)***
 ``` {r t2results1, echo=FALSE, cache=TRUE, comment=NA}
+library(jtools)
 # Run linear model and save as 'results'
 results <- lm(sales ~ ad_tv + ad_radio + ad_paper, data = advtsales)
 summ(results, digits=4, model.info=FALSE)
@@ -289,84 +303,58 @@ htmlTable(lm_beta(results, digits=4))
 <div class="hr" id="f23">
 ***Figure 2.3: Margin Plots***
 ``` {r t2marginplots1, echo=FALSE, cache=TRUE}
-# Want to predict 'sales' for different levels of IVs
-# Because we often do this for other continuous variables, we first
-#     create a df with mean values of all continuous variables at
-#     different levels of the factor variable (if there are any)
-# NOTE: variable names must be EXACTLY the same as in model
-m.ivs <- advtsales %>%
-   group_by() %>%   # NOTE: No factor variables for this model
-   summarise(ad_tv=mean(ad_tv, na.rm=TRUE),
-             ad_radio=mean(ad_radio, na.rm=TRUE),
-             ad_paper=mean(ad_paper, na.rm=TRUE))
+# Use 'effect' package
+library(effects)
 
-# Second, create a df of values to predict with, using 'merge'
-#     'merge' simply merges data frames
-tv.pred <- merge(data.frame(ad_tv=seq(0, 300, 25)), # Variable of interest
-                  m.ivs[,c("ad_radio", "ad_paper")]) # Mean levels of other variables
+# Want to predict 'sales' for different levels of 'ad_tv'
+tv.pred <- data.frame(predictorEffect("ad_tv",  # Focal variable
+                                       results))
 
-# Third, use model results to predict DV for values in 'tv.pred' data frame
-#     Predicted values and confidence intervals get appended to data frame
-#     New variables are called:
-#          'p$fit'  = linear prediction from model
-#          'p$lwr' = lower confidence interval for prediction
-#          'p$upr' = upper confidcent interval for prediction
-tv.pred$p <- as.data.frame(
-   predict.lm(results,    # Object with model results    
-              tv.pred,  # df of IV values to predict with
-              interval="confidence"))   # Request CIs
-
-# Last, use 'tv.pred' for margin plot; save plot
+# Use 'tv.pred' for margin plot, assign to 'p1'
 p1 <- tv.pred %>%
-   ggplot(aes(x=ad_tv,   # Age on x-axis
-              y=p$fit)) +   # 'sales' prediction on y-axis
-      geom_line(size=.5, color="red4") +   # Draw predicted line
-      geom_ribbon(aes(ymin=p$lwr,  # Draws the confidence interval bands
-                  ymax=p$upr),
-                  alpha=0.2, fill="red4") + # Sets transparency level
+   ggplot(aes(x=ad_tv,   # ad_tv on x-axis
+              y=fit)) +   # 'sales' prediction on y-axis
+      geom_line(size=1) +   # Draw predicted line
+      geom_ribbon(aes(ymin=lower,  # Draws the confidence interval bands
+                      ymax=upper),
+                      alpha=0.2) + # Sets transparency level
       # Next two commands scale x and y axes
       scale_x_continuous(limits=c(0,300), expand=c(.025,.025), 
                          breaks=seq(0,300,50), minor_breaks=NULL) +
-      scale_y_continuous(limits=c(5,30), expand=c(.025,.025), 
-                         breaks=seq(5,30,5), minor_breaks=NULL) +
+      scale_y_continuous(limits=c(5,25), expand=c(.025,.025), 
+                         breaks=seq(5,25,5), minor_breaks=NULL) +
       # Change text size
       theme(text=element_text(size=15)) +    
-      labs(x="TV Advertising", y="Linear Prediciton")
+      labs(x="TV Advertising", y="Linear Prediction")
 
 # Repeat for other two variables
-radio.pred <- merge(data.frame(ad_radio=seq(0, 50, 5)),
-                    m.ivs[,c("ad_tv", "ad_paper")])
-radio.pred$p <- as.data.frame(predict.lm(results, radio.pred,
-                                         interval="confidence"))
-p2 <- radio.pred %>%
-   ggplot(aes(x=ad_radio, y=p$fit)) +
-      geom_line(size=.5, color="forestgreen") +
-      geom_ribbon(aes(ymin=p$lwr, ymax=p$upr), 
-                  alpha=0.2, fill="forestgreen") + 
+rd.pred <- data.frame(predictorEffect("ad_radio", results))
+p2 <- rd.pred %>%
+   ggplot(aes(x=ad_radio, y=fit)) +
+      geom_line(size=1) +
+      geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
       scale_x_continuous(limits=c(0,50), expand=c(.025,.025), 
                          breaks=seq(0,50,10), minor_breaks=NULL) +
-      scale_y_continuous(limits=c(5,30), expand=c(.025,.025), 
-                         breaks=seq(5,30,5), minor_breaks=NULL) +
+      scale_y_continuous(limits=c(5,25), expand=c(.025,.025), 
+                         breaks=seq(5,25,5), minor_breaks=NULL) +
       theme(text=element_text(size=15)) +    
-      labs(x="Radio Advertising", y="Linear Prediciton")
+      labs(x="Radio Advertising", y="Linear Prediction")
 
-paper.pred <- merge(data.frame(ad_paper=seq(0, 120, 10)),
-                    m.ivs[,c("ad_tv", "ad_radio")])
-paper.pred$p <- as.data.frame(predict.lm(results, paper.pred,
-                                         interval="confidence"))
-p3 <- paper.pred %>%
-   ggplot(aes(x=ad_paper, y=p$fit)) +
-      geom_line(size=.5, color="darkorange") + 
-      geom_ribbon(aes(ymin=p$lwr, ymax=p$upr), 
-                  alpha=0.2, fill="darkorange") +
-      scale_x_continuous(limits=c(0,120), expand=c(.025,.025), 
-                         breaks=seq(0,120,20), minor_breaks=NULL) +
-      scale_y_continuous(limits=c(5,30), expand=c(.025,.025), 
-                         breaks=seq(5,30,5), minor_breaks=NULL) +
+np.pred <- data.frame(predictorEffect("ad_paper", results,
+                                      focal.levels=seq(0,100,2)))
+p3 <- np.pred %>%
+   ggplot(aes(x=ad_paper, y=fit)) +
+      geom_line(size=1) +
+      geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+      scale_x_continuous(limits=c(0,100), expand=c(.025,.025), 
+                         breaks=seq(0,100,20), minor_breaks=NULL) +
+      scale_y_continuous(limits=c(5,25), expand=c(.025,.025), 
+                         breaks=seq(5,25,5), minor_breaks=NULL) +
       theme(text=element_text(size=15)) +    
-      labs(x="Paper Advertising", y="Linear Prediciton")
+      labs(x="Newspaper Advertising", y="Linear Prediction")
 
 # Arrange three plots in a grid using package 'cowplot'
+library(cowplot)
 plot_grid(p1,p2,p3)
 ```
 <br>[R Code](#figure23)
@@ -396,6 +384,7 @@ summ(resultssig, digits=4, model.info=FALSE, model.fit=FALSE)
 <div class="hr" id="f24">
 ***Figure 2.4: Prediction Plots***
 ``` {r t2marginplots2, echo=FALSE, cache=TRUE, fig.cap="Prediction Plots"}
+library(tidyr)
 # Create new data for prediction with 'ad_tv' as focus
 ad.tv.pred <- crossing(ad_tv=seq(0,300,30), # 11 levels
                        ad_radio=seq(0,50,10)) # 6 levels
@@ -488,6 +477,7 @@ plot_grid(p1,p2)
         $\begin{array}{rcl}y & = & \alpha+\beta_1x+\beta_2(1)\\& = & (\alpha + \beta_2)+\beta_1x\end{array}$
         
 ``` {r t2intshift1, echo=FALSE, cache=TRUE}
+library(ggtext)
 x <- 0:5
 f <- seq(5,55,10)
 t <- seq(20,70,10)
@@ -642,6 +632,7 @@ ggplot(aes(x=x, y=value, color=dummy), data=mis) +
 <div class="hr" id="t26">
 ***Table 2.6: Regression Results (Intercept Shfit) for One Department***
 ``` {r t2isreg, echo=FALSE}
+library(lubridate)
 # Add Variables to 'dssales' dataframe
 dssales <- dssales %>%
    # Add week ending date ('weekdate') using package 'lubridate'
@@ -1163,78 +1154,51 @@ melt(lrreg1) %>%  # Use package 'reshape2' to reshape the data for facet plot
 ### Figure 2.3 {#figure23}
 See Figure <a href="#f23">2.3</a>
 ``` {r t2marginsplots1code, eval=FALSE}
-# Want to predict 'sales' for different levels of IVs
-# Because we often do this for other continuous variables, we first
-#     create a df with mean values of all continuous variables at
-#     different levels of the factor variable (if there are any)
-# NOTE: variable names must be EXACTLY the same as in model
-m.ivs <- advtsales %>%
-   group_by() %>%   # NOTE: No factor variables for this model
-   summarise(ad_tv=mean(ad_tv, na.rm=TRUE),
-             ad_radio=mean(ad_radio, na.rm=TRUE),
-             ad_paper=mean(ad_paper, na.rm=TRUE))
+# Use 'effect' package
+library(effects)
 
-# Second, create a df of values to predict with, using 'merge'
-#     'merge' simply merges data frames
-tv.pred <- merge(data.frame(ad_tv=seq(0, 300, 25)), # Variable of interest
-                  m.ivs[,c("ad_radio", "ad_paper")]) # Mean levels of other variables
+# Want to predict 'sales' for different levels of 'ad_tv'
+tv.pred <- data.frame(predictorEffect("ad_tv",  # Focal variable
+                                       results))
 
-# Third, use model results to predict DV for values in 'tv.pred' data frame
-#     Predicted values and confidence intervals get appended to data frame
-#     New variables are called:
-#          'p$fit'  = linear prediction from model
-#          'p$lwr' = lower confidence interval for prediction
-#          'p$upr' = upper confidcent interval for prediction
-tv.pred$p <- as.data.frame(
-   predict.lm(results,    # Object with model results    
-              tv.pred,  # df of IV values to predict with
-              interval="confidence"))   # Request CIs
-
-# Last, use 'tv.pred' for margin plot; save plot
+# Use 'tv.pred' for margin plot, assign to 'p1'
 p1 <- tv.pred %>%
-   ggplot(aes(x=ad_tv,   # Age on x-axis
-              y=p$fit)) +   # 'sales' prediction on y-axis
-      geom_line(size=.5, color="red4") +   # Draw predicted line
-      geom_ribbon(aes(ymin=p$lwr,  # Draws the confidence interval bands
-                  ymax=p$upr),
-                  alpha=0.2, fill="red4") + # Sets transparency level
+   ggplot(aes(x=ad_tv,   # ad_tv on x-axis
+              y=fit)) +   # 'sales' prediction on y-axis
+      geom_line(size=1) +   # Draw predicted line
+      geom_ribbon(aes(ymin=lower,  # Draws the confidence interval bands
+                      ymax=upper),
+                      alpha=0.2) + # Sets transparency level
       # Next two commands scale x and y axes
       scale_x_continuous(limits=c(0,300), expand=c(.025,.025), 
                          breaks=seq(0,300,50), minor_breaks=NULL) +
-      scale_y_continuous(limits=c(5,30), expand=c(.025,.025), 
-                         breaks=seq(5,30,5), minor_breaks=NULL) +
-      labs(x="TV Advertising", y="Linear Prediciton")
+      scale_y_continuous(limits=c(5,25), expand=c(.025,.025), 
+                         breaks=seq(5,25,5), minor_breaks=NULL) +
+      labs(x="TV Advertising", y="Linear Prediction")
 
 # Repeat for other two variables
-radio.pred <- merge(data.frame(ad_radio=seq(0, 50, 5)),
-                    m.ivs[,c("ad_tv", "ad_paper")])
-radio.pred$p <- as.data.frame(predict.lm(results, radio.pred,
-                                         interval="confidence"))
-p2 <- radio.pred %>%
-   ggplot(aes(x=ad_radio, y=p$fit)) +
-      geom_line(size=.5, color="forestgreen") +
-      geom_ribbon(aes(ymin=p$lwr, ymax=p$upr), 
-                  alpha=0.2, fill="forestgreen") + 
+rd.pred <- data.frame(predictorEffect("ad_radio", results))
+p2 <- rd.pred %>%
+   ggplot(aes(x=ad_radio, y=fit)) +
+      geom_line(size=1) +
+      geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
       scale_x_continuous(limits=c(0,50), expand=c(.025,.025), 
                          breaks=seq(0,50,10), minor_breaks=NULL) +
-      scale_y_continuous(limits=c(5,30), expand=c(.025,.025), 
-                         breaks=seq(5,30,5), minor_breaks=NULL) +
-      labs(x="Radio Advertising", y="Linear Prediciton")
+      scale_y_continuous(limits=c(5,25), expand=c(.025,.025), 
+                         breaks=seq(5,25,5), minor_breaks=NULL) +
+      labs(x="Radio Advertising", y="Linear Prediction")
 
-paper.pred <- merge(data.frame(ad_paper=seq(0, 120, 10)),
-                    m.ivs[,c("ad_tv", "ad_radio")])
-paper.pred$p <- as.data.frame(predict.lm(results, paper.pred,
-                                         interval="confidence"))
-p3 <- paper.pred %>%
-   ggplot(aes(x=ad_paper, y=p$fit)) +
-      geom_line(size=.5, color="darkorange") + 
-      geom_ribbon(aes(ymin=p$lwr, ymax=p$upr), 
-                  alpha=0.2, fill="darkorange") +
-      scale_x_continuous(limits=c(0,120), expand=c(.025,.025), 
-                         breaks=seq(0,120,20), minor_breaks=NULL) +
-      scale_y_continuous(limits=c(5,30), expand=c(.025,.025), 
-                         breaks=seq(5,30,5), minor_breaks=NULL) +
-      labs(x="Paper Advertising", y="Linear Prediciton")
+np.pred <- data.frame(predictorEffect("ad_paper", results,
+                                      focal.levels=seq(0,100,2)))
+p3 <- np.pred %>%
+   ggplot(aes(x=ad_paper, y=fit)) +
+      geom_line(size=1) +
+      geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.2) +
+      scale_x_continuous(limits=c(0,100), expand=c(.025,.025), 
+                         breaks=seq(0,100,20), minor_breaks=NULL) +
+      scale_y_continuous(limits=c(5,25), expand=c(.025,.025), 
+                         breaks=seq(5,25,5), minor_breaks=NULL) +
+      labs(x="Newspaper Advertising", y="Linear Prediction")
 
 # Arrange three plots in a grid using package 'cowplot'
 plot_grid(p1,p2,p3)

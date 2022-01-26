@@ -24,7 +24,7 @@
 <meta name="author" content="Jeffrey Meyer" />
 
 
-<meta name="date" content="2022-01-25" />
+<meta name="date" content="2022-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -373,19 +373,20 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="r-packages-and-datasets-for-topic-3" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> R Packages and Datasets for Topic 3</h2>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="logistic-regression.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
-<span id="cb39-2"><a href="logistic-regression.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)         <span class="co"># Easier programming   </span></span>
-<span id="cb39-3"><a href="logistic-regression.html#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
-<span id="cb39-4"><a href="logistic-regression.html#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmlTable)     <span class="co"># Better HTML Tables</span></span>
-<span id="cb39-5"><a href="logistic-regression.html#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)        <span class="co"># Concise regression results</span></span>
-<span id="cb39-6"><a href="logistic-regression.html#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
-<span id="cb39-7"><a href="logistic-regression.html#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)         <span class="co"># Create data partitions</span></span>
-<span id="cb39-8"><a href="logistic-regression.html#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic03/directmktg.rdata&quot;</span>)</span>
-<span id="cb39-9"><a href="logistic-regression.html#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/or_table.R&quot;</span>)</span>
-<span id="cb39-10"><a href="logistic-regression.html#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/logreg_cm.R&quot;</span>)</span>
-<span id="cb39-11"><a href="logistic-regression.html#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/logreg_roc.R&quot;</span>)</span>
-<span id="cb39-12"><a href="logistic-regression.html#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/gainlift.R&quot;</span>)</span>
-<span id="cb39-13"><a href="logistic-regression.html#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/logreg_cut.R&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="logistic-regression.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb42-2"><a href="logistic-regression.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)       <span class="co"># Plots in grid</span></span>
+<span id="cb42-3"><a href="logistic-regression.html#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)         <span class="co"># Easier programming   </span></span>
+<span id="cb42-4"><a href="logistic-regression.html#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb42-5"><a href="logistic-regression.html#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmlTable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb42-6"><a href="logistic-regression.html#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)        <span class="co"># Concise regression results</span></span>
+<span id="cb42-7"><a href="logistic-regression.html#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb42-8"><a href="logistic-regression.html#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)         <span class="co"># Create data partitions</span></span>
+<span id="cb42-9"><a href="logistic-regression.html#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic03/directmktg.rdata&quot;</span>)</span>
+<span id="cb42-10"><a href="logistic-regression.html#cb42-10" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/or_table.R&quot;</span>)</span>
+<span id="cb42-11"><a href="logistic-regression.html#cb42-11" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/logreg_cm.R&quot;</span>)</span>
+<span id="cb42-12"><a href="logistic-regression.html#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/logreg_roc.R&quot;</span>)</span>
+<span id="cb42-13"><a href="logistic-regression.html#cb42-13" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/gainlift.R&quot;</span>)</span>
+<span id="cb42-14"><a href="logistic-regression.html#cb42-14" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic03/logreg_cut.R&quot;</span>)</span></code></pre></div>
 <p><a href="Topic03/directmktg.rdata">Download directmktg.rdata</a></p>
 </div>
 <div id="why-not-use-linear-regression" class="section level2" number="3.3">
@@ -1004,7 +1005,7 @@ genderFemale
 <caption>
 <span id="tab:t3logit01or">Table 3.3: </span> Logistic Regression Odds Ratio Coefficients (<a href="logistic-regression.html#table-reftabt3logit01or">R code</a>)
 </caption>
-<template id="b39f0b6d-29ad-431f-8848-92c8d928eb6b"><style>
+<template id="9515b3ef-778e-47f2-8c1c-3e1c2c6eb3a6"><style>
 .tabwid table{
   border-spacing:0px !important;
   border-collapse:collapse;
@@ -1038,12 +1039,12 @@ genderFemale
 .tabwid table tr {
 background-color: transparent;
 }
-</style><div class="tabwid"><style>.cl-ff86b1a0{}.cl-ff7ea0dc{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-ff7ea0dd{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ff7ea0de{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ff7eeeb6{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ff7eeeb7{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ff7eeeb8{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ff7eeeb9{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ff7eeeba{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ff7eeebb{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-ff86b1a0'>
-<thead><tr style="overflow-wrap:break-word;"><td class="cl-ff7eeebb"><p class="cl-ff7ea0dd"><span class="cl-ff7ea0dc">Parameter</span></p></td><td class="cl-ff7eeeba"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">OR Est</span></p></td><td class="cl-ff7eeeba"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">p</span></p></td><td class="cl-ff7eeeba"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">2.5%</span></p></td><td class="cl-ff7eeeba"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">97.5%</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-ff7eeeb7"><p class="cl-ff7ea0dd"><span class="cl-ff7ea0dc">(Intercept)</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.0000</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.0000</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.0000</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.0000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ff7eeeb7"><p class="cl-ff7ea0dd"><span class="cl-ff7ea0dc">age</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">1.2843</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.0000</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">1.2060</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">1.3677</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ff7eeeb7"><p class="cl-ff7ea0dd"><span class="cl-ff7ea0dc">salary</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">1.0415</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.0000</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">1.0278</span></p></td><td class="cl-ff7eeeb6"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">1.0553</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ff7eeeb9"><p class="cl-ff7ea0dd"><span class="cl-ff7ea0dc">genderFemale</span></p></td><td class="cl-ff7eeeb8"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.6657</span></p></td><td class="cl-ff7eeeb8"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.2448</span></p></td><td class="cl-ff7eeeb8"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">0.3354</span></p></td><td class="cl-ff7eeeb8"><p class="cl-ff7ea0de"><span class="cl-ff7ea0dc">1.3215</span></p></td></tr></tbody></table></div></template>
-<div class="flextable-shadow-host" id="8cfa6dba-648c-40ad-90e9-2b69d0493aac"></div>
+</style><div class="tabwid"><style>.cl-42753ab0{}.cl-426d77da{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-426d9ee0{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-426d9ee1{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-426decba{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-426decbb{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-426decbc{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-426decbd{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-426decbe{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-426decbf{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-42753ab0'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-426decbf"><p class="cl-426d9ee0"><span class="cl-426d77da">Parameter</span></p></td><td class="cl-426decbe"><p class="cl-426d9ee1"><span class="cl-426d77da">OR Est</span></p></td><td class="cl-426decbe"><p class="cl-426d9ee1"><span class="cl-426d77da">p</span></p></td><td class="cl-426decbe"><p class="cl-426d9ee1"><span class="cl-426d77da">2.5%</span></p></td><td class="cl-426decbe"><p class="cl-426d9ee1"><span class="cl-426d77da">97.5%</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-426decbb"><p class="cl-426d9ee0"><span class="cl-426d77da">(Intercept)</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">0.0000</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">0.0000</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">0.0000</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">0.0000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-426decbb"><p class="cl-426d9ee0"><span class="cl-426d77da">age</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">1.2843</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">0.0000</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">1.2060</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">1.3677</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-426decbb"><p class="cl-426d9ee0"><span class="cl-426d77da">salary</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">1.0415</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">0.0000</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">1.0278</span></p></td><td class="cl-426decba"><p class="cl-426d9ee1"><span class="cl-426d77da">1.0553</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-426decbd"><p class="cl-426d9ee0"><span class="cl-426d77da">genderFemale</span></p></td><td class="cl-426decbc"><p class="cl-426d9ee1"><span class="cl-426d77da">0.6657</span></p></td><td class="cl-426decbc"><p class="cl-426d9ee1"><span class="cl-426d77da">0.2448</span></p></td><td class="cl-426decbc"><p class="cl-426d9ee1"><span class="cl-426d77da">0.3354</span></p></td><td class="cl-426decbc"><p class="cl-426d9ee1"><span class="cl-426d77da">1.3215</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="d5cdaab7-10e2-459d-a20c-b584f240f9fc"></div>
 <script>
-var dest = document.getElementById("8cfa6dba-648c-40ad-90e9-2b69d0493aac");
-var template = document.getElementById("b39f0b6d-29ad-431f-8848-92c8d928eb6b");
+var dest = document.getElementById("d5cdaab7-10e2-459d-a20c-b584f240f9fc");
+var template = document.getElementById("9515b3ef-778e-47f2-8c1c-3e1c2c6eb3a6");
 var caption = template.content.querySelector("caption");
 if(caption) {
   caption.style.cssText = "display:block;text-align:center;";
@@ -1175,39 +1176,11 @@ Figure 3.11: ROC Curve for Test/Holdout Sample (<a href="logistic-regression.htm
 <li>Had it been significant…
 Being female decreases odds of buying by a factor of <span class="math inline">\(.67\)</span> (or odds of buying decrease by <span class="math inline">\(33\%\)</span>)</li>
 </ul></li>
-<li>Can visually examine how <span class="math inline">\(\Pr(buy)\)</span> changes with a variable for continuous IVs
-<ul>
-<li>Factor variables can be separate lines (see Figure <a href="logistic-regression.html#fig:t3mpage01">3.12</a> or separate plots see <a href="logistic-regression.html#fig:t3mpage02">3.13</a>)
+<li>Can visually examine how <span class="math inline">\(\Pr(buy)\)</span> changes with IVs
 <div class="figure"><span style="display:block;" id="fig:t3mpage01"></span>
-<img src="_main_files/figure-html/t3mpage01-1.png" alt="Margin Plot for Age (Separate Lines for Gender) ([R code](#figure-reffigt3mpage01))" width="672" />
+<img src="_main_files/figure-html/t3mpage01-1.png" alt="Margin Plots for Age, Salary, and Gender ([R code](#figure-reffigt3mpage01))" width="672" />
 <p class="caption">
-Figure 3.12: Margin Plot for Age (Separate Lines for Gender) (<a href="logistic-regression.html#figure-reffigt3mpage01">R code</a>)
-</p>
-</div></li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:t3mpage02"></span>
-<img src="_main_files/figure-html/t3mpage02-1.png" alt="Margin Plot for Age (Separate Plots for Gender) ([R code](#figure-reffigt3mpage02))" width="672" />
-<p class="caption">
-Figure 3.13: Margin Plot for Age (Separate Plots for Gender) (<a href="logistic-regression.html#figure-reffigt3mpage02">R code</a>)
-</p>
-</div>
-<ul>
-<li>Can create different lines for specific levels of another continuous IV
-<ul>
-<li>See <a href="logistic-regression.html#fig:t3mpage03">3.14</a> for <span class="math inline">\(age\)</span> with different levels of <span class="math inline">\(salary\)</span></li>
-<li>See <a href="logistic-regression.html#fig:t3mpage04">3.15</a> for <span class="math inline">\(salary\)</span> with different levels of <span class="math inline">\(age\)</span></li>
-</ul></li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:t3mpage03"></span>
-<img src="_main_files/figure-html/t3mpage03-1.png" alt="Margin Plot for Age at Different Levels of Salary ([R code](#figure-reffigt3mpage03))" width="672" />
-<p class="caption">
-Figure 3.14: Margin Plot for Age at Different Levels of Salary (<a href="logistic-regression.html#figure-reffigt3mpage03">R code</a>)
-</p>
-</div>
-<div class="figure"><span style="display:block;" id="fig:t3mpage04"></span>
-<img src="_main_files/figure-html/t3mpage04-1.png" alt="Margin Plot for Salary at Different Levels of Age ([R code](#figure-reffigt3mpage04))" width="672" />
-<p class="caption">
-Figure 3.15: Margin Plot for Salary at Different Levels of Age (<a href="logistic-regression.html#figure-reffigt3mpage04">R code</a>)
+Figure 3.12: Margin Plots for Age, Salary, and Gender (<a href="logistic-regression.html#figure-reffigt3mpage01">R code</a>)
 </p>
 </div></li>
 </ul>
@@ -1221,33 +1194,55 @@ Figure 3.15: Margin Plot for Salary at Different Levels of Age (<a href="logisti
 <caption>
 <p><span id="tab:t3gaintable">Table 3.6: </span> Gain Table for Training and Test/Holdout Samples (<a href="logistic-regression.html#table-reftabt3gaintable">R code</a>)</p>
 </caption>
-<pre><code># A tibble: 20 x 3
-   `% Sample` Holdout Training
-        &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
- 1       0.05   0.114    0.130
- 2       0.1    0.2      0.25 
- 3       0.15   0.343    0.370
- 4       0.2    0.486    0.481
- 5       0.25   0.6      0.593
- 6       0.3    0.743    0.713
- 7       0.35   0.771    0.778
- 8       0.4    0.829    0.843
- 9       0.45   0.914    0.907
-10       0.5    0.971    0.935
-11       0.55   1        0.981
-12       0.6    1        0.991
-13       0.65   1        0.991
-14       0.7    1        0.991
-15       0.75   1        1    
-16       0.8    1        1    
-17       0.85   1        1    
-18       0.9    1        1    
-19       0.95   1        1    
-20       1      1        1    </code></pre>
+<table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:t3gaintable">
+    <caption style="caption-side: top; text-align: center;"><span id="tab:t3gaintable">Table 3.6: </span> </caption><col><col><col><tr>
+    <th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">% Sample</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">Holdout</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">Training</th></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.05</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.114</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.13&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.1&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.2&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.25&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.15</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.343</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.37&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.2&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.486</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.481</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.25</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.6&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.593</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.3&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.743</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.713</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.35</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.771</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.778</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.4&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.829</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.843</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.45</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.914</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.907</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.5&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.971</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.935</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.55</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.981</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.6&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.991</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.65</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.991</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.7&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.991</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.75</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.8&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.85</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.9&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.95</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+    </table>
+    
 <div class="figure"><span style="display:block;" id="fig:t3gainplot"></span>
 <img src="_main_files/figure-html/t3gainplot-1.png" alt="Gain Chart for Training and Test/Holdout Samples ([R code](#figure-reffigt3gainplot))" width="672" />
 <p class="caption">
-Figure 3.16: Gain Chart for Training and Test/Holdout Samples (<a href="logistic-regression.html#figure-reffigt3gainplot">R code</a>)
+Figure 3.13: Gain Chart for Training and Test/Holdout Samples (<a href="logistic-regression.html#figure-reffigt3gainplot">R code</a>)
 </p>
 </div></li>
 </ul>
@@ -1261,33 +1256,55 @@ Figure 3.16: Gain Chart for Training and Test/Holdout Samples (<a href="logistic
 <caption>
 <p><span id="tab:t3lifttable">Table 3.7: </span> Lift Table for Training and Test/Holdout Samples (<a href="logistic-regression.html#table-reftabt3lifttable">R code</a>)</p>
 </caption>
-<pre><code># A tibble: 20 x 3
-   `% Sample` Holdout Training
-        &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
- 1       0.05    2.83     2.60
- 2       0.1     2.2      2.51
- 3       0.15    2.42     2.48
- 4       0.2     2.53     2.42
- 5       0.25    2.48     2.38
- 6       0.3     2.54     2.38
- 7       0.35    2.25     2.23
- 8       0.4     2.10     2.11
- 9       0.45    2.06     2.02
-10       0.5     1.96     1.88
-11       0.55    1.83     1.79
-12       0.6     1.68     1.66
-13       0.65    1.55     1.53
-14       0.7     1.43     1.42
-15       0.75    1.34     1.34
-16       0.8     1.25     1.25
-17       0.85    1.18     1.18
-18       0.9     1.11     1.11
-19       0.95    1.05     1.06
-20       1       1        1   </code></pre>
+<table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:t3lifttable">
+    <caption style="caption-side: top; text-align: center;"><span id="tab:t3lifttable">Table 3.7: </span> </caption><col><col><col><tr>
+    <th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">% Sample</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">Holdout</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">Training</th></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.05</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.83</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.6&nbsp;</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.1&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2.2&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2.51</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.15</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.42</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.48</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.2&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2.53</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2.42</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.25</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.48</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.38</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.3&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2.54</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2.38</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.35</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.25</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.23</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.4&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2.1&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2.11</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.45</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.06</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2.02</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.5&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.96</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.88</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.55</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.83</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.79</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.6&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.68</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.66</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.65</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.55</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.53</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.7&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.43</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.42</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.75</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.34</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.34</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.8&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.25</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.25</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.85</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.18</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.18</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.9&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.11</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.11</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0.95</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.05</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1.06</td></tr>
+    <tr>
+    <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1&nbsp;&nbsp;&nbsp;</td></tr>
+    </table>
+    
 <div class="figure"><span style="display:block;" id="fig:t3liftplot"></span>
 <img src="_main_files/figure-html/t3liftplot-1.png" alt="Lift Chart for Training and Test/Holdout Samples ([R code](#figure-reffigt3liftplot))" width="672" />
 <p class="caption">
-Figure 3.17: Lift Chart for Training and Test/Holdout Samples (<a href="logistic-regression.html#figure-reffigt3liftplot">R code</a>)
+Figure 3.14: Lift Chart for Training and Test/Holdout Samples (<a href="logistic-regression.html#figure-reffigt3liftplot">R code</a>)
 </p>
 </div></li>
 </ul>
@@ -1297,19 +1314,19 @@ Figure 3.17: Lift Chart for Training and Test/Holdout Samples (<a href="logistic
 <ul>
 <li>Examine to see if different thresholds are warranted
 <ul>
-<li>Looking at the plots for both the training sample (see Figure <a href="logistic-regression.html#fig:t3sensspec01">3.18</a>) and the test/holdout sample (see Figure <a href="logistic-regression.html#fig:t3sensspec02">3.19</a>), it might be worthwhile to try a cutoff threshold between 0.35 and 0.40
+<li>Looking at the plots for both the training sample (see Figure <a href="logistic-regression.html#fig:t3sensspec01">3.15</a>) and the test/holdout sample (see Figure <a href="logistic-regression.html#fig:t3sensspec02">3.16</a>), it might be worthwhile to try a cutoff threshold between 0.35 and 0.40
 <ul>
 <li>Doing so will balance specificity and sensitivity without hurting accuracy
 <div class="figure"><span style="display:block;" id="fig:t3sensspec01"></span>
 <img src="_main_files/figure-html/t3sensspec01-1.png" alt="Sensitivity/Specificity Plot for Training Sample ([R code](#figure-reffigt3sensspec01))" width="672" />
 <p class="caption">
-Figure 3.18: Sensitivity/Specificity Plot for Training Sample (<a href="logistic-regression.html#figure-reffigt3sensspec01">R code</a>)
+Figure 3.15: Sensitivity/Specificity Plot for Training Sample (<a href="logistic-regression.html#figure-reffigt3sensspec01">R code</a>)
 </p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:t3sensspec02"></span>
 <img src="_main_files/figure-html/t3sensspec02-1.png" alt="Sensitivity/Specificity Plot for Test/Holdout Sample ([R code](#figure-reffigt3sensspec02))" width="672" />
 <p class="caption">
-Figure 3.19: Sensitivity/Specificity Plot for Test/Holdout Sample (<a href="logistic-regression.html#figure-reffigt3sensspec02">R code</a>)
+Figure 3.16: Sensitivity/Specificity Plot for Test/Holdout Sample (<a href="logistic-regression.html#figure-reffigt3sensspec02">R code</a>)
 </p>
 </div></li>
 </ul></li>
@@ -1346,319 +1363,224 @@ Chapter 6: Logistic Regression with a Binary Dependent Variable</li>
 <h2><span class="header-section-number">3.8</span> R Code</h2>
 <div id="figure-reffigt3scatter01" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="logistic-regression.html#fig:t3scatter01">3.1</a></h3>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="logistic-regression.html#cb45-1" aria-hidden="true" tabindex="-1"></a>directmktg <span class="sc">%&gt;%</span></span>
-<span id="cb45-2"><a href="logistic-regression.html#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">buy01=</span><span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>  <span class="co"># Change &#39;buy&#39; to 0-1</span></span>
-<span id="cb45-3"><a href="logistic-regression.html#cb45-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>buy01)) <span class="sc">+</span></span>
-<span id="cb45-4"><a href="logistic-regression.html#cb45-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb45-5"><a href="logistic-regression.html#cb45-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Buy&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="logistic-regression.html#cb46-1" aria-hidden="true" tabindex="-1"></a>directmktg <span class="sc">%&gt;%</span></span>
+<span id="cb46-2"><a href="logistic-regression.html#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">buy01=</span><span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span>  <span class="co"># Change &#39;buy&#39; to 0-1</span></span>
+<span id="cb46-3"><a href="logistic-regression.html#cb46-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>buy01)) <span class="sc">+</span></span>
+<span id="cb46-4"><a href="logistic-regression.html#cb46-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb46-5"><a href="logistic-regression.html#cb46-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Buy&quot;</span>)</span></code></pre></div>
 </div>
 <div id="figure-reffigt3scatter02" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="logistic-regression.html#fig:t3scatter02">3.2</a></h3>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="logistic-regression.html#cb46-1" aria-hidden="true" tabindex="-1"></a>directmktg <span class="sc">%&gt;%</span></span>
-<span id="cb46-2"><a href="logistic-regression.html#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(age) <span class="sc">%&gt;%</span>  <span class="co"># Select only the age variable</span></span>
-<span id="cb46-3"><a href="logistic-regression.html#cb46-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">yhat=</span><span class="fu">predict.lm</span>(model,.)) <span class="sc">%&gt;%</span>  <span class="co"># Predict y from model</span></span>
-<span id="cb46-4"><a href="logistic-regression.html#cb46-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Next line creates variable to highlight negative predictions</span></span>
-<span id="cb46-5"><a href="logistic-regression.html#cb46-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">neg=</span><span class="fu">as.factor</span>(<span class="fu">ifelse</span>(yhat<span class="sc">&lt;</span><span class="dv">0</span>,<span class="st">&quot;Yes&quot;</span>,<span class="st">&quot;No&quot;</span>))) <span class="sc">%&gt;%</span> </span>
-<span id="cb46-6"><a href="logistic-regression.html#cb46-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>yhat, <span class="at">color=</span>neg)) <span class="sc">+</span></span>
-<span id="cb46-7"><a href="logistic-regression.html#cb46-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb46-8"><a href="logistic-regression.html#cb46-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Yes&quot;</span><span class="ot">=</span><span class="st">&quot;red&quot;</span>,   <span class="co"># Manually set point colors</span></span>
-<span id="cb46-9"><a href="logistic-regression.html#cb46-9" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">&quot;No&quot;</span><span class="ot">=</span><span class="st">&quot;black&quot;</span>),</span>
-<span id="cb46-10"><a href="logistic-regression.html#cb46-10" aria-hidden="true" tabindex="-1"></a>                           <span class="at">guide=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb46-11"><a href="logistic-regression.html#cb46-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Linear Prediction&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="logistic-regression.html#cb47-1" aria-hidden="true" tabindex="-1"></a>directmktg <span class="sc">%&gt;%</span></span>
+<span id="cb47-2"><a href="logistic-regression.html#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(age) <span class="sc">%&gt;%</span>  <span class="co"># Select only the age variable</span></span>
+<span id="cb47-3"><a href="logistic-regression.html#cb47-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">yhat=</span><span class="fu">predict.lm</span>(model,.)) <span class="sc">%&gt;%</span>  <span class="co"># Predict y from model</span></span>
+<span id="cb47-4"><a href="logistic-regression.html#cb47-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Next line creates variable to highlight negative predictions</span></span>
+<span id="cb47-5"><a href="logistic-regression.html#cb47-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">neg=</span><span class="fu">as.factor</span>(<span class="fu">ifelse</span>(yhat<span class="sc">&lt;</span><span class="dv">0</span>,<span class="st">&quot;Yes&quot;</span>,<span class="st">&quot;No&quot;</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb47-6"><a href="logistic-regression.html#cb47-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>yhat, <span class="at">color=</span>neg)) <span class="sc">+</span></span>
+<span id="cb47-7"><a href="logistic-regression.html#cb47-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb47-8"><a href="logistic-regression.html#cb47-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Yes&quot;</span><span class="ot">=</span><span class="st">&quot;red&quot;</span>,   <span class="co"># Manually set point colors</span></span>
+<span id="cb47-9"><a href="logistic-regression.html#cb47-9" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">&quot;No&quot;</span><span class="ot">=</span><span class="st">&quot;black&quot;</span>),</span>
+<span id="cb47-10"><a href="logistic-regression.html#cb47-10" aria-hidden="true" tabindex="-1"></a>                           <span class="at">guide=</span><span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb47-11"><a href="logistic-regression.html#cb47-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Linear Prediction&quot;</span>)</span></code></pre></div>
 </div>
 <div id="figure-reffigt3lineshape" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="logistic-regression.html#fig:t3lineshape">3.3</a></h3>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="logistic-regression.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame grouped by age</span></span>
-<span id="cb47-2"><a href="logistic-regression.html#cb47-2" aria-hidden="true" tabindex="-1"></a>dmgrp <span class="ot">&lt;-</span> directmktg <span class="sc">%&gt;%</span></span>
-<span id="cb47-3"><a href="logistic-regression.html#cb47-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &#39;cut&#39; breaks a continuous variable into groups of each width</span></span>
-<span id="cb47-4"><a href="logistic-regression.html#cb47-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &#39;as.numeric&#39; keeps the new variable as integer (vs. factor)</span></span>
-<span id="cb47-5"><a href="logistic-regression.html#cb47-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">agegrp =</span> <span class="fu">as.numeric</span>(<span class="fu">cut</span>(age, <span class="dv">9</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb47-6"><a href="logistic-regression.html#cb47-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(agegrp) <span class="sc">%&gt;%</span></span>
-<span id="cb47-7"><a href="logistic-regression.html#cb47-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">age=</span><span class="fu">mean</span>(age), <span class="at">buy=</span><span class="fu">mean</span>(<span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>))</span>
-<span id="cb47-8"><a href="logistic-regression.html#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-9"><a href="logistic-regression.html#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Run logistic model to create prediction to make s-curve</span></span>
-<span id="cb47-10"><a href="logistic-regression.html#cb47-10" aria-hidden="true" tabindex="-1"></a>binmod <span class="ot">&lt;-</span> <span class="fu">glm</span>(buy<span class="sc">~</span>age, directmktg, <span class="at">family=</span><span class="st">&quot;binomial&quot;</span>)</span>
-<span id="cb47-11"><a href="logistic-regression.html#cb47-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe with predicted values</span></span>
-<span id="cb47-12"><a href="logistic-regression.html#cb47-12" aria-hidden="true" tabindex="-1"></a>dmpred <span class="ot">&lt;-</span> directmktg <span class="sc">%&gt;%</span></span>
-<span id="cb47-13"><a href="logistic-regression.html#cb47-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(age, buy) <span class="sc">%&gt;%</span></span>
-<span id="cb47-14"><a href="logistic-regression.html#cb47-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">yhat=</span><span class="fu">predict</span>(binmod, <span class="at">type=</span><span class="st">&quot;response&quot;</span>),</span>
-<span id="cb47-15"><a href="logistic-regression.html#cb47-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">buy=</span><span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb47-16"><a href="logistic-regression.html#cb47-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-17"><a href="logistic-regression.html#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create combined plot; each geom with separate data</span></span>
-<span id="cb47-18"><a href="logistic-regression.html#cb47-18" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb47-19"><a href="logistic-regression.html#cb47-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">data=</span>directmktg, </span>
-<span id="cb47-20"><a href="logistic-regression.html#cb47-20" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>(<span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>)), </span>
-<span id="cb47-21"><a href="logistic-regression.html#cb47-21" aria-hidden="true" tabindex="-1"></a>               <span class="at">size=</span><span class="dv">3</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb47-22"><a href="logistic-regression.html#cb47-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span>dmgrp, </span>
-<span id="cb47-23"><a href="logistic-regression.html#cb47-23" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>buy), </span>
-<span id="cb47-24"><a href="logistic-regression.html#cb47-24" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="fl">1.5</span>, <span class="at">color=</span><span class="st">&quot;midnightblue&quot;</span>) <span class="sc">+</span></span>
-<span id="cb47-25"><a href="logistic-regression.html#cb47-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span>dmpred, </span>
-<span id="cb47-26"><a href="logistic-regression.html#cb47-26" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>yhat), </span>
-<span id="cb47-27"><a href="logistic-regression.html#cb47-27" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="fl">1.5</span>, <span class="at">color=</span><span class="st">&quot;darkorange&quot;</span>) <span class="sc">+</span></span>
-<span id="cb47-28"><a href="logistic-regression.html#cb47-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">15</span>)) <span class="sc">+</span> </span>
-<span id="cb47-29"><a href="logistic-regression.html#cb47-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Buy&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="logistic-regression.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame grouped by age</span></span>
+<span id="cb48-2"><a href="logistic-regression.html#cb48-2" aria-hidden="true" tabindex="-1"></a>dmgrp <span class="ot">&lt;-</span> directmktg <span class="sc">%&gt;%</span></span>
+<span id="cb48-3"><a href="logistic-regression.html#cb48-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &#39;cut&#39; breaks a continuous variable into groups of each width</span></span>
+<span id="cb48-4"><a href="logistic-regression.html#cb48-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &#39;as.numeric&#39; keeps the new variable as integer (vs. factor)</span></span>
+<span id="cb48-5"><a href="logistic-regression.html#cb48-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">agegrp =</span> <span class="fu">as.numeric</span>(<span class="fu">cut</span>(age, <span class="dv">9</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb48-6"><a href="logistic-regression.html#cb48-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(agegrp) <span class="sc">%&gt;%</span></span>
+<span id="cb48-7"><a href="logistic-regression.html#cb48-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">age=</span><span class="fu">mean</span>(age), <span class="at">buy=</span><span class="fu">mean</span>(<span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>))</span>
+<span id="cb48-8"><a href="logistic-regression.html#cb48-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-9"><a href="logistic-regression.html#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Run logistic model to create prediction to make s-curve</span></span>
+<span id="cb48-10"><a href="logistic-regression.html#cb48-10" aria-hidden="true" tabindex="-1"></a>binmod <span class="ot">&lt;-</span> <span class="fu">glm</span>(buy<span class="sc">~</span>age, directmktg, <span class="at">family=</span><span class="st">&quot;binomial&quot;</span>)</span>
+<span id="cb48-11"><a href="logistic-regression.html#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe with predicted values</span></span>
+<span id="cb48-12"><a href="logistic-regression.html#cb48-12" aria-hidden="true" tabindex="-1"></a>dmpred <span class="ot">&lt;-</span> directmktg <span class="sc">%&gt;%</span></span>
+<span id="cb48-13"><a href="logistic-regression.html#cb48-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(age, buy) <span class="sc">%&gt;%</span></span>
+<span id="cb48-14"><a href="logistic-regression.html#cb48-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">yhat=</span><span class="fu">predict</span>(binmod, <span class="at">type=</span><span class="st">&quot;response&quot;</span>),</span>
+<span id="cb48-15"><a href="logistic-regression.html#cb48-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">buy=</span><span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb48-16"><a href="logistic-regression.html#cb48-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-17"><a href="logistic-regression.html#cb48-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create combined plot; each geom with separate data</span></span>
+<span id="cb48-18"><a href="logistic-regression.html#cb48-18" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb48-19"><a href="logistic-regression.html#cb48-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">data=</span>directmktg, </span>
+<span id="cb48-20"><a href="logistic-regression.html#cb48-20" aria-hidden="true" tabindex="-1"></a>               <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>(<span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>)), </span>
+<span id="cb48-21"><a href="logistic-regression.html#cb48-21" aria-hidden="true" tabindex="-1"></a>               <span class="at">size=</span><span class="dv">3</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb48-22"><a href="logistic-regression.html#cb48-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span>dmgrp, </span>
+<span id="cb48-23"><a href="logistic-regression.html#cb48-23" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>buy), </span>
+<span id="cb48-24"><a href="logistic-regression.html#cb48-24" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="fl">1.5</span>, <span class="at">color=</span><span class="st">&quot;midnightblue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb48-25"><a href="logistic-regression.html#cb48-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span>dmpred, </span>
+<span id="cb48-26"><a href="logistic-regression.html#cb48-26" aria-hidden="true" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>yhat), </span>
+<span id="cb48-27"><a href="logistic-regression.html#cb48-27" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="fl">1.5</span>, <span class="at">color=</span><span class="st">&quot;darkorange&quot;</span>) <span class="sc">+</span></span>
+<span id="cb48-28"><a href="logistic-regression.html#cb48-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">15</span>)) <span class="sc">+</span> </span>
+<span id="cb48-29"><a href="logistic-regression.html#cb48-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Buy&quot;</span>)</span></code></pre></div>
 </div>
 <div id="figure-reffigt3logitcurve" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="logistic-regression.html#fig:t3logitcurve">3.4</a></h3>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="logistic-regression.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create simulated data frame based on logistic function</span></span>
-<span id="cb48-2"><a href="logistic-regression.html#cb48-2" aria-hidden="true" tabindex="-1"></a>u<span class="ot">=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">7</span>,<span class="dv">7</span>,.<span class="dv">05</span>)</span>
-<span id="cb48-3"><a href="logistic-regression.html#cb48-3" aria-hidden="true" tabindex="-1"></a>fz<span class="ot">=</span><span class="fu">exp</span>(u)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(u))</span>
-<span id="cb48-4"><a href="logistic-regression.html#cb48-4" aria-hidden="true" tabindex="-1"></a>ufz<span class="ot">=</span><span class="fu">data.frame</span>(<span class="at">u=</span>u, <span class="at">fz=</span>fz)</span>
-<span id="cb48-5"><a href="logistic-regression.html#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot function</span></span>
-<span id="cb48-6"><a href="logistic-regression.html#cb48-6" aria-hidden="true" tabindex="-1"></a>ufz <span class="sc">%&gt;%</span></span>
-<span id="cb48-7"><a href="logistic-regression.html#cb48-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>u, <span class="at">y=</span>fz)) <span class="sc">+</span></span>
-<span id="cb48-8"><a href="logistic-regression.html#cb48-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">&quot;darkorange&quot;</span>, <span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb48-9"><a href="logistic-regression.html#cb48-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">15</span>),</span>
-<span id="cb48-10"><a href="logistic-regression.html#cb48-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb48-11"><a href="logistic-regression.html#cb48-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="dv">0</span>, <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb48-12"><a href="logistic-regression.html#cb48-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb48-13"><a href="logistic-regression.html#cb48-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;u&quot;</span>, <span class="at">y=</span><span class="st">&quot;f(z)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="logistic-regression.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create simulated data frame based on logistic function</span></span>
+<span id="cb49-2"><a href="logistic-regression.html#cb49-2" aria-hidden="true" tabindex="-1"></a>u<span class="ot">=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">7</span>,<span class="dv">7</span>,.<span class="dv">05</span>)</span>
+<span id="cb49-3"><a href="logistic-regression.html#cb49-3" aria-hidden="true" tabindex="-1"></a>fz<span class="ot">=</span><span class="fu">exp</span>(u)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(u))</span>
+<span id="cb49-4"><a href="logistic-regression.html#cb49-4" aria-hidden="true" tabindex="-1"></a>ufz<span class="ot">=</span><span class="fu">data.frame</span>(<span class="at">u=</span>u, <span class="at">fz=</span>fz)</span>
+<span id="cb49-5"><a href="logistic-regression.html#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot function</span></span>
+<span id="cb49-6"><a href="logistic-regression.html#cb49-6" aria-hidden="true" tabindex="-1"></a>ufz <span class="sc">%&gt;%</span></span>
+<span id="cb49-7"><a href="logistic-regression.html#cb49-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>u, <span class="at">y=</span>fz)) <span class="sc">+</span></span>
+<span id="cb49-8"><a href="logistic-regression.html#cb49-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">&quot;darkorange&quot;</span>, <span class="at">size=</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb49-9"><a href="logistic-regression.html#cb49-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">15</span>),</span>
+<span id="cb49-10"><a href="logistic-regression.html#cb49-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb49-11"><a href="logistic-regression.html#cb49-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="dv">0</span>, <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb49-12"><a href="logistic-regression.html#cb49-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">minor_breaks=</span><span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb49-13"><a href="logistic-regression.html#cb49-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;u&quot;</span>, <span class="at">y=</span><span class="st">&quot;f(z)&quot;</span>)</span></code></pre></div>
 </div>
 <div id="figure-reffigt3roctrain" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="logistic-regression.html#fig:t3roctrain">3.10</a></h3>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="logistic-regression.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_roc.R&#39; user-defined script</span></span>
-<span id="cb49-2"><a href="logistic-regression.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
-<span id="cb49-3"><a href="logistic-regression.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires package &#39;pROC&#39; and &#39;ggplot2</span></span>
-<span id="cb49-4"><a href="logistic-regression.html#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_roc</span>(model,      <span class="co"># Object with model results</span></span>
-<span id="cb49-5"><a href="logistic-regression.html#cb49-5" aria-hidden="true" tabindex="-1"></a>           train)      <span class="co"># Data to use (i.e., training vs. testing)</span></span></code></pre></div>
-</div>
-<div id="figure-reffigt3roctest" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="logistic-regression.html#fig:t3roctest">3.11</a></h3>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="logistic-regression.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_roc.R&#39; user-defined script</span></span>
 <span id="cb50-2"><a href="logistic-regression.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
 <span id="cb50-3"><a href="logistic-regression.html#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires package &#39;pROC&#39; and &#39;ggplot2</span></span>
 <span id="cb50-4"><a href="logistic-regression.html#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_roc</span>(model,      <span class="co"># Object with model results</span></span>
-<span id="cb50-5"><a href="logistic-regression.html#cb50-5" aria-hidden="true" tabindex="-1"></a>           test)      <span class="co"># Data to use (i.e., training vs. testing)</span></span></code></pre></div>
+<span id="cb50-5"><a href="logistic-regression.html#cb50-5" aria-hidden="true" tabindex="-1"></a>           train)      <span class="co"># Data to use (i.e., training vs. testing)</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt3roctest" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="logistic-regression.html#fig:t3roctest">3.11</a></h3>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="logistic-regression.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_roc.R&#39; user-defined script</span></span>
+<span id="cb51-2"><a href="logistic-regression.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
+<span id="cb51-3"><a href="logistic-regression.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires package &#39;pROC&#39; and &#39;ggplot2</span></span>
+<span id="cb51-4"><a href="logistic-regression.html#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_roc</span>(model,      <span class="co"># Object with model results</span></span>
+<span id="cb51-5"><a href="logistic-regression.html#cb51-5" aria-hidden="true" tabindex="-1"></a>           test)      <span class="co"># Data to use (i.e., training vs. testing)</span></span></code></pre></div>
 </div>
 <div id="figure-reffigt3mpage01" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="logistic-regression.html#fig:t3mpage01">3.12</a></h3>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="logistic-regression.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Want to predict for different levels of IVs</span></span>
-<span id="cb51-2"><a href="logistic-regression.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Because we often do this for other continuous variables, we first</span></span>
-<span id="cb51-3"><a href="logistic-regression.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     create a df with mean values of all continuous IVs</span></span>
-<span id="cb51-4"><a href="logistic-regression.html#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     at different levels of the factor variable (if there are any)</span></span>
-<span id="cb51-5"><a href="logistic-regression.html#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: variable names must be EXACTLY the same as in model</span></span>
-<span id="cb51-6"><a href="logistic-regression.html#cb51-6" aria-hidden="true" tabindex="-1"></a>m.ivs <span class="ot">&lt;-</span> train <span class="sc">%&gt;%</span></span>
-<span id="cb51-7"><a href="logistic-regression.html#cb51-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
-<span id="cb51-8"><a href="logistic-regression.html#cb51-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">age=</span><span class="fu">mean</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
-<span id="cb51-9"><a href="logistic-regression.html#cb51-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">salary=</span><span class="fu">mean</span>(salary, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span>
-<span id="cb51-10"><a href="logistic-regression.html#cb51-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-11"><a href="logistic-regression.html#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Create new data for prediction with &#39;age&#39; as focus</span></span>
-<span id="cb51-12"><a href="logistic-regression.html#cb51-12" aria-hidden="true" tabindex="-1"></a><span class="co"># This will be used for the next two figures</span></span>
-<span id="cb51-13"><a href="logistic-regression.html#cb51-13" aria-hidden="true" tabindex="-1"></a>age.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">age=</span><span class="fu">seq</span>(<span class="dv">18</span>,<span class="dv">60</span>,<span class="dv">2</span>)),</span>
-<span id="cb51-14"><a href="logistic-regression.html#cb51-14" aria-hidden="true" tabindex="-1"></a>                  m.ivs[ ,<span class="fu">c</span>(<span class="st">&quot;salary&quot;</span>, <span class="st">&quot;gender&quot;</span>)])</span>
-<span id="cb51-15"><a href="logistic-regression.html#cb51-15" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb51-16"><a href="logistic-regression.html#cb51-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame with predicted values and confidence bands</span></span>
-<span id="cb51-17"><a href="logistic-regression.html#cb51-17" aria-hidden="true" tabindex="-1"></a>train.pred <span class="ot">&lt;-</span> </span>
-<span id="cb51-18"><a href="logistic-regression.html#cb51-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &#39;cbind&#39; combines objects by columns</span></span>
-<span id="cb51-19"><a href="logistic-regression.html#cb51-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cbind</span>(age.pred, </span>
-<span id="cb51-20"><a href="logistic-regression.html#cb51-20" aria-hidden="true" tabindex="-1"></a>          <span class="fu">predict</span>(model, <span class="co"># Model to predict values with</span></span>
-<span id="cb51-21"><a href="logistic-regression.html#cb51-21" aria-hidden="true" tabindex="-1"></a>                  age.pred, <span class="co"># New data to use for IVs</span></span>
-<span id="cb51-22"><a href="logistic-regression.html#cb51-22" aria-hidden="true" tabindex="-1"></a>                  <span class="at">type=</span><span class="st">&quot;link&quot;</span>, <span class="co"># Return log-odds predictions</span></span>
-<span id="cb51-23"><a href="logistic-regression.html#cb51-23" aria-hidden="true" tabindex="-1"></a>                  <span class="at">se=</span><span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span>  <span class="co"># Get std.err. for CIs</span></span>
-<span id="cb51-24"><a href="logistic-regression.html#cb51-24" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">pred=</span><span class="fu">plogis</span>(fit), <span class="co"># Calculate pr(buy)</span></span>
-<span id="cb51-25"><a href="logistic-regression.html#cb51-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">upr=</span><span class="fu">plogis</span>(fit<span class="sc">+</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>se.fit)),  <span class="co"># Upper CI</span></span>
-<span id="cb51-26"><a href="logistic-regression.html#cb51-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">lwr=</span><span class="fu">plogis</span>(fit<span class="sc">-</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>se.fit)))  <span class="co"># Lower CI</span></span>
-<span id="cb51-27"><a href="logistic-regression.html#cb51-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-28"><a href="logistic-regression.html#cb51-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Create plot with gender on same plot</span></span>
-<span id="cb51-29"><a href="logistic-regression.html#cb51-29" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>pred), <span class="at">data=</span>train.pred) <span class="sc">+</span></span>
-<span id="cb51-30"><a href="logistic-regression.html#cb51-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>gender), <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb51-31"><a href="logistic-regression.html#cb51-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lwr, <span class="at">ymax=</span>upr, </span>
-<span id="cb51-32"><a href="logistic-regression.html#cb51-32" aria-hidden="true" tabindex="-1"></a>                    <span class="at">color=</span>gender, <span class="at">fill=</span>gender), <span class="at">alpha=</span>.<span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb51-33"><a href="logistic-regression.html#cb51-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>,</span>
-<span id="cb51-34"><a href="logistic-regression.html#cb51-34" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.caption=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>)) <span class="sc">+</span></span>
-<span id="cb51-35"><a href="logistic-regression.html#cb51-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red4&quot;</span>, <span class="st">&quot;navy&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb51-36"><a href="logistic-regression.html#cb51-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;pink&quot;</span>, <span class="st">&quot;cyan&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb51-37"><a href="logistic-regression.html#cb51-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Pr(Buy)&quot;</span>, <span class="at">color=</span><span class="st">&quot;Gender&quot;</span>, <span class="at">fill=</span><span class="st">&quot;Gender&quot;</span>,</span>
-<span id="cb51-38"><a href="logistic-regression.html#cb51-38" aria-hidden="true" tabindex="-1"></a>         <span class="at">caption=</span><span class="st">&quot;Calculated at mean value of salary&quot;</span>)</span></code></pre></div>
-</div>
-<div id="figure-reffigt3mpage02" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="logistic-regression.html#fig:t3mpage02">3.13</a></h3>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="logistic-regression.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create plot with gender on same plot</span></span>
-<span id="cb52-2"><a href="logistic-regression.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>pred), <span class="at">data=</span>train.pred) <span class="sc">+</span></span>
-<span id="cb52-3"><a href="logistic-regression.html#cb52-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>gender), <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb52-4"><a href="logistic-regression.html#cb52-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lwr, <span class="at">ymax=</span>upr, </span>
-<span id="cb52-5"><a href="logistic-regression.html#cb52-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">color=</span>gender, <span class="at">fill=</span>gender), <span class="at">alpha=</span>.<span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb52-6"><a href="logistic-regression.html#cb52-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(<span class="sc">~</span>gender) <span class="sc">+</span></span>
-<span id="cb52-7"><a href="logistic-regression.html#cb52-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>,</span>
-<span id="cb52-8"><a href="logistic-regression.html#cb52-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.caption=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>)) <span class="sc">+</span></span>
-<span id="cb52-9"><a href="logistic-regression.html#cb52-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red4&quot;</span>, <span class="st">&quot;navy&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb52-10"><a href="logistic-regression.html#cb52-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;pink&quot;</span>, <span class="st">&quot;cyan&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb52-11"><a href="logistic-regression.html#cb52-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Pr(Buy)&quot;</span>, <span class="at">caption=</span><span class="st">&quot;Calculated at mean value of salary&quot;</span>)</span></code></pre></div>
-</div>
-<div id="figure-reffigt3mpage03" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="logistic-regression.html#fig:t3mpage03">3.14</a></h3>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="logistic-regression.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Want to predict for different levels of IVs</span></span>
-<span id="cb53-2"><a href="logistic-regression.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Because we often do this for other continuous variables, we first</span></span>
-<span id="cb53-3"><a href="logistic-regression.html#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     create a df with values of all continuous IVs</span></span>
-<span id="cb53-4"><a href="logistic-regression.html#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co">#     at different levels of the factor variable (if there are any)</span></span>
-<span id="cb53-5"><a href="logistic-regression.html#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: variable names must be EXACTLY the same as in model</span></span>
-<span id="cb53-6"><a href="logistic-regression.html#cb53-6" aria-hidden="true" tabindex="-1"></a>msd.ivs <span class="ot">&lt;-</span> train <span class="sc">%&gt;%</span></span>
-<span id="cb53-7"><a href="logistic-regression.html#cb53-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span>  <span class="co"># Group on factor variable</span></span>
-<span id="cb53-8"><a href="logistic-regression.html#cb53-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calculate values for different levels of IVs</span></span>
-<span id="cb53-9"><a href="logistic-regression.html#cb53-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">age_mn15=</span><span class="fu">mean</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>)<span class="sc">-</span><span class="fl">1.5</span><span class="sc">*</span><span class="fu">sd</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
-<span id="cb53-10"><a href="logistic-regression.html#cb53-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">age_m=</span><span class="fu">mean</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
-<span id="cb53-11"><a href="logistic-regression.html#cb53-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">age_mp15=</span><span class="fu">mean</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>)<span class="sc">+</span><span class="fl">1.5</span><span class="sc">*</span><span class="fu">sd</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
-<span id="cb53-12"><a href="logistic-regression.html#cb53-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">salary_mn15=</span><span class="fu">mean</span>(salary, <span class="at">na.rm=</span><span class="cn">TRUE</span>)<span class="sc">-</span><span class="fl">1.5</span><span class="sc">*</span><span class="fu">sd</span>(salary, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
-<span id="cb53-13"><a href="logistic-regression.html#cb53-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">salary_m=</span><span class="fu">mean</span>(salary, <span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
-<span id="cb53-14"><a href="logistic-regression.html#cb53-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">salary_mp15=</span><span class="fu">mean</span>(salary, <span class="at">na.rm=</span><span class="cn">TRUE</span>)<span class="sc">+</span><span class="fl">1.5</span><span class="sc">*</span><span class="fu">sd</span>(salary, <span class="at">na.rm=</span><span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb53-15"><a href="logistic-regression.html#cb53-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert data from wide to long</span></span>
-<span id="cb53-16"><a href="logistic-regression.html#cb53-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="sc">!</span>gender, <span class="at">names_to=</span><span class="fu">c</span>(<span class="st">&quot;.value&quot;</span>,<span class="st">&quot;measure&quot;</span>), <span class="at">names_sep=</span><span class="st">&quot;_&quot;</span>)</span>
-<span id="cb53-17"><a href="logistic-regression.html#cb53-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb53-18"><a href="logistic-regression.html#cb53-18" aria-hidden="true" tabindex="-1"></a>age.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">age=</span><span class="fu">seq</span>(<span class="dv">18</span>, <span class="dv">60</span>, <span class="dv">2</span>)), <span class="co"># Variable of interest</span></span>
-<span id="cb53-19"><a href="logistic-regression.html#cb53-19" aria-hidden="true" tabindex="-1"></a>                  msd.ivs[,<span class="fu">c</span>(<span class="st">&quot;gender&quot;</span>, <span class="st">&quot;salary&quot;</span>, <span class="st">&quot;measure&quot;</span>)])</span>
-<span id="cb53-20"><a href="logistic-regression.html#cb53-20" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb53-21"><a href="logistic-regression.html#cb53-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame with predicted values and confidence bands</span></span>
-<span id="cb53-22"><a href="logistic-regression.html#cb53-22" aria-hidden="true" tabindex="-1"></a>train.pred <span class="ot">&lt;-</span> </span>
-<span id="cb53-23"><a href="logistic-regression.html#cb53-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &#39;cbind&#39; combines objects by columns</span></span>
-<span id="cb53-24"><a href="logistic-regression.html#cb53-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cbind</span>(age.pred, </span>
-<span id="cb53-25"><a href="logistic-regression.html#cb53-25" aria-hidden="true" tabindex="-1"></a>          <span class="fu">predict</span>(model, <span class="co"># Model to predict values with</span></span>
-<span id="cb53-26"><a href="logistic-regression.html#cb53-26" aria-hidden="true" tabindex="-1"></a>                  age.pred, <span class="co"># New data to use for IVs</span></span>
-<span id="cb53-27"><a href="logistic-regression.html#cb53-27" aria-hidden="true" tabindex="-1"></a>                  <span class="at">type=</span><span class="st">&quot;link&quot;</span>, <span class="co"># Return log-odds predictions</span></span>
-<span id="cb53-28"><a href="logistic-regression.html#cb53-28" aria-hidden="true" tabindex="-1"></a>                  <span class="at">se=</span><span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span>  <span class="co"># Get std.err. for CIs</span></span>
-<span id="cb53-29"><a href="logistic-regression.html#cb53-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">pred=</span><span class="fu">plogis</span>(fit), <span class="co"># Calculate pr(buy)</span></span>
-<span id="cb53-30"><a href="logistic-regression.html#cb53-30" aria-hidden="true" tabindex="-1"></a>           <span class="at">upr=</span><span class="fu">plogis</span>(fit<span class="sc">+</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>se.fit)),  <span class="co"># Upper CI</span></span>
-<span id="cb53-31"><a href="logistic-regression.html#cb53-31" aria-hidden="true" tabindex="-1"></a>           <span class="at">lwr=</span><span class="fu">plogis</span>(fit<span class="sc">-</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>se.fit)),  <span class="co"># Lower CI</span></span>
-<span id="cb53-32"><a href="logistic-regression.html#cb53-32" aria-hidden="true" tabindex="-1"></a>           <span class="at">gender=</span><span class="fu">as.factor</span>(gender),  <span class="co"># Factor for plot</span></span>
-<span id="cb53-33"><a href="logistic-regression.html#cb53-33" aria-hidden="true" tabindex="-1"></a>           <span class="at">salary=</span><span class="fu">as.factor</span>(measure))  <span class="co"># Factor for plot</span></span>
-<span id="cb53-34"><a href="logistic-regression.html#cb53-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-35"><a href="logistic-regression.html#cb53-35" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>pred), <span class="at">data=</span>train.pred) <span class="sc">+</span></span>
-<span id="cb53-36"><a href="logistic-regression.html#cb53-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>salary), <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb53-37"><a href="logistic-regression.html#cb53-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lwr, <span class="at">ymax=</span>upr, </span>
-<span id="cb53-38"><a href="logistic-regression.html#cb53-38" aria-hidden="true" tabindex="-1"></a>                    <span class="at">color=</span>salary, <span class="at">fill=</span>salary), <span class="at">alpha=</span>.<span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb53-39"><a href="logistic-regression.html#cb53-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(.<span class="sc">~</span>gender) <span class="sc">+</span>  <span class="co"># Create separate plots for gender</span></span>
-<span id="cb53-40"><a href="logistic-regression.html#cb53-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
-<span id="cb53-41"><a href="logistic-regression.html#cb53-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="st">&quot;Salary&quot;</span>,</span>
-<span id="cb53-42"><a href="logistic-regression.html#cb53-42" aria-hidden="true" tabindex="-1"></a>                       <span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red4&quot;</span>, <span class="st">&quot;navy&quot;</span>, <span class="st">&quot;forestgreen&quot;</span>),</span>
-<span id="cb53-43"><a href="logistic-regression.html#cb53-43" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;Mean&quot;</span>, <span class="st">&quot;Mean-1.5SD&quot;</span>, <span class="st">&quot;Mean+1.5SD&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb53-44"><a href="logistic-regression.html#cb53-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="st">&quot;Salary&quot;</span>,</span>
-<span id="cb53-45"><a href="logistic-regression.html#cb53-45" aria-hidden="true" tabindex="-1"></a>                       <span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;pink&quot;</span>, <span class="st">&quot;cyan&quot;</span>, <span class="st">&quot;lawngreen&quot;</span>),</span>
-<span id="cb53-46"><a href="logistic-regression.html#cb53-46" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;Mean&quot;</span>, <span class="st">&quot;Mean-1.5SD&quot;</span>, <span class="st">&quot;Mean+1.5SD&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb53-47"><a href="logistic-regression.html#cb53-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Pr(Buy)&quot;</span>)</span></code></pre></div>
-</div>
-<div id="figure-reffigt3mpage04" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="logistic-regression.html#fig:t3mpage04">3.15</a></h3>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="logistic-regression.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use df &#39;msd.ivs&#39; from above</span></span>
-<span id="cb54-2"><a href="logistic-regression.html#cb54-2" aria-hidden="true" tabindex="-1"></a>sal.pred <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">data.frame</span>(<span class="at">salary=</span><span class="fu">seq</span>(<span class="dv">15</span>, <span class="dv">150</span>, <span class="dv">5</span>)), <span class="co"># Variable of interest</span></span>
-<span id="cb54-3"><a href="logistic-regression.html#cb54-3" aria-hidden="true" tabindex="-1"></a>                  msd.ivs[,<span class="fu">c</span>(<span class="st">&quot;gender&quot;</span>, <span class="st">&quot;age&quot;</span>, <span class="st">&quot;measure&quot;</span>)])</span>
-<span id="cb54-4"><a href="logistic-regression.html#cb54-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb54-5"><a href="logistic-regression.html#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame with predicted values and confidence bands</span></span>
-<span id="cb54-6"><a href="logistic-regression.html#cb54-6" aria-hidden="true" tabindex="-1"></a>train.pred <span class="ot">&lt;-</span> </span>
-<span id="cb54-7"><a href="logistic-regression.html#cb54-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># &#39;cbind&#39; combines objects by columns</span></span>
-<span id="cb54-8"><a href="logistic-regression.html#cb54-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cbind</span>(sal.pred, </span>
-<span id="cb54-9"><a href="logistic-regression.html#cb54-9" aria-hidden="true" tabindex="-1"></a>          <span class="fu">predict</span>(model, <span class="co"># Model to predict values with</span></span>
-<span id="cb54-10"><a href="logistic-regression.html#cb54-10" aria-hidden="true" tabindex="-1"></a>                  sal.pred, <span class="co"># New data to use for IVs</span></span>
-<span id="cb54-11"><a href="logistic-regression.html#cb54-11" aria-hidden="true" tabindex="-1"></a>                  <span class="at">type=</span><span class="st">&quot;link&quot;</span>, <span class="co"># Return log-odds predictions</span></span>
-<span id="cb54-12"><a href="logistic-regression.html#cb54-12" aria-hidden="true" tabindex="-1"></a>                  <span class="at">se=</span><span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span>  <span class="co"># Get std.err. for CIs</span></span>
-<span id="cb54-13"><a href="logistic-regression.html#cb54-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">pred=</span><span class="fu">plogis</span>(fit), <span class="co"># Calculate pr(buy)</span></span>
-<span id="cb54-14"><a href="logistic-regression.html#cb54-14" aria-hidden="true" tabindex="-1"></a>           <span class="at">upr=</span><span class="fu">plogis</span>(fit<span class="sc">+</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>se.fit)),  <span class="co"># Upper CI</span></span>
-<span id="cb54-15"><a href="logistic-regression.html#cb54-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">lwr=</span><span class="fu">plogis</span>(fit<span class="sc">-</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>se.fit)),  <span class="co"># Lower CI</span></span>
-<span id="cb54-16"><a href="logistic-regression.html#cb54-16" aria-hidden="true" tabindex="-1"></a>           <span class="at">gender=</span><span class="fu">as.factor</span>(gender),  <span class="co"># Factor for plot</span></span>
-<span id="cb54-17"><a href="logistic-regression.html#cb54-17" aria-hidden="true" tabindex="-1"></a>           <span class="at">age=</span><span class="fu">as.factor</span>(measure))  <span class="co"># Factor for plot</span></span>
-<span id="cb54-18"><a href="logistic-regression.html#cb54-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-19"><a href="logistic-regression.html#cb54-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>salary, <span class="at">y=</span>pred), <span class="at">data=</span>train.pred) <span class="sc">+</span></span>
-<span id="cb54-20"><a href="logistic-regression.html#cb54-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>age), <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb54-21"><a href="logistic-regression.html#cb54-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lwr, <span class="at">ymax=</span>upr, </span>
-<span id="cb54-22"><a href="logistic-regression.html#cb54-22" aria-hidden="true" tabindex="-1"></a>                    <span class="at">color=</span>age, <span class="at">fill=</span>age), <span class="at">alpha=</span>.<span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb54-23"><a href="logistic-regression.html#cb54-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(.<span class="sc">~</span>gender) <span class="sc">+</span>  <span class="co"># Create separate plots for gender</span></span>
-<span id="cb54-24"><a href="logistic-regression.html#cb54-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
-<span id="cb54-25"><a href="logistic-regression.html#cb54-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="st">&quot;Age&quot;</span>,</span>
-<span id="cb54-26"><a href="logistic-regression.html#cb54-26" aria-hidden="true" tabindex="-1"></a>                       <span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;red4&quot;</span>, <span class="st">&quot;navy&quot;</span>, <span class="st">&quot;forestgreen&quot;</span>),</span>
-<span id="cb54-27"><a href="logistic-regression.html#cb54-27" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;Mean&quot;</span>, <span class="st">&quot;Mean-1.5SD&quot;</span>, <span class="st">&quot;Mean+1.5SD&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb54-28"><a href="logistic-regression.html#cb54-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="st">&quot;Age&quot;</span>,</span>
-<span id="cb54-29"><a href="logistic-regression.html#cb54-29" aria-hidden="true" tabindex="-1"></a>                       <span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;pink&quot;</span>, <span class="st">&quot;cyan&quot;</span>, <span class="st">&quot;lawngreen&quot;</span>),</span>
-<span id="cb54-30"><a href="logistic-regression.html#cb54-30" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;Mean&quot;</span>, <span class="st">&quot;Mean-1.5SD&quot;</span>, <span class="st">&quot;Mean+1.5SD&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb54-31"><a href="logistic-regression.html#cb54-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Salary&quot;</span>, <span class="at">y=</span><span class="st">&quot;Pr(Buy)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="logistic-regression.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;effects&#39; package</span></span>
+<span id="cb52-2"><a href="logistic-regression.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effects)</span>
+<span id="cb52-3"><a href="logistic-regression.html#cb52-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-4"><a href="logistic-regression.html#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Want to predict Pr(buy) for different levels of age</span></span>
+<span id="cb52-5"><a href="logistic-regression.html#cb52-5" aria-hidden="true" tabindex="-1"></a>age.pred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;age&quot;</span>,  <span class="co"># Focal variable</span></span>
+<span id="cb52-6"><a href="logistic-regression.html#cb52-6" aria-hidden="true" tabindex="-1"></a>                                       model))</span>
+<span id="cb52-7"><a href="logistic-regression.html#cb52-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-8"><a href="logistic-regression.html#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;age.pred&#39; for margin plot, assign to &#39;p1&#39;</span></span>
+<span id="cb52-9"><a href="logistic-regression.html#cb52-9" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> age.pred <span class="sc">%&gt;%</span></span>
+<span id="cb52-10"><a href="logistic-regression.html#cb52-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age,   <span class="co"># ad_tv on x-axis</span></span>
+<span id="cb52-11"><a href="logistic-regression.html#cb52-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">y=</span>fit)) <span class="sc">+</span>   <span class="co"># &#39;sales&#39; prediction on y-axis</span></span>
+<span id="cb52-12"><a href="logistic-regression.html#cb52-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span>   <span class="co"># Draw predicted line</span></span>
+<span id="cb52-13"><a href="logistic-regression.html#cb52-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lower,  <span class="co"># Draws the confidence interval bands</span></span>
+<span id="cb52-14"><a href="logistic-regression.html#cb52-14" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax=</span>upper),</span>
+<span id="cb52-15"><a href="logistic-regression.html#cb52-15" aria-hidden="true" tabindex="-1"></a>                    <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span> <span class="co"># Sets transparency level</span></span>
+<span id="cb52-16"><a href="logistic-regression.html#cb52-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb52-17"><a href="logistic-regression.html#cb52-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Pr(Buy)&quot;</span>)</span>
+<span id="cb52-18"><a href="logistic-regression.html#cb52-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-19"><a href="logistic-regression.html#cb52-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat for other two variables</span></span>
+<span id="cb52-20"><a href="logistic-regression.html#cb52-20" aria-hidden="true" tabindex="-1"></a>sal.pred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;salary&quot;</span>, model))</span>
+<span id="cb52-21"><a href="logistic-regression.html#cb52-21" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> sal.pred <span class="sc">%&gt;%</span></span>
+<span id="cb52-22"><a href="logistic-regression.html#cb52-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>salary,   <span class="co"># ad_tv on x-axis</span></span>
+<span id="cb52-23"><a href="logistic-regression.html#cb52-23" aria-hidden="true" tabindex="-1"></a>             <span class="at">y=</span>fit)) <span class="sc">+</span>   <span class="co"># &#39;sales&#39; prediction on y-axis</span></span>
+<span id="cb52-24"><a href="logistic-regression.html#cb52-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span>   <span class="co"># Draw predicted line</span></span>
+<span id="cb52-25"><a href="logistic-regression.html#cb52-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lower,  <span class="co"># Draws the confidence interval bands</span></span>
+<span id="cb52-26"><a href="logistic-regression.html#cb52-26" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax=</span>upper),</span>
+<span id="cb52-27"><a href="logistic-regression.html#cb52-27" aria-hidden="true" tabindex="-1"></a>                    <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span> <span class="co"># Sets transparency level</span></span>
+<span id="cb52-28"><a href="logistic-regression.html#cb52-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb52-29"><a href="logistic-regression.html#cb52-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Salary&quot;</span>, <span class="at">y=</span><span class="st">&quot;Pr(Buy)&quot;</span>)</span>
+<span id="cb52-30"><a href="logistic-regression.html#cb52-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-31"><a href="logistic-regression.html#cb52-31" aria-hidden="true" tabindex="-1"></a>g.pred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;gender&quot;</span>, model))</span>
+<span id="cb52-32"><a href="logistic-regression.html#cb52-32" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> g.pred <span class="sc">%&gt;%</span></span>
+<span id="cb52-33"><a href="logistic-regression.html#cb52-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>gender, <span class="at">y=</span>fit, <span class="at">group=</span><span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb52-34"><a href="logistic-regression.html#cb52-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb52-35"><a href="logistic-regression.html#cb52-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">&quot;orange&quot;</span>) <span class="sc">+</span></span>
+<span id="cb52-36"><a href="logistic-regression.html#cb52-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>lower, <span class="at">ymax=</span>upper), <span class="at">width=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb52-37"><a href="logistic-regression.html#cb52-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb52-38"><a href="logistic-regression.html#cb52-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Gender&quot;</span>, <span class="at">y=</span><span class="st">&quot;Pr(Buy)&quot;</span>)</span>
+<span id="cb52-39"><a href="logistic-regression.html#cb52-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-40"><a href="logistic-regression.html#cb52-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Arrange three plots in a grid using package &#39;cowplot&#39;</span></span>
+<span id="cb52-41"><a href="logistic-regression.html#cb52-41" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(p1,p2,p3, <span class="at">nrow=</span><span class="dv">2</span>)</span></code></pre></div>
 </div>
 <div id="figure-reffigt3gainplot" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="logistic-regression.html#fig:t3gainplot">3.16</a></h3>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="logistic-regression.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot was already returned in the previous call to &#39;gainlift&#39;</span></span>
-<span id="cb55-2"><a href="logistic-regression.html#cb55-2" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>gainplot</span></code></pre></div>
+<h3>Figure <a href="logistic-regression.html#fig:t3gainplot">3.13</a></h3>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="logistic-regression.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot was already returned in the previous call to &#39;gainlift&#39;</span></span>
+<span id="cb53-2"><a href="logistic-regression.html#cb53-2" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>gainplot</span></code></pre></div>
 </div>
 <div id="figure-reffigt3liftplot" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="logistic-regression.html#fig:t3liftplot">3.17</a></h3>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="logistic-regression.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot was already returned in the previous call to &#39;gainlift&#39;</span></span>
-<span id="cb56-2"><a href="logistic-regression.html#cb56-2" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>gainlift</span></code></pre></div>
+<h3>Figure <a href="logistic-regression.html#fig:t3liftplot">3.14</a></h3>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="logistic-regression.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot was already returned in the previous call to &#39;gainlift&#39;</span></span>
+<span id="cb54-2"><a href="logistic-regression.html#cb54-2" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>gainlift</span></code></pre></div>
 </div>
 <div id="figure-reffigt3sensspec01" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="logistic-regression.html#fig:t3sensspec01">3.18</a></h3>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="logistic-regression.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_cut.R&#39; user-defined script</span></span>
-<span id="cb57-2"><a href="logistic-regression.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
-<span id="cb57-3"><a href="logistic-regression.html#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires packages &#39;ggplot2&#39;</span></span>
-<span id="cb57-4"><a href="logistic-regression.html#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_cut</span>(model, train, <span class="st">&quot;Yes&quot;</span>)</span></code></pre></div>
+<h3>Figure <a href="logistic-regression.html#fig:t3sensspec01">3.15</a></h3>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="logistic-regression.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_cut.R&#39; user-defined script</span></span>
+<span id="cb55-2"><a href="logistic-regression.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
+<span id="cb55-3"><a href="logistic-regression.html#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires packages &#39;ggplot2&#39;</span></span>
+<span id="cb55-4"><a href="logistic-regression.html#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_cut</span>(model, train, <span class="st">&quot;Yes&quot;</span>)</span></code></pre></div>
 </div>
 <div id="figure-reffigt3sensspec02" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="logistic-regression.html#fig:t3sensspec02">3.19</a></h3>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="logistic-regression.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_cut.R&#39; user-defined script</span></span>
-<span id="cb58-2"><a href="logistic-regression.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
-<span id="cb58-3"><a href="logistic-regression.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires packages &#39;ggplot2&#39;</span></span>
-<span id="cb58-4"><a href="logistic-regression.html#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_cut</span>(model, test, <span class="st">&quot;Yes&quot;</span>)</span></code></pre></div>
+<h3>Figure <a href="logistic-regression.html#fig:t3sensspec02">3.16</a></h3>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="logistic-regression.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_cut.R&#39; user-defined script</span></span>
+<span id="cb56-2"><a href="logistic-regression.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
+<span id="cb56-3"><a href="logistic-regression.html#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires packages &#39;ggplot2&#39;</span></span>
+<span id="cb56-4"><a href="logistic-regression.html#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_cut</span>(model, test, <span class="st">&quot;Yes&quot;</span>)</span></code></pre></div>
 </div>
 <div id="table-reftabt3linreg01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="logistic-regression.html#tab:t3linreg01">3.1</a></h3>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="logistic-regression.html#cb59-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> directmktg <span class="sc">%&gt;%</span></span>
-<span id="cb59-2"><a href="logistic-regression.html#cb59-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">buy=</span><span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb59-3"><a href="logistic-regression.html#cb59-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lm</span>(buy <span class="sc">~</span> age, .)</span>
-<span id="cb59-4"><a href="logistic-regression.html#cb59-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: &#39;summ&#39; uses the &#39;jtools&#39; package</span></span>
-<span id="cb59-5"><a href="logistic-regression.html#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(model, <span class="at">model.info=</span><span class="cn">FALSE</span>, <span class="at">digits=</span><span class="dv">4</span>)</span>
-<span id="cb59-6"><a href="logistic-regression.html#cb59-6" aria-hidden="true" tabindex="-1"></a><span class="co"># For virtual environment, use &#39;summary&#39; from Base R,</span></span>
-<span id="cb59-7"><a href="logistic-regression.html#cb59-7" aria-hidden="true" tabindex="-1"></a><span class="co"># but manually calculate McFadden&#39;s Pseudo-Rsq</span></span>
-<span id="cb59-8"><a href="logistic-regression.html#cb59-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span>
-<span id="cb59-9"><a href="logistic-regression.html#cb59-9" aria-hidden="true" tabindex="-1"></a>Mrsq <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">-</span>model<span class="sc">$</span>deviance<span class="sc">/</span>model<span class="sc">$</span>null.deviance</span>
-<span id="cb59-10"><a href="logistic-regression.html#cb59-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;McFadden&#39;s Pseudo-Rsquared = &quot;</span>, <span class="fu">round</span>(Mrsq, <span class="at">digits=</span><span class="dv">4</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="logistic-regression.html#cb57-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> directmktg <span class="sc">%&gt;%</span></span>
+<span id="cb57-2"><a href="logistic-regression.html#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">buy=</span><span class="fu">as.numeric</span>(buy)<span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb57-3"><a href="logistic-regression.html#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lm</span>(buy <span class="sc">~</span> age, .)</span>
+<span id="cb57-4"><a href="logistic-regression.html#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: &#39;summ&#39; uses the &#39;jtools&#39; package</span></span>
+<span id="cb57-5"><a href="logistic-regression.html#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(model, <span class="at">model.info=</span><span class="cn">FALSE</span>, <span class="at">digits=</span><span class="dv">4</span>)</span>
+<span id="cb57-6"><a href="logistic-regression.html#cb57-6" aria-hidden="true" tabindex="-1"></a><span class="co"># For virtual environment, use &#39;summary&#39; from Base R,</span></span>
+<span id="cb57-7"><a href="logistic-regression.html#cb57-7" aria-hidden="true" tabindex="-1"></a><span class="co"># but manually calculate McFadden&#39;s Pseudo-Rsq</span></span>
+<span id="cb57-8"><a href="logistic-regression.html#cb57-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span>
+<span id="cb57-9"><a href="logistic-regression.html#cb57-9" aria-hidden="true" tabindex="-1"></a>Mrsq <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">-</span>model<span class="sc">$</span>deviance<span class="sc">/</span>model<span class="sc">$</span>null.deviance</span>
+<span id="cb57-10"><a href="logistic-regression.html#cb57-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;McFadden&#39;s Pseudo-Rsquared = &quot;</span>, <span class="fu">round</span>(Mrsq, <span class="at">digits=</span><span class="dv">4</span>)</span></code></pre></div>
 </div>
 <div id="table-reftabt3logit01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="logistic-regression.html#tab:t3logit01">3.2</a></h3>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="logistic-regression.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;caret&#39; package to create training and test/holdout samples</span></span>
-<span id="cb60-2"><a href="logistic-regression.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This will create two separate dataframes: train and test</span></span>
-<span id="cb60-3"><a href="logistic-regression.html#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4320</span>)</span>
-<span id="cb60-4"><a href="logistic-regression.html#cb60-4" aria-hidden="true" tabindex="-1"></a>inTrain <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(<span class="at">y=</span>directmktg<span class="sc">$</span>buy, <span class="at">p=</span>.<span class="dv">75</span>, <span class="at">list=</span><span class="cn">FALSE</span>)</span>
-<span id="cb60-5"><a href="logistic-regression.html#cb60-5" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> directmktg[inTrain,]</span>
-<span id="cb60-6"><a href="logistic-regression.html#cb60-6" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> directmktg[<span class="sc">-</span>inTrain,]</span>
-<span id="cb60-7"><a href="logistic-regression.html#cb60-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-8"><a href="logistic-regression.html#cb60-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate the model on the training data</span></span>
-<span id="cb60-9"><a href="logistic-regression.html#cb60-9" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">glm</span>(buy <span class="sc">~</span> age <span class="sc">+</span> salary <span class="sc">+</span> gender, train, <span class="at">family=</span><span class="st">&quot;binomial&quot;</span>)</span>
-<span id="cb60-10"><a href="logistic-regression.html#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: &#39;summ&#39; uses the &#39;jtools&#39; package</span></span>
-<span id="cb60-11"><a href="logistic-regression.html#cb60-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(model, <span class="at">model.info=</span><span class="cn">FALSE</span>, <span class="at">digits=</span><span class="dv">4</span>)</span>
-<span id="cb60-12"><a href="logistic-regression.html#cb60-12" aria-hidden="true" tabindex="-1"></a><span class="co"># For virtual environment, use &#39;summary&#39; from Base R</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="logistic-regression.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;caret&#39; package to create training and test/holdout samples</span></span>
+<span id="cb58-2"><a href="logistic-regression.html#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This will create two separate dataframes: train and test</span></span>
+<span id="cb58-3"><a href="logistic-regression.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4320</span>)</span>
+<span id="cb58-4"><a href="logistic-regression.html#cb58-4" aria-hidden="true" tabindex="-1"></a>inTrain <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(<span class="at">y=</span>directmktg<span class="sc">$</span>buy, <span class="at">p=</span>.<span class="dv">75</span>, <span class="at">list=</span><span class="cn">FALSE</span>)</span>
+<span id="cb58-5"><a href="logistic-regression.html#cb58-5" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> directmktg[inTrain,]</span>
+<span id="cb58-6"><a href="logistic-regression.html#cb58-6" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> directmktg[<span class="sc">-</span>inTrain,]</span>
+<span id="cb58-7"><a href="logistic-regression.html#cb58-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-8"><a href="logistic-regression.html#cb58-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate the model on the training data</span></span>
+<span id="cb58-9"><a href="logistic-regression.html#cb58-9" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">glm</span>(buy <span class="sc">~</span> age <span class="sc">+</span> salary <span class="sc">+</span> gender, train, <span class="at">family=</span><span class="st">&quot;binomial&quot;</span>)</span>
+<span id="cb58-10"><a href="logistic-regression.html#cb58-10" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: &#39;summ&#39; uses the &#39;jtools&#39; package</span></span>
+<span id="cb58-11"><a href="logistic-regression.html#cb58-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(model, <span class="at">model.info=</span><span class="cn">FALSE</span>, <span class="at">digits=</span><span class="dv">4</span>)</span>
+<span id="cb58-12"><a href="logistic-regression.html#cb58-12" aria-hidden="true" tabindex="-1"></a><span class="co"># For virtual environment, use &#39;summary&#39; from Base R</span></span></code></pre></div>
 </div>
 <div id="table-reftabt3logit01or" class="section level3 unlisted unnumbered">
 <h3>Table <a href="logistic-regression.html#tab:t3logit01or">3.3</a></h3>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="logistic-regression.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;or_table.R&#39; user-defined script</span></span>
-<span id="cb61-2"><a href="logistic-regression.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
-<span id="cb61-3"><a href="logistic-regression.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="fu">flextable</span>(<span class="fu">or_table</span>(model))</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="logistic-regression.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;or_table.R&#39; user-defined script</span></span>
+<span id="cb59-2"><a href="logistic-regression.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
+<span id="cb59-3"><a href="logistic-regression.html#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="fu">flextable</span>(<span class="fu">or_table</span>(model))</span></code></pre></div>
 </div>
 <div id="table-reftabt3cmtrain" class="section level3 unlisted unnumbered">
 <h3>Table <a href="logistic-regression.html#tab:t3cmtrain">3.4</a></h3>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="logistic-regression.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_cm.R&#39; user-defined script</span></span>
-<span id="cb62-2"><a href="logistic-regression.html#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
-<span id="cb62-3"><a href="logistic-regression.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires package &#39;caret&#39;</span></span>
-<span id="cb62-4"><a href="logistic-regression.html#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_cm</span>(model,      <span class="co"># Object with model results</span></span>
-<span id="cb62-5"><a href="logistic-regression.html#cb62-5" aria-hidden="true" tabindex="-1"></a>          train,      <span class="co"># Data to use (i.e., training vs. testing)</span></span>
-<span id="cb62-6"><a href="logistic-regression.html#cb62-6" aria-hidden="true" tabindex="-1"></a>          <span class="st">&quot;Yes&quot;</span>)      <span class="co"># Factor level for &quot;True&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="logistic-regression.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_cm.R&#39; user-defined script</span></span>
+<span id="cb60-2"><a href="logistic-regression.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
+<span id="cb60-3"><a href="logistic-regression.html#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires package &#39;caret&#39;</span></span>
+<span id="cb60-4"><a href="logistic-regression.html#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_cm</span>(model,      <span class="co"># Object with model results</span></span>
+<span id="cb60-5"><a href="logistic-regression.html#cb60-5" aria-hidden="true" tabindex="-1"></a>          train,      <span class="co"># Data to use (i.e., training vs. testing)</span></span>
+<span id="cb60-6"><a href="logistic-regression.html#cb60-6" aria-hidden="true" tabindex="-1"></a>          <span class="st">&quot;Yes&quot;</span>)      <span class="co"># Factor level for &quot;True&quot;</span></span></code></pre></div>
 </div>
 <div id="table-reftabt3cmtest" class="section level3 unlisted unnumbered">
 <h3>Table <a href="logistic-regression.html#tab:t3cmtest">3.5</a></h3>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="logistic-regression.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_cm.R&#39; user-defined script</span></span>
-<span id="cb63-2"><a href="logistic-regression.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
-<span id="cb63-3"><a href="logistic-regression.html#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires package &#39;caret&#39;</span></span>
-<span id="cb63-4"><a href="logistic-regression.html#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_cm</span>(model,      <span class="co"># Object with model results</span></span>
-<span id="cb63-5"><a href="logistic-regression.html#cb63-5" aria-hidden="true" tabindex="-1"></a>          test,      <span class="co"># Data to use (i.e., training vs. testing)</span></span>
-<span id="cb63-6"><a href="logistic-regression.html#cb63-6" aria-hidden="true" tabindex="-1"></a>          <span class="st">&quot;Yes&quot;</span>)      <span class="co"># Factor level for &quot;True&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="logistic-regression.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;logreg_cm.R&#39; user-defined script</span></span>
+<span id="cb61-2"><a href="logistic-regression.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
+<span id="cb61-3"><a href="logistic-regression.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires package &#39;caret&#39;</span></span>
+<span id="cb61-4"><a href="logistic-regression.html#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="fu">logreg_cm</span>(model,      <span class="co"># Object with model results</span></span>
+<span id="cb61-5"><a href="logistic-regression.html#cb61-5" aria-hidden="true" tabindex="-1"></a>          test,      <span class="co"># Data to use (i.e., training vs. testing)</span></span>
+<span id="cb61-6"><a href="logistic-regression.html#cb61-6" aria-hidden="true" tabindex="-1"></a>          <span class="st">&quot;Yes&quot;</span>)      <span class="co"># Factor level for &quot;True&quot;</span></span></code></pre></div>
 </div>
 <div id="table-reftabt3gaintable" class="section level3 unlisted unnumbered">
 <h3>Table <a href="logistic-regression.html#tab:t3gaintable">3.6</a></h3>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="logistic-regression.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;gainlift.R&#39; user-defined script</span></span>
-<span id="cb64-2"><a href="logistic-regression.html#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
-<span id="cb64-3"><a href="logistic-regression.html#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires packages &#39;ggplot2&#39;, &#39;dplyr&#39;, and &#39;tidyr&#39;</span></span>
-<span id="cb64-4"><a href="logistic-regression.html#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns a list of four things:</span></span>
-<span id="cb64-5"><a href="logistic-regression.html#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   gainplot, liftplot, gaintable, lifttable</span></span>
-<span id="cb64-6"><a href="logistic-regression.html#cb64-6" aria-hidden="true" tabindex="-1"></a>glresults <span class="ot">&lt;-</span> <span class="fu">gainlift</span>(model, train, test, <span class="st">&quot;Yes&quot;</span>)</span>
-<span id="cb64-7"><a href="logistic-regression.html#cb64-7" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>gaintable</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="logistic-regression.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the &#39;gainlift.R&#39; user-defined script</span></span>
+<span id="cb62-2"><a href="logistic-regression.html#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It was loaded above with the packages</span></span>
+<span id="cb62-3"><a href="logistic-regression.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Requires packages &#39;ggplot2&#39;, &#39;dplyr&#39;, and &#39;tidyr&#39;</span></span>
+<span id="cb62-4"><a href="logistic-regression.html#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Returns a list of four things:</span></span>
+<span id="cb62-5"><a href="logistic-regression.html#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   gainplot, liftplot, gaintable, lifttable</span></span>
+<span id="cb62-6"><a href="logistic-regression.html#cb62-6" aria-hidden="true" tabindex="-1"></a>glresults <span class="ot">&lt;-</span> <span class="fu">gainlift</span>(model, train, test, <span class="st">&quot;Yes&quot;</span>)</span>
+<span id="cb62-7"><a href="logistic-regression.html#cb62-7" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>gaintable</span></code></pre></div>
 </div>
 <div id="table-reftabt3lifttable" class="section level3 unlisted unnumbered">
 <h3>Table <a href="logistic-regression.html#tab:t3lifttable">3.7</a></h3>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="logistic-regression.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Table was already returned in the previous call to &#39;gainlift&#39;</span></span>
-<span id="cb65-2"><a href="logistic-regression.html#cb65-2" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>lifttable</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="logistic-regression.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Table was already returned in the previous call to &#39;gainlift&#39;</span></span>
+<span id="cb63-2"><a href="logistic-regression.html#cb63-2" aria-hidden="true" tabindex="-1"></a>glresults<span class="sc">$</span>lifttable</span></code></pre></div>
 
 </div>
 </div>
