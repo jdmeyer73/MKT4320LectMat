@@ -105,7 +105,12 @@ Identify factors (i.e., independent variables) that increase the likelihood of r
 * Goal: Determine what behaviors and demographics are associated with high revenue customers
 * IVs are expected to be ones that are related to revenue
     * Expect an interaction between home ownership and overage minutes
-* Model: $avg6rev=\alpha+\beta_1avg6mou+\beta_2cc+\beta_3da+\beta_4income+\beta_5ovrmou+\beta_6own + \beta_7(ovrmou\times own)$
+* Model:
+\begin{align}
+avg6rev=\alpha + &\beta_1avg6mou + \beta_2cc + \\
+&\beta_3da+\beta_4income + \\
+&\beta_5ovrmou+\beta_6own + \beta_7(ovrmou\times own)
+\end{align}
 
 ### Model Interpretation
 
@@ -118,7 +123,11 @@ target <- lm(avg6rev ~ avg6mou + cc + da + income + ovrmou*own,
 summary(target)
 
 ```
-$\hat{avg6rev}=33.742+.049avg6mou-1.332cc+1.895da-.013income+.135ovrmou-7.235own+0.066(ovrmou\times own)$
+\begin{align}
+\hat{avg6rev} = 33.742 + &.049avg6mou-1.332cc + \\
+&1.895da - .013income + \\
+&.135ovrmou - 7.235own + 0.066(ovrmou\times own)
+\end{align}
 
 #### Testing Overall Model Significance
 

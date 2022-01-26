@@ -13,7 +13,7 @@ Regression allows marketers to:
 
 The following packages are used for this topic and are loaded when needed.
 
-``` {r t2packages, eval=FALSE, message=FALSE}
+``` {r t2packages, message=FALSE}
 library(ggplot2)       # Advanced graphing capabilities
 library(tidyr)         # Easier programming   
 library(htmlTable)     # Better HTML Tables
