@@ -275,6 +275,10 @@ knitr::include_graphics("Topic03/ClassMat.png")
         * $OR$ estimation:
             * Percentage change in odds
             * Compare probabilities between groups
+* Interaction of continuous IV and dummy IV
+    * $Logit=\alpha+\beta_1x_1+\beta_2D+\beta_3(x_1\times D)$
+    * When $D=0$, $Logit=\alpha+\beta_1x_1$, so:<br>$OR(x_1)=e^{\beta_1}$
+    * When $D=1$, $Logit=(\alpha+\beta_2)+(\beta_1+\beta_3)x_1$, so:<br>$OR(x_1)=e^{(\beta_1+\beta_3)}$
             
 ### Gain and Lift
 
