@@ -29,3 +29,7 @@ pROC
 huxtable
 gtsummary
 stargazer
+kableExtra
+dendextend
+NbClust
+vtable

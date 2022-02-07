@@ -1,0 +1,2850 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 5 Segmentation | MKT 4320: Marketing Analytics</title>
+  <meta name="description" content="Lecture materials for MKT 4320 in bookdown style." />
+  <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 5 Segmentation | MKT 4320: Marketing Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecture materials for MKT 4320 in bookdown style." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 5 Segmentation | MKT 4320: Marketing Analytics" />
+  
+  <meta name="twitter:description" content="Lecture materials for MKT 4320 in bookdown style." />
+  
+
+<meta name="author" content="Jeffrey Meyer" />
+
+
+<meta name="date" content="2022-02-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="targeting-and-retaining-customers.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html"><i class="fa fa-check"></i><b>1</b> Examining and Summarizing Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#r-packages-and-datasets-for-topic-1"><i class="fa fa-check"></i><b>1.2</b> R Packages and Datasets for Topic 1</a></li>
+<li class="chapter" data-level="1.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#describing-data"><i class="fa fa-check"></i><b>1.3</b> Describing Data</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#univariate---graphs-and-tables"><i class="fa fa-check"></i><b>1.3.1</b> Univariate - Graphs and Tables</a>
+<ul>
+<li class="chapter" data-level="1.3.1.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#bar-chart"><i class="fa fa-check"></i><b>1.3.1.1</b> Bar Chart</a></li>
+<li class="chapter" data-level="1.3.1.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#histogram"><i class="fa fa-check"></i><b>1.3.1.2</b> Histogram</a></li>
+<li class="chapter" data-level="1.3.1.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#box-plot"><i class="fa fa-check"></i><b>1.3.1.3</b> Box Plot</a></li>
+<li class="chapter" data-level="1.3.1.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#frequency-table"><i class="fa fa-check"></i><b>1.3.1.4</b> Frequency Table</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#univariate---statistics"><i class="fa fa-check"></i><b>1.3.2</b> Univariate - Statistics</a>
+<ul>
+<li class="chapter" data-level="1.3.2.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#measures-of-centrality"><i class="fa fa-check"></i><b>1.3.2.1</b> Measures of Centrality</a></li>
+<li class="chapter" data-level="1.3.2.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#measures-of-dispersion"><i class="fa fa-check"></i><b>1.3.2.2</b> Measures of Dispersion</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#bivariate---graphs-and-tables"><i class="fa fa-check"></i><b>1.3.3</b> Bivariate - Graphs and Tables</a>
+<ul>
+<li class="chapter" data-level="1.3.3.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#scatterplots"><i class="fa fa-check"></i><b>1.3.3.1</b> Scatterplots</a></li>
+<li class="chapter" data-level="1.3.3.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#crosstabs"><i class="fa fa-check"></i><b>1.3.3.2</b> Crosstabs</a></li>
+<li class="chapter" data-level="1.3.3.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#box-plot-1"><i class="fa fa-check"></i><b>1.3.3.3</b> Box Plot</a></li>
+<li class="chapter" data-level="1.3.3.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#bar-chart-1"><i class="fa fa-check"></i><b>1.3.3.4</b> Bar Chart</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#statistics"><i class="fa fa-check"></i><b>1.3.4</b> Statistics</a>
+<ul>
+<li class="chapter" data-level="1.3.4.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#correlation"><i class="fa fa-check"></i><b>1.3.4.1</b> Correlation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#suggested-readings"><i class="fa fa-check"></i><b>1.4</b> Suggested Readings</a></li>
+<li class="chapter" data-level="1.5" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#r-code"><i class="fa fa-check"></i><b>1.5</b> R Code</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table11"><i class="fa fa-check"></i><b>1.5.1</b> Table1.1</a></li>
+<li class="chapter" data-level="1.5.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table12"><i class="fa fa-check"></i><b>1.5.2</b> Table1.2</a></li>
+<li class="chapter" data-level="1.5.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table13"><i class="fa fa-check"></i><b>1.5.3</b> Table1.3</a></li>
+<li class="chapter" data-level="1.5.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table14"><i class="fa fa-check"></i><b>1.5.4</b> Table1.4</a></li>
+<li class="chapter" data-level="1.5.5" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table15"><i class="fa fa-check"></i><b>1.5.5</b> Table1.5</a></li>
+<li class="chapter" data-level="1.5.6" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure11"><i class="fa fa-check"></i><b>1.5.6</b> Figure 1.1</a></li>
+<li class="chapter" data-level="1.5.7" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure12"><i class="fa fa-check"></i><b>1.5.7</b> Figure 1.2</a></li>
+<li class="chapter" data-level="1.5.8" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure13"><i class="fa fa-check"></i><b>1.5.8</b> Figure 1.3</a></li>
+<li class="chapter" data-level="1.5.9" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure14"><i class="fa fa-check"></i><b>1.5.9</b> Figure 1.4</a></li>
+<li class="chapter" data-level="1.5.10" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure15"><i class="fa fa-check"></i><b>1.5.10</b> Figure 1.5</a></li>
+<li class="chapter" data-level="1.5.11" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure16"><i class="fa fa-check"></i><b>1.5.11</b> Figure 1.6</a></li>
+<li class="chapter" data-level="1.5.12" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure17"><i class="fa fa-check"></i><b>1.5.12</b> Figure 1.7</a></li>
+<li class="chapter" data-level="1.5.13" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure18"><i class="fa fa-check"></i><b>1.5.13</b> Figure 1.8</a></li>
+<li class="chapter" data-level="1.5.14" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure19"><i class="fa fa-check"></i><b>1.5.14</b> Figure 1.9</a></li>
+<li class="chapter" data-level="1.5.15" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure110"><i class="fa fa-check"></i><b>1.5.15</b> Figure 1.10</a></li>
+<li class="chapter" data-level="1.5.16" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure111"><i class="fa fa-check"></i><b>1.5.16</b> Figure 1.11</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>2</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="linear-regression.html"><a href="linear-regression.html#motivation-1"><i class="fa fa-check"></i><b>2.1</b> Motivation</a></li>
+<li class="chapter" data-level="2.2" data-path="linear-regression.html"><a href="linear-regression.html#r-packages-and-datasets-for-topic-2"><i class="fa fa-check"></i><b>2.2</b> R Packages and Datasets for Topic 2</a></li>
+<li class="chapter" data-level="2.3" data-path="linear-regression.html"><a href="linear-regression.html#understanding-regression-analysis"><i class="fa fa-check"></i><b>2.3</b> Understanding Regression Analysis</a></li>
+<li class="chapter" data-level="2.4" data-path="linear-regression.html"><a href="linear-regression.html#conducting-linear-regression"><i class="fa fa-check"></i><b>2.4</b> Conducting Linear Regression</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="linear-regression.html"><a href="linear-regression.html#check-data-requirements"><i class="fa fa-check"></i><b>2.4.1</b> Check Data Requirements</a></li>
+<li class="chapter" data-level="2.4.2" data-path="linear-regression.html"><a href="linear-regression.html#model-specification"><i class="fa fa-check"></i><b>2.4.2</b> Model Specification</a></li>
+<li class="chapter" data-level="2.4.3" data-path="linear-regression.html"><a href="linear-regression.html#model-estimation"><i class="fa fa-check"></i><b>2.4.3</b> Model Estimation</a></li>
+<li class="chapter" data-level="2.4.4" data-path="linear-regression.html"><a href="linear-regression.html#model-interpetation"><i class="fa fa-check"></i><b>2.4.4</b> Model Interpetation</a></li>
+<li class="chapter" data-level="2.4.5" data-path="linear-regression.html"><a href="linear-regression.html#model-prediction"><i class="fa fa-check"></i><b>2.4.5</b> Model Prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="linear-regression.html"><a href="linear-regression.html#linear-regression-example"><i class="fa fa-check"></i><b>2.5</b> Linear Regression Example</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="linear-regression.html"><a href="linear-regression.html#overview"><i class="fa fa-check"></i><b>2.5.1</b> Overview</a></li>
+<li class="chapter" data-level="2.5.2" data-path="linear-regression.html"><a href="linear-regression.html#summarize-data"><i class="fa fa-check"></i><b>2.5.2</b> Summarize Data</a>
+<ul>
+<li class="chapter" data-level="2.5.2.1" data-path="linear-regression.html"><a href="linear-regression.html#univariate-summary-statistics"><i class="fa fa-check"></i><b>2.5.2.1</b> Univariate Summary Statistics</a></li>
+<li class="chapter" data-level="2.5.2.2" data-path="linear-regression.html"><a href="linear-regression.html#scatterplot-and-correlation-matrix"><i class="fa fa-check"></i><b>2.5.2.2</b> Scatterplot and Correlation Matrix</a></li>
+<li class="chapter" data-level="2.5.2.3" data-path="linear-regression.html"><a href="linear-regression.html#box-plots"><i class="fa fa-check"></i><b>2.5.2.3</b> Box Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5.3" data-path="linear-regression.html"><a href="linear-regression.html#results"><i class="fa fa-check"></i><b>2.5.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="2.5.3.1" data-path="linear-regression.html"><a href="linear-regression.html#r-output"><i class="fa fa-check"></i><b>2.5.3.1</b> R Output</a></li>
+<li class="chapter" data-level="2.5.3.2" data-path="linear-regression.html"><a href="linear-regression.html#assessing-overall-model-fit"><i class="fa fa-check"></i><b>2.5.3.2</b> Assessing Overall Model Fit</a></li>
+<li class="chapter" data-level="2.5.3.3" data-path="linear-regression.html"><a href="linear-regression.html#individual-independent-variables"><i class="fa fa-check"></i><b>2.5.3.3</b> Individual Independent Variables</a></li>
+<li class="chapter" data-level="2.5.3.4" data-path="linear-regression.html"><a href="linear-regression.html#model-prediction-1"><i class="fa fa-check"></i><b>2.5.3.4</b> Model Prediction</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="linear-regression.html"><a href="linear-regression.html#categorical-ivs"><i class="fa fa-check"></i><b>2.6</b> Categorical IVs</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="linear-regression.html"><a href="linear-regression.html#overview-1"><i class="fa fa-check"></i><b>2.6.1</b> Overview</a></li>
+<li class="chapter" data-level="2.6.2" data-path="linear-regression.html"><a href="linear-regression.html#intercept-shifter"><i class="fa fa-check"></i><b>2.6.2</b> Intercept Shifter</a></li>
+<li class="chapter" data-level="2.6.3" data-path="linear-regression.html"><a href="linear-regression.html#slope-shifter"><i class="fa fa-check"></i><b>2.6.3</b> Slope Shifter</a></li>
+<li class="chapter" data-level="2.6.4" data-path="linear-regression.html"><a href="linear-regression.html#intercept-and-slope-shifter"><i class="fa fa-check"></i><b>2.6.4</b> Intercept and Slope Shifter</a></li>
+<li class="chapter" data-level="2.6.5" data-path="linear-regression.html"><a href="linear-regression.html#multiple-levels"><i class="fa fa-check"></i><b>2.6.5</b> Multiple Levels</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="linear-regression.html"><a href="linear-regression.html#categorical-ivs-example"><i class="fa fa-check"></i><b>2.7</b> Categorical IVs Example</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="linear-regression.html"><a href="linear-regression.html#overview-2"><i class="fa fa-check"></i><b>2.7.1</b> Overview</a></li>
+<li class="chapter" data-level="2.7.2" data-path="linear-regression.html"><a href="linear-regression.html#intercept-shift"><i class="fa fa-check"></i><b>2.7.2</b> Intercept Shift</a></li>
+<li class="chapter" data-level="2.7.3" data-path="linear-regression.html"><a href="linear-regression.html#slope-shift"><i class="fa fa-check"></i><b>2.7.3</b> Slope Shift</a></li>
+<li class="chapter" data-level="2.7.4" data-path="linear-regression.html"><a href="linear-regression.html#intercept-and-slope-shift"><i class="fa fa-check"></i><b>2.7.4</b> Intercept and Slope Shift</a></li>
+<li class="chapter" data-level="2.7.5" data-path="linear-regression.html"><a href="linear-regression.html#intercept-shift-with-multiple-levels"><i class="fa fa-check"></i><b>2.7.5</b> Intercept Shift with Multiple Levels</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="linear-regression.html"><a href="linear-regression.html#suggested-readings-1"><i class="fa fa-check"></i><b>2.8</b> Suggested Readings</a></li>
+<li class="chapter" data-level="2.9" data-path="linear-regression.html"><a href="linear-regression.html#r-code-1"><i class="fa fa-check"></i><b>2.9</b> R Code</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="linear-regression.html"><a href="linear-regression.html#table21"><i class="fa fa-check"></i><b>2.9.1</b> Table 2.1</a></li>
+<li class="chapter" data-level="2.9.2" data-path="linear-regression.html"><a href="linear-regression.html#table22"><i class="fa fa-check"></i><b>2.9.2</b> Table 2.2</a></li>
+<li class="chapter" data-level="2.9.3" data-path="linear-regression.html"><a href="linear-regression.html#table23"><i class="fa fa-check"></i><b>2.9.3</b> Table 2.3</a></li>
+<li class="chapter" data-level="2.9.4" data-path="linear-regression.html"><a href="linear-regression.html#table24"><i class="fa fa-check"></i><b>2.9.4</b> Table 2.4</a></li>
+<li class="chapter" data-level="2.9.5" data-path="linear-regression.html"><a href="linear-regression.html#table25"><i class="fa fa-check"></i><b>2.9.5</b> Table 2.5</a></li>
+<li class="chapter" data-level="2.9.6" data-path="linear-regression.html"><a href="linear-regression.html#table26"><i class="fa fa-check"></i><b>2.9.6</b> Table 2.6</a></li>
+<li class="chapter" data-level="2.9.7" data-path="linear-regression.html"><a href="linear-regression.html#table27"><i class="fa fa-check"></i><b>2.9.7</b> Table 2.7</a></li>
+<li class="chapter" data-level="2.9.8" data-path="linear-regression.html"><a href="linear-regression.html#table28"><i class="fa fa-check"></i><b>2.9.8</b> Table 2.8</a></li>
+<li class="chapter" data-level="2.9.9" data-path="linear-regression.html"><a href="linear-regression.html#table29"><i class="fa fa-check"></i><b>2.9.9</b> Table 2.9</a></li>
+<li class="chapter" data-level="2.9.10" data-path="linear-regression.html"><a href="linear-regression.html#figure21"><i class="fa fa-check"></i><b>2.9.10</b> Figure 2.1</a></li>
+<li class="chapter" data-level="2.9.11" data-path="linear-regression.html"><a href="linear-regression.html#figure22"><i class="fa fa-check"></i><b>2.9.11</b> Figure 2.2</a></li>
+<li class="chapter" data-level="2.9.12" data-path="linear-regression.html"><a href="linear-regression.html#figure23"><i class="fa fa-check"></i><b>2.9.12</b> Figure 2.3</a></li>
+<li class="chapter" data-level="2.9.13" data-path="linear-regression.html"><a href="linear-regression.html#figure24"><i class="fa fa-check"></i><b>2.9.13</b> Figure 2.4</a></li>
+<li class="chapter" data-level="2.9.14" data-path="linear-regression.html"><a href="linear-regression.html#figure25"><i class="fa fa-check"></i><b>2.9.14</b> Figure 2.5</a></li>
+<li class="chapter" data-level="2.9.15" data-path="linear-regression.html"><a href="linear-regression.html#figure26"><i class="fa fa-check"></i><b>2.9.15</b> Figure 2.6</a></li>
+<li class="chapter" data-level="2.9.16" data-path="linear-regression.html"><a href="linear-regression.html#figure27"><i class="fa fa-check"></i><b>2.9.16</b> Figure 2.7</a></li>
+<li class="chapter" data-level="2.9.17" data-path="linear-regression.html"><a href="linear-regression.html#figure28"><i class="fa fa-check"></i><b>2.9.17</b> Figure 2.8</a></li>
+<li class="chapter" data-level="2.9.18" data-path="linear-regression.html"><a href="linear-regression.html#figure29"><i class="fa fa-check"></i><b>2.9.18</b> Figure 2.9</a></li>
+<li class="chapter" data-level="2.9.19" data-path="linear-regression.html"><a href="linear-regression.html#figure210"><i class="fa fa-check"></i><b>2.9.19</b> Figure 2.10</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="logistic-regression.html"><a href="logistic-regression.html"><i class="fa fa-check"></i><b>3</b> Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="logistic-regression.html"><a href="logistic-regression.html#motivation-2"><i class="fa fa-check"></i><b>3.1</b> Motivation</a></li>
+<li class="chapter" data-level="3.2" data-path="logistic-regression.html"><a href="logistic-regression.html#r-packages-and-datasets-for-topic-3"><i class="fa fa-check"></i><b>3.2</b> R Packages and Datasets for Topic 3</a></li>
+<li class="chapter" data-level="3.3" data-path="logistic-regression.html"><a href="logistic-regression.html#why-not-use-linear-regression"><i class="fa fa-check"></i><b>3.3</b> Why not use linear regression?</a></li>
+<li class="chapter" data-level="3.4" data-path="logistic-regression.html"><a href="logistic-regression.html#understanding-logistic-regression"><i class="fa fa-check"></i><b>3.4</b> Understanding Logistic Regression</a></li>
+<li class="chapter" data-level="3.5" data-path="logistic-regression.html"><a href="logistic-regression.html#conducting-logistic-regression"><i class="fa fa-check"></i><b>3.5</b> Conducting Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="logistic-regression.html"><a href="logistic-regression.html#model-estimation-1"><i class="fa fa-check"></i><b>3.5.1</b> Model Estimation</a></li>
+<li class="chapter" data-level="3.5.2" data-path="logistic-regression.html"><a href="logistic-regression.html#assessing-model-fit"><i class="fa fa-check"></i><b>3.5.2</b> Assessing Model Fit</a>
+<ul>
+<li class="chapter" data-level="3.5.2.1" data-path="logistic-regression.html"><a href="logistic-regression.html#goodness-of-fit-measures"><i class="fa fa-check"></i><b>3.5.2.1</b> Goodness-of-Fit Measures</a></li>
+<li class="chapter" data-level="3.5.2.2" data-path="logistic-regression.html"><a href="logistic-regression.html#classification-matrix"><i class="fa fa-check"></i><b>3.5.2.2</b> Classification Matrix</a></li>
+<li class="chapter" data-level="3.5.2.3" data-path="logistic-regression.html"><a href="logistic-regression.html#roc-curve"><i class="fa fa-check"></i><b>3.5.2.3</b> ROC Curve</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5.3" data-path="logistic-regression.html"><a href="logistic-regression.html#interpreting-coefficients"><i class="fa fa-check"></i><b>3.5.3</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="3.5.4" data-path="logistic-regression.html"><a href="logistic-regression.html#gain-and-lift"><i class="fa fa-check"></i><b>3.5.4</b> Gain and Lift</a>
+<ul>
+<li class="chapter" data-level="3.5.4.1" data-path="logistic-regression.html"><a href="logistic-regression.html#gain"><i class="fa fa-check"></i><b>3.5.4.1</b> Gain</a></li>
+<li class="chapter" data-level="3.5.4.2" data-path="logistic-regression.html"><a href="logistic-regression.html#lift"><i class="fa fa-check"></i><b>3.5.4.2</b> Lift</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5.5" data-path="logistic-regression.html"><a href="logistic-regression.html#sensitivityspecificity-plots"><i class="fa fa-check"></i><b>3.5.5</b> Sensitivity/Specificity Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="logistic-regression.html"><a href="logistic-regression.html#logistic-regression-example"><i class="fa fa-check"></i><b>3.6</b> Logistic Regression Example</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="logistic-regression.html"><a href="logistic-regression.html#overview-3"><i class="fa fa-check"></i><b>3.6.1</b> Overview</a></li>
+<li class="chapter" data-level="3.6.2" data-path="logistic-regression.html"><a href="logistic-regression.html#estimation-results"><i class="fa fa-check"></i><b>3.6.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="3.6.3" data-path="logistic-regression.html"><a href="logistic-regression.html#overall-model-fit"><i class="fa fa-check"></i><b>3.6.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="3.6.4" data-path="logistic-regression.html"><a href="logistic-regression.html#interpreting-coefficients-1"><i class="fa fa-check"></i><b>3.6.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="3.6.5" data-path="logistic-regression.html"><a href="logistic-regression.html#gain-1"><i class="fa fa-check"></i><b>3.6.5</b> Gain</a></li>
+<li class="chapter" data-level="3.6.6" data-path="logistic-regression.html"><a href="logistic-regression.html#lift-1"><i class="fa fa-check"></i><b>3.6.6</b> Lift</a></li>
+<li class="chapter" data-level="3.6.7" data-path="logistic-regression.html"><a href="logistic-regression.html#sensitivityspecificity-plots-1"><i class="fa fa-check"></i><b>3.6.7</b> Sensitivity/Specificity Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="logistic-regression.html"><a href="logistic-regression.html#suggested-readings-2"><i class="fa fa-check"></i><b>3.7</b> Suggested Readings</a></li>
+<li class="chapter" data-level="3.8" data-path="logistic-regression.html"><a href="logistic-regression.html#r-code-2"><i class="fa fa-check"></i><b>3.8</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html"><i class="fa fa-check"></i><b>4</b> Targeting and Retaining Customers</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#r-packages-and-datasets-for-topic-4"><i class="fa fa-check"></i><b>4.1</b> R Packages and Datasets for Topic 4</a></li>
+<li class="chapter" data-level="4.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#targeting-customers"><i class="fa fa-check"></i><b>4.2</b> Targeting Customers</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#goal"><i class="fa fa-check"></i><b>4.2.1</b> Goal</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#retaining-customers"><i class="fa fa-check"></i><b>4.3</b> Retaining Customers</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#goal-1"><i class="fa fa-check"></i><b>4.3.1</b> Goal</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#targeting-customers-linear-regression-example"><i class="fa fa-check"></i><b>4.4</b> Targeting Customers (Linear Regression) Example</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#overview-4"><i class="fa fa-check"></i><b>4.4.1</b> Overview</a></li>
+<li class="chapter" data-level="4.4.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#summarize-data-1"><i class="fa fa-check"></i><b>4.4.2</b> Summarize Data</a></li>
+<li class="chapter" data-level="4.4.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#model-specification-1"><i class="fa fa-check"></i><b>4.4.3</b> Model Specification</a></li>
+<li class="chapter" data-level="4.4.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#model-interpretation"><i class="fa fa-check"></i><b>4.4.4</b> Model Interpretation</a>
+<ul>
+<li class="chapter" data-level="4.4.4.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#results-1"><i class="fa fa-check"></i><b>4.4.4.1</b> Results</a></li>
+<li class="chapter" data-level="4.4.4.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#testing-overall-model-significance"><i class="fa fa-check"></i><b>4.4.4.2</b> Testing Overall Model Significance</a></li>
+<li class="chapter" data-level="4.4.4.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#assessing-overall-model-fit-1"><i class="fa fa-check"></i><b>4.4.4.3</b> Assessing overall model fit</a></li>
+<li class="chapter" data-level="4.4.4.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpret-individual-ivs"><i class="fa fa-check"></i><b>4.4.4.4</b> Interpret Individual IVs</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#conclusion"><i class="fa fa-check"></i><b>4.4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#targeting-customers-logistic-regression"><i class="fa fa-check"></i><b>4.5</b> Targeting Customers (Logistic Regression)</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#overview-5"><i class="fa fa-check"></i><b>4.5.1</b> Overview</a></li>
+<li class="chapter" data-level="4.5.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#estimation-results-1"><i class="fa fa-check"></i><b>4.5.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="4.5.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#overall-model-fit-1"><i class="fa fa-check"></i><b>4.5.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="4.5.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpreting-coefficients-2"><i class="fa fa-check"></i><b>4.5.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="4.5.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpreting-coefficients-visually"><i class="fa fa-check"></i><b>4.5.5</b> Interpreting Coefficients Visually</a></li>
+<li class="chapter" data-level="4.5.6" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#gain-chart"><i class="fa fa-check"></i><b>4.5.6</b> Gain Chart</a></li>
+<li class="chapter" data-level="4.5.7" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#lift-chart"><i class="fa fa-check"></i><b>4.5.7</b> Lift Chart</a></li>
+<li class="chapter" data-level="4.5.8" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#conclusion-1"><i class="fa fa-check"></i><b>4.5.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#suggested-readings-3"><i class="fa fa-check"></i><b>4.6</b> Suggested Readings</a></li>
+<li class="chapter" data-level="4.7" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#r-code-3"><i class="fa fa-check"></i><b>4.7</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="segmentation.html"><a href="segmentation.html"><i class="fa fa-check"></i><b>5</b> Segmentation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="segmentation.html"><a href="segmentation.html#r-packages-and-datasets-for-topic-5"><i class="fa fa-check"></i><b>5.1</b> R Packages and Datasets for Topic 5</a></li>
+<li class="chapter" data-level="5.2" data-path="segmentation.html"><a href="segmentation.html#segmentation-overview"><i class="fa fa-check"></i><b>5.2</b> Segmentation Overview</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="segmentation.html"><a href="segmentation.html#why-segment-the-market"><i class="fa fa-check"></i><b>5.2.1</b> Why segment the market?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="segmentation.html"><a href="segmentation.html#market-segment-vs.-segmentation"><i class="fa fa-check"></i><b>5.2.2</b> Market Segment vs. Segmentation</a></li>
+<li class="chapter" data-level="5.2.3" data-path="segmentation.html"><a href="segmentation.html#criteria-for-successful-segmentation"><i class="fa fa-check"></i><b>5.2.3</b> Criteria for Successful Segmentation</a></li>
+<li class="chapter" data-level="5.2.4" data-path="segmentation.html"><a href="segmentation.html#bases-for-consumer-markets"><i class="fa fa-check"></i><b>5.2.4</b> Bases for Consumer Markets</a>
+<ul>
+<li class="chapter" data-level="5.2.4.1" data-path="segmentation.html"><a href="segmentation.html#which-base-to-use"><i class="fa fa-check"></i><b>5.2.4.1</b> Which base to use?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="segmentation.html"><a href="segmentation.html#cluster-analysis"><i class="fa fa-check"></i><b>5.3</b> Cluster Analysis</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="segmentation.html"><a href="segmentation.html#overview-6"><i class="fa fa-check"></i><b>5.3.1</b> Overview</a></li>
+<li class="chapter" data-level="5.3.2" data-path="segmentation.html"><a href="segmentation.html#measures-of-similarity"><i class="fa fa-check"></i><b>5.3.2</b> Measures of Similarity</a>
+<ul>
+<li class="chapter" data-level="5.3.2.1" data-path="segmentation.html"><a href="segmentation.html#continuous-data"><i class="fa fa-check"></i><b>5.3.2.1</b> Continuous data</a></li>
+<li class="chapter" data-level="5.3.2.2" data-path="segmentation.html"><a href="segmentation.html#binary-data"><i class="fa fa-check"></i><b>5.3.2.2</b> Binary Data</a></li>
+<li class="chapter" data-level="5.3.2.3" data-path="segmentation.html"><a href="segmentation.html#mixed-data"><i class="fa fa-check"></i><b>5.3.2.3</b> Mixed data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3.3" data-path="segmentation.html"><a href="segmentation.html#assigning-objects"><i class="fa fa-check"></i><b>5.3.3</b> Assigning Objects</a>
+<ul>
+<li class="chapter" data-level="5.3.3.1" data-path="segmentation.html"><a href="segmentation.html#hierarchical-agglomerative"><i class="fa fa-check"></i><b>5.3.3.1</b> Hierarchical: Agglomerative</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3.4" data-path="segmentation.html"><a href="segmentation.html#describe-the-segments"><i class="fa fa-check"></i><b>5.3.4</b> Describe the Segments</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="segmentation.html"><a href="segmentation.html#segmentation-cluster-analysis-example"><i class="fa fa-check"></i><b>5.4</b> Segmentation (Cluster Analysis) Example</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="segmentation.html"><a href="segmentation.html#overview-7"><i class="fa fa-check"></i><b>5.4.1</b> Overview</a></li>
+<li class="chapter" data-level="5.4.2" data-path="segmentation.html"><a href="segmentation.html#examine-the-data"><i class="fa fa-check"></i><b>5.4.2</b> Examine the Data</a></li>
+<li class="chapter" data-level="5.4.3" data-path="segmentation.html"><a href="segmentation.html#hierarchical-cluster-analysis"><i class="fa fa-check"></i><b>5.4.3</b> Hierarchical Cluster Analysis</a></li>
+<li class="chapter" data-level="5.4.4" data-path="segmentation.html"><a href="segmentation.html#k-means-cluster-analysis"><i class="fa fa-check"></i><b>5.4.4</b> <em>k-Means</em> Cluster Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="segmentation.html"><a href="segmentation.html#suggested-readings-4"><i class="fa fa-check"></i><b>5.5</b> Suggested Readings</a></li>
+<li class="chapter" data-level="5.6" data-path="segmentation.html"><a href="segmentation.html#r-code-4"><i class="fa fa-check"></i><b>5.6</b> R Code</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MKT 4320: Marketing Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="segmentation" class="section level1" number="5">
+<h1><span class="header-section-number">Topic 5</span> Segmentation</h1>
+<div id="r-packages-and-datasets-for-topic-5" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> R Packages and Datasets for Topic 5</h2>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="segmentation.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb81-2"><a href="segmentation.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb81-3"><a href="segmentation.html#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb81-4"><a href="segmentation.html#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
+<span id="cb81-5"><a href="segmentation.html#cb81-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
+<span id="cb81-6"><a href="segmentation.html#cb81-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic05/ffseg.rdata&quot;</span>)</span></code></pre></div>
+</div>
+<div id="segmentation-overview" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Segmentation Overview</h2>
+<div id="why-segment-the-market" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Why segment the market?</h3>
+<ul>
+<li>Markets are heterogeneous
+<ul>
+<li>Difficult to meet needs with one marketing mix</li>
+</ul></li>
+<li>Can create homogeneous segments
+<ul>
+<li>Each segment offered a different marketing mix</li>
+</ul></li>
+</ul>
+</div>
+<div id="market-segment-vs.-segmentation" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Market Segment vs. Segmentation</h3>
+<p><strong><em>Market Segment</em></strong><br />
+Subgroup of people or organizations sharing one or more characteristics that cause them to have similar product needs.</p>
+<p><strong><em>Market Segmentation</em></strong><br />
+Process of dividing a market into meaningful, relatively similar, and identifiable segments or groups.</p>
+</div>
+<div id="criteria-for-successful-segmentation" class="section level3" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Criteria for Successful Segmentation</h3>
+<p><strong>Identifiable and Measurable</strong><br />
+Characteristics provide a basis for segmentation</p>
+<p><strong>Substantial</strong><br />
+Large and profitable enough to make it worthwhile</p>
+<p><strong>Accessible</strong><br />
+Able to receive communications and distributions</p>
+<p><strong>Responsive</strong><br />
+Respond to marketing efforts and changes in mix</p>
+</div>
+<div id="bases-for-consumer-markets" class="section level3" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Bases for Consumer Markets</h3>
+<p><strong>Behavioral Segmentation</strong></p>
+<ul>
+<li>Benefits sought (<em>e.g., quality, taste, convenience, excitement, etc.</em>)</li>
+<li>Product usage (<em>e.g., heavy, light, non, former, first-time, etc.</em>)</li>
+<li>Usage situations (<em>e.g., celebration, emergency, everyday, etc.</em>)</li>
+<li>Price sensitivity (<em>e.g., value-conscious, status-conscious, etc.</em>)</li>
+</ul>
+<p><strong>Demographic Segmentation</strong></p>
+<ul>
+<li>Age</li>
+<li>Gender</li>
+<li>Income</li>
+<li>Occupation</li>
+<li>Education</li>
+<li>Ethnicity</li>
+<li>Generation</li>
+</ul>
+<p><strong>Psychographic Segmentation</strong></p>
+<ul>
+<li>Personality (<em>e.g., outgoing, shy, materialistic, controlled, etc.</em>)</li>
+<li>Lifestyle (<em>e.g., homebody, couch potato, workaholic, etc.</em>)</li>
+<li>Motives (<em>e.g., safety, status, relaxation, convenience, etc.</em>)</li>
+</ul>
+<p><strong>Geographic Segmentation</strong></p>
+<ul>
+<li>Regional</li>
+<li>City size</li>
+<li>Population density</li>
+<li>Block group</li>
+<li>Climate</li>
+</ul>
+<div id="which-base-to-use" class="section level4" number="5.2.4.1">
+<h4><span class="header-section-number">5.2.4.1</span> Which base to use?</h4>
+<ul>
+<li>Using Geographics or Demographics is easy, but it won’t help determine needs.</li>
+<li>Knowing how a product fits a lifestyle or benefits consumers seek is important, but it won’t help identify specific customers.</li>
+<li>A combination of bases likely works best, but the bases to be used depend on the purpose of segmentation.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="cluster-analysis" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Cluster Analysis</h2>
+<div id="overview-6" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Overview</h3>
+<p><strong><em>Cluster analysis</em></strong> classifies objects so that objects are similar to others in the cluster with respect to some predetermined criterion.</p>
+<ul>
+<li>Resulting clusters exhibit:
+<ul>
+<li>High within-cluster homogeneity (<span class="math inline">\(a\)</span> in Figure <a href="segmentation.html#fig:t5clusterexample">5.1</a>)</li>
+<li>High between-cluster heterogeneity (<span class="math inline">\(b\)</span> in Figure<a href="segmentation.html#fig:t5clusterexample">5.1</a>)</li>
+</ul></li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:t5clusterexample"></span>
+<img src="Topic05/Cluster1.png" alt="Cluster Example" width="50%" />
+<p class="caption">
+Figure 5.1: Cluster Example
+</p>
+</div>
+<ul>
+<li>Basic steps
+<ul>
+<li>Choose variables (i.e., bases)</li>
+<li>Define measure of similarity</li>
+<li>Develop method for assigning objects</li>
+</ul></li>
+</ul>
+</div>
+<div id="measures-of-similarity" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Measures of Similarity</h3>
+<p>Similarity measure depends on data type</p>
+<ul>
+<li>For continuous data…<br>Use distance-type measures</li>
+<li>For binary data…<br>Use similarity coefficients</li>
+<li>For mixed data…<br>Use special measures</li>
+</ul>
+<div id="continuous-data" class="section level4" number="5.3.2.1">
+<h4><span class="header-section-number">5.3.2.1</span> Continuous data</h4>
+<p>Distance-type measures</p>
+<ul>
+<li>Euclidean: <span class="math inline">\(\sqrt{(x_{1i}-x_{1j})^2 + \cdots +(x_{ni}-x_{nj})^2}\)</span></li>
+<li>Squared Euclidean: <span class="math inline">\((x_{1i}-x_{1j})^2 + \cdots +(x_{ni}-x_{nj})^2\)</span></li>
+<li>Absolute: <span class="math inline">\(|x_{1i}-x_{1j}|^2 + \cdots +|x_{ni}-x_{nj}|^2\)</span></li>
+<li>NOTE: If all variables are continuous and measured on different scales, best to standardize them first</li>
+</ul>
+<p>Euclidean Distance Example</p>
+<ul>
+<li>Suppose three individuals rated importance of three attributes</li>
+</ul>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Importance
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Person
+</th>
+<th style="text-align:left;">
+Price
+</th>
+<th style="text-align:left;">
+Quality
+</th>
+<th style="text-align:left;">
+Service
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Alex
+</td>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sam
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pat
+</td>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Calculate Euclidean Distances between each pair
+<ul>
+<li>Alex/Sam: <span class="math inline">\(\sqrt{6-5)^2+(5-1)^2+(7-2)^2}=\sqrt{42}=6.48\)</span></li>
+<li>Alex/Pat: <span class="math inline">\(\sqrt{6-6)^2+(5-6)^2+(7-5)^2}=\sqrt{5}=2.24\)</span></li>
+<li>Sam/Pat: <span class="math inline">\(\sqrt{5-6)^2+(1-6)^2+(2-5)^2}=\sqrt{35}=5.92\)</span></li>
+</ul></li>
+<li>Pairwise Similarity Matrix</li>
+</ul>
+<table style="color: black; width: auto !important; margin-left: auto; margin-right: auto;" class="table">
+<thead>
+<tr>
+<th style="text-align:left;">
+Person
+</th>
+<th style="text-align:left;">
+Alex
+</th>
+<th style="text-align:left;">
+Sam
+</th>
+<th style="text-align:left;">
+Pat
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: white !important;">
+Alex
+</td>
+<td style="text-align:left;background-color: white !important;">
+0
+</td>
+<td style="text-align:left;background-color: black !important;">
+NA
+</td>
+<td style="text-align:left;background-color: black !important;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;">
+Sam
+</td>
+<td style="text-align:left;background-color: white !important;">
+6.48
+</td>
+<td style="text-align:left;background-color: white !important;">
+0
+</td>
+<td style="text-align:left;background-color: black !important;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;">
+Pat
+</td>
+<td style="text-align:left;background-color: white !important;">
+2.24
+</td>
+<td style="text-align:left;background-color: white !important;">
+5.92
+</td>
+<td style="text-align:left;background-color: white !important;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="binary-data" class="section level4" number="5.3.2.2">
+<h4><span class="header-section-number">5.3.2.2</span> Binary Data</h4>
+<p>Similarity Coefficients</p>
+<ul>
+<li><p>Based on a <span class="math inline">\(2×2\)</span> cross-tab between objects</p>
+<p><img src="Topic05/Binary1.png" width="50%" /></p>
+<p><span class="math inline">\(a\)</span> = number of variables where <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> both had <span class="math inline">\(1\)</span>s<br />
+<span class="math inline">\(d\)</span> = number of variables where <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> both had <span class="math inline">\(0\)</span>s<br />
+<span class="math inline">\(b\)</span> = number of variables where <span class="math inline">\(i\)</span> is <span class="math inline">\(1\)</span> and <span class="math inline">\(j\)</span> is <span class="math inline">\(0\)</span><br />
+<span class="math inline">\(c\)</span> = number of variables where <span class="math inline">\(i\)</span> is <span class="math inline">\(0\)</span> and <span class="math inline">\(j\)</span> is <span class="math inline">\(1\)</span></p></li>
+<li><p>Matching coefficient: <span class="math inline">\((a+d)/(a+b+c+d)\)</span></p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Research
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+<p>Person</p>
+</th>
+<th style="text-align:left;">
+<p>Price</p>
+</th>
+<th style="text-align:left;">
+<p>Quality</p>
+</th>
+<th style="text-align:left;">
+<p>Service</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>Alex</p>
+</td>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Sam</p>
+</td>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:left;">
+<p>0</p>
+</td>
+<td style="text-align:left;">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Pat</p>
+</td>
+<td style="text-align:left;">
+<p>0</p>
+</td>
+<td style="text-align:left;">
+<p>0</p>
+</td>
+<td style="text-align:left;">
+<p>0</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Calculate matching coefficient between each pair</p>
+<ul>
+<li>Alex/Sam: <span class="math inline">\((1+0)/(1+2+0+0)=1/3=33.3\%\)</span></li>
+<li>Alex/Pat: <span class="math inline">\((0+0)/(0+3+0+0)=0/3=0.0\%\)</span></li>
+<li>Sam/Pat: <span class="math inline">\((0+2)/(0+1+0+2)=2/3=66.6\%\)</span></li>
+</ul></li>
+<li><p>Pairwise similarity matrix</p>
+<table style="color: black; width: auto !important; margin-left: auto; margin-right: auto;" class="table">
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Person</p>
+</th>
+<th style="text-align:left;">
+<p>Alex</p>
+</th>
+<th style="text-align:left;">
+<p>Sam</p>
+</th>
+<th style="text-align:left;">
+<p>Pat</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: white !important;">
+<p>Alex</p>
+</td>
+<td style="text-align:left;background-color: white !important;">
+<p>100%</p>
+</td>
+<td style="text-align:left;background-color: black !important;">
+<p>NA</p>
+</td>
+<td style="text-align:left;background-color: black !important;">
+<p>NA</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;">
+<p>Sam</p>
+</td>
+<td style="text-align:left;background-color: white !important;">
+<p>33.3%</p>
+</td>
+<td style="text-align:left;background-color: white !important;">
+<p>100%</p>
+</td>
+<td style="text-align:left;background-color: black !important;">
+<p>NA</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;">
+<p>Pat</p>
+</td>
+<td style="text-align:left;background-color: white !important;">
+<p>0.0%</p>
+</td>
+<td style="text-align:left;background-color: white !important;">
+<p>66.6%</p>
+</td>
+<td style="text-align:left;background-color: white !important;">
+<p>100%</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+<div id="mixed-data" class="section level4" number="5.3.2.3">
+<h4><span class="header-section-number">5.3.2.3</span> Mixed data</h4>
+<p>Special measures</p>
+<ul>
+<li>Gower coefficent
+<ul>
+<li>Creates a measure between 0 and 1 for each variable</li>
+<li>For continuous variables:
+<ul>
+<li>For each variable, absolute distance divided by range for that variable</li>
+</ul></li>
+<li>For binary variables:
+<ul>
+<li>Matching as before</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="assigning-objects" class="section level3" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Assigning Objects</h3>
+<ul>
+<li><strong>Heirarchical</strong>: Construct a treelike structure up (agglomerative) or down (divisive) based on similarity of objects</li>
+<li><strong>Partitioning</strong>: Assign objects to one of a specified number of clusters based on similarity of object to the cluster</li>
+</ul>
+<div id="hierarchical-agglomerative" class="section level4" number="5.3.3.1">
+<h4><span class="header-section-number">5.3.3.1</span> Hierarchical: Agglomerative</h4>
+<div id="stages" class="section level5" number="5.3.3.1.1">
+<h5><span class="header-section-number">5.3.3.1.1</span> Stages</h5>
+<ol style="list-style-type: decimal">
+<li><p>Consider each object as its own cluster</p></li>
+<li><p>Join two closest objects based on similarity measure and algorithm</p></li>
+<li><p>Join next two closest objects (individual or cluster)</p></li>
+<li><p>Repeat step 3 until all items clustered</p>
+<div class="figure"><span style="display:block;" id="fig:t5dendro1"></span>
+<img src="_main_files/figure-html/t5dendro1-1.png" alt="Sample Dendrogram" width="672" />
+<p class="caption">
+Figure 5.2: Sample Dendrogram
+</p>
+</div></li>
+</ol>
+</div>
+<div id="linkage-rules" class="section level5" number="5.3.3.1.2">
+<h5><span class="header-section-number">5.3.3.1.2</span> Linkage Rules</h5>
+<p>How to compute distance between clusters?</p>
+<p>Four main linkage rules</p>
+<p><strong>Single</strong></p>
+<ul>
+<li>Join clusters where minimum distance of any two cases between clusters is smallest<br />
+
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="Topic05/SingleLink.png" alt="Single Linkage Visualization" width="50%" />
+<p class="caption">
+Figure 5.3: Single Linkage Visualization
+</p>
+</div>
+<span class="math display">\[\begin{align}
+  \left. \begin{array}{l}
+     d_1 = .55 \\
+     d_2 = .84 \\
+     d_3 = .85
+  \end{array}\right\} \text{Red and Blue clusters will be joined}
+\end{align}\]</span></li>
+</ul>
+<p><strong>Complete</strong></p>
+<ul>
+<li>Join clusters where maximum distance of any two cases between clusters is smallest<br />
+
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="Topic05/CompleteLink.png" alt="Complete Linkage Visualization" width="50%" />
+<p class="caption">
+Figure 5.4: Complete Linkage Visualization
+</p>
+</div>
+<span class="math display">\[\begin{align}
+  \left. \begin{array}{l}
+     d_1 = 1.51 \\
+     d_2 = 1.51 \\
+     d_3 = 1.34
+  \end{array}\right\} \text{Red and Green clusters will be joined}
+\end{align}\]</span></li>
+</ul>
+<p><strong>Average</strong></p>
+<ul>
+<li>Minimum average distance between all cases in one cluster and another cluster<br />
+
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="Topic05/AverageLink.png" alt="Average Linkage Visualization" width="50%" />
+<p class="caption">
+Figure 5.5: Average Linkage Visualization
+</p>
+</div></li>
+</ul>
+<p><strong>Ward’s</strong></p>
+<ul>
+<li>Join clusters with a minimum increase in the sum of squared distances within all clusters combined</li>
+</ul>
+</div>
+<div id="problems" class="section level5" number="5.3.3.1.3">
+<h5><span class="header-section-number">5.3.3.1.3</span> Problems</h5>
+<ul>
+<li>Which linkage rule?
+<ul>
+<li>Ward’s is often a good choice, but may need to look at others based on results</li>
+</ul></li>
+<li>How many clusters?
+<ul>
+<li>With small samples, dendrograms work well</li>
+<li>With large samples, can use stopping rules</li>
+<li>Consider managerial implications</li>
+</ul></li>
+</ul>
+</div>
+<div id="how-many-clusters" class="section level5" number="5.3.3.1.4">
+<h5><span class="header-section-number">5.3.3.1.4</span> How Many Clusters?</h5>
+<ul>
+<li>Using a dendrogram for small samples
+<ul>
+<li>Draw horizontal line to visualize clusters easier</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:t5dendro2"></span>
+<img src="_main_files/figure-html/t5dendro2-1.png" alt="Horizontal Line Showing 4 Clusters" width="672" />
+<p class="caption">
+Figure 5.6: Horizontal Line Showing 4 Clusters
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:t5dendro3"></span>
+<img src="_main_files/figure-html/t5dendro3-1.png" alt="3-Cluster Solution" width="672" />
+<p class="caption">
+Figure 5.7: 3-Cluster Solution
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:t5dendro4"></span>
+<img src="_main_files/figure-html/t5dendro4-1.png" alt="4-Cluster Solution" width="672" />
+<p class="caption">
+Figure 5.8: 4-Cluster Solution
+</p>
+</div></li>
+<li>Use a stopping rule for large samples
+<ul>
+<li>The Duda-Hart stopping rule provides an index value for different cluster solutions</li>
+<li>Large values of the index, combined with small values of pseudo-<em>T</em>-squared values indicate more distinct solutions
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Num.Clusters
+</th>
+<th style="text-align:center;">
+Duda.Hart
+</th>
+<th style="text-align:center;">
+pseudo.t.2
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0.8091
+</td>
+<td style="text-align:center;">
+177.0092
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+2
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+0.8867
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+56.7367
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+0.8599
+</td>
+<td style="text-align:center;">
+58.4966
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+4
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+0.9090
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+30.4322
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+0.8423
+</td>
+<td style="text-align:center;">
+37.4369
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+6
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+0.8787
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+24.4393
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+0.8562
+</td>
+<td style="text-align:center;">
+26.3746
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+8
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+0.8852
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+16.2166
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+0.7997
+</td>
+<td style="text-align:center;">
+27.3073
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+0.8550
+</td>
+<td style="text-align:center;">
+17.2916
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+11
+</td>
+<td style="text-align:center;">
+0.8116
+</td>
+<td style="text-align:center;">
+19.7330
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+12
+</td>
+<td style="text-align:center;">
+0.8173
+</td>
+<td style="text-align:center;">
+18.5591
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+13
+</td>
+<td style="text-align:center;">
+0.8495
+</td>
+<td style="text-align:center;">
+15.7674
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+14
+</td>
+<td style="text-align:center;">
+0.8112
+</td>
+<td style="text-align:center;">
+16.2956
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+15
+</td>
+<td style="text-align:center;">
+0.8576
+</td>
+<td style="text-align:center;">
+13.7770
+</td>
+</tr>
+</tbody>
+</table>
+<h4 id="partitioning-k-means">Partitioning: <span class="math inline">\(k\)</span>-means</h4></li>
+</ul></li>
+</ul>
+</div>
+<div id="stages-1" class="section level5" number="5.3.3.1.5">
+<h5><span class="header-section-number">5.3.3.1.5</span> Stages</h5>
+<ol style="list-style-type: decimal">
+<li>Identify number of clusters desired</li>
+<li>Identify the cluster “seeds”</li>
+<li>Allocate all objects to cluster based on distance from “seed”</li>
+<li>Calculate new cluster centers</li>
+<li>Reallocate items based on distance to cluster centers one at a time</li>
+<li>Repeat 4 &amp; 5 until within-cluster variability is minimized</li>
+</ol>
+</div>
+<div id="illustration-for-3-cluster-solution" class="section level5" number="5.3.3.1.6">
+<h5><span class="header-section-number">5.3.3.1.6</span> Illustration for 3-cluster solution</h5>
+<ol style="list-style-type: decimal">
+<li><p>Ask for 3-cluster solution</p></li>
+<li><p>Randomly assign cluster seeds<br />
+<img src="Topic05/kmeans1.gif" width="50%" /></p></li>
+<li><p>Allocate all objects based on distance to seeds<br />
+<img src="Topic05/kmeans2.gif" width="50%" /></p></li>
+<li><p>Calculate new cluster centers<br />
+<img src="Topic05/kmeans3.gif" width="50%" /></p></li>
+<li><p>Reallocate items based on distance to cluster centers one at a time<br />
+<img src="Topic05/kmeans4.gif" width="50%" /></p></li>
+<li><p>Repeat Step 4: Calculate new cluster centers<br />
+<img src="Topic05/kmeans5.gif" width="50%" /></p></li>
+<li><p>Repeat Step 5: Reallocate items based on distance to cluster centers one at a time<br />
+<img src="Topic05/kmeans6.gif" width="50%" /></p></li>
+<li><p>Repeat Step 4: Calculate new cluster centers<br />
+<img src="Topic05/kmeans7.gif" width="50%" /></p></li>
+</ol>
+<ul>
+<li>At this point, no further reallocation can make the within cluster variance smaller, so this is the best 3-cluster solution</li>
+</ul>
+</div>
+<div id="how-many-clusters-1" class="section level5" number="5.3.3.1.7">
+<h5><span class="header-section-number">5.3.3.1.7</span> How many clusters?</h5>
+<ul>
+<li>Create a scree plot based on the within sum of squares (WSS) for about 1 to 15 different solutions</li>
+<li>Compare solutions around the scree</li>
+<li>Consider managerial implications<br />
+
+<div class="figure"><span style="display:block;" id="fig:t5scree01"></span>
+<img src="_main_files/figure-html/t5scree01-1.png" alt="Example Scree Plot" width="672" />
+<p class="caption">
+Figure 5.9: Example Scree Plot
+</p>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="describe-the-segments" class="section level3" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Describe the Segments</h3>
+<ul>
+<li>Answers the question: How do the clusters differ on relevant dimensions?</li>
+<li>Create a profile using measures of central tendency, dispersion, etc. for variables used in clustering</li>
+<li>Profile clusters using data not included in clustering to get a feel for who is in the clusters</li>
+<li>Can use statistical techiniques to help identify characteristics that predict cluster membership</li>
+</ul>
+</div>
+</div>
+<div id="segmentation-cluster-analysis-example" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Segmentation (Cluster Analysis) Example</h2>
+<div id="overview-7" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Overview</h3>
+<p><em>Goal</em></p>
+<ul>
+<li>Segment students based on importance of attributes when choosing a fast food restaurant</li>
+<li>Keep number of clusters manageable</li>
+</ul>
+<p><em>Bases: Attribute Importance</em></p>
+<ul>
+<li>Cleanliness (<span class="math inline">\(clean\)</span>)</li>
+<li>Variety (<span class="math inline">\(variety\)</span>)</li>
+<li>Food Quality (<span class="math inline">\(quality\)</span>)</li>
+<li>Location (<span class="math inline">\(location\)</span>)</li>
+<li>Service Speed (<span class="math inline">\(speed\)</span>)</li>
+<li>Price (<span class="math inline">\(price\)</span>)</li>
+<li>Healthy options (<span class="math inline">\(healthy\)</span>)</li>
+<li>Friendliness (<span class="math inline">\(friendly\)</span>)</li>
+</ul>
+<p><em>Additional Information</em></p>
+<ul>
+<li>Frequency of eating out</li>
+<li>Class level</li>
+<li>Meal plan</li>
+<li>Gender</li>
+<li>Living location</li>
+<li>College</li>
+</ul>
+</div>
+<div id="examine-the-data" class="section level3" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Examine the Data</h3>
+<caption>
+<span id="tab:t5exdata01">Table 5.1: </span> Summary Statistics for Cluster Variables (<a href="segmentation.html#table-reftabt5exdata01">R code</a>)
+</caption>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+N
+</th>
+<th style="text-align:left;">
+Mean
+</th>
+<th style="text-align:left;">
+Std. Dev.
+</th>
+<th style="text-align:left;">
+Min
+</th>
+<th style="text-align:left;">
+Pctl. 25
+</th>
+<th style="text-align:left;">
+Pctl. 75
+</th>
+<th style="text-align:left;">
+Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+clean
+</td>
+<td style="text-align:left;">
+752
+</td>
+<td style="text-align:left;">
+4.093
+</td>
+<td style="text-align:left;">
+0.898
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+variety
+</td>
+<td style="text-align:left;">
+752
+</td>
+<td style="text-align:left;">
+3.339
+</td>
+<td style="text-align:left;">
+0.989
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+quality
+</td>
+<td style="text-align:left;">
+752
+</td>
+<td style="text-align:left;">
+4.165
+</td>
+<td style="text-align:left;">
+0.814
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+location
+</td>
+<td style="text-align:left;">
+752
+</td>
+<td style="text-align:left;">
+3.701
+</td>
+<td style="text-align:left;">
+0.971
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+speed
+</td>
+<td style="text-align:left;">
+752
+</td>
+<td style="text-align:left;">
+3.652
+</td>
+<td style="text-align:left;">
+0.9
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+healthy
+</td>
+<td style="text-align:left;">
+752
+</td>
+<td style="text-align:left;">
+3.045
+</td>
+<td style="text-align:left;">
+1.204
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+price
+</td>
+<td style="text-align:left;">
+752
+</td>
+<td style="text-align:left;">
+4.004
+</td>
+<td style="text-align:left;">
+0.903
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+friendly
+</td>
+<td style="text-align:left;">
+752
+</td>
+<td style="text-align:left;">
+3.318
+</td>
+<td style="text-align:left;">
+1.024
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Nothing out of the ordinary for survey data</li>
+</ul>
+</div>
+<div id="hierarchical-cluster-analysis" class="section level3" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Hierarchical Cluster Analysis</h3>
+<ul>
+<li><p>Distance measure: Euclidean</p>
+<ul>
+<li>All variables are continuous and on the same scale, but will be standardized anyway</li>
+</ul></li>
+<li><p>Linkage method: Ward’s</p></li>
+<li><p>Over <span class="math inline">\(750\)</span> cases… So dendrogram won’t help</p></li>
+<li><p>Calculate Duda-Hart index for <span class="math inline">\(1\)</span> to <span class="math inline">\(15\)</span> clusters</p>
+<ul>
+<li>Look at top <span class="math inline">\(5\)</span> index values</li>
+<li><span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4\)</span>, and <span class="math inline">\(6\)</span> cluster solutions seem like good candidates to explore</li>
+</ul>
+<caption>
+<p><span id="tab:t5dh01">Table 5.2: </span> Duda-Hart Index (<a href="segmentation.html#table-reftabt5dh01">R code</a>)</p>
+</caption>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+<p>Num.Clusters</p>
+</th>
+<th style="text-align:center;">
+<p>Duda.Hart</p>
+</th>
+<th style="text-align:center;">
+<p>pseudo.t.2</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+<p>1</p>
+</td>
+<td style="text-align:center;">
+<p>0.8392</p>
+</td>
+<td style="text-align:center;">
+<p>143.7320</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+<p>2</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>0.8974</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>63.8291</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+<p>3</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>0.8792</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>55.2532</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+<p>4</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>0.8560</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>43.4065</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<p>5</p>
+</td>
+<td style="text-align:center;">
+<p>0.8537</p>
+</td>
+<td style="text-align:center;">
+<p>26.3963</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+<p>6</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>0.8680</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>27.6823</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+<p>7</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>0.8973</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>21.7445</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;background-color: yellow !important;">
+<p>8</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>0.8581</p>
+</td>
+<td style="text-align:center;background-color: yellow !important;">
+<p>23.4818</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<p>9</p>
+</td>
+<td style="text-align:center;">
+<p>0.8527</p>
+</td>
+<td style="text-align:center;">
+<p>19.1770</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<p>10</p>
+</td>
+<td style="text-align:center;">
+<p>0.8345</p>
+</td>
+<td style="text-align:center;">
+<p>24.7925</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Examine dendrogram of top 6 branches only</p>
+<div class="figure"><span style="display:block;" id="fig:t5top5dend01"></span>
+<img src="_main_files/figure-html/t5top5dend01-1.png" alt="Dendrogram with Top 6 Branches Only ([R code](#figure-reffigt5top5dend01))" width="672" />
+<p class="caption">
+Figure 5.10: Dendrogram with Top 6 Branches Only (<a href="segmentation.html#figure-reffigt5top5dend01">R code</a>)
+</p>
+</div></li>
+<li><p>Examine cluster sizes for different cluster solutions</p>
+<ul>
+<li>Overall, 4-cluster solution is chosen
+<ul>
+<li>All clusters are of decent size and no one cluster is too large</li>
+</ul></li>
+</ul>
+<caption>
+<p><span id="tab:t5clustsize01">Table 5.3: </span> Cluster Sizes for Different <span class="math inline">\(k\)</span> Solutions (<a href="segmentation.html#table-reftabt5clustsize01">R code</a>)</p>
+</caption>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+<th style="text-align:right;">
+<p>k_2_Count</p>
+</th>
+<th style="text-align:right;">
+<p>k_3_Count</p>
+</th>
+<th style="text-align:right;">
+<p>k_4_Count</p>
+</th>
+<th style="text-align:right;">
+<p>k_6_Count</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>560</p>
+</td>
+<td style="text-align:right;">
+<p>404</p>
+</td>
+<td style="text-align:right;">
+<p>260</p>
+</td>
+<td style="text-align:right;">
+<p>192</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>192</p>
+</td>
+<td style="text-align:right;">
+<p>192</p>
+</td>
+<td style="text-align:right;">
+<p>192</p>
+</td>
+<td style="text-align:right;">
+<p>184</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>156</p>
+</td>
+<td style="text-align:right;">
+<p>156</p>
+</td>
+<td style="text-align:right;">
+<p>144</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>4</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>144</p>
+</td>
+<td style="text-align:right;">
+<p>127</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>5</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>76</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>6</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>29</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+<th style="text-align:right;">
+<p>k_2_Percent</p>
+</th>
+<th style="text-align:right;">
+<p>k_3_Percent</p>
+</th>
+<th style="text-align:right;">
+<p>k_4_Percent</p>
+</th>
+<th style="text-align:right;">
+<p>k_6_Percent</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>74.47</p>
+</td>
+<td style="text-align:right;">
+<p>53.72</p>
+</td>
+<td style="text-align:right;">
+<p>34.57</p>
+</td>
+<td style="text-align:right;">
+<p>25.53</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>25.53</p>
+</td>
+<td style="text-align:right;">
+<p>25.53</p>
+</td>
+<td style="text-align:right;">
+<p>25.53</p>
+</td>
+<td style="text-align:right;">
+<p>24.47</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>20.74</p>
+</td>
+<td style="text-align:right;">
+<p>20.74</p>
+</td>
+<td style="text-align:right;">
+<p>19.15</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>4</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>19.15</p>
+</td>
+<td style="text-align:right;">
+<p>16.89</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>5</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>10.11</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>6</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>3.86</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Describe segments using cluster variables (table and chart)</p>
+<ul>
+<li>Cluster <span class="math inline">\(1\)</span> seems to rate most everything as important, but especially <span class="math inline">\(clean\)</span>, <span class="math inline">\(quality\)</span>, <span class="math inline">\(price\)</span>, and <span class="math inline">\(location\)</span></li>
+<li>Cluster <span class="math inline">\(4\)</span> doesn’t seem to think much is important, except maybe <span class="math inline">\(price\)</span>, and really doesn’t care about <span class="math inline">\(healthy\)</span>, <span class="math inline">\(friendly\)</span>, and <span class="math inline">\(variety\)</span></li>
+<li>Cluster <span class="math inline">\(3\)</span> rates <span class="math inline">\(quality\)</span>, <span class="math inline">\(clean\)</span> and somewhat <span class="math inline">\(healthy\)</span> as important, but not much else</li>
+<li>Cluster <span class="math inline">\(2\)</span> doesn’t have any attributes that are rated too high or too low compared to the other clusters</li>
+</ul>
+<caption>
+<p><span id="tab:t5c4describe1">Table 5.4: </span> Cluster Variable Means by Cluster (<a href="segmentation.html#table-reftabt5c4describe1">R code</a>)</p>
+</caption>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+<th style="text-align:right;">
+<p>clean</p>
+</th>
+<th style="text-align:right;">
+<p>variety</p>
+</th>
+<th style="text-align:right;">
+<p>quality</p>
+</th>
+<th style="text-align:right;">
+<p>location</p>
+</th>
+<th style="text-align:right;">
+<p>speed</p>
+</th>
+<th style="text-align:right;">
+<p>healthy</p>
+</th>
+<th style="text-align:right;">
+<p>price</p>
+</th>
+<th style="text-align:right;">
+<p>friendly</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>4.69</p>
+</td>
+<td style="text-align:right;">
+<p>3.75</p>
+</td>
+<td style="text-align:right;">
+<p>4.81</p>
+</td>
+<td style="text-align:right;">
+<p>4.41</p>
+</td>
+<td style="text-align:right;">
+<p>4.29</p>
+</td>
+<td style="text-align:right;">
+<p>3.84</p>
+</td>
+<td style="text-align:right;">
+<p>4.54</p>
+</td>
+<td style="text-align:right;">
+<p>4.12</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>4.12</p>
+</td>
+<td style="text-align:right;">
+<p>3.30</p>
+</td>
+<td style="text-align:right;">
+<p>4.09</p>
+</td>
+<td style="text-align:right;">
+<p>3.88</p>
+</td>
+<td style="text-align:right;">
+<p>3.71</p>
+</td>
+<td style="text-align:right;">
+<p>2.67</p>
+</td>
+<td style="text-align:right;">
+<p>4.03</p>
+</td>
+<td style="text-align:right;">
+<p>3.36</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>4.51</p>
+</td>
+<td style="text-align:right;">
+<p>3.83</p>
+</td>
+<td style="text-align:right;">
+<p>4.65</p>
+</td>
+<td style="text-align:right;">
+<p>2.99</p>
+</td>
+<td style="text-align:right;">
+<p>3.27</p>
+</td>
+<td style="text-align:right;">
+<p>4.03</p>
+</td>
+<td style="text-align:right;">
+<p>3.83</p>
+</td>
+<td style="text-align:right;">
+<p>3.47</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>4</p>
+</td>
+<td style="text-align:right;">
+<p>3.27</p>
+</td>
+<td style="text-align:right;">
+<p>2.69</p>
+</td>
+<td style="text-align:right;">
+<p>3.38</p>
+</td>
+<td style="text-align:right;">
+<p>3.42</p>
+</td>
+<td style="text-align:right;">
+<p>3.34</p>
+</td>
+<td style="text-align:right;">
+<p>2.17</p>
+</td>
+<td style="text-align:right;">
+<p>3.67</p>
+</td>
+<td style="text-align:right;">
+<p>2.49</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure"><span style="display:block;" id="fig:t5c4describe2"></span>
+<img src="_main_files/figure-html/t5c4describe2-1.png" alt="Mean Attribute Importance by Cluster ([R code](#figure-reffigt5c4describe2))" width="672" />
+<p class="caption">
+Figure 5.11: Mean Attribute Importance by Cluster (<a href="segmentation.html#figure-reffigt5c4describe2">R code</a>)
+</p>
+</div></li>
+<li><p>Describe segments using non-cluster variables</p>
+<ul>
+<li>Only the variable <span class="math inline">\(eatin\)</span> (1 = Prefer to eat in; 5 = Prefer Get to Go) and <span class="math inline">\(gender\)</span> showed significant differences between clusters
+<ul>
+<li>Cluster <span class="math inline">\(3\)</span> was significantly more likely to want to eat in than Clusters <span class="math inline">\(2\)</span> and <span class="math inline">\(4\)</span></li>
+<li>Cluster <span class="math inline">\(4\)</span> was significantly more likely to be male than the other clusters</li>
+</ul></li>
+</ul>
+<caption>
+<p><span id="tab:t5descnseg1">Table 5.5: </span> Eat-In and Gender Means by Cluster (<a href="segmentation.html#table-reftabt5descnseg1">R code</a>)</p>
+</caption>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+<th style="text-align:right;">
+<p>eatin</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>4.03</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>4.30</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>3.82</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>4</p>
+</td>
+<td style="text-align:right;">
+<p>4.48</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+<th style="text-align:right;">
+<p>Female</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>0.78</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>0.71</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>0.81</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>4</p>
+</td>
+<td style="text-align:right;">
+<p>0.60</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+<div id="k-means-cluster-analysis" class="section level3" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> <em>k-Means</em> Cluster Analysis</h3>
+<ul>
+<li><p>Distance Measure</p>
+<ul>
+<li>All variables are continuous and on the same scale, but will be standardized anyway</li>
+</ul></li>
+<li><p>Calculate WSS to create a scree plot for <span class="math inline">\(1\)</span> to <span class="math inline">\(15\)</span> cluster solutions</p></li>
+<li><p>Somewhere between <span class="math inline">\(3\)</span> and <span class="math inline">\(5\)</span> clusters looks best</p>
+<div class="figure"><span style="display:block;" id="fig:t5scree02"></span>
+<img src="_main_files/figure-html/t5scree02-1.png" alt="Scree Plot for Fast Food Data ([R code](#figure-reffigt5scree02))" width="672" />
+<p class="caption">
+Figure 5.12: Scree Plot for Fast Food Data (<a href="segmentation.html#figure-reffigt5scree02">R code</a>)
+</p>
+</div></li>
+<li><p>Quick examination of <span class="math inline">\(3\)</span>, <span class="math inline">\(4\)</span>, and <span class="math inline">\(5\)</span> cluster solutions</p></li>
+<li><p>Each solution has good sized clusters</p>
+<ul>
+<li>Use <span class="math inline">\(3\)</span> cluster solution because cluster sizes closest to each other…
+<ul>
+<li>And we saw a <span class="math inline">\(4\)</span> cluster solution using hierarchical agglomerative clustering</li>
+</ul></li>
+</ul>
+<caption>
+<p><span id="tab:t5clstsizes">Table 5.6: </span> Cluster Sizes 3, 4, and 5 Cluster Solutions (<a href="segmentation.html#table-reftabt5clstsizes">R code</a>)</p>
+</caption>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Num_Clusters</p>
+</th>
+<th style="text-align:right;">
+<p>k_3_Count</p>
+</th>
+<th style="text-align:right;">
+<p>k_4_Count</p>
+</th>
+<th style="text-align:right;">
+<p>k_5_Count</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>266</p>
+</td>
+<td style="text-align:right;">
+<p>269</p>
+</td>
+<td style="text-align:right;">
+<p>252</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>261</p>
+</td>
+<td style="text-align:right;">
+<p>174</p>
+</td>
+<td style="text-align:right;">
+<p>149</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>225</p>
+</td>
+<td style="text-align:right;">
+<p>164</p>
+</td>
+<td style="text-align:right;">
+<p>138</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>4</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>145</p>
+</td>
+<td style="text-align:right;">
+<p>113</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>5</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>NA</p>
+</td>
+<td style="text-align:right;">
+<p>100</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<pre><code>&lt;/tr&gt;</code></pre>
+</tbody>
+</table></li>
+<li><p>Examine cluster centers (table and chart)</p>
+<ul>
+<li>Similar to describing segments using cluster variables</li>
+<li>Cluster <span class="math inline">\(1\)</span> doesn’t think much is important other than <span class="math inline">\(location\)</span> and <span class="math inline">\(price\)</span></li>
+<li>Cluster <span class="math inline">\(2\)</span> thinks most everything is important other than <span class="math inline">\(variety\)</span>, <span class="math inline">\(healthy\)</span>, and <span class="math inline">\(friendly\)</span></li>
+<li>Cluster <span class="math inline">\(3\)</span> thinks <span class="math inline">\(clean\)</span> and <span class="math inline">\(quality\)</span> are much more important than other attributes</li>
+</ul>
+<caption>
+<p><span id="tab:t5desckmseg1">Table 5.7: </span> Cluster Centers for 3 Cluster Solution (<a href="segmentation.html#table-reftabt5desckmseg1">R code</a>)</p>
+</caption>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+<p>clean</p>
+</th>
+<th style="text-align:right;">
+<p>variety</p>
+</th>
+<th style="text-align:right;">
+<p>quality</p>
+</th>
+<th style="text-align:right;">
+<p>location</p>
+</th>
+<th style="text-align:right;">
+<p>speed</p>
+</th>
+<th style="text-align:right;">
+<p>healthy</p>
+</th>
+<th style="text-align:right;">
+<p>price</p>
+</th>
+<th style="text-align:right;">
+<p>friendly</p>
+</th>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+<p>-0.8760</p>
+</td>
+<td style="text-align:right;">
+<p>-0.4746</p>
+</td>
+<td style="text-align:right;">
+<p>-0.8286</p>
+</td>
+<td style="text-align:right;">
+<p>-0.0075</p>
+</td>
+<td style="text-align:right;">
+<p>-0.2216</p>
+</td>
+<td style="text-align:right;">
+<p>-0.7727</p>
+</td>
+<td style="text-align:right;">
+<p>-0.0256</p>
+</td>
+<td style="text-align:right;">
+<p>-0.6548</p>
+</td>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<p>0.5076</p>
+</td>
+<td style="text-align:right;">
+<p>0.5694</p>
+</td>
+<td style="text-align:right;">
+<p>0.5503</p>
+</td>
+<td style="text-align:right;">
+<p>0.5832</p>
+</td>
+<td style="text-align:right;">
+<p>0.6334</p>
+</td>
+<td style="text-align:right;">
+<p>0.4340</p>
+</td>
+<td style="text-align:right;">
+<p>0.5615</p>
+</td>
+<td style="text-align:right;">
+<p>0.5158</p>
+</td>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+<p>0.4161</p>
+</td>
+<td style="text-align:right;">
+<p>-0.1227</p>
+</td>
+<td style="text-align:right;">
+<p>0.3107</p>
+</td>
+<td style="text-align:right;">
+<p>-0.6807</p>
+</td>
+<td style="text-align:right;">
+<p>-0.4917</p>
+</td>
+<td style="text-align:right;">
+<p>0.3833</p>
+</td>
+<td style="text-align:right;">
+<p>-0.6341</p>
+</td>
+<td style="text-align:right;">
+<p>0.1497</p>
+</td>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure"><span style="display:block;" id="fig:t5desckmseg2"></span>
+<img src="_main_files/figure-html/t5desckmseg2-1.png" alt="Cluster Centers by Cluster ([R code](#figure-reffigt5desckmseg2))" width="672" />
+<p class="caption">
+Figure 5.13: Cluster Centers by Cluster (<a href="segmentation.html#figure-reffigt5desckmseg2">R code</a>)
+</p>
+</div></li>
+<li><p>Describe segments using non-cluster variables</p>
+<ul>
+<li>Only the variables <span class="math inline">\(eatin\)</span> (1 = Prefer to eat in; 5 = Prefer Get to Go), <span class="math inline">\(gender\)</span>, and <span class="math inline">\(live\)</span> showed significant differences between clusters
+<ul>
+<li>Cluster <span class="math inline">\(3\)</span> was significantly more likely to want to eat in than both other clusters</li>
+<li>Cluster <span class="math inline">\(1\)</span> was significantly more likely to be male than both other clusters</li>
+<li>Cluster <span class="math inline">\(3\)</span> was significantly more likely to be a commuter than both other clusters</li>
+</ul></li>
+</ul>
+<caption>
+<p><span id="tab:t5desck3seg1">Table 5.8: </span> Eat-In, Gender and Live Means by Cluster (<a href="segmentation.html#table-reftabt5descnseg1">R code</a>)</p>
+</caption>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+<th style="text-align:right;">
+<p>eatin</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>4.40</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>4.29</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>3.85</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+<th style="text-align:right;">
+<p>Female</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>0.60</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>0.81</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>0.73</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Cluster</p>
+</th>
+<th style="text-align:right;">
+<p>Commuter</p>
+</th>
+<th style="text-align:right;">
+<p>Off.Campus</p>
+</th>
+<th style="text-align:right;">
+<p>On.Campus</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>1</p>
+</td>
+<td style="text-align:right;">
+<p>0.08</p>
+</td>
+<td style="text-align:right;">
+<p>0.45</p>
+</td>
+<td style="text-align:right;">
+<p>0.47</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>2</p>
+</td>
+<td style="text-align:right;">
+<p>0.08</p>
+</td>
+<td style="text-align:right;">
+<p>0.46</p>
+</td>
+<td style="text-align:right;">
+<p>0.45</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>3</p>
+</td>
+<td style="text-align:right;">
+<p>0.16</p>
+</td>
+<td style="text-align:right;">
+<p>0.40</p>
+</td>
+<td style="text-align:right;">
+<p>0.44</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+</div>
+<div id="suggested-readings-4" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Suggested Readings</h2>
+<ul>
+<li><em>Marketing Data Science</em> (2015). Miller, Thomas W.
+<ul>
+<li>BGSU Library Link:<br><a href="http://maurice.bgsu.edu:2083/record=b41416968~S0" target="_blank" rel="noopener noreferrer">http://maurice.bgsu.edu:2083/record=b41416968~S0</a></li>
+<li>eBook through BGSU Library:<br><a href="https://learning.oreilly.com/library/view/marketing-data-science/9780133887662/?ar=" target="_blank" rel="noopener noreferrer">https://learning.oreilly.com/library/view/marketing-data-science/9780133887662/?ar=</a><br>Note: Might need to create an account; select “Not Listed. Click here” from the “Select your institution” drop down box. Use your BGSU email to create the account.</li>
+<li>Chapter 4: Finding New Customers</li>
+</ul></li>
+<li><em>Principles of Marketing Engineering and Analytics, 3rd Edition</em> (2017). Lilien, Gary L., Rangaswamy, Arvind, and De Bruyn, Arnaud.
+<ul>
+<li>Course reserves
+<ul>
+<li>Pages 75-97 from Chapter 3: Segmentation and Targeting</li>
+</ul></li>
+</ul></li>
+<li><em>Multivariate Data Analysis</em>. Hair, Joseph F.; Black, William C.; Babin, Barry J.; Anderson, Rolph E.
+<ul>
+<li>7th Edition: Search for “multivariate data analysis 7th edition hair”
+<ul>
+<li>Chapter 8: Cluster Analysis</li>
+</ul></li>
+<li>5th Edition: Course reserves
+<ul>
+<li>Chapter 9: Cluster Analysis</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="r-code-4" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> R Code</h2>
+<div id="figure-reffigt5top5dend01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="segmentation.html#fig:t5top5dend01">5.10</a></h3>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="segmentation.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load &#39;myhc.R&#39; user defined function</span></span>
+<span id="cb83-2"><a href="segmentation.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/myhc.R&quot;</span>)</span>
+<span id="cb83-3"><a href="segmentation.html#cb83-3" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">myhc</span>(segdata,    <span class="co"># Dataframe with cluster variables</span></span>
+<span id="cb83-4"><a href="segmentation.html#cb83-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,    <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
+<span id="cb83-5"><a href="segmentation.html#cb83-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
+<span id="cb83-6"><a href="segmentation.html#cb83-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">cuts=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>),   <span class="co"># Get data for 4 cut levels</span></span>
+<span id="cb83-7"><a href="segmentation.html#cb83-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">clustop=</span><span class="st">&quot;N&quot;</span>)  <span class="co"># Do not get Duda-Hart</span></span>
+<span id="cb83-8"><a href="segmentation.html#cb83-8" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
+<span id="cb83-9"><a href="segmentation.html#cb83-9" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt5c4describe2" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="segmentation.html#fig:t5c4describe2">5.11</a></h3>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="segmentation.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)  <span class="co"># Used to covert data from wide to long</span></span>
+<span id="cb84-2"><a href="segmentation.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert &#39;wide&#39; table to &#39;long&#39; table</span></span>
+<span id="cb84-3"><a href="segmentation.html#cb84-3" aria-hidden="true" tabindex="-1"></a>sumsegl <span class="ot">&lt;-</span> <span class="fu">melt</span>(outseg<span class="sc">$</span>means,    <span class="co"># Wide table of summary statistics</span></span>
+<span id="cb84-4"><a href="segmentation.html#cb84-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">id.vars=</span><span class="st">&quot;Cluster&quot;</span>,  <span class="co"># ID variable</span></span>
+<span id="cb84-5"><a href="segmentation.html#cb84-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">variable.name=</span><span class="st">&quot;attr&quot;</span>, <span class="co"># Column name identifying attribute</span></span>
+<span id="cb84-6"><a href="segmentation.html#cb84-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">value.name=</span><span class="st">&quot;mean&quot;</span>)   <span class="co"># Column name identifying value</span></span>
+<span id="cb84-7"><a href="segmentation.html#cb84-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot data</span></span>
+<span id="cb84-8"><a href="segmentation.html#cb84-8" aria-hidden="true" tabindex="-1"></a>sumsegl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>attr, <span class="at">y=</span>mean, <span class="at">fill=</span>Cluster)) <span class="sc">+</span></span>
+<span id="cb84-9"><a href="segmentation.html#cb84-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb84-10"><a href="segmentation.html#cb84-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">7</span>)) <span class="sc">+</span></span>
+<span id="cb84-11"><a href="segmentation.html#cb84-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb84-12"><a href="segmentation.html#cb84-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(mean,<span class="dv">2</span>)), <span class="at">hjust=</span><span class="fl">1.1</span>, <span class="at">fontface=</span><span class="st">&quot;bold&quot;</span>,</span>
+<span id="cb84-13"><a href="segmentation.html#cb84-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">angle=</span><span class="dv">90</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb84-14"><a href="segmentation.html#cb84-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb84-15"><a href="segmentation.html#cb84-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Attribute&quot;</span>, <span class="at">y=</span><span class="st">&quot;Mean Importance&quot;</span>, <span class="at">fill=</span><span class="st">&quot;Cluster&quot;</span>)</span></code></pre></div>
+</div>
+<div id="figure-reffigt5scree02" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="segmentation.html#fig:t5scree02">5.12</a></h3>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="segmentation.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/wssplot.R&quot;</span>)   <span class="co"># User defined function for scree plot</span></span>
+<span id="cb85-2"><a href="segmentation.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wssplot</span>(segdata,   <span class="co"># Standardized data from earlier</span></span>
+<span id="cb85-3"><a href="segmentation.html#cb85-3" aria-hidden="true" tabindex="-1"></a>        <span class="dv">15</span>,   <span class="co"># Max clusters</span></span>
+<span id="cb85-4"><a href="segmentation.html#cb85-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Random number seed</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt5desckmseg2" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="segmentation.html#fig:t5desckmseg2">5.13</a></h3>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="segmentation.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># outkc was created using the code for thetable</span></span>
+<span id="cb86-2"><a href="segmentation.html#cb86-2" aria-hidden="true" tabindex="-1"></a>outkc<span class="sc">$</span>plot</span></code></pre></div>
+</div>
+<div id="table-reftabt5exdata01" class="section level3 unlisted unnumbered">
+<h3>Table <a href="segmentation.html#tab:t5exdata01">5.1</a></h3>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="segmentation.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create df with attribute importance variables</span></span>
+<span id="cb87-2"><a href="segmentation.html#cb87-2" aria-hidden="true" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> ffseg <span class="sc">%&gt;%</span> </span>
+<span id="cb87-3"><a href="segmentation.html#cb87-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(clean, variety, quality, location, speed, healthy, price, friendly)</span>
+<span id="cb87-4"><a href="segmentation.html#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create summary table with package &#39;vtable&#39; (not availalbe in virtual env.)</span></span>
+<span id="cb87-5"><a href="segmentation.html#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sumtable</span>(segdata, <span class="at">out=</span><span class="st">&quot;return&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">caption=</span><span class="cn">NULL</span>)</span></code></pre></div>
+</div>
+<div id="table-reftabt5dh01" class="section level3 unlisted unnumbered">
+<h3>Table <a href="segmentation.html#tab:t5dh01">5.2</a></h3>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="segmentation.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stardarize data using &#39;scale()&#39; function</span></span>
+<span id="cb88-2"><a href="segmentation.html#cb88-2" aria-hidden="true" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">scale</span>(segdata))</span>
+<span id="cb88-3"><a href="segmentation.html#cb88-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-4"><a href="segmentation.html#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;clustop.R&#39; user defined function</span></span>
+<span id="cb88-5"><a href="segmentation.html#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   Requires package &#39;NbClust&#39;, which isn&#39;t availabe in virtual env.</span></span>
+<span id="cb88-6"><a href="segmentation.html#cb88-6" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;TOpic05/clustop.R&quot;</span>)</span>
+<span id="cb88-7"><a href="segmentation.html#cb88-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NbClust)</span>
+<span id="cb88-8"><a href="segmentation.html#cb88-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-9"><a href="segmentation.html#cb88-9" aria-hidden="true" tabindex="-1"></a>dh <span class="ot">&lt;-</span> <span class="fu">clustop</span>(segdata,   <span class="co"># Dataframe to with cluster variables</span></span>
+<span id="cb88-10"><a href="segmentation.html#cb88-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,   <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
+<span id="cb88-11"><a href="segmentation.html#cb88-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
+<span id="cb88-12"><a href="segmentation.html#cb88-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">minclust=</span><span class="dv">1</span>, <span class="at">maxclust=</span><span class="dv">10</span>)  <span class="co"># Only complete for up to 10 clusters</span></span>
+<span id="cb88-13"><a href="segmentation.html#cb88-13" aria-hidden="true" tabindex="-1"></a>dh</span></code></pre></div>
+</div>
+<div id="table-reftabt5clustsize01" class="section level3 unlisted unnumbered">
+<h3>Table <a href="segmentation.html#tab:t5clustsize01">5.3</a></h3>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="segmentation.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;out&#39; was a list of two data frame (&#39;kcount&#39; and &#39;kperc&#39;) returned from the</span></span>
+<span id="cb89-2"><a href="segmentation.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="co"># call to the &#39;myhc&#39; user defined function</span></span>
+<span id="cb89-3"><a href="segmentation.html#cb89-3" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
+<span id="cb89-4"><a href="segmentation.html#cb89-4" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
+</div>
+<div id="table-reftabt5c4describe1" class="section level3 unlisted unnumbered">
+<h3>Table <a href="segmentation.html#tab:t5c4describe1">5.4</a></h3>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="segmentation.html#cb90-1" aria-hidden="true" tabindex="-1"></a>ffseg<span class="sc">$</span>c4 <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">cutree</span>(out<span class="sc">$</span>hc,<span class="dv">4</span>))  <span class="co"># Add cluster membership to original</span></span>
+<span id="cb90-2"><a href="segmentation.html#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create object with segmentation variables listed</span></span>
+<span id="cb90-3"><a href="segmentation.html#cb90-3" aria-hidden="true" tabindex="-1"></a>segvars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;clean&quot;</span>, <span class="st">&quot;variety&quot;</span>, <span class="st">&quot;quality&quot;</span>, </span>
+<span id="cb90-4"><a href="segmentation.html#cb90-4" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;location&quot;</span>, <span class="st">&quot;speed&quot;</span>, <span class="st">&quot;healthy&quot;</span>, </span>
+<span id="cb90-5"><a href="segmentation.html#cb90-5" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;price&quot;</span>, <span class="st">&quot;friendly&quot;</span>)</span>
+<span id="cb90-6"><a href="segmentation.html#cb90-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
+<span id="cb90-7"><a href="segmentation.html#cb90-7" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/cldescr.R&quot;</span>)</span>
+<span id="cb90-8"><a href="segmentation.html#cb90-8" aria-hidden="true" tabindex="-1"></a>outseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb90-9"><a href="segmentation.html#cb90-9" aria-hidden="true" tabindex="-1"></a>                  segvars,  <span class="co"># Segmentation variables</span></span>
+<span id="cb90-10"><a href="segmentation.html#cb90-10" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variables are continuous</span></span>
+<span id="cb90-11"><a href="segmentation.html#cb90-11" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb90-12"><a href="segmentation.html#cb90-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb90-13"><a href="segmentation.html#cb90-13" aria-hidden="true" tabindex="-1"></a>outseg<span class="sc">$</span>means</span></code></pre></div>
+</div>
+<div id="table-reftabt5descnseg1" class="section level3 unlisted unnumbered">
+<h3>Table <a href="segmentation.html#tab:t5descnseg1">5.5</a></h3>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="segmentation.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
+<span id="cb91-2"><a href="segmentation.html#cb91-2" aria-hidden="true" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb91-3"><a href="segmentation.html#cb91-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
+<span id="cb91-4"><a href="segmentation.html#cb91-4" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
+<span id="cb91-5"><a href="segmentation.html#cb91-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb91-6"><a href="segmentation.html#cb91-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb91-7"><a href="segmentation.html#cb91-7" aria-hidden="true" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span>
+<span id="cb91-8"><a href="segmentation.html#cb91-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-9"><a href="segmentation.html#cb91-9" aria-hidden="true" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb91-10"><a href="segmentation.html#cb91-10" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
+<span id="cb91-11"><a href="segmentation.html#cb91-11" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb91-12"><a href="segmentation.html#cb91-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb91-13"><a href="segmentation.html#cb91-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb91-14"><a href="segmentation.html#cb91-14" aria-hidden="true" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span></code></pre></div>
+</div>
+<div id="table-reftabt5clstsizes" class="section level3 unlisted unnumbered">
+<h3>Table <a href="segmentation.html#tab:t5clstsizes">5.6</a></h3>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="segmentation.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;ksize.R&#39; must first be sourced (if not already)</span></span>
+<span id="cb92-2"><a href="segmentation.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/ksize.R&quot;</span>)</span>
+<span id="cb92-3"><a href="segmentation.html#cb92-3" aria-hidden="true" tabindex="-1"></a>ks <span class="ot">&lt;-</span> <span class="fu">ksize</span>(segdata,   <span class="co"># Scaled cluster variables from earlier</span></span>
+<span id="cb92-4"><a href="segmentation.html#cb92-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">centers=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>),   <span class="co"># Request for 3, 4, and 5 cluster solutions</span></span>
+<span id="cb92-5"><a href="segmentation.html#cb92-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">nstart=</span><span class="dv">25</span>,  <span class="co"># Request 25 random starting sets</span></span>
+<span id="cb92-6"><a href="segmentation.html#cb92-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Set seed to 4320 for reproducible results</span></span>
+<span id="cb92-7"><a href="segmentation.html#cb92-7" aria-hidden="true" tabindex="-1"></a>ks<span class="sc">$</span>kcount</span>
+<span id="cb92-8"><a href="segmentation.html#cb92-8" aria-hidden="true" tabindex="-1"></a>ks<span class="sc">$</span>kperc</span></code></pre></div>
+</div>
+<div id="table-reftabt5desckmseg1" class="section level3 unlisted unnumbered">
+<h3>Table <a href="segmentation.html#tab:t5desckmseg1">5.7</a></h3>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="segmentation.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use user-defined function &#39;kcenters.R&#39;</span></span>
+<span id="cb93-2"><a href="segmentation.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/kcenters.R&quot;</span>)</span>
+<span id="cb93-3"><a href="segmentation.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4320</span>)  <span class="co"># Match seed from above</span></span>
+<span id="cb93-4"><a href="segmentation.html#cb93-4" aria-hidden="true" tabindex="-1"></a>k3 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(segdata,  <span class="co"># Scaled segmentation variables</span></span>
+<span id="cb93-5"><a href="segmentation.html#cb93-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">centers=</span><span class="dv">3</span>,  <span class="co"># 3 cluster solution</span></span>
+<span id="cb93-6"><a href="segmentation.html#cb93-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">nstart=</span><span class="dv">25</span>)  <span class="co"># 25 random starting sets</span></span>
+<span id="cb93-7"><a href="segmentation.html#cb93-7" aria-hidden="true" tabindex="-1"></a>outkc <span class="ot">&lt;-</span> <span class="fu">kcenters</span>(k3)  <span class="co"># Call to &#39;kcenters&#39; passing the &#39;k3&#39; cluster object</span></span>
+<span id="cb93-8"><a href="segmentation.html#cb93-8" aria-hidden="true" tabindex="-1"></a><span class="co"># outkc contains two objects: &#39;table&#39; and &#39;plot&#39;</span></span>
+<span id="cb93-9"><a href="segmentation.html#cb93-9" aria-hidden="true" tabindex="-1"></a>outkc<span class="sc">$</span>table  <span class="co"># Print table</span></span></code></pre></div>
+</div>
+<div id="table-reftabt5desck3seg1" class="section level3 unlisted unnumbered">
+<h3>Table <a href="segmentation.html#tab:t5desck3seg1">5.8</a></h3>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="segmentation.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add cluster membership to original data</span></span>
+<span id="cb94-2"><a href="segmentation.html#cb94-2" aria-hidden="true" tabindex="-1"></a>fseg<span class="sc">$</span>k3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(k3<span class="sc">$</span>cluster)</span>
+<span id="cb94-3"><a href="segmentation.html#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
+<span id="cb94-4"><a href="segmentation.html#cb94-4" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb94-5"><a href="segmentation.html#cb94-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
+<span id="cb94-6"><a href="segmentation.html#cb94-6" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
+<span id="cb94-7"><a href="segmentation.html#cb94-7" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb94-8"><a href="segmentation.html#cb94-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb94-9"><a href="segmentation.html#cb94-9" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
+<span id="cb94-10"><a href="segmentation.html#cb94-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb94-11"><a href="segmentation.html#cb94-11" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb94-12"><a href="segmentation.html#cb94-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
+<span id="cb94-13"><a href="segmentation.html#cb94-13" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb94-14"><a href="segmentation.html#cb94-14" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb94-15"><a href="segmentation.html#cb94-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb94-16"><a href="segmentation.html#cb94-16" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
+<span id="cb94-17"><a href="segmentation.html#cb94-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-18"><a href="segmentation.html#cb94-18" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb94-19"><a href="segmentation.html#cb94-19" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;live&quot;</span>,  <span class="co"># Where they live</span></span>
+<span id="cb94-20"><a href="segmentation.html#cb94-20" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb94-21"><a href="segmentation.html#cb94-21" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb94-22"><a href="segmentation.html#cb94-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb94-23"><a href="segmentation.html#cb94-23" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span></code></pre></div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="targeting-and-retaining-customers.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"number_sections": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

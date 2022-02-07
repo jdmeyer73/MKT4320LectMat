@@ -610,7 +610,6 @@ knitr::include_graphics("Topic03/ClassMat.png")
 * *OpenIntro Statistics. 4th Edition* (2019). Diez, David; Cetinkaya-Rundel, Mine; Barr, Christopher D.
     * Available at OpenIntro.org:<br><a href="https://www.openintro.org/book/os/" target="_blank" rel="noopener noreferrer">https://www.openintro.org/book/os/</a>
     * Chapter 9: Multiple and logistic regression
-    
 * *Multivariate Data Analysis*. Hair, Joseph F.; Black, William C.; Babin, Barry J.; Anderson, Rolph E.
     * 7th Edition: Search for “multivariate data analysis 7th edition hair”
         Chapter 6: Logistic Regression with a Binary Dependent Variable

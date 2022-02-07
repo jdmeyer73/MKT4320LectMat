@@ -1,0 +1,765 @@
+frequency,usertype,spend,eatin,clean,variety,quality,location,speed,healthy,price,friendly,hours,type,live,mealplan,gender,class,college,bclean,bvariety,bquality,blocation,bspeed,bhealthy,bprice,bfriendly,bhours,id
+1 to 2 times,Light user,$5 to $9,1,4,4,5,4,4,5,5,4,3,Mexican,On-Campus,Yes,Female,Junior,BUSN,1,1,1,1,1,1,1,1,0,1
+1 to 2 times,Light user,Less than $5,1,5,1,5,2,2,3,4,3,3,Mexican,Commuter,No,Female,Junior,EDUC,1,0,1,0,0,0,1,0,0,2
+0 times,Non-user,$5 to $9,2,4,2,4,4,4,5,4,4,2,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,1,1,1,0,3
+1 to 2 times,Light user,$5 to $9,1,4,4,5,2,5,3,5,4,2,Burgers,On-Campus,Yes,Male,Sophomore,ARTSC,1,1,1,0,1,0,1,1,0,4
+3 to 5 times,Heavy User,$10 or more,1,5,4,5,2,5,4,5,4,5,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,0,1,1,1,1,1,5
+1 to 2 times,Light user,$10 or more,7,4,5,4,5,3,1,5,3,5,Mexican,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,1,0,0,1,0,1,6
+3 to 5 times,Heavy User,$5 to $9,2,3,2,2,4,3,2,4,3,5,Mexican,On-Campus,Yes,Female,Freshman,OTH,0,0,0,1,0,0,1,0,1,7
+1 to 2 times,Light user,Less than $5,3,5,3,5,3,3,5,3,4,3,Mexican,On-Campus,Yes,Female,Junior,OTH,1,0,1,0,0,1,0,1,0,8
+3 to 5 times,Heavy User,Less than $5,4,3,2,3,4,3,1,5,3,3,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,0,0,0,1,0,0,1,0,0,9
+1 to 2 times,Light user,$5 to $9,1,5,5,5,5,3,5,5,3,2,Burgers,Off-Campus,No,Female,Senior,OTH,1,1,1,1,0,1,1,0,0,10
+1 to 2 times,Light user,$10 or more,3,5,3,3,3,3,3,1,1,3,Mexican,On-Campus,Yes,Female,Junior,BUSN,1,0,0,0,0,0,0,0,0,11
+1 to 2 times,Light user,$5 to $9,7,4,4,5,4,4,3,4,4,3,Mexican,Off-Campus,Yes,Female,Senior,ARTSC,1,1,1,1,1,0,1,1,0,12
+1 to 2 times,Light user,$5 to $9,1,4,4,5,3,4,4,4,3,4,Mexican,Off-Campus,No,Female,Senior,BUSN,1,1,1,0,1,1,1,0,1,13
+1 to 2 times,Light user,$5 to $9,5,4,3,4,3,5,1,4,2,4,Mexican,On-Campus,Yes,Male,Junior,BUSN,1,0,1,0,1,0,1,0,1,14
+1 to 2 times,Light user,$5 to $9,5,4,3,3,4,3,2,3,3,3,Burgers,On-Campus,Yes,Male,Sophomore,OTH,1,0,0,1,0,0,0,0,0,15
+3 to 5 times,Heavy User,$5 to $9,6,5,4,5,3,4,4,5,3,4,Mexican,Off-Campus,Yes,Female,Junior,EDUC,1,1,1,0,1,1,1,0,1,16
+3 to 5 times,Heavy User,$5 to $9,5,2,2,4,4,4,3,3,2,2,Mexican,Commuter,No,Female,Sophomore,EDUC,0,0,1,1,1,0,0,0,0,17
+1 to 2 times,Light user,$5 to $9,4,5,3,3,3,5,3,5,5,4,Mexican,On-Campus,Yes,Female,Junior,OTH,1,0,0,0,1,0,1,1,1,18
+0 times,Non-user,$5 to $9,4,4,2,3,2,3,3,4,2,2,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,0,0,0,0,0,1,0,0,19
+0 times,Non-user,$10 or more,1,5,3,4,3,3,5,2,4,2,Sandwiches,On-Campus,Yes,Female,Freshman,OTH,1,0,1,0,0,1,0,1,0,20
+0 times,Non-user,$5 to $9,6,4,3,4,5,4,4,3,2,4,Mexican,On-Campus,Yes,Female,Senior,ARTSC,1,0,1,1,1,1,0,0,1,21
+1 to 2 times,Light user,$5 to $9,7,3,2,4,1,3,4,4,2,2,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,0,0,1,0,0,1,1,0,0,22
+1 to 2 times,Light user,Less than $5,5,4,4,4,4,4,4,4,4,4,Burgers,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,1,1,1,1,23
+1 to 2 times,Light user,$5 to $9,3,4,3,5,3,3,4,4,4,3,Burgers,On-Campus,Yes,Male,Sophomore,ARTSC,1,0,1,0,0,1,1,1,0,24
+0 times,Non-user,$5 to $9,4,4,3,4,2,3,2,4,2,3,Mexican,On-Campus,Yes,Female,Senior,OTH,1,0,1,0,0,0,1,0,0,25
+1 to 2 times,Light user,$5 to $9,7,2,4,4,4,5,3,4,3,5,Mexican,Off-Campus,No,Female,Senior,ARTSC,0,1,1,1,1,0,1,0,1,26
+3 to 5 times,Heavy User,$5 to $9,2,3,4,4,2,3,2,5,2,3,Mexican,On-Campus,Yes,Male,Sophomore,BUSN,0,1,1,0,0,0,1,0,0,27
+0 times,Non-user,$5 to $9,7,3,4,4,4,4,3,5,2,5,Burgers,On-Campus,Yes,Female,Sophomore,EDUC,0,1,1,1,1,0,1,0,1,28
+1 to 2 times,Light user,$10 or more,1,2,2,2,5,4,1,4,2,4,Burgers,Off-Campus,No,Male,Senior,BUSN,0,0,0,1,1,0,1,0,1,29
+1 to 2 times,Light user,$5 to $9,2,5,3,4,5,5,4,5,3,1,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,1,1,1,0,0,30
+3 to 5 times,Heavy User,$10 or more,2,5,5,5,5,5,5,5,5,5,Burgers,Off-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,1,1,1,1,1,1,31
+3 to 5 times,Heavy User,$5 to $9,4,3,2,4,3,2,2,4,3,4,Burgers,Off-Campus,No,Male,Senior,BUSN,0,0,1,0,0,0,1,0,1,32
+6 to 9 times,Heavy User,$5 to $9,1,4,4,5,2,4,5,4,5,3,Mexican,On-Campus,Yes,Male,Junior,ARTSC,1,1,1,0,1,1,1,1,0,33
+1 to 2 times,Light user,$10 or more,7,4,2,5,,3,1,4,5,3,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,0,1,,0,0,1,1,0,34
+1 to 2 times,Light user,$5 to $9,2,4,3,3,4,4,3,2,4,3,Mexican,On-Campus,Yes,Male,Junior,ARTSC,1,0,0,1,1,0,0,1,0,35
+3 to 5 times,Heavy User,$5 to $9,1,5,5,5,5,5,2,5,5,5,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,0,1,1,1,36
+1 to 2 times,Light user,$5 to $9,7,4,2,4,4,4,5,4,3,5,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,0,1,1,1,1,1,0,1,37
+1 to 2 times,Light user,$10 or more,4,3,4,4,4,5,3,5,2,4,Burgers,On-Campus,Yes,Female,Junior,EDUC,0,1,1,1,1,0,1,0,1,38
+0 times,Non-user,Less than $5,3,4,3,4,5,4,3,4,3,4,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,0,1,0,1,39
+0 times,Non-user,$5 to $9,4,4,3,5,4,3,4,4,2,3,Other,On-Campus,Yes,Female,Junior,BUSN,1,0,1,1,0,1,1,0,0,40
+1 to 2 times,Light user,$5 to $9,2,4,4,4,3,3,3,5,5,4,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,1,1,0,0,0,1,1,1,41
+1 to 2 times,Light user,$5 to $9,7,5,4,5,3,3,4,5,4,4,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,0,0,1,1,1,1,42
+0 times,Non-user,$5 to $9,2,4,4,5,5,5,3,4,2,4,Mexican,On-Campus,Yes,Female,Senior,BUSN,1,1,1,1,1,0,1,0,1,43
+1 to 2 times,Light user,$5 to $9,5,4,3,4,3,3,4,3,3,4,Mexican,On-Campus,Yes,Female,Freshman,OTH,1,0,1,0,0,1,0,0,1,44
+3 to 5 times,Heavy User,$10 or more,7,5,3,5,5,3,1,3,3,5,Burgers,Off-Campus,No,Female,Senior,BUSN,1,0,1,1,0,0,0,0,1,45
+1 to 2 times,Light user,$5 to $9,4,4,4,4,3,3,2,4,3,4,Mexican,Off-Campus,No,Male,Junior,ARTSC,1,1,1,0,0,0,1,0,1,46
+1 to 2 times,Light user,$5 to $9,3,4,3,4,4,4,3,5,2,4,Mexican,Off-Campus,No,Female,Senior,OTH,1,0,1,1,1,0,1,0,1,47
+1 to 2 times,Light user,$5 to $9,1,5,3,4,3,2,4,4,4,1,Burgers,Off-Campus,No,Male,Senior,OTH,1,0,1,0,0,1,1,1,0,48
+0 times,Non-user,$10 or more,2,4,2,3,3,4,2,3,2,4,Mexican,On-Campus,Yes,Female,Junior,OTH,1,0,0,0,1,0,0,0,1,49
+1 to 2 times,Light user,$5 to $9,7,5,5,5,5,5,5,5,5,5,Burgers,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,1,1,1,1,50
+1 to 2 times,Light user,$10 or more,7,4,3,4,3,4,2,4,4,3,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,0,1,0,1,1,0,51
+1 to 2 times,Light user,$5 to $9,3,4,4,4,5,4,3,4,3,4,Mexican,On-Campus,Yes,Female,Senior,ARTSC,1,1,1,1,1,0,1,0,1,52
+1 to 2 times,Light user,$5 to $9,3,5,4,4,4,4,3,5,4,2,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,0,1,1,0,53
+1 to 2 times,Light user,$10 or more,2,5,3,4,4,2,4,4,3,4,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,0,1,1,0,1,1,0,1,54
+1 to 2 times,Light user,$5 to $9,3,5,4,5,5,4,2,4,3,4,Burgers,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,1,1,0,1,0,1,55
+1 to 2 times,Light user,$5 to $9,4,5,1,3,1,5,3,2,4,3,Mexican,Off-Campus,Yes,Female,Senior,ARTSC,1,0,0,0,1,0,0,1,0,56
+1 to 2 times,Light user,$5 to $9,4,5,5,5,4,3,3,4,4,5,Burgers,Off-Campus,No,Female,Junior,ARTSC,1,1,1,1,0,0,1,1,1,57
+1 to 2 times,Light user,$5 to $9,7,5,4,4,5,5,3,5,3,4,Mexican,Commuter,No,Female,Senior,OTH,1,1,1,1,1,0,1,0,1,58
+1 to 2 times,Light user,$5 to $9,4,5,3,4,3,3,4,3,5,2,Mexican,Commuter,No,Female,Freshman,BUSN,1,0,1,0,0,1,0,1,0,59
+0 times,Non-user,Less than $5,3,3,3,4,4,3,2,3,3,4,Other,On-Campus,Yes,Female,Sophomore,OTH,0,0,1,1,0,0,0,0,1,60
+1 to 2 times,Light user,$5 to $9,4,2,2,4,2,4,2,3,2,2,Mexican,On-Campus,Yes,Female,Sophomore,OTH,0,0,1,0,1,0,0,0,0,61
+1 to 2 times,Light user,$5 to $9,1,5,1,4,4,4,1,4,2,4,Mexican,Off-Campus,No,Male,Senior,ARTSC,1,0,1,1,1,0,1,0,1,62
+1 to 2 times,Light user,$10 or more,5,4,3,4,2,3,3,3,2,3,Mexican,On-Campus,Yes,Male,Junior,ARTSC,1,0,1,0,0,0,0,0,0,63
+1 to 2 times,Light user,$5 to $9,5,5,4,4,3,4,4,4,5,3,Other,Off-Campus,No,Female,Junior,EDUC,1,1,1,0,1,1,1,1,0,64
+1 to 2 times,Light user,$5 to $9,6,3,2,3,4,4,2,2,1,3,Mexican,Off-Campus,No,Female,Senior,ARTSC,0,0,0,1,1,0,0,0,0,65
+1 to 2 times,Light user,$5 to $9,2,3,3,4,5,3,3,5,2,4,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,0,0,1,1,0,0,1,0,1,66
+0 times,Non-user,$5 to $9,3,4,4,5,5,4,4,5,4,4,Mexican,On-Campus,Yes,Male,Senior,EDUC,1,1,1,1,1,1,1,1,1,67
+1 to 2 times,Light user,$5 to $9,6,5,4,3,4,4,3,4,3,4,Other,On-Campus,Yes,Female,Junior,OTH,1,1,0,1,1,0,1,0,1,68
+0 times,Non-user,$5 to $9,2,5,5,5,3,3,5,2,3,3,Other,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,0,0,1,0,0,0,69
+1 to 2 times,Light user,$5 to $9,5,5,3,4,3,3,3,3,4,3,Burgers,Off-Campus,Yes,Male,Senior,ARTSC,1,0,1,0,0,0,0,1,0,70
+1 to 2 times,Light user,$5 to $9,7,5,3,5,3,4,4,4,4,4,Mexican,Commuter,No,Female,Junior,BUSN,1,0,1,0,1,1,1,1,1,71
+3 to 5 times,Heavy User,$5 to $9,2,5,4,5,2,4,4,3,3,3,Mexican,Commuter,No,Female,Junior,BUSN,1,1,1,0,1,1,0,0,0,72
+1 to 2 times,Light user,Less than $5,2,4,4,4,4,4,3,4,3,3,Mexican,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,1,0,1,0,0,73
+0 times,Non-user,Less than $5,3,4,3,3,2,3,3,3,4,2,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,0,0,0,0,0,1,0,74
+1 to 2 times,Light user,$10 or more,6,4,3,4,4,4,3,4,4,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,0,1,1,1,0,1,1,0,75
+1 to 2 times,Light user,$5 to $9,4,3,2,4,5,5,3,4,2,3,Mexican,Off-Campus,No,Female,Senior,OTH,0,0,1,1,1,0,1,0,0,76
+1 to 2 times,Light user,$5 to $9,6,3,3,3,4,4,2,2,3,2,Mexican,Off-Campus,No,Female,Senior,BUSN,0,0,0,1,1,0,0,0,0,77
+3 to 5 times,Heavy User,$10 or more,1,4,4,4,1,4,4,4,4,3,Mexican,Commuter,No,Female,Junior,OTH,1,1,1,0,1,1,1,1,0,78
+1 to 2 times,Light user,$5 to $9,4,2,3,2,2,2,3,3,1,3,Mexican,On-Campus,Yes,Male,Junior,EDUC,0,0,0,0,0,0,0,0,0,79
+1 to 2 times,Light user,Less than $5,6,4,3,4,4,4,3,4,3,3,Mexican,On-Campus,Yes,Female,Junior,ARTSC,1,0,1,1,1,0,1,0,0,80
+0 times,Non-user,$5 to $9,4,4,3,4,5,2,3,5,3,4,Burgers,On-Campus,Yes,Female,Junior,EDUC,1,0,1,1,0,0,1,0,1,81
+1 to 2 times,Light user,$5 to $9,6,2,2,3,2,2,2,4,1,1,Burgers,Off-Campus,No,Male,Senior,BUSN,0,0,0,0,0,0,1,0,0,82
+1 to 2 times,Light user,$5 to $9,4,5,5,5,3,4,3,5,4,4,Mexican,On-Campus,Yes,Female,Junior,OTH,1,1,1,0,1,0,1,1,1,83
+1 to 2 times,Light user,$5 to $9,6,5,3,4,2,4,3,4,2,4,Mexican,Commuter,No,Female,Senior,ARTSC,1,0,1,0,1,0,1,0,1,84
+3 to 5 times,Heavy User,$10 or more,7,5,3,5,3,4,2,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,0,1,0,1,0,1,1,1,85
+3 to 5 times,Heavy User,$10 or more,3,4,3,4,4,3,3,3,3,3,Mexican,Off-Campus,No,Male,Senior,BUSN,1,0,1,1,0,0,0,0,0,86
+1 to 2 times,Light user,Less than $5,7,2,4,4,3,3,2,5,2,2,Mexican,Off-Campus,No,Female,Senior,BUSN,0,1,1,0,0,0,1,0,0,87
+1 to 2 times,Light user,$5 to $9,1,4,3,5,3,3,2,3,3,2,Mexican,Off-Campus,Yes,Female,Senior,ARTSC,1,0,1,0,0,0,0,0,0,88
+1 to 2 times,Light user,$5 to $9,1,5,4,4,4,4,3,4,3,4,Mexican,On-Campus,Yes,Female,Senior,OTH,1,1,1,1,1,0,1,0,1,89
+1 to 2 times,Light user,$10 or more,1,4,3,5,2,3,4,2,4,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,0,1,0,0,1,0,1,0,90
+1 to 2 times,Light user,$10 or more,6,5,5,5,5,5,5,5,5,5,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,1,1,1,1,1,1,91
+1 to 2 times,Light user,$5 to $9,5,3,2,4,5,4,3,3,2,4,Mexican,Commuter,No,Male,Senior,EDUC,0,0,1,1,1,0,0,0,1,92
+3 to 5 times,Heavy User,$5 to $9,1,4,3,4,3,3,3,5,4,2,Mexican,Commuter,No,Female,Senior,OTH,1,0,1,0,0,0,1,1,0,93
+1 to 2 times,Light user,$5 to $9,6,3,3,4,4,5,4,3,3,4,Mexican,Off-Campus,No,Female,Senior,BUSN,0,0,1,1,1,1,0,0,1,94
+0 times,Non-user,Less than $5,1,5,4,5,5,5,5,4,5,4,Mexican,On-Campus,Yes,Female,Junior,OTH,1,1,1,1,1,1,1,1,1,95
+1 to 2 times,Light user,$10 or more,6,5,3,4,4,3,4,4,3,3,Mexican,Commuter,Yes,Female,Senior,EDUC,1,0,1,1,0,1,1,0,0,96
+1 to 2 times,Light user,$10 or more,3,5,5,5,5,5,3,5,5,5,Mexican,On-Campus,Yes,Male,Junior,OTH,1,1,1,1,1,0,1,1,1,97
+1 to 2 times,Light user,$5 to $9,4,5,3,4,3,3,3,3,4,3,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,0,1,0,0,0,0,1,0,98
+1 to 2 times,Light user,$5 to $9,1,5,4,5,5,4,5,5,5,5,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,1,1,1,1,1,1,1,99
+1 to 2 times,Light user,$5 to $9,3,3,4,3,4,3,3,4,3,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,0,1,0,1,0,0,1,0,1,100
+3 to 5 times,Heavy User,$5 to $9,1,3,3,5,4,4,3,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,0,0,1,1,1,0,1,1,1,101
+0 times,Non-user,Less than $5,2,4,3,5,3,3,3,3,4,4,Mexican,Off-Campus,No,Male,Senior,EDUC,1,0,1,0,0,0,0,1,1,102
+1 to 2 times,Light user,Less than $5,6,4,2,4,3,3,2,5,4,3,Burgers,Off-Campus,No,Female,Senior,ARTSC,1,0,1,0,0,0,1,1,0,103
+3 to 5 times,Heavy User,$5 to $9,7,5,4,5,5,4,3,4,4,4,Mexican,Off-Campus,No,Female,Junior,OTH,1,1,1,1,1,0,1,1,1,104
+0 times,Non-user,$5 to $9,2,5,3,4,4,4,5,4,4,3,Mexican,Off-Campus,Yes,Female,Senior,OTH,1,0,1,1,1,1,1,1,0,105
+1 to 2 times,Light user,$5 to $9,3,4,2,4,2,2,1,5,5,4,Burgers,Off-Campus,No,Female,Junior,OTH,1,0,1,0,0,0,1,1,1,106
+1 to 2 times,Light user,$10 or more,4,4,4,5,2,5,4,5,5,5,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,0,1,1,1,1,1,107
+1 to 2 times,Light user,$10 or more,6,5,5,5,3,3,4,4,3,4,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,0,0,1,1,0,1,108
+1 to 2 times,Light user,$5 to $9,1,5,5,5,5,5,5,5,5,4,Mexican,On-Campus,Yes,Female,Senior,BUSN,1,1,1,1,1,1,1,1,1,109
+1 to 2 times,Light user,$5 to $9,3,3,3,4,3,4,3,4,2,4,Burgers,On-Campus,Yes,Female,Freshman,EDUC,0,0,1,0,1,0,1,0,1,110
+3 to 5 times,Heavy User,$5 to $9,7,5,3,4,3,3,1,3,5,3,Mexican,Off-Campus,No,Male,Junior,BUSN,1,0,1,0,0,0,0,1,0,111
+3 to 5 times,Heavy User,$5 to $9,5,3,3,3,3,3,2,4,2,5,Mexican,Off-Campus,No,Male,Senior,EDUC,0,0,0,0,0,0,1,0,1,112
+3 to 5 times,Heavy User,$5 to $9,2,4,3,3,3,3,2,4,3,2,Burgers,On-Campus,Yes,Female,Senior,OTH,1,0,0,0,0,0,1,0,0,113
+3 to 5 times,Heavy User,$5 to $9,5,5,5,4,3,3,5,4,5,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,0,0,1,1,1,1,114
+1 to 2 times,Light user,Less than $5,4,4,3,5,3,5,4,4,3,3,Mexican,Commuter,No,Female,Junior,EDUC,1,0,1,0,1,1,1,0,0,115
+1 to 2 times,Light user,$5 to $9,7,5,3,5,2,2,3,3,4,1,Burgers,Off-Campus,No,Male,Senior,BUSN,1,0,1,0,0,0,0,1,0,116
+1 to 2 times,Light user,$5 to $9,4,5,3,5,5,5,5,5,4,5,Burgers,On-Campus,Yes,Male,Senior,BUSN,1,0,1,1,1,1,1,1,1,117
+3 to 5 times,Heavy User,$5 to $9,5,3,2,3,4,3,2,3,3,3,Mexican,Off-Campus,No,Female,Senior,BUSN,0,0,0,1,0,0,0,0,0,118
+1 to 2 times,Light user,$5 to $9,7,5,2,1,3,5,1,5,2,5,Burgers,Off-Campus,No,Female,Senior,ARTSC,1,0,0,0,1,0,1,0,1,119
+1 to 2 times,Light user,$5 to $9,4,4,3,3,4,5,2,5,4,3,Burgers,Off-Campus,No,Male,Senior,EDUC,1,0,0,1,1,0,1,1,0,120
+1 to 2 times,Light user,Less than $5,1,3,3,2,4,2,1,4,1,1,Burgers,On-Campus,Yes,Female,Sophomore,BUSN,0,0,0,1,0,0,1,0,0,121
+1 to 2 times,Light user,$10 or more,1,5,5,5,5,3,2,5,5,5,Mexican,On-Campus,Yes,Female,Junior,OTH,1,1,1,1,0,0,1,1,1,122
+1 to 2 times,Light user,$5 to $9,4,3,3,4,3,4,1,4,2,5,Burgers,Commuter,No,Male,Junior,EDUC,0,0,1,0,1,0,1,0,1,123
+1 to 2 times,Light user,$10 or more,4,4,3,3,4,3,3,5,3,3,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,0,0,1,0,0,1,0,0,124
+1 to 2 times,Light user,$5 to $9,4,3,3,3,3,3,3,3,3,3,Mexican,On-Campus,Yes,Male,Junior,OTH,0,0,0,0,0,0,0,0,0,125
+6 to 9 times,Heavy User,$5 to $9,4,4,3,4,5,3,1,5,3,4,Burgers,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,0,0,1,0,1,126
+1 to 2 times,Light user,$10 or more,1,4,3,4,1,3,4,3,4,2,Mexican,Off-Campus,No,Female,Senior,OTH,1,0,1,0,0,1,0,1,0,127
+1 to 2 times,Light user,$5 to $9,6,4,3,2,3,3,3,3,3,2,Mexican,Off-Campus,No,Male,Senior,BUSN,1,0,0,0,0,0,0,0,0,128
+1 to 2 times,Light user,$5 to $9,2,5,4,5,4,3,3,4,3,4,Other,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,1,0,0,1,0,1,129
+3 to 5 times,Heavy User,Less than $5,5,3,3,3,4,4,2,4,2,4,Mexican,On-Campus,Yes,Female,Junior,OTH,0,0,0,1,1,0,1,0,1,130
+0 times,Non-user,Less than $5,7,4,5,5,4,5,5,5,4,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,1,1,1,0,131
+1 to 2 times,Light user,$5 to $9,4,3,5,4,4,3,2,3,4,3,Mexican,On-Campus,Yes,Female,Senior,EDUC,0,1,1,1,0,0,0,1,0,132
+0 times,Non-user,$5 to $9,6,5,3,4,4,4,5,3,4,4,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,1,0,1,1,133
+3 to 5 times,Heavy User,$5 to $9,6,2,2,4,5,3,1,3,1,4,Mexican,Off-Campus,No,Male,Senior,EDUC,0,0,1,1,0,0,0,0,1,134
+1 to 2 times,Light user,$10 or more,7,3,4,4,4,4,5,5,3,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,0,1,1,1,1,1,1,0,1,135
+6 to 9 times,Heavy User,$10 or more,4,5,2,4,4,4,1,3,2,3,Mexican,Off-Campus,Yes,Male,Freshman,EDUC,1,0,1,1,1,0,0,0,0,136
+0 times,Non-user,$10 or more,5,5,3,5,5,5,5,4,3,4,Mexican,Off-Campus,No,Female,Senior,BUSN,1,0,1,1,1,1,1,0,1,137
+1 to 2 times,Light user,$5 to $9,2,4,5,5,2,4,3,4,3,5,Burgers,Off-Campus,No,Male,Senior,BUSN,1,1,1,0,1,0,1,0,1,138
+1 to 2 times,Light user,$10 or more,4,2,1,4,3,3,1,3,2,4,Mexican,On-Campus,Yes,Female,Freshman,EDUC,0,0,1,0,0,0,0,0,1,139
+1 to 2 times,Light user,$5 to $9,7,5,4,5,5,4,3,4,5,5,Mexican,On-Campus,Yes,Male,Sophomore,OTH,1,1,1,1,1,0,1,1,1,140
+1 to 2 times,Light user,$5 to $9,1,4,2,4,4,2,2,4,3,2,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,0,0,1,0,0,141
+1 to 2 times,Light user,$10 or more,1,5,5,5,4,5,5,3,5,3,Mexican,Off-Campus,No,Female,Junior,EDUC,1,1,1,1,1,1,0,1,0,142
+3 to 5 times,Heavy User,$5 to $9,4,5,3,5,4,3,5,4,4,3,Mexican,On-Campus,Yes,Female,Freshman,OTH,1,0,1,1,0,1,1,1,0,143
+3 to 5 times,Heavy User,$10 or more,7,5,3,5,5,4,3,5,4,4,Burgers,Off-Campus,No,Male,Senior,ARTSC,1,0,1,1,1,0,1,1,1,144
+1 to 2 times,Light user,$5 to $9,4,5,3,5,4,5,3,5,4,5,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,1,1,1,0,1,1,1,145
+3 to 5 times,Heavy User,$10 or more,5,4,3,4,4,4,3,4,3,4,Mexican,Off-Campus,No,Male,Junior,EDUC,1,0,1,1,1,0,1,0,1,146
+0 times,Non-user,$5 to $9,1,4,4,5,4,4,4,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,1,1,1,1,147
+1 to 2 times,Light user,$5 to $9,4,4,3,5,3,4,3,4,3,2,Mexican,Off-Campus,No,Male,Senior,BUSN,1,0,1,0,1,0,1,0,0,148
+0 times,Non-user,Less than $5,4,3,2,4,5,3,3,4,4,4,Burgers,On-Campus,Yes,Male,Junior,OTH,0,0,1,1,0,0,1,1,1,149
+0 times,Non-user,$5 to $9,5,4,3,4,3,4,3,5,4,3,Mexican,On-Campus,Yes,Male,Senior,ARTSC,1,0,1,0,1,0,1,1,0,150
+1 to 2 times,Light user,$10 or more,4,5,3,4,4,3,3,3,4,3,Mexican,On-Campus,Yes,Female,Senior,EDUC,1,0,1,1,0,0,0,1,0,151
+1 to 2 times,Light user,$10 or more,4,5,4,5,3,4,3,5,4,4,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,1,1,0,1,0,1,1,1,152
+1 to 2 times,Light user,$10 or more,4,5,3,4,4,3,3,5,5,2,Mexican,Commuter,No,Female,Junior,EDUC,1,0,1,1,0,0,1,1,0,153
+0 times,Non-user,Less than $5,7,2,3,4,4,3,2,5,3,4,Mexican,Off-Campus,No,Female,Senior,EDUC,0,0,1,1,0,0,1,0,1,154
+1 to 2 times,Light user,$10 or more,3,4,4,5,5,3,3,4,4,3,Burgers,Off-Campus,No,Female,Senior,ARTSC,1,1,1,1,0,0,1,1,0,155
+0 times,Non-user,$5 to $9,7,5,3,5,4,4,3,3,4,4,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,1,1,0,0,1,1,156
+1 to 2 times,Light user,$5 to $9,7,5,5,5,5,5,4,5,5,5,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,1,1,1,1,157
+3 to 5 times,Heavy User,$10 or more,7,3,3,3,4,4,3,3,4,4,Mexican,Off-Campus,No,Male,Junior,EDUC,0,0,0,1,1,0,0,1,1,158
+1 to 2 times,Light user,$5 to $9,7,4,3,5,4,4,2,5,3,5,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,0,1,0,1,159
+1 to 2 times,Light user,$5 to $9,7,3,2,4,3,4,1,2,3,2,Mexican,Off-Campus,No,Male,Junior,EDUC,0,0,1,0,1,0,0,0,0,160
+1 to 2 times,Light user,$5 to $9,5,4,2,4,3,5,5,3,2,3,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,0,1,1,0,0,0,161
+1 to 2 times,Light user,$10 or more,7,4,5,5,4,3,4,5,3,3,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,1,1,1,0,1,1,0,0,162
+0 times,Non-user,$5 to $9,7,4,2,,3,2,5,3,2,3,Other,Off-Campus,No,Female,Junior,ARTSC,1,0,,0,0,1,0,0,0,163
+1 to 2 times,Light user,$5 to $9,4,5,4,5,3,4,5,4,3,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,0,1,1,1,0,0,164
+0 times,Non-user,$5 to $9,4,4,4,4,4,4,3,5,4,4,Mexican,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,1,0,1,1,1,165
+1 to 2 times,Light user,$5 to $9,5,3,2,4,3,4,1,4,3,3,Burgers,Off-Campus,No,Female,Junior,EDUC,0,0,1,0,1,0,1,0,0,166
+1 to 2 times,Light user,$5 to $9,3,4,4,3,4,4,4,3,4,3,Mexican,On-Campus,Yes,Female,Senior,ARTSC,1,1,0,1,1,1,0,1,0,167
+0 times,Non-user,$5 to $9,7,3,2,4,2,4,3,4,2,4,Mexican,Off-Campus,No,Female,Sophomore,OTH,0,0,1,0,1,0,1,0,1,168
+1 to 2 times,Light user,$10 or more,4,4,4,5,4,4,4,4,5,4,Mexican,On-Campus,Yes,Female,Senior,EDUC,1,1,1,1,1,1,1,1,1,169
+3 to 5 times,Heavy User,$10 or more,6,5,2,3,4,2,3,5,3,5,Burgers,Off-Campus,No,Male,Senior,ARTSC,1,0,0,1,0,0,1,0,1,170
+3 to 5 times,Heavy User,Less than $5,7,3,3,3,4,3,1,4,3,2,Mexican,Commuter,No,Male,Senior,BUSN,0,0,0,1,0,0,1,0,0,171
+1 to 2 times,Light user,$5 to $9,1,4,5,5,5,5,4,5,3,5,Mexican,On-Campus,Yes,Male,Freshman,OTH,1,1,1,1,1,1,1,0,1,172
+1 to 2 times,Light user,$5 to $9,6,5,1,3,4,4,3,5,3,5,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,0,1,1,0,1,0,1,173
+1 to 2 times,Light user,$5 to $9,4,5,3,5,4,5,4,4,3,3,Mexican,On-Campus,Yes,Male,Senior,BUSN,1,0,1,1,1,1,1,0,0,174
+1 to 2 times,Light user,$5 to $9,7,4,2,3,3,3,2,4,2,4,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,0,0,0,0,1,0,1,175
+3 to 5 times,Heavy User,$5 to $9,4,5,4,4,2,5,3,4,4,4,Mexican,Off-Campus,No,Female,Senior,BUSN,1,1,1,0,1,0,1,1,1,176
+1 to 2 times,Light user,$5 to $9,2,4,2,5,5,4,5,5,5,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,1,1,1,1,1,177
+1 to 2 times,Light user,$5 to $9,7,5,4,5,5,4,4,5,5,3,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,1,1,1,1,1,1,1,0,178
+1 to 2 times,Light user,$5 to $9,2,5,4,4,4,3,5,3,5,4,Mexican,Off-Campus,No,Female,Junior,OTH,1,1,1,1,0,1,0,1,1,179
+0 times,Non-user,Less than $5,6,4,4,4,3,4,4,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,1,0,1,1,1,1,1,180
+1 to 2 times,Light user,$5 to $9,4,3,3,4,4,3,2,4,1,2,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,0,0,1,1,0,0,1,0,0,181
+1 to 2 times,Light user,$5 to $9,1,4,3,4,3,3,3,3,4,1,Mexican,Commuter,No,Female,Senior,BUSN,1,0,1,0,0,0,0,1,0,182
+3 to 5 times,Heavy User,$10 or more,4,5,4,5,4,5,4,5,4,5,Burgers,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,1,1,1,1,1,183
+3 to 5 times,Heavy User,Less than $5,3,2,3,2,5,2,1,5,1,3,Mexican,Off-Campus,No,Male,Senior,BUSN,0,0,0,1,0,0,1,0,0,184
+1 to 2 times,Light user,$10 or more,6,4,3,3,2,4,1,5,3,4,Mexican,On-Campus,Yes,Male,Sophomore,EDUC,1,0,0,0,1,0,1,0,1,185
+1 to 2 times,Light user,Less than $5,7,4,3,3,4,4,3,4,4,4,Other,Off-Campus,No,Female,Junior,BUSN,1,0,0,1,1,0,1,1,1,186
+0 times,Non-user,$5 to $9,1,5,5,5,5,5,5,5,4,5,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,1,1,1,1,1,1,187
+1 to 2 times,Light user,$10 or more,1,3,2,5,3,5,5,5,4,4,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,0,0,1,0,1,1,1,1,1,188
+0 times,Non-user,Less than $5,7,5,2,4,3,4,5,5,2,1,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,0,1,1,1,0,0,189
+1 to 2 times,Light user,$5 to $9,6,5,5,5,3,3,5,5,3,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,0,0,1,1,0,1,190
+3 to 5 times,Heavy User,$5 to $9,7,5,1,5,5,2,1,4,5,4,Mexican,Off-Campus,No,Male,Junior,BUSN,1,0,1,1,0,0,1,1,1,191
+1 to 2 times,Light user,$5 to $9,7,3,1,4,1,4,1,4,1,2,Mexican,On-Campus,Yes,Female,Sophomore,OTH,0,0,1,0,1,0,1,0,0,192
+0 times,Non-user,$5 to $9,4,4,3,5,4,4,2,5,3,4,Burgers,On-Campus,Yes,Female,Sophomore,EDUC,1,0,1,1,1,0,1,0,1,193
+6 to 9 times,Heavy User,$10 or more,4,3,3,3,5,3,1,4,5,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,0,0,0,1,0,0,1,1,1,194
+3 to 5 times,Heavy User,$10 or more,3,3,3,3,5,3,2,4,2,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,0,0,0,1,0,0,1,0,1,195
+0 times,Non-user,Less than $5,3,5,5,5,5,3,4,4,3,3,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,1,1,0,1,1,0,0,196
+1 to 2 times,Light user,$5 to $9,7,5,5,5,5,4,5,5,5,5,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,1,1,1,1,197
+1 to 2 times,Light user,Less than $5,2,3,3,4,5,5,2,5,3,4,Mexican,On-Campus,Yes,Female,Senior,EDUC,0,0,1,1,1,0,1,0,1,198
+0 times,Non-user,$5 to $9,5,3,2,4,3,4,4,4,3,4,Mexican,On-Campus,Yes,Female,Junior,OTH,0,0,1,0,1,1,1,0,1,199
+3 to 5 times,Heavy User,$5 to $9,6,5,4,3,4,4,2,4,5,2,Burgers,Off-Campus,No,Female,Senior,BUSN,1,1,0,1,1,0,1,1,0,200
+0 times,Non-user,$5 to $9,2,5,3,5,4,4,4,5,4,4,Burgers,On-Campus,Yes,Male,Junior,EDUC,1,0,1,1,1,1,1,1,1,201
+1 to 2 times,Light user,$5 to $9,7,2,3,2,3,5,1,5,1,5,Mexican,On-Campus,Yes,Female,Freshman,OTH,0,0,0,0,1,0,1,0,1,202
+1 to 2 times,Light user,$5 to $9,1,4,3,3,3,3,2,5,4,4,Burgers,Commuter,No,Female,Junior,EDUC,1,0,0,0,0,0,1,1,1,203
+,,,,4,5,4,5,4,4,4,3,4,Mexican,Commuter,No,Female,Senior,EDUC,1,1,1,1,1,1,1,0,1,204
+1 to 2 times,Light user,$10 or more,1,5,4,5,4,4,3,4,4,3,Burgers,Commuter,No,Female,Sophomore,OTH,1,1,1,1,1,0,1,1,0,205
+0 times,Non-user,$5 to $9,1,5,5,5,3,3,5,3,4,2,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,0,0,1,0,1,0,206
+1 to 2 times,Light user,$5 to $9,1,3,4,4,4,3,2,4,2,3,Mexican,On-Campus,Yes,Male,Sophomore,OTH,0,1,1,1,0,0,1,0,0,207
+10 or more times,Heavy User,$10 or more,4,5,5,5,5,5,4,3,5,5,Mexican,Commuter,Yes,Female,Sophomore,BUSN,1,1,1,1,1,1,0,1,1,208
+1 to 2 times,Light user,$5 to $9,2,3,3,5,5,3,5,5,4,3,Other,On-Campus,Yes,Female,Junior,OTH,0,0,1,1,0,1,1,1,0,209
+0 times,Non-user,$5 to $9,4,4,3,3,4,3,2,4,1,3,Mexican,On-Campus,Yes,Female,Junior,ARTSC,1,0,0,1,0,0,1,0,0,210
+3 to 5 times,Heavy User,Less than $5,1,2,3,3,5,5,3,5,4,,Other,Off-Campus,No,Female,Senior,ARTSC,0,0,0,1,1,0,1,1,,211
+3 to 5 times,Heavy User,$5 to $9,2,3,4,3,4,3,2,5,3,3,Burgers,On-Campus,Yes,Female,Sophomore,ARTSC,0,1,0,1,0,0,1,0,0,212
+1 to 2 times,Light user,$10 or more,4,5,5,5,5,5,4,5,5,4,Mexican,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,1,1,1,1,1,1,213
+3 to 5 times,Heavy User,$5 to $9,1,2,5,4,3,3,2,4,4,3,Burgers,Commuter,No,Female,Senior,OTH,0,1,1,0,0,0,1,1,0,214
+1 to 2 times,Light user,$5 to $9,2,4,3,4,4,4,3,4,4,3,Burgers,On-Campus,Yes,Male,Junior,BUSN,1,0,1,1,1,0,1,1,0,215
+3 to 5 times,Heavy User,$10 or more,7,4,4,3,4,3,1,4,3,3,Burgers,On-Campus,Yes,Female,Junior,EDUC,1,1,0,1,0,0,1,0,0,216
+0 times,Non-user,Less than $5,5,2,3,4,4,3,4,5,1,4,Mexican,On-Campus,Yes,Female,Junior,EDUC,0,0,1,1,0,1,1,0,1,217
+3 to 5 times,Heavy User,$10 or more,6,5,4,5,2,3,4,4,5,4,Mexican,Off-Campus,No,Female,Senior,EDUC,1,1,1,0,0,1,1,1,1,218
+1 to 2 times,Light user,$5 to $9,7,5,2,4,5,5,3,4,3,5,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,1,1,1,0,1,0,1,219
+0 times,Non-user,Less than $5,7,4,2,3,4,2,5,2,4,3,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,0,1,0,1,0,1,0,220
+0 times,Non-user,Less than $5,7,5,5,5,5,5,5,5,4,5,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,1,1,1,1,221
+1 to 2 times,Light user,$5 to $9,5,3,3,4,3,4,4,4,3,4,Mexican,Off-Campus,No,Female,Senior,BUSN,0,0,1,0,1,1,1,0,1,222
+1 to 2 times,Light user,$5 to $9,1,4,4,5,3,3,4,4,3,3,Mexican,On-Campus,Yes,Female,Junior,OTH,1,1,1,0,0,1,1,0,0,223
+1 to 2 times,Light user,Less than $5,3,3,2,4,3,3,2,4,3,3,Burgers,On-Campus,Yes,Female,Sophomore,ARTSC,0,0,1,0,0,0,1,0,0,224
+3 to 5 times,Heavy User,$5 to $9,4,4,4,4,4,5,1,3,1,5,Mexican,Off-Campus,No,Female,Junior,ARTSC,1,1,1,1,1,0,0,0,1,225
+3 to 5 times,Heavy User,Less than $5,7,3,5,4,4,2,1,5,1,4,Mexican,Off-Campus,No,Male,Senior,ARTSC,0,1,1,1,0,0,1,0,1,226
+1 to 2 times,Light user,$5 to $9,3,4,2,4,3,4,2,4,4,3,Mexican,On-Campus,Yes,Male,Sophomore,EDUC,1,0,1,0,1,0,1,1,0,227
+3 to 5 times,Heavy User,$5 to $9,6,5,3,4,1,4,4,3,3,4,Mexican,On-Campus,Yes,Female,Senior,ARTSC,1,0,1,0,1,1,0,0,1,228
+1 to 2 times,Light user,$5 to $9,4,3,3,3,5,4,3,4,3,4,Mexican,On-Campus,Yes,Female,Junior,ARTSC,0,0,0,1,1,0,1,0,1,229
+1 to 2 times,Light user,$5 to $9,4,5,3,5,4,4,3,4,2,2,Mexican,Off-Campus,No,Female,Junior,OTH,1,0,1,1,1,0,1,0,0,230
+0 times,Non-user,Less than $5,6,4,4,4,4,4,1,4,4,4,Burgers,On-Campus,Yes,Female,Junior,ARTSC,1,1,1,1,1,0,1,1,1,231
+1 to 2 times,Light user,Less than $5,6,3,2,3,4,4,1,4,2,3,Burgers,Off-Campus,No,Male,Senior,BUSN,0,0,0,1,1,0,1,0,0,232
+0 times,Non-user,$5 to $9,4,4,4,5,4,4,4,4,3,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,1,1,1,1,1,0,1,233
+3 to 5 times,Heavy User,$5 to $9,4,5,4,5,5,4,4,4,5,4,Mexican,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,1,1,1,1,1,234
+3 to 5 times,Heavy User,$10 or more,6,4,3,4,4,4,4,5,3,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,0,1,1,1,1,1,0,0,235
+1 to 2 times,Light user,$5 to $9,2,4,2,4,3,3,1,4,3,3,Burgers,On-Campus,Yes,Male,Junior,ARTSC,1,0,1,0,0,0,1,0,0,236
+1 to 2 times,Light user,$5 to $9,4,5,5,5,5,5,5,5,3,5,Mexican,Off-Campus,No,Male,Junior,OTH,1,1,1,1,1,1,1,0,1,237
+1 to 2 times,Light user,$5 to $9,5,3,3,4,3,3,2,3,4,4,Burgers,Commuter,Yes,Male,Junior,EDUC,0,0,1,0,0,0,0,1,1,238
+1 to 2 times,Light user,$10 or more,4,5,2,5,3,5,2,4,5,4,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,0,1,0,1,0,1,1,1,239
+0 times,Non-user,$5 to $9,1,5,5,2,5,2,1,5,1,2,Burgers,Off-Campus,No,Female,Sophomore,ARTSC,1,1,0,1,0,0,1,0,0,240
+1 to 2 times,Light user,$5 to $9,5,4,4,4,4,4,2,4,3,4,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,1,1,0,1,0,1,241
+0 times,Non-user,Less than $5,3,4,4,5,3,2,5,3,2,1,Other,Off-Campus,No,Female,Senior,OTH,1,1,1,0,0,1,0,0,0,242
+3 to 5 times,Heavy User,$10 or more,7,2,3,2,2,2,2,2,3,2,Mexican,Off-Campus,No,Female,Senior,EDUC,0,0,0,0,0,0,0,0,0,243
+0 times,Non-user,$10 or more,3,4,4,4,4,3,2,4,2,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,0,0,1,0,1,244
+1 to 2 times,Light user,$5 to $9,6,5,4,5,2,3,3,4,3,2,Other,Off-Campus,No,Female,Senior,EDUC,1,1,1,0,0,0,1,0,0,245
+1 to 2 times,Light user,$5 to $9,6,3,4,4,5,5,3,5,2,4,Mexican,Off-Campus,No,Female,Senior,EDUC,0,1,1,1,1,0,1,0,1,246
+1 to 2 times,Light user,$5 to $9,6,4,4,5,2,4,4,4,4,3,Burgers,On-Campus,Yes,Female,Junior,ARTSC,1,1,1,0,1,1,1,1,0,247
+3 to 5 times,Heavy User,$5 to $9,4,3,2,4,3,4,3,4,3,3,Mexican,Off-Campus,No,Female,Senior,OTH,0,0,1,0,1,0,1,0,0,248
+3 to 5 times,Heavy User,$5 to $9,2,4,3,4,4,3,3,4,3,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,0,1,1,0,0,1,0,0,249
+0 times,Non-user,$5 to $9,5,4,2,4,3,3,2,5,3,2,Mexican,On-Campus,Yes,Male,Junior,EDUC,1,0,1,0,0,0,1,0,0,250
+1 to 2 times,Light user,$5 to $9,2,4,3,4,3,3,4,3,4,4,Mexican,Commuter,No,Male,Senior,ARTSC,1,0,1,0,0,1,0,1,1,251
+0 times,Non-user,$10 or more,1,5,4,5,5,4,5,4,5,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,1,1,1,1,252
+1 to 2 times,Light user,Less than $5,5,3,4,4,3,3,3,5,2,3,Mexican,Off-Campus,No,Female,Senior,ARTSC,0,1,1,0,0,0,1,0,0,253
+1 to 2 times,Light user,$5 to $9,4,3,2,2,3,4,2,5,2,4,Mexican,Off-Campus,No,Male,Junior,BUSN,0,0,0,0,1,0,1,0,1,254
+0 times,Non-user,$5 to $9,1,4,3,4,4,4,2,4,4,4,Mexican,Commuter,No,Female,Senior,OTH,1,0,1,1,1,0,1,1,1,255
+1 to 2 times,Light user,$5 to $9,3,3,4,5,3,3,3,5,3,4,Mexican,On-Campus,Yes,Male,Junior,BUSN,0,1,1,0,0,0,1,0,1,256
+3 to 5 times,Heavy User,$10 or more,1,4,2,4,5,4,3,5,3,3,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,0,1,1,1,0,1,0,0,257
+3 to 5 times,Heavy User,$10 or more,4,3,2,3,3,4,2,3,5,1,Burgers,Off-Campus,No,Male,Junior,ARTSC,0,0,0,0,1,0,0,1,0,258
+1 to 2 times,Light user,$5 to $9,6,4,3,4,4,4,3,5,3,4,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,0,1,0,1,259
+1 to 2 times,Light user,Less than $5,7,5,5,5,5,5,4,5,4,5,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,1,1,1,1,1,1,1,1,260
+1 to 2 times,Light user,$5 to $9,1,5,3,4,4,3,4,4,5,3,Other,Commuter,No,Female,Junior,OTH,1,0,1,1,0,1,1,1,0,261
+1 to 2 times,Light user,$5 to $9,6,4,4,4,4,4,3,5,3,5,Burgers,Off-Campus,No,Male,Junior,BUSN,1,1,1,1,1,0,1,0,1,262
+1 to 2 times,Light user,$5 to $9,5,4,3,4,4,4,3,4,3,4,Mexican,On-Campus,Yes,Male,Senior,BUSN,1,0,1,1,1,0,1,0,1,263
+3 to 5 times,Heavy User,$5 to $9,7,5,4,4,4,3,1,4,3,5,Burgers,Off-Campus,No,Male,Junior,ARTSC,1,1,1,1,0,0,1,0,1,264
+3 to 5 times,Heavy User,$5 to $9,6,4,4,4,4,4,3,5,2,3,Mexican,Off-Campus,No,Female,Senior,BUSN,1,1,1,1,1,0,1,0,0,265
+0 times,Non-user,Less than $5,4,5,4,5,5,4,5,3,3,5,Mexican,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,1,1,1,0,0,1,266
+1 to 2 times,Light user,$5 to $9,6,4,2,5,5,5,3,2,2,3,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,1,1,0,0,0,0,267
+0 times,Non-user,Less than $5,5,4,1,5,5,4,5,4,4,3,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,0,1,1,1,1,1,1,0,268
+0 times,Non-user,$5 to $9,4,3,1,3,3,2,1,4,5,1,Burgers,On-Campus,Yes,Male,Freshman,ARTSC,0,0,0,0,0,0,1,1,0,269
+1 to 2 times,Light user,$5 to $9,4,5,3,4,3,3,5,2,3,3,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,1,0,0,1,0,0,0,270
+1 to 2 times,Light user,$5 to $9,7,3,2,5,4,5,1,3,2,4,Mexican,On-Campus,Yes,Male,Senior,EDUC,0,0,1,1,1,0,0,0,1,271
+1 to 2 times,Light user,$10 or more,4,3,3,4,4,2,2,3,1,4,Mexican,Off-Campus,No,Male,Senior,ARTSC,0,0,1,1,0,0,0,0,1,272
+1 to 2 times,Light user,$10 or more,4,5,4,3,4,5,2,4,4,4,Burgers,On-Campus,Yes,Male,Junior,OTH,1,1,0,1,1,0,1,1,1,273
+0 times,Non-user,Less than $5,6,4,2,3,5,4,2,4,2,5,Mexican,Off-Campus,No,Female,Senior,BUSN,1,0,0,1,1,0,1,0,1,274
+1 to 2 times,Light user,$5 to $9,4,4,4,4,4,4,2,4,4,4,Other,On-Campus,Yes,Female,Sophomore,EDUC,1,1,1,1,1,0,1,1,1,275
+1 to 2 times,Light user,$5 to $9,5,4,4,3,4,4,2,4,4,4,Burgers,Off-Campus,No,Female,Senior,BUSN,1,1,0,1,1,0,1,1,1,276
+0 times,Non-user,$5 to $9,6,5,3,4,4,5,5,5,5,3,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,1,1,1,1,1,1,0,277
+1 to 2 times,Light user,$5 to $9,6,5,5,5,3,5,5,3,4,4,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,1,1,0,1,1,0,1,1,278
+1 to 2 times,Light user,$10 or more,2,3,4,3,2,4,4,4,3,3,Mexican,Off-Campus,No,Male,Senior,ARTSC,0,1,0,0,1,1,1,0,0,279
+1 to 2 times,Light user,$5 to $9,4,4,3,4,4,3,4,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,0,1,1,0,1,1,1,1,280
+1 to 2 times,Light user,$10 or more,3,5,2,5,4,5,4,4,3,5,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,1,1,0,1,281
+1 to 2 times,Light user,$5 to $9,6,3,2,3,3,4,2,5,3,4,Burgers,On-Campus,Yes,Male,Sophomore,OTH,0,0,0,0,1,0,1,0,1,282
+1 to 2 times,Light user,$5 to $9,7,3,4,5,3,3,1,3,2,3,Mexican,On-Campus,Yes,Male,Junior,EDUC,0,1,1,0,0,0,0,0,0,283
+3 to 5 times,Heavy User,Less than $5,2,5,4,4,4,3,1,5,3,2,Mexican,Commuter,No,Female,Sophomore,BUSN,1,1,1,1,0,0,1,0,0,284
+6 to 9 times,Heavy User,$5 to $9,3,4,4,4,4,4,3,4,3,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,0,1,0,0,285
+1 to 2 times,Light user,$5 to $9,4,4,4,3,5,5,3,5,4,5,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,0,1,1,0,1,1,1,286
+3 to 5 times,Heavy User,$5 to $9,7,3,4,4,4,4,3,4,3,5,Mexican,Off-Campus,No,Female,Senior,ARTSC,0,1,1,1,1,0,1,0,1,287
+3 to 5 times,Heavy User,$5 to $9,5,4,3,3,4,3,3,5,2,3,Mexican,On-Campus,Yes,Female,Junior,ARTSC,1,0,0,1,0,0,1,0,0,288
+3 to 5 times,Heavy User,$5 to $9,2,5,5,5,3,3,3,4,5,3,Mexican,Off-Campus,No,Female,Senior,EDUC,1,1,1,0,0,0,1,1,0,289
+1 to 2 times,Light user,$5 to $9,7,4,3,4,4,4,3,5,4,4,Mexican,Off-Campus,No,Female,Senior,BUSN,1,0,1,1,1,0,1,1,1,290
+1 to 2 times,Light user,$5 to $9,4,4,3,4,4,5,3,5,4,3,Mexican,On-Campus,Yes,Female,Senior,ARTSC,1,0,1,1,1,0,1,1,0,291
+1 to 2 times,Light user,$5 to $9,7,4,3,3,2,3,4,3,3,2,Other,Off-Campus,No,Female,Senior,EDUC,1,0,0,0,0,1,0,0,0,292
+3 to 5 times,Heavy User,$10 or more,5,5,4,4,5,5,2,5,3,4,Mexican,Off-Campus,No,Female,Junior,EDUC,1,1,1,1,1,0,1,0,1,293
+1 to 2 times,Light user,$5 to $9,6,4,2,3,2,4,2,3,3,2,Mexican,Off-Campus,No,Male,Senior,BUSN,1,0,0,0,1,0,0,0,0,294
+1 to 2 times,Light user,Less than $5,7,4,3,5,4,5,2,5,4,3,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,1,0,1,1,0,295
+0 times,Non-user,$10 or more,7,5,3,5,4,4,1,3,4,2,Burgers,On-Campus,Yes,Female,Junior,EDUC,1,0,1,1,1,0,0,1,0,296
+3 to 5 times,Heavy User,$5 to $9,6,2,1,4,2,2,1,2,1,2,Mexican,On-Campus,Yes,Female,Senior,ARTSC,0,0,1,0,0,0,0,0,0,297
+1 to 2 times,Light user,$5 to $9,6,3,3,3,3,2,2,4,2,2,Mexican,On-Campus,Yes,Female,Sophomore,OTH,0,0,0,0,0,0,1,0,0,298
+1 to 2 times,Light user,Less than $5,3,5,3,5,4,3,3,4,4,3,Burgers,On-Campus,Yes,Female,Junior,BUSN,1,0,1,1,0,0,1,1,0,299
+0 times,Non-user,$5 to $9,2,2,4,3,3,2,4,4,1,4,Mexican,On-Campus,Yes,Male,Sophomore,EDUC,0,1,0,0,0,1,1,0,1,300
+1 to 2 times,Light user,Less than $5,6,4,4,5,2,4,3,4,4,3,Burgers,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,0,1,0,1,1,0,301
+1 to 2 times,Light user,$5 to $9,2,3,2,4,3,4,3,3,4,5,Mexican,On-Campus,Yes,Female,Junior,ARTSC,0,0,1,0,1,0,0,1,1,302
+1 to 2 times,Light user,$5 to $9,6,4,4,5,4,2,5,3,3,3,Other,Off-Campus,No,Female,Senior,BUSN,1,1,1,1,0,1,0,0,0,303
+1 to 2 times,Light user,$5 to $9,4,5,3,5,3,4,3,2,3,4,Mexican,On-Campus,Yes,Male,Junior,EDUC,1,0,1,0,1,0,0,0,1,304
+3 to 5 times,Heavy User,$10 or more,7,4,3,5,5,4,4,5,4,3,Mexican,Commuter,No,Female,Senior,ARTSC,1,0,1,1,1,1,1,1,0,305
+3 to 5 times,Heavy User,Less than $5,6,4,4,4,4,3,2,5,3,4,Burgers,Off-Campus,No,Male,Senior,EDUC,1,1,1,1,0,0,1,0,1,306
+1 to 2 times,Light user,$5 to $9,4,5,5,5,5,5,5,5,4,3,Other,Commuter,No,Female,Senior,EDUC,1,1,1,1,1,1,1,1,0,307
+1 to 2 times,Light user,$5 to $9,6,4,2,5,3,3,5,4,3,4,Mexican,Commuter,No,Male,Senior,BUSN,1,0,1,0,0,1,1,0,1,308
+1 to 2 times,Light user,$5 to $9,4,2,4,3,4,3,1,3,2,4,Burgers,On-Campus,Yes,Male,Junior,BUSN,0,1,0,1,0,0,0,0,1,309
+3 to 5 times,Heavy User,$10 or more,6,5,4,5,4,3,3,5,4,5,Mexican,On-Campus,Yes,Female,Freshman,OTH,1,1,1,1,0,0,1,1,1,310
+1 to 2 times,Light user,Less than $5,2,4,3,2,3,5,2,5,2,2,Mexican,Off-Campus,No,Female,Senior,BUSN,1,0,0,0,1,0,1,0,0,311
+0 times,Non-user,$5 to $9,4,5,5,5,1,3,5,3,3,3,Other,Commuter,No,Female,Junior,ARTSC,1,1,1,0,0,1,0,0,0,312
+0 times,Non-user,Less than $5,6,3,2,4,3,2,2,2,3,3,Burgers,On-Campus,Yes,Male,Junior,OTH,0,0,1,0,0,0,0,0,0,313
+0 times,Non-user,$5 to $9,5,5,3,5,4,3,3,5,4,3,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,1,0,0,1,1,0,314
+1 to 2 times,Light user,$5 to $9,2,4,3,4,4,4,4,3,3,2,Mexican,Off-Campus,No,Male,Senior,BUSN,1,0,1,1,1,1,0,0,0,315
+1 to 2 times,Light user,$5 to $9,4,5,2,5,3,4,3,4,4,3,Mexican,On-Campus,Yes,Female,Senior,ARTSC,1,0,1,0,1,0,1,1,0,316
+1 to 2 times,Light user,$10 or more,4,5,5,5,5,5,5,5,5,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,1,1,1,0,317
+3 to 5 times,Heavy User,$10 or more,4,5,5,5,5,4,4,5,3,5,Mexican,On-Campus,Yes,Male,Sophomore,ARTSC,1,1,1,1,1,1,1,0,1,318
+0 times,Non-user,$5 to $9,6,4,2,3,4,3,2,4,3,3,Burgers,Off-Campus,No,Male,Senior,BUSN,1,0,0,1,0,0,1,0,0,319
+1 to 2 times,Light user,$10 or more,1,5,3,5,4,4,5,4,4,5,Mexican,Off-Campus,Yes,Female,Senior,ARTSC,1,0,1,1,1,1,1,1,1,320
+1 to 2 times,Light user,$5 to $9,4,4,3,5,4,4,1,5,3,5,Burgers,On-Campus,Yes,Male,Sophomore,ARTSC,1,0,1,1,1,0,1,0,1,321
+3 to 5 times,Heavy User,Less than $5,4,1,4,3,3,4,3,4,3,1,Burgers,Off-Campus,No,Female,Senior,EDUC,0,1,0,0,1,0,1,0,0,322
+3 to 5 times,Heavy User,$5 to $9,4,5,4,4,4,4,3,4,5,3,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,1,1,0,1,1,0,323
+1 to 2 times,Light user,Less than $5,6,5,2,4,5,2,3,5,3,1,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,1,1,0,0,1,0,0,324
+1 to 2 times,Light user,$10 or more,4,5,5,5,5,4,4,5,5,5,Chicken,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,1,1,1,1,1,1,325
+0 times,Non-user,$5 to $9,4,4,2,4,3,3,3,3,2,3,Mexican,On-Campus,Yes,Female,Junior,ARTSC,1,0,1,0,0,0,0,0,0,326
+1 to 2 times,Light user,$5 to $9,1,4,2,5,4,3,4,3,4,3,Mexican,Off-Campus,No,Female,Junior,BUSN,1,0,1,1,0,1,0,1,0,327
+1 to 2 times,Light user,$5 to $9,7,5,4,5,4,3,2,3,4,4,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,1,0,0,0,1,1,328
+1 to 2 times,Light user,$5 to $9,4,4,4,5,3,3,4,4,3,3,Mexican,Off-Campus,No,Female,Junior,ARTSC,1,1,1,0,0,1,1,0,0,329
+1 to 2 times,Light user,$5 to $9,5,4,3,3,3,3,3,4,3,4,Burgers,On-Campus,Yes,Female,Freshman,EDUC,1,0,0,0,0,0,1,0,1,330
+0 times,Non-user,$5 to $9,2,4,4,5,3,3,5,4,3,3,Other,Off-Campus,No,Female,Senior,ARTSC,1,1,1,0,0,1,1,0,0,331
+3 to 5 times,Heavy User,$5 to $9,4,4,3,5,5,5,2,5,4,5,Mexican,Off-Campus,No,Male,Sophomore,BUSN,1,0,1,1,1,0,1,1,1,332
+1 to 2 times,Light user,$5 to $9,4,5,3,4,4,4,4,5,4,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,1,1,1,1,1,333
+6 to 9 times,Heavy User,$5 to $9,7,5,5,3,4,5,3,4,4,4,Other,Commuter,No,Female,Senior,OTH,1,1,0,1,1,0,1,1,1,334
+3 to 5 times,Heavy User,$10 or more,5,4,3,5,4,4,4,4,2,3,Burgers,Off-Campus,No,Female,Senior,BUSN,1,0,1,1,1,1,1,0,0,335
+0 times,Non-user,Less than $5,2,5,4,4,5,3,2,5,5,3,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,1,0,0,1,1,0,336
+3 to 5 times,Heavy User,$10 or more,1,4,4,4,4,3,4,4,4,4,Mexican,Off-Campus,No,Female,Junior,EDUC,1,1,1,1,0,1,1,1,1,337
+1 to 2 times,Light user,$10 or more,1,4,3,4,3,2,2,3,3,3,Burgers,On-Campus,Yes,Male,Freshman,ARTSC,1,0,1,0,0,0,0,0,0,338
+0 times,Non-user,$5 to $9,5,5,3,5,2,3,1,3,4,4,Burgers,On-Campus,Yes,Female,Junior,ARTSC,1,0,1,0,0,0,0,1,1,339
+0 times,Non-user,Less than $5,4,4,3,5,3,3,3,2,4,4,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,0,0,0,0,1,1,340
+3 to 5 times,Heavy User,$10 or more,7,2,1,4,3,4,1,5,2,5,Mexican,On-Campus,Yes,Male,Sophomore,ARTSC,0,0,1,0,1,0,1,0,1,341
+3 to 5 times,Heavy User,$5 to $9,6,5,4,5,4,3,4,4,4,3,Mexican,Commuter,No,Female,Junior,BUSN,1,1,1,1,0,1,1,1,0,342
+3 to 5 times,Heavy User,$5 to $9,7,3,2,3,4,5,1,5,3,3,Mexican,Off-Campus,No,Male,Senior,BUSN,0,0,0,1,1,0,1,0,0,343
+1 to 2 times,Light user,$5 to $9,2,5,4,5,4,5,4,5,3,4,Mexican,Off-Campus,No,Female,Junior,EDUC,1,1,1,1,1,1,1,0,1,344
+1 to 2 times,Light user,$5 to $9,6,3,3,4,5,4,4,4,3,4,Mexican,Off-Campus,No,Female,Senior,BUSN,0,0,1,1,1,1,1,0,1,345
+1 to 2 times,Light user,$10 or more,6,5,4,5,4,4,3,4,5,3,Burgers,Off-Campus,No,Female,Senior,ARTSC,1,1,1,1,1,0,1,1,0,346
+1 to 2 times,Light user,$5 to $9,7,5,5,5,3,5,1,5,5,5,Other,Commuter,Yes,Female,Sophomore,EDUC,1,1,1,0,1,0,1,1,1,347
+1 to 2 times,Light user,$10 or more,2,4,1,5,2,1,2,4,4,4,Mexican,Off-Campus,No,Male,Senior,EDUC,1,0,1,0,0,0,1,1,1,348
+3 to 5 times,Heavy User,$5 to $9,4,5,4,3,5,4,3,5,5,4,Mexican,Off-Campus,Yes,Female,Senior,EDUC,1,1,0,1,1,0,1,1,1,349
+1 to 2 times,Light user,$10 or more,6,5,4,5,4,5,4,4,4,4,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,1,1,1,1,1,1,1,1,350
+1 to 2 times,Light user,$5 to $9,6,3,4,4,3,4,2,5,2,4,Mexican,Off-Campus,No,Male,Senior,OTH,0,1,1,0,1,0,1,0,1,351
+3 to 5 times,Heavy User,$10 or more,3,3,2,2,1,1,2,2,2,5,Burgers,On-Campus,Yes,Female,Junior,EDUC,0,0,0,0,0,0,0,0,1,352
+3 to 5 times,Heavy User,$5 to $9,7,5,2,3,1,3,1,2,3,1,Mexican,Off-Campus,No,Male,Junior,OTH,1,0,0,0,0,0,0,0,0,353
+1 to 2 times,Light user,$5 to $9,6,4,5,4,5,4,3,5,3,5,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,0,1,0,1,354
+1 to 2 times,Light user,$5 to $9,1,5,5,5,3,3,4,4,4,2,Mexican,Commuter,No,Female,Sophomore,BUSN,1,1,1,0,0,1,1,1,0,355
+1 to 2 times,Light user,$5 to $9,1,4,4,5,4,4,5,4,3,5,Burgers,On-Campus,Yes,Male,Junior,ARTSC,1,1,1,1,1,1,1,0,1,356
+1 to 2 times,Light user,Less than $5,5,4,2,2,4,3,3,4,3,3,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,0,0,1,0,0,1,0,0,357
+3 to 5 times,Heavy User,$10 or more,1,4,2,5,3,4,4,5,5,4,Other,Off-Campus,No,Male,Senior,ARTSC,1,0,1,0,1,1,1,1,1,358
+3 to 5 times,Heavy User,$10 or more,2,5,3,5,5,5,5,5,4,4,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,1,1,1,1,1,1,1,359
+1 to 2 times,Light user,$5 to $9,4,5,3,4,4,5,4,4,3,4,Burgers,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,1,1,1,0,1,360
+6 to 9 times,Heavy User,$10 or more,2,4,4,4,4,4,4,4,4,4,Burgers,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,1,1,1,1,1,361
+1 to 2 times,Light user,$5 to $9,7,5,4,4,3,3,2,3,4,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,0,0,0,0,1,0,362
+1 to 2 times,Light user,$10 or more,5,3,1,4,3,4,1,4,3,,Burgers,Off-Campus,No,Male,Senior,OTH,0,0,1,0,1,0,1,0,,363
+3 to 5 times,Heavy User,$5 to $9,4,5,4,4,3,3,3,4,4,3,Mexican,On-Campus,Yes,Male,Sophomore,OTH,1,1,1,0,0,0,1,1,0,364
+1 to 2 times,Light user,$5 to $9,6,4,3,3,3,3,3,3,4,3,Mexican,On-Campus,Yes,Male,Sophomore,EDUC,1,0,0,0,0,0,0,1,0,365
+3 to 5 times,Heavy User,$10 or more,7,3,5,5,4,4,2,4,3,5,Mexican,Off-Campus,No,Female,Senior,OTH,0,1,1,1,1,0,1,0,1,366
+1 to 2 times,Light user,$10 or more,6,4,,4,4,3,2,4,3,5,Burgers,Commuter,No,Male,Senior,OTH,1,,1,1,0,0,1,0,1,367
+1 to 2 times,Light user,$5 to $9,2,3,4,4,5,3,3,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,0,1,1,1,0,0,1,1,1,368
+3 to 5 times,Heavy User,$10 or more,4,4,3,4,3,3,3,3,4,3,Burgers,On-Campus,Yes,Female,Junior,BUSN,1,0,1,0,0,0,0,1,0,369
+1 to 2 times,Light user,$10 or more,4,5,3,3,3,3,3,3,2,2,Mexican,Off-Campus,No,Male,Sophomore,EDUC,1,0,0,0,0,0,0,0,0,370
+6 to 9 times,Heavy User,$10 or more,4,5,5,5,5,4,1,5,4,5,Burgers,On-Campus,Yes,Female,Junior,BUSN,1,1,1,1,1,0,1,1,1,371
+3 to 5 times,Heavy User,$10 or more,2,5,3,4,4,4,3,4,5,5,Mexican,Off-Campus,No,Female,Sophomore,BUSN,1,0,1,1,1,0,1,1,1,372
+0 times,Non-user,$10 or more,2,5,2,4,4,4,2,3,2,1,Mexican,Off-Campus,No,Male,Freshman,BUSN,1,0,1,1,1,0,0,0,0,373
+1 to 2 times,Light user,$5 to $9,3,3,3,3,5,3,1,4,4,5,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,0,0,0,1,0,0,1,1,1,374
+1 to 2 times,Light user,$5 to $9,4,5,3,5,4,3,2,3,4,1,Burgers,On-Campus,Yes,Female,Senior,EDUC,1,0,1,1,0,0,0,1,0,375
+0 times,Non-user,Less than $5,4,4,4,4,4,3,4,4,3,4,Other,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,0,1,1,0,1,376
+3 to 5 times,Heavy User,$5 to $9,7,3,2,5,2,5,1,5,3,5,Burgers,Commuter,No,Male,Junior,BUSN,0,0,1,0,1,0,1,0,1,377
+0 times,Non-user,Less than $5,6,5,3,4,4,3,4,4,3,4,Burgers,On-Campus,Yes,Female,Senior,BUSN,1,0,1,1,0,1,1,0,1,378
+0 times,Non-user,$10 or more,1,2,3,5,4,4,4,4,2,5,Mexican,On-Campus,Yes,Female,Junior,EDUC,0,0,1,1,1,1,1,0,1,379
+3 to 5 times,Heavy User,$5 to $9,3,5,3,4,3,4,4,3,4,3,Burgers,On-Campus,Yes,Female,Sophomore,EDUC,1,0,1,0,1,1,0,1,0,380
+1 to 2 times,Light user,Less than $5,1,4,4,3,3,2,1,4,2,1,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,0,0,0,0,1,0,0,381
+1 to 2 times,Light user,$5 to $9,6,5,4,4,4,5,3,4,5,5,Burgers,Off-Campus,No,Male,Junior,BUSN,1,1,1,1,1,0,1,1,1,382
+3 to 5 times,Heavy User,$5 to $9,1,5,3,4,3,3,2,5,3,2,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,1,0,0,0,1,0,0,383
+1 to 2 times,Light user,$10 or more,7,5,4,5,5,5,1,4,1,3,Burgers,Commuter,No,Female,Senior,EDUC,1,1,1,1,1,0,1,0,0,384
+0 times,Non-user,$5 to $9,4,5,3,4,4,3,5,4,1,1,Mexican,On-Campus,Yes,Male,Sophomore,ARTSC,1,0,1,1,0,1,1,0,0,385
+0 times,Non-user,Less than $5,4,5,5,5,5,3,5,5,5,5,Other,Off-Campus,No,Female,Senior,ARTSC,1,1,1,1,0,1,1,1,1,386
+1 to 2 times,Light user,$10 or more,2,3,3,4,3,4,2,4,3,3,Mexican,Off-Campus,No,Female,Junior,ARTSC,0,0,1,0,1,0,1,0,0,387
+0 times,Non-user,$5 to $9,2,5,3,5,4,4,2,5,4,4,Mexican,On-Campus,Yes,Female,Junior,ARTSC,1,0,1,1,1,0,1,1,1,388
+1 to 2 times,Light user,$10 or more,2,5,4,5,5,4,4,3,4,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,1,0,1,1,389
+1 to 2 times,Light user,$5 to $9,4,5,4,5,2,3,5,2,3,3,Mexican,On-Campus,Yes,Female,Senior,ARTSC,1,1,1,0,0,1,0,0,0,390
+0 times,Non-user,$5 to $9,6,5,3,4,4,4,3,4,3,2,Mexican,Commuter,Yes,Female,Senior,OTH,1,0,1,1,1,0,1,0,0,391
+1 to 2 times,Light user,$10 or more,5,5,4,4,5,3,3,5,4,3,Mexican,On-Campus,Yes,Male,Freshman,OTH,1,1,1,1,0,0,1,1,0,392
+1 to 2 times,Light user,$5 to $9,2,5,2,5,4,4,3,3,4,3,Burgers,Off-Campus,No,Female,Senior,BUSN,1,0,1,1,1,0,0,1,0,393
+1 to 2 times,Light user,$5 to $9,4,5,3,5,5,4,3,3,3,5,Burgers,On-Campus,No,Male,Senior,ARTSC,1,0,1,1,1,0,0,0,1,394
+1 to 2 times,Light user,Less than $5,4,5,3,4,4,3,3,5,3,5,Burgers,On-Campus,Yes,Female,Junior,ARTSC,1,0,1,1,0,0,1,0,1,395
+0 times,Non-user,$10 or more,3,5,5,5,5,5,3,5,5,5,Burgers,On-Campus,Yes,Male,Junior,EDUC,1,1,1,1,1,0,1,1,1,396
+1 to 2 times,Light user,$10 or more,6,4,3,5,4,3,4,5,4,3,Burgers,On-Campus,Yes,Female,Sophomore,BUSN,1,0,1,1,0,1,1,1,0,397
+3 to 5 times,Heavy User,$5 to $9,6,2,2,3,4,4,2,5,3,3,Mexican,On-Campus,Yes,Male,Junior,EDUC,0,0,0,1,1,0,1,0,0,398
+3 to 5 times,Heavy User,$5 to $9,4,3,2,2,5,3,1,4,3,2,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,0,0,0,1,0,0,1,0,0,399
+3 to 5 times,Heavy User,$5 to $9,6,5,5,5,4,3,4,5,5,4,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,1,0,1,1,1,1,400
+0 times,Non-user,$5 to $9,1,5,4,5,3,4,4,4,5,4,Mexican,Commuter,No,Female,Senior,BUSN,1,1,1,0,1,1,1,1,1,401
+1 to 2 times,Light user,$5 to $9,5,4,4,5,5,5,4,4,4,4,Mexican,Commuter,No,Male,Senior,OTH,1,1,1,1,1,1,1,1,1,402
+3 to 5 times,Heavy User,$10 or more,7,5,3,5,5,5,5,4,3,4,Mexican,On-Campus,Yes,Male,Junior,EDUC,1,0,1,1,1,1,1,0,1,403
+3 to 5 times,Heavy User,$5 to $9,4,5,3,5,3,3,5,5,3,4,Mexican,Off-Campus,No,Female,Senior,OTH,1,0,1,0,0,1,1,0,1,404
+3 to 5 times,Heavy User,$5 to $9,6,5,3,4,4,4,2,3,3,1,Burgers,Off-Campus,No,Male,Senior,OTH,1,0,1,1,1,0,0,0,0,405
+1 to 2 times,Light user,$5 to $9,7,4,4,4,4,4,3,3,3,3,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,1,1,1,1,0,0,0,0,406
+3 to 5 times,Heavy User,$5 to $9,6,3,4,4,5,2,2,2,3,5,Other,On-Campus,Yes,Female,Sophomore,OTH,0,1,1,1,0,0,0,0,1,407
+1 to 2 times,Light user,$5 to $9,6,3,4,4,4,4,3,3,1,4,Mexican,Off-Campus,No,Female,Senior,ARTSC,0,1,1,1,1,0,0,0,1,408
+1 to 2 times,Light user,$5 to $9,4,5,4,5,5,3,3,4,3,5,Mexican,On-Campus,Yes,Female,Junior,ARTSC,1,1,1,1,0,0,1,0,1,409
+1 to 2 times,Light user,$5 to $9,4,4,3,4,4,4,2,4,4,3,Mexican,On-Campus,Yes,Male,Sophomore,OTH,1,0,1,1,1,0,1,1,0,410
+3 to 5 times,Heavy User,$5 to $9,4,4,3,4,3,5,3,4,5,3,Burgers,Commuter,No,Male,Sophomore,ARTSC,1,0,1,0,1,0,1,1,0,411
+1 to 2 times,Light user,$10 or more,4,5,2,4,5,2,1,5,3,3,Burgers,Commuter,No,Female,Sophomore,EDUC,1,0,1,1,0,0,1,0,0,412
+1 to 2 times,Light user,$5 to $9,7,4,1,4,4,3,2,5,2,2,Burgers,Off-Campus,No,Female,Senior,OTH,1,0,1,1,0,0,1,0,0,413
+3 to 5 times,Heavy User,$5 to $9,4,4,4,5,3,5,3,4,3,4,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,1,1,0,1,0,1,0,1,414
+6 to 9 times,Heavy User,$5 to $9,3,2,5,5,5,2,2,5,3,5,Mexican,Off-Campus,No,Female,Junior,ARTSC,0,1,1,1,0,0,1,0,1,415
+1 to 2 times,Light user,$5 to $9,1,4,4,4,5,4,4,5,2,5,Burgers,Off-Campus,No,Female,Senior,BUSN,1,1,1,1,1,1,1,0,1,416
+1 to 2 times,Light user,$5 to $9,7,4,4,3,3,2,3,5,2,4,Burgers,Off-Campus,No,Female,Junior,BUSN,1,1,0,0,0,0,1,0,1,417
+3 to 5 times,Heavy User,$5 to $9,6,4,2,4,4,4,2,3,3,3,Mexican,Off-Campus,No,Male,Senior,BUSN,1,0,1,1,1,0,0,0,0,418
+1 to 2 times,Light user,Less than $5,7,4,2,3,3,4,1,5,2,2,Burgers,Off-Campus,No,Male,Junior,EDUC,1,0,0,0,1,0,1,0,0,419
+1 to 2 times,Light user,$5 to $9,3,4,3,4,4,4,2,4,4,4,Mexican,On-Campus,Yes,Male,Sophomore,OTH,1,0,1,1,1,0,1,1,1,420
+1 to 2 times,Light user,$5 to $9,1,3,2,4,4,3,2,5,2,3,Mexican,Off-Campus,No,Female,Junior,EDUC,0,0,1,1,0,0,1,0,0,421
+1 to 2 times,Light user,$5 to $9,2,4,3,4,5,3,2,3,4,4,Mexican,Off-Campus,No,Male,Senior,EDUC,1,0,1,1,0,0,0,1,1,422
+3 to 5 times,Heavy User,$10 or more,7,2,3,2,4,5,2,2,3,3,Burgers,Off-Campus,No,Female,Junior,EDUC,0,0,0,1,1,0,0,0,0,423
+1 to 2 times,Light user,$5 to $9,6,5,4,4,4,4,4,5,4,4,Mexican,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,1,1,1,1,1,424
+1 to 2 times,Light user,Less than $5,2,3,4,4,4,3,2,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,0,1,1,1,0,0,1,1,1,425
+3 to 5 times,Heavy User,$5 to $9,7,4,3,4,3,4,2,4,3,5,Mexican,On-Campus,Yes,Female,Freshman,OTH,1,0,1,0,1,0,1,0,1,426
+1 to 2 times,Light user,$5 to $9,1,2,2,3,2,2,2,2,2,2,Mexican,On-Campus,Yes,Male,Freshman,BUSN,0,0,0,0,0,0,0,0,0,427
+0 times,Non-user,$5 to $9,5,5,2,3,5,4,2,3,4,3,Sandwiches,Commuter,No,Female,Freshman,BUSN,1,0,0,1,1,0,0,1,0,428
+1 to 2 times,Light user,$5 to $9,1,3,2,5,4,4,2,5,5,3,Chicken,Off-Campus,No,Female,Senior,ARTSC,0,0,1,1,1,0,1,1,0,429
+1 to 2 times,Light user,$5 to $9,7,5,4,4,3,4,2,5,3,3,Burgers,Off-Campus,No,Female,Senior,EDUC,1,1,1,0,1,0,1,0,0,430
+3 to 5 times,Heavy User,$5 to $9,4,5,2,5,3,3,3,3,2,5,Burgers,On-Campus,Yes,Male,Freshman,EDUC,1,0,1,0,0,0,0,0,1,431
+1 to 2 times,Light user,$5 to $9,5,4,3,3,4,4,3,5,4,4,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,1,0,0,1,1,0,1,1,1,432
+3 to 5 times,Heavy User,$5 to $9,6,4,4,4,3,4,2,4,2,3,Chicken,Off-Campus,Yes,Female,Junior,EDUC,1,1,1,0,1,0,1,0,0,433
+1 to 2 times,Light user,$5 to $9,6,5,5,5,3,5,4,3,4,5,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,0,1,1,0,1,1,434
+1 to 2 times,Light user,$10 or more,3,3,3,3,5,4,2,4,2,3,Other,Off-Campus,No,Male,Sophomore,OTH,0,0,0,1,1,0,1,0,0,435
+0 times,Non-user,$10 or more,5,5,4,5,3,3,2,5,3,3,Chicken,On-Campus,Yes,Female,Junior,ARTSC,1,1,1,0,0,0,1,0,0,436
+3 to 5 times,Heavy User,$5 to $9,7,4,4,4,3,4,1,4,3,3,Mexican,Off-Campus,No,Male,Sophomore,BUSN,1,1,1,0,1,0,1,0,0,437
+0 times,Non-user,$5 to $9,6,4,5,3,4,4,5,3,4,5,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,0,1,1,1,0,1,1,438
+,,$10 or more,3,5,4,5,5,5,5,5,5,5,Mexican,On-Campus,Yes,Male,Senior,BUSN,1,1,1,1,1,1,1,1,1,439
+1 to 2 times,Light user,$5 to $9,7,4,3,3,4,4,3,4,3,4,Mexican,Off-Campus,No,Female,Senior,BUSN,1,0,0,1,1,0,1,0,1,440
+1 to 2 times,Light user,$5 to $9,1,2,4,3,2,2,4,5,3,3,Sandwiches,On-Campus,Yes,Male,Freshman,ARTSC,0,1,0,0,0,1,1,0,0,441
+1 to 2 times,Light user,$10 or more,2,3,3,3,4,3,2,3,3,4,Mexican,On-Campus,Yes,Male,Freshman,ARTSC,0,0,0,1,0,0,0,0,1,442
+3 to 5 times,Heavy User,$10 or more,2,4,3,5,2,3,3,3,2,2,Other,Commuter,No,Female,Senior,ARTSC,1,0,1,0,0,0,0,0,0,443
+0 times,Non-user,Less than $5,1,5,3,5,3,4,3,4,3,3,Chicken,Off-Campus,No,Female,Junior,OTH,1,0,1,0,1,0,1,0,0,444
+3 to 5 times,Heavy User,$5 to $9,6,5,5,5,4,5,5,4,5,4,Other,Off-Campus,No,Female,Sophomore,ARTSC,1,1,1,1,1,1,1,1,1,445
+1 to 2 times,Light user,$10 or more,2,5,4,3,5,4,2,4,4,3,Mexican,On-Campus,Yes,Female,Freshman,EDUC,1,1,0,1,1,0,1,1,0,446
+1 to 2 times,Light user,$5 to $9,5,4,3,4,3,3,2,4,4,4,Chicken,Off-Campus,Yes,Male,Sophomore,ARTSC,1,0,1,0,0,0,1,1,1,447
+1 to 2 times,Light user,$5 to $9,5,4,4,4,5,3,3,3,5,4,Chicken,Off-Campus,No,Male,Junior,BUSN,1,1,1,1,0,0,0,1,1,448
+1 to 2 times,Light user,$5 to $9,1,5,5,5,5,5,3,5,5,5,Mexican,Off-Campus,No,Female,Junior,ARTSC,1,1,1,1,1,0,1,1,1,449
+1 to 2 times,Light user,$5 to $9,4,5,2,5,2,2,5,3,4,2,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,1,0,1,0,0,1,0,1,0,450
+1 to 2 times,Light user,$5 to $9,3,4,3,3,2,2,5,3,3,2,Other,On-Campus,Yes,Female,Freshman,BUSN,1,0,0,0,0,1,0,0,0,451
+0 times,Non-user,Less than $5,7,5,5,5,5,5,4,5,1,2,Mexican,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,1,1,1,0,0,452
+3 to 5 times,Heavy User,$10 or more,3,3,5,5,2,4,3,3,5,4,Chicken,Off-Campus,No,Male,Sophomore,ARTSC,0,1,1,0,1,0,0,1,1,453
+3 to 5 times,Heavy User,$10 or more,2,4,3,4,2,3,3,4,4,3,Mexican,Off-Campus,No,Male,Junior,ARTSC,1,0,1,0,0,0,1,1,0,454
+1 to 2 times,Light user,$10 or more,1,4,5,5,5,5,5,3,4,3,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,1,0,1,0,455
+3 to 5 times,Heavy User,$5 to $9,5,4,3,4,3,3,2,4,5,3,Mexican,Off-Campus,No,Female,Junior,ARTSC,1,0,1,0,0,0,1,1,0,456
+1 to 2 times,Light user,$5 to $9,2,4,3,5,5,3,3,5,3,5,Sandwiches,Off-Campus,No,Female,Senior,OTH,1,0,1,1,0,0,1,0,1,457
+3 to 5 times,Heavy User,$5 to $9,7,2,4,4,4,3,4,2,1,4,Chicken,Off-Campus,No,Female,Junior,BUSN,0,1,1,1,0,1,0,0,1,458
+1 to 2 times,Light user,$5 to $9,5,4,3,5,3,4,4,4,4,2,Mexican,Off-Campus,No,Female,Sophomore,EDUC,1,0,1,0,1,1,1,1,0,459
+1 to 2 times,Light user,$5 to $9,3,4,2,5,5,4,2,5,4,4,Chicken,Off-Campus,No,Male,Junior,EDUC,1,0,1,1,1,0,1,1,1,460
+0 times,Non-user,$5 to $9,5,4,5,4,4,3,4,4,3,3,Other,Off-Campus,No,Female,Junior,ARTSC,1,1,1,1,0,1,1,0,0,461
+1 to 2 times,Light user,$5 to $9,1,3,1,3,3,2,3,2,1,2,Chicken,On-Campus,Yes,Female,Junior,OTH,0,0,0,0,0,0,0,0,0,462
+0 times,Non-user,$5 to $9,6,4,3,4,5,4,4,5,3,5,Other,Off-Campus,No,Female,Senior,BUSN,1,0,1,1,1,1,1,0,1,463
+1 to 2 times,Light user,$10 or more,3,4,3,3,4,3,3,4,4,4,Chicken,Commuter,No,Female,Senior,ARTSC,1,0,0,1,0,0,1,1,1,464
+1 to 2 times,Light user,Less than $5,6,4,3,3,4,4,3,4,2,3,Other,On-Campus,Yes,Female,Junior,ARTSC,1,0,0,1,1,0,1,0,0,465
+1 to 2 times,Light user,$5 to $9,1,1,2,4,3,2,1,5,1,1,Burgers,Off-Campus,No,Male,Senior,BUSN,0,0,1,0,0,0,1,0,0,466
+3 to 5 times,Heavy User,$10 or more,5,3,3,4,4,4,2,5,1,3,Burgers,Off-Campus,No,Female,Senior,ARTSC,0,0,1,1,1,0,1,0,0,467
+1 to 2 times,Light user,$5 to $9,5,2,3,4,4,2,3,4,3,2,Chicken,Off-Campus,No,Male,Junior,EDUC,0,0,1,1,0,0,1,0,0,468
+1 to 2 times,Light user,$5 to $9,5,5,3,5,4,4,4,5,4,4,Burgers,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,1,1,1,1,469
+6 to 9 times,Heavy User,$5 to $9,4,5,5,5,5,5,5,5,3,5,Chicken,Off-Campus,No,Male,Sophomore,ARTSC,1,1,1,1,1,1,1,0,1,470
+3 to 5 times,Heavy User,$10 or more,4,3,3,4,4,5,3,5,3,4,Mexican,Off-Campus,Yes,Female,Sophomore,EDUC,0,0,1,1,1,0,1,0,1,471
+1 to 2 times,Light user,$10 or more,5,5,5,5,5,5,5,5,5,5,Sandwiches,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,1,1,1,1,1,472
+3 to 5 times,Heavy User,$10 or more,5,4,5,5,3,4,4,5,4,5,Sandwiches,Off-Campus,No,Male,Junior,ARTSC,1,1,1,0,1,1,1,1,1,473
+1 to 2 times,Light user,$5 to $9,6,4,4,4,4,4,3,4,3,4,Burgers,Off-Campus,No,Male,Junior,BUSN,1,1,1,1,1,0,1,0,1,474
+0 times,Non-user,Less than $5,7,4,4,4,4,3,4,4,4,4,Chicken,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,0,1,1,1,1,475
+1 to 2 times,Light user,$5 to $9,4,4,2,4,4,4,2,5,2,2,Chicken,On-Campus,Yes,Female,Freshman,EDUC,1,0,1,1,1,0,1,0,0,476
+1 to 2 times,Light user,$5 to $9,1,5,2,3,4,3,2,4,4,4,Burgers,Off-Campus,Yes,Female,Sophomore,EDUC,1,0,0,1,0,0,1,1,1,477
+1 to 2 times,Light user,$5 to $9,7,5,4,5,5,5,3,4,4,3,Chicken,Off-Campus,No,Female,Senior,ARTSC,1,1,1,1,1,0,1,1,0,478
+3 to 5 times,Heavy User,$5 to $9,1,4,4,5,5,1,5,5,2,4,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,1,0,1,1,0,1,479
+0 times,Non-user,$5 to $9,2,4,2,5,3,5,3,2,5,2,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,1,0,1,0,1,0,0,1,0,480
+1 to 2 times,Light user,$5 to $9,4,5,3,4,4,5,3,4,4,5,Mexican,Off-Campus,No,Female,Junior,EDUC,1,0,1,1,1,0,1,1,1,481
+1 to 2 times,Light user,$5 to $9,6,4,2,4,4,4,2,4,3,3,Chicken,On-Campus,Yes,Female,Sophomore,EDUC,1,0,1,1,1,0,1,0,0,482
+1 to 2 times,Light user,$5 to $9,7,4,4,5,5,5,4,3,3,2,Mexican,Off-Campus,No,Female,Senior,BUSN,1,1,1,1,1,1,0,0,0,483
+3 to 5 times,Heavy User,$5 to $9,4,3,3,4,2,3,1,3,4,2,Chicken,On-Campus,Yes,Male,Sophomore,EDUC,0,0,1,0,0,0,0,1,0,484
+6 to 9 times,Heavy User,$5 to $9,7,3,4,3,5,3,1,2,1,1,Mexican,Off-Campus,No,Male,Sophomore,OTH,0,1,0,1,0,0,0,0,0,485
+1 to 2 times,Light user,$10 or more,5,5,4,4,2,4,3,5,3,4,Chicken,Off-Campus,No,Female,Junior,OTH,1,1,1,0,1,0,1,0,1,486
+3 to 5 times,Heavy User,$5 to $9,4,2,4,5,4,3,3,5,3,5,Chicken,Off-Campus,No,Female,Senior,OTH,0,1,1,1,0,0,1,0,1,487
+0 times,Non-user,Less than $5,3,4,2,5,4,3,3,4,3,2,Sandwiches,Off-Campus,No,Female,Junior,EDUC,1,0,1,1,0,0,1,0,0,488
+1 to 2 times,Light user,Less than $5,4,4,4,4,5,3,4,5,4,3,Mexican,Off-Campus,No,Female,Senior,EDUC,1,1,1,1,0,1,1,1,0,489
+1 to 2 times,Light user,Less than $5,5,4,4,4,3,5,4,5,3,3,Burgers,Commuter,No,Female,Senior,ARTSC,1,1,1,0,1,1,1,0,0,490
+1 to 2 times,Light user,$5 to $9,1,3,5,2,5,5,3,5,2,4,Burgers,On-Campus,Yes,Male,Sophomore,ARTSC,0,1,0,1,1,0,1,0,1,491
+0 times,Non-user,Less than $5,3,5,4,5,3,3,5,3,3,4,Chicken,On-Campus,Yes,Female,Junior,ARTSC,1,1,1,0,0,1,0,0,1,492
+1 to 2 times,Light user,$5 to $9,5,5,4,5,5,4,4,4,3,4,Chicken,Off-Campus,No,Female,Sophomore,BUSN,1,1,1,1,1,1,1,0,1,493
+1 to 2 times,Light user,$5 to $9,6,5,2,4,4,4,3,4,3,3,Burgers,Off-Campus,No,Male,Freshman,OTH,1,0,1,1,1,0,1,0,0,494
+1 to 2 times,Light user,$5 to $9,7,3,1,3,5,5,2,4,1,5,Sandwiches,Off-Campus,No,Female,Freshman,ARTSC,0,0,0,1,1,0,1,0,1,495
+1 to 2 times,Light user,Less than $5,2,3,2,4,4,3,1,5,1,2,Burgers,On-Campus,Yes,Female,Freshman,ARTSC,0,0,1,1,0,0,1,0,0,496
+1 to 2 times,Light user,$5 to $9,3,2,3,3,3,4,3,4,2,4,Other,Off-Campus,No,Male,Freshman,EDUC,0,0,0,0,1,0,1,0,1,497
+1 to 2 times,Light user,$5 to $9,6,3,4,3,3,3,1,3,3,1,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,0,1,0,0,0,0,0,0,0,498
+1 to 2 times,Light user,$5 to $9,3,3,4,3,3,4,1,4,2,4,Chicken,On-Campus,Yes,Male,Junior,BUSN,0,1,0,0,1,0,1,0,1,499
+1 to 2 times,Light user,$5 to $9,7,3,3,3,4,3,3,5,3,4,Other,On-Campus,Yes,Female,Freshman,EDUC,0,0,0,1,0,0,1,0,1,500
+3 to 5 times,Heavy User,$5 to $9,4,4,5,4,3,4,1,3,5,2,Chicken,Commuter,No,Female,Senior,EDUC,1,1,1,0,1,0,0,1,0,501
+3 to 5 times,Heavy User,$5 to $9,2,3,3,3,4,4,3,4,3,3,Mexican,Off-Campus,No,Male,Senior,OTH,0,0,0,1,1,0,1,0,0,502
+1 to 2 times,Light user,$5 to $9,6,3,3,4,5,4,3,5,2,5,Chicken,Off-Campus,No,Male,Senior,ARTSC,0,0,1,1,1,0,1,0,1,503
+1 to 2 times,Light user,$10 or more,7,,,,2,,,,,5,Chicken,On-Campus,Yes,Female,Freshman,OTH,,,,0,,,,,1,504
+1 to 2 times,Light user,Less than $5,2,4,2,3,3,4,4,4,3,3,Chicken,Off-Campus,No,Male,Sophomore,OTH,1,0,0,0,1,1,1,0,0,505
+1 to 2 times,Light user,$5 to $9,2,5,1,4,2,3,3,3,4,4,Chicken,On-Campus,Yes,Male,Freshman,ARTSC,1,0,1,0,0,0,0,1,1,506
+3 to 5 times,Heavy User,$5 to $9,1,4,3,4,3,3,3,4,3,2,Chicken,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,0,0,0,1,0,0,507
+1 to 2 times,Light user,Less than $5,2,3,2,2,5,4,1,4,2,5,Burgers,On-Campus,Yes,Male,Freshman,BUSN,0,0,0,1,1,0,1,0,1,508
+3 to 5 times,Heavy User,Less than $5,1,5,3,4,4,4,3,4,5,4,Sandwiches,Off-Campus,No,Female,Senior,OTH,1,0,1,1,1,0,1,1,1,509
+3 to 5 times,Heavy User,$5 to $9,6,3,3,5,5,4,4,3,3,5,Burgers,Off-Campus,No,Male,Senior,ARTSC,0,0,1,1,1,1,0,0,1,510
+1 to 2 times,Light user,$10 or more,4,5,4,5,4,4,3,5,5,3,Chicken,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,0,1,1,0,511
+1 to 2 times,Light user,$5 to $9,3,4,4,5,3,4,4,4,3,2,Mexican,Off-Campus,No,Female,Junior,BUSN,1,1,1,0,1,1,1,0,0,512
+6 to 9 times,Heavy User,$5 to $9,1,5,3,5,4,3,3,3,5,4,Mexican,On-Campus,Yes,Male,Freshman,OTH,1,0,1,1,0,0,0,1,1,513
+1 to 2 times,Light user,$10 or more,3,4,3,4,3,4,4,3,4,2,Chicken,Off-Campus,No,Male,Senior,ARTSC,1,0,1,0,1,1,0,1,0,514
+1 to 2 times,Light user,$5 to $9,6,4,2,4,3,4,5,4,3,2,Chicken,Commuter,Yes,Female,Sophomore,BUSN,1,0,1,0,1,1,1,0,0,515
+3 to 5 times,Heavy User,$10 or more,4,5,3,4,4,4,2,3,4,3,Mexican,On-Campus,Yes,Male,Freshman,OTH,1,0,1,1,1,0,0,1,0,516
+1 to 2 times,Light user,$5 to $9,6,4,4,5,5,3,3,5,3,3,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,1,0,0,1,0,0,517
+1 to 2 times,Light user,$5 to $9,6,2,2,3,4,2,2,3,1,4,Chicken,On-Campus,Yes,Female,Sophomore,EDUC,0,0,0,1,0,0,0,0,1,518
+0 times,Non-user,Less than $5,3,4,3,4,5,4,4,4,3,4,Chicken,On-Campus,Yes,Female,Sophomore,EDUC,1,0,1,1,1,1,1,0,1,519
+1 to 2 times,Light user,$5 to $9,7,4,3,4,4,4,4,5,4,4,Sandwiches,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,1,1,1,1,520
+3 to 5 times,Heavy User,$5 to $9,3,5,5,5,4,4,5,4,4,5,Mexican,Off-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,1,1,1,1,521
+1 to 2 times,Light user,$5 to $9,4,3,2,4,4,3,2,4,2,3,Other,On-Campus,Yes,Female,Freshman,OTH,0,0,1,1,0,0,1,0,0,522
+1 to 2 times,Light user,$5 to $9,2,3,4,4,2,3,2,3,2,3,Chicken,On-Campus,Yes,Female,Freshman,EDUC,0,1,1,0,0,0,0,0,0,523
+1 to 2 times,Light user,$5 to $9,5,4,4,5,3,2,5,3,3,2,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,1,1,0,0,1,0,0,0,524
+3 to 5 times,Heavy User,$5 to $9,4,4,3,4,4,3,4,3,2,4,Sandwiches,Commuter,No,Female,Sophomore,EDUC,1,0,1,1,0,1,0,0,1,525
+1 to 2 times,Light user,$5 to $9,6,4,3,5,3,4,3,5,3,4,Mexican,Off-Campus,No,Female,Junior,EDUC,1,0,1,0,1,0,1,0,1,526
+1 to 2 times,Light user,Less than $5,7,4,4,4,4,4,3,4,3,3,Burgers,Off-Campus,No,Female,Junior,OTH,1,1,1,1,1,0,1,0,0,527
+3 to 5 times,Heavy User,$5 to $9,2,4,3,4,5,4,3,3,3,4,Chicken,Off-Campus,No,Male,Senior,EDUC,1,0,1,1,1,0,0,0,1,528
+1 to 2 times,Light user,$5 to $9,5,4,4,4,3,3,3,5,3,3,Burgers,On-Campus,Yes,Male,Junior,BUSN,1,1,1,0,0,0,1,0,0,529
+1 to 2 times,Light user,Less than $5,2,3,2,4,4,3,2,5,3,3,Mexican,Off-Campus,No,Male,Junior,BUSN,0,0,1,1,0,0,1,0,0,530
+1 to 2 times,Light user,$5 to $9,7,5,5,5,5,3,4,3,4,4,Mexican,Off-Campus,No,Male,Junior,OTH,1,1,1,1,0,1,0,1,1,531
+1 to 2 times,Light user,$5 to $9,3,5,2,5,3,3,3,3,4,2,Chicken,Commuter,No,Female,Sophomore,ARTSC,1,0,1,0,0,0,0,1,0,532
+0 times,Non-user,Less than $5,5,5,4,5,4,4,5,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,1,1,1,1,1,1,1,1,533
+3 to 5 times,Heavy User,$10 or more,6,4,5,5,3,4,2,4,3,3,Burgers,Off-Campus,No,Female,Junior,EDUC,1,1,1,0,1,0,1,0,0,534
+3 to 5 times,Heavy User,$5 to $9,5,5,4,5,2,3,3,5,3,4,Sandwiches,Off-Campus,No,Female,Senior,OTH,1,1,1,0,0,0,1,0,1,535
+1 to 2 times,Light user,$10 or more,6,3,3,3,4,5,1,4,4,5,Burgers,On-Campus,Yes,Male,Sophomore,BUSN,0,0,0,1,1,0,1,1,1,536
+1 to 2 times,Light user,$5 to $9,4,5,3,4,3,3,4,4,4,4,Burgers,Commuter,No,Female,Sophomore,BUSN,1,0,1,0,0,1,1,1,1,537
+1 to 2 times,Light user,$5 to $9,7,5,2,5,5,5,1,3,2,5,Chicken,On-Campus,Yes,Female,Freshman,BUSN,1,0,1,1,1,0,0,0,1,538
+3 to 5 times,Heavy User,$5 to $9,3,5,3,5,4,4,5,5,5,,Chicken,Off-Campus,No,Female,Senior,EDUC,1,0,1,1,1,1,1,1,,539
+1 to 2 times,Light user,$5 to $9,5,5,2,4,3,3,3,5,3,3,Chicken,Off-Campus,No,Female,Senior,ARTSC,1,0,1,0,0,0,1,0,0,540
+3 to 5 times,Heavy User,Less than $5,6,4,4,5,4,4,2,4,3,3,Burgers,Off-Campus,No,Male,Junior,BUSN,1,1,1,1,1,0,1,0,0,541
+1 to 2 times,Light user,$10 or more,1,4,5,5,2,3,4,3,5,3,Chicken,Off-Campus,No,Female,Senior,EDUC,1,1,1,0,0,1,0,1,0,542
+1 to 2 times,Light user,$5 to $9,6,5,4,3,5,4,2,5,2,4,Burgers,Off-Campus,No,Male,Junior,BUSN,1,1,0,1,1,0,1,0,1,543
+1 to 2 times,Light user,$5 to $9,5,4,3,4,4,3,3,3,3,3,Burgers,On-Campus,Yes,Female,Freshman,ARTSC,1,0,1,1,0,0,0,0,0,544
+1 to 2 times,Light user,$10 or more,2,5,3,4,2,3,5,4,5,3,Chicken,On-Campus,Yes,Female,Freshman,OTH,1,0,1,0,0,1,1,1,0,545
+1 to 2 times,Light user,$5 to $9,2,4,3,4,3,3,4,4,3,2,Sandwiches,Off-Campus,No,Female,Junior,ARTSC,1,0,1,0,0,1,1,0,0,546
+1 to 2 times,Light user,$5 to $9,6,5,3,5,5,4,2,5,4,4,Burgers,On-Campus,Yes,Male,Sophomore,EDUC,1,0,1,1,1,0,1,1,1,547
+1 to 2 times,Light user,$5 to $9,3,4,3,4,3,4,3,4,4,2,Burgers,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,0,1,0,1,1,0,548
+1 to 2 times,Light user,$5 to $9,4,5,4,5,3,3,5,3,3,3,Chicken,On-Campus,Yes,Female,Freshman,OTH,1,1,1,0,0,1,0,0,0,549
+1 to 2 times,Light user,$5 to $9,7,5,2,5,5,5,2,5,3,5,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,1,0,1,1,1,0,1,0,1,550
+3 to 5 times,Heavy User,$10 or more,1,5,2,5,2,2,2,5,4,3,Burgers,On-Campus,Yes,Female,Freshman,BUSN,1,0,1,0,0,0,1,1,0,551
+3 to 5 times,Heavy User,$5 to $9,7,5,5,4,5,5,3,5,3,5,Mexican,On-Campus,Yes,Female,Freshman,OTH,1,1,1,1,1,0,1,0,1,552
+1 to 2 times,Light user,$5 to $9,6,5,5,5,5,4,4,5,4,3,Chicken,Off-Campus,No,Female,Junior,OTH,1,1,1,1,1,1,1,1,0,553
+1 to 2 times,Light user,$5 to $9,1,3,4,4,4,3,2,5,3,3,Burgers,Off-Campus,No,Male,Junior,OTH,0,1,1,1,0,0,1,0,0,554
+1 to 2 times,Light user,$5 to $9,4,4,4,5,3,3,5,3,3,3,Sandwiches,Off-Campus,No,Female,Senior,OTH,1,1,1,0,0,1,0,0,0,555
+1 to 2 times,Light user,$10 or more,4,5,4,5,4,4,5,5,5,3,Chicken,On-Campus,Yes,Male,Sophomore,OTH,1,1,1,1,1,1,1,1,0,556
+0 times,Non-user,$10 or more,6,4,4,5,4,3,2,4,2,2,Burgers,Off-Campus,No,Male,Freshman,ARTSC,1,1,1,1,0,0,1,0,0,557
+1 to 2 times,Light user,$5 to $9,4,4,3,3,3,3,3,4,3,2,Burgers,Off-Campus,No,Male,Senior,OTH,1,0,0,0,0,0,1,0,0,558
+3 to 5 times,Heavy User,$5 to $9,6,4,3,3,4,5,4,4,5,5,Other,Off-Campus,No,Female,Senior,BUSN,1,0,0,1,1,1,1,1,1,559
+0 times,Non-user,Less than $5,6,5,3,2,4,5,3,5,4,3,Burgers,On-Campus,Yes,Female,Sophomore,BUSN,1,0,0,1,1,0,1,1,0,560
+1 to 2 times,Light user,$5 to $9,6,4,5,4,3,3,5,4,4,4,Mexican,Off-Campus,No,Male,Junior,BUSN,1,1,1,0,0,1,1,1,1,561
+1 to 2 times,Light user,$5 to $9,5,2,4,4,3,5,2,3,3,4,Sandwiches,Off-Campus,No,Male,Senior,BUSN,0,1,1,0,1,0,0,0,1,562
+3 to 5 times,Heavy User,$5 to $9,4,3,3,4,3,3,2,2,4,3,Burgers,Commuter,No,Female,Senior,BUSN,0,0,1,0,0,0,0,1,0,563
+1 to 2 times,Light user,$5 to $9,2,4,4,5,3,3,3,3,4,3,Chicken,On-Campus,Yes,Female,Freshman,BUSN,1,1,1,0,0,0,0,1,0,564
+1 to 2 times,Light user,$5 to $9,4,5,4,5,5,5,3,5,3,2,Chicken,Commuter,No,Female,Freshman,EDUC,1,1,1,1,1,0,1,0,0,565
+1 to 2 times,Light user,$5 to $9,2,3,5,4,4,4,1,5,4,4,Chicken,Off-Campus,No,Female,Sophomore,OTH,0,1,1,1,1,0,1,1,1,566
+3 to 5 times,Heavy User,$5 to $9,6,4,4,4,5,4,3,4,3,4,Chicken,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,0,1,0,1,567
+3 to 5 times,Heavy User,$5 to $9,1,4,2,3,5,3,3,3,2,1,Burgers,Off-Campus,No,Male,Freshman,EDUC,1,0,0,1,0,0,0,0,0,568
+1 to 2 times,Light user,$5 to $9,2,3,4,3,2,4,2,5,3,4,Burgers,Off-Campus,No,Male,Sophomore,OTH,0,1,0,0,1,0,1,0,1,569
+1 to 2 times,Light user,$5 to $9,7,5,5,5,5,2,5,5,5,5,Chicken,Off-Campus,No,Female,Freshman,OTH,1,1,1,1,0,1,1,1,1,570
+1 to 2 times,Light user,$5 to $9,3,4,3,4,3,4,3,4,3,4,Sandwiches,Off-Campus,No,Male,Junior,BUSN,1,0,1,0,1,0,1,0,1,571
+1 to 2 times,Light user,Less than $5,6,4,3,4,4,4,3,5,3,3,Sandwiches,Off-Campus,No,Female,Senior,ARTSC,1,0,1,1,1,0,1,0,0,572
+1 to 2 times,Light user,$5 to $9,,4,5,4,5,4,2,3,5,3,Mexican,Off-Campus,No,Female,Junior,EDUC,1,1,1,1,1,0,0,1,0,573
+3 to 5 times,Heavy User,$5 to $9,2,5,4,4,3,4,5,5,3,3,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,0,1,1,1,0,0,574
+3 to 5 times,Heavy User,$10 or more,4,3,4,5,5,4,4,4,3,5,Mexican,On-Campus,Yes,Female,Freshman,BUSN,0,1,1,1,1,1,1,0,1,575
+0 times,Non-user,Less than $5,2,5,4,4,5,2,3,3,4,2,Chicken,Commuter,No,Female,Junior,ARTSC,1,1,1,1,0,0,0,1,0,576
+3 to 5 times,Heavy User,$5 to $9,5,4,4,5,2,4,4,4,3,4,Chicken,Off-Campus,No,Female,Senior,EDUC,1,1,1,0,1,1,1,0,1,577
+1 to 2 times,Light user,$5 to $9,7,3,4,3,4,4,1,5,3,4,Burgers,Off-Campus,No,Male,Junior,OTH,0,1,0,1,1,0,1,0,1,578
+0 times,Non-user,Less than $5,1,4,3,4,4,4,3,4,3,3,Chicken,On-Campus,Yes,Male,Sophomore,OTH,1,0,1,1,1,0,1,0,0,579
+1 to 2 times,Light user,$5 to $9,1,5,3,5,3,3,5,5,4,3,Burgers,Commuter,No,Female,Junior,ARTSC,1,0,1,0,0,1,1,1,0,580
+3 to 5 times,Heavy User,$5 to $9,3,4,2,5,4,3,2,3,3,5,Mexican,Off-Campus,No,Male,Senior,BUSN,1,0,1,1,0,0,0,0,1,581
+1 to 2 times,Light user,$5 to $9,4,4,4,5,4,4,4,3,3,3,Other,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,1,0,0,0,582
+1 to 2 times,Light user,Less than $5,2,5,4,4,2,4,5,4,3,3,Chicken,Commuter,No,Female,Freshman,OTH,1,1,1,0,1,1,1,0,0,583
+3 to 5 times,Heavy User,$5 to $9,4,4,3,4,3,3,4,5,4,4,Sandwiches,Off-Campus,No,Female,Sophomore,BUSN,1,0,1,0,0,1,1,1,1,584
+1 to 2 times,Light user,$5 to $9,4,4,4,4,4,4,3,4,4,3,Burgers,On-Campus,Yes,Female,Freshman,OTH,1,1,1,1,1,0,1,1,0,585
+1 to 2 times,Light user,$10 or more,4,5,3,5,3,5,3,4,4,4,Chicken,On-Campus,Yes,Female,Sophomore,BUSN,1,0,1,0,1,0,1,1,1,586
+1 to 2 times,Light user,Less than $5,7,4,3,3,4,4,1,5,2,4,Mexican,Off-Campus,No,Female,Senior,ARTSC,1,0,0,1,1,0,1,0,1,587
+1 to 2 times,Light user,$5 to $9,4,4,4,4,3,3,3,4,2,3,Burgers,On-Campus,Yes,Female,Senior,OTH,1,1,1,0,0,0,1,0,0,588
+1 to 2 times,Light user,$5 to $9,3,5,5,5,2,5,5,5,5,5,Sandwiches,Commuter,No,Female,Sophomore,EDUC,1,1,1,0,1,1,1,1,1,589
+1 to 2 times,Light user,$5 to $9,4,3,3,4,3,3,2,3,3,3,Mexican,Off-Campus,No,Female,Senior,OTH,0,0,1,0,0,0,0,0,0,590
+1 to 2 times,Light user,Less than $5,3,5,3,4,3,4,4,3,4,4,Chicken,On-Campus,Yes,Female,Sophomore,BUSN,1,0,1,0,1,1,0,1,1,591
+1 to 2 times,Light user,$5 to $9,3,5,3,5,3,5,4,5,3,3,Burgers,Off-Campus,Yes,Female,Junior,BUSN,1,0,1,0,1,1,1,0,0,592
+1 to 2 times,Light user,$5 to $9,3,4,3,4,4,5,3,4,3,3,Burgers,Off-Campus,No,Male,Junior,BUSN,1,0,1,1,1,0,1,0,0,593
+0 times,Non-user,$5 to $9,2,2,2,4,2,3,4,5,3,3,Mexican,Off-Campus,No,Female,Senior,BUSN,0,0,1,0,0,1,1,0,0,594
+1 to 2 times,Light user,$5 to $9,6,3,3,3,3,4,2,4,4,3,Mexican,On-Campus,No,Female,Junior,OTH,0,0,0,0,1,0,1,1,0,595
+3 to 5 times,Heavy User,$5 to $9,2,5,2,5,4,4,1,5,3,5,Burgers,Off-Campus,No,Female,Junior,EDUC,1,0,1,1,1,0,1,0,1,596
+1 to 2 times,Light user,$10 or more,4,5,4,4,2,4,4,3,4,2,Sandwiches,On-Campus,Yes,Female,Junior,ARTSC,1,1,1,0,1,1,0,1,0,597
+6 to 9 times,Heavy User,$10 or more,5,5,3,4,4,3,2,3,3,3,Chicken,Commuter,No,Male,Senior,OTH,1,0,1,1,0,0,0,0,0,598
+0 times,Non-user,Less than $5,5,5,4,4,3,3,3,5,3,5,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,0,0,0,1,0,1,599
+3 to 5 times,Heavy User,Less than $5,3,4,3,3,4,3,2,4,3,3,Burgers,Commuter,No,Female,Sophomore,BUSN,1,0,0,1,0,0,1,0,0,600
+1 to 2 times,Light user,$5 to $9,2,4,4,5,5,5,3,5,2,4,Chicken,Off-Campus,No,Female,Junior,EDUC,1,1,1,1,1,0,1,0,1,601
+1 to 2 times,Light user,$5 to $9,7,4,3,4,4,4,4,5,3,3,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,1,1,1,0,0,602
+1 to 2 times,Light user,Less than $5,4,5,3,3,4,3,2,4,4,4,Mexican,On-Campus,Yes,Female,Freshman,ARTSC,1,0,0,1,0,0,1,1,1,603
+1 to 2 times,Light user,Less than $5,7,4,1,3,3,4,4,4,3,1,Chicken,Off-Campus,No,Female,Junior,BUSN,1,0,0,0,1,1,1,0,0,604
+1 to 2 times,Light user,$5 to $9,5,5,5,5,4,5,3,5,5,5,Mexican,Off-Campus,No,Female,Sophomore,EDUC,1,1,1,1,1,0,1,1,1,605
+1 to 2 times,Light user,Less than $5,6,5,3,3,4,4,4,3,3,3,Other,Commuter,No,Male,Junior,ARTSC,1,0,0,1,1,1,0,0,0,606
+1 to 2 times,Light user,Less than $5,7,4,2,4,5,5,2,1,3,2,Chicken,Commuter,No,Female,Freshman,OTH,1,0,1,1,1,0,0,0,0,607
+1 to 2 times,Light user,Less than $5,1,5,1,3,3,3,1,4,3,2,Chicken,Off-Campus,No,Female,Freshman,ARTSC,1,0,0,0,0,0,1,0,0,608
+1 to 2 times,Light user,$5 to $9,6,3,3,5,3,4,2,5,3,5,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,0,0,1,0,1,0,1,0,1,609
+1 to 2 times,Light user,$5 to $9,7,4,2,3,3,4,2,4,3,3,Chicken,Off-Campus,No,Female,Senior,EDUC,1,0,0,0,1,0,1,0,0,610
+1 to 2 times,Light user,$10 or more,6,3,2,4,4,4,1,4,2,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,0,0,1,1,1,0,1,0,1,611
+1 to 2 times,Light user,$10 or more,6,4,4,4,5,4,3,4,3,5,Burgers,On-Campus,Yes,Female,Junior,ARTSC,1,1,1,1,1,0,1,0,1,612
+1 to 2 times,Light user,$10 or more,4,5,2,4,4,3,3,4,3,3,Other,On-Campus,Yes,Female,Freshman,OTH,1,0,1,1,0,0,1,0,0,613
+1 to 2 times,Light user,$10 or more,3,4,3,5,3,4,5,5,4,3,Burgers,Off-Campus,No,Male,Senior,BUSN,1,0,1,0,1,1,1,1,0,614
+0 times,Non-user,$5 to $9,1,4,3,5,3,3,5,4,2,4,Mexican,On-Campus,Yes,Female,Junior,ARTSC,1,0,1,0,0,1,1,0,1,615
+3 to 5 times,Heavy User,$10 or more,7,4,4,5,2,1,4,4,2,5,Mexican,Commuter,No,Female,Senior,ARTSC,1,1,1,0,0,1,1,0,1,616
+1 to 2 times,Light user,$10 or more,1,4,2,4,4,4,2,4,4,2,Burgers,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,1,1,0,1,1,0,617
+1 to 2 times,Light user,$5 to $9,2,5,3,5,4,4,4,4,3,3,Mexican,Off-Campus,Yes,Female,Junior,EDUC,1,0,1,1,1,1,1,0,0,618
+1 to 2 times,Light user,$5 to $9,5,4,3,4,3,3,2,4,3,3,Chicken,On-Campus,Yes,Female,Freshman,OTH,1,0,1,0,0,0,1,0,0,619
+1 to 2 times,Light user,$5 to $9,6,3,4,4,3,3,5,2,4,3,Chicken,Off-Campus,No,Male,Senior,BUSN,0,1,1,0,0,1,0,1,0,620
+1 to 2 times,Light user,$10 or more,3,5,5,5,3,4,5,5,3,3,Sandwiches,On-Campus,Yes,Female,Freshman,EDUC,1,1,1,0,1,1,1,0,0,621
+0 times,Non-user,Less than $5,1,5,5,5,3,3,5,4,4,5,Mexican,Off-Campus,No,Female,Junior,ARTSC,1,1,1,0,0,1,1,1,1,622
+1 to 2 times,Light user,$5 to $9,4,4,4,4,4,4,4,4,4,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,1,1,1,1,1,1,1,623
+1 to 2 times,Light user,$5 to $9,6,4,3,4,4,3,1,5,4,3,Sandwiches,Off-Campus,No,Female,Junior,OTH,1,0,1,1,0,0,1,1,0,624
+0 times,Non-user,$5 to $9,2,5,3,5,2,3,5,4,3,2,Other,Off-Campus,No,Male,Sophomore,OTH,1,0,1,0,0,1,1,0,0,625
+1 to 2 times,Light user,$10 or more,7,3,3,3,5,4,1,5,3,5,Burgers,On-Campus,Yes,Female,Junior,ARTSC,0,0,0,1,1,0,1,0,1,626
+1 to 2 times,Light user,$5 to $9,7,4,4,4,3,3,2,3,3,2,Chicken,Off-Campus,No,Female,Senior,BUSN,1,1,1,0,0,0,0,0,0,627
+1 to 2 times,Light user,$5 to $9,7,4,1,5,2,3,2,4,5,4,Sandwiches,Off-Campus,No,Male,Junior,OTH,1,0,1,0,0,0,1,1,1,628
+3 to 5 times,Heavy User,$5 to $9,7,4,4,4,5,4,3,3,3,4,Burgers,Off-Campus,No,Male,Senior,BUSN,1,1,1,1,1,0,0,0,1,629
+1 to 2 times,Light user,$5 to $9,7,5,5,5,5,2,4,5,2,4,Other,Off-Campus,No,Female,Freshman,EDUC,1,1,1,1,0,1,1,0,1,630
+3 to 5 times,Heavy User,$5 to $9,7,4,3,5,4,5,2,5,3,3,Burgers,Off-Campus,No,Male,Senior,BUSN,1,0,1,1,1,0,1,0,0,631
+1 to 2 times,Light user,$5 to $9,4,2,3,4,3,4,3,4,1,4,Sandwiches,On-Campus,Yes,Female,Freshman,BUSN,0,0,1,0,1,0,1,0,1,632
+1 to 2 times,Light user,$10 or more,7,5,4,4,3,4,5,5,4,2,Mexican,Off-Campus,No,Female,Junior,OTH,1,1,1,0,1,1,1,1,0,633
+1 to 2 times,Light user,$5 to $9,2,5,4,5,4,3,3,4,3,4,Burgers,On-Campus,Yes,Female,Freshman,BUSN,1,1,1,1,0,0,1,0,1,634
+3 to 5 times,Heavy User,$5 to $9,1,2,2,4,5,2,1,4,3,4,Chicken,Off-Campus,No,Male,Senior,BUSN,0,0,1,1,0,0,1,0,1,635
+1 to 2 times,Light user,$5 to $9,4,5,3,5,4,4,3,2,3,4,Chicken,Off-Campus,No,Male,Junior,EDUC,1,0,1,1,1,0,0,0,1,636
+3 to 5 times,Heavy User,$5 to $9,6,3,4,3,4,4,4,5,2,4,Chicken,Off-Campus,No,Male,Senior,BUSN,0,1,0,1,1,1,1,0,1,637
+1 to 2 times,Light user,$5 to $9,6,4,4,4,3,3,4,4,3,4,Mexican,On-Campus,Yes,Female,Freshman,EDUC,1,1,1,0,0,1,1,0,1,638
+1 to 2 times,Light user,Less than $5,1,5,3,4,4,3,1,4,4,2,Mexican,On-Campus,Yes,Female,Sophomore,BUSN,1,0,1,1,0,0,1,1,0,639
+3 to 5 times,Heavy User,$5 to $9,7,5,4,5,5,2,3,5,3,5,Chicken,Commuter,No,Female,Freshman,ARTSC,1,1,1,1,0,0,1,0,1,640
+1 to 2 times,Light user,$5 to $9,6,4,3,4,4,4,3,5,3,2,Mexican,Off-Campus,No,Male,Senior,BUSN,1,0,1,1,1,0,1,0,0,641
+1 to 2 times,Light user,$10 or more,2,4,4,4,3,2,4,3,3,3,Burgers,Off-Campus,No,Female,Junior,EDUC,1,1,1,0,0,1,0,0,0,642
+3 to 5 times,Heavy User,Less than $5,5,1,2,2,4,5,1,5,1,2,Burgers,On-Campus,Yes,Male,Sophomore,BUSN,0,0,0,1,1,0,1,0,0,643
+3 to 5 times,Heavy User,$5 to $9,5,3,2,3,3,3,1,4,1,4,Chicken,On-Campus,Yes,Male,Sophomore,EDUC,0,0,0,0,0,0,1,0,1,644
+1 to 2 times,Light user,$10 or more,1,5,5,5,5,5,3,5,5,5,Mexican,Off-Campus,No,Male,Senior,EDUC,1,1,1,1,1,0,1,1,1,645
+0 times,Non-user,$5 to $9,1,5,1,5,1,1,5,1,3,1,Other,Off-Campus,No,Male,Junior,OTH,1,0,1,0,0,1,0,0,0,646
+1 to 2 times,Light user,$5 to $9,2,3,4,5,5,4,2,4,3,4,Burgers,On-Campus,Yes,Male,Freshman,BUSN,0,1,1,1,1,0,1,0,1,647
+0 times,Non-user,$5 to $9,6,5,4,5,3,4,3,3,4,3,Burgers,Commuter,No,Female,Junior,ARTSC,1,1,1,0,1,0,0,1,0,648
+1 to 2 times,Light user,$10 or more,2,2,3,4,2,2,2,4,5,1,Burgers,Commuter,No,Female,Freshman,EDUC,0,0,1,0,0,0,1,1,0,649
+3 to 5 times,Heavy User,$10 or more,4,4,3,5,2,5,3,1,5,2,Chicken,Commuter,No,Female,Junior,OTH,1,0,1,0,1,0,0,1,0,650
+1 to 2 times,Light user,$10 or more,4,5,5,5,5,5,3,5,3,5,Mexican,Off-Campus,No,Female,Junior,BUSN,1,1,1,1,1,0,1,0,1,651
+1 to 2 times,Light user,$5 to $9,4,4,4,4,5,4,3,3,3,4,Other,On-Campus,Yes,Male,Freshman,OTH,1,1,1,1,1,0,0,0,1,652
+1 to 2 times,Light user,$10 or more,4,5,4,5,4,4,3,4,4,4,Chicken,Commuter,No,Male,Freshman,ARTSC,1,1,1,1,1,0,1,1,1,653
+3 to 5 times,Heavy User,$5 to $9,5,3,3,4,4,4,1,4,2,3,Burgers,Off-Campus,No,Male,Senior,ARTSC,0,0,1,1,1,0,1,0,0,654
+1 to 2 times,Light user,$5 to $9,7,3,3,3,5,3,2,5,2,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,0,0,0,1,0,0,1,0,1,655
+3 to 5 times,Heavy User,$5 to $9,4,5,3,5,3,3,3,3,3,3,Other,Off-Campus,No,Male,Sophomore,BUSN,1,0,1,0,0,0,0,0,0,656
+3 to 5 times,Heavy User,$5 to $9,7,3,3,4,4,5,2,4,4,4,Burgers,On-Campus,Yes,Male,Sophomore,BUSN,0,0,1,1,1,0,1,1,1,657
+0 times,Non-user,Less than $5,,4,4,5,3,4,5,4,3,3,Sandwiches,Off-Campus,No,Female,Junior,EDUC,1,1,1,0,1,1,1,0,0,658
+10 or more times,Heavy User,$5 to $9,4,2,3,3,4,1,4,3,4,2,Chicken,On-Campus,Yes,Female,Freshman,OTH,0,0,0,1,0,1,0,1,0,659
+3 to 5 times,Heavy User,$10 or more,1,4,4,3,1,1,3,1,2,4,Chicken,Off-Campus,No,Female,Senior,EDUC,1,1,0,0,0,0,0,0,1,660
+1 to 2 times,Light user,$5 to $9,3,5,3,5,5,3,5,5,3,5,Other,On-Campus,Yes,Female,Junior,OTH,1,0,1,1,0,1,1,0,1,661
+3 to 5 times,Heavy User,$10 or more,1,4,3,2,4,5,1,4,3,4,Burgers,Commuter,Yes,Male,Freshman,OTH,1,0,0,1,1,0,1,0,1,662
+3 to 5 times,Heavy User,$5 to $9,6,5,3,5,4,4,5,3,4,3,Chicken,Commuter,No,Female,Senior,ARTSC,1,0,1,1,1,1,0,1,0,663
+1 to 2 times,Light user,$5 to $9,1,4,2,5,4,5,2,3,5,3,Chicken,Off-Campus,No,Female,Junior,EDUC,1,0,1,1,1,0,0,1,0,664
+1 to 2 times,Light user,$10 or more,1,5,4,5,4,4,2,5,5,4,Burgers,Off-Campus,No,Female,Junior,BUSN,1,1,1,1,1,0,1,1,1,665
+1 to 2 times,Light user,$5 to $9,7,4,3,5,5,4,2,4,3,3,Chicken,Off-Campus,No,Female,Sophomore,EDUC,1,0,1,1,1,0,1,0,0,666
+1 to 2 times,Light user,$5 to $9,4,5,3,4,3,3,3,3,3,3,Mexican,Off-Campus,No,Female,Senior,EDUC,1,0,1,0,0,0,0,0,0,667
+0 times,Non-user,Less than $5,5,5,4,5,3,3,2,5,4,4,Burgers,On-Campus,Yes,Female,Freshman,OTH,1,1,1,0,0,0,1,1,1,668
+1 to 2 times,Light user,$5 to $9,3,5,4,4,4,2,3,4,3,4,Sandwiches,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,1,0,0,1,0,1,669
+1 to 2 times,Light user,$5 to $9,3,5,3,3,4,3,4,3,3,4,Sandwiches,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,0,1,0,1,0,0,1,670
+3 to 5 times,Heavy User,$10 or more,5,4,3,5,3,3,4,3,3,4,Other,On-Campus,Yes,Female,Junior,EDUC,1,0,1,0,0,1,0,0,1,671
+6 to 9 times,Heavy User,$10 or more,5,4,3,4,3,4,2,3,3,4,Chicken,Off-Campus,No,Male,Junior,BUSN,1,0,1,0,1,0,0,0,1,672
+1 to 2 times,Light user,$5 to $9,5,4,3,5,4,5,3,5,4,4,Burgers,Off-Campus,No,Female,Sophomore,OTH,1,0,1,1,1,0,1,1,1,673
+1 to 2 times,Light user,$5 to $9,2,4,1,4,4,3,5,4,5,4,Burgers,On-Campus,Yes,Male,Junior,ARTSC,1,0,1,1,0,1,1,1,1,674
+3 to 5 times,Heavy User,$5 to $9,7,4,3,3,2,5,2,5,3,4,Burgers,Off-Campus,No,Female,Senior,BUSN,1,0,0,0,1,0,1,0,1,675
+1 to 2 times,Light user,$5 to $9,4,3,3,5,4,3,1,3,4,4,Chicken,Off-Campus,No,Female,Senior,OTH,0,0,1,1,0,0,0,1,1,676
+1 to 2 times,Light user,$10 or more,6,5,4,5,4,4,4,5,3,3,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,1,1,1,1,0,0,677
+1 to 2 times,Light user,$5 to $9,5,5,4,5,3,4,5,5,5,5,Other,Off-Campus,No,Female,Senior,ARTSC,1,1,1,0,1,1,1,1,1,678
+1 to 2 times,Light user,$5 to $9,4,5,5,5,5,5,3,5,5,5,Chicken,On-Campus,Yes,Female,Freshman,EDUC,1,1,1,1,1,0,1,1,1,679
+3 to 5 times,Heavy User,Less than $5,1,4,5,5,5,5,5,5,3,5,Chicken,On-Campus,Yes,Female,Sophomore,ARTSC,1,1,1,1,1,1,1,0,1,680
+3 to 5 times,Heavy User,$5 to $9,3,5,3,5,4,3,2,4,4,2,Burgers,On-Campus,Yes,Female,Freshman,EDUC,1,0,1,1,0,0,1,1,0,681
+3 to 5 times,Heavy User,$5 to $9,3,3,4,4,4,4,3,4,3,3,Chicken,Off-Campus,No,Female,Junior,OTH,0,1,1,1,1,0,1,0,0,682
+1 to 2 times,Light user,$10 or more,1,4,3,5,1,2,5,4,4,3,Chicken,Off-Campus,No,Male,Sophomore,OTH,1,0,1,0,0,1,1,1,0,683
+3 to 5 times,Heavy User,$5 to $9,7,5,5,5,4,5,4,5,4,5,Other,On-Campus,Yes,Female,Freshman,OTH,1,1,1,1,1,1,1,1,1,684
+3 to 5 times,Heavy User,$10 or more,7,5,3,5,3,2,3,3,4,4,Burgers,Off-Campus,No,Male,Junior,ARTSC,1,0,1,0,0,0,0,1,1,685
+3 to 5 times,Heavy User,$10 or more,5,3,3,5,3,2,4,3,3,3,Mexican,On-Campus,Yes,Male,Freshman,OTH,0,0,1,0,0,1,0,0,0,686
+1 to 2 times,Light user,$10 or more,4,4,3,4,2,3,4,5,4,4,Other,On-Campus,Yes,Male,Freshman,OTH,1,0,1,0,0,1,1,1,1,687
+0 times,Non-user,Less than $5,3,5,3,4,2,4,4,4,2,3,Sandwiches,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,0,1,1,1,0,0,688
+3 to 5 times,Heavy User,$5 to $9,6,4,2,4,3,2,4,4,3,5,Chicken,Commuter,No,Male,Freshman,OTH,1,0,1,0,0,1,1,0,1,689
+3 to 5 times,Heavy User,$5 to $9,6,5,3,3,2,5,3,4,5,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,0,0,0,1,0,1,1,1,690
+10 or more times,Heavy User,$10 or more,7,4,3,5,4,4,4,3,5,4,Other,Off-Campus,No,Female,Junior,OTH,1,0,1,1,1,1,0,1,1,691
+1 to 2 times,Light user,$10 or more,4,2,3,2,2,2,1,1,2,4,Burgers,Off-Campus,No,Male,Junior,EDUC,0,0,0,0,0,0,0,0,1,692
+1 to 2 times,Light user,$10 or more,3,5,4,4,4,3,1,5,5,2,Burgers,Off-Campus,No,Male,Junior,ARTSC,1,1,1,1,0,0,1,1,0,693
+1 to 2 times,Light user,$10 or more,6,4,3,4,4,4,4,5,3,4,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,1,1,1,1,0,1,694
+1 to 2 times,Light user,Less than $5,4,5,3,5,4,4,1,3,4,5,Burgers,On-Campus,Yes,Female,Freshman,EDUC,1,0,1,1,1,0,0,1,1,695
+1 to 2 times,Light user,$5 to $9,1,4,3,4,3,3,2,3,3,2,Chicken,Commuter,No,Female,Senior,BUSN,1,0,1,0,0,0,0,0,0,696
+1 to 2 times,Light user,$5 to $9,7,5,3,4,4,5,3,4,3,4,Burgers,Off-Campus,No,Female,Senior,BUSN,1,0,1,1,1,0,1,0,1,697
+3 to 5 times,Heavy User,$10 or more,7,4,1,3,4,4,1,2,3,4,Mexican,On-Campus,Yes,Male,Freshman,ARTSC,1,0,0,1,1,0,0,0,1,698
+1 to 2 times,Light user,Less than $5,1,5,3,5,5,5,5,4,5,4,Sandwiches,Commuter,No,Female,Junior,ARTSC,1,0,1,1,1,1,1,1,1,699
+3 to 5 times,Heavy User,Less than $5,7,4,2,4,5,5,3,5,3,3,Chicken,Off-Campus,No,Male,Sophomore,BUSN,1,0,1,1,1,0,1,0,0,700
+3 to 5 times,Heavy User,$5 to $9,7,4,4,5,4,5,4,5,5,4,Burgers,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,1,1,1,1,701
+1 to 2 times,Light user,$5 to $9,7,4,4,5,5,3,4,1,1,5,Burgers,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,1,0,1,0,0,1,702
+1 to 2 times,Light user,$5 to $9,7,4,5,3,5,4,2,5,3,5,Chicken,Off-Campus,No,Female,Junior,OTH,1,1,0,1,1,0,1,0,1,703
+1 to 2 times,Light user,$5 to $9,2,5,4,4,5,3,3,3,4,3,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,1,0,0,0,1,0,704
+3 to 5 times,Heavy User,$5 to $9,6,5,5,4,3,4,3,3,5,4,Chicken,Off-Campus,No,Female,Junior,EDUC,1,1,1,0,1,0,0,1,1,705
+3 to 5 times,Heavy User,$10 or more,4,4,3,4,4,4,3,3,3,4,Chicken,Off-Campus,No,Female,Senior,OTH,1,0,1,1,1,0,0,0,1,706
+1 to 2 times,Light user,$5 to $9,1,2,4,4,4,4,3,4,2,4,Other,On-Campus,Yes,Female,Senior,ARTSC,0,1,1,1,1,0,1,0,1,707
+1 to 2 times,Light user,$5 to $9,1,5,5,4,3,4,5,4,4,4,Sandwiches,Off-Campus,No,Female,Senior,ARTSC,1,1,1,0,1,1,1,1,1,708
+1 to 2 times,Light user,$5 to $9,2,4,3,4,4,3,2,5,4,4,Mexican,On-Campus,Yes,Female,Junior,EDUC,1,0,1,1,0,0,1,1,1,709
+0 times,Non-user,Less than $5,1,5,4,5,3,3,5,3,4,2,Sandwiches,Off-Campus,No,Female,Senior,OTH,1,1,1,0,0,1,0,1,0,710
+3 to 5 times,Heavy User,$10 or more,7,5,4,5,5,5,2,3,2,3,Burgers,Off-Campus,No,Female,Senior,BUSN,1,1,1,1,1,0,0,0,0,711
+0 times,Non-user,Less than $5,2,5,4,5,2,4,4,5,4,2,Mexican,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,0,1,1,1,1,0,712
+0 times,Non-user,$5 to $9,5,4,3,4,4,4,1,3,4,5,Burgers,On-Campus,Yes,Male,Sophomore,BUSN,1,0,1,1,1,0,0,1,1,713
+1 to 2 times,Light user,$5 to $9,6,5,4,5,4,4,2,4,4,4,Mexican,Off-Campus,No,Female,Sophomore,BUSN,1,1,1,1,1,0,1,1,1,714
+3 to 5 times,Heavy User,$5 to $9,4,4,3,4,4,3,3,4,3,4,Chicken,On-Campus,Yes,Female,Sophomore,BUSN,1,0,1,1,0,0,1,0,1,715
+1 to 2 times,Light user,$5 to $9,4,5,3,5,3,4,3,2,4,3,Chicken,Commuter,No,Male,Freshman,OTH,1,0,1,0,1,0,0,1,0,716
+1 to 2 times,Light user,$5 to $9,3,5,4,4,4,4,3,4,3,4,Mexican,On-Campus,Yes,Female,Sophomore,EDUC,1,1,1,1,1,0,1,0,1,717
+0 times,Non-user,Less than $5,4,5,5,5,5,5,5,5,5,4,Mexican,On-Campus,Yes,Female,Freshman,BUSN,1,1,1,1,1,1,1,1,1,718
+3 to 5 times,Heavy User,Less than $5,7,3,2,4,5,3,3,4,2,4,Burgers,Off-Campus,No,Male,Senior,BUSN,0,0,1,1,0,0,1,0,1,719
+0 times,Non-user,$5 to $9,4,5,2,4,3,4,5,4,3,2,Burgers,Off-Campus,No,Male,Sophomore,ARTSC,1,0,1,0,1,1,1,0,0,720
+1 to 2 times,Light user,$10 or more,4,5,3,5,3,4,3,3,5,3,Chicken,Commuter,No,Female,Senior,ARTSC,1,0,1,0,1,0,0,1,0,721
+1 to 2 times,Light user,$5 to $9,5,3,4,3,2,3,3,3,3,3,Other,Off-Campus,No,Female,Senior,EDUC,0,1,0,0,0,0,0,0,0,722
+0 times,Non-user,$5 to $9,3,5,3,5,3,3,5,2,3,2,Mexican,On-Campus,Yes,Female,Sophomore,OTH,1,0,1,0,0,1,0,0,0,723
+0 times,Non-user,$10 or more,3,5,5,5,4,4,3,5,5,3,Mexican,On-Campus,Yes,Male,Freshman,ARTSC,1,1,1,1,1,0,1,1,0,724
+1 to 2 times,Light user,Less than $5,5,4,4,4,4,4,3,4,3,3,Burgers,On-Campus,Yes,Female,Freshman,EDUC,1,1,1,1,1,0,1,0,0,725
+1 to 2 times,Light user,$5 to $9,3,4,4,5,4,3,3,4,4,3,Chicken,On-Campus,Yes,Male,Sophomore,BUSN,1,1,1,1,0,0,1,1,0,726
+1 to 2 times,Light user,$5 to $9,6,4,4,4,4,4,4,4,3,4,Mexican,Off-Campus,No,Female,Senior,OTH,1,1,1,1,1,1,1,0,1,727
+3 to 5 times,Heavy User,$5 to $9,5,5,4,4,3,4,3,4,2,3,Other,On-Campus,Yes,Female,Freshman,OTH,1,1,1,0,1,0,1,0,0,728
+1 to 2 times,Light user,$5 to $9,2,3,3,4,5,4,2,4,3,4,Sandwiches,Commuter,No,Female,Junior,EDUC,0,0,1,1,1,0,1,0,1,729
+1 to 2 times,Light user,Less than $5,6,3,3,2,4,3,2,5,3,5,Burgers,On-Campus,Yes,Female,Sophomore,EDUC,0,0,0,1,0,0,1,0,1,730
+0 times,Non-user,Less than $5,1,5,5,5,5,5,5,5,5,5,Chicken,Off-Campus,No,Male,Senior,EDUC,1,1,1,1,1,1,1,1,1,731
+1 to 2 times,Light user,$5 to $9,6,4,3,4,4,3,2,3,3,3,Chicken,Commuter,No,Female,Junior,OTH,1,0,1,1,0,0,0,0,0,732
+3 to 5 times,Heavy User,$5 to $9,6,2,3,3,3,5,1,4,3,4,Sandwiches,Off-Campus,No,Male,Senior,BUSN,0,0,0,0,1,0,1,0,1,733
+1 to 2 times,Light user,$5 to $9,7,3,2,3,3,1,2,2,2,2,Burgers,Off-Campus,No,Male,Senior,ARTSC,0,0,0,0,0,0,0,0,0,734
+1 to 2 times,Light user,$5 to $9,3,3,4,5,2,3,3,2,4,4,Other,On-Campus,Yes,Male,Freshman,EDUC,0,1,1,0,0,0,0,1,1,735
+1 to 2 times,Light user,$5 to $9,4,2,5,5,5,5,4,5,3,3,Chicken,Off-Campus,No,Female,Sophomore,EDUC,0,1,1,1,1,1,1,0,0,736
+3 to 5 times,Heavy User,$5 to $9,6,5,2,3,4,5,2,4,2,2,Burgers,Off-Campus,No,Male,Junior,BUSN,1,0,0,1,1,0,1,0,0,737
+0 times,Non-user,$5 to $9,2,3,3,4,3,3,2,3,3,3,Chicken,Off-Campus,No,Male,Senior,EDUC,0,0,1,0,0,0,0,0,0,738
+3 to 5 times,Heavy User,$10 or more,4,5,5,5,5,5,5,2,5,5,Mexican,Off-Campus,No,Female,Sophomore,ARTSC,1,1,1,1,1,1,0,1,1,739
+1 to 2 times,Light user,$5 to $9,4,4,3,5,3,3,2,4,4,4,Chicken,On-Campus,Yes,Female,Freshman,OTH,1,0,1,0,0,0,1,1,1,740
+1 to 2 times,Light user,$5 to $9,4,5,3,5,4,3,3,5,5,3,Mexican,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,1,0,0,1,1,0,741
+1 to 2 times,Light user,$5 to $9,3,5,5,4,3,3,5,4,3,3,Other,On-Campus,Yes,Female,Freshman,OTH,1,1,1,0,0,1,1,0,0,742
+3 to 5 times,Heavy User,$10 or more,4,2,4,3,3,3,4,4,3,3,Other,Off-Campus,No,Female,Senior,ARTSC,0,1,0,0,0,1,1,0,0,743
+1 to 2 times,Light user,$5 to $9,6,4,3,4,4,3,3,5,4,4,Burgers,On-Campus,Yes,Female,Sophomore,ARTSC,1,0,1,1,0,0,1,1,1,744
+1 to 2 times,Light user,$10 or more,6,5,5,5,3,5,5,2,2,5,Burgers,Off-Campus,No,Male,Junior,OTH,1,1,1,0,1,1,0,0,1,745
+3 to 5 times,Heavy User,$10 or more,3,5,3,5,4,3,2,4,4,3,Chicken,Commuter,No,Female,Sophomore,ARTSC,1,0,1,1,0,0,1,1,0,746
+3 to 5 times,Heavy User,$5 to $9,3,4,3,5,3,3,3,4,3,4,Mexican,On-Campus,Yes,Female,Freshman,OTH,1,0,1,0,0,0,1,0,1,747
+3 to 5 times,Heavy User,$10 or more,4,4,3,4,3,4,3,4,3,3,Burgers,On-Campus,Yes,Male,Freshman,OTH,1,0,1,0,1,0,1,0,0,748
+1 to 2 times,Light user,$5 to $9,5,4,3,4,5,4,4,4,3,5,Mexican,On-Campus,Yes,Female,Freshman,EDUC,1,0,1,1,1,1,1,0,1,749
+3 to 5 times,Heavy User,$5 to $9,1,5,5,5,5,5,5,5,5,5,Burgers,On-Campus,Yes,Female,Freshman,OTH,1,1,1,1,1,1,1,1,1,750
+3 to 5 times,Heavy User,$5 to $9,3,5,4,3,5,4,2,4,2,5,Chicken,Off-Campus,Yes,Male,Senior,BUSN,1,1,0,1,1,0,1,0,1,751
+1 to 2 times,Light user,$5 to $9,6,4,4,3,4,3,4,5,2,5,Mexican,On-Campus,Yes,Female,Freshman,ARTSC,1,1,0,1,0,1,1,0,1,752
+1 to 2 times,Light user,$10 or more,6,4,2,3,4,4,2,5,3,5,Burgers,Commuter,No,Female,Junior,OTH,1,0,0,1,1,0,1,0,1,753
+1 to 2 times,Light user,$10 or more,5,4,4,4,4,4,3,3,3,2,Chicken,Off-Campus,No,Male,Junior,ARTSC,1,1,1,1,1,0,0,0,0,754
+1 to 2 times,Light user,$10 or more,5,4,3,5,3,4,4,4,2,4,Sandwiches,Off-Campus,No,Male,Junior,ARTSC,1,0,1,0,1,1,1,0,1,755
+1 to 2 times,Light user,$5 to $9,7,4,4,4,4,3,3,4,3,4,Chicken,Off-Campus,No,Female,Senior,BUSN,1,1,1,1,0,0,1,0,1,756
+1 to 2 times,Light user,$10 or more,4,5,5,5,5,5,4,5,5,5,Chicken,On-Campus,Yes,Female,Freshman,ARTSC,1,1,1,1,1,1,1,1,1,757
+3 to 5 times,Heavy User,$10 or more,3,3,5,5,4,4,3,5,5,4,Chicken,Commuter,No,Female,Sophomore,ARTSC,0,1,1,1,1,0,1,1,1,758
+1 to 2 times,Light user,$5 to $9,3,4,4,3,3,2,3,5,2,2,Chicken,Commuter,No,Female,Sophomore,ARTSC,1,1,0,0,0,0,1,0,0,759
+3 to 5 times,Heavy User,Less than $5,,3,1,3,3,1,3,5,3,3,Sandwiches,Off-Campus,No,Female,Senior,ARTSC,0,0,0,0,0,0,1,0,0,760
+1 to 2 times,Light user,$5 to $9,4,5,4,5,4,4,5,5,4,4,Mexican,Off-Campus,No,Female,Junior,OTH,1,1,1,1,1,1,1,1,1,761
+1 to 2 times,Light user,$10 or more,3,5,4,5,4,4,4,5,5,4,Mexican,On-Campus,Yes,Male,Sophomore,ARTSC,1,1,1,1,1,1,1,1,1,762
+3 to 5 times,Heavy User,$10 or more,3,4,4,5,3,3,5,5,5,5,Chicken,On-Campus,Yes,Female,Freshman,OTH,1,1,1,0,0,1,1,1,1,763
+1 to 2 times,Light user,$5 to $9,3,3,1,5,1,1,3,4,4,2,Burgers,On-Campus,Yes,Female,Freshman,OTH,0,0,1,0,0,0,1,1,0,764
