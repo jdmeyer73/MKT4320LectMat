@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | MKT 4320: Marketing Analytics</title>
+  <title>Topic 6 Segmentation | MKT 4320: Marketing Analytics</title>
   <meta name="description" content="Lecture materials for MKT 4320 in bookdown style." />
   <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | MKT 4320: Marketing Analytics" />
+  <meta property="og:title" content="Topic 6 Segmentation | MKT 4320: Marketing Analytics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | MKT 4320: Marketing Analytics" />
+  <meta name="twitter:title" content="Topic 6 Segmentation | MKT 4320: Marketing Analytics" />
   
   <meta name="twitter:description" content="Lecture materials for MKT 4320 in bookdown style." />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Jeffrey Meyer" />
 
 
-<meta name="date" content="2022-02-15" />
+<meta name="date" content="2022-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="segmentation.html"/>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -53,9 +53,6 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -358,6 +355,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.3" data-path="segmentation.html"><a href="segmentation.html#assigning-objects"><i class="fa fa-check"></i><b>5.3.3</b> Assigning Objects</a>
 <ul>
 <li class="chapter" data-level="5.3.3.1" data-path="segmentation.html"><a href="segmentation.html#hierarchical-agglomerative"><i class="fa fa-check"></i><b>5.3.3.1</b> Hierarchical: Agglomerative</a></li>
+<li class="chapter" data-level="5.3.3.2" data-path="segmentation.html"><a href="segmentation.html#partitioning-k-means"><i class="fa fa-check"></i><b>5.3.3.2</b> Partitioning: <span class="math inline">\(k\)</span>-means</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3.4" data-path="segmentation.html"><a href="segmentation.html#describe-the-segments"><i class="fa fa-check"></i><b>5.3.4</b> Describe the Segments</a></li>
 </ul></li>
@@ -371,48 +369,38 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5" data-path="segmentation.html"><a href="segmentation.html#suggested-readings-4"><i class="fa fa-check"></i><b>5.5</b> Suggested Readings</a></li>
 <li class="chapter" data-level="5.6" data-path="segmentation.html"><a href="segmentation.html#r-code-4"><i class="fa fa-check"></i><b>5.6</b> R Code</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="positioning.html"><a href="positioning.html"><i class="fa fa-check"></i><b>6</b> Positioning</a>
+<li class="chapter" data-level="6" data-path="segmentation-1.html"><a href="segmentation-1.html"><i class="fa fa-check"></i><b>6</b> Segmentation</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="positioning.html"><a href="positioning.html#r-packages-and-datasets-for-topic-5-1"><i class="fa fa-check"></i><b>6.1</b> R Packages and Datasets for Topic 5</a></li>
-<li class="chapter" data-level="6.2" data-path="positioning.html"><a href="positioning.html#positioning-overview"><i class="fa fa-check"></i><b>6.2</b> Positioning Overview</a>
+<li class="chapter" data-level="6.1" data-path="segmentation-1.html"><a href="segmentation-1.html#r-packages-and-datasets-for-topic-5-1"><i class="fa fa-check"></i><b>6.1</b> R Packages and Datasets for Topic 5</a></li>
+<li class="chapter" data-level="6.2" data-path="segmentation-1.html"><a href="segmentation-1.html#positioning-overview"><i class="fa fa-check"></i><b>6.2</b> Positioning Overview</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="positioning.html"><a href="positioning.html#the-concept-of-positioning"><i class="fa fa-check"></i><b>6.2.1</b> The Concept of Positioning</a></li>
-<li class="chapter" data-level="6.2.2" data-path="positioning.html"><a href="positioning.html#position-vs.-positioning"><i class="fa fa-check"></i><b>6.2.2</b> Position vs. Positioning</a></li>
-<li class="chapter" data-level="6.2.3" data-path="positioning.html"><a href="positioning.html#difficulty-of-positioning"><i class="fa fa-check"></i><b>6.2.3</b> Difficulty of Positioning</a></li>
-<li class="chapter" data-level="6.2.4" data-path="positioning.html"><a href="positioning.html#competitive-market-structure"><i class="fa fa-check"></i><b>6.2.4</b> Competitive Market Structure</a></li>
-<li class="chapter" data-level="6.2.5" data-path="positioning.html"><a href="positioning.html#positioning-with-product-parity"><i class="fa fa-check"></i><b>6.2.5</b> Positioning with Product Parity</a></li>
-<li class="chapter" data-level="6.2.6" data-path="positioning.html"><a href="positioning.html#requirements-for-effective-positioning"><i class="fa fa-check"></i><b>6.2.6</b> Requirements for Effective Positioning</a>
+<li class="chapter" data-level="6.2.1" data-path="segmentation-1.html"><a href="segmentation-1.html#the-concept-of-positioning"><i class="fa fa-check"></i><b>6.2.1</b> The Concept of Positioning</a></li>
+<li class="chapter" data-level="6.2.2" data-path="segmentation-1.html"><a href="segmentation-1.html#position-vs.-positioning"><i class="fa fa-check"></i><b>6.2.2</b> Position vs. Positioning</a></li>
+<li class="chapter" data-level="6.2.3" data-path="segmentation-1.html"><a href="segmentation-1.html#difficulty-of-positioning"><i class="fa fa-check"></i><b>6.2.3</b> Difficulty of Positioning</a></li>
+<li class="chapter" data-level="6.2.4" data-path="segmentation-1.html"><a href="segmentation-1.html#competitive-market-structure"><i class="fa fa-check"></i><b>6.2.4</b> Competitive Market Structure</a></li>
+<li class="chapter" data-level="6.2.5" data-path="segmentation-1.html"><a href="segmentation-1.html#positioning-with-product-parity"><i class="fa fa-check"></i><b>6.2.5</b> Positioning with Product Parity</a></li>
+<li class="chapter" data-level="6.2.6" data-path="segmentation-1.html"><a href="segmentation-1.html#requirements-for-effective-positioning"><i class="fa fa-check"></i><b>6.2.6</b> Requirements for Effective Positioning</a>
 <ul>
-<li class="chapter" data-level="6.2.6.1" data-path="positioning.html"><a href="positioning.html#uniqueness"><i class="fa fa-check"></i><b>6.2.6.1</b> Uniqueness</a></li>
-<li class="chapter" data-level="6.2.6.2" data-path="positioning.html"><a href="positioning.html#desirability"><i class="fa fa-check"></i><b>6.2.6.2</b> Desirability</a></li>
-<li class="chapter" data-level="6.2.6.3" data-path="positioning.html"><a href="positioning.html#believability"><i class="fa fa-check"></i><b>6.2.6.3</b> Believability</a></li>
+<li class="chapter" data-level="6.2.6.1" data-path="segmentation-1.html"><a href="segmentation-1.html#uniqueness"><i class="fa fa-check"></i><b>6.2.6.1</b> Uniqueness</a></li>
+<li class="chapter" data-level="6.2.6.2" data-path="segmentation-1.html"><a href="segmentation-1.html#desirability"><i class="fa fa-check"></i><b>6.2.6.2</b> Desirability</a></li>
+<li class="chapter" data-level="6.2.6.3" data-path="segmentation-1.html"><a href="segmentation-1.html#believability"><i class="fa fa-check"></i><b>6.2.6.3</b> Believability</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2.7" data-path="positioning.html"><a href="positioning.html#steps-in-positioning"><i class="fa fa-check"></i><b>6.2.7</b> Steps in Positioning</a></li>
-<li class="chapter" data-level="6.2.8" data-path="positioning.html"><a href="positioning.html#positioning-research-methods"><i class="fa fa-check"></i><b>6.2.8</b> Positioning Research Methods</a>
+<li class="chapter" data-level="6.2.7" data-path="segmentation-1.html"><a href="segmentation-1.html#steps-in-positioning"><i class="fa fa-check"></i><b>6.2.7</b> Steps in Positioning</a></li>
+<li class="chapter" data-level="6.2.8" data-path="segmentation-1.html"><a href="segmentation-1.html#positioning-research-methods"><i class="fa fa-check"></i><b>6.2.8</b> Positioning Research Methods</a>
 <ul>
-<li class="chapter" data-level="6.2.8.1" data-path="positioning.html"><a href="positioning.html#image-profile"><i class="fa fa-check"></i><b>6.2.8.1</b> Image Profile</a></li>
-<li class="chapter" data-level="6.2.8.2" data-path="positioning.html"><a href="positioning.html#quadrant-analysis"><i class="fa fa-check"></i><b>6.2.8.2</b> Quadrant Analysis</a></li>
-<li class="chapter" data-level="6.2.8.3" data-path="positioning.html"><a href="positioning.html#perceptual-maps"><i class="fa fa-check"></i><b>6.2.8.3</b> Perceptual Maps</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="positioning.html"><a href="positioning.html#factor-analysis"><i class="fa fa-check"></i><b>6.3</b> Factor Analysis</a></li>
-<li class="chapter" data-level="6.4" data-path="positioning.html"><a href="positioning.html#principal-components-analysis-pca"><i class="fa fa-check"></i><b>6.4</b> Principal Components Analysis (PCA)</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="positioning.html"><a href="positioning.html#pca-process"><i class="fa fa-check"></i><b>6.4.1</b> PCA Process</a>
-<ul>
-<li class="chapter" data-level="6.4.1.1" data-path="positioning.html"><a href="positioning.html#step-1-determine-number-of-factors-to-retain"><i class="fa fa-check"></i><b>6.4.1.1</b> Step 1: Determine number of factors to retain</a></li>
-<li class="chapter" data-level="6.4.1.2" data-path="positioning.html"><a href="positioning.html#step-2-rotate-factors-to-aid-interpretation"><i class="fa fa-check"></i><b>6.4.1.2</b> Step 2: Rotate factors to aid interpretation</a></li>
-<li class="chapter" data-level="6.4.1.3" data-path="positioning.html"><a href="positioning.html#step-3-interpret-factors"><i class="fa fa-check"></i><b>6.4.1.3</b> Step 3: Interpret factors</a></li>
-<li class="chapter" data-level="6.4.1.4" data-path="positioning.html"><a href="positioning.html#step-4-use-results-in-further-analysis"><i class="fa fa-check"></i><b>6.4.1.4</b> Step 4: Use results in further analysis</a></li>
+<li class="chapter" data-level="6.2.8.1" data-path="segmentation-1.html"><a href="segmentation-1.html#image-profile"><i class="fa fa-check"></i><b>6.2.8.1</b> Image Profile</a></li>
+<li class="chapter" data-level="6.2.8.2" data-path="segmentation-1.html"><a href="segmentation-1.html#quadrant-analysis"><i class="fa fa-check"></i><b>6.2.8.2</b> Quadrant Analysis</a></li>
+<li class="chapter" data-level="6.2.8.3" data-path="segmentation-1.html"><a href="segmentation-1.html#perceptual-maps"><i class="fa fa-check"></i><b>6.2.8.3</b> Perceptual Maps</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="positioning.html"><a href="positioning.html#creating-a-percptual-map-using-pca"><i class="fa fa-check"></i><b>6.5</b> Creating a Percptual Map using PCA</a>
+<li class="chapter" data-level="6.3" data-path="segmentation-1.html"><a href="segmentation-1.html#factor-analysis"><i class="fa fa-check"></i><b>6.3</b> Factor Analysis</a></li>
+<li class="chapter" data-level="6.4" data-path="segmentation-1.html"><a href="segmentation-1.html#principal-components-analysis-pca"><i class="fa fa-check"></i><b>6.4</b> Principal Components Analysis (PCA)</a>
 <ul>
-<li class="chapter" data-level="6.5.1" data-path="positioning.html"><a href="positioning.html#map-brands"><i class="fa fa-check"></i><b>6.5.1</b> Map Brands</a></li>
-<li class="chapter" data-level="6.5.2" data-path="positioning.html"><a href="positioning.html#map-attributes"><i class="fa fa-check"></i><b>6.5.2</b> Map Attributes</a></li>
-<li class="chapter" data-level="6.5.3" data-path="positioning.html"><a href="positioning.html#interpret-map"><i class="fa fa-check"></i><b>6.5.3</b> Interpret Map</a></li>
+<li class="chapter" data-level="6.4.1" data-path="segmentation-1.html"><a href="segmentation-1.html#pca-process"><i class="fa fa-check"></i><b>6.4.1</b> PCA Process</a>
+<ul>
+<li class="chapter" data-level="6.4.1.1" data-path="segmentation-1.html"><a href="segmentation-1.html#step-1-determine-number-of-factors-to-retain"><i class="fa fa-check"></i><b>6.4.1.1</b> Step 1: Determine number of factors to retain</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="positioning.html"><a href="positioning.html#joint-space-maps"><i class="fa fa-check"></i><b>6.6</b> Joint-Space Maps</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -431,18 +419,225 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="segmentation-1" class="section level1" number="6">
+<h1><span class="header-section-number">Topic 6</span> Segmentation</h1>
+<div id="r-packages-and-datasets-for-topic-5-1" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> R Packages and Datasets for Topic 5</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="segmentation-1.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb1-2"><a href="segmentation-1.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb1-3"><a href="segmentation-1.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb1-4"><a href="segmentation-1.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
+<span id="cb1-5"><a href="segmentation-1.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
+<span id="cb1-6"><a href="segmentation-1.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic05/ffseg.rdata&quot;</span>)</span></code></pre></div>
+</div>
+<div id="positioning-overview" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Positioning Overview</h2>
+<div id="the-concept-of-positioning" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> The Concept of Positioning</h3>
+<ul>
+<li>Positioning is not what you do to a product</li>
+<li>Positioning is what you do to the mind of the prospect</li>
+</ul>
+</div>
+<div id="position-vs.-positioning" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Position vs. Positioning</h3>
+<ul>
+<li><strong><em>Position</em></strong> The place a brand, product line, or organization in general occupies in consumers’ minds relative to competing offerings.</li>
+<li><strong><em>Positioning</em></strong> Developing a specific marketing mix to influence potential customers’ overall perception of a brand, product line, or organization in general.</li>
+</ul>
+</div>
+<div id="difficulty-of-positioning" class="section level3" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Difficulty of Positioning</h3>
+<ul>
+<li>Positioning is easy when your product is clearly superior in an important way…
+<ul>
+<li>But few are</li>
+</ul></li>
+<li>Most product markets have a lot of parity, so…
+<ul>
+<li>Positioning is more important <em>and</em> more difficult</li>
+</ul></li>
+</ul>
+</div>
+<div id="competitive-market-structure" class="section level3" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Competitive Market Structure</h3>
+<ul>
+<li>Difficulty of positioning depends on level of product competitiveness
+<ul>
+<li>Easy positioning…
+<ul>
+<li>Product Superiority: Clearly superior in many important ways</li>
+</ul></li>
+<li>“In the middle” positioning…
+<ul>
+<li>Product Differentiation: One or more specific features superior to the competition (but otherwise similar)<br />
+</li>
+</ul></li>
+<li>Difficult positioning…
+<ul>
+<li>Product Parity: No essential differences from one product to another</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="positioning-with-product-parity" class="section level3" number="6.2.5">
+<h3><span class="header-section-number">6.2.5</span> Positioning with Product Parity</h3>
+<ul>
+<li>Remember… Positioning is what you do to the mind of the prospect</li>
+<li>Thus… Need to create points of difference, whether:
+<ol style="list-style-type: decimal">
+<li>They exist or not</li>
+<li>They are meaningful or not</li>
+</ol></li>
+</ul>
+</div>
+<div id="requirements-for-effective-positioning" class="section level3" number="6.2.6">
+<h3><span class="header-section-number">6.2.6</span> Requirements for Effective Positioning</h3>
+<ol style="list-style-type: decimal">
+<li>Uniqueness</li>
+<li>Desirability</li>
+<li>Believability</li>
+</ol>
+<p>Not all three are required… But the more there are, the more likely the positioning will be effective</p>
+<div id="uniqueness" class="section level4" number="6.2.6.1">
+<h4><span class="header-section-number">6.2.6.1</span> Uniqueness</h4>
+<ul>
+<li>Be different in some way</li>
+<li>Must get through the clutter
+<ul>
+<li>Slightly better on an important feature<br>-vs.-<br>Unique on a less important feature</li>
+</ul></li>
+<li>More brands = more difficult</li>
+<li>Find a niche that is not yet occupied</li>
+</ul>
+</div>
+<div id="desirability" class="section level4" number="6.2.6.2">
+<h4><span class="header-section-number">6.2.6.2</span> Desirability</h4>
+<ul>
+<li>Difference should be on something relatively important to the consumer
+<ul>
+<li>Example: Is being clear in the cola market important?</li>
+</ul></li>
+<li>Don’t look for any gap in the market…<br>Look for gaps that turn prospects into buyers</li>
+</ul>
+</div>
+<div id="believability" class="section level4" number="6.2.6.3">
+<h4><span class="header-section-number">6.2.6.3</span> Believability</h4>
+<ul>
+<li>Claims of superiority must be accepted</li>
+<li>Believability rests on:
+<ul>
+<li>How reasonable the claim is</li>
+<li>Objective support for the claim</li>
+</ul></li>
+<li>A common error is to strive for too many positions</li>
+</ul>
+</div>
+</div>
+<div id="steps-in-positioning" class="section level3" number="6.2.7">
+<h3><span class="header-section-number">6.2.7</span> Steps in Positioning</h3>
+<ol style="list-style-type: decimal">
+<li>Assess the positions occupied by competing products</li>
+<li>Determine the dimensions underlying these positions</li>
+<li>Choose a market position where efforts will have the greatest impact</li>
+</ol>
+<p><img src="Topic06/StepPos.png" width="50%" /></p>
+</div>
+<div id="positioning-research-methods" class="section level3" number="6.2.8">
+<h3><span class="header-section-number">6.2.8</span> Positioning Research Methods</h3>
+<div id="image-profile" class="section level4" number="6.2.8.1">
+<h4><span class="header-section-number">6.2.8.1</span> Image Profile</h4>
+<ul>
+<li>Average ratings of brands/products on a number of attributes</li>
+<li>Easy to create, but…</li>
+<li>Difficult to interpret</li>
+</ul>
+<p><img src="Topic06/ImgProf.png" width="50%" /></p>
+</div>
+<div id="quadrant-analysis" class="section level4" number="6.2.8.2">
+<h4><span class="header-section-number">6.2.8.2</span> Quadrant Analysis</h4>
+<ul>
+<li>x-axis contains the average ratings of one brand/product on a number of attributes</li>
+<li>y-axis contains the average importance of each attribute</li>
+<li>Easily shows what attributes to emphasize, but…</li>
+<li>Only looks at one brand/product at a time</li>
+</ul>
+<p><img src="Topic06/QuadAn.png" width="50%" /></p>
+</div>
+<div id="perceptual-maps" class="section level4" number="6.2.8.3">
+<h4><span class="header-section-number">6.2.8.3</span> Perceptual Maps</h4>
+<ul>
+<li>Shows the location of competing brands/ products in a “virtual” space</li>
+<li>Enable marketers to see at a glance how own brand/product relates to the competition</li>
+</ul>
+<p><img src="Topic06/PercMap.png" width="50%" /></p>
+<div id="types-of-perceptual-maps" class="section level5" number="6.2.8.3.1">
+<h5><span class="header-section-number">6.2.8.3.1</span> Types of Perceptual Maps</h5>
+<ul>
+<li>Discriminant Analysis Maps
+<ul>
+<li>Based on identifying differences between objects with respect to several variables simultaneously</li>
+</ul></li>
+<li>Multidimensional Scaling Maps
+<ul>
+<li>Based only on similarities between objects</li>
+</ul></li>
+<li>Factor Analysis Maps
+<ul>
+<li>Based on the dimensions underlying a set of variables</li>
+<li><strong>EMPHASIS OF THIS CLASS</strong></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="factor-analysis" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Factor Analysis</h2>
+<ul>
+<li>Generic term for identifying dimensions underlying a set of variables</li>
+<li>Finds uncorrelated linear dimensions that capture the most variance in the data</li>
+<li>Main types:
+<ol style="list-style-type: decimal">
+<li>exploratory factor analysis</li>
+<li>principal components analysis</li>
+</ol></li>
+</ul>
+</div>
+<div id="principal-components-analysis-pca" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Principal Components Analysis (PCA)</h2>
+<p>Recomputes a set of variables in terms of linear equations (components) that capture linear relationships in the data
+* First component captures as much variance as possible from all variables
+* Second component captures as much variance as possible that remains
+* Continue until as many components as variables
+* Analyst retains/analyzes a subset of components</p>
+<div id="pca-process" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> PCA Process</h3>
+<ol style="list-style-type: decimal">
+<li>Determine number of factors to retain</li>
+<li>Rotate factors to aid interpretation</li>
+<li>Interpret factors</li>
+<li>Use results in further analysis (e.g., perceptual maps)</li>
+</ol>
+<div id="step-1-determine-number-of-factors-to-retain" class="section level4" number="6.4.1.1">
+<h4><span class="header-section-number">6.4.1.1</span> Step 1: Determine number of factors to retain</h4>
+<ul>
+<li>How many factors? Eigenvalues &gt; 1 or Examine Scree Plot
+<ul>
+<li>E.g., Keep two components, accounting for about 85% of variation</li>
+</ul></li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="segmentation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

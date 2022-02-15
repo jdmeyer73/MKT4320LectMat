@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | MKT 4320: Marketing Analytics</title>
+  <title>Topic 6 Positioning | MKT 4320: Marketing Analytics</title>
   <meta name="description" content="Lecture materials for MKT 4320 in bookdown style." />
   <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | MKT 4320: Marketing Analytics" />
+  <meta property="og:title" content="Topic 6 Positioning | MKT 4320: Marketing Analytics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | MKT 4320: Marketing Analytics" />
+  <meta name="twitter:title" content="Topic 6 Positioning | MKT 4320: Marketing Analytics" />
   
   <meta name="twitter:description" content="Lecture materials for MKT 4320 in bookdown style." />
   
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="segmentation.html"/>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -431,18 +431,1237 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="positioning" class="section level1" number="6">
+<h1><span class="header-section-number">Topic 6</span> Positioning</h1>
+<div id="r-packages-and-datasets-for-topic-5-1" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> R Packages and Datasets for Topic 5</h2>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="positioning.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb95-2"><a href="positioning.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb95-3"><a href="positioning.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb95-4"><a href="positioning.html#cb95-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
+<span id="cb95-5"><a href="positioning.html#cb95-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
+<span id="cb95-6"><a href="positioning.html#cb95-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic06/ffattrib.rdata&quot;</span>)</span></code></pre></div>
+</div>
+<div id="positioning-overview" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Positioning Overview</h2>
+<div id="the-concept-of-positioning" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> The Concept of Positioning</h3>
+<ul>
+<li>Positioning is not what you do to a product</li>
+<li>Positioning is what you do to the mind of the prospect</li>
+</ul>
+</div>
+<div id="position-vs.-positioning" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Position vs. Positioning</h3>
+<ul>
+<li><strong><em>Position</em></strong> The place a brand, product line, or organization in general occupies in consumers’ minds relative to competing offerings.</li>
+<li><strong><em>Positioning</em></strong> Developing a specific marketing mix to influence potential customers’ overall perception of a brand, product line, or organization in general.</li>
+</ul>
+</div>
+<div id="difficulty-of-positioning" class="section level3" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Difficulty of Positioning</h3>
+<ul>
+<li>Positioning is easy when your product is clearly superior in an important way…
+<ul>
+<li>But few are</li>
+</ul></li>
+<li>Most product markets have a lot of parity, so…
+<ul>
+<li>Positioning is more important <em>and</em> more difficult</li>
+</ul></li>
+</ul>
+</div>
+<div id="competitive-market-structure" class="section level3" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Competitive Market Structure</h3>
+<ul>
+<li>Difficulty of positioning depends on level of product competitiveness
+<ul>
+<li>Easy positioning…
+<ul>
+<li>Product Superiority: Clearly superior in many important ways</li>
+</ul></li>
+<li>“In the middle” positioning…
+<ul>
+<li>Product Differentiation: One or more specific features superior to the competition (but otherwise similar)<br />
+</li>
+</ul></li>
+<li>Difficult positioning…
+<ul>
+<li>Product Parity: No essential differences from one product to another</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="positioning-with-product-parity" class="section level3" number="6.2.5">
+<h3><span class="header-section-number">6.2.5</span> Positioning with Product Parity</h3>
+<ul>
+<li>Remember… Positioning is what you do to the mind of the prospect</li>
+<li>Thus… Need to create points of difference, whether:
+<ol style="list-style-type: decimal">
+<li>They exist or not</li>
+<li>They are meaningful or not</li>
+</ol></li>
+</ul>
+</div>
+<div id="requirements-for-effective-positioning" class="section level3" number="6.2.6">
+<h3><span class="header-section-number">6.2.6</span> Requirements for Effective Positioning</h3>
+<ol style="list-style-type: decimal">
+<li>Uniqueness</li>
+<li>Desirability</li>
+<li>Believability</li>
+</ol>
+<p>Not all three are required… But the more there are, the more likely the positioning will be effective</p>
+<div id="uniqueness" class="section level4" number="6.2.6.1">
+<h4><span class="header-section-number">6.2.6.1</span> Uniqueness</h4>
+<ul>
+<li>Be different in some way</li>
+<li>Must get through the clutter
+<ul>
+<li>Slightly better on an important feature<br>-vs.-<br>Unique on a less important feature</li>
+</ul></li>
+<li>More brands = more difficult</li>
+<li>Find a niche that is not yet occupied</li>
+</ul>
+</div>
+<div id="desirability" class="section level4" number="6.2.6.2">
+<h4><span class="header-section-number">6.2.6.2</span> Desirability</h4>
+<ul>
+<li>Difference should be on something relatively important to the consumer
+<ul>
+<li>Example: Is being clear in the cola market important?</li>
+</ul></li>
+<li>Don’t look for any gap in the market…<br>Look for gaps that turn prospects into buyers</li>
+</ul>
+</div>
+<div id="believability" class="section level4" number="6.2.6.3">
+<h4><span class="header-section-number">6.2.6.3</span> Believability</h4>
+<ul>
+<li>Claims of superiority must be accepted</li>
+<li>Believability rests on:
+<ul>
+<li>How reasonable the claim is</li>
+<li>Objective support for the claim</li>
+</ul></li>
+<li>A common error is to strive for too many positions</li>
+</ul>
+</div>
+</div>
+<div id="steps-in-positioning" class="section level3" number="6.2.7">
+<h3><span class="header-section-number">6.2.7</span> Steps in Positioning</h3>
+<ol style="list-style-type: decimal">
+<li>Assess the positions occupied by competing products</li>
+<li>Determine the dimensions underlying these positions</li>
+<li>Choose a market position where efforts will have the greatest impact</li>
+</ol>
+<p><img src="Topic06/StepPos.png" width="50%" /></p>
+</div>
+<div id="positioning-research-methods" class="section level3" number="6.2.8">
+<h3><span class="header-section-number">6.2.8</span> Positioning Research Methods</h3>
+<div id="image-profile" class="section level4" number="6.2.8.1">
+<h4><span class="header-section-number">6.2.8.1</span> Image Profile</h4>
+<ul>
+<li>Average ratings of brands/products on a number of attributes</li>
+<li>Easy to create, but…</li>
+<li>Difficult to interpret</li>
+</ul>
+<p><img src="Topic06/ImgProf.png" width="50%" /></p>
+</div>
+<div id="quadrant-analysis" class="section level4" number="6.2.8.2">
+<h4><span class="header-section-number">6.2.8.2</span> Quadrant Analysis</h4>
+<ul>
+<li>x-axis contains the average ratings of one brand/product on a number of attributes</li>
+<li>y-axis contains the average importance of each attribute</li>
+<li>Easily shows what attributes to emphasize, but…</li>
+<li>Only looks at one brand/product at a time</li>
+</ul>
+<p><img src="Topic06/QuadAn.png" width="50%" /></p>
+</div>
+<div id="perceptual-maps" class="section level4" number="6.2.8.3">
+<h4><span class="header-section-number">6.2.8.3</span> Perceptual Maps</h4>
+<ul>
+<li>Shows the location of competing brands/ products in a “virtual” space</li>
+<li>Enable marketers to see at a glance how own brand/product relates to the competition</li>
+</ul>
+<p><img src="Topic06/PercMap.png" width="50%" /></p>
+<div id="types-of-perceptual-maps" class="section level5" number="6.2.8.3.1">
+<h5><span class="header-section-number">6.2.8.3.1</span> Types of Perceptual Maps</h5>
+<ul>
+<li>Discriminant Analysis Maps
+<ul>
+<li>Based on identifying differences between objects with respect to several variables simultaneously</li>
+</ul></li>
+<li>Multidimensional Scaling Maps
+<ul>
+<li>Based only on similarities between objects</li>
+</ul></li>
+<li>Factor Analysis Maps
+<ul>
+<li>Based on the dimensions underlying a set of variables</li>
+<li><strong>EMPHASIS OF THIS CLASS</strong></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="factor-analysis" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Factor Analysis</h2>
+<ul>
+<li>Generic term for identifying dimensions underlying a set of variables</li>
+<li>Finds uncorrelated linear dimensions that capture the most variance in the data</li>
+<li>Main types:
+<ol style="list-style-type: decimal">
+<li>exploratory factor analysis</li>
+<li>principal components analysis</li>
+</ol></li>
+</ul>
+</div>
+<div id="principal-components-analysis-pca" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Principal Components Analysis (PCA)</h2>
+<p>Recomputes a set of variables in terms of linear equations (components) that capture linear relationships in the data
+* First component captures as much variance as possible from all variables
+* Second component captures as much variance as possible that remains
+* Continue until as many components as variables
+* Analyst retains/analyzes a subset of components</p>
+<div id="pca-process" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> PCA Process</h3>
+<ol style="list-style-type: decimal">
+<li>Determine number of factors to retain</li>
+<li>Rotate factors to aid interpretation</li>
+<li>Interpret factors</li>
+<li>Use results in further analysis (e.g., perceptual maps)</li>
+</ol>
+<div id="step-1-determine-number-of-factors-to-retain" class="section level4" number="6.4.1.1">
+<h4><span class="header-section-number">6.4.1.1</span> Step 1: Determine number of factors to retain</h4>
+<ul>
+<li>How many factors?
+<ul>
+<li>Eigenvalues &gt; 1
+<ul>
+<li>E.g., Keep two components, accounting for about 85% of variation</li>
+</ul></li>
+</ul>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Component
+</th>
+<th style="text-align:right;">
+Eigenvalue
+</th>
+<th style="text-align:right;">
+Difference
+</th>
+<th style="text-align:right;">
+Proporation
+</th>
+<th style="text-align:right;">
+Cumulative
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4.5562
+</td>
+<td style="text-align:right;">
+1.5461
+</td>
+<td style="text-align:right;">
+0.5062
+</td>
+<td style="text-align:right;">
+0.5062
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3.0100
+</td>
+<td style="text-align:right;">
+2.4187
+</td>
+<td style="text-align:right;">
+0.3344
+</td>
+<td style="text-align:right;">
+0.8407
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.5913
+</td>
+<td style="text-align:right;">
+0.2131
+</td>
+<td style="text-align:right;">
+0.0657
+</td>
+<td style="text-align:right;">
+0.9064
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.3782
+</td>
+<td style="text-align:right;">
+0.1183
+</td>
+<td style="text-align:right;">
+0.0420
+</td>
+<td style="text-align:right;">
+0.9484
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.2599
+</td>
+<td style="text-align:right;">
+0.1255
+</td>
+<td style="text-align:right;">
+0.0289
+</td>
+<td style="text-align:right;">
+0.9773
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+0.1344
+</td>
+<td style="text-align:right;">
+0.0882
+</td>
+<td style="text-align:right;">
+0.0149
+</td>
+<td style="text-align:right;">
+0.9922
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0.0463
+</td>
+<td style="text-align:right;">
+0.0250
+</td>
+<td style="text-align:right;">
+0.0051
+</td>
+<td style="text-align:right;">
+0.9974
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0.0213
+</td>
+<td style="text-align:right;">
+0.0189
+</td>
+<td style="text-align:right;">
+0.0024
+</td>
+<td style="text-align:right;">
+0.9997
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0.0024
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+0.0003
+</td>
+<td style="text-align:right;">
+1.0000
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Examine Scree Plot
+<ul>
+<li>Sometimes called an elbow plot</li>
+<li>Look for bend or kink in the plot</li>
+<li>Number of components to retain is the number prior to that kink</li>
+</ul></li>
+</ul>
+<img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="672" /></li>
+</ul>
+</div>
+<div id="step-2-rotate-factors-to-aid-interpretation" class="section level4" number="6.4.1.2">
+<h4><span class="header-section-number">6.4.1.2</span> Step 2: Rotate factors to aid interpretation</h4>
+<ul>
+<li><p>Factor loadings are the correlation between each variable and each factor</p>
+<ul>
+<li>Higher loadings indicate the variable is representative of the factor</li>
+</ul></li>
+<li><p>Unfortunately, unrotated loadings may not provide a meaningful pattern to understand the factors</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+<p>PC1</p>
+</th>
+<th style="text-align:right;">
+<p>PC2</p>
+</th>
+<th style="text-align:right;">
+<p>Unexplained</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>perform</p>
+</td>
+<td style="text-align:right;">
+<p>0.3327</p>
+</td>
+<td style="text-align:right;">
+<p>0.3073</p>
+</td>
+<td style="text-align:right;">
+<p>0.3009</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>leader</p>
+</td>
+<td style="text-align:right;">
+<p>0.3116</p>
+</td>
+<td style="text-align:right;">
+<p>0.4276</p>
+</td>
+<td style="text-align:right;">
+<p>0.0867</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>lattech</p>
+</td>
+<td style="text-align:right;">
+<p>-0.3656</p>
+</td>
+<td style="text-align:right;">
+<p>0.2875</p>
+</td>
+<td style="text-align:right;">
+<p>0.2500</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>fun</p>
+</td>
+<td style="text-align:right;">
+<p>-0.4010</p>
+</td>
+<td style="text-align:right;">
+<p>-0.2957</p>
+</td>
+<td style="text-align:right;">
+<p>0.1335</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>serious</p>
+</td>
+<td style="text-align:right;">
+<p>0.2730</p>
+</td>
+<td style="text-align:right;">
+<p>0.4499</p>
+</td>
+<td style="text-align:right;">
+<p>0.1131</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>bargain</p>
+</td>
+<td style="text-align:right;">
+<p>0.3722</p>
+</td>
+<td style="text-align:right;">
+<p>-0.3160</p>
+</td>
+<td style="text-align:right;">
+<p>0.1801</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>value</p>
+</td>
+<td style="text-align:right;">
+<p>0.4229</p>
+</td>
+<td style="text-align:right;">
+<p>-0.2843</p>
+</td>
+<td style="text-align:right;">
+<p>0.0855</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>trendy</p>
+</td>
+<td style="text-align:right;">
+<p>-0.3253</p>
+</td>
+<td style="text-align:right;">
+<p>0.4117</p>
+</td>
+<td style="text-align:right;">
+<p>0.0941</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Rotating the factors redistributes the variance from earlier factors to later factors to make more meaningful patterns</p></li>
+<li><p>Factor/component loading guidelines<br>
+<span class="math inline">\(\rho&lt;0.4\Longrightarrow\)</span> no loading<br>
+<span class="math inline">\(0.4\le \rho&lt;0.6\Longrightarrow\)</span> low" loading<br>
+<span class="math inline">\(\rho\ge0.6\Longrightarrow\)</span> “high” loading<br></p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+<p>PC1</p>
+</th>
+<th style="text-align:right;">
+<p>PC2</p>
+</th>
+<th style="text-align:right;">
+<p>Unexplained</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>perform</p>
+</td>
+<td style="text-align:right;">
+<p>0.0490</p>
+</td>
+<td style="text-align:right;">
+<p>0.4502</p>
+</td>
+<td style="text-align:right;">
+<p>0.3009</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>leader</p>
+</td>
+<td style="text-align:right;">
+<p>-0.0459</p>
+</td>
+<td style="text-align:right;">
+<p>0.5271</p>
+</td>
+<td style="text-align:right;">
+<p>0.0867</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>lattech</p>
+</td>
+<td style="text-align:right;">
+<p>-0.4645</p>
+</td>
+<td style="text-align:right;">
+<p>-0.0234</p>
+</td>
+<td style="text-align:right;">
+<p>0.2500</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>fun</p>
+</td>
+<td style="text-align:right;">
+<p>-0.1081</p>
+</td>
+<td style="text-align:right;">
+<p>-0.4864</p>
+</td>
+<td style="text-align:right;">
+<p>0.1335</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>serious</p>
+</td>
+<td style="text-align:right;">
+<p>-0.0897</p>
+</td>
+<td style="text-align:right;">
+<p>0.5185</p>
+</td>
+<td style="text-align:right;">
+<p>0.1131</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>bargain</p>
+</td>
+<td style="text-align:right;">
+<p>0.4882</p>
+</td>
+<td style="text-align:right;">
+<p>0.0062</p>
+</td>
+<td style="text-align:right;">
+<p>0.1801</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>value</p>
+</td>
+<td style="text-align:right;">
+<p>0.5057</p>
+</td>
+<td style="text-align:right;">
+<p>0.0634</p>
+</td>
+<td style="text-align:right;">
+<p>0.0855</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>trendy</p>
+</td>
+<td style="text-align:right;">
+<p>-0.5157</p>
+</td>
+<td style="text-align:right;">
+<p>0.0967</p>
+</td>
+<td style="text-align:right;">
+<p>0.0941</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+<div id="step-3-interpret-factors" class="section level4" number="6.4.1.3">
+<h4><span class="header-section-number">6.4.1.3</span> Step 3: Interpret factors</h4>
+<ul>
+<li>(not)<span class="math inline">\(lattech\)</span>, <span class="math inline">\(bargain\)</span>, <span class="math inline">\(value\)</span>, (not)<span class="math inline">\(trendy\)</span> describe factor 1
+<ul>
+<li>Might label factor 1 as “latest”</li>
+</ul></li>
+<li><span class="math inline">\(perform\)</span>, <span class="math inline">\(leader\)</span>, (not)<span class="math inline">\(fun\)</span>, and <span class="math inline">\(serious\)</span> describe factor 2
+<ul>
+<li>Might label factor 2 as “performance”</li>
+</ul>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+PC1
+</th>
+<th style="text-align:right;">
+PC2
+</th>
+<th style="text-align:right;">
+Unexplained
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+perform
+</td>
+<td style="text-align:right;background-color: white !important;">
+0.0490
+</td>
+<td style="text-align:right;background-color: lightskyblue !important;">
+0.4502
+</td>
+<td style="text-align:right;">
+0.3009
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+leader
+</td>
+<td style="text-align:right;background-color: white !important;">
+-0.0459
+</td>
+<td style="text-align:right;background-color: lightskyblue !important;">
+0.5271
+</td>
+<td style="text-align:right;">
+0.0867
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lattech
+</td>
+<td style="text-align:right;background-color: palegreen !important;">
+-0.4645
+</td>
+<td style="text-align:right;background-color: white !important;">
+-0.0234
+</td>
+<td style="text-align:right;">
+0.2500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fun
+</td>
+<td style="text-align:right;background-color: white !important;">
+-0.1081
+</td>
+<td style="text-align:right;background-color: lightskyblue !important;">
+-0.4864
+</td>
+<td style="text-align:right;">
+0.1335
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+serious
+</td>
+<td style="text-align:right;background-color: white !important;">
+-0.0897
+</td>
+<td style="text-align:right;background-color: lightskyblue !important;">
+0.5185
+</td>
+<td style="text-align:right;">
+0.1131
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bargain
+</td>
+<td style="text-align:right;background-color: palegreen !important;">
+0.4882
+</td>
+<td style="text-align:right;background-color: white !important;">
+0.0062
+</td>
+<td style="text-align:right;">
+0.1801
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+value
+</td>
+<td style="text-align:right;background-color: palegreen !important;">
+0.5057
+</td>
+<td style="text-align:right;background-color: white !important;">
+0.0634
+</td>
+<td style="text-align:right;">
+0.0855
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+trendy
+</td>
+<td style="text-align:right;background-color: palegreen !important;">
+-0.5157
+</td>
+<td style="text-align:right;background-color: white !important;">
+0.0967
+</td>
+<td style="text-align:right;">
+0.0941
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+<div id="step-4-use-results-in-further-analysis" class="section level4" number="6.4.1.4">
+<h4><span class="header-section-number">6.4.1.4</span> Step 4: Use results in further analysis</h4>
+<ul>
+<li>Results could be used in linear regerssion, logistic regression, cluster analysis, perceptual mapping, etc.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="creating-a-percptual-map-using-pca" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Creating a Percptual Map using PCA</h2>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>Map Brands</li>
+<li>Map Attributes</li>
+<li>Interpret Map</li>
+</ol>
+<div id="map-brands" class="section level3" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Map Brands</h3>
+<ul>
+<li><p>Using rotated loading matrix and average brand scores for each variable, obtain a score for each brand on each component</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Attribute</p>
+</th>
+<th style="text-align:right;">
+<p>Alpha’s Mean</p>
+</th>
+<th style="text-align:right;">
+<p>Factor 1</p>
+</th>
+<th style="text-align:right;">
+<p>Mean x Factor 1</p>
+</th>
+<th style="text-align:right;">
+<p>Factor 2</p>
+</th>
+<th style="text-align:right;">
+<p>Mean x Factor 2</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>perform</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-1.2952</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.0490</p>
+</td>
+<td style="text-align:right;">
+<p>-0.0635</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.4502</p>
+</td>
+<td style="text-align:right;">
+<p>-0.5831</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>leader</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.7840</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.0459</p>
+</td>
+<td style="text-align:right;">
+<p>0.0360</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.5271</p>
+</td>
+<td style="text-align:right;">
+<p>-0.4133</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>lattech</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.5696</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.4645</p>
+</td>
+<td style="text-align:right;">
+<p>-0.2646</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.0234</p>
+</td>
+<td style="text-align:right;">
+<p>-0.0133</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>fun</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>1.0862</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.1081</p>
+</td>
+<td style="text-align:right;">
+<p>-0.1174</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.4864</p>
+</td>
+<td style="text-align:right;">
+<p>-0.5283</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>serious</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-1.2024</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.0897</p>
+</td>
+<td style="text-align:right;">
+<p>0.1079</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.5185</p>
+</td>
+<td style="text-align:right;">
+<p>-0.6234</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>bargain</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.3347</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.4882</p>
+</td>
+<td style="text-align:right;">
+<p>0.1634</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.0062</p>
+</td>
+<td style="text-align:right;">
+<p>0.0021</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>value</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.2434</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.5057</p>
+</td>
+<td style="text-align:right;">
+<p>0.1231</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.0634</p>
+</td>
+<td style="text-align:right;">
+<p>0.0154</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>trendy</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.7042</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>-0.5157</p>
+</td>
+<td style="text-align:right;">
+<p>0.3632</p>
+</td>
+<td style="text-align:right;color: black !important;">
+<p>0.0967</p>
+</td>
+<td style="text-align:right;">
+<p>-0.0681</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;color: white !important;">
+<p>-1.7519</p>
+</td>
+<td style="text-align:right;color: white !important;">
+<p>-0.1810</p>
+</td>
+<td style="text-align:right;">
+<p>0.3481</p>
+</td>
+<td style="text-align:right;color: white !important;">
+<p>1.1523</p>
+</td>
+<td style="text-align:right;">
+<p>-2.2120</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Use factor scores for each brand as coordinates on the perceptual map</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>brand</p>
+</th>
+<th style="text-align:right;">
+<p>scr1</p>
+</th>
+<th style="text-align:right;">
+<p>scr2</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>Alpha</p>
+</td>
+<td style="text-align:right;">
+<p>0.3480</p>
+</td>
+<td style="text-align:right;">
+<p>-2.2120</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Beta</p>
+</td>
+<td style="text-align:right;">
+<p>-0.8181</p>
+</td>
+<td style="text-align:right;">
+<p>3.1213</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Delta</p>
+</td>
+<td style="text-align:right;">
+<p>-1.9904</p>
+</td>
+<td style="text-align:right;">
+<p>-1.5338</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Eta</p>
+</td>
+<td style="text-align:right;">
+<p>0.1985</p>
+</td>
+<td style="text-align:right;">
+<p>-0.3866</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Gamma</p>
+</td>
+<td style="text-align:right;">
+<p>-0.7339</p>
+</td>
+<td style="text-align:right;">
+<p>2.8111</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Kappa</p>
+</td>
+<td style="text-align:right;">
+<p>2.6707</p>
+</td>
+<td style="text-align:right;">
+<p>0.7768</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Lambda</p>
+</td>
+<td style="text-align:right;">
+<p>3.4634</p>
+</td>
+<td style="text-align:right;">
+<p>0.5167</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Sigma</p>
+</td>
+<td style="text-align:right;">
+<p>-2.0978</p>
+</td>
+<td style="text-align:right;">
+<p>-0.8910</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Theta</p>
+</td>
+<td style="text-align:right;">
+<p>-1.3777</p>
+</td>
+<td style="text-align:right;">
+<p>-0.4682</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Zeta</p>
+</td>
+<td style="text-align:right;">
+<p>0.3373</p>
+</td>
+<td style="text-align:right;">
+<p>-1.7343</p>
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+<div id="map-attributes" class="section level3" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Map Attributes</h3>
+<ul>
+<li>Factor loadings serve as the coordinates for the attributes
+<ul>
+<li>Loadings often need to be scaled to be used on the same map as the brands</li>
+</ul></li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-31"></span>
+<img src="Topic06/notscaledloadings.png" alt="Loadings NOT Scaled" width="75%" />
+<p class="caption">
+Figure 6.1: Loadings NOT Scaled
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-32"></span>
+<img src="Topic06/scaledloadings.png" alt="Loadings Scaled" width="75%" />
+<p class="caption">
+Figure 6.2: Loadings Scaled
+</p>
+</div>
+</div>
+<div id="interpret-map" class="section level3" number="6.5.3">
+<h3><span class="header-section-number">6.5.3</span> Interpret Map</h3>
+<ul>
+<li>Length of line represents amount of variance explained for that attribute</li>
+<li>Lines extend in opposite direction</li>
+<li>Perpendicular line from brand to attribute vector shows how brand is perceived on that attribute
+<ul>
+<li>Further along the vector, the higher the association between that brand and attribute</li>
+</ul></li>
+<li>Distance between brands shows how similar the market perceives them to be</li>
+</ul>
+</div>
+</div>
+<div id="joint-space-maps" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Joint-Space Maps</h2>
+<p><strong>Perceptions vs. Preferences</strong></p>
+<p>Preferences are fundamentally different than perceptions</p>
+<ul>
+<li>Customers may perceive a brand as safe, but it may not be an determinant attribute</li>
+<li>Preferences may not change according to the magnitude of an attribute</li>
+</ul>
+<p>Joint-space maps:</p>
+<ul>
+<li><p>Incorporates perceptions and preferences into same map</p></li>
+<li><p>Interpreted in a similar manner to attribute vectors</p></li>
+<li><p>Preference “driven” by attributes vectors most parallel to preference vector</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p></li>
+</ul>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="segmentation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

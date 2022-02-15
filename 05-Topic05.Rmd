@@ -609,8 +609,8 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
 * Examine cluster centers (table and chart) 
     * Similar to describing segments using cluster variables
     * Cluster $1$ doesn't think much is important other than $location$ and $price$
-    * Cluster $2$ thinks most everything is important other than $variety$, $healthy$, and $friendly$
-    * Cluster $3$ thinks $clean$ and $quality$ are much more important than other attributes
+    * Cluster $2$ thinks most everything is important
+    * Cluster $3$ thinks $clean$, $quality$, and $healthy$ are much more important than other attributes
     
     <caption>(\#tab:t5desckmseg1) Cluster Centers for 3 Cluster Solution  ([R code](#table-reftabt5desckmseg1))</caption>
     
