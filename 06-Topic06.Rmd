@@ -322,7 +322,202 @@ Joint-space maps:
     percmap(greekbrands, group="brand", pref="pref")
     ```
 
+## Positioning Example
 
+### Overview
 
+* Goal: Create a joint-space map of BGSU students perceptions and preferences of fast food 			restaurants
 
+* Attributes: All measured on 5-point scale
+    * Cleanliness(-), $clean_neg$
+    * Convenience, $conv$
+    * Healthy options, $healthy$
+    * Variety(-), $variety_neg$
+    * Value, $value$
+    * Taste, $taste$
+    
+### Examine the Data
 
+* Mean (top table) and standard deviation (bottom table) for each restaurant for each attribute
+    * Nothing out of the ordinary
+    * Some attributes have more variation ($conv$, $healthy$, and $taste$)
+
+    <caption>(\#tab:t06examine) Attribute Means (Top) and Standard Deviations (Bottom) ([R code](#table-reftabt06examine))</caption>
+
+    ```{r t06examine, echo=FALSE}
+    # Create dataframe of attributes
+    ffpos <- ffattrib %>%
+      mutate(clean_neg=6-clean,          # Reverse code 'clean'
+             variety_neg=6-variety) %>%  # Reverse code 'variety'
+      select(rest, clean_neg, conv, healthy,  # Select needed columns
+             variety_neg, value, taste, pref)   # Include preference also
+    
+    # Examine data
+    ffpos %>%
+      group_by(rest) %>%
+      select(-pref) %>%  # Don't examine preference
+      summarise_all(mean)   # 'summarise_all()' summarizes all variables
+    
+    ffpos %>%
+      group_by(rest) %>%
+      select(-pref) %>%  # Don't examine preference
+      summarise_all(sd)
+    ```
+
+* Correlation matrix of attributes
+    * Some variables have fairly high correlations with others
+        * $taste$ and $value$
+        * $clean_neg$ and $healthy$
+        * $clean_neg$ and $taste$
+
+    <caption>(\#tab:t06correlation) Attribute Correlation Matrix ([R code](#table-reftabt06correlation))</caption>
+
+    ```{r t06correlation, echo=FALSE, message=FALSE}
+    # Correlation matrix on only continuous items minus preference
+    round(cor(ffpos[,-c(1,8)]), 4)   
+    ```
+
+### How many factors
+
+* How many factors should be retained?
+    * Only the first two components have eigenvalues > 1, and they explain nearly 82% of the variation
+    * Thus, retaining two components seems appropriate
+
+    <caption>(\#tab:t06pca01) Eigenvalue Table ([R code](#table-reftabt06pca01))</caption>
+
+    ``` {r t06pca01, echo=FALSE}
+    source("Topic06/pcaex.R")
+    numfact <- pcaex(ffpos, group="rest", pref="pref")
+    numfact$table
+    ```
+    
+    ``` {r t06scree01, echo=FALSE, fig.cap="Scree Plot ([R code](#figure-reffigt06scree))"}
+    numfact$plot
+    ```
+    
+### Rotate factors
+
+* Rotate factors to aid in interpretation (after rerunning with 2 components)
+    * Cleanliness, Healthy options, and Taste load on the first dimension
+    * Convenience and Value load on the second dimension
+    * Variety doesn’t load much on either dimension
+
+    <caption>(\#tab:t06pca02) Rotated Factor Loadings ([R code](#table-reftabt06pca02))</caption>
+
+    ``` {r t06pca02, echo=FALSE}
+    ff.2comp <- pcaex(ffpos, group="rest", pref="pref", comp=2)
+    # ff.2comp$rotated
+    
+    kable(ff.2comp$rotated) %>%
+      kable_styling("basic", full_width=FALSE) %>%
+      column_spec(2, background = ifelse(abs(ff.2comp$rotated[,1])>.4,
+                                         "palegreen","white")) %>%
+      column_spec(3, background = ifelse(abs(ff.2comp$rotated[,2])>.4,
+                                         "lightskyblue","white")) 
+    ```
+    
+### Create perceptual map
+
+* What two restaurants are most similar?
+* Which restaurant has the least variety?
+* Which restaurant has the highest taste?
+* Which two restaurants have the lowest value?
+* Which attribute is least described by the map?
+
+    ``` {r t06prefmap01, echo=FALSE, fig.dim=c(8,8), fig.cap="Perceptual Map"}
+    source("Topic06/percmap.R")
+    ffpos2 <- ffpos[,-8]
+    percmap(ffpos2, group="rest")
+    ```
+    
+### Create joint-space map
+
+* What attribute most drives preference?
+* Which attribute least drives preference?
+* Which two restaurants are least preferred?
+
+    ``` {r t06prefmap02, echo=FALSE, fig.dim=c(8,8), fig.cap="Joint Space Map ([R code](#figure-reffigt06prefmap02))"}
+    percmap(ffpos, group="rest", pref="pref")
+    ```
+    
+## Suggested Readings
+
+* *Principals of Marketing Engineering and Analytics, 3rd Edition* (2017). Lilien, Gary L., Rangaswamy, Arvind, and De Bruyn, Arnaud. 
+    * Course reserves
+        * Chapter 4: Positioning
+* *Multivariate Data Analysis*. Hair, Joseph F.; Black, William C.; Babin, Barry J.; Anderson, Rolph E.
+    * 7th Edition: Search for “multivariate data analysis 7th edition hair”
+        * Chapter 3: Exploratory Factor Analysis
+    * 5th Edition: Course reserves
+        * Chapter 9: Factor Analysis
+
+## R Code
+
+### Figure \@ref(fig:t06scree01) {.unlisted .unnumbered}
+
+``` {r t06scree01code, eval=FALSE}
+# Call plot from previously store numfact object (from output of call to 'pcaex')
+numfact$plot
+```
+
+### Figure \@ref(fig:t06prefmap02) {.unlisted .unnumbered}
+
+``` {r t06prefmap02code, eval=FALSE}
+percmap(ffpos, # Data
+        group="rest",  # Brand/Group variable 
+        pref="pref")  # Preference variable
+```
+
+### Table \@ref(tab:t06examine) {.unlisted .unnumbered}
+
+```{r t06examinecode, eval=FALSE}
+# Create dataframe of attributes
+ffpos <- ffattrib %>%
+  mutate(clean_neg=6-clean,          # Reverse code 'clean'
+         variety_neg=6-variety) %>%  # Reverse code 'variety'
+  select(rest, clean_neg, conv, healthy,  # Select needed columns
+         variety_neg, value, taste, pref)   # Include preference also
+    
+# Examine data
+ffpos %>%
+  group_by(rest) %>%
+  select(-pref) %>%  # Don't examine preference
+  summarise_all(mean)   # 'summarise_all()' summarizes all variables
+    
+ffpos %>%
+  group_by(rest) %>%
+  select(-pref) %>%  # Don't examine preference
+  summarise_all(sd)
+```
+
+### Table \@ref(tab:t06correlation) {.unlisted .unnumbered}
+
+```{r t06correlationcode, eval=FALSE}
+# Correlation matrix on only continuous items minus preference
+cor(ffpos[,-c(1,8)])   
+```
+
+### Table \@ref(tab:t06pca01) {.unlisted .unnumbered}
+
+``` {r t06pca01code, eval=FALSE}
+# Load user defined function
+source("Topic06/pcaex.R")  
+
+# Use user defined function and store results
+numfact <- pcaex(ffpos, # Data
+                 group="rest", # Group/Brand variable
+                 pref="pref")  # Preference variable (if it exists)
+
+numfact$table  # Output the table
+```
+
+### Table \@ref(tab:t06pca02) {.unlisted .unnumbered}
+
+``` {r t06pca02code, eval=FALSE}
+ff.2comp <- pcaex(ffpos, # Data
+                  group="rest",  # Group/Brand variable
+                  pref="pref",  # Preference variable (if it exists)
+                  comp=2)  Number of components
+    
+ff.2comp$rotated  # Request rotated factor loading table
+```
