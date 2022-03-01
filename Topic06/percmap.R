@@ -61,7 +61,7 @@ percmap <- function(data, group, pref) {
                   angle=acoord$ang, vjust=acoord$vj, hjust=acoord$hj) +
         geom_point(data=bcoord, aes(x=PC1, y=PC2), color="navy", size=2) +
         geom_text(data=bcoord, aes(x=PC1, y=PC2), color="navy", 
-                  label=rownames(bcoord), hjust=bcoord$hj, size=5) +
+                  label=rownames(bcoord), hjust=bcoord$hj, size=5, angle=45) +
         theme(aspect.ratio=1, axis.ticks=element_blank(), axis.text=element_blank(),
               panel.background=element_rect(fill="white", color="black")) +
         scale_x_continuous(limits=c(-bcmax,bcmax),

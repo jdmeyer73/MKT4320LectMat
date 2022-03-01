@@ -170,7 +170,7 @@ Recomputes a set of variables in terms of linear equations (components) that cap
     ``` {r echo=FALSE, message=FALSE}
     source("Topic06/pcaex.R")
     load("Topic06/greekbrands.rdata")
-    gb.results <- pcaex(greekbrands, "brand",)
+    gb.results <- pcaex(greekbrands[,-9], "brand")
     kable(gb.results$table) %>%
       kable_styling("basic", full_width=FALSE)
     ```
@@ -329,10 +329,10 @@ Joint-space maps:
 * Goal: Create a joint-space map of BGSU students perceptions and preferences of fast food 			restaurants
 
 * Attributes: All measured on 5-point scale
-    * Cleanliness(-), $clean_neg$
+    * Cleanliness(-), $clean\_neg$
     * Convenience, $conv$
     * Healthy options, $healthy$
-    * Variety(-), $variety_neg$
+    * Variety(-), $variety\_neg$
     * Value, $value$
     * Taste, $taste$
     
@@ -356,25 +356,27 @@ Joint-space maps:
     ffpos %>%
       group_by(rest) %>%
       select(-pref) %>%  # Don't examine preference
-      summarise_all(mean)   # 'summarise_all()' summarizes all variables
+      summarise_all(mean) %>%  # 'summarise_all()' summarizes all variables
+      kbl()
     
     ffpos %>%
       group_by(rest) %>%
       select(-pref) %>%  # Don't examine preference
-      summarise_all(sd)
+      summarise_all(sd) %>%
+      kbl(digits=3)
     ```
 
 * Correlation matrix of attributes
     * Some variables have fairly high correlations with others
         * $taste$ and $value$
-        * $clean_neg$ and $healthy$
-        * $clean_neg$ and $taste$
+        * $clean\_neg$ and $healthy$
+        * $clean\_neg$ and $taste$
 
     <caption>(\#tab:t06correlation) Attribute Correlation Matrix ([R code](#table-reftabt06correlation))</caption>
 
     ```{r t06correlation, echo=FALSE, message=FALSE}
     # Correlation matrix on only continuous items minus preference
-    round(cor(ffpos[,-c(1,8)]), 4)   
+    round(cor(ffpos[,-c(1,8)]), 4) %>% kbl()   
     ```
 
 ### How many factors
@@ -388,7 +390,7 @@ Joint-space maps:
     ``` {r t06pca01, echo=FALSE}
     source("Topic06/pcaex.R")
     numfact <- pcaex(ffpos, group="rest", pref="pref")
-    numfact$table
+    numfact$table %>% kbl()
     ```
     
     ``` {r t06scree01, echo=FALSE, fig.cap="Scree Plot ([R code](#figure-reffigt06scree))"}

@@ -1,0 +1,881 @@
+agecat,gender,marital,bfast,lifestyle,age
+Under 31,Male,Married,Cereal,Active,25
+46-60,Male,Married,Bar,Inactive,49
+Over 60,Male,Married,Oatmeal,Inactive,68
+31-45,Female,Married,Oatmeal,Active,41
+46-60,Male,Married,Oatmeal,Inactive,59
+Over 60,Male,Married,Cereal,Inactive,71
+31-45,Female,Married,Bar,Inactive,38
+Over 60,Female,Unmarried,Oatmeal,Inactive,76
+31-45,Female,Married,Oatmeal,Active,39
+31-45,Female,Married,Bar,Inactive,43
+31-45,Male,Married,Cereal,Inactive,37
+Under 31,Female,Married,Bar,Inactive,29
+Under 31,Female,Unmarried,Bar,Active,21
+Over 60,Female,Married,Oatmeal,Active,74
+Over 60,Female,Married,Oatmeal,Active,65
+Under 31,Male,Unmarried,Bar,Inactive,24
+46-60,Female,Married,Oatmeal,Inactive,54
+31-45,Male,Married,Cereal,Inactive,42
+31-45,Male,Married,Bar,Active,41
+31-45,Female,Unmarried,Bar,Active,38
+46-60,Male,Unmarried,Bar,Active,56
+Under 31,Female,Married,Cereal,Inactive,18
+31-45,Female,Married,Bar,Active,44
+Over 60,Female,Unmarried,Cereal,Active,73
+46-60,Male,Married,Oatmeal,Inactive,58
+46-60,Female,Married,Oatmeal,Inactive,56
+Under 31,Male,Married,Cereal,Active,20
+Over 60,Male,Unmarried,Oatmeal,Inactive,76
+46-60,Male,Married,Bar,Inactive,53
+46-60,Male,Married,Oatmeal,Active,47
+46-60,Female,Unmarried,Bar,Active,50
+46-60,Male,Married,Cereal,Active,55
+Over 60,Male,Married,Oatmeal,Active,77
+Over 60,Female,Married,Cereal,Inactive,65
+31-45,Male,Married,Cereal,Inactive,33
+Over 60,Male,Married,Cereal,Inactive,75
+46-60,Male,Married,Oatmeal,Active,48
+Over 60,Male,Unmarried,Oatmeal,Inactive,78
+46-60,Female,Married,Cereal,Inactive,50
+Under 31,Female,Married,Cereal,Inactive,22
+46-60,Male,Married,Cereal,Inactive,55
+Over 60,Female,Unmarried,Oatmeal,Inactive,64
+31-45,Male,Unmarried,Cereal,Active,31
+Under 31,Female,Married,Bar,Inactive,29
+Under 31,Female,Unmarried,Bar,Active,25
+Under 31,Female,Married,Cereal,Inactive,28
+31-45,Male,Married,Oatmeal,Active,32
+Over 60,Female,Unmarried,Oatmeal,Inactive,66
+46-60,Female,Married,Oatmeal,Inactive,47
+Under 31,Female,Married,Oatmeal,Inactive,22
+Under 31,Male,Unmarried,Bar,Active,30
+Under 31,Female,Unmarried,Bar,Inactive,18
+46-60,Male,Married,Bar,Active,59
+Over 60,Male,Married,Oatmeal,Active,73
+46-60,Male,Married,Oatmeal,Active,58
+Under 31,Female,Unmarried,Cereal,Active,19
+Under 31,Female,Unmarried,Oatmeal,Active,22
+Over 60,Female,Married,Oatmeal,Active,76
+46-60,Female,Married,Oatmeal,Active,47
+Under 31,Female,Married,Cereal,Active,24
+46-60,Male,Unmarried,Oatmeal,Inactive,54
+Over 60,Male,Married,Oatmeal,Active,77
+Under 31,Female,Married,Cereal,Active,23
+Under 31,Male,Unmarried,Bar,Active,29
+31-45,Female,Married,Oatmeal,Inactive,33
+Over 60,Female,Unmarried,Oatmeal,Inactive,70
+46-60,Male,Married,Cereal,Active,58
+Under 31,Male,Unmarried,Cereal,Active,26
+46-60,Male,Married,Oatmeal,Inactive,50
+Over 60,Male,Married,Oatmeal,Inactive,63
+Under 31,Female,Unmarried,Cereal,Inactive,18
+Under 31,Female,Married,Oatmeal,Active,22
+Over 60,Female,Married,Oatmeal,Inactive,64
+31-45,Male,Unmarried,Bar,Active,42
+Under 31,Male,Married,Cereal,Active,21
+Under 31,Female,Married,Cereal,Active,19
+Under 31,Male,Unmarried,Bar,Active,19
+31-45,Female,Married,Bar,Inactive,39
+31-45,Male,Unmarried,Bar,Active,43
+Over 60,Female,Married,Cereal,Active,68
+Over 60,Female,Unmarried,Oatmeal,Inactive,66
+Under 31,Male,Unmarried,Bar,Active,19
+Over 60,Female,Unmarried,Oatmeal,Inactive,69
+Under 31,Female,Unmarried,Bar,Inactive,19
+Over 60,Female,Married,Cereal,Active,67
+46-60,Male,Unmarried,Cereal,Active,52
+46-60,Male,Married,Oatmeal,Inactive,50
+31-45,Female,Married,Cereal,Inactive,42
+Over 60,Female,Unmarried,Oatmeal,Inactive,77
+31-45,Male,Married,Cereal,Active,37
+31-45,Male,Unmarried,Bar,Inactive,35
+46-60,Female,Married,Cereal,Inactive,57
+Under 31,Male,Unmarried,Cereal,Active,29
+46-60,Male,Married,Oatmeal,Inactive,50
+Under 31,Male,Married,Bar,Inactive,25
+Under 31,Male,Married,Bar,Active,24
+31-45,Male,Married,Cereal,Active,44
+46-60,Female,Married,Cereal,Inactive,51
+Over 60,Male,Married,Oatmeal,Inactive,66
+46-60,Male,Married,Oatmeal,Inactive,60
+46-60,Male,Unmarried,Bar,Active,51
+31-45,Male,Married,Bar,Active,42
+46-60,Female,Married,Oatmeal,Active,58
+46-60,Female,Married,Cereal,Inactive,59
+46-60,Male,Married,Oatmeal,Inactive,53
+31-45,Male,Married,Bar,Active,36
+46-60,Female,Married,Cereal,Active,58
+Over 60,Male,Unmarried,Oatmeal,Active,73
+Over 60,Female,Unmarried,Oatmeal,Active,73
+46-60,Female,Married,Oatmeal,Inactive,55
+Over 60,Male,Unmarried,Cereal,Active,75
+Under 31,Male,Married,Cereal,Inactive,22
+46-60,Male,Married,Oatmeal,Active,59
+31-45,Female,Married,Bar,Active,32
+46-60,Female,Married,Oatmeal,Inactive,53
+Over 60,Male,Unmarried,Cereal,Inactive,69
+46-60,Male,Married,Cereal,Inactive,47
+Over 60,Male,Unmarried,Oatmeal,Inactive,73
+Under 31,Male,Unmarried,Bar,Active,23
+Under 31,Male,Married,Bar,Active,30
+46-60,Female,Married,Oatmeal,Active,57
+31-45,Female,Married,Bar,Active,32
+Over 60,Male,Unmarried,Oatmeal,Active,72
+Over 60,Female,Unmarried,Bar,Inactive,73
+Over 60,Male,Unmarried,Oatmeal,Inactive,77
+31-45,Female,Married,Cereal,Inactive,32
+Over 60,Male,Married,Oatmeal,Inactive,75
+Under 31,Female,Married,Cereal,Active,28
+46-60,Female,Married,Oatmeal,Inactive,57
+46-60,Female,Unmarried,Cereal,Inactive,56
+31-45,Female,Married,Cereal,Inactive,41
+46-60,Male,Married,Oatmeal,Inactive,55
+Under 31,Female,Unmarried,Bar,Active,19
+Over 60,Male,Unmarried,Oatmeal,Inactive,74
+46-60,Female,Married,Cereal,Inactive,53
+Under 31,Male,Unmarried,Bar,Active,25
+31-45,Female,Married,Cereal,Active,31
+Over 60,Female,Unmarried,Oatmeal,Inactive,63
+Over 60,Male,Married,Oatmeal,Inactive,65
+46-60,Female,Married,Cereal,Inactive,47
+31-45,Female,Married,Oatmeal,Inactive,44
+Over 60,Female,Married,Oatmeal,Inactive,66
+46-60,Female,Married,Cereal,Inactive,47
+Over 60,Female,Unmarried,Oatmeal,Inactive,73
+Under 31,Female,Married,Cereal,Inactive,24
+Under 31,Female,Unmarried,Cereal,Active,28
+Over 60,Male,Unmarried,Bar,Active,70
+Over 60,Male,Married,Cereal,Inactive,63
+Over 60,Male,Married,Oatmeal,Inactive,71
+Under 31,Female,Married,Bar,Active,28
+31-45,Female,Married,Bar,Active,33
+Under 31,Female,Unmarried,Cereal,Active,27
+Under 31,Male,Married,Cereal,Active,25
+Under 31,Male,Unmarried,Cereal,Inactive,27
+46-60,Female,Married,Oatmeal,Inactive,56
+Under 31,Female,Married,Cereal,Inactive,25
+Over 60,Female,Married,Bar,Inactive,69
+31-45,Male,Unmarried,Bar,Active,32
+46-60,Male,Unmarried,Oatmeal,Active,48
+31-45,Female,Married,Bar,Active,37
+31-45,Male,Unmarried,Bar,Active,40
+46-60,Male,Married,Oatmeal,Active,55
+46-60,Female,Married,Cereal,Active,50
+46-60,Male,Unmarried,Oatmeal,Active,54
+Over 60,Male,Married,Oatmeal,Inactive,64
+31-45,Female,Married,Bar,Inactive,37
+Over 60,Female,Married,Oatmeal,Inactive,71
+Over 60,Male,Married,Oatmeal,Active,64
+46-60,Male,Married,Oatmeal,Active,48
+Under 31,Male,Unmarried,Cereal,Active,20
+31-45,Male,Married,Cereal,Inactive,32
+Over 60,Male,Unmarried,Oatmeal,Inactive,75
+31-45,Female,Unmarried,Oatmeal,Inactive,34
+31-45,Female,Unmarried,Bar,Active,32
+Under 31,Male,Married,Cereal,Inactive,22
+Over 60,Female,Married,Cereal,Inactive,77
+46-60,Male,Married,Cereal,Active,56
+Over 60,Male,Married,Oatmeal,Active,75
+Under 31,Female,Married,Cereal,Active,27
+31-45,Female,Married,Cereal,Inactive,39
+31-45,Female,Married,Bar,Inactive,41
+Over 60,Female,Unmarried,Oatmeal,Inactive,70
+Over 60,Female,Unmarried,Oatmeal,Active,64
+46-60,Female,Unmarried,Oatmeal,Inactive,55
+31-45,Male,Unmarried,Cereal,Active,35
+Over 60,Female,Married,Oatmeal,Active,74
+31-45,Male,Married,Bar,Inactive,34
+Over 60,Male,Married,Oatmeal,Inactive,62
+Under 31,Female,Unmarried,Bar,Active,25
+Over 60,Male,Married,Oatmeal,Inactive,64
+Under 31,Female,Married,Bar,Active,29
+31-45,Male,Married,Cereal,Active,39
+Over 60,Female,Unmarried,Oatmeal,Inactive,75
+Under 31,Male,Married,Cereal,Active,26
+Under 31,Female,Unmarried,Bar,Active,30
+46-60,Male,Married,Cereal,Inactive,59
+Under 31,Female,Married,Cereal,Inactive,29
+31-45,Female,Married,Bar,Active,41
+Under 31,Male,Unmarried,Bar,Active,29
+Under 31,Female,Married,Bar,Inactive,26
+Over 60,Male,Married,Oatmeal,Active,71
+Under 31,Male,Married,Bar,Active,29
+46-60,Female,Unmarried,Oatmeal,Inactive,55
+46-60,Male,Married,Cereal,Inactive,49
+46-60,Male,Married,Cereal,Active,48
+Under 31,Male,Married,Cereal,Inactive,23
+Under 31,Female,Unmarried,Cereal,Active,25
+46-60,Male,Married,Oatmeal,Inactive,52
+31-45,Female,Married,Bar,Inactive,35
+Over 60,Female,Married,Bar,Active,76
+Under 31,Female,Married,Cereal,Active,28
+31-45,Female,Married,Cereal,Active,43
+46-60,Male,Married,Cereal,Inactive,54
+Over 60,Female,Married,Oatmeal,Active,62
+Under 31,Female,Unmarried,Cereal,Inactive,18
+31-45,Male,Unmarried,Bar,Inactive,33
+31-45,Male,Married,Bar,Active,44
+Over 60,Male,Married,Cereal,Inactive,63
+Over 60,Male,Married,Oatmeal,Inactive,66
+Over 60,Male,Married,Oatmeal,Active,61
+46-60,Female,Married,Cereal,Inactive,55
+Under 31,Female,Unmarried,Bar,Active,27
+Under 31,Female,Unmarried,Bar,Inactive,26
+46-60,Male,Married,Cereal,Active,58
+46-60,Male,Married,Oatmeal,Inactive,47
+31-45,Male,Married,Cereal,Active,36
+46-60,Male,Married,Oatmeal,Inactive,57
+Under 31,Female,Married,Cereal,Active,20
+Under 31,Female,Married,Cereal,Active,26
+Under 31,Male,Unmarried,Bar,Inactive,25
+46-60,Female,Married,Cereal,Inactive,52
+Under 31,Female,Unmarried,Cereal,Active,24
+Under 31,Female,Unmarried,Bar,Active,24
+Under 31,Female,Married,Cereal,Active,21
+Over 60,Male,Married,Cereal,Inactive,71
+Under 31,Female,Unmarried,Bar,Active,18
+31-45,Female,Unmarried,Cereal,Inactive,39
+31-45,Female,Married,Cereal,Active,43
+Over 60,Male,Married,Oatmeal,Active,68
+31-45,Male,Married,Oatmeal,Inactive,39
+31-45,Female,Unmarried,Cereal,Active,41
+46-60,Female,Married,Oatmeal,Inactive,59
+31-45,Male,Unmarried,Cereal,Active,41
+Over 60,Male,Unmarried,Cereal,Inactive,62
+46-60,Male,Unmarried,Bar,Active,52
+46-60,Female,Married,Cereal,Active,57
+Under 31,Male,Unmarried,Bar,Active,24
+31-45,Female,Married,Bar,Active,38
+Under 31,Female,Married,Cereal,Active,28
+Over 60,Male,Married,Oatmeal,Active,75
+Over 60,Male,Married,Oatmeal,Inactive,70
+Over 60,Female,Married,Cereal,Active,69
+Over 60,Male,Married,Oatmeal,Inactive,74
+Over 60,Male,Married,Oatmeal,Inactive,70
+31-45,Male,Married,Oatmeal,Inactive,37
+46-60,Female,Married,Oatmeal,Active,53
+Under 31,Male,Unmarried,Bar,Active,24
+Over 60,Male,Unmarried,Oatmeal,Inactive,68
+31-45,Female,Unmarried,Cereal,Inactive,35
+Under 31,Male,Unmarried,Cereal,Inactive,26
+31-45,Female,Married,Bar,Active,36
+Under 31,Female,Married,Bar,Active,28
+31-45,Male,Married,Bar,Inactive,38
+31-45,Female,Married,Cereal,Inactive,36
+Over 60,Female,Unmarried,Cereal,Active,68
+Over 60,Female,Married,Oatmeal,Inactive,63
+Over 60,Male,Married,Oatmeal,Inactive,72
+46-60,Female,Married,Bar,Active,46
+Over 60,Male,Married,Oatmeal,Inactive,65
+Over 60,Female,Unmarried,Bar,Active,68
+31-45,Female,Unmarried,Bar,Inactive,31
+Over 60,Female,Unmarried,Cereal,Active,70
+31-45,Male,Unmarried,Cereal,Inactive,37
+46-60,Female,Married,Cereal,Inactive,55
+46-60,Male,Married,Cereal,Inactive,48
+Over 60,Male,Unmarried,Bar,Inactive,63
+Under 31,Female,Married,Bar,Active,18
+Over 60,Female,Married,Cereal,Inactive,67
+46-60,Female,Unmarried,Oatmeal,Inactive,55
+46-60,Female,Married,Oatmeal,Active,58
+31-45,Male,Unmarried,Cereal,Active,34
+Over 60,Male,Unmarried,Cereal,Inactive,74
+46-60,Male,Married,Cereal,Inactive,47
+31-45,Female,Unmarried,Cereal,Active,36
+31-45,Female,Married,Bar,Active,44
+31-45,Female,Married,Oatmeal,Inactive,45
+Over 60,Female,Married,Oatmeal,Active,71
+Over 60,Female,Married,Oatmeal,Inactive,64
+31-45,Male,Married,Bar,Active,45
+31-45,Male,Married,Bar,Active,40
+Over 60,Female,Married,Oatmeal,Inactive,70
+Over 60,Female,Married,Oatmeal,Inactive,61
+Under 31,Male,Married,Cereal,Active,18
+Over 60,Male,Married,Cereal,Active,68
+46-60,Female,Married,Oatmeal,Inactive,52
+Under 31,Female,Unmarried,Bar,Active,26
+31-45,Female,Married,Cereal,Active,38
+Over 60,Female,Unmarried,Oatmeal,Inactive,70
+46-60,Female,Unmarried,Oatmeal,Inactive,57
+Over 60,Female,Unmarried,Oatmeal,Inactive,70
+46-60,Female,Married,Cereal,Inactive,57
+31-45,Male,Married,Bar,Inactive,36
+31-45,Female,Married,Bar,Active,33
+Over 60,Male,Unmarried,Bar,Active,78
+Under 31,Female,Unmarried,Bar,Active,20
+Under 31,Male,Unmarried,Cereal,Active,25
+46-60,Female,Married,Cereal,Inactive,54
+Under 31,Male,Married,Cereal,Inactive,28
+Under 31,Female,Married,Cereal,Inactive,19
+46-60,Male,Married,Oatmeal,Inactive,57
+31-45,Male,Married,Oatmeal,Active,36
+Over 60,Male,Unmarried,Oatmeal,Inactive,67
+Under 31,Male,Unmarried,Cereal,Active,25
+Under 31,Male,Unmarried,Bar,Inactive,19
+46-60,Female,Married,Cereal,Inactive,50
+Over 60,Male,Married,Oatmeal,Inactive,64
+Over 60,Male,Married,Oatmeal,Active,62
+Over 60,Female,Unmarried,Cereal,Active,67
+Over 60,Male,Unmarried,Cereal,Inactive,62
+46-60,Female,Married,Cereal,Inactive,59
+Over 60,Female,Married,Oatmeal,Inactive,65
+Over 60,Male,Unmarried,Cereal,Inactive,65
+Over 60,Male,Married,Oatmeal,Inactive,66
+46-60,Male,Married,Bar,Inactive,48
+Over 60,Female,Unmarried,Cereal,Inactive,75
+Over 60,Female,Unmarried,Bar,Inactive,62
+46-60,Female,Married,Bar,Inactive,57
+31-45,Male,Married,Bar,Inactive,42
+46-60,Female,Married,Cereal,Inactive,50
+31-45,Male,Married,Cereal,Active,35
+Over 60,Female,Unmarried,Bar,Active,73
+46-60,Female,Married,Bar,Active,54
+Over 60,Male,Married,Oatmeal,Active,62
+Over 60,Female,Unmarried,Bar,Active,72
+Under 31,Female,Married,Bar,Active,29
+Under 31,Male,Unmarried,Bar,Inactive,24
+Under 31,Male,Unmarried,Bar,Active,25
+46-60,Female,Married,Oatmeal,Active,47
+46-60,Male,Married,Oatmeal,Active,50
+Under 31,Female,Unmarried,Bar,Active,25
+Over 60,Female,Unmarried,Oatmeal,Inactive,78
+31-45,Male,Married,Cereal,Inactive,41
+Over 60,Female,Married,Oatmeal,Active,71
+46-60,Female,Married,Bar,Active,59
+31-45,Male,Married,Oatmeal,Active,32
+Over 60,Female,Unmarried,Oatmeal,Active,73
+46-60,Male,Married,Cereal,Inactive,57
+Over 60,Male,Married,Oatmeal,Inactive,73
+31-45,Female,Married,Bar,Active,45
+Over 60,Male,Unmarried,Oatmeal,Inactive,66
+46-60,Male,Married,Cereal,Inactive,53
+Under 31,Female,Married,Cereal,Inactive,23
+46-60,Female,Married,Oatmeal,Inactive,56
+Under 31,Male,Unmarried,Cereal,Active,18
+Over 60,Female,Married,Oatmeal,Active,62
+31-45,Male,Unmarried,Cereal,Inactive,35
+46-60,Male,Married,Oatmeal,Active,59
+46-60,Female,Married,Cereal,Active,54
+31-45,Female,Married,Cereal,Inactive,31
+Under 31,Female,Married,Bar,Inactive,21
+Over 60,Female,Unmarried,Oatmeal,Inactive,70
+Under 31,Female,Unmarried,Cereal,Active,19
+Under 31,Male,Unmarried,Cereal,Inactive,28
+31-45,Female,Married,Cereal,Inactive,33
+Under 31,Male,Married,Cereal,Active,26
+31-45,Female,Married,Cereal,Inactive,42
+31-45,Female,Unmarried,Bar,Active,40
+Over 60,Female,Unmarried,Oatmeal,Inactive,74
+Over 60,Male,Married,Oatmeal,Inactive,68
+Over 60,Female,Unmarried,Oatmeal,Inactive,68
+31-45,Male,Married,Oatmeal,Inactive,32
+Under 31,Female,Married,Bar,Active,28
+Under 31,Male,Married,Cereal,Active,22
+Over 60,Male,Married,Cereal,Inactive,74
+Under 31,Male,Married,Cereal,Active,29
+Under 31,Male,Unmarried,Bar,Inactive,30
+Over 60,Male,Unmarried,Oatmeal,Inactive,69
+Over 60,Female,Married,Oatmeal,Inactive,77
+Over 60,Female,Unmarried,Cereal,Active,77
+46-60,Female,Married,Bar,Active,52
+Under 31,Male,Married,Cereal,Inactive,23
+31-45,Male,Unmarried,Oatmeal,Active,33
+Over 60,Male,Married,Oatmeal,Active,70
+Over 60,Male,Married,Cereal,Inactive,68
+Under 31,Male,Unmarried,Cereal,Inactive,20
+31-45,Male,Married,Cereal,Inactive,33
+31-45,Female,Married,Bar,Active,33
+Over 60,Female,Unmarried,Oatmeal,Inactive,66
+31-45,Male,Married,Bar,Active,38
+46-60,Male,Married,Cereal,Inactive,58
+Under 31,Female,Married,Cereal,Inactive,27
+Over 60,Female,Unmarried,Bar,Inactive,73
+46-60,Female,Unmarried,Oatmeal,Inactive,53
+Under 31,Female,Unmarried,Cereal,Inactive,24
+Over 60,Male,Unmarried,Cereal,Inactive,75
+46-60,Male,Married,Oatmeal,Inactive,58
+Under 31,Female,Married,Bar,Inactive,22
+31-45,Female,Married,Cereal,Active,44
+Over 60,Female,Married,Oatmeal,Inactive,75
+31-45,Male,Married,Bar,Inactive,43
+Under 31,Male,Married,Bar,Active,26
+Over 60,Female,Married,Oatmeal,Active,63
+Over 60,Female,Unmarried,Oatmeal,Active,71
+Under 31,Female,Unmarried,Cereal,Active,26
+Under 31,Female,Unmarried,Cereal,Inactive,27
+Over 60,Female,Married,Oatmeal,Active,66
+Under 31,Male,Married,Cereal,Inactive,22
+Over 60,Female,Married,Cereal,Inactive,69
+Over 60,Female,Unmarried,Oatmeal,Active,67
+46-60,Female,Unmarried,Bar,Inactive,60
+Under 31,Female,Unmarried,Bar,Inactive,23
+46-60,Female,Unmarried,Bar,Inactive,56
+46-60,Female,Married,Oatmeal,Inactive,52
+46-60,Male,Married,Cereal,Active,46
+Under 31,Male,Married,Cereal,Inactive,24
+31-45,Female,Married,Bar,Active,33
+Over 60,Male,Married,Oatmeal,Inactive,76
+46-60,Male,Married,Cereal,Inactive,53
+31-45,Female,Married,Oatmeal,Inactive,31
+46-60,Male,Married,Oatmeal,Inactive,60
+Over 60,Female,Married,Oatmeal,Active,71
+46-60,Female,Unmarried,Oatmeal,Inactive,52
+Over 60,Female,Unmarried,Bar,Inactive,74
+Over 60,Male,Married,Cereal,Inactive,77
+46-60,Female,Married,Oatmeal,Active,55
+Over 60,Male,Married,Oatmeal,Inactive,62
+46-60,Female,Married,Cereal,Active,54
+46-60,Female,Married,Oatmeal,Inactive,60
+31-45,Male,Unmarried,Bar,Active,36
+31-45,Male,Unmarried,Bar,Inactive,36
+Over 60,Female,Unmarried,Oatmeal,Inactive,75
+Over 60,Male,Married,Oatmeal,Inactive,73
+31-45,Female,Married,Cereal,Inactive,38
+46-60,Male,Unmarried,Bar,Active,59
+Over 60,Female,Married,Cereal,Active,61
+Under 31,Female,Unmarried,Cereal,Active,30
+31-45,Male,Married,Cereal,Active,36
+46-60,Male,Married,Cereal,Active,53
+31-45,Female,Married,Bar,Active,43
+Over 60,Female,Married,Oatmeal,Inactive,67
+Over 60,Female,Unmarried,Oatmeal,Inactive,62
+31-45,Male,Married,Bar,Inactive,39
+Over 60,Male,Married,Oatmeal,Inactive,75
+Over 60,Male,Married,Oatmeal,Inactive,68
+46-60,Male,Married,Oatmeal,Inactive,57
+31-45,Male,Married,Bar,Inactive,44
+31-45,Male,Married,Cereal,Inactive,36
+31-45,Female,Married,Cereal,Active,43
+31-45,Male,Married,Cereal,Inactive,42
+46-60,Female,Unmarried,Bar,Inactive,60
+46-60,Female,Married,Oatmeal,Inactive,53
+Over 60,Male,Married,Oatmeal,Active,76
+Over 60,Male,Married,Oatmeal,Inactive,71
+Over 60,Male,Married,Oatmeal,Inactive,64
+Over 60,Male,Unmarried,Oatmeal,Inactive,69
+46-60,Male,Married,Cereal,Inactive,47
+31-45,Male,Married,Cereal,Inactive,37
+Under 31,Male,Married,Cereal,Inactive,20
+Over 60,Male,Married,Oatmeal,Active,74
+Under 31,Male,Unmarried,Bar,Active,29
+46-60,Female,Married,Bar,Inactive,47
+Over 60,Female,Married,Bar,Active,74
+31-45,Female,Married,Cereal,Inactive,33
+Under 31,Female,Unmarried,Bar,Inactive,23
+Over 60,Male,Married,Oatmeal,Inactive,66
+Over 60,Female,Married,Cereal,Active,62
+31-45,Male,Unmarried,Cereal,Inactive,34
+31-45,Male,Unmarried,Bar,Active,36
+Over 60,Female,Married,Oatmeal,Active,72
+Under 31,Female,Married,Cereal,Active,28
+Under 31,Female,Unmarried,Bar,Active,27
+46-60,Male,Married,Cereal,Active,47
+46-60,Male,Married,Cereal,Inactive,58
+31-45,Male,Married,Cereal,Active,41
+Under 31,Male,Unmarried,Bar,Active,23
+Over 60,Male,Unmarried,Oatmeal,Inactive,66
+Over 60,Male,Unmarried,Oatmeal,Active,72
+31-45,Female,Married,Bar,Inactive,39
+Over 60,Female,Unmarried,Cereal,Active,64
+31-45,Male,Married,Cereal,Inactive,43
+46-60,Male,Married,Bar,Active,51
+46-60,Male,Married,Cereal,Inactive,53
+Over 60,Male,Unmarried,Oatmeal,Inactive,67
+31-45,Female,Unmarried,Cereal,Inactive,43
+31-45,Female,Unmarried,Bar,Active,42
+Over 60,Female,Unmarried,Cereal,Inactive,67
+46-60,Female,Married,Cereal,Inactive,60
+46-60,Female,Married,Cereal,Inactive,58
+31-45,Female,Married,Bar,Active,41
+Under 31,Male,Unmarried,Cereal,Inactive,20
+Under 31,Female,Married,Cereal,Active,25
+Under 31,Female,Unmarried,Bar,Active,30
+Over 60,Female,Married,Oatmeal,Active,62
+46-60,Male,Unmarried,Oatmeal,Inactive,58
+46-60,Male,Married,Oatmeal,Inactive,59
+Over 60,Male,Married,Oatmeal,Inactive,76
+31-45,Male,Married,Cereal,Inactive,32
+Over 60,Male,Married,Oatmeal,Active,62
+Over 60,Male,Married,Oatmeal,Inactive,67
+Over 60,Female,Unmarried,Cereal,Inactive,78
+Over 60,Male,Unmarried,Cereal,Inactive,62
+Over 60,Male,Married,Oatmeal,Inactive,68
+31-45,Male,Married,Bar,Active,37
+46-60,Female,Married,Oatmeal,Inactive,57
+Over 60,Female,Married,Cereal,Active,73
+31-45,Male,Married,Bar,Active,44
+Over 60,Female,Unmarried,Bar,Active,68
+Under 31,Female,Unmarried,Cereal,Inactive,19
+46-60,Female,Married,Bar,Inactive,55
+31-45,Male,Married,Bar,Active,45
+Under 31,Male,Unmarried,Bar,Active,25
+46-60,Male,Married,Oatmeal,Inactive,46
+46-60,Male,Married,Oatmeal,Inactive,60
+46-60,Female,Married,Oatmeal,Active,46
+31-45,Male,Married,Cereal,Active,33
+Over 60,Male,Married,Oatmeal,Inactive,72
+31-45,Male,Unmarried,Cereal,Active,34
+46-60,Female,Married,Oatmeal,Inactive,58
+31-45,Female,Unmarried,Cereal,Inactive,43
+46-60,Male,Unmarried,Cereal,Active,49
+31-45,Male,Married,Bar,Active,32
+46-60,Female,Married,Cereal,Active,52
+Over 60,Female,Married,Oatmeal,Inactive,68
+Under 31,Female,Unmarried,Cereal,Active,20
+46-60,Male,Married,Bar,Inactive,47
+31-45,Male,Unmarried,Bar,Active,34
+46-60,Male,Married,Bar,Active,56
+46-60,Male,Married,Oatmeal,Inactive,51
+Under 31,Female,Unmarried,Bar,Active,28
+Under 31,Female,Unmarried,Bar,Active,24
+Under 31,Male,Unmarried,Bar,Active,30
+46-60,Male,Married,Oatmeal,Inactive,56
+31-45,Female,Unmarried,Bar,Inactive,40
+Under 31,Male,Unmarried,Cereal,Inactive,26
+Over 60,Male,Married,Cereal,Inactive,69
+31-45,Female,Married,Cereal,Inactive,39
+46-60,Female,Married,Oatmeal,Inactive,56
+46-60,Female,Married,Cereal,Inactive,55
+46-60,Female,Married,Oatmeal,Inactive,55
+31-45,Female,Married,Bar,Inactive,37
+Over 60,Male,Married,Oatmeal,Active,74
+Over 60,Female,Unmarried,Oatmeal,Inactive,72
+31-45,Female,Married,Bar,Active,42
+Over 60,Female,Unmarried,Oatmeal,Active,64
+Under 31,Female,Married,Cereal,Inactive,19
+46-60,Female,Married,Oatmeal,Active,57
+46-60,Male,Married,Oatmeal,Active,57
+Under 31,Male,Married,Bar,Inactive,27
+Under 31,Male,Married,Cereal,Active,21
+Under 31,Female,Married,Cereal,Inactive,29
+Under 31,Female,Married,Bar,Active,20
+Under 31,Male,Unmarried,Cereal,Inactive,26
+46-60,Male,Married,Bar,Inactive,54
+31-45,Female,Married,Cereal,Inactive,37
+Over 60,Male,Unmarried,Oatmeal,Inactive,69
+Under 31,Female,Married,Cereal,Active,19
+Over 60,Male,Married,Oatmeal,Inactive,68
+Over 60,Female,Unmarried,Oatmeal,Inactive,72
+46-60,Male,Married,Bar,Inactive,48
+46-60,Male,Married,Cereal,Active,57
+Over 60,Male,Unmarried,Oatmeal,Inactive,69
+Under 31,Male,Unmarried,Bar,Active,18
+Over 60,Male,Married,Oatmeal,Inactive,71
+46-60,Female,Married,Bar,Active,54
+Under 31,Male,Married,Cereal,Active,30
+46-60,Female,Unmarried,Oatmeal,Inactive,59
+Under 31,Male,Married,Cereal,Active,22
+31-45,Female,Married,Cereal,Inactive,36
+Over 60,Female,Married,Oatmeal,Inactive,64
+46-60,Male,Unmarried,Cereal,Inactive,51
+Over 60,Male,Unmarried,Oatmeal,Inactive,65
+Over 60,Female,Married,Oatmeal,Inactive,77
+Over 60,Male,Married,Oatmeal,Inactive,76
+Over 60,Male,Married,Cereal,Inactive,70
+31-45,Male,Married,Bar,Inactive,37
+Under 31,Male,Married,Cereal,Active,24
+Over 60,Female,Unmarried,Bar,Active,73
+46-60,Female,Married,Oatmeal,Active,50
+Under 31,Male,Married,Cereal,Active,20
+46-60,Female,Married,Oatmeal,Inactive,53
+46-60,Male,Married,Bar,Active,55
+46-60,Male,Married,Oatmeal,Inactive,59
+Under 31,Female,Married,Cereal,Inactive,28
+Over 60,Male,Married,Cereal,Active,66
+46-60,Female,Married,Bar,Active,60
+31-45,Female,Married,Bar,Active,45
+31-45,Female,Unmarried,Bar,Active,45
+31-45,Male,Married,Cereal,Active,34
+46-60,Male,Married,Cereal,Inactive,54
+Under 31,Female,Unmarried,Bar,Inactive,28
+46-60,Female,Married,Cereal,Active,53
+31-45,Female,Married,Cereal,Inactive,43
+31-45,Female,Unmarried,Bar,Active,33
+46-60,Male,Married,Bar,Active,47
+31-45,Female,Unmarried,Bar,Active,38
+Under 31,Female,Married,Bar,Inactive,23
+46-60,Female,Married,Cereal,Inactive,52
+31-45,Female,Married,Oatmeal,Inactive,43
+Over 60,Female,Married,Oatmeal,Inactive,77
+Under 31,Female,Married,Bar,Active,20
+46-60,Female,Married,Oatmeal,Inactive,53
+Over 60,Male,Married,Cereal,Inactive,70
+Over 60,Male,Married,Oatmeal,Active,67
+46-60,Male,Married,Bar,Inactive,54
+46-60,Female,Unmarried,Cereal,Inactive,51
+31-45,Male,Married,Bar,Inactive,43
+31-45,Male,Married,Oatmeal,Active,40
+Under 31,Male,Unmarried,Cereal,Inactive,26
+31-45,Female,Unmarried,Bar,Active,40
+46-60,Female,Unmarried,Cereal,Inactive,50
+Over 60,Female,Married,Oatmeal,Inactive,77
+31-45,Female,Unmarried,Cereal,Inactive,42
+Over 60,Female,Unmarried,Oatmeal,Active,74
+Over 60,Female,Unmarried,Cereal,Inactive,65
+46-60,Female,Married,Oatmeal,Inactive,49
+31-45,Female,Unmarried,Bar,Active,41
+31-45,Male,Married,Cereal,Active,37
+31-45,Male,Unmarried,Oatmeal,Active,42
+Under 31,Male,Married,Bar,Active,22
+31-45,Male,Married,Cereal,Active,35
+Over 60,Female,Unmarried,Bar,Active,65
+31-45,Female,Married,Cereal,Inactive,38
+Over 60,Male,Married,Oatmeal,Inactive,62
+31-45,Female,Married,Cereal,Active,31
+Over 60,Male,Unmarried,Oatmeal,Active,75
+Over 60,Female,Unmarried,Oatmeal,Active,71
+Over 60,Male,Unmarried,Oatmeal,Inactive,77
+46-60,Male,Unmarried,Oatmeal,Active,49
+46-60,Male,Unmarried,Bar,Active,50
+31-45,Female,Married,Bar,Active,38
+46-60,Female,Married,Oatmeal,Active,57
+Over 60,Male,Married,Oatmeal,Inactive,74
+Under 31,Female,Unmarried,Bar,Active,22
+46-60,Female,Unmarried,Oatmeal,Inactive,50
+46-60,Female,Married,Cereal,Active,50
+Under 31,Female,Unmarried,Cereal,Active,22
+Over 60,Female,Unmarried,Oatmeal,Inactive,70
+46-60,Male,Married,Cereal,Active,47
+Over 60,Female,Married,Oatmeal,Inactive,68
+46-60,Female,Married,Oatmeal,Active,49
+Under 31,Male,Married,Cereal,Active,30
+31-45,Female,Unmarried,Bar,Inactive,39
+46-60,Male,Married,Cereal,Inactive,55
+46-60,Female,Married,Cereal,Active,56
+46-60,Male,Married,Cereal,Active,48
+46-60,Male,Married,Cereal,Active,59
+Under 31,Male,Married,Bar,Inactive,30
+Over 60,Male,Married,Oatmeal,Inactive,76
+31-45,Male,Married,Cereal,Active,44
+Over 60,Male,Married,Cereal,Inactive,63
+46-60,Male,Married,Oatmeal,Inactive,56
+Over 60,Female,Unmarried,Cereal,Inactive,75
+46-60,Female,Married,Cereal,Active,50
+Under 31,Male,Unmarried,Cereal,Inactive,27
+Over 60,Male,Married,Oatmeal,Active,68
+Under 31,Male,Unmarried,Bar,Active,28
+Over 60,Male,Married,Cereal,Inactive,78
+Over 60,Male,Married,Oatmeal,Inactive,70
+Over 60,Female,Married,Oatmeal,Inactive,69
+Over 60,Female,Married,Oatmeal,Active,76
+Under 31,Female,Unmarried,Cereal,Active,20
+Under 31,Female,Married,Bar,Active,25
+Under 31,Female,Married,Bar,Inactive,22
+31-45,Female,Married,Cereal,Active,34
+Over 60,Female,Unmarried,Cereal,Inactive,63
+Over 60,Female,Married,Oatmeal,Active,68
+Over 60,Male,Married,Cereal,Inactive,72
+31-45,Male,Unmarried,Bar,Inactive,34
+Under 31,Male,Unmarried,Bar,Inactive,24
+31-45,Male,Married,Bar,Active,36
+31-45,Male,Married,Cereal,Active,38
+Over 60,Female,Unmarried,Cereal,Inactive,68
+Over 60,Male,Married,Oatmeal,Active,76
+Over 60,Female,Married,Oatmeal,Inactive,76
+46-60,Male,Married,Bar,Active,51
+Over 60,Male,Married,Oatmeal,Inactive,73
+31-45,Female,Married,Cereal,Active,39
+46-60,Female,Unmarried,Bar,Active,56
+31-45,Female,Unmarried,Bar,Inactive,39
+Under 31,Male,Married,Bar,Inactive,23
+31-45,Female,Married,Bar,Active,35
+46-60,Female,Unmarried,Oatmeal,Inactive,52
+Under 31,Male,Unmarried,Cereal,Inactive,23
+46-60,Male,Married,Cereal,Inactive,54
+31-45,Male,Married,Bar,Active,41
+Over 60,Female,Unmarried,Oatmeal,Inactive,78
+Over 60,Male,Married,Oatmeal,Inactive,78
+Over 60,Male,Unmarried,Cereal,Inactive,71
+Over 60,Male,Married,Oatmeal,Inactive,62
+46-60,Female,Married,Oatmeal,Inactive,50
+31-45,Female,Married,Bar,Active,35
+46-60,Female,Married,Oatmeal,Inactive,54
+31-45,Female,Unmarried,Bar,Active,36
+Under 31,Male,Married,Bar,Active,27
+Over 60,Female,Married,Oatmeal,Inactive,64
+46-60,Female,Unmarried,Cereal,Active,59
+46-60,Male,Unmarried,Oatmeal,Active,60
+31-45,Male,Married,Oatmeal,Inactive,41
+Over 60,Female,Married,Oatmeal,Inactive,77
+Under 31,Female,Unmarried,Cereal,Inactive,25
+46-60,Female,Married,Cereal,Active,57
+31-45,Female,Married,Bar,Active,34
+Over 60,Male,Unmarried,Oatmeal,Inactive,67
+31-45,Male,Married,Oatmeal,Active,37
+46-60,Female,Married,Cereal,Active,52
+31-45,Male,Married,Cereal,Active,40
+Over 60,Female,Unmarried,Oatmeal,Active,72
+31-45,Male,Married,Oatmeal,Inactive,44
+46-60,Female,Unmarried,Bar,Active,52
+Over 60,Female,Unmarried,Oatmeal,Inactive,62
+Over 60,Female,Married,Cereal,Inactive,74
+Over 60,Female,Unmarried,Oatmeal,Inactive,61
+Over 60,Female,Unmarried,Oatmeal,Inactive,77
+Under 31,Female,Unmarried,Cereal,Active,24
+31-45,Female,Unmarried,Cereal,Active,45
+46-60,Male,Married,Oatmeal,Inactive,58
+31-45,Female,Married,Cereal,Inactive,40
+46-60,Male,Married,Bar,Active,53
+31-45,Male,Married,Cereal,Inactive,37
+31-45,Female,Married,Cereal,Active,36
+46-60,Female,Married,Oatmeal,Active,53
+Over 60,Male,Married,Oatmeal,Inactive,75
+31-45,Female,Unmarried,Bar,Active,43
+31-45,Female,Unmarried,Bar,Active,38
+46-60,Female,Married,Cereal,Inactive,53
+31-45,Female,Married,Bar,Active,43
+Over 60,Male,Married,Oatmeal,Inactive,65
+Over 60,Female,Unmarried,Oatmeal,Inactive,66
+Over 60,Male,Unmarried,Oatmeal,Inactive,64
+31-45,Female,Married,Cereal,Active,41
+Over 60,Female,Married,Bar,Active,67
+31-45,Male,Married,Bar,Inactive,35
+Over 60,Male,Unmarried,Oatmeal,Active,72
+46-60,Female,Married,Cereal,Active,55
+Over 60,Female,Married,Oatmeal,Inactive,77
+31-45,Female,Married,Oatmeal,Active,32
+46-60,Female,Married,Cereal,Inactive,55
+46-60,Male,Married,Oatmeal,Active,59
+46-60,Female,Married,Cereal,Active,54
+Under 31,Male,Unmarried,Bar,Active,20
+31-45,Female,Unmarried,Cereal,Inactive,40
+31-45,Male,Married,Bar,Active,39
+31-45,Female,Married,Bar,Inactive,41
+Under 31,Female,Unmarried,Cereal,Inactive,25
+31-45,Male,Married,Cereal,Active,41
+Over 60,Female,Unmarried,Oatmeal,Inactive,77
+Over 60,Female,Married,Oatmeal,Inactive,71
+46-60,Male,Unmarried,Oatmeal,Active,53
+46-60,Female,Married,Bar,Active,59
+Over 60,Female,Unmarried,Oatmeal,Active,65
+Over 60,Male,Married,Oatmeal,Inactive,71
+Over 60,Female,Unmarried,Oatmeal,Active,76
+46-60,Male,Married,Oatmeal,Inactive,46
+31-45,Male,Unmarried,Bar,Inactive,42
+46-60,Male,Married,Oatmeal,Inactive,52
+31-45,Female,Married,Cereal,Inactive,42
+Over 60,Male,Married,Oatmeal,Inactive,73
+Under 31,Male,Unmarried,Cereal,Active,18
+Over 60,Male,Unmarried,Oatmeal,Active,77
+31-45,Female,Married,Bar,Active,35
+Under 31,Female,Unmarried,Bar,Active,27
+Over 60,Male,Unmarried,Cereal,Inactive,77
+46-60,Female,Unmarried,Cereal,Inactive,56
+Over 60,Female,Unmarried,Cereal,Inactive,72
+Under 31,Male,Unmarried,Cereal,Active,29
+Under 31,Female,Married,Cereal,Inactive,30
+Over 60,Female,Unmarried,Oatmeal,Active,70
+Under 31,Male,Married,Cereal,Active,23
+31-45,Female,Married,Bar,Active,36
+Under 31,Female,Unmarried,Bar,Active,22
+31-45,Male,Married,Oatmeal,Inactive,40
+31-45,Male,Married,Cereal,Active,34
+31-45,Male,Married,Bar,Active,45
+31-45,Female,Married,Cereal,Active,39
+46-60,Male,Married,Cereal,Inactive,56
+Over 60,Male,Married,Oatmeal,Inactive,73
+Over 60,Female,Unmarried,Oatmeal,Active,76
+Over 60,Male,Unmarried,Oatmeal,Inactive,65
+46-60,Male,Married,Cereal,Active,57
+Under 31,Male,Married,Bar,Active,27
+Over 60,Female,Married,Oatmeal,Active,67
+Under 31,Male,Married,Cereal,Inactive,25
+46-60,Female,Married,Oatmeal,Inactive,59
+46-60,Female,Married,Cereal,Inactive,55
+31-45,Female,Married,Cereal,Inactive,40
+31-45,Male,Married,Cereal,Active,34
+46-60,Female,Unmarried,Cereal,Inactive,57
+Over 60,Female,Unmarried,Oatmeal,Inactive,63
+31-45,Female,Married,Cereal,Active,44
+Over 60,Female,Married,Cereal,Inactive,76
+46-60,Female,Unmarried,Bar,Inactive,49
+Over 60,Male,Married,Oatmeal,Inactive,68
+Over 60,Female,Unmarried,Oatmeal,Inactive,76
+46-60,Male,Married,Cereal,Active,51
+46-60,Male,Unmarried,Cereal,Inactive,49
+31-45,Male,Unmarried,Bar,Inactive,34
+31-45,Female,Married,Cereal,Active,35
+Over 60,Female,Unmarried,Cereal,Active,70
+46-60,Male,Married,Cereal,Inactive,48
+31-45,Male,Married,Cereal,Inactive,34
+46-60,Male,Married,Cereal,Inactive,53
+31-45,Male,Married,Cereal,Inactive,44
+31-45,Female,Married,Bar,Inactive,35
+46-60,Male,Married,Oatmeal,Active,56
+31-45,Female,Unmarried,Cereal,Inactive,38
+31-45,Female,Married,Cereal,Active,39
+46-60,Female,Married,Bar,Inactive,50
+31-45,Female,Married,Cereal,Inactive,42
+46-60,Female,Married,Cereal,Active,51
+46-60,Female,Married,Cereal,Inactive,59
+Under 31,Female,Unmarried,Bar,Active,21
+46-60,Male,Unmarried,Cereal,Inactive,47
+46-60,Female,Married,Oatmeal,Inactive,57
+Over 60,Female,Married,Oatmeal,Inactive,66
+Over 60,Female,Unmarried,Cereal,Inactive,66
+Under 31,Male,Unmarried,Bar,Active,27
+31-45,Male,Married,Cereal,Active,41
+46-60,Female,Unmarried,Cereal,Active,59
+46-60,Female,Married,Oatmeal,Inactive,59
+31-45,Female,Unmarried,Bar,Active,34
+Over 60,Male,Married,Oatmeal,Inactive,66
+Over 60,Male,Married,Oatmeal,Inactive,66
+31-45,Male,Married,Cereal,Inactive,45
+Under 31,Male,Married,Bar,Active,22
+31-45,Male,Married,Cereal,Inactive,35
+46-60,Male,Married,Bar,Active,47
+31-45,Female,Married,Cereal,Active,39
+46-60,Male,Married,Cereal,Inactive,50
+Over 60,Male,Unmarried,Bar,Active,62
+Over 60,Female,Married,Oatmeal,Active,71
+31-45,Female,Married,Oatmeal,Active,39
+Under 31,Male,Married,Bar,Inactive,29
+46-60,Female,Unmarried,Oatmeal,Inactive,52
+Under 31,Male,Married,Bar,Active,24
+Over 60,Female,Unmarried,Cereal,Inactive,73
+Under 31,Female,Unmarried,Bar,Active,22
+46-60,Male,Married,Cereal,Active,53
+Under 31,Female,Married,Bar,Active,21
+Over 60,Female,Unmarried,Cereal,Inactive,77
+46-60,Male,Married,Cereal,Active,51
+46-60,Male,Married,Bar,Inactive,52
+Under 31,Female,Married,Cereal,Inactive,20
+46-60,Female,Married,Oatmeal,Inactive,58
+Over 60,Male,Married,Cereal,Inactive,69
+46-60,Female,Married,Oatmeal,Active,58
+Over 60,Female,Unmarried,Cereal,Inactive,65
+46-60,Male,Married,Cereal,Inactive,54
+46-60,Female,Married,Cereal,Active,47
+Under 31,Female,Married,Cereal,Active,27
+Over 60,Male,Married,Cereal,Active,75
+31-45,Female,Married,Cereal,Active,43
+31-45,Male,Married,Cereal,Inactive,41
+46-60,Male,Unmarried,Cereal,Active,59
+46-60,Male,Married,Oatmeal,Inactive,59
+46-60,Female,Married,Cereal,Active,47
+Over 60,Female,Unmarried,Oatmeal,Inactive,71
+Under 31,Male,Married,Cereal,Active,22
+Under 31,Male,Unmarried,Cereal,Inactive,30
+46-60,Female,Married,Oatmeal,Inactive,53
+31-45,Female,Married,Cereal,Active,40
+Under 31,Male,Unmarried,Bar,Inactive,29
+46-60,Male,Married,Cereal,Inactive,56
+46-60,Male,Married,Cereal,Inactive,53
+31-45,Male,Unmarried,Cereal,Inactive,41
+46-60,Male,Married,Cereal,Inactive,59
+Under 31,Female,Unmarried,Bar,Inactive,20
+46-60,Female,Married,Oatmeal,Active,47
+46-60,Male,Married,Cereal,Inactive,52
+31-45,Male,Married,Bar,Active,41
+Over 60,Male,Married,Oatmeal,Inactive,63
+Over 60,Male,Unmarried,Oatmeal,Inactive,62
+Over 60,Male,Married,Oatmeal,Active,76
+Under 31,Male,Married,Bar,Active,26
+Under 31,Female,Married,Oatmeal,Inactive,18
+31-45,Male,Married,Oatmeal,Active,42
+Over 60,Female,Unmarried,Oatmeal,Active,70
+46-60,Female,Married,Oatmeal,Inactive,52
+Under 31,Female,Unmarried,Cereal,Inactive,23
+31-45,Female,Married,Cereal,Active,37
+Over 60,Female,Unmarried,Oatmeal,Inactive,74

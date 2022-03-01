@@ -33,3 +33,6 @@ kableExtra
 dendextend
 NbClust
 vtable
+nnet
+dfidx
+mlogit
