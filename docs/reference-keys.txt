@@ -86,6 +86,7 @@ fig:t7pp01plot3
 tab:t7showdata
 tab:t7asestres1
 tab:t7margeff01
+fig:t7ascsmp
 examining-and-summarizing-data
 motivation
 r-packages-and-datasets-for-topic-1

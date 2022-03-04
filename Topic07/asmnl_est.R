@@ -1,5 +1,6 @@
 asmnl_est <- function(formula, data, id, alt, choice, testdata) {
    require(mlogit)
+   require(broom)
    mdata <- dfidx(data, idx=c(id,alt), choice=choice)
    mod <- mlogit(formula=formula, data=mdata)
    sum <- summary(mod)

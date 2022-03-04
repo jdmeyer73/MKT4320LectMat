@@ -305,7 +305,7 @@ results.age$plot
         * Observe choice among four brands
     * DV: $choice$ (*Yes* for brand chosen; *No* for brand not chosen)
     * Alternative Specific IVs:
-        * Feature, $feat$ (*Yes* if brand on feature, *No* otherwise)
+        * Feature, $feat$ ($1$ if brand on feature, $0$ otherwise)
         * Price, $price$
     * Case Specific IVs:
         * Income (000s), $income$
@@ -313,7 +313,7 @@ results.age$plot
 * Use training and holdout samples  
 
     <caption>(\#tab:t7showdata) Yogurt Data (First 3 Observations) ([R code](#table-reftabt7showdata))</caption>
-    ```{r t7showdata, echo=FALSE, cache=TRUE}
+    ```{r t7showdata, echo=FALSE}
     # Data already split into training and test samples;
     # Both saved as separate data frames in 'yogurt.rdata'
     # Training data: train.yog
@@ -329,7 +329,8 @@ results.age$plot
     * Case specific variables assumed to have different effect on choices
 
     <caption>(\#tab:t7asestres1) Estimation Results (With Classificaition Matrices) ([R code](#table-reftabt7asestres1))</caption>
-    ```{r t7asestres1, echo=FALSE, cache=TRUE}
+    ```{r t7asestres1, echo=FALSE}
+    library(tidyr)
     # Use 'asmnl_est.R' user defined function to get:
     #    Model Fit
     #    OR Coefficient Estimates
@@ -372,7 +373,7 @@ results.age$plot
     * In addition, we can see how an increase in price of one brand, increases the probability of the other brands being selected
 
     <caption>(\#tab:t7margeff01) Marginal Effects ([R code](#table-reftabt7margeff01))</caption>    
-    ```{r t7margeff01, echo=FALSE, cache=TRUE}
+    ```{r t7margeff01, echo=FALSE}
     # Use 'asmnl_me.R' user defined function to get marginal effects
     # for continuous variables
     source("Topic07/asmnl_me.R")
@@ -398,16 +399,28 @@ results.age$plot
 #### Case Specific Results
 
 * Case specific IVs can have different effects by brand
+    * Margin plots can be used to visualize case specific IVs
+    
+```{r t7ascsmp, echo=FALSE, fig.cap="Margin Plot for Income ([R code](#figure-reffigtt7ascsmp))"}
+source("Topic07/asmnl_mp.R")
+asmnl_mp(asmod,"income", "C")
+```
+    
 * $income$ has a significant effect on the choice of all three brands relative to *Dannon*
     * Based on $OR=.8975$, for a $\$1000$ increase in $income$, we expect a $10.2\%$ decrease in the odds of choosing *Hiland* over *Dannon*
     * Based on $OR=.9886$, for a $\$1000$ increase in $income$, we expect a $1.1\%$ decrease in the odds of choosing *Weight* over *Dannon*
     * Based on $OR=1.0756$, for a $\$1000$ increase in $income$, we expect a $7.6\%$ increase in the odds of choosing *Yoplait* over *Dannon*
 * Marginal effects for $income$
-    * For a $\$1000$ increase in $income$, we expect the probability of selecting:
+    * For a $\$1000$ increase in $income$ at the mean, we expect the probability of selecting:
         * *Dannon* to decrease by $0.73\%$
         * *Hiland* to decrease by $0.07\%$
         * *Weight* to decrease by $0.68\%$
         * *Yoplait* to increase by $1.47\%$
+    * Based on the margin plot, the probability of selecting:
+        * *Dannon* increases with $income$ up to about \$43K, but then starts to decrease
+        * *Hiland* decreases with $income$
+        * *Weight* increases with $income$ up to about \$35K, but then starts to decrease
+        * *Yoplait* increases with $income$
         
 ## Suggested Readings
 
@@ -439,6 +452,13 @@ results.lifestyle$plot  # Object 'results.lifestyle' produced with Table 7.5
 
 ```{r t7pp01plot3code, eval=FALSE}
 results.age$plot  # Object 'results.age' produced with Table 7.9
+```
+
+### Figure \@ref(fig:t7ascsmp) {.unlisted .unnumbered}
+
+```{r t7ascsmpcode, eval=FALSE}
+source("Topic07/asmnl_mp.R")
+asmnl_mp(asmod,"income", "C")
 ```
 
 ### Table \@ref(tab:t7stest1) {.unlisted .unnumbered}
