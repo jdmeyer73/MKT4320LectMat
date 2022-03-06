@@ -368,10 +368,11 @@ results.age$plot
 
 * $feat$ is significant ($p=.0046$) in choice of brand.  The odds ratio of $feat$ ($1.5267>1$) means the effect of $feat$ on choice of $brand_j$ is positive. Specifically, when $brand_j$ is on feature, we would expect the odds of choosing $brand_j$ to increase by about $53\%$.
 * $price$ is significant ($p<.0001$) in choice of brand.  The odds ratio of $price$ ($.6425<1$) means the effect of $price$ on choice of $brand_j$ is negative. Specifically, for a $\$1$ increase in the price of $brand_j$, we would expect the odds of choosing $brand_j$ to decrease by about $36\%$.
-* To To further interpret significant variables, we can examine the marginal effects of an increase in a continuous variable at its mean value
-    * In our example, we can see how much an increase in $price$ decreases probability of a brand being selected (at that brand’s mean price)
-    * In addition, we can see how an increase in price of one brand, increases the probability of the other brands being selected
-
+* To further interpret significant variables, we can examine the marginal effects of an increase in a continuous variable at its mean value
+    * How much being on $feature$ increases probability of a brand being selected
+        * In addition, we can see how one brand being on $feature$ decreases the probability of the other brands being selected
+    * How much an increase in $price$ decreases probabiltiy of a brand being selected (at that brand's mean price)
+        * In addition, we can see how an increase in $price$ of one brand increases the probability of the other brands being selected
     <caption>(\#tab:t7margeff01) Marginal Effects ([R code](#table-reftabt7margeff01))</caption>    
     ```{r t7margeff01, echo=FALSE}
     # Use 'asmnl_me.R' user defined function to get marginal effects
@@ -380,22 +381,16 @@ results.age$plot
     asmnl_me(asmod)   # Model results saved from above
     ```
 
-* Marginal effects for $price$ for *Dannon*
-    * At mean values, the probability of being selected is $48.27\%$
-    * For a $\$1$ increase in *Dannon*:
-        * We expect a $11.05\%$ decrease in the probability of selecting *Dannon*
-        * We expect increases in the probability of selecting *Weight* ($5.50\%$) and *Yoplait* ($5.45\%$)
-* Marginal effects for $price$ for *Weight*
-    * At mean values, the probability of being selected is $25.72\%$
-    * For a $\$1$ increase in *Weight*:
-        * We expect a $8.45\%$ decrease in the probability of selecting *Weight*
-        * We expect increases in the probability of selecting *Dannon* ($5.50\%$) and *Yoplait* ($2.90\%$)
-* Marginal effects for $price$ for *Yoplait*
-    * At mean values, the probability of being selected is $25.53\%$
-    * For a $\$1$ increase in *Yoplait*:
-        * We expect a $8.40\%$ decrease in the probability of selecting *Yoplait*
-        * We expect increases in the probability of selecting *Dannon* ($5.45\%$) and *Weight* ($2.90\%$)
-        
+* Marginal effects for $feat$
+    * When *Dannon* is on $feature$, we expect a 10.5% increase in the probability of selecting it, and decreases of 5.3% and 5.2% for selecting *Weight* and *Yoplait*, respectively
+    * When *Weight* is on $feature$, we expect a 18.1% increase in the probability of selecting it, and decreases of 5.3% and 2.8% for selecting *Dannon* and *Yoplait*, respectively
+    * When *Yoplait* is on $feature$, we expect a 8.0% increase in the probability of selecting it, and decreases of 5.2% and 2.8% for selecting *Dannon* and *Weight*, respectively
+* Marginal effects for $price$
+* At mean prices, for a \$1 increases, the probability of selecting:
+    * *Dannon* decreases by 11.0%, and the probability of selecting *Weight* or *Yoplait* increases by 5.5% each
+    * *Weight* decreases by 8.5%, and the probability of selecting *Dannon* or *Yoplait* increases by 5.5% and 2.9%, respectively
+    * *Yoplait* decreases by 2.9%, and the probability of selecting *Dannon* or *Weight* increases by 5.5% and 2.9%, respectively
+    
 #### Case Specific Results
 
 * Case specific IVs can have different effects by brand

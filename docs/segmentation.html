@@ -24,7 +24,7 @@
 <meta name="author" content="Jeffrey Meyer" />
 
 
-<meta name="date" content="2022-03-04" />
+<meta name="date" content="2022-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -491,12 +491,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Topic 5</span> Segmentation</h1>
 <div id="r-packages-and-datasets-for-topic-5" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> R Packages and Datasets for Topic 5</h2>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="segmentation.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
-<span id="cb81-2"><a href="segmentation.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
-<span id="cb81-3"><a href="segmentation.html#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
-<span id="cb81-4"><a href="segmentation.html#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
-<span id="cb81-5"><a href="segmentation.html#cb81-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
-<span id="cb81-6"><a href="segmentation.html#cb81-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic05/ffseg.rdata&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="segmentation.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb83-2"><a href="segmentation.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb83-3"><a href="segmentation.html#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb83-4"><a href="segmentation.html#cb83-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
+<span id="cb83-5"><a href="segmentation.html#cb83-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
+<span id="cb83-6"><a href="segmentation.html#cb83-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic05/ffseg.rdata&quot;</span>)</span></code></pre></div>
 </div>
 <div id="segmentation-overview" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Segmentation Overview</h2>
@@ -1749,251 +1749,111 @@ Figure 5.10: Dendrogram with Top 6 Branches Only (<a href="segmentation.html#fig
 </caption>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
-<th style="text-align:right;">
-<p>k_2_Count</p>
-</th>
-<th style="text-align:right;">
-<p>k_3_Count</p>
-</th>
-<th style="text-align:right;">
-<p>k_4_Count</p>
-</th>
-<th style="text-align:right;">
-<p>k_6_Count</p>
-</th>
+<tr class="header">
+<th align="left">Cluster</th>
+<th align="right">k_2_Count</th>
+<th align="right">k_3_Count</th>
+<th align="right">k_4_Count</th>
+<th align="right">k_6_Count</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>1</p>
-</td>
-<td style="text-align:right;">
-<p>560</p>
-</td>
-<td style="text-align:right;">
-<p>404</p>
-</td>
-<td style="text-align:right;">
-<p>260</p>
-</td>
-<td style="text-align:right;">
-<p>192</p>
-</td>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">560</td>
+<td align="right">404</td>
+<td align="right">260</td>
+<td align="right">192</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>2</p>
-</td>
-<td style="text-align:right;">
-<p>192</p>
-</td>
-<td style="text-align:right;">
-<p>192</p>
-</td>
-<td style="text-align:right;">
-<p>192</p>
-</td>
-<td style="text-align:right;">
-<p>184</p>
-</td>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">192</td>
+<td align="right">192</td>
+<td align="right">192</td>
+<td align="right">184</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>3</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>156</p>
-</td>
-<td style="text-align:right;">
-<p>156</p>
-</td>
-<td style="text-align:right;">
-<p>144</p>
-</td>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">NA</td>
+<td align="right">156</td>
+<td align="right">156</td>
+<td align="right">144</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>4</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>144</p>
-</td>
-<td style="text-align:right;">
-<p>127</p>
-</td>
+<tr class="even">
+<td align="left">4</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">144</td>
+<td align="right">127</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>5</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>76</p>
-</td>
+<tr class="odd">
+<td align="left">5</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">76</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>6</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>29</p>
-</td>
+<tr class="even">
+<td align="left">6</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">29</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
-<th style="text-align:right;">
-<p>k_2_Percent</p>
-</th>
-<th style="text-align:right;">
-<p>k_3_Percent</p>
-</th>
-<th style="text-align:right;">
-<p>k_4_Percent</p>
-</th>
-<th style="text-align:right;">
-<p>k_6_Percent</p>
-</th>
+<tr class="header">
+<th align="left">Cluster</th>
+<th align="right">k_2_Percent</th>
+<th align="right">k_3_Percent</th>
+<th align="right">k_4_Percent</th>
+<th align="right">k_6_Percent</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>1</p>
-</td>
-<td style="text-align:right;">
-<p>74.47</p>
-</td>
-<td style="text-align:right;">
-<p>53.72</p>
-</td>
-<td style="text-align:right;">
-<p>34.57</p>
-</td>
-<td style="text-align:right;">
-<p>25.53</p>
-</td>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">74.47</td>
+<td align="right">53.72</td>
+<td align="right">34.57</td>
+<td align="right">25.53</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>2</p>
-</td>
-<td style="text-align:right;">
-<p>25.53</p>
-</td>
-<td style="text-align:right;">
-<p>25.53</p>
-</td>
-<td style="text-align:right;">
-<p>25.53</p>
-</td>
-<td style="text-align:right;">
-<p>24.47</p>
-</td>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">25.53</td>
+<td align="right">25.53</td>
+<td align="right">25.53</td>
+<td align="right">24.47</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>3</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>20.74</p>
-</td>
-<td style="text-align:right;">
-<p>20.74</p>
-</td>
-<td style="text-align:right;">
-<p>19.15</p>
-</td>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">NA</td>
+<td align="right">20.74</td>
+<td align="right">20.74</td>
+<td align="right">19.15</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>4</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>19.15</p>
-</td>
-<td style="text-align:right;">
-<p>16.89</p>
-</td>
+<tr class="even">
+<td align="left">4</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">19.15</td>
+<td align="right">16.89</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>5</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>10.11</p>
-</td>
+<tr class="odd">
+<td align="left">5</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">10.11</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>6</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>NA</p>
-</td>
-<td style="text-align:right;">
-<p>3.86</p>
-</td>
+<tr class="even">
+<td align="left">6</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">3.86</td>
 </tr>
 </tbody>
 </table></li>
@@ -2009,152 +1869,62 @@ Figure 5.10: Dendrogram with Top 6 Branches Only (<a href="segmentation.html#fig
 </caption>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
-<th style="text-align:right;">
-<p>clean</p>
-</th>
-<th style="text-align:right;">
-<p>variety</p>
-</th>
-<th style="text-align:right;">
-<p>quality</p>
-</th>
-<th style="text-align:right;">
-<p>location</p>
-</th>
-<th style="text-align:right;">
-<p>speed</p>
-</th>
-<th style="text-align:right;">
-<p>healthy</p>
-</th>
-<th style="text-align:right;">
-<p>price</p>
-</th>
-<th style="text-align:right;">
-<p>friendly</p>
-</th>
+<tr class="header">
+<th align="left">Cluster</th>
+<th align="right">clean</th>
+<th align="right">variety</th>
+<th align="right">quality</th>
+<th align="right">location</th>
+<th align="right">speed</th>
+<th align="right">healthy</th>
+<th align="right">price</th>
+<th align="right">friendly</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>1</p>
-</td>
-<td style="text-align:right;">
-<p>4.69</p>
-</td>
-<td style="text-align:right;">
-<p>3.75</p>
-</td>
-<td style="text-align:right;">
-<p>4.81</p>
-</td>
-<td style="text-align:right;">
-<p>4.41</p>
-</td>
-<td style="text-align:right;">
-<p>4.29</p>
-</td>
-<td style="text-align:right;">
-<p>3.84</p>
-</td>
-<td style="text-align:right;">
-<p>4.54</p>
-</td>
-<td style="text-align:right;">
-<p>4.12</p>
-</td>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">4.69</td>
+<td align="right">3.75</td>
+<td align="right">4.81</td>
+<td align="right">4.41</td>
+<td align="right">4.29</td>
+<td align="right">3.84</td>
+<td align="right">4.54</td>
+<td align="right">4.12</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>2</p>
-</td>
-<td style="text-align:right;">
-<p>4.12</p>
-</td>
-<td style="text-align:right;">
-<p>3.30</p>
-</td>
-<td style="text-align:right;">
-<p>4.09</p>
-</td>
-<td style="text-align:right;">
-<p>3.88</p>
-</td>
-<td style="text-align:right;">
-<p>3.71</p>
-</td>
-<td style="text-align:right;">
-<p>2.67</p>
-</td>
-<td style="text-align:right;">
-<p>4.03</p>
-</td>
-<td style="text-align:right;">
-<p>3.36</p>
-</td>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">4.12</td>
+<td align="right">3.30</td>
+<td align="right">4.09</td>
+<td align="right">3.88</td>
+<td align="right">3.71</td>
+<td align="right">2.67</td>
+<td align="right">4.03</td>
+<td align="right">3.36</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>3</p>
-</td>
-<td style="text-align:right;">
-<p>4.51</p>
-</td>
-<td style="text-align:right;">
-<p>3.83</p>
-</td>
-<td style="text-align:right;">
-<p>4.65</p>
-</td>
-<td style="text-align:right;">
-<p>2.99</p>
-</td>
-<td style="text-align:right;">
-<p>3.27</p>
-</td>
-<td style="text-align:right;">
-<p>4.03</p>
-</td>
-<td style="text-align:right;">
-<p>3.83</p>
-</td>
-<td style="text-align:right;">
-<p>3.47</p>
-</td>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">4.51</td>
+<td align="right">3.83</td>
+<td align="right">4.65</td>
+<td align="right">2.99</td>
+<td align="right">3.27</td>
+<td align="right">4.03</td>
+<td align="right">3.83</td>
+<td align="right">3.47</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>4</p>
-</td>
-<td style="text-align:right;">
-<p>3.27</p>
-</td>
-<td style="text-align:right;">
-<p>2.69</p>
-</td>
-<td style="text-align:right;">
-<p>3.38</p>
-</td>
-<td style="text-align:right;">
-<p>3.42</p>
-</td>
-<td style="text-align:right;">
-<p>3.34</p>
-</td>
-<td style="text-align:right;">
-<p>2.17</p>
-</td>
-<td style="text-align:right;">
-<p>3.67</p>
-</td>
-<td style="text-align:right;">
-<p>2.49</p>
-</td>
+<tr class="even">
+<td align="left">4</td>
+<td align="right">3.27</td>
+<td align="right">2.69</td>
+<td align="right">3.38</td>
+<td align="right">3.42</td>
+<td align="right">3.34</td>
+<td align="right">2.17</td>
+<td align="right">3.67</td>
+<td align="right">2.49</td>
 </tr>
 </tbody>
 </table>
@@ -2177,93 +1947,53 @@ Figure 5.11: Mean Attribute Importance by Cluster (<a href="segmentation.html#fi
 </caption>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
-<th style="text-align:right;">
-<p>eatin</p>
-</th>
+<tr class="header">
+<th align="left">Cluster</th>
+<th align="right">eatin</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>1</p>
-</td>
-<td style="text-align:right;">
-<p>4.03</p>
-</td>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">4.03</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>2</p>
-</td>
-<td style="text-align:right;">
-<p>4.30</p>
-</td>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">4.30</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>3</p>
-</td>
-<td style="text-align:right;">
-<p>3.82</p>
-</td>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">3.82</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>4</p>
-</td>
-<td style="text-align:right;">
-<p>4.48</p>
-</td>
+<tr class="even">
+<td align="left">4</td>
+<td align="right">4.48</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
-<th style="text-align:right;">
-<p>Female</p>
-</th>
+<tr class="header">
+<th align="left">Cluster</th>
+<th align="right">Female</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>1</p>
-</td>
-<td style="text-align:right;">
-<p>0.78</p>
-</td>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">0.78</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>2</p>
-</td>
-<td style="text-align:right;">
-<p>0.71</p>
-</td>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">0.71</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>3</p>
-</td>
-<td style="text-align:right;">
-<p>0.81</p>
-</td>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">0.81</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>4</p>
-</td>
-<td style="text-align:right;">
-<p>0.60</p>
-</td>
+<tr class="even">
+<td align="left">4</td>
+<td align="right">0.60</td>
 </tr>
 </tbody>
 </table></li>
@@ -2403,123 +2133,51 @@ Figure 5.12: Scree Plot for Fast Food Data (<a href="segmentation.html#figure-re
 </caption>
 <table>
 <thead>
-<tr>
-<th style="text-align:right;">
-<p>clean</p>
-</th>
-<th style="text-align:right;">
-<p>variety</p>
-</th>
-<th style="text-align:right;">
-<p>quality</p>
-</th>
-<th style="text-align:right;">
-<p>location</p>
-</th>
-<th style="text-align:right;">
-<p>speed</p>
-</th>
-<th style="text-align:right;">
-<p>healthy</p>
-</th>
-<th style="text-align:right;">
-<p>price</p>
-</th>
-<th style="text-align:right;">
-<p>friendly</p>
-</th>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
+<tr class="header">
+<th align="right">clean</th>
+<th align="right">variety</th>
+<th align="right">quality</th>
+<th align="right">location</th>
+<th align="right">speed</th>
+<th align="right">healthy</th>
+<th align="right">price</th>
+<th align="right">friendly</th>
+<th align="left">Cluster</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-<p>-0.8760</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4746</p>
-</td>
-<td style="text-align:right;">
-<p>-0.8286</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0075</p>
-</td>
-<td style="text-align:right;">
-<p>-0.2216</p>
-</td>
-<td style="text-align:right;">
-<p>-0.7727</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0256</p>
-</td>
-<td style="text-align:right;">
-<p>-0.6548</p>
-</td>
-<td style="text-align:left;">
-<p>1</p>
-</td>
+<tr class="odd">
+<td align="right">-0.8760</td>
+<td align="right">-0.4746</td>
+<td align="right">-0.8286</td>
+<td align="right">-0.0075</td>
+<td align="right">-0.2216</td>
+<td align="right">-0.7727</td>
+<td align="right">-0.0256</td>
+<td align="right">-0.6548</td>
+<td align="left">1</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-<p>0.5076</p>
-</td>
-<td style="text-align:right;">
-<p>0.5694</p>
-</td>
-<td style="text-align:right;">
-<p>0.5503</p>
-</td>
-<td style="text-align:right;">
-<p>0.5832</p>
-</td>
-<td style="text-align:right;">
-<p>0.6334</p>
-</td>
-<td style="text-align:right;">
-<p>0.4340</p>
-</td>
-<td style="text-align:right;">
-<p>0.5615</p>
-</td>
-<td style="text-align:right;">
-<p>0.5158</p>
-</td>
-<td style="text-align:left;">
-<p>2</p>
-</td>
+<tr class="even">
+<td align="right">0.5076</td>
+<td align="right">0.5694</td>
+<td align="right">0.5503</td>
+<td align="right">0.5832</td>
+<td align="right">0.6334</td>
+<td align="right">0.4340</td>
+<td align="right">0.5615</td>
+<td align="right">0.5158</td>
+<td align="left">2</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-<p>0.4161</p>
-</td>
-<td style="text-align:right;">
-<p>-0.1227</p>
-</td>
-<td style="text-align:right;">
-<p>0.3107</p>
-</td>
-<td style="text-align:right;">
-<p>-0.6807</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4917</p>
-</td>
-<td style="text-align:right;">
-<p>0.3833</p>
-</td>
-<td style="text-align:right;">
-<p>-0.6341</p>
-</td>
-<td style="text-align:right;">
-<p>0.1497</p>
-</td>
-<td style="text-align:left;">
-<p>3</p>
-</td>
+<tr class="odd">
+<td align="right">0.4161</td>
+<td align="right">-0.1227</td>
+<td align="right">0.3107</td>
+<td align="right">-0.6807</td>
+<td align="right">-0.4917</td>
+<td align="right">0.3833</td>
+<td align="right">-0.6341</td>
+<td align="right">0.1497</td>
+<td align="left">3</td>
 </tr>
 </tbody>
 </table>
@@ -2543,139 +2201,75 @@ Figure 5.13: Cluster Centers by Cluster (<a href="segmentation.html#figure-reffi
 </caption>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
-<th style="text-align:right;">
-<p>eatin</p>
-</th>
+<tr class="header">
+<th align="left">Cluster</th>
+<th align="right">eatin</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>1</p>
-</td>
-<td style="text-align:right;">
-<p>4.40</p>
-</td>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">4.40</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>2</p>
-</td>
-<td style="text-align:right;">
-<p>4.29</p>
-</td>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">4.29</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>3</p>
-</td>
-<td style="text-align:right;">
-<p>3.85</p>
-</td>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">3.85</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
-<th style="text-align:right;">
-<p>Female</p>
-</th>
+<tr class="header">
+<th align="left">Cluster</th>
+<th align="right">Female</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>1</p>
-</td>
-<td style="text-align:right;">
-<p>0.60</p>
-</td>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">0.60</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>2</p>
-</td>
-<td style="text-align:right;">
-<p>0.81</p>
-</td>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">0.81</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>3</p>
-</td>
-<td style="text-align:right;">
-<p>0.73</p>
-</td>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">0.73</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Cluster</p>
-</th>
-<th style="text-align:right;">
-<p>Commuter</p>
-</th>
-<th style="text-align:right;">
-<p>Off.Campus</p>
-</th>
-<th style="text-align:right;">
-<p>On.Campus</p>
-</th>
+<tr class="header">
+<th align="left">Cluster</th>
+<th align="right">Commuter</th>
+<th align="right">Off.Campus</th>
+<th align="right">On.Campus</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>1</p>
-</td>
-<td style="text-align:right;">
-<p>0.08</p>
-</td>
-<td style="text-align:right;">
-<p>0.45</p>
-</td>
-<td style="text-align:right;">
-<p>0.47</p>
-</td>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">0.08</td>
+<td align="right">0.45</td>
+<td align="right">0.47</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>2</p>
-</td>
-<td style="text-align:right;">
-<p>0.08</p>
-</td>
-<td style="text-align:right;">
-<p>0.46</p>
-</td>
-<td style="text-align:right;">
-<p>0.45</p>
-</td>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">0.08</td>
+<td align="right">0.46</td>
+<td align="right">0.45</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>3</p>
-</td>
-<td style="text-align:right;">
-<p>0.16</p>
-</td>
-<td style="text-align:right;">
-<p>0.40</p>
-</td>
-<td style="text-align:right;">
-<p>0.44</p>
-</td>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">0.16</td>
+<td align="right">0.40</td>
+<td align="right">0.44</td>
 </tr>
 </tbody>
 </table></li>
@@ -2715,158 +2309,158 @@ Figure 5.13: Cluster Centers by Cluster (<a href="segmentation.html#figure-reffi
 <h2><span class="header-section-number">5.6</span> R Code</h2>
 <div id="figure-reffigt5top5dend01" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="segmentation.html#fig:t5top5dend01">5.10</a></h3>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="segmentation.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load &#39;myhc.R&#39; user defined function</span></span>
-<span id="cb83-2"><a href="segmentation.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/myhc.R&quot;</span>)</span>
-<span id="cb83-3"><a href="segmentation.html#cb83-3" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">myhc</span>(segdata,    <span class="co"># Dataframe with cluster variables</span></span>
-<span id="cb83-4"><a href="segmentation.html#cb83-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,    <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
-<span id="cb83-5"><a href="segmentation.html#cb83-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
-<span id="cb83-6"><a href="segmentation.html#cb83-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">cuts=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>),   <span class="co"># Get data for 4 cut levels</span></span>
-<span id="cb83-7"><a href="segmentation.html#cb83-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">clustop=</span><span class="st">&quot;N&quot;</span>)  <span class="co"># Do not get Duda-Hart</span></span>
-<span id="cb83-8"><a href="segmentation.html#cb83-8" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
-<span id="cb83-9"><a href="segmentation.html#cb83-9" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="segmentation.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load &#39;myhc.R&#39; user defined function</span></span>
+<span id="cb85-2"><a href="segmentation.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/myhc.R&quot;</span>)</span>
+<span id="cb85-3"><a href="segmentation.html#cb85-3" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">myhc</span>(segdata,    <span class="co"># Dataframe with cluster variables</span></span>
+<span id="cb85-4"><a href="segmentation.html#cb85-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,    <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
+<span id="cb85-5"><a href="segmentation.html#cb85-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
+<span id="cb85-6"><a href="segmentation.html#cb85-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">cuts=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>),   <span class="co"># Get data for 4 cut levels</span></span>
+<span id="cb85-7"><a href="segmentation.html#cb85-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">clustop=</span><span class="st">&quot;N&quot;</span>)  <span class="co"># Do not get Duda-Hart</span></span>
+<span id="cb85-8"><a href="segmentation.html#cb85-8" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
+<span id="cb85-9"><a href="segmentation.html#cb85-9" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
 </div>
 <div id="figure-reffigt5c4describe2" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="segmentation.html#fig:t5c4describe2">5.11</a></h3>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="segmentation.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)  <span class="co"># Used to covert data from wide to long</span></span>
-<span id="cb84-2"><a href="segmentation.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert &#39;wide&#39; table to &#39;long&#39; table</span></span>
-<span id="cb84-3"><a href="segmentation.html#cb84-3" aria-hidden="true" tabindex="-1"></a>sumsegl <span class="ot">&lt;-</span> <span class="fu">melt</span>(outseg<span class="sc">$</span>means,    <span class="co"># Wide table of summary statistics</span></span>
-<span id="cb84-4"><a href="segmentation.html#cb84-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">id.vars=</span><span class="st">&quot;Cluster&quot;</span>,  <span class="co"># ID variable</span></span>
-<span id="cb84-5"><a href="segmentation.html#cb84-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">variable.name=</span><span class="st">&quot;attr&quot;</span>, <span class="co"># Column name identifying attribute</span></span>
-<span id="cb84-6"><a href="segmentation.html#cb84-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">value.name=</span><span class="st">&quot;mean&quot;</span>)   <span class="co"># Column name identifying value</span></span>
-<span id="cb84-7"><a href="segmentation.html#cb84-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot data</span></span>
-<span id="cb84-8"><a href="segmentation.html#cb84-8" aria-hidden="true" tabindex="-1"></a>sumsegl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>attr, <span class="at">y=</span>mean, <span class="at">fill=</span>Cluster)) <span class="sc">+</span></span>
-<span id="cb84-9"><a href="segmentation.html#cb84-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb84-10"><a href="segmentation.html#cb84-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">7</span>)) <span class="sc">+</span></span>
-<span id="cb84-11"><a href="segmentation.html#cb84-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb84-12"><a href="segmentation.html#cb84-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(mean,<span class="dv">2</span>)), <span class="at">hjust=</span><span class="fl">1.1</span>, <span class="at">fontface=</span><span class="st">&quot;bold&quot;</span>,</span>
-<span id="cb84-13"><a href="segmentation.html#cb84-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">angle=</span><span class="dv">90</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>)) <span class="sc">+</span></span>
-<span id="cb84-14"><a href="segmentation.html#cb84-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb84-15"><a href="segmentation.html#cb84-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Attribute&quot;</span>, <span class="at">y=</span><span class="st">&quot;Mean Importance&quot;</span>, <span class="at">fill=</span><span class="st">&quot;Cluster&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="segmentation.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)  <span class="co"># Used to covert data from wide to long</span></span>
+<span id="cb86-2"><a href="segmentation.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert &#39;wide&#39; table to &#39;long&#39; table</span></span>
+<span id="cb86-3"><a href="segmentation.html#cb86-3" aria-hidden="true" tabindex="-1"></a>sumsegl <span class="ot">&lt;-</span> <span class="fu">melt</span>(outseg<span class="sc">$</span>means,    <span class="co"># Wide table of summary statistics</span></span>
+<span id="cb86-4"><a href="segmentation.html#cb86-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">id.vars=</span><span class="st">&quot;Cluster&quot;</span>,  <span class="co"># ID variable</span></span>
+<span id="cb86-5"><a href="segmentation.html#cb86-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">variable.name=</span><span class="st">&quot;attr&quot;</span>, <span class="co"># Column name identifying attribute</span></span>
+<span id="cb86-6"><a href="segmentation.html#cb86-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">value.name=</span><span class="st">&quot;mean&quot;</span>)   <span class="co"># Column name identifying value</span></span>
+<span id="cb86-7"><a href="segmentation.html#cb86-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot data</span></span>
+<span id="cb86-8"><a href="segmentation.html#cb86-8" aria-hidden="true" tabindex="-1"></a>sumsegl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>attr, <span class="at">y=</span>mean, <span class="at">fill=</span>Cluster)) <span class="sc">+</span></span>
+<span id="cb86-9"><a href="segmentation.html#cb86-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb86-10"><a href="segmentation.html#cb86-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">7</span>)) <span class="sc">+</span></span>
+<span id="cb86-11"><a href="segmentation.html#cb86-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb86-12"><a href="segmentation.html#cb86-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(mean,<span class="dv">2</span>)), <span class="at">hjust=</span><span class="fl">1.1</span>, <span class="at">fontface=</span><span class="st">&quot;bold&quot;</span>,</span>
+<span id="cb86-13"><a href="segmentation.html#cb86-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">angle=</span><span class="dv">90</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb86-14"><a href="segmentation.html#cb86-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb86-15"><a href="segmentation.html#cb86-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Attribute&quot;</span>, <span class="at">y=</span><span class="st">&quot;Mean Importance&quot;</span>, <span class="at">fill=</span><span class="st">&quot;Cluster&quot;</span>)</span></code></pre></div>
 </div>
 <div id="figure-reffigt5scree02" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="segmentation.html#fig:t5scree02">5.12</a></h3>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="segmentation.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/wssplot.R&quot;</span>)   <span class="co"># User defined function for scree plot</span></span>
-<span id="cb85-2"><a href="segmentation.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wssplot</span>(segdata,   <span class="co"># Standardized data from earlier</span></span>
-<span id="cb85-3"><a href="segmentation.html#cb85-3" aria-hidden="true" tabindex="-1"></a>        <span class="dv">15</span>,   <span class="co"># Max clusters</span></span>
-<span id="cb85-4"><a href="segmentation.html#cb85-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Random number seed</span></span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="segmentation.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/wssplot.R&quot;</span>)   <span class="co"># User defined function for scree plot</span></span>
+<span id="cb87-2"><a href="segmentation.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wssplot</span>(segdata,   <span class="co"># Standardized data from earlier</span></span>
+<span id="cb87-3"><a href="segmentation.html#cb87-3" aria-hidden="true" tabindex="-1"></a>        <span class="dv">15</span>,   <span class="co"># Max clusters</span></span>
+<span id="cb87-4"><a href="segmentation.html#cb87-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Random number seed</span></span></code></pre></div>
 </div>
 <div id="figure-reffigt5desckmseg2" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="segmentation.html#fig:t5desckmseg2">5.13</a></h3>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="segmentation.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># outkc was created using the code for thetable</span></span>
-<span id="cb86-2"><a href="segmentation.html#cb86-2" aria-hidden="true" tabindex="-1"></a>outkc<span class="sc">$</span>plot</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="segmentation.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># outkc was created using the code for thetable</span></span>
+<span id="cb88-2"><a href="segmentation.html#cb88-2" aria-hidden="true" tabindex="-1"></a>outkc<span class="sc">$</span>plot</span></code></pre></div>
 </div>
 <div id="table-reftabt5exdata01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="segmentation.html#tab:t5exdata01">5.1</a></h3>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="segmentation.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create df with attribute importance variables</span></span>
-<span id="cb87-2"><a href="segmentation.html#cb87-2" aria-hidden="true" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> ffseg <span class="sc">%&gt;%</span> </span>
-<span id="cb87-3"><a href="segmentation.html#cb87-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(clean, variety, quality, location, speed, healthy, price, friendly)</span>
-<span id="cb87-4"><a href="segmentation.html#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create summary table with package &#39;vtable&#39; (not availalbe in virtual env.)</span></span>
-<span id="cb87-5"><a href="segmentation.html#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sumtable</span>(segdata, <span class="at">out=</span><span class="st">&quot;return&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">caption=</span><span class="cn">NULL</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="segmentation.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create df with attribute importance variables</span></span>
+<span id="cb89-2"><a href="segmentation.html#cb89-2" aria-hidden="true" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> ffseg <span class="sc">%&gt;%</span> </span>
+<span id="cb89-3"><a href="segmentation.html#cb89-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(clean, variety, quality, location, speed, healthy, price, friendly)</span>
+<span id="cb89-4"><a href="segmentation.html#cb89-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create summary table with package &#39;vtable&#39; (not availalbe in virtual env.)</span></span>
+<span id="cb89-5"><a href="segmentation.html#cb89-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sumtable</span>(segdata, <span class="at">out=</span><span class="st">&quot;return&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">caption=</span><span class="cn">NULL</span>)</span></code></pre></div>
 </div>
 <div id="table-reftabt5dh01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="segmentation.html#tab:t5dh01">5.2</a></h3>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="segmentation.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stardarize data using &#39;scale()&#39; function</span></span>
-<span id="cb88-2"><a href="segmentation.html#cb88-2" aria-hidden="true" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">scale</span>(segdata))</span>
-<span id="cb88-3"><a href="segmentation.html#cb88-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb88-4"><a href="segmentation.html#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;clustop.R&#39; user defined function</span></span>
-<span id="cb88-5"><a href="segmentation.html#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   Requires package &#39;NbClust&#39;, which isn&#39;t availabe in virtual env.</span></span>
-<span id="cb88-6"><a href="segmentation.html#cb88-6" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;TOpic05/clustop.R&quot;</span>)</span>
-<span id="cb88-7"><a href="segmentation.html#cb88-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NbClust)</span>
-<span id="cb88-8"><a href="segmentation.html#cb88-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb88-9"><a href="segmentation.html#cb88-9" aria-hidden="true" tabindex="-1"></a>dh <span class="ot">&lt;-</span> <span class="fu">clustop</span>(segdata,   <span class="co"># Dataframe to with cluster variables</span></span>
-<span id="cb88-10"><a href="segmentation.html#cb88-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,   <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
-<span id="cb88-11"><a href="segmentation.html#cb88-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
-<span id="cb88-12"><a href="segmentation.html#cb88-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">minclust=</span><span class="dv">1</span>, <span class="at">maxclust=</span><span class="dv">10</span>)  <span class="co"># Only complete for up to 10 clusters</span></span>
-<span id="cb88-13"><a href="segmentation.html#cb88-13" aria-hidden="true" tabindex="-1"></a>dh</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="segmentation.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stardarize data using &#39;scale()&#39; function</span></span>
+<span id="cb90-2"><a href="segmentation.html#cb90-2" aria-hidden="true" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">scale</span>(segdata))</span>
+<span id="cb90-3"><a href="segmentation.html#cb90-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb90-4"><a href="segmentation.html#cb90-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;clustop.R&#39; user defined function</span></span>
+<span id="cb90-5"><a href="segmentation.html#cb90-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   Requires package &#39;NbClust&#39;, which isn&#39;t availabe in virtual env.</span></span>
+<span id="cb90-6"><a href="segmentation.html#cb90-6" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;TOpic05/clustop.R&quot;</span>)</span>
+<span id="cb90-7"><a href="segmentation.html#cb90-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NbClust)</span>
+<span id="cb90-8"><a href="segmentation.html#cb90-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb90-9"><a href="segmentation.html#cb90-9" aria-hidden="true" tabindex="-1"></a>dh <span class="ot">&lt;-</span> <span class="fu">clustop</span>(segdata,   <span class="co"># Dataframe to with cluster variables</span></span>
+<span id="cb90-10"><a href="segmentation.html#cb90-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,   <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
+<span id="cb90-11"><a href="segmentation.html#cb90-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
+<span id="cb90-12"><a href="segmentation.html#cb90-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">minclust=</span><span class="dv">1</span>, <span class="at">maxclust=</span><span class="dv">10</span>)  <span class="co"># Only complete for up to 10 clusters</span></span>
+<span id="cb90-13"><a href="segmentation.html#cb90-13" aria-hidden="true" tabindex="-1"></a>dh</span></code></pre></div>
 </div>
 <div id="table-reftabt5clustsize01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="segmentation.html#tab:t5clustsize01">5.3</a></h3>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="segmentation.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;out&#39; was a list of two data frame (&#39;kcount&#39; and &#39;kperc&#39;) returned from the</span></span>
-<span id="cb89-2"><a href="segmentation.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="co"># call to the &#39;myhc&#39; user defined function</span></span>
-<span id="cb89-3"><a href="segmentation.html#cb89-3" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
-<span id="cb89-4"><a href="segmentation.html#cb89-4" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="segmentation.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;out&#39; was a list of two data frame (&#39;kcount&#39; and &#39;kperc&#39;) returned from the</span></span>
+<span id="cb91-2"><a href="segmentation.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="co"># call to the &#39;myhc&#39; user defined function</span></span>
+<span id="cb91-3"><a href="segmentation.html#cb91-3" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
+<span id="cb91-4"><a href="segmentation.html#cb91-4" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
 </div>
 <div id="table-reftabt5c4describe1" class="section level3 unlisted unnumbered">
 <h3>Table <a href="segmentation.html#tab:t5c4describe1">5.4</a></h3>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="segmentation.html#cb90-1" aria-hidden="true" tabindex="-1"></a>ffseg<span class="sc">$</span>c4 <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">cutree</span>(out<span class="sc">$</span>hc,<span class="dv">4</span>))  <span class="co"># Add cluster membership to original</span></span>
-<span id="cb90-2"><a href="segmentation.html#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create object with segmentation variables listed</span></span>
-<span id="cb90-3"><a href="segmentation.html#cb90-3" aria-hidden="true" tabindex="-1"></a>segvars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;clean&quot;</span>, <span class="st">&quot;variety&quot;</span>, <span class="st">&quot;quality&quot;</span>, </span>
-<span id="cb90-4"><a href="segmentation.html#cb90-4" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;location&quot;</span>, <span class="st">&quot;speed&quot;</span>, <span class="st">&quot;healthy&quot;</span>, </span>
-<span id="cb90-5"><a href="segmentation.html#cb90-5" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;price&quot;</span>, <span class="st">&quot;friendly&quot;</span>)</span>
-<span id="cb90-6"><a href="segmentation.html#cb90-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
-<span id="cb90-7"><a href="segmentation.html#cb90-7" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/cldescr.R&quot;</span>)</span>
-<span id="cb90-8"><a href="segmentation.html#cb90-8" aria-hidden="true" tabindex="-1"></a>outseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb90-9"><a href="segmentation.html#cb90-9" aria-hidden="true" tabindex="-1"></a>                  segvars,  <span class="co"># Segmentation variables</span></span>
-<span id="cb90-10"><a href="segmentation.html#cb90-10" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variables are continuous</span></span>
-<span id="cb90-11"><a href="segmentation.html#cb90-11" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb90-12"><a href="segmentation.html#cb90-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb90-13"><a href="segmentation.html#cb90-13" aria-hidden="true" tabindex="-1"></a>outseg<span class="sc">$</span>means</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="segmentation.html#cb92-1" aria-hidden="true" tabindex="-1"></a>ffseg<span class="sc">$</span>c4 <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">cutree</span>(out<span class="sc">$</span>hc,<span class="dv">4</span>))  <span class="co"># Add cluster membership to original</span></span>
+<span id="cb92-2"><a href="segmentation.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create object with segmentation variables listed</span></span>
+<span id="cb92-3"><a href="segmentation.html#cb92-3" aria-hidden="true" tabindex="-1"></a>segvars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;clean&quot;</span>, <span class="st">&quot;variety&quot;</span>, <span class="st">&quot;quality&quot;</span>, </span>
+<span id="cb92-4"><a href="segmentation.html#cb92-4" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;location&quot;</span>, <span class="st">&quot;speed&quot;</span>, <span class="st">&quot;healthy&quot;</span>, </span>
+<span id="cb92-5"><a href="segmentation.html#cb92-5" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;price&quot;</span>, <span class="st">&quot;friendly&quot;</span>)</span>
+<span id="cb92-6"><a href="segmentation.html#cb92-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
+<span id="cb92-7"><a href="segmentation.html#cb92-7" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/cldescr.R&quot;</span>)</span>
+<span id="cb92-8"><a href="segmentation.html#cb92-8" aria-hidden="true" tabindex="-1"></a>outseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb92-9"><a href="segmentation.html#cb92-9" aria-hidden="true" tabindex="-1"></a>                  segvars,  <span class="co"># Segmentation variables</span></span>
+<span id="cb92-10"><a href="segmentation.html#cb92-10" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variables are continuous</span></span>
+<span id="cb92-11"><a href="segmentation.html#cb92-11" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb92-12"><a href="segmentation.html#cb92-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb92-13"><a href="segmentation.html#cb92-13" aria-hidden="true" tabindex="-1"></a>outseg<span class="sc">$</span>means</span></code></pre></div>
 </div>
 <div id="table-reftabt5descnseg1" class="section level3 unlisted unnumbered">
 <h3>Table <a href="segmentation.html#tab:t5descnseg1">5.5</a></h3>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="segmentation.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
-<span id="cb91-2"><a href="segmentation.html#cb91-2" aria-hidden="true" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb91-3"><a href="segmentation.html#cb91-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
-<span id="cb91-4"><a href="segmentation.html#cb91-4" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
-<span id="cb91-5"><a href="segmentation.html#cb91-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb91-6"><a href="segmentation.html#cb91-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb91-7"><a href="segmentation.html#cb91-7" aria-hidden="true" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span>
-<span id="cb91-8"><a href="segmentation.html#cb91-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb91-9"><a href="segmentation.html#cb91-9" aria-hidden="true" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb91-10"><a href="segmentation.html#cb91-10" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
-<span id="cb91-11"><a href="segmentation.html#cb91-11" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
-<span id="cb91-12"><a href="segmentation.html#cb91-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb91-13"><a href="segmentation.html#cb91-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb91-14"><a href="segmentation.html#cb91-14" aria-hidden="true" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="segmentation.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
+<span id="cb93-2"><a href="segmentation.html#cb93-2" aria-hidden="true" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb93-3"><a href="segmentation.html#cb93-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
+<span id="cb93-4"><a href="segmentation.html#cb93-4" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
+<span id="cb93-5"><a href="segmentation.html#cb93-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb93-6"><a href="segmentation.html#cb93-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb93-7"><a href="segmentation.html#cb93-7" aria-hidden="true" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span>
+<span id="cb93-8"><a href="segmentation.html#cb93-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb93-9"><a href="segmentation.html#cb93-9" aria-hidden="true" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb93-10"><a href="segmentation.html#cb93-10" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
+<span id="cb93-11"><a href="segmentation.html#cb93-11" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb93-12"><a href="segmentation.html#cb93-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb93-13"><a href="segmentation.html#cb93-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb93-14"><a href="segmentation.html#cb93-14" aria-hidden="true" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span></code></pre></div>
 </div>
 <div id="table-reftabt5clstsizes" class="section level3 unlisted unnumbered">
 <h3>Table <a href="segmentation.html#tab:t5clstsizes">5.6</a></h3>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="segmentation.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;ksize.R&#39; must first be sourced (if not already)</span></span>
-<span id="cb92-2"><a href="segmentation.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/ksize.R&quot;</span>)</span>
-<span id="cb92-3"><a href="segmentation.html#cb92-3" aria-hidden="true" tabindex="-1"></a>ks <span class="ot">&lt;-</span> <span class="fu">ksize</span>(segdata,   <span class="co"># Scaled cluster variables from earlier</span></span>
-<span id="cb92-4"><a href="segmentation.html#cb92-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">centers=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>),   <span class="co"># Request for 3, 4, and 5 cluster solutions</span></span>
-<span id="cb92-5"><a href="segmentation.html#cb92-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">nstart=</span><span class="dv">25</span>,  <span class="co"># Request 25 random starting sets</span></span>
-<span id="cb92-6"><a href="segmentation.html#cb92-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Set seed to 4320 for reproducible results</span></span>
-<span id="cb92-7"><a href="segmentation.html#cb92-7" aria-hidden="true" tabindex="-1"></a>ks<span class="sc">$</span>kcount</span>
-<span id="cb92-8"><a href="segmentation.html#cb92-8" aria-hidden="true" tabindex="-1"></a>ks<span class="sc">$</span>kperc</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="segmentation.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;ksize.R&#39; must first be sourced (if not already)</span></span>
+<span id="cb94-2"><a href="segmentation.html#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/ksize.R&quot;</span>)</span>
+<span id="cb94-3"><a href="segmentation.html#cb94-3" aria-hidden="true" tabindex="-1"></a>ks <span class="ot">&lt;-</span> <span class="fu">ksize</span>(segdata,   <span class="co"># Scaled cluster variables from earlier</span></span>
+<span id="cb94-4"><a href="segmentation.html#cb94-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">centers=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>),   <span class="co"># Request for 3, 4, and 5 cluster solutions</span></span>
+<span id="cb94-5"><a href="segmentation.html#cb94-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">nstart=</span><span class="dv">25</span>,  <span class="co"># Request 25 random starting sets</span></span>
+<span id="cb94-6"><a href="segmentation.html#cb94-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Set seed to 4320 for reproducible results</span></span>
+<span id="cb94-7"><a href="segmentation.html#cb94-7" aria-hidden="true" tabindex="-1"></a>ks<span class="sc">$</span>kcount</span>
+<span id="cb94-8"><a href="segmentation.html#cb94-8" aria-hidden="true" tabindex="-1"></a>ks<span class="sc">$</span>kperc</span></code></pre></div>
 </div>
 <div id="table-reftabt5desckmseg1" class="section level3 unlisted unnumbered">
 <h3>Table <a href="segmentation.html#tab:t5desckmseg1">5.7</a></h3>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="segmentation.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use user-defined function &#39;kcenters.R&#39;</span></span>
-<span id="cb93-2"><a href="segmentation.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/kcenters.R&quot;</span>)</span>
-<span id="cb93-3"><a href="segmentation.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4320</span>)  <span class="co"># Match seed from above</span></span>
-<span id="cb93-4"><a href="segmentation.html#cb93-4" aria-hidden="true" tabindex="-1"></a>k3 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(segdata,  <span class="co"># Scaled segmentation variables</span></span>
-<span id="cb93-5"><a href="segmentation.html#cb93-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">centers=</span><span class="dv">3</span>,  <span class="co"># 3 cluster solution</span></span>
-<span id="cb93-6"><a href="segmentation.html#cb93-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">nstart=</span><span class="dv">25</span>)  <span class="co"># 25 random starting sets</span></span>
-<span id="cb93-7"><a href="segmentation.html#cb93-7" aria-hidden="true" tabindex="-1"></a>outkc <span class="ot">&lt;-</span> <span class="fu">kcenters</span>(k3)  <span class="co"># Call to &#39;kcenters&#39; passing the &#39;k3&#39; cluster object</span></span>
-<span id="cb93-8"><a href="segmentation.html#cb93-8" aria-hidden="true" tabindex="-1"></a><span class="co"># outkc contains two objects: &#39;table&#39; and &#39;plot&#39;</span></span>
-<span id="cb93-9"><a href="segmentation.html#cb93-9" aria-hidden="true" tabindex="-1"></a>outkc<span class="sc">$</span>table  <span class="co"># Print table</span></span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="segmentation.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use user-defined function &#39;kcenters.R&#39;</span></span>
+<span id="cb95-2"><a href="segmentation.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/kcenters.R&quot;</span>)</span>
+<span id="cb95-3"><a href="segmentation.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4320</span>)  <span class="co"># Match seed from above</span></span>
+<span id="cb95-4"><a href="segmentation.html#cb95-4" aria-hidden="true" tabindex="-1"></a>k3 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(segdata,  <span class="co"># Scaled segmentation variables</span></span>
+<span id="cb95-5"><a href="segmentation.html#cb95-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">centers=</span><span class="dv">3</span>,  <span class="co"># 3 cluster solution</span></span>
+<span id="cb95-6"><a href="segmentation.html#cb95-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">nstart=</span><span class="dv">25</span>)  <span class="co"># 25 random starting sets</span></span>
+<span id="cb95-7"><a href="segmentation.html#cb95-7" aria-hidden="true" tabindex="-1"></a>outkc <span class="ot">&lt;-</span> <span class="fu">kcenters</span>(k3)  <span class="co"># Call to &#39;kcenters&#39; passing the &#39;k3&#39; cluster object</span></span>
+<span id="cb95-8"><a href="segmentation.html#cb95-8" aria-hidden="true" tabindex="-1"></a><span class="co"># outkc contains two objects: &#39;table&#39; and &#39;plot&#39;</span></span>
+<span id="cb95-9"><a href="segmentation.html#cb95-9" aria-hidden="true" tabindex="-1"></a>outkc<span class="sc">$</span>table  <span class="co"># Print table</span></span></code></pre></div>
 </div>
 <div id="table-reftabt5desck3seg1" class="section level3 unlisted unnumbered">
 <h3>Table <a href="segmentation.html#tab:t5desck3seg1">5.8</a></h3>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="segmentation.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add cluster membership to original data</span></span>
-<span id="cb94-2"><a href="segmentation.html#cb94-2" aria-hidden="true" tabindex="-1"></a>fseg<span class="sc">$</span>k3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(k3<span class="sc">$</span>cluster)</span>
-<span id="cb94-3"><a href="segmentation.html#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
-<span id="cb94-4"><a href="segmentation.html#cb94-4" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb94-5"><a href="segmentation.html#cb94-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
-<span id="cb94-6"><a href="segmentation.html#cb94-6" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
-<span id="cb94-7"><a href="segmentation.html#cb94-7" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb94-8"><a href="segmentation.html#cb94-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb94-9"><a href="segmentation.html#cb94-9" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
-<span id="cb94-10"><a href="segmentation.html#cb94-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb94-11"><a href="segmentation.html#cb94-11" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb94-12"><a href="segmentation.html#cb94-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
-<span id="cb94-13"><a href="segmentation.html#cb94-13" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
-<span id="cb94-14"><a href="segmentation.html#cb94-14" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb94-15"><a href="segmentation.html#cb94-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb94-16"><a href="segmentation.html#cb94-16" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
-<span id="cb94-17"><a href="segmentation.html#cb94-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb94-18"><a href="segmentation.html#cb94-18" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb94-19"><a href="segmentation.html#cb94-19" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;live&quot;</span>,  <span class="co"># Where they live</span></span>
-<span id="cb94-20"><a href="segmentation.html#cb94-20" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
-<span id="cb94-21"><a href="segmentation.html#cb94-21" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb94-22"><a href="segmentation.html#cb94-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb94-23"><a href="segmentation.html#cb94-23" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="segmentation.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add cluster membership to original data</span></span>
+<span id="cb96-2"><a href="segmentation.html#cb96-2" aria-hidden="true" tabindex="-1"></a>fseg<span class="sc">$</span>k3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(k3<span class="sc">$</span>cluster)</span>
+<span id="cb96-3"><a href="segmentation.html#cb96-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
+<span id="cb96-4"><a href="segmentation.html#cb96-4" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb96-5"><a href="segmentation.html#cb96-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
+<span id="cb96-6"><a href="segmentation.html#cb96-6" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
+<span id="cb96-7"><a href="segmentation.html#cb96-7" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb96-8"><a href="segmentation.html#cb96-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb96-9"><a href="segmentation.html#cb96-9" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
+<span id="cb96-10"><a href="segmentation.html#cb96-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb96-11"><a href="segmentation.html#cb96-11" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb96-12"><a href="segmentation.html#cb96-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
+<span id="cb96-13"><a href="segmentation.html#cb96-13" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb96-14"><a href="segmentation.html#cb96-14" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb96-15"><a href="segmentation.html#cb96-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb96-16"><a href="segmentation.html#cb96-16" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
+<span id="cb96-17"><a href="segmentation.html#cb96-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-18"><a href="segmentation.html#cb96-18" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb96-19"><a href="segmentation.html#cb96-19" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;live&quot;</span>,  <span class="co"># Where they live</span></span>
+<span id="cb96-20"><a href="segmentation.html#cb96-20" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb96-21"><a href="segmentation.html#cb96-21" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb96-22"><a href="segmentation.html#cb96-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb96-23"><a href="segmentation.html#cb96-23" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span></code></pre></div>
 
 </div>
 </div>

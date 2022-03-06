@@ -24,7 +24,7 @@
 <meta name="author" content="Jeffrey Meyer" />
 
 
-<meta name="date" content="2022-03-04" />
+<meta name="date" content="2022-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -491,12 +491,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Topic 6</span> Positioning</h1>
 <div id="r-packages-and-datasets-for-topic-5-1" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> R Packages and Datasets for Topic 5</h2>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="positioning.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
-<span id="cb95-2"><a href="positioning.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
-<span id="cb95-3"><a href="positioning.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
-<span id="cb95-4"><a href="positioning.html#cb95-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
-<span id="cb95-5"><a href="positioning.html#cb95-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
-<span id="cb95-6"><a href="positioning.html#cb95-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic06/ffattrib.rdata&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="positioning.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb97-2"><a href="positioning.html#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb97-3"><a href="positioning.html#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb97-4"><a href="positioning.html#cb97-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
+<span id="cb97-5"><a href="positioning.html#cb97-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
+<span id="cb97-6"><a href="positioning.html#cb97-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic06/ffattrib.rdata&quot;</span>)</span></code></pre></div>
 </div>
 <div id="positioning-overview" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Positioning Overview</h2>
@@ -697,162 +697,75 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>E.g., Keep two components, accounting for about 85% of variation</li>
 </ul></li>
 </ul>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<pre><code>Warning in kable_styling(., &quot;basic&quot;, full_width = FALSE): Please specify format
+in kable. kableExtra can customize either HTML or LaTeX outputs. See https://
+haozhu233.github.io/kableExtra/ for details.</code></pre>
+<table>
 <thead>
-<tr>
-<th style="text-align:right;">
-Component
-</th>
-<th style="text-align:right;">
-Eigenvalue
-</th>
-<th style="text-align:right;">
-Difference
-</th>
-<th style="text-align:right;">
-Proporation
-</th>
-<th style="text-align:right;">
-Cumulative
-</th>
+<tr class="header">
+<th align="right">Component</th>
+<th align="right">Eigenvalue</th>
+<th align="right">Difference</th>
+<th align="right">Proporation</th>
+<th align="right">Cumulative</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-3.7574
-</td>
-<td style="text-align:right;">
-0.7588
-</td>
-<td style="text-align:right;">
-0.4697
-</td>
-<td style="text-align:right;">
-0.4697
-</td>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">3.7574</td>
+<td align="right">0.7588</td>
+<td align="right">0.4697</td>
+<td align="right">0.4697</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-2.9986
-</td>
-<td style="text-align:right;">
-2.4108
-</td>
-<td style="text-align:right;">
-0.3748
-</td>
-<td style="text-align:right;">
-0.8445
-</td>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">2.9986</td>
+<td align="right">2.4108</td>
+<td align="right">0.3748</td>
+<td align="right">0.8445</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-0.5878
-</td>
-<td style="text-align:right;">
-0.2561
-</td>
-<td style="text-align:right;">
-0.0735
-</td>
-<td style="text-align:right;">
-0.9180
-</td>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.5878</td>
+<td align="right">0.2561</td>
+<td align="right">0.0735</td>
+<td align="right">0.9180</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-0.3317
-</td>
-<td style="text-align:right;">
-0.1386
-</td>
-<td style="text-align:right;">
-0.0415
-</td>
-<td style="text-align:right;">
-0.9594
-</td>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.3317</td>
+<td align="right">0.1386</td>
+<td align="right">0.0415</td>
+<td align="right">0.9594</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-0.1931
-</td>
-<td style="text-align:right;">
-0.1045
-</td>
-<td style="text-align:right;">
-0.0241
-</td>
-<td style="text-align:right;">
-0.9836
-</td>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">0.1931</td>
+<td align="right">0.1045</td>
+<td align="right">0.0241</td>
+<td align="right">0.9836</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-0.0886
-</td>
-<td style="text-align:right;">
-0.0616
-</td>
-<td style="text-align:right;">
-0.0111
-</td>
-<td style="text-align:right;">
-0.9946
-</td>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">0.0886</td>
+<td align="right">0.0616</td>
+<td align="right">0.0111</td>
+<td align="right">0.9946</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-0.0270
-</td>
-<td style="text-align:right;">
-0.0112
-</td>
-<td style="text-align:right;">
-0.0034
-</td>
-<td style="text-align:right;">
-0.9980
-</td>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">0.0270</td>
+<td align="right">0.0112</td>
+<td align="right">0.0034</td>
+<td align="right">0.9980</td>
 </tr>
-<tr>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-0.0158
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-0.0020
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">0.0158</td>
+<td align="right">NA</td>
+<td align="right">0.0020</td>
+<td align="right">1.0000</td>
 </tr>
 </tbody>
 </table>
@@ -875,134 +788,66 @@ NA
 <li>Higher loadings indicate the variable is representative of the factor</li>
 </ul></li>
 <li><p>Unfortunately, unrotated loadings may not provide a meaningful pattern to understand the factors</p>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<pre><code>Warning in kable_styling(., &quot;basic&quot;, full_width = FALSE): Please specify format
+in kable. kableExtra can customize either HTML or LaTeX outputs. See https://
+haozhu233.github.io/kableExtra/ for details.</code></pre>
+<table>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-<p>PC1</p>
-</th>
-<th style="text-align:right;">
-<p>PC2</p>
-</th>
-<th style="text-align:right;">
-<p>Unexplained</p>
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="right">PC1</th>
+<th align="right">PC2</th>
+<th align="right">Unexplained</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>perform</p>
-</td>
-<td style="text-align:right;">
-<p>0.3327</p>
-</td>
-<td style="text-align:right;">
-<p>0.3073</p>
-</td>
-<td style="text-align:right;">
-<p>0.3009</p>
-</td>
+<tr class="odd">
+<td align="left">perform</td>
+<td align="right">0.3327</td>
+<td align="right">0.3073</td>
+<td align="right">0.3009</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>leader</p>
-</td>
-<td style="text-align:right;">
-<p>0.3116</p>
-</td>
-<td style="text-align:right;">
-<p>0.4276</p>
-</td>
-<td style="text-align:right;">
-<p>0.0867</p>
-</td>
+<tr class="even">
+<td align="left">leader</td>
+<td align="right">0.3116</td>
+<td align="right">0.4276</td>
+<td align="right">0.0867</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>lattech</p>
-</td>
-<td style="text-align:right;">
-<p>-0.3656</p>
-</td>
-<td style="text-align:right;">
-<p>0.2875</p>
-</td>
-<td style="text-align:right;">
-<p>0.2500</p>
-</td>
+<tr class="odd">
+<td align="left">lattech</td>
+<td align="right">-0.3656</td>
+<td align="right">0.2875</td>
+<td align="right">0.2500</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>fun</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4010</p>
-</td>
-<td style="text-align:right;">
-<p>-0.2957</p>
-</td>
-<td style="text-align:right;">
-<p>0.1335</p>
-</td>
+<tr class="even">
+<td align="left">fun</td>
+<td align="right">-0.4010</td>
+<td align="right">-0.2957</td>
+<td align="right">0.1335</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>serious</p>
-</td>
-<td style="text-align:right;">
-<p>0.2730</p>
-</td>
-<td style="text-align:right;">
-<p>0.4499</p>
-</td>
-<td style="text-align:right;">
-<p>0.1131</p>
-</td>
+<tr class="odd">
+<td align="left">serious</td>
+<td align="right">0.2730</td>
+<td align="right">0.4499</td>
+<td align="right">0.1131</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>bargain</p>
-</td>
-<td style="text-align:right;">
-<p>0.3722</p>
-</td>
-<td style="text-align:right;">
-<p>-0.3160</p>
-</td>
-<td style="text-align:right;">
-<p>0.1801</p>
-</td>
+<tr class="even">
+<td align="left">bargain</td>
+<td align="right">0.3722</td>
+<td align="right">-0.3160</td>
+<td align="right">0.1801</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>value</p>
-</td>
-<td style="text-align:right;">
-<p>0.4229</p>
-</td>
-<td style="text-align:right;">
-<p>-0.2843</p>
-</td>
-<td style="text-align:right;">
-<p>0.0855</p>
-</td>
+<tr class="odd">
+<td align="left">value</td>
+<td align="right">0.4229</td>
+<td align="right">-0.2843</td>
+<td align="right">0.0855</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>trendy</p>
-</td>
-<td style="text-align:right;">
-<p>-0.3253</p>
-</td>
-<td style="text-align:right;">
-<p>0.4117</p>
-</td>
-<td style="text-align:right;">
-<p>0.0941</p>
-</td>
+<tr class="even">
+<td align="left">trendy</td>
+<td align="right">-0.3253</td>
+<td align="right">0.4117</td>
+<td align="right">0.0941</td>
 </tr>
 </tbody>
 </table></li>
@@ -1011,134 +856,66 @@ NA
 <span class="math inline">\(\rho&lt;0.4\Longrightarrow\)</span> no loading<br>
 <span class="math inline">\(0.4\le \rho&lt;0.6\Longrightarrow\)</span> low" loading<br>
 <span class="math inline">\(\rho\ge0.6\Longrightarrow\)</span> “high” loading<br></p>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<pre><code>Warning in kable_styling(., &quot;basic&quot;, full_width = FALSE): Please specify format
+in kable. kableExtra can customize either HTML or LaTeX outputs. See https://
+haozhu233.github.io/kableExtra/ for details.</code></pre>
+<table>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-<p>PC1</p>
-</th>
-<th style="text-align:right;">
-<p>PC2</p>
-</th>
-<th style="text-align:right;">
-<p>Unexplained</p>
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="right">PC1</th>
+<th align="right">PC2</th>
+<th align="right">Unexplained</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>perform</p>
-</td>
-<td style="text-align:right;">
-<p>0.0490</p>
-</td>
-<td style="text-align:right;">
-<p>0.4502</p>
-</td>
-<td style="text-align:right;">
-<p>0.3009</p>
-</td>
+<tr class="odd">
+<td align="left">perform</td>
+<td align="right">0.0490</td>
+<td align="right">0.4502</td>
+<td align="right">0.3009</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>leader</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0459</p>
-</td>
-<td style="text-align:right;">
-<p>0.5271</p>
-</td>
-<td style="text-align:right;">
-<p>0.0867</p>
-</td>
+<tr class="even">
+<td align="left">leader</td>
+<td align="right">-0.0459</td>
+<td align="right">0.5271</td>
+<td align="right">0.0867</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>lattech</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4645</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0234</p>
-</td>
-<td style="text-align:right;">
-<p>0.2500</p>
-</td>
+<tr class="odd">
+<td align="left">lattech</td>
+<td align="right">-0.4645</td>
+<td align="right">-0.0234</td>
+<td align="right">0.2500</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>fun</p>
-</td>
-<td style="text-align:right;">
-<p>-0.1081</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4864</p>
-</td>
-<td style="text-align:right;">
-<p>0.1335</p>
-</td>
+<tr class="even">
+<td align="left">fun</td>
+<td align="right">-0.1081</td>
+<td align="right">-0.4864</td>
+<td align="right">0.1335</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>serious</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0897</p>
-</td>
-<td style="text-align:right;">
-<p>0.5185</p>
-</td>
-<td style="text-align:right;">
-<p>0.1131</p>
-</td>
+<tr class="odd">
+<td align="left">serious</td>
+<td align="right">-0.0897</td>
+<td align="right">0.5185</td>
+<td align="right">0.1131</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>bargain</p>
-</td>
-<td style="text-align:right;">
-<p>0.4882</p>
-</td>
-<td style="text-align:right;">
-<p>0.0062</p>
-</td>
-<td style="text-align:right;">
-<p>0.1801</p>
-</td>
+<tr class="even">
+<td align="left">bargain</td>
+<td align="right">0.4882</td>
+<td align="right">0.0062</td>
+<td align="right">0.1801</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>value</p>
-</td>
-<td style="text-align:right;">
-<p>0.5057</p>
-</td>
-<td style="text-align:right;">
-<p>0.0634</p>
-</td>
-<td style="text-align:right;">
-<p>0.0855</p>
-</td>
+<tr class="odd">
+<td align="left">value</td>
+<td align="right">0.5057</td>
+<td align="right">0.0634</td>
+<td align="right">0.0855</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>trendy</p>
-</td>
-<td style="text-align:right;">
-<p>-0.5157</p>
-</td>
-<td style="text-align:right;">
-<p>0.0967</p>
-</td>
-<td style="text-align:right;">
-<p>0.0941</p>
-</td>
+<tr class="even">
+<td align="left">trendy</td>
+<td align="right">-0.5157</td>
+<td align="right">0.0967</td>
+<td align="right">0.0941</td>
 </tr>
 </tbody>
 </table></li>
@@ -1155,134 +932,72 @@ NA
 <ul>
 <li>Might label factor 2 as “performance”</li>
 </ul>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<pre><code>Warning in kable_styling(., &quot;basic&quot;, full_width = FALSE): Please specify format
+in kable. kableExtra can customize either HTML or LaTeX outputs. See https://
+haozhu233.github.io/kableExtra/ for details.</code></pre>
+<pre><code>Warning in column_spec(., 2, background = ifelse(abs(gb.2comp$rotated[, : Please
+specify format in kable. kableExtra can customize either HTML or LaTeX outputs.
+See https://haozhu233.github.io/kableExtra/ for details.</code></pre>
+<pre><code>Warning in column_spec(., 3, background = ifelse(abs(gb.2comp$rotated[, : Please
+specify format in kable. kableExtra can customize either HTML or LaTeX outputs.
+See https://haozhu233.github.io/kableExtra/ for details.</code></pre>
+<table>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-PC1
-</th>
-<th style="text-align:right;">
-PC2
-</th>
-<th style="text-align:right;">
-Unexplained
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="right">PC1</th>
+<th align="right">PC2</th>
+<th align="right">Unexplained</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-perform
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0490
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
-0.4502
-</td>
-<td style="text-align:right;">
-0.3009
-</td>
+<tr class="odd">
+<td align="left">perform</td>
+<td align="right">0.0490</td>
+<td align="right">0.4502</td>
+<td align="right">0.3009</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-leader
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.0459
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
-0.5271
-</td>
-<td style="text-align:right;">
-0.0867
-</td>
+<tr class="even">
+<td align="left">leader</td>
+<td align="right">-0.0459</td>
+<td align="right">0.5271</td>
+<td align="right">0.0867</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-lattech
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
--0.4645
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.0234
-</td>
-<td style="text-align:right;">
-0.2500
-</td>
+<tr class="odd">
+<td align="left">lattech</td>
+<td align="right">-0.4645</td>
+<td align="right">-0.0234</td>
+<td align="right">0.2500</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-fun
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.1081
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
--0.4864
-</td>
-<td style="text-align:right;">
-0.1335
-</td>
+<tr class="even">
+<td align="left">fun</td>
+<td align="right">-0.1081</td>
+<td align="right">-0.4864</td>
+<td align="right">0.1335</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-serious
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.0897
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
-0.5185
-</td>
-<td style="text-align:right;">
-0.1131
-</td>
+<tr class="odd">
+<td align="left">serious</td>
+<td align="right">-0.0897</td>
+<td align="right">0.5185</td>
+<td align="right">0.1131</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-bargain
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
-0.4882
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0062
-</td>
-<td style="text-align:right;">
-0.1801
-</td>
+<tr class="even">
+<td align="left">bargain</td>
+<td align="right">0.4882</td>
+<td align="right">0.0062</td>
+<td align="right">0.1801</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-value
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
-0.5057
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0634
-</td>
-<td style="text-align:right;">
-0.0855
-</td>
+<tr class="odd">
+<td align="left">value</td>
+<td align="right">0.5057</td>
+<td align="right">0.0634</td>
+<td align="right">0.0855</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-trendy
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
--0.5157
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0967
-</td>
-<td style="text-align:right;">
-0.0941
-</td>
+<tr class="even">
+<td align="left">trendy</td>
+<td align="right">-0.5157</td>
+<td align="right">0.0967</td>
+<td align="right">0.0941</td>
 </tr>
 </tbody>
 </table></li>
@@ -1308,336 +1023,157 @@ trendy
 <h3><span class="header-section-number">6.5.1</span> Map Brands</h3>
 <ul>
 <li><p>Using rotated loading matrix and average brand scores for each variable, obtain a score for each brand on each component</p>
-<table class="table" style="margin-left: auto; margin-right: auto;">
+<pre><code>Warning in kable_styling(., &quot;basic&quot;): Please specify format in kable. kableExtra
+can customize either HTML or LaTeX outputs. See https://haozhu233.github.io/
+kableExtra/ for details.</code></pre>
+<pre><code>Warning in column_spec(., c(2, 3, 5), color = ifelse(df$Attribute == &quot;&quot;, :
+Please specify format in kable. kableExtra can customize either HTML or LaTeX
+outputs. See https://haozhu233.github.io/kableExtra/ for details.</code></pre>
+<table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>Attribute</p>
-</th>
-<th style="text-align:right;">
-<p>Alpha’s Mean</p>
-</th>
-<th style="text-align:right;">
-<p>Factor 1</p>
-</th>
-<th style="text-align:right;">
-<p>Mean x Factor 1</p>
-</th>
-<th style="text-align:right;">
-<p>Factor 2</p>
-</th>
-<th style="text-align:right;">
-<p>Mean x Factor 2</p>
-</th>
+<tr class="header">
+<th align="left">Attribute</th>
+<th align="right">Alpha’s Mean</th>
+<th align="right">Factor 1</th>
+<th align="right">Mean x Factor 1</th>
+<th align="right">Factor 2</th>
+<th align="right">Mean x Factor 2</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>perform</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-1.2952</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.0490</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0635</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.4502</p>
-</td>
-<td style="text-align:right;">
-<p>-0.5831</p>
-</td>
+<tr class="odd">
+<td align="left">perform</td>
+<td align="right">-1.2952</td>
+<td align="right">0.0490</td>
+<td align="right">-0.0635</td>
+<td align="right">0.4502</td>
+<td align="right">-0.5831</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>leader</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.7840</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.0459</p>
-</td>
-<td style="text-align:right;">
-<p>0.0360</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.5271</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4133</p>
-</td>
+<tr class="even">
+<td align="left">leader</td>
+<td align="right">-0.7840</td>
+<td align="right">-0.0459</td>
+<td align="right">0.0360</td>
+<td align="right">0.5271</td>
+<td align="right">-0.4133</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>lattech</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.5696</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.4645</p>
-</td>
-<td style="text-align:right;">
-<p>-0.2646</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.0234</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0133</p>
-</td>
+<tr class="odd">
+<td align="left">lattech</td>
+<td align="right">0.5696</td>
+<td align="right">-0.4645</td>
+<td align="right">-0.2646</td>
+<td align="right">-0.0234</td>
+<td align="right">-0.0133</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>fun</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>1.0862</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.1081</p>
-</td>
-<td style="text-align:right;">
-<p>-0.1174</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.4864</p>
-</td>
-<td style="text-align:right;">
-<p>-0.5283</p>
-</td>
+<tr class="even">
+<td align="left">fun</td>
+<td align="right">1.0862</td>
+<td align="right">-0.1081</td>
+<td align="right">-0.1174</td>
+<td align="right">-0.4864</td>
+<td align="right">-0.5283</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>serious</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-1.2024</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.0897</p>
-</td>
-<td style="text-align:right;">
-<p>0.1079</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.5185</p>
-</td>
-<td style="text-align:right;">
-<p>-0.6234</p>
-</td>
+<tr class="odd">
+<td align="left">serious</td>
+<td align="right">-1.2024</td>
+<td align="right">-0.0897</td>
+<td align="right">0.1079</td>
+<td align="right">0.5185</td>
+<td align="right">-0.6234</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>bargain</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.3347</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.4882</p>
-</td>
-<td style="text-align:right;">
-<p>0.1634</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.0062</p>
-</td>
-<td style="text-align:right;">
-<p>0.0021</p>
-</td>
+<tr class="even">
+<td align="left">bargain</td>
+<td align="right">0.3347</td>
+<td align="right">0.4882</td>
+<td align="right">0.1634</td>
+<td align="right">0.0062</td>
+<td align="right">0.0021</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>value</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.2434</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.5057</p>
-</td>
-<td style="text-align:right;">
-<p>0.1231</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.0634</p>
-</td>
-<td style="text-align:right;">
-<p>0.0154</p>
-</td>
+<tr class="odd">
+<td align="left">value</td>
+<td align="right">0.2434</td>
+<td align="right">0.5057</td>
+<td align="right">0.1231</td>
+<td align="right">0.0634</td>
+<td align="right">0.0154</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>trendy</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.7042</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.5157</p>
-</td>
-<td style="text-align:right;">
-<p>0.3632</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.0967</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0681</p>
-</td>
+<tr class="even">
+<td align="left">trendy</td>
+<td align="right">-0.7042</td>
+<td align="right">-0.5157</td>
+<td align="right">0.3632</td>
+<td align="right">0.0967</td>
+<td align="right">-0.0681</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:right;color: white !important;">
-<p>-1.7519</p>
-</td>
-<td style="text-align:right;color: white !important;">
-<p>-0.1810</p>
-</td>
-<td style="text-align:right;">
-<p>0.3481</p>
-</td>
-<td style="text-align:right;color: white !important;">
-<p>1.1523</p>
-</td>
-<td style="text-align:right;">
-<p>-2.2120</p>
-</td>
+<tr class="odd">
+<td align="left"></td>
+<td align="right">-1.7519</td>
+<td align="right">-0.1810</td>
+<td align="right">0.3481</td>
+<td align="right">1.1523</td>
+<td align="right">-2.2120</td>
 </tr>
 </tbody>
 </table></li>
 <li><p>Use factor scores for each brand as coordinates on the perceptual map</p>
 <table>
 <thead>
-<tr>
-<th style="text-align:left;">
-<p>brand</p>
-</th>
-<th style="text-align:right;">
-<p>scr1</p>
-</th>
-<th style="text-align:right;">
-<p>scr2</p>
-</th>
+<tr class="header">
+<th align="left">brand</th>
+<th align="right">scr1</th>
+<th align="right">scr2</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-<p>Alpha</p>
-</td>
-<td style="text-align:right;">
-<p>0.3480</p>
-</td>
-<td style="text-align:right;">
-<p>-2.2120</p>
-</td>
+<tr class="odd">
+<td align="left">Alpha</td>
+<td align="right">0.3480</td>
+<td align="right">-2.2120</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Beta</p>
-</td>
-<td style="text-align:right;">
-<p>-0.8181</p>
-</td>
-<td style="text-align:right;">
-<p>3.1213</p>
-</td>
+<tr class="even">
+<td align="left">Beta</td>
+<td align="right">-0.8181</td>
+<td align="right">3.1213</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Delta</p>
-</td>
-<td style="text-align:right;">
-<p>-1.9904</p>
-</td>
-<td style="text-align:right;">
-<p>-1.5338</p>
-</td>
+<tr class="odd">
+<td align="left">Delta</td>
+<td align="right">-1.9904</td>
+<td align="right">-1.5338</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Eta</p>
-</td>
-<td style="text-align:right;">
-<p>0.1985</p>
-</td>
-<td style="text-align:right;">
-<p>-0.3866</p>
-</td>
+<tr class="even">
+<td align="left">Eta</td>
+<td align="right">0.1985</td>
+<td align="right">-0.3866</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Gamma</p>
-</td>
-<td style="text-align:right;">
-<p>-0.7339</p>
-</td>
-<td style="text-align:right;">
-<p>2.8111</p>
-</td>
+<tr class="odd">
+<td align="left">Gamma</td>
+<td align="right">-0.7339</td>
+<td align="right">2.8111</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Kappa</p>
-</td>
-<td style="text-align:right;">
-<p>2.6707</p>
-</td>
-<td style="text-align:right;">
-<p>0.7768</p>
-</td>
+<tr class="even">
+<td align="left">Kappa</td>
+<td align="right">2.6707</td>
+<td align="right">0.7768</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Lambda</p>
-</td>
-<td style="text-align:right;">
-<p>3.4634</p>
-</td>
-<td style="text-align:right;">
-<p>0.5167</p>
-</td>
+<tr class="odd">
+<td align="left">Lambda</td>
+<td align="right">3.4634</td>
+<td align="right">0.5167</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Sigma</p>
-</td>
-<td style="text-align:right;">
-<p>-2.0978</p>
-</td>
-<td style="text-align:right;">
-<p>-0.8910</p>
-</td>
+<tr class="even">
+<td align="left">Sigma</td>
+<td align="right">-2.0978</td>
+<td align="right">-0.8910</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Theta</p>
-</td>
-<td style="text-align:right;">
-<p>-1.3777</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4682</p>
-</td>
+<tr class="odd">
+<td align="left">Theta</td>
+<td align="right">-1.3777</td>
+<td align="right">-0.4682</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-<p>Zeta</p>
-</td>
-<td style="text-align:right;">
-<p>0.3373</p>
-</td>
-<td style="text-align:right;">
-<p>-1.7343</p>
-</td>
+<tr class="even">
+<td align="left">Zeta</td>
+<td align="right">0.3373</td>
+<td align="right">-1.7343</td>
 </tr>
 </tbody>
 </table></li>
@@ -2483,106 +2019,60 @@ Figure 6.3: Scree Plot (<a href="#figure-reffigt06scree">R code</a>)
 <caption>
 <span id="tab:t06pca02">Table 6.4: </span> Rotated Factor Loadings (<a href="positioning.html#table-reftabt06pca02">R code</a>)
 </caption>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<pre><code>Warning in kable_styling(., &quot;basic&quot;, full_width = FALSE): Please specify format
+in kable. kableExtra can customize either HTML or LaTeX outputs. See https://
+haozhu233.github.io/kableExtra/ for details.</code></pre>
+<pre><code>Warning in column_spec(., 2, background = ifelse(abs(ff.2comp$rotated[, : Please
+specify format in kable. kableExtra can customize either HTML or LaTeX outputs.
+See https://haozhu233.github.io/kableExtra/ for details.</code></pre>
+<pre><code>Warning in column_spec(., 3, background = ifelse(abs(ff.2comp$rotated[, : Please
+specify format in kable. kableExtra can customize either HTML or LaTeX outputs.
+See https://haozhu233.github.io/kableExtra/ for details.</code></pre>
+<table>
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-PC1
-</th>
-<th style="text-align:right;">
-PC2
-</th>
-<th style="text-align:right;">
-Unexplained
-</th>
+<tr class="header">
+<th align="left"></th>
+<th align="right">PC1</th>
+<th align="right">PC2</th>
+<th align="right">Unexplained</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-clean_neg
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
-0.5398
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.0824
-</td>
-<td style="text-align:right;">
-0.0829
-</td>
+<tr class="odd">
+<td align="left">clean_neg</td>
+<td align="right">0.5398</td>
+<td align="right">-0.0824</td>
+<td align="right">0.0829</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-conv
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0920
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
--0.6118
-</td>
-<td style="text-align:right;">
-0.0803
-</td>
+<tr class="even">
+<td align="left">conv</td>
+<td align="right">0.0920</td>
+<td align="right">-0.6118</td>
+<td align="right">0.0803</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-healthy
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
--0.5103
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0374
-</td>
-<td style="text-align:right;">
-0.2297
-</td>
+<tr class="odd">
+<td align="left">healthy</td>
+<td align="right">-0.5103</td>
+<td align="right">0.0374</td>
+<td align="right">0.2297</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-variety_neg
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.3231
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.2670
-</td>
-<td style="text-align:right;">
-0.3916
-</td>
+<tr class="even">
+<td align="left">variety_neg</td>
+<td align="right">-0.3231</td>
+<td align="right">0.2670</td>
+<td align="right">0.3916</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-value
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.1057
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
--0.7018
-</td>
-<td style="text-align:right;">
-0.0738
-</td>
+<tr class="odd">
+<td align="left">value</td>
+<td align="right">-0.1057</td>
+<td align="right">-0.7018</td>
+<td align="right">0.0738</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-taste
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
--0.5694
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.2316
-</td>
-<td style="text-align:right;">
-0.2300
-</td>
+<tr class="even">
+<td align="left">taste</td>
+<td align="right">-0.5694</td>
+<td align="right">-0.2316</td>
+<td align="right">0.2300</td>
 </tr>
 </tbody>
 </table></li>
@@ -2646,60 +2136,60 @@ Figure 6.5: Joint Space Map (<a href="positioning.html#figure-reffigt06prefmap02
 <h2><span class="header-section-number">6.9</span> R Code</h2>
 <div id="figure-reffigt06scree01" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="positioning.html#fig:t06scree01">6.3</a></h3>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="positioning.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Call plot from previously store numfact object (from output of call to &#39;pcaex&#39;)</span></span>
-<span id="cb96-2"><a href="positioning.html#cb96-2" aria-hidden="true" tabindex="-1"></a>numfact<span class="sc">$</span>plot</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="positioning.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Call plot from previously store numfact object (from output of call to &#39;pcaex&#39;)</span></span>
+<span id="cb109-2"><a href="positioning.html#cb109-2" aria-hidden="true" tabindex="-1"></a>numfact<span class="sc">$</span>plot</span></code></pre></div>
 </div>
 <div id="figure-reffigt06prefmap02" class="section level3 unlisted unnumbered">
 <h3>Figure <a href="positioning.html#fig:t06prefmap02">6.5</a></h3>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="positioning.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">percmap</span>(ffpos, <span class="co"># Data</span></span>
-<span id="cb97-2"><a href="positioning.html#cb97-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">group=</span><span class="st">&quot;rest&quot;</span>,  <span class="co"># Brand/Group variable </span></span>
-<span id="cb97-3"><a href="positioning.html#cb97-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>)  <span class="co"># Preference variable</span></span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="positioning.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">percmap</span>(ffpos, <span class="co"># Data</span></span>
+<span id="cb110-2"><a href="positioning.html#cb110-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">group=</span><span class="st">&quot;rest&quot;</span>,  <span class="co"># Brand/Group variable </span></span>
+<span id="cb110-3"><a href="positioning.html#cb110-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>)  <span class="co"># Preference variable</span></span></code></pre></div>
 </div>
 <div id="table-reftabt06examine" class="section level3 unlisted unnumbered">
 <h3>Table <a href="positioning.html#tab:t06examine">6.1</a></h3>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="positioning.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe of attributes</span></span>
-<span id="cb98-2"><a href="positioning.html#cb98-2" aria-hidden="true" tabindex="-1"></a>ffpos <span class="ot">&lt;-</span> ffattrib <span class="sc">%&gt;%</span></span>
-<span id="cb98-3"><a href="positioning.html#cb98-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">clean_neg=</span><span class="dv">6</span><span class="sc">-</span>clean,          <span class="co"># Reverse code &#39;clean&#39;</span></span>
-<span id="cb98-4"><a href="positioning.html#cb98-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">variety_neg=</span><span class="dv">6</span><span class="sc">-</span>variety) <span class="sc">%&gt;%</span>  <span class="co"># Reverse code &#39;variety&#39;</span></span>
-<span id="cb98-5"><a href="positioning.html#cb98-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(rest, clean_neg, conv, healthy,  <span class="co"># Select needed columns</span></span>
-<span id="cb98-6"><a href="positioning.html#cb98-6" aria-hidden="true" tabindex="-1"></a>         variety_neg, value, taste, pref)   <span class="co"># Include preference also</span></span>
-<span id="cb98-7"><a href="positioning.html#cb98-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb98-8"><a href="positioning.html#cb98-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Examine data</span></span>
-<span id="cb98-9"><a href="positioning.html#cb98-9" aria-hidden="true" tabindex="-1"></a>ffpos <span class="sc">%&gt;%</span></span>
-<span id="cb98-10"><a href="positioning.html#cb98-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(rest) <span class="sc">%&gt;%</span></span>
-<span id="cb98-11"><a href="positioning.html#cb98-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>pref) <span class="sc">%&gt;%</span>  <span class="co"># Don&#39;t examine preference</span></span>
-<span id="cb98-12"><a href="positioning.html#cb98-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(mean)   <span class="co"># &#39;summarise_all()&#39; summarizes all variables</span></span>
-<span id="cb98-13"><a href="positioning.html#cb98-13" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb98-14"><a href="positioning.html#cb98-14" aria-hidden="true" tabindex="-1"></a>ffpos <span class="sc">%&gt;%</span></span>
-<span id="cb98-15"><a href="positioning.html#cb98-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(rest) <span class="sc">%&gt;%</span></span>
-<span id="cb98-16"><a href="positioning.html#cb98-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>pref) <span class="sc">%&gt;%</span>  <span class="co"># Don&#39;t examine preference</span></span>
-<span id="cb98-17"><a href="positioning.html#cb98-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(sd)</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="positioning.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe of attributes</span></span>
+<span id="cb111-2"><a href="positioning.html#cb111-2" aria-hidden="true" tabindex="-1"></a>ffpos <span class="ot">&lt;-</span> ffattrib <span class="sc">%&gt;%</span></span>
+<span id="cb111-3"><a href="positioning.html#cb111-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">clean_neg=</span><span class="dv">6</span><span class="sc">-</span>clean,          <span class="co"># Reverse code &#39;clean&#39;</span></span>
+<span id="cb111-4"><a href="positioning.html#cb111-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">variety_neg=</span><span class="dv">6</span><span class="sc">-</span>variety) <span class="sc">%&gt;%</span>  <span class="co"># Reverse code &#39;variety&#39;</span></span>
+<span id="cb111-5"><a href="positioning.html#cb111-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(rest, clean_neg, conv, healthy,  <span class="co"># Select needed columns</span></span>
+<span id="cb111-6"><a href="positioning.html#cb111-6" aria-hidden="true" tabindex="-1"></a>         variety_neg, value, taste, pref)   <span class="co"># Include preference also</span></span>
+<span id="cb111-7"><a href="positioning.html#cb111-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb111-8"><a href="positioning.html#cb111-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Examine data</span></span>
+<span id="cb111-9"><a href="positioning.html#cb111-9" aria-hidden="true" tabindex="-1"></a>ffpos <span class="sc">%&gt;%</span></span>
+<span id="cb111-10"><a href="positioning.html#cb111-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(rest) <span class="sc">%&gt;%</span></span>
+<span id="cb111-11"><a href="positioning.html#cb111-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>pref) <span class="sc">%&gt;%</span>  <span class="co"># Don&#39;t examine preference</span></span>
+<span id="cb111-12"><a href="positioning.html#cb111-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(mean)   <span class="co"># &#39;summarise_all()&#39; summarizes all variables</span></span>
+<span id="cb111-13"><a href="positioning.html#cb111-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb111-14"><a href="positioning.html#cb111-14" aria-hidden="true" tabindex="-1"></a>ffpos <span class="sc">%&gt;%</span></span>
+<span id="cb111-15"><a href="positioning.html#cb111-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(rest) <span class="sc">%&gt;%</span></span>
+<span id="cb111-16"><a href="positioning.html#cb111-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>pref) <span class="sc">%&gt;%</span>  <span class="co"># Don&#39;t examine preference</span></span>
+<span id="cb111-17"><a href="positioning.html#cb111-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(sd)</span></code></pre></div>
 </div>
 <div id="table-reftabt06correlation" class="section level3 unlisted unnumbered">
 <h3>Table <a href="positioning.html#tab:t06correlation">6.2</a></h3>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="positioning.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation matrix on only continuous items minus preference</span></span>
-<span id="cb99-2"><a href="positioning.html#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(ffpos[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">8</span>)])   </span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="positioning.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation matrix on only continuous items minus preference</span></span>
+<span id="cb112-2"><a href="positioning.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(ffpos[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">8</span>)])   </span></code></pre></div>
 </div>
 <div id="table-reftabt06pca01" class="section level3 unlisted unnumbered">
 <h3>Table <a href="positioning.html#tab:t06pca01">6.3</a></h3>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="positioning.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load user defined function</span></span>
-<span id="cb100-2"><a href="positioning.html#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic06/pcaex.R&quot;</span>)  </span>
-<span id="cb100-3"><a href="positioning.html#cb100-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb100-4"><a href="positioning.html#cb100-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use user defined function and store results</span></span>
-<span id="cb100-5"><a href="positioning.html#cb100-5" aria-hidden="true" tabindex="-1"></a>numfact <span class="ot">&lt;-</span> <span class="fu">pcaex</span>(ffpos, <span class="co"># Data</span></span>
-<span id="cb100-6"><a href="positioning.html#cb100-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">group=</span><span class="st">&quot;rest&quot;</span>, <span class="co"># Group/Brand variable</span></span>
-<span id="cb100-7"><a href="positioning.html#cb100-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>)  <span class="co"># Preference variable (if it exists)</span></span>
-<span id="cb100-8"><a href="positioning.html#cb100-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb100-9"><a href="positioning.html#cb100-9" aria-hidden="true" tabindex="-1"></a>numfact<span class="sc">$</span>table  <span class="co"># Output the table</span></span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="positioning.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load user defined function</span></span>
+<span id="cb113-2"><a href="positioning.html#cb113-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic06/pcaex.R&quot;</span>)  </span>
+<span id="cb113-3"><a href="positioning.html#cb113-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb113-4"><a href="positioning.html#cb113-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use user defined function and store results</span></span>
+<span id="cb113-5"><a href="positioning.html#cb113-5" aria-hidden="true" tabindex="-1"></a>numfact <span class="ot">&lt;-</span> <span class="fu">pcaex</span>(ffpos, <span class="co"># Data</span></span>
+<span id="cb113-6"><a href="positioning.html#cb113-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">group=</span><span class="st">&quot;rest&quot;</span>, <span class="co"># Group/Brand variable</span></span>
+<span id="cb113-7"><a href="positioning.html#cb113-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>)  <span class="co"># Preference variable (if it exists)</span></span>
+<span id="cb113-8"><a href="positioning.html#cb113-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb113-9"><a href="positioning.html#cb113-9" aria-hidden="true" tabindex="-1"></a>numfact<span class="sc">$</span>table  <span class="co"># Output the table</span></span></code></pre></div>
 </div>
 <div id="table-reftabt06pca02" class="section level3 unlisted unnumbered">
 <h3>Table <a href="positioning.html#tab:t06pca02">6.4</a></h3>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="positioning.html#cb101-1" aria-hidden="true" tabindex="-1"></a>ff<span class="fl">.2</span>comp <span class="ot">&lt;-</span> <span class="fu">pcaex</span>(ffpos, <span class="co"># Data</span></span>
-<span id="cb101-2"><a href="positioning.html#cb101-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">group=</span><span class="st">&quot;rest&quot;</span>,  <span class="co"># Group/Brand variable</span></span>
-<span id="cb101-3"><a href="positioning.html#cb101-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>,  <span class="co"># Preference variable (if it exists)</span></span>
-<span id="cb101-4"><a href="positioning.html#cb101-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">comp=</span><span class="dv">2</span>)  Number of components</span>
-<span id="cb101-5"><a href="positioning.html#cb101-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb101-6"><a href="positioning.html#cb101-6" aria-hidden="true" tabindex="-1"></a>ff<span class="fl">.2</span>comp<span class="sc">$</span>rotated  <span class="co"># Request rotated factor loading table</span></span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="positioning.html#cb114-1" aria-hidden="true" tabindex="-1"></a>ff<span class="fl">.2</span>comp <span class="ot">&lt;-</span> <span class="fu">pcaex</span>(ffpos, <span class="co"># Data</span></span>
+<span id="cb114-2"><a href="positioning.html#cb114-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">group=</span><span class="st">&quot;rest&quot;</span>,  <span class="co"># Group/Brand variable</span></span>
+<span id="cb114-3"><a href="positioning.html#cb114-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>,  <span class="co"># Preference variable (if it exists)</span></span>
+<span id="cb114-4"><a href="positioning.html#cb114-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">comp=</span><span class="dv">2</span>)  Number of components</span>
+<span id="cb114-5"><a href="positioning.html#cb114-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb114-6"><a href="positioning.html#cb114-6" aria-hidden="true" tabindex="-1"></a>ff<span class="fl">.2</span>comp<span class="sc">$</span>rotated  <span class="co"># Request rotated factor loading table</span></span></code></pre></div>
 
 </div>
 </div>
