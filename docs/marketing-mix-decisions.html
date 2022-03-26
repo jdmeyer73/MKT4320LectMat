@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Topic 6 Positioning | MKT 4320: Marketing Analytics</title>
+  <title>Topic 9 Marketing Mix Decisions | MKT 4320: Marketing Analytics</title>
   <meta name="description" content="Lecture materials for MKT 4320 in bookdown style." />
   <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Topic 6 Positioning | MKT 4320: Marketing Analytics" />
+  <meta property="og:title" content="Topic 9 Marketing Mix Decisions | MKT 4320: Marketing Analytics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Topic 6 Positioning | MKT 4320: Marketing Analytics" />
+  <meta name="twitter:title" content="Topic 9 Marketing Mix Decisions | MKT 4320: Marketing Analytics" />
   
   <meta name="twitter:description" content="Lecture materials for MKT 4320 in bookdown style." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="segmentation.html"/>
-<link rel="next" href="customer-choice.html"/>
+<link rel="prev" href="conjoint-analysis.html"/>
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -571,2219 +571,762 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="positioning" class="section level1" number="6">
-<h1><span class="header-section-number">Topic 6</span> Positioning</h1>
-<div id="r-packages-and-datasets-for-topic-5-1" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> R Packages and Datasets for Topic 5</h2>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="positioning.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
-<span id="cb95-2"><a href="positioning.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
-<span id="cb95-3"><a href="positioning.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
-<span id="cb95-4"><a href="positioning.html#cb95-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
-<span id="cb95-5"><a href="positioning.html#cb95-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
-<span id="cb95-6"><a href="positioning.html#cb95-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic06/ffattrib.rdata&quot;</span>)</span></code></pre></div>
+<div id="marketing-mix-decisions" class="section level1" number="9">
+<h1><span class="header-section-number">Topic 9</span> Marketing Mix Decisions</h1>
+<div id="r-packages-and-datasets-for-topic-9" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> R Packages and Datasets for Topic 9</h2>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="marketing-mix-decisions.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb136-2"><a href="marketing-mix-decisions.html#cb136-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb136-3"><a href="marketing-mix-decisions.html#cb136-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb136-4"><a href="marketing-mix-decisions.html#cb136-4" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic09/adsales.rdata&quot;</span>)</span>
+<span id="cb136-5"><a href="marketing-mix-decisions.html#cb136-5" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic09/cereal.rdata&quot;</span>)</span>
+<span id="cb136-6"><a href="marketing-mix-decisions.html#cb136-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic09/cheese.rdata&quot;</span>)</span></code></pre></div>
 </div>
-<div id="positioning-overview" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Positioning Overview</h2>
-<div id="the-concept-of-positioning" class="section level3" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> The Concept of Positioning</h3>
-<ul>
-<li>Positioning is not what you do to a product</li>
-<li>Positioning is what you do to the mind of the prospect</li>
-</ul>
+<div id="overview-9" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Overview</h2>
+<div id="the-marketing-mix" class="section level3" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> The Marketing Mix</h3>
+<p>Unique blend of <strong>product</strong>, <strong>place</strong>, <strong>promotion</strong>, and <strong>pricing</strong> strategies designed to produce mutually satisfying exchanges with a target market.</p>
 </div>
-<div id="position-vs.-positioning" class="section level3" number="6.2.2">
-<h3><span class="header-section-number">6.2.2</span> Position vs. Positioning</h3>
+<div id="market-response-models" class="section level3" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Market Response Models</h3>
+<p>Marketing Inputs <span class="math inline">\(\rightarrow\)</span> The Market <span class="math inline">\(\rightarrow\)</span> Marketing Outputs</p>
 <ul>
-<li><strong><em>Position</em></strong> The place a brand, product line, or organization in general occupies in consumers’ minds relative to competing offerings.</li>
-<li><strong><em>Positioning</em></strong> Developing a specific marketing mix to influence potential customers’ overall perception of a brand, product line, or organization in general.</li>
-</ul>
-</div>
-<div id="difficulty-of-positioning" class="section level3" number="6.2.3">
-<h3><span class="header-section-number">6.2.3</span> Difficulty of Positioning</h3>
+<li>Marketing inputs include:
 <ul>
-<li>Positioning is easy when your product is clearly superior in an important way…
-<ul>
-<li>But few are</li>
+<li>Price</li>
+<li>Ad Spending</li>
+<li>Promotion Spending</li>
 </ul></li>
-<li>Most product markets have a lot of parity, so…
+<li>Marketing outputs include:
 <ul>
-<li>Positioning is more important <em>and</em> more difficult</li>
+<li>Sales</li>
+<li>Market share</li>
+<li>Profit</li>
 </ul></li>
 </ul>
 </div>
-<div id="competitive-market-structure" class="section level3" number="6.2.4">
-<h3><span class="header-section-number">6.2.4</span> Competitive Market Structure</h3>
+<div id="marketing-decision-models" class="section level3" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Marketing Decision Models</h3>
+<p><img src="Topic09/MktgDecModels.png" width="100%" /></p>
+</div>
+<div id="advantages-of-response-models" class="section level3" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> Advantages of Response Models</h3>
+<ol style="list-style-type: decimal">
+<li>Allows marketers to identify how marketing efforts affect outcomes
+<img src="Topic09/ResponseModelsShapes.png" width="100%" /></li>
+<li>Marketers can answer resources allocation questions</li>
+<li>Marketers can determine relative impacts to allocate resources optimally</li>
+<li>Marketers can capture the effects of competitive marketing efforts</li>
+</ol>
+</div>
+</div>
+<div id="elasticity" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Elasticity</h2>
+<div id="elasticity-of-demand" class="section level3" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Elasticity of Demand</h3>
+<p>Consumers’ responsiveness or sensitivity to marketing changes.</p>
+<p><span class="math inline">\(E=\frac{\text{% Change in Demand}}{\text{% Change in Marketing}}\)</span></p>
 <ul>
-<li>Difficulty of positioning depends on level of product competitiveness
+<li>Elastic Demand
 <ul>
-<li>Easy positioning…
-<ul>
-<li>Product Superiority: Clearly superior in many important ways</li>
+<li><span class="math inline">\(E&gt;1\)</span></li>
+<li>Consumers sensitive to marketing changes</li>
 </ul></li>
-<li>“In the middle” positioning…
+<li>Inelastic Demand
 <ul>
-<li>Product Differentiation: One or more specific features superior to the competition (but otherwise similar)<br />
+<li><span class="math inline">\(E&lt;1\)</span></li>
+<li>Consumers insensitive to marketing changes</li>
+</ul></li>
+</ul>
+</div>
+<div id="inelastic-demand" class="section level3" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Inelastic Demand</h3>
+<p>Marketing changes will not significantly affect demand for the product</p>
+<ul>
+<li><span class="math inline">\(PED=\frac{\text{% Change in Demand}}{\text{% Change in Price}}=\frac{8.2\%}{10\%}=.82&lt;1\)</span><br />
+<img src="Topic09/PED1.png" width="175" /></li>
+<li><span class="math inline">\(AED=\frac{\text{% Change in Demand}}{\text{% Change in Ad Spending}}=\frac{9.3\%}{10\%}=.93&lt;1\)</span><br />
+<img src="Topic09/AED1.png" width="200" /></li>
+</ul>
+</div>
+<div id="elastic-demand" class="section level3" number="9.3.3">
+<h3><span class="header-section-number">9.3.3</span> Elastic Demand</h3>
+<p>Marketing changes will significantly affect demand for the product</p>
+<ul>
+<li><span class="math inline">\(PED=\frac{\text{% Change in Demand}}{\text{% Change in Price}}=\frac{15\%}{10\%}=1.5&gt;1\)</span><br />
+<img src="Topic09/PED2.png" width="175" /></li>
+<li><span class="math inline">\(AED=\frac{\text{% Change in Demand}}{\text{% Change in Ad Spending}}=\frac{12.9\%}{10\%}=1.29&gt;1\)</span><br />
+<img src="Topic09/AED2.png" width="175" /></li>
+</ul>
+</div>
+</div>
+<div id="modeling-advertising-response" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Modeling Advertising Response</h2>
+<p><strong>Problem 1</strong>: an additive model (<span class="math inline">\(sales=\alpha+\beta\times adv\)</span>) isn’t appropriate to represent a concave relationship</p>
+<p><strong>Problem 2</strong>: using linear regression on a concave form (<span class="math inline">\(sales=e^\alpha adv^\beta\)</span>) won’t work</p>
+<p><strong>Solution</strong>: transform the equation using the natural log (<span class="math inline">\(ln(sales)=\alpha+\beta\times ln(adv)\)</span>)</p>
+<p><strong>Result</strong>: allows the use of linear regression to model the concave relationship</p>
+<p><span class="math inline">\(ln(sales)=\alpha+\beta\times ln(adv)\)</span></p>
+<ul>
+<li><span class="math inline">\(\alpha\)</span> is the <span class="math inline">\(ln(sales)\)</span> when <span class="math inline">\(adv\approx0\)</span>
+<ul>
+<li><span class="math inline">\(e^\alpha\)</span> is the <span class="math inline">\(sales\)</span> when <span class="math inline">\(adv\approx0\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\beta\)</span> is the effect on sales for a <span class="math inline">\(1\%\)</span> increase in <span class="math inline">\(adv\)</span>
+<ul>
+<li>In other words, <span class="math inline">\(\beta\)</span> is the advertising elasticity of demand</li>
+<li><span class="math inline">\(\beta\)</span> <em>should be</em> positive</li>
+<li>To calculate the effect on <span class="math inline">\(sales\)</span> for an <span class="math inline">\(x\%\)</span> increase, calculate <span class="math inline">\(1.x^\beta -1\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="modeling-price-response" class="section level2" number="9.5">
+<h2><span class="header-section-number">9.5</span> Modeling Price Response</h2>
+<p><strong>Problem 1</strong>: an additive model (<span class="math inline">\(sales=\alpha+\beta\times price\)</span>) isn’t appropriate to represent a concave relationship</p>
+<p><strong>Problem 2</strong>: using linear regression on a concave form (<span class="math inline">\(sales=e^\alpha price^\beta\)</span>) won’t work</p>
+<p><strong>Solution</strong>: transform the equation using the natural log (<span class="math inline">\(ln(sales)=\alpha+\beta\times ln(price)\)</span>)</p>
+<p><strong>Result</strong>: allows the use of linear regression to model the concave relationship</p>
+<p><span class="math inline">\(ln(sales)=\alpha+\beta\times ln(price)\)</span></p>
+<ul>
+<li><span class="math inline">\(\alpha\)</span> is the <span class="math inline">\(ln(sales)\)</span> when <span class="math inline">\(price\approx0\)</span>
+<ul>
+<li><span class="math inline">\(e^\alpha\)</span> is the <span class="math inline">\(sales\)</span> when <span class="math inline">\(price\approx0\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\beta\)</span> is the effect on sales for a <span class="math inline">\(1\%\)</span> increase in <span class="math inline">\(price\)</span>
+<ul>
+<li>In other words, <span class="math inline">\(\beta\)</span> is the price elasticity of demand</li>
+<li><span class="math inline">\(\beta\)</span> <em>should be</em> negative</li>
+<li>To calculate the effect on <span class="math inline">\(sales\)</span> for an <span class="math inline">\(x\%\)</span> increase, calculate <span class="math inline">\(1.x^\beta -1\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="modeling-advertising-response-example" class="section level2" number="9.6">
+<h2><span class="header-section-number">9.6</span> Modeling Advertising Response Example</h2>
+<div id="data-4" class="section level3" number="9.6.1">
+<h3><span class="header-section-number">9.6.1</span> Data</h3>
+<ul>
+<li>Advertising and Sales data for 200 firms</li>
+<li>DV: Sales (in millions), <span class="math inline">\(sales\)</span></li>
+<li>IVs:
+<ul>
+<li>TV Advertising (in 000s), <span class="math inline">\(tv\)</span></li>
+<li>Radio Advertising (in 000s), <span class="math inline">\(radio\)</span></li>
+<li>Paper Advertising (in 000s), <span class="math inline">\(paper\)</span></li>
+</ul></li>
+<li>Model: <span class="math inline">\(sales=e^\alpha tv^{\beta_1} radio^{\beta_2} paper^{\beta_3}\)</span></li>
+</ul>
+</div>
+<div id="scatterplots-1" class="section level3" number="9.6.2">
+<h3><span class="header-section-number">9.6.2</span> Scatterplots</h3>
+<ul>
+<li>Fit lines show the sales and advertising relationships are not linear</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:t09scatter01"></span>
+<img src="_main_files/figure-html/t09scatter01-1.png" alt="Advertising-Sales Scatterplots ([R code](#figure-reffigt09scatter01))" width="672" />
+<p class="caption">
+Figure 9.1: Advertising-Sales Scatterplots (<a href="marketing-mix-decisions.html#figure-reffigt09scatter01">R code</a>)
+</p>
+</div>
+</div>
+<div id="estimation" class="section level3" number="9.6.3">
+<h3><span class="header-section-number">9.6.3</span> Estimation</h3>
+<ul>
+<li>Transform data to use the multiplicative model
+<ul>
+<li><span class="math inline">\(sales=e^\alpha tv^{\beta_1} radio^{\beta_2} paper^{\beta_3}\)</span><br><span class="math inline">\(\rightarrow\)</span> Take natural log of both sides</li>
+<li><span class="math inline">\(ln(sales)=ln(e^\alpha tv^{\beta_1} radio^{\beta_2} paper^{\beta_3})\)</span><br><span class="math inline">\(ln(sales)=\alpha+\beta_1ln(tv)+\beta_2ln(radio)+\beta_3ln(paper)\)</span></li>
+<li>NOTE:
+<ul>
+<li><span class="math inline">\(ln(x^y)=y\times ln(x)\)</span></li>
+<li><span class="math inline">\(ln(x\times y)=ln(x)+ln(y)\)</span></li>
+<li><span class="math inline">\(ln(e)=1\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="results-2" class="section level3" number="9.6.4">
+<h3><span class="header-section-number">9.6.4</span> Results</h3>
+<caption>
+<span id="tab:t09adresp1">Table 9.1: </span> Advertising Response Results (<a href="#table-reftabt09adresp1">R code</a>)
+</caption>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+F(3,196)
+</td>
+<td style="text-align:right;">
+903.5021
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+R²
+</td>
+<td style="text-align:right;">
+0.9326
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Adj. R²
+</td>
+<td style="text-align:right;">
+0.9315
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Est.
+</th>
+<th style="text-align:right;">
+S.E.
+</th>
+<th style="text-align:right;">
+t val.
+</th>
+<th style="text-align:right;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+0.4013
+</td>
+<td style="text-align:right;">
+0.0458
+</td>
+<td style="text-align:right;">
+8.7591
+</td>
+<td style="text-align:right;">
+0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+log(tv)
+</td>
+<td style="text-align:right;">
+0.3498
+</td>
+<td style="text-align:right;">
+0.0077
+</td>
+<td style="text-align:right;">
+45.6892
+</td>
+<td style="text-align:right;">
+0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+log(radio)
+</td>
+<td style="text-align:right;">
+0.1718
+</td>
+<td style="text-align:right;">
+0.0076
+</td>
+<td style="text-align:right;">
+22.7162
+</td>
+<td style="text-align:right;">
+0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+log(paper)
+</td>
+<td style="text-align:right;">
+0.0159
+</td>
+<td style="text-align:right;">
+0.0080
+</td>
+<td style="text-align:right;">
+1.9824
+</td>
+<td style="text-align:right;">
+0.0488
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Standard errors: OLS
+</td>
+</tr>
+</tfoot>
+</table>
+<ul>
+<li>Model is significant (<span class="math inline">\(p&lt;.0001\)</span>) and explains about <span class="math inline">\(93\%\)</span> of the variance</li>
+<li>All three types of advertising are significant and in the expected direction</li>
+<li>Advertising elasticities:
+<ul>
+<li>Television: <span class="math inline">\(.350\)</span> (inelastic)</li>
+<li>Radio: <span class="math inline">\(.172\)</span> (inelastic)</li>
+<li>Paper: <span class="math inline">\(.016\)</span> (inelastic)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="modeling-price-response-example" class="section level2" number="9.7">
+<h2><span class="header-section-number">9.7</span> Modeling Price Response Example</h2>
+<div id="data-5" class="section level3" number="9.7.1">
+<h3><span class="header-section-number">9.7.1</span> Data</h3>
+<ul>
+<li>Price and Sales data for one cereal over 380 weeks</li>
+<li>DV: Units sold (in 000s), <span class="math inline">\(sold\)</span></li>
+<li>IV: Price (in dollars), <span class="math inline">\(price\)</span><br />
 </li>
-</ul></li>
-<li>Difficult positioning…
-<ul>
-<li>Product Parity: No essential differences from one product to another</li>
-</ul></li>
-</ul></li>
+<li>Model: <span class="math inline">\(sold=e^\alpha price^\beta\)</span></li>
 </ul>
 </div>
-<div id="positioning-with-product-parity" class="section level3" number="6.2.5">
-<h3><span class="header-section-number">6.2.5</span> Positioning with Product Parity</h3>
+<div id="scatterplot" class="section level3" number="9.7.2">
+<h3><span class="header-section-number">9.7.2</span> Scatterplot</h3>
 <ul>
-<li>Remember… Positioning is what you do to the mind of the prospect</li>
-<li>Thus… Need to create points of difference, whether:
-<ol style="list-style-type: decimal">
-<li>They exist or not</li>
-<li>They are meaningful or not</li>
-</ol></li>
+<li>Fit line show the units sold and price relationship is not linear</li>
 </ul>
+<div class="figure"><span style="display:block;" id="fig:t09scatter02"></span>
+<img src="_main_files/figure-html/t09scatter02-1.png" alt="Price-Units Sold Scatterplot ([R code](#figure-reffigt09scatter02))" width="672" />
+<p class="caption">
+Figure 9.2: Price-Units Sold Scatterplot (<a href="marketing-mix-decisions.html#figure-reffigt09scatter02">R code</a>)
+</p>
 </div>
-<div id="requirements-for-effective-positioning" class="section level3" number="6.2.6">
-<h3><span class="header-section-number">6.2.6</span> Requirements for Effective Positioning</h3>
-<ol style="list-style-type: decimal">
-<li>Uniqueness</li>
-<li>Desirability</li>
-<li>Believability</li>
-</ol>
-<p>Not all three are required… But the more there are, the more likely the positioning will be effective</p>
-<div id="uniqueness" class="section level4" number="6.2.6.1">
-<h4><span class="header-section-number">6.2.6.1</span> Uniqueness</h4>
+</div>
+<div id="estimation-1" class="section level3" number="9.7.3">
+<h3><span class="header-section-number">9.7.3</span> Estimation</h3>
 <ul>
-<li>Be different in some way</li>
-<li>Must get through the clutter
+<li>Transform data to use the multiplicative model
 <ul>
-<li>Slightly better on an important feature<br>-vs.-<br>Unique on a less important feature</li>
+<li><span class="math inline">\(sold=e^\alpha price^\beta\)</span><br><span class="math inline">\(\rightarrow\)</span> Take natural log of both sides</li>
+<li><span class="math inline">\(ln(sold)=ln(e^\alpha price^\beta)\)</span><br><span class="math inline">\(ln(sold)=\alpha+\beta ln(price)\)</span></li>
+<li>NOTE:
+<ul>
+<li><span class="math inline">\(ln(x^y)=y\times ln(x)\)</span></li>
+<li><span class="math inline">\(ln(x\times y)=ln(x)+ln(y)\)</span></li>
+<li><span class="math inline">\(ln(e)=1\)</span></li>
 </ul></li>
-<li>More brands = more difficult</li>
-<li>Find a niche that is not yet occupied</li>
-</ul>
-</div>
-<div id="desirability" class="section level4" number="6.2.6.2">
-<h4><span class="header-section-number">6.2.6.2</span> Desirability</h4>
-<ul>
-<li>Difference should be on something relatively important to the consumer
-<ul>
-<li>Example: Is being clear in the cola market important?</li>
-</ul></li>
-<li>Don’t look for any gap in the market…<br>Look for gaps that turn prospects into buyers</li>
-</ul>
-</div>
-<div id="believability" class="section level4" number="6.2.6.3">
-<h4><span class="header-section-number">6.2.6.3</span> Believability</h4>
-<ul>
-<li>Claims of superiority must be accepted</li>
-<li>Believability rests on:
-<ul>
-<li>How reasonable the claim is</li>
-<li>Objective support for the claim</li>
-</ul></li>
-<li>A common error is to strive for too many positions</li>
-</ul>
-</div>
-</div>
-<div id="steps-in-positioning" class="section level3" number="6.2.7">
-<h3><span class="header-section-number">6.2.7</span> Steps in Positioning</h3>
-<ol style="list-style-type: decimal">
-<li>Assess the positions occupied by competing products</li>
-<li>Determine the dimensions underlying these positions</li>
-<li>Choose a market position where efforts will have the greatest impact</li>
-</ol>
-<p><img src="Topic06/StepPos.png" width="50%" /></p>
-</div>
-<div id="positioning-research-methods" class="section level3" number="6.2.8">
-<h3><span class="header-section-number">6.2.8</span> Positioning Research Methods</h3>
-<div id="image-profile" class="section level4" number="6.2.8.1">
-<h4><span class="header-section-number">6.2.8.1</span> Image Profile</h4>
-<ul>
-<li>Average ratings of brands/products on a number of attributes</li>
-<li>Easy to create, but…</li>
-<li>Difficult to interpret</li>
-</ul>
-<p><img src="Topic06/ImgProf.png" width="50%" /></p>
-</div>
-<div id="quadrant-analysis" class="section level4" number="6.2.8.2">
-<h4><span class="header-section-number">6.2.8.2</span> Quadrant Analysis</h4>
-<ul>
-<li>x-axis contains the average ratings of one brand/product on a number of attributes</li>
-<li>y-axis contains the average importance of each attribute</li>
-<li>Easily shows what attributes to emphasize, but…</li>
-<li>Only looks at one brand/product at a time</li>
-</ul>
-<p><img src="Topic06/QuadAn.png" width="50%" /></p>
-</div>
-<div id="perceptual-maps" class="section level4" number="6.2.8.3">
-<h4><span class="header-section-number">6.2.8.3</span> Perceptual Maps</h4>
-<ul>
-<li>Shows the location of competing brands/ products in a “virtual” space</li>
-<li>Enable marketers to see at a glance how own brand/product relates to the competition</li>
-</ul>
-<p><img src="Topic06/PercMap.png" width="50%" /></p>
-<div id="types-of-perceptual-maps" class="section level5" number="6.2.8.3.1">
-<h5><span class="header-section-number">6.2.8.3.1</span> Types of Perceptual Maps</h5>
-<ul>
-<li>Discriminant Analysis Maps
-<ul>
-<li>Based on identifying differences between objects with respect to several variables simultaneously</li>
-</ul></li>
-<li>Multidimensional Scaling Maps
-<ul>
-<li>Based only on similarities between objects</li>
-</ul></li>
-<li>Factor Analysis Maps
-<ul>
-<li>Based on the dimensions underlying a set of variables</li>
-<li><strong>EMPHASIS OF THIS CLASS</strong></li>
 </ul></li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-<div id="factor-analysis" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Factor Analysis</h2>
-<ul>
-<li>Generic term for identifying dimensions underlying a set of variables</li>
-<li>Finds uncorrelated linear dimensions that capture the most variance in the data</li>
-<li>Main types:
-<ol style="list-style-type: decimal">
-<li>exploratory factor analysis</li>
-<li>principal components analysis</li>
-</ol></li>
-</ul>
-</div>
-<div id="principal-components-analysis-pca" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Principal Components Analysis (PCA)</h2>
-<p>Recomputes a set of variables in terms of linear equations (components) that capture linear relationships in the data
-* First component captures as much variance as possible from all variables
-* Second component captures as much variance as possible that remains
-* Continue until as many components as variables
-* Analyst retains/analyzes a subset of components</p>
-<div id="pca-process" class="section level3" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> PCA Process</h3>
-<ol style="list-style-type: decimal">
-<li>Determine number of factors to retain</li>
-<li>Rotate factors to aid interpretation</li>
-<li>Interpret factors</li>
-<li>Use results in further analysis (e.g., perceptual maps)</li>
-</ol>
-<div id="step-1-determine-number-of-factors-to-retain" class="section level4" number="6.4.1.1">
-<h4><span class="header-section-number">6.4.1.1</span> Step 1: Determine number of factors to retain</h4>
-<ul>
-<li>How many factors?
-<ul>
-<li>Eigenvalues &gt; 1
-<ul>
-<li>E.g., Keep two components, accounting for about 85% of variation</li>
-</ul></li>
-</ul>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:right;">
-Component
-</th>
-<th style="text-align:right;">
-Eigenvalue
-</th>
-<th style="text-align:right;">
-Difference
-</th>
-<th style="text-align:right;">
-Proporation
-</th>
-<th style="text-align:right;">
-Cumulative
-</th>
-</tr>
-</thead>
+<div id="results-3" class="section level3" number="9.7.4">
+<h3><span class="header-section-number">9.7.4</span> Results</h3>
+<caption>
+<span id="tab:t09priceresp1">Table 9.2: </span> Price Response Results (<a href="#table-reftabt09priceresp1">R code</a>)
+</caption>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
-<td style="text-align:right;">
-1
+<td style="text-align:left;font-weight: bold;">
+F(1,378)
 </td>
 <td style="text-align:right;">
-3.7574
-</td>
-<td style="text-align:right;">
-0.7588
-</td>
-<td style="text-align:right;">
-0.4697
-</td>
-<td style="text-align:right;">
-0.4697
+344.7064
 </td>
 </tr>
 <tr>
-<td style="text-align:right;">
-2
+<td style="text-align:left;font-weight: bold;">
+R²
 </td>
 <td style="text-align:right;">
-2.9986
-</td>
-<td style="text-align:right;">
-2.4108
-</td>
-<td style="text-align:right;">
-0.3748
-</td>
-<td style="text-align:right;">
-0.8445
+0.4770
 </td>
 </tr>
 <tr>
-<td style="text-align:right;">
-3
+<td style="text-align:left;font-weight: bold;">
+Adj. R²
 </td>
 <td style="text-align:right;">
-0.5878
-</td>
-<td style="text-align:right;">
-0.2561
-</td>
-<td style="text-align:right;">
-0.0735
-</td>
-<td style="text-align:right;">
-0.9180
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-0.3317
-</td>
-<td style="text-align:right;">
-0.1386
-</td>
-<td style="text-align:right;">
-0.0415
-</td>
-<td style="text-align:right;">
-0.9594
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-0.1931
-</td>
-<td style="text-align:right;">
-0.1045
-</td>
-<td style="text-align:right;">
-0.0241
-</td>
-<td style="text-align:right;">
-0.9836
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-0.0886
-</td>
-<td style="text-align:right;">
-0.0616
-</td>
-<td style="text-align:right;">
-0.0111
-</td>
-<td style="text-align:right;">
-0.9946
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-0.0270
-</td>
-<td style="text-align:right;">
-0.0112
-</td>
-<td style="text-align:right;">
-0.0034
-</td>
-<td style="text-align:right;">
-0.9980
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-0.0158
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-0.0020
-</td>
-<td style="text-align:right;">
-1.0000
+0.4756
 </td>
 </tr>
 </tbody>
 </table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Est.
+</th>
+<th style="text-align:right;">
+S.E.
+</th>
+<th style="text-align:right;">
+t val.
+</th>
+<th style="text-align:right;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+8.3844
+</td>
+<td style="text-align:right;">
+0.0600
+</td>
+<td style="text-align:right;">
+139.7515
+</td>
+<td style="text-align:right;">
+0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+log(price)
+</td>
+<td style="text-align:right;">
+-1.6960
+</td>
+<td style="text-align:right;">
+0.0913
+</td>
+<td style="text-align:right;">
+-18.5663
+</td>
+<td style="text-align:right;">
+0.0000
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Standard errors: OLS
+</td>
+</tr>
+</tfoot>
+</table>
 <ul>
-<li>Examine Scree Plot
+<li>Model is significant (<span class="math inline">\(p&lt;.0001\)</span>) and explains about <span class="math inline">\(48\%\)</span> of the variance</li>
+<li>Price is significant and in the expected direction</li>
+<li>Price elasticity: <span class="math inline">\(-1.696\)</span> (elastic)</li>
+</ul>
+</div>
+</div>
+<div id="modeling-price-and-advertising-response-example" class="section level2" number="9.8">
+<h2><span class="header-section-number">9.8</span> Modeling Price and Advertising Response Example</h2>
+<div id="data-6" class="section level3" number="9.8.1">
+<h3><span class="header-section-number">9.8.1</span> Data</h3>
 <ul>
-<li>Sometimes called an elbow plot</li>
-<li>Look for bend or kink in the plot</li>
-<li>Number of components to retain is the number prior to that kink</li>
+<li>Price, Advertising, and Sales data for a cheese product across 10 cities over about 5 years</li>
+<li>DV: Sales volume, <span class="math inline">\(vol\)</span></li>
+<li>IVs:
+<ul>
+<li>Price (in dollars), <span class="math inline">\(price\)</span><br />
+</li>
+<li>Advertising spending index, <span class="math inline">\(adv\)</span></li>
 </ul></li>
-</ul>
-<img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="672" /></li>
-</ul>
-</div>
-<div id="step-2-rotate-factors-to-aid-interpretation" class="section level4" number="6.4.1.2">
-<h4><span class="header-section-number">6.4.1.2</span> Step 2: Rotate factors to aid interpretation</h4>
-<ul>
-<li><p>Factor loadings are the correlation between each variable and each factor</p>
-<ul>
-<li>Higher loadings indicate the variable is representative of the factor</li>
-</ul></li>
-<li><p>Unfortunately, unrotated loadings may not provide a meaningful pattern to understand the factors</p>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-<p>PC1</p>
-</th>
-<th style="text-align:right;">
-<p>PC2</p>
-</th>
-<th style="text-align:right;">
-<p>Unexplained</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-<p>perform</p>
-</td>
-<td style="text-align:right;">
-<p>0.3327</p>
-</td>
-<td style="text-align:right;">
-<p>0.3073</p>
-</td>
-<td style="text-align:right;">
-<p>0.3009</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>leader</p>
-</td>
-<td style="text-align:right;">
-<p>0.3116</p>
-</td>
-<td style="text-align:right;">
-<p>0.4276</p>
-</td>
-<td style="text-align:right;">
-<p>0.0867</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>lattech</p>
-</td>
-<td style="text-align:right;">
-<p>-0.3656</p>
-</td>
-<td style="text-align:right;">
-<p>0.2875</p>
-</td>
-<td style="text-align:right;">
-<p>0.2500</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>fun</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4010</p>
-</td>
-<td style="text-align:right;">
-<p>-0.2957</p>
-</td>
-<td style="text-align:right;">
-<p>0.1335</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>serious</p>
-</td>
-<td style="text-align:right;">
-<p>0.2730</p>
-</td>
-<td style="text-align:right;">
-<p>0.4499</p>
-</td>
-<td style="text-align:right;">
-<p>0.1131</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>bargain</p>
-</td>
-<td style="text-align:right;">
-<p>0.3722</p>
-</td>
-<td style="text-align:right;">
-<p>-0.3160</p>
-</td>
-<td style="text-align:right;">
-<p>0.1801</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>value</p>
-</td>
-<td style="text-align:right;">
-<p>0.4229</p>
-</td>
-<td style="text-align:right;">
-<p>-0.2843</p>
-</td>
-<td style="text-align:right;">
-<p>0.0855</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>trendy</p>
-</td>
-<td style="text-align:right;">
-<p>-0.3253</p>
-</td>
-<td style="text-align:right;">
-<p>0.4117</p>
-</td>
-<td style="text-align:right;">
-<p>0.0941</p>
-</td>
-</tr>
-</tbody>
-</table></li>
-<li><p>Rotating the factors redistributes the variance from earlier factors to later factors to make more meaningful patterns</p></li>
-<li><p>Factor/component loading guidelines<br>
-<span class="math inline">\(\rho&lt;0.4\Longrightarrow\)</span> no loading<br>
-<span class="math inline">\(0.4\le \rho&lt;0.6\Longrightarrow\)</span> low" loading<br>
-<span class="math inline">\(\rho\ge0.6\Longrightarrow\)</span> “high” loading<br></p>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-<p>PC1</p>
-</th>
-<th style="text-align:right;">
-<p>PC2</p>
-</th>
-<th style="text-align:right;">
-<p>Unexplained</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-<p>perform</p>
-</td>
-<td style="text-align:right;">
-<p>0.0490</p>
-</td>
-<td style="text-align:right;">
-<p>0.4502</p>
-</td>
-<td style="text-align:right;">
-<p>0.3009</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>leader</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0459</p>
-</td>
-<td style="text-align:right;">
-<p>0.5271</p>
-</td>
-<td style="text-align:right;">
-<p>0.0867</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>lattech</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4645</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0234</p>
-</td>
-<td style="text-align:right;">
-<p>0.2500</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>fun</p>
-</td>
-<td style="text-align:right;">
-<p>-0.1081</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4864</p>
-</td>
-<td style="text-align:right;">
-<p>0.1335</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>serious</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0897</p>
-</td>
-<td style="text-align:right;">
-<p>0.5185</p>
-</td>
-<td style="text-align:right;">
-<p>0.1131</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>bargain</p>
-</td>
-<td style="text-align:right;">
-<p>0.4882</p>
-</td>
-<td style="text-align:right;">
-<p>0.0062</p>
-</td>
-<td style="text-align:right;">
-<p>0.1801</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>value</p>
-</td>
-<td style="text-align:right;">
-<p>0.5057</p>
-</td>
-<td style="text-align:right;">
-<p>0.0634</p>
-</td>
-<td style="text-align:right;">
-<p>0.0855</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>trendy</p>
-</td>
-<td style="text-align:right;">
-<p>-0.5157</p>
-</td>
-<td style="text-align:right;">
-<p>0.0967</p>
-</td>
-<td style="text-align:right;">
-<p>0.0941</p>
-</td>
-</tr>
-</tbody>
-</table></li>
+<li>Model: <span class="math inline">\(vol=e^\alpha price^{\beta_1} adv^{\beta_2}\)</span></li>
 </ul>
 </div>
-<div id="step-3-interpret-factors" class="section level4" number="6.4.1.3">
-<h4><span class="header-section-number">6.4.1.3</span> Step 3: Interpret factors</h4>
+<div id="scatterplot-1" class="section level3" number="9.8.2">
+<h3><span class="header-section-number">9.8.2</span> Scatterplot</h3>
 <ul>
-<li>(not)<span class="math inline">\(lattech\)</span>, <span class="math inline">\(bargain\)</span>, <span class="math inline">\(value\)</span>, (not)<span class="math inline">\(trendy\)</span> describe factor 1
-<ul>
-<li>Might label factor 1 as “latest”</li>
-</ul></li>
-<li><span class="math inline">\(perform\)</span>, <span class="math inline">\(leader\)</span>, (not)<span class="math inline">\(fun\)</span>, and <span class="math inline">\(serious\)</span> describe factor 2
-<ul>
-<li>Might label factor 2 as “performance”</li>
+<li>Fit lines show the volume relationships with price and advertising are not linear</li>
 </ul>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-PC1
-</th>
-<th style="text-align:right;">
-PC2
-</th>
-<th style="text-align:right;">
-Unexplained
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-perform
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0490
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
-0.4502
-</td>
-<td style="text-align:right;">
-0.3009
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-leader
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.0459
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
-0.5271
-</td>
-<td style="text-align:right;">
-0.0867
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-lattech
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
--0.4645
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.0234
-</td>
-<td style="text-align:right;">
-0.2500
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-fun
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.1081
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
--0.4864
-</td>
-<td style="text-align:right;">
-0.1335
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-serious
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.0897
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
-0.5185
-</td>
-<td style="text-align:right;">
-0.1131
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-bargain
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
-0.4882
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0062
-</td>
-<td style="text-align:right;">
-0.1801
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-value
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
-0.5057
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0634
-</td>
-<td style="text-align:right;">
-0.0855
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-trendy
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
--0.5157
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0967
-</td>
-<td style="text-align:right;">
-0.0941
-</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-</div>
-<div id="step-4-use-results-in-further-analysis" class="section level4" number="6.4.1.4">
-<h4><span class="header-section-number">6.4.1.4</span> Step 4: Use results in further analysis</h4>
-<ul>
-<li>Results could be used in linear regerssion, logistic regression, cluster analysis, perceptual mapping, etc.</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="creating-a-percptual-map-using-pca" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> Creating a Percptual Map using PCA</h2>
-<p>Steps:</p>
-<ol style="list-style-type: decimal">
-<li>Map Brands</li>
-<li>Map Attributes</li>
-<li>Interpret Map</li>
-</ol>
-<div id="map-brands" class="section level3" number="6.5.1">
-<h3><span class="header-section-number">6.5.1</span> Map Brands</h3>
-<ul>
-<li><p>Using rotated loading matrix and average brand scores for each variable, obtain a score for each brand on each component</p>
-<table class="table" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-<p>Attribute</p>
-</th>
-<th style="text-align:right;">
-<p>Alpha’s Mean</p>
-</th>
-<th style="text-align:right;">
-<p>Factor 1</p>
-</th>
-<th style="text-align:right;">
-<p>Mean x Factor 1</p>
-</th>
-<th style="text-align:right;">
-<p>Factor 2</p>
-</th>
-<th style="text-align:right;">
-<p>Mean x Factor 2</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-<p>perform</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-1.2952</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.0490</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0635</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.4502</p>
-</td>
-<td style="text-align:right;">
-<p>-0.5831</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>leader</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.7840</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.0459</p>
-</td>
-<td style="text-align:right;">
-<p>0.0360</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.5271</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4133</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>lattech</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.5696</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.4645</p>
-</td>
-<td style="text-align:right;">
-<p>-0.2646</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.0234</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0133</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>fun</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>1.0862</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.1081</p>
-</td>
-<td style="text-align:right;">
-<p>-0.1174</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.4864</p>
-</td>
-<td style="text-align:right;">
-<p>-0.5283</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>serious</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-1.2024</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.0897</p>
-</td>
-<td style="text-align:right;">
-<p>0.1079</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.5185</p>
-</td>
-<td style="text-align:right;">
-<p>-0.6234</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>bargain</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.3347</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.4882</p>
-</td>
-<td style="text-align:right;">
-<p>0.1634</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.0062</p>
-</td>
-<td style="text-align:right;">
-<p>0.0021</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>value</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.2434</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.5057</p>
-</td>
-<td style="text-align:right;">
-<p>0.1231</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.0634</p>
-</td>
-<td style="text-align:right;">
-<p>0.0154</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>trendy</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.7042</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>-0.5157</p>
-</td>
-<td style="text-align:right;">
-<p>0.3632</p>
-</td>
-<td style="text-align:right;color: black !important;">
-<p>0.0967</p>
-</td>
-<td style="text-align:right;">
-<p>-0.0681</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-</td>
-<td style="text-align:right;color: white !important;">
-<p>-1.7519</p>
-</td>
-<td style="text-align:right;color: white !important;">
-<p>-0.1810</p>
-</td>
-<td style="text-align:right;">
-<p>0.3481</p>
-</td>
-<td style="text-align:right;color: white !important;">
-<p>1.1523</p>
-</td>
-<td style="text-align:right;">
-<p>-2.2120</p>
-</td>
-</tr>
-</tbody>
-</table></li>
-<li><p>Use factor scores for each brand as coordinates on the perceptual map</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-<p>brand</p>
-</th>
-<th style="text-align:right;">
-<p>scr1</p>
-</th>
-<th style="text-align:right;">
-<p>scr2</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-<p>Alpha</p>
-</td>
-<td style="text-align:right;">
-<p>0.3480</p>
-</td>
-<td style="text-align:right;">
-<p>-2.2120</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Beta</p>
-</td>
-<td style="text-align:right;">
-<p>-0.8181</p>
-</td>
-<td style="text-align:right;">
-<p>3.1213</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Delta</p>
-</td>
-<td style="text-align:right;">
-<p>-1.9904</p>
-</td>
-<td style="text-align:right;">
-<p>-1.5338</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Eta</p>
-</td>
-<td style="text-align:right;">
-<p>0.1985</p>
-</td>
-<td style="text-align:right;">
-<p>-0.3866</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Gamma</p>
-</td>
-<td style="text-align:right;">
-<p>-0.7339</p>
-</td>
-<td style="text-align:right;">
-<p>2.8111</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Kappa</p>
-</td>
-<td style="text-align:right;">
-<p>2.6707</p>
-</td>
-<td style="text-align:right;">
-<p>0.7768</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Lambda</p>
-</td>
-<td style="text-align:right;">
-<p>3.4634</p>
-</td>
-<td style="text-align:right;">
-<p>0.5167</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Sigma</p>
-</td>
-<td style="text-align:right;">
-<p>-2.0978</p>
-</td>
-<td style="text-align:right;">
-<p>-0.8910</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Theta</p>
-</td>
-<td style="text-align:right;">
-<p>-1.3777</p>
-</td>
-<td style="text-align:right;">
-<p>-0.4682</p>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<p>Zeta</p>
-</td>
-<td style="text-align:right;">
-<p>0.3373</p>
-</td>
-<td style="text-align:right;">
-<p>-1.7343</p>
-</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-</div>
-<div id="map-attributes" class="section level3" number="6.5.2">
-<h3><span class="header-section-number">6.5.2</span> Map Attributes</h3>
-<ul>
-<li>Factor loadings serve as the coordinates for the attributes
-<ul>
-<li>Loadings often need to be scaled to be used on the same map as the brands</li>
-</ul></li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-31"></span>
-<img src="Topic06/notscaledloadings.png" alt="Loadings NOT Scaled" width="75%" />
+<div class="figure"><span style="display:block;" id="fig:t09scatter03"></span>
+<img src="_main_files/figure-html/t09scatter03-1.png" alt="Price and Advertising Scatterplots with Sales Volume ([R code](#figure-reffigt09scatter03))" width="672" />
 <p class="caption">
-Figure 6.1: Loadings NOT Scaled
-</p>
-</div>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-32"></span>
-<img src="Topic06/scaledloadings.png" alt="Loadings Scaled" width="75%" />
-<p class="caption">
-Figure 6.2: Loadings Scaled
+Figure 9.3: Price and Advertising Scatterplots with Sales Volume (<a href="marketing-mix-decisions.html#figure-reffigt09scatter03">R code</a>)
 </p>
 </div>
 </div>
-<div id="interpret-map" class="section level3" number="6.5.3">
-<h3><span class="header-section-number">6.5.3</span> Interpret Map</h3>
+<div id="estimation-2" class="section level3" number="9.8.3">
+<h3><span class="header-section-number">9.8.3</span> Estimation</h3>
 <ul>
-<li>Length of line represents amount of variance explained for that attribute</li>
-<li>Lines extend in opposite direction</li>
-<li>Perpendicular line from brand to attribute vector shows how brand is perceived on that attribute
+<li>Transform data to use the multiplicative model
 <ul>
-<li>Further along the vector, the higher the association between that brand and attribute</li>
+<li><span class="math inline">\(vol=e^\alpha price^{\beta_1} adv^{\beta_2}\)</span>$ Take natural log of both sides</li>
+<li><span class="math inline">\(ln(vol)=ln(e^\alpha price^{\beta_1} adv^{\beta_2})\)</span><br><span class="math inline">\(ln(sold)=\alpha+\beta_1 ln(price)+\beta_2 ln(adv)\)</span></li>
+<li>NOTE:
+<ul>
+<li><span class="math inline">\(ln(x^y)=y\times ln(x)\)</span></li>
+<li><span class="math inline">\(ln(x\times y)=ln(x)+ln(y)\)</span></li>
+<li><span class="math inline">\(ln(e)=1\)</span></li>
 </ul></li>
-<li>Distance between brands shows how similar the market perceives them to be</li>
-</ul>
-</div>
-</div>
-<div id="joint-space-maps" class="section level2" number="6.6">
-<h2><span class="header-section-number">6.6</span> Joint-Space Maps</h2>
-<p><strong>Perceptions vs. Preferences</strong></p>
-<p>Preferences are fundamentally different than perceptions</p>
-<ul>
-<li>Customers may perceive a brand as safe, but it may not be an determinant attribute</li>
-<li>Preferences may not change according to the magnitude of an attribute</li>
-</ul>
-<p>Joint-space maps:</p>
-<ul>
-<li><p>Incorporates perceptions and preferences into same map</p></li>
-<li><p>Interpreted in a similar manner to attribute vectors</p></li>
-<li><p>Preference “driven” by attributes vectors most parallel to preference vector</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p></li>
-</ul>
-</div>
-<div id="positioning-example" class="section level2" number="6.7">
-<h2><span class="header-section-number">6.7</span> Positioning Example</h2>
-<div id="overview-8" class="section level3" number="6.7.1">
-<h3><span class="header-section-number">6.7.1</span> Overview</h3>
-<ul>
-<li><p>Goal: Create a joint-space map of BGSU students perceptions and preferences of fast food restaurants</p></li>
-<li><p>Attributes: All measured on 5-point scale</p>
-<ul>
-<li>Cleanliness(-), <span class="math inline">\(clean\_neg\)</span></li>
-<li>Convenience, <span class="math inline">\(conv\)</span></li>
-<li>Healthy options, <span class="math inline">\(healthy\)</span></li>
-<li>Variety(-), <span class="math inline">\(variety\_neg\)</span></li>
-<li>Value, <span class="math inline">\(value\)</span></li>
-<li>Taste, <span class="math inline">\(taste\)</span></li>
 </ul></li>
 </ul>
 </div>
-<div id="examine-the-data-1" class="section level3" number="6.7.2">
-<h3><span class="header-section-number">6.7.2</span> Examine the Data</h3>
-<ul>
-<li>Mean (top table) and standard deviation (bottom table) for each restaurant for each attribute
-<ul>
-<li>Nothing out of the ordinary</li>
-<li>Some attributes have more variation (<span class="math inline">\(conv\)</span>, <span class="math inline">\(healthy\)</span>, and <span class="math inline">\(taste\)</span>)</li>
-</ul>
+<div id="results-4" class="section level3" number="9.8.4">
+<h3><span class="header-section-number">9.8.4</span> Results</h3>
 <caption>
-<span id="tab:t06examine">Table 6.1: </span> Attribute Means (Top) and Standard Deviations (Bottom) (<a href="positioning.html#table-reftabt06examine">R code</a>)
+<span id="tab:t09pradresp1">Table 9.3: </span> Price and Advertising Response Results (<a href="#table-reftabt09pradresp1">R code</a>)
 </caption>
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-rest
-</th>
-<th style="text-align:right;">
-clean_neg
-</th>
-<th style="text-align:right;">
-conv
-</th>
-<th style="text-align:right;">
-healthy
-</th>
-<th style="text-align:right;">
-variety_neg
-</th>
-<th style="text-align:right;">
-value
-</th>
-<th style="text-align:right;">
-taste
-</th>
-</tr>
-</thead>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
-<td style="text-align:left;">
-Chipotle
+<td style="text-align:left;font-weight: bold;">
+F(2,632)
 </td>
 <td style="text-align:right;">
-2.025
-</td>
-<td style="text-align:right;">
-3.850
-</td>
-<td style="text-align:right;">
-3.900
-</td>
-<td style="text-align:right;">
-2.650
-</td>
-<td style="text-align:right;">
-3.800
-</td>
-<td style="text-align:right;">
-4.250
+178.0760
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-Jimmy John’s
+<td style="text-align:left;font-weight: bold;">
+R²
 </td>
 <td style="text-align:right;">
-2.050
-</td>
-<td style="text-align:right;">
-3.875
-</td>
-<td style="text-align:right;">
-3.700
-</td>
-<td style="text-align:right;">
-2.700
-</td>
-<td style="text-align:right;">
-3.450
-</td>
-<td style="text-align:right;">
-3.550
+0.3604
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-McDonald’s
+<td style="text-align:left;font-weight: bold;">
+Adj. R²
 </td>
 <td style="text-align:right;">
-2.825
-</td>
-<td style="text-align:right;">
-4.325
-</td>
-<td style="text-align:right;">
-1.975
-</td>
-<td style="text-align:right;">
-2.275
-</td>
-<td style="text-align:right;">
-3.750
-</td>
-<td style="text-align:right;">
-2.925
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mr. Spots
-</td>
-<td style="text-align:right;">
-2.475
-</td>
-<td style="text-align:right;">
-2.950
-</td>
-<td style="text-align:right;">
-2.600
-</td>
-<td style="text-align:right;">
-2.675
-</td>
-<td style="text-align:right;">
-3.250
-</td>
-<td style="text-align:right;">
-3.675
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Qdoba
-</td>
-<td style="text-align:right;">
-2.150
-</td>
-<td style="text-align:right;">
-2.975
-</td>
-<td style="text-align:right;">
-3.575
-</td>
-<td style="text-align:right;">
-2.550
-</td>
-<td style="text-align:right;">
-3.200
-</td>
-<td style="text-align:right;">
-3.425
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Subway
-</td>
-<td style="text-align:right;">
-2.450
-</td>
-<td style="text-align:right;">
-3.525
-</td>
-<td style="text-align:right;">
-4.175
-</td>
-<td style="text-align:right;">
-2.225
-</td>
-<td style="text-align:right;">
-3.400
-</td>
-<td style="text-align:right;">
-3.650
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Taco Bell
-</td>
-<td style="text-align:right;">
-2.850
-</td>
-<td style="text-align:right;">
-4.350
-</td>
-<td style="text-align:right;">
-1.800
-</td>
-<td style="text-align:right;">
-2.200
-</td>
-<td style="text-align:right;">
-3.650
-</td>
-<td style="text-align:right;">
-3.250
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Wendy’s
-</td>
-<td style="text-align:right;">
-2.625
-</td>
-<td style="text-align:right;">
-4.200
-</td>
-<td style="text-align:right;">
-2.725
-</td>
-<td style="text-align:right;">
-2.075
-</td>
-<td style="text-align:right;">
-3.625
-</td>
-<td style="text-align:right;">
-3.775
+0.3584
 </td>
 </tr>
 </tbody>
 </table>
-<table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <thead>
 <tr>
 <th style="text-align:left;">
-rest
 </th>
 <th style="text-align:right;">
-clean_neg
+Est.
 </th>
 <th style="text-align:right;">
-conv
+S.E.
 </th>
 <th style="text-align:right;">
-healthy
+t val.
 </th>
 <th style="text-align:right;">
-variety_neg
-</th>
-<th style="text-align:right;">
-value
-</th>
-<th style="text-align:right;">
-taste
+p
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-Chipotle
+<td style="text-align:left;font-weight: bold;">
+(Intercept)
 </td>
 <td style="text-align:right;">
-0.947
+9.0455
 </td>
 <td style="text-align:right;">
-1.099
+0.1356
 </td>
 <td style="text-align:right;">
-0.982
+66.7247
 </td>
 <td style="text-align:right;">
-1.075
-</td>
-<td style="text-align:right;">
-1.159
-</td>
-<td style="text-align:right;">
-1.104
+0.0000
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-Jimmy John’s
+<td style="text-align:left;font-weight: bold;">
+log(price)
 </td>
 <td style="text-align:right;">
-0.904
+-1.3361
 </td>
 <td style="text-align:right;">
-1.244
+0.1157
 </td>
 <td style="text-align:right;">
-1.067
+-11.5472
 </td>
 <td style="text-align:right;">
-1.091
-</td>
-<td style="text-align:right;">
-1.154
-</td>
-<td style="text-align:right;">
-1.239
+0.0000
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-McDonald’s
+<td style="text-align:left;font-weight: bold;">
+log(adv)
 </td>
 <td style="text-align:right;">
-1.035
+0.2103
 </td>
 <td style="text-align:right;">
-0.859
+0.0169
 </td>
 <td style="text-align:right;">
-0.891
+12.4244
 </td>
 <td style="text-align:right;">
-1.012
-</td>
-<td style="text-align:right;">
-1.171
-</td>
-<td style="text-align:right;">
-1.163
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mr. Spots
-</td>
-<td style="text-align:right;">
-0.816
-</td>
-<td style="text-align:right;">
-1.176
-</td>
-<td style="text-align:right;">
-0.778
-</td>
-<td style="text-align:right;">
-0.971
-</td>
-<td style="text-align:right;">
-1.006
-</td>
-<td style="text-align:right;">
-0.971
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Qdoba
-</td>
-<td style="text-align:right;">
-0.864
-</td>
-<td style="text-align:right;">
-1.097
-</td>
-<td style="text-align:right;">
-0.931
-</td>
-<td style="text-align:right;">
-0.932
-</td>
-<td style="text-align:right;">
-1.067
-</td>
-<td style="text-align:right;">
-1.196
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Subway
-</td>
-<td style="text-align:right;">
-1.037
-</td>
-<td style="text-align:right;">
-1.176
-</td>
-<td style="text-align:right;">
-1.059
-</td>
-<td style="text-align:right;">
-1.050
-</td>
-<td style="text-align:right;">
-1.033
-</td>
-<td style="text-align:right;">
-1.122
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Taco Bell
-</td>
-<td style="text-align:right;">
-1.027
-</td>
-<td style="text-align:right;">
-0.834
-</td>
-<td style="text-align:right;">
-0.853
-</td>
-<td style="text-align:right;">
-1.018
-</td>
-<td style="text-align:right;">
-1.210
-</td>
-<td style="text-align:right;">
-1.296
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Wendy’s
-</td>
-<td style="text-align:right;">
-0.868
-</td>
-<td style="text-align:right;">
-0.883
-</td>
-<td style="text-align:right;">
-0.784
-</td>
-<td style="text-align:right;">
-0.888
-</td>
-<td style="text-align:right;">
-0.897
-</td>
-<td style="text-align:right;">
-0.974
+0.0000
 </td>
 </tr>
 </tbody>
-</table></li>
-<li>Correlation matrix of attributes
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Standard errors: OLS
+</td>
+</tr>
+</tfoot>
+</table>
 <ul>
-<li>Some variables have fairly high correlations with others
+<li>Model is significant (<span class="math inline">\(p&lt;.0001\)</span>) and explains about <span class="math inline">\(36\%\)</span> of the variance</li>
+<li>Both advertising and price are significant and in the expected direction</li>
+<li>Elasticities:
 <ul>
-<li><span class="math inline">\(taste\)</span> and <span class="math inline">\(value\)</span></li>
-<li><span class="math inline">\(clean\_neg\)</span> and <span class="math inline">\(healthy\)</span></li>
-<li><span class="math inline">\(clean\_neg\)</span> and <span class="math inline">\(taste\)</span></li>
+<li>Price: <span class="math inline">\(-1.336\)</span> (elastic)</li>
+<li>Advertising: <span class="math inline">\(.210\)</span> (inelastic)</li>
 </ul></li>
 </ul>
-<caption>
-<span id="tab:t06correlation">Table 6.2: </span> Attribute Correlation Matrix (<a href="positioning.html#table-reftabt06correlation">R code</a>)
-</caption>
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-clean_neg
-</th>
-<th style="text-align:right;">
-conv
-</th>
-<th style="text-align:right;">
-healthy
-</th>
-<th style="text-align:right;">
-variety_neg
-</th>
-<th style="text-align:right;">
-value
-</th>
-<th style="text-align:right;">
-taste
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-clean_neg
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
-<td style="text-align:right;">
-0.0209
-</td>
-<td style="text-align:right;">
--0.4050
-</td>
-<td style="text-align:right;">
-0.2101
-</td>
-<td style="text-align:right;">
--0.2069
-</td>
-<td style="text-align:right;">
--0.3557
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-conv
-</td>
-<td style="text-align:right;">
-0.0209
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
-<td style="text-align:right;">
--0.0486
-</td>
-<td style="text-align:right;">
--0.3334
-</td>
-<td style="text-align:right;">
-0.1905
-</td>
-<td style="text-align:right;">
-0.1310
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-healthy
-</td>
-<td style="text-align:right;">
--0.4050
-</td>
-<td style="text-align:right;">
--0.0486
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
-<td style="text-align:right;">
--0.1391
-</td>
-<td style="text-align:right;">
-0.1504
-</td>
-<td style="text-align:right;">
-0.3336
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-variety_neg
-</td>
-<td style="text-align:right;">
-0.2101
-</td>
-<td style="text-align:right;">
--0.3334
-</td>
-<td style="text-align:right;">
--0.1391
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
-<td style="text-align:right;">
--0.2872
-</td>
-<td style="text-align:right;">
--0.2159
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-value
-</td>
-<td style="text-align:right;">
--0.2069
-</td>
-<td style="text-align:right;">
-0.1905
-</td>
-<td style="text-align:right;">
-0.1504
-</td>
-<td style="text-align:right;">
--0.2872
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
-<td style="text-align:right;">
-0.4677
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-taste
-</td>
-<td style="text-align:right;">
--0.3557
-</td>
-<td style="text-align:right;">
-0.1310
-</td>
-<td style="text-align:right;">
-0.3336
-</td>
-<td style="text-align:right;">
--0.2159
-</td>
-<td style="text-align:right;">
-0.4677
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-</div>
-<div id="how-many-factors" class="section level3" number="6.7.3">
-<h3><span class="header-section-number">6.7.3</span> How many factors</h3>
-<ul>
-<li>How many factors should be retained?
-<ul>
-<li>Only the first two components have eigenvalues &gt; 1, and they explain nearly 82% of the variation</li>
-<li>Thus, retaining two components seems appropriate</li>
-</ul>
-<caption>
-<span id="tab:t06pca01">Table 6.3: </span> Eigenvalue Table (<a href="positioning.html#table-reftabt06pca01">R code</a>)
-</caption>
-<table>
-<thead>
-<tr>
-<th style="text-align:right;">
-Component
-</th>
-<th style="text-align:right;">
-Eigenvalue
-</th>
-<th style="text-align:right;">
-Difference
-</th>
-<th style="text-align:right;">
-Proporation
-</th>
-<th style="text-align:right;">
-Cumulative
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-3.4763
-</td>
-<td style="text-align:right;">
-2.0409
-</td>
-<td style="text-align:right;">
-0.5794
-</td>
-<td style="text-align:right;">
-0.5794
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-1.4354
-</td>
-<td style="text-align:right;">
-0.8174
-</td>
-<td style="text-align:right;">
-0.2392
-</td>
-<td style="text-align:right;">
-0.8186
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-0.6180
-</td>
-<td style="text-align:right;">
-0.2509
-</td>
-<td style="text-align:right;">
-0.1030
-</td>
-<td style="text-align:right;">
-0.9216
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-0.3671
-</td>
-<td style="text-align:right;">
-0.2927
-</td>
-<td style="text-align:right;">
-0.0612
-</td>
-<td style="text-align:right;">
-0.9828
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-0.0744
-</td>
-<td style="text-align:right;">
-0.0455
-</td>
-<td style="text-align:right;">
-0.0124
-</td>
-<td style="text-align:right;">
-0.9952
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-0.0288
-</td>
-<td style="text-align:right;">
-NA
-</td>
-<td style="text-align:right;">
-0.0048
-</td>
-<td style="text-align:right;">
-1.0000
-</td>
-</tr>
-</tbody>
-</table>
-<div class="figure"><span style="display:block;" id="fig:t06scree01"></span>
-<img src="_main_files/figure-html/t06scree01-1.png" alt="Scree Plot ([R code](#figure-reffigt06scree))" width="672" />
-<p class="caption">
-Figure 6.3: Scree Plot (<a href="#figure-reffigt06scree">R code</a>)
-</p>
-</div></li>
-</ul>
-</div>
-<div id="rotate-factors" class="section level3" number="6.7.4">
-<h3><span class="header-section-number">6.7.4</span> Rotate factors</h3>
-<ul>
-<li>Rotate factors to aid in interpretation (after rerunning with 2 components)
-<ul>
-<li>Cleanliness, Healthy options, and Taste load on the first dimension</li>
-<li>Convenience and Value load on the second dimension</li>
-<li>Variety doesn’t load much on either dimension</li>
-</ul>
-<caption>
-<span id="tab:t06pca02">Table 6.4: </span> Rotated Factor Loadings (<a href="positioning.html#table-reftabt06pca02">R code</a>)
-</caption>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-PC1
-</th>
-<th style="text-align:right;">
-PC2
-</th>
-<th style="text-align:right;">
-Unexplained
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-clean_neg
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
-0.5398
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.0824
-</td>
-<td style="text-align:right;">
-0.0829
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-conv
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0920
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
--0.6118
-</td>
-<td style="text-align:right;">
-0.0803
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-healthy
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
--0.5103
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.0374
-</td>
-<td style="text-align:right;">
-0.2297
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-variety_neg
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.3231
-</td>
-<td style="text-align:right;background-color: white !important;">
-0.2670
-</td>
-<td style="text-align:right;">
-0.3916
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-value
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.1057
-</td>
-<td style="text-align:right;background-color: lightskyblue !important;">
--0.7018
-</td>
-<td style="text-align:right;">
-0.0738
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-taste
-</td>
-<td style="text-align:right;background-color: palegreen !important;">
--0.5694
-</td>
-<td style="text-align:right;background-color: white !important;">
--0.2316
-</td>
-<td style="text-align:right;">
-0.2300
-</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-</div>
-<div id="create-perceptual-map" class="section level3" number="6.7.5">
-<h3><span class="header-section-number">6.7.5</span> Create perceptual map</h3>
-<ul>
-<li><p>What two restaurants are most similar?</p></li>
-<li><p>Which restaurant has the least variety?</p></li>
-<li><p>Which restaurant has the highest taste?</p></li>
-<li><p>Which two restaurants have the lowest value?</p></li>
-<li><p>Which attribute is least described by the map?</p>
-<div class="figure"><span style="display:block;" id="fig:t06prefmap01"></span>
-<img src="_main_files/figure-html/t06prefmap01-1.png" alt="Perceptual Map" width="768" />
-<p class="caption">
-Figure 6.4: Perceptual Map
-</p>
-</div></li>
-</ul>
-</div>
-<div id="create-joint-space-map" class="section level3" number="6.7.6">
-<h3><span class="header-section-number">6.7.6</span> Create joint-space map</h3>
-<ul>
-<li><p>What attribute most drives preference?</p></li>
-<li><p>Which attribute least drives preference?</p></li>
-<li><p>Which two restaurants are least preferred?</p>
-<div class="figure"><span style="display:block;" id="fig:t06prefmap02"></span>
-<img src="_main_files/figure-html/t06prefmap02-1.png" alt="Joint Space Map ([R code](#figure-reffigt06prefmap02))" width="768" />
-<p class="caption">
-Figure 6.5: Joint Space Map (<a href="positioning.html#figure-reffigt06prefmap02">R code</a>)
-</p>
-</div></li>
-</ul>
 </div>
 </div>
-<div id="suggested-readings-5" class="section level2" number="6.8">
-<h2><span class="header-section-number">6.8</span> Suggested Readings</h2>
+<div id="suggested-readings-8" class="section level2" number="9.9">
+<h2><span class="header-section-number">9.9</span> Suggested Readings</h2>
 <ul>
-<li><em>Principals of Marketing Engineering and Analytics, 3rd Edition</em> (2017). Lilien, Gary L., Rangaswamy, Arvind, and De Bruyn, Arnaud.
+<li><em>Principles of Marketing Engineering and Analytics, 3rd Edition</em> (2017). Lilien, Gary L., Rangaswamy, Arvind, and De Bruyn, Arnaud.
 <ul>
 <li>Course reserves
 <ul>
-<li>Chapter 4: Positioning</li>
-</ul></li>
-</ul></li>
-<li><em>Multivariate Data Analysis</em>. Hair, Joseph F.; Black, William C.; Babin, Barry J.; Anderson, Rolph E.
-<ul>
-<li>7th Edition: Search for “multivariate data analysis 7th edition hair”
-<ul>
-<li>Chapter 3: Exploratory Factor Analysis</li>
-</ul></li>
-<li>5th Edition: Course reserves
-<ul>
-<li>Chapter 9: Factor Analysis</li>
+<li>Chapter 7: The Marketing Mix</li>
 </ul></li>
 </ul></li>
 </ul>
 </div>
-<div id="r-code-5" class="section level2" number="6.9">
-<h2><span class="header-section-number">6.9</span> R Code</h2>
-<div id="figure-reffigt06scree01" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="positioning.html#fig:t06scree01">6.3</a></h3>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="positioning.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Call plot from previously store numfact object (from output of call to &#39;pcaex&#39;)</span></span>
-<span id="cb96-2"><a href="positioning.html#cb96-2" aria-hidden="true" tabindex="-1"></a>numfact<span class="sc">$</span>plot</span></code></pre></div>
+<div id="r-code-8" class="section level2" number="9.10">
+<h2><span class="header-section-number">9.10</span> R Code</h2>
+<div id="figure-reffigt09scatter01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="marketing-mix-decisions.html#fig:t09scatter01">9.1</a></h3>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="marketing-mix-decisions.html#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic09/adsales.rdata&quot;</span>)   <span class="co"># Load data</span></span>
+<span id="cb137-2"><a href="marketing-mix-decisions.html#cb137-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effects)  <span class="co"># Used to create a log-log fit line</span></span>
+<span id="cb137-3"><a href="marketing-mix-decisions.html#cb137-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)  <span class="co"># Used to create a grid for the three plots</span></span>
+<span id="cb137-4"><a href="marketing-mix-decisions.html#cb137-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-5"><a href="marketing-mix-decisions.html#cb137-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Run simple log-log models for each IV</span></span>
+<span id="cb137-6"><a href="marketing-mix-decisions.html#cb137-6" aria-hidden="true" tabindex="-1"></a>logtv <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(sales)<span class="sc">~</span><span class="fu">log</span>(tv), <span class="at">data=</span>adsales)</span>
+<span id="cb137-7"><a href="marketing-mix-decisions.html#cb137-7" aria-hidden="true" tabindex="-1"></a>logradio <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(sales)<span class="sc">~</span><span class="fu">log</span>(radio), <span class="at">data=</span>adsales)</span>
+<span id="cb137-8"><a href="marketing-mix-decisions.html#cb137-8" aria-hidden="true" tabindex="-1"></a>logpaper <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(sales)<span class="sc">~</span><span class="fu">log</span>(paper), <span class="at">data=</span>adsales)</span>
+<span id="cb137-9"><a href="marketing-mix-decisions.html#cb137-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-10"><a href="marketing-mix-decisions.html#cb137-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Use results from log-log models to get a &quot;fit line&quot; for the scatter plots</span></span>
+<span id="cb137-11"><a href="marketing-mix-decisions.html#cb137-11" aria-hidden="true" tabindex="-1"></a>tvpred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;tv&quot;</span>, logtv))</span>
+<span id="cb137-12"><a href="marketing-mix-decisions.html#cb137-12" aria-hidden="true" tabindex="-1"></a>radiopred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;radio&quot;</span>, logradio))</span>
+<span id="cb137-13"><a href="marketing-mix-decisions.html#cb137-13" aria-hidden="true" tabindex="-1"></a>paperpred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;paper&quot;</span>, logpaper))</span>
+<span id="cb137-14"><a href="marketing-mix-decisions.html#cb137-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-15"><a href="marketing-mix-decisions.html#cb137-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Create first plot</span></span>
+<span id="cb137-16"><a href="marketing-mix-decisions.html#cb137-16" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> adsales <span class="sc">%&gt;%</span> </span>
+<span id="cb137-17"><a href="marketing-mix-decisions.html#cb137-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>tv, <span class="at">y=</span>sales)) <span class="sc">+</span>   <span class="co"># Call to ggplot</span></span>
+<span id="cb137-18"><a href="marketing-mix-decisions.html#cb137-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span>  <span class="co">#Plot points</span></span>
+<span id="cb137-19"><a href="marketing-mix-decisions.html#cb137-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>tv, <span class="at">y=</span><span class="fu">exp</span>(fit)),  <span class="co"># Plot &#39;log-log&#39; fit line</span></span>
+<span id="cb137-20"><a href="marketing-mix-decisions.html#cb137-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">data=</span>tvpred, <span class="at">color=</span><span class="st">&quot;orange&quot;</span>, <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb137-21"><a href="marketing-mix-decisions.html#cb137-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>,    <span class="co"># Plot linear fit line</span></span>
+<span id="cb137-22"><a href="marketing-mix-decisions.html#cb137-22" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb137-23"><a href="marketing-mix-decisions.html#cb137-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Television Advertising&quot;</span>, <span class="at">y=</span><span class="st">&quot;Sales&quot;</span>)</span>
+<span id="cb137-24"><a href="marketing-mix-decisions.html#cb137-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-25"><a href="marketing-mix-decisions.html#cb137-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat for second and third plots</span></span>
+<span id="cb137-26"><a href="marketing-mix-decisions.html#cb137-26" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> adsales <span class="sc">%&gt;%</span> </span>
+<span id="cb137-27"><a href="marketing-mix-decisions.html#cb137-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>radio, <span class="at">y=</span>sales)) <span class="sc">+</span></span>
+<span id="cb137-28"><a href="marketing-mix-decisions.html#cb137-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb137-29"><a href="marketing-mix-decisions.html#cb137-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>radio, <span class="at">y=</span><span class="fu">exp</span>(fit)), </span>
+<span id="cb137-30"><a href="marketing-mix-decisions.html#cb137-30" aria-hidden="true" tabindex="-1"></a>            <span class="at">data=</span>radiopred, <span class="at">color=</span><span class="st">&quot;orange&quot;</span>, <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb137-31"><a href="marketing-mix-decisions.html#cb137-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, </span>
+<span id="cb137-32"><a href="marketing-mix-decisions.html#cb137-32" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb137-33"><a href="marketing-mix-decisions.html#cb137-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Radio Advertising&quot;</span>, <span class="at">y=</span><span class="st">&quot;Sales&quot;</span>)</span>
+<span id="cb137-34"><a href="marketing-mix-decisions.html#cb137-34" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> adsales <span class="sc">%&gt;%</span> </span>
+<span id="cb137-35"><a href="marketing-mix-decisions.html#cb137-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>paper, <span class="at">y=</span>sales)) <span class="sc">+</span></span>
+<span id="cb137-36"><a href="marketing-mix-decisions.html#cb137-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb137-37"><a href="marketing-mix-decisions.html#cb137-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>paper, <span class="at">y=</span><span class="fu">exp</span>(fit)), </span>
+<span id="cb137-38"><a href="marketing-mix-decisions.html#cb137-38" aria-hidden="true" tabindex="-1"></a>            <span class="at">data=</span>paperpred, <span class="at">color=</span><span class="st">&quot;orange&quot;</span>, <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb137-39"><a href="marketing-mix-decisions.html#cb137-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, </span>
+<span id="cb137-40"><a href="marketing-mix-decisions.html#cb137-40" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb137-41"><a href="marketing-mix-decisions.html#cb137-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Newspaper Advertising&quot;</span>, <span class="at">y=</span><span class="st">&quot;Sales&quot;</span>)</span>
+<span id="cb137-42"><a href="marketing-mix-decisions.html#cb137-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-43"><a href="marketing-mix-decisions.html#cb137-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot three scatter plots together using cowplot package</span></span>
+<span id="cb137-44"><a href="marketing-mix-decisions.html#cb137-44" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(p1,p2,p3, <span class="at">nrow=</span><span class="dv">2</span>)</span></code></pre></div>
 </div>
-<div id="figure-reffigt06prefmap02" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="positioning.html#fig:t06prefmap02">6.5</a></h3>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="positioning.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">percmap</span>(ffpos, <span class="co"># Data</span></span>
-<span id="cb97-2"><a href="positioning.html#cb97-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">group=</span><span class="st">&quot;rest&quot;</span>,  <span class="co"># Brand/Group variable </span></span>
-<span id="cb97-3"><a href="positioning.html#cb97-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>)  <span class="co"># Preference variable</span></span></code></pre></div>
+<div id="figure-reffigt09scatter02" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="marketing-mix-decisions.html#fig:t09scatter02">9.2</a></h3>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="marketing-mix-decisions.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic09/cereal.rdata&quot;</span>)  <span class="co"># Load data</span></span>
+<span id="cb138-2"><a href="marketing-mix-decisions.html#cb138-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effects)  <span class="co"># Used to create a log-log fit line</span></span>
+<span id="cb138-3"><a href="marketing-mix-decisions.html#cb138-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-4"><a href="marketing-mix-decisions.html#cb138-4" aria-hidden="true" tabindex="-1"></a>logprice <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(sold)<span class="sc">~</span><span class="fu">log</span>(price), <span class="at">data=</span>cereal)  <span class="co"># Run simple log-log model</span></span>
+<span id="cb138-5"><a href="marketing-mix-decisions.html#cb138-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-6"><a href="marketing-mix-decisions.html#cb138-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use results from log-log model to get a &quot;fit line&quot; for the scatter plot</span></span>
+<span id="cb138-7"><a href="marketing-mix-decisions.html#cb138-7" aria-hidden="true" tabindex="-1"></a>pricepred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;price&quot;</span>, logprice))</span>
+<span id="cb138-8"><a href="marketing-mix-decisions.html#cb138-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-9"><a href="marketing-mix-decisions.html#cb138-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create plot</span></span>
+<span id="cb138-10"><a href="marketing-mix-decisions.html#cb138-10" aria-hidden="true" tabindex="-1"></a>cereal <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>price, <span class="at">y=</span>sold)) <span class="sc">+</span></span>
+<span id="cb138-11"><a href="marketing-mix-decisions.html#cb138-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb138-12"><a href="marketing-mix-decisions.html#cb138-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>price, <span class="at">y=</span><span class="fu">exp</span>(fit)), </span>
+<span id="cb138-13"><a href="marketing-mix-decisions.html#cb138-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">data=</span>pricepred, <span class="at">color=</span><span class="st">&quot;orange&quot;</span>, <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb138-14"><a href="marketing-mix-decisions.html#cb138-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span>, <span class="at">y=</span><span class="dv">3413</span>, <span class="at">xend=</span>(<span class="dv">5325</span><span class="sc">/</span><span class="dv">1912</span>), <span class="at">yend=</span><span class="dv">0</span>), <span class="co"># Manually produce </span></span>
+<span id="cb138-15"><a href="marketing-mix-decisions.html#cb138-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">size=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span>   <span class="co"># linear fit line</span></span>
+<span id="cb138-16"><a href="marketing-mix-decisions.html#cb138-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Price ($)&quot;</span>, <span class="at">y=</span><span class="st">&quot;Units Sold (000s)&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb138-17"><a href="marketing-mix-decisions.html#cb138-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">11500</span>))</span></code></pre></div>
 </div>
-<div id="table-reftabt06examine" class="section level3 unlisted unnumbered">
-<h3>Table <a href="positioning.html#tab:t06examine">6.1</a></h3>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="positioning.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe of attributes</span></span>
-<span id="cb98-2"><a href="positioning.html#cb98-2" aria-hidden="true" tabindex="-1"></a>ffpos <span class="ot">&lt;-</span> ffattrib <span class="sc">%&gt;%</span></span>
-<span id="cb98-3"><a href="positioning.html#cb98-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">clean_neg=</span><span class="dv">6</span><span class="sc">-</span>clean,          <span class="co"># Reverse code &#39;clean&#39;</span></span>
-<span id="cb98-4"><a href="positioning.html#cb98-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">variety_neg=</span><span class="dv">6</span><span class="sc">-</span>variety) <span class="sc">%&gt;%</span>  <span class="co"># Reverse code &#39;variety&#39;</span></span>
-<span id="cb98-5"><a href="positioning.html#cb98-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(rest, clean_neg, conv, healthy,  <span class="co"># Select needed columns</span></span>
-<span id="cb98-6"><a href="positioning.html#cb98-6" aria-hidden="true" tabindex="-1"></a>         variety_neg, value, taste, pref)   <span class="co"># Include preference also</span></span>
-<span id="cb98-7"><a href="positioning.html#cb98-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb98-8"><a href="positioning.html#cb98-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Examine data</span></span>
-<span id="cb98-9"><a href="positioning.html#cb98-9" aria-hidden="true" tabindex="-1"></a>ffpos <span class="sc">%&gt;%</span></span>
-<span id="cb98-10"><a href="positioning.html#cb98-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(rest) <span class="sc">%&gt;%</span></span>
-<span id="cb98-11"><a href="positioning.html#cb98-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>pref) <span class="sc">%&gt;%</span>  <span class="co"># Don&#39;t examine preference</span></span>
-<span id="cb98-12"><a href="positioning.html#cb98-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(mean)   <span class="co"># &#39;summarise_all()&#39; summarizes all variables</span></span>
-<span id="cb98-13"><a href="positioning.html#cb98-13" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb98-14"><a href="positioning.html#cb98-14" aria-hidden="true" tabindex="-1"></a>ffpos <span class="sc">%&gt;%</span></span>
-<span id="cb98-15"><a href="positioning.html#cb98-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(rest) <span class="sc">%&gt;%</span></span>
-<span id="cb98-16"><a href="positioning.html#cb98-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>pref) <span class="sc">%&gt;%</span>  <span class="co"># Don&#39;t examine preference</span></span>
-<span id="cb98-17"><a href="positioning.html#cb98-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(sd)</span></code></pre></div>
+<div id="figure-reffigt09scatter03" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="marketing-mix-decisions.html#fig:t09scatter03">9.3</a></h3>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="marketing-mix-decisions.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic09/cheese.rdata&quot;</span>)  <span class="co"># Load Data</span></span>
+<span id="cb139-2"><a href="marketing-mix-decisions.html#cb139-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb139-3"><a href="marketing-mix-decisions.html#cb139-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effects)</span>
+<span id="cb139-4"><a href="marketing-mix-decisions.html#cb139-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb139-5"><a href="marketing-mix-decisions.html#cb139-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb139-6"><a href="marketing-mix-decisions.html#cb139-6" aria-hidden="true" tabindex="-1"></a>logpr2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(vol)<span class="sc">~</span><span class="fu">log</span>(price), <span class="at">data=</span>cheese)</span>
+<span id="cb139-7"><a href="marketing-mix-decisions.html#cb139-7" aria-hidden="true" tabindex="-1"></a>logad2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(vol)<span class="sc">~</span><span class="fu">log</span>(adv), <span class="at">data=</span>cheese)</span>
+<span id="cb139-8"><a href="marketing-mix-decisions.html#cb139-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb139-9"><a href="marketing-mix-decisions.html#cb139-9" aria-hidden="true" tabindex="-1"></a>pr2pred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;price&quot;</span>, logpr2))</span>
+<span id="cb139-10"><a href="marketing-mix-decisions.html#cb139-10" aria-hidden="true" tabindex="-1"></a>ad2pred <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predictorEffect</span>(<span class="st">&quot;adv&quot;</span>, logad2))</span>
+<span id="cb139-11"><a href="marketing-mix-decisions.html#cb139-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb139-12"><a href="marketing-mix-decisions.html#cb139-12" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> cheese <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>price, <span class="at">y=</span>vol)) <span class="sc">+</span></span>
+<span id="cb139-13"><a href="marketing-mix-decisions.html#cb139-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>price, <span class="at">y=</span><span class="fu">exp</span>(fit)), </span>
+<span id="cb139-14"><a href="marketing-mix-decisions.html#cb139-14" aria-hidden="true" tabindex="-1"></a>                           <span class="at">data=</span>pr2pred, <span class="at">color=</span><span class="st">&quot;orange&quot;</span>, <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb139-15"><a href="marketing-mix-decisions.html#cb139-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, </span>
+<span id="cb139-16"><a href="marketing-mix-decisions.html#cb139-16" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
+<span id="cb139-17"><a href="marketing-mix-decisions.html#cb139-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Price&quot;</span>, <span class="at">y=</span><span class="st">&quot;Sales Volume&quot;</span>) <span class="sc">+</span></span>
+<span id="cb139-18"><a href="marketing-mix-decisions.html#cb139-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">15000</span>))</span>
+<span id="cb139-19"><a href="marketing-mix-decisions.html#cb139-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb139-20"><a href="marketing-mix-decisions.html#cb139-20" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> cheese <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>adv, <span class="at">y=</span>vol)) <span class="sc">+</span></span>
+<span id="cb139-21"><a href="marketing-mix-decisions.html#cb139-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span>adv, <span class="at">y=</span><span class="fu">exp</span>(fit)), </span>
+<span id="cb139-22"><a href="marketing-mix-decisions.html#cb139-22" aria-hidden="true" tabindex="-1"></a>                           <span class="at">data=</span>ad2pred, <span class="at">color=</span><span class="st">&quot;orange&quot;</span>, <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb139-23"><a href="marketing-mix-decisions.html#cb139-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, </span>
+<span id="cb139-24"><a href="marketing-mix-decisions.html#cb139-24" aria-hidden="true" tabindex="-1"></a>              <span class="at">size=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">&quot;red&quot;</span>, <span class="at">linetype=</span><span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb139-25"><a href="marketing-mix-decisions.html#cb139-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Advertising&quot;</span>, <span class="at">y=</span><span class="st">&quot;Sales Volume&quot;</span>) <span class="sc">+</span></span>
+<span id="cb139-26"><a href="marketing-mix-decisions.html#cb139-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">15000</span>))</span>
+<span id="cb139-27"><a href="marketing-mix-decisions.html#cb139-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb139-28"><a href="marketing-mix-decisions.html#cb139-28" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_grid</span>(p1,p2, <span class="at">ncol=</span><span class="dv">2</span>)</span></code></pre></div>
 </div>
-<div id="table-reftabt06correlation" class="section level3 unlisted unnumbered">
-<h3>Table <a href="positioning.html#tab:t06correlation">6.2</a></h3>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="positioning.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation matrix on only continuous items minus preference</span></span>
-<span id="cb99-2"><a href="positioning.html#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(ffpos[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">8</span>)])   </span></code></pre></div>
+<div id="table-reftabt09adresp1code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t09adresp1code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="marketing-mix-decisions.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)</span>
+<span id="cb140-2"><a href="marketing-mix-decisions.html#cb140-2" aria-hidden="true" tabindex="-1"></a>adresp <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(sales)<span class="sc">~</span><span class="fu">log</span>(tv)<span class="sc">+</span><span class="fu">log</span>(radio)<span class="sc">+</span><span class="fu">log</span>(paper), <span class="at">data=</span>adsales)</span>
+<span id="cb140-3"><a href="marketing-mix-decisions.html#cb140-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(adresp, <span class="at">digits=</span><span class="dv">4</span>, <span class="at">model.info=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 </div>
-<div id="table-reftabt06pca01" class="section level3 unlisted unnumbered">
-<h3>Table <a href="positioning.html#tab:t06pca01">6.3</a></h3>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="positioning.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load user defined function</span></span>
-<span id="cb100-2"><a href="positioning.html#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic06/pcaex.R&quot;</span>)  </span>
-<span id="cb100-3"><a href="positioning.html#cb100-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb100-4"><a href="positioning.html#cb100-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use user defined function and store results</span></span>
-<span id="cb100-5"><a href="positioning.html#cb100-5" aria-hidden="true" tabindex="-1"></a>numfact <span class="ot">&lt;-</span> <span class="fu">pcaex</span>(ffpos, <span class="co"># Data</span></span>
-<span id="cb100-6"><a href="positioning.html#cb100-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">group=</span><span class="st">&quot;rest&quot;</span>, <span class="co"># Group/Brand variable</span></span>
-<span id="cb100-7"><a href="positioning.html#cb100-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>)  <span class="co"># Preference variable (if it exists)</span></span>
-<span id="cb100-8"><a href="positioning.html#cb100-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb100-9"><a href="positioning.html#cb100-9" aria-hidden="true" tabindex="-1"></a>numfact<span class="sc">$</span>table  <span class="co"># Output the table</span></span></code></pre></div>
+<div id="table-reftabt09priceresp1code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t09priceresp1code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="marketing-mix-decisions.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)</span>
+<span id="cb141-2"><a href="marketing-mix-decisions.html#cb141-2" aria-hidden="true" tabindex="-1"></a>priceresp <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(sold)<span class="sc">~</span><span class="fu">log</span>(price), <span class="at">data=</span>cereal)</span>
+<span id="cb141-3"><a href="marketing-mix-decisions.html#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(priceresp, <span class="at">digits=</span><span class="dv">4</span>, <span class="at">model.info=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 </div>
-<div id="table-reftabt06pca02" class="section level3 unlisted unnumbered">
-<h3>Table <a href="positioning.html#tab:t06pca02">6.4</a></h3>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="positioning.html#cb101-1" aria-hidden="true" tabindex="-1"></a>ff<span class="fl">.2</span>comp <span class="ot">&lt;-</span> <span class="fu">pcaex</span>(ffpos, <span class="co"># Data</span></span>
-<span id="cb101-2"><a href="positioning.html#cb101-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">group=</span><span class="st">&quot;rest&quot;</span>,  <span class="co"># Group/Brand variable</span></span>
-<span id="cb101-3"><a href="positioning.html#cb101-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">pref=</span><span class="st">&quot;pref&quot;</span>,  <span class="co"># Preference variable (if it exists)</span></span>
-<span id="cb101-4"><a href="positioning.html#cb101-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">comp=</span><span class="dv">2</span>)  Number of components</span>
-<span id="cb101-5"><a href="positioning.html#cb101-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb101-6"><a href="positioning.html#cb101-6" aria-hidden="true" tabindex="-1"></a>ff<span class="fl">.2</span>comp<span class="sc">$</span>rotated  <span class="co"># Request rotated factor loading table</span></span></code></pre></div>
+<div id="table-reftabt09pradresp1code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t09pradresp1code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="marketing-mix-decisions.html#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jtools)</span>
+<span id="cb142-2"><a href="marketing-mix-decisions.html#cb142-2" aria-hidden="true" tabindex="-1"></a>pradresp <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(vol)<span class="sc">~</span><span class="fu">log</span>(price)<span class="sc">+</span><span class="fu">log</span>(adv), <span class="at">data=</span>cheese)</span>
+<span id="cb142-3"><a href="marketing-mix-decisions.html#cb142-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(pradresp, <span class="at">digits=</span><span class="dv">4</span>, <span class="at">model.info=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 
 </div>
 </div>
@@ -2793,8 +1336,8 @@ Figure 6.5: Joint Space Map (<a href="positioning.html#figure-reffigt06prefmap02
           </div>
         </div>
       </div>
-<a href="segmentation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="customer-choice.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="conjoint-analysis.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

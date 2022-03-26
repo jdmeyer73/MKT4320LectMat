@@ -36,3 +36,7 @@ vtable
 nnet
 dfidx
 mlogit
+stringr
+survival
+Formula
+Hmisc
