@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 10 Forecasting I | MKT 4320: Marketing Analytics</title>
+  <meta name="description" content="Lecture materials for MKT 4320 in bookdown style." />
+  <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 10 Forecasting I | MKT 4320: Marketing Analytics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecture materials for MKT 4320 in bookdown style." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 10 Forecasting I | MKT 4320: Marketing Analytics" />
+  
+  <meta name="twitter:description" content="Lecture materials for MKT 4320 in bookdown style." />
+  
+
+<meta name="author" content="Jeffrey Meyer" />
+
+
+<meta name="date" content="2022-03-31" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="marketing-mix-decisions.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html"><i class="fa fa-check"></i><b>1</b> Examining and Summarizing Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#r-packages-and-datasets-for-topic-1"><i class="fa fa-check"></i><b>1.2</b> R Packages and Datasets for Topic 1</a></li>
+<li class="chapter" data-level="1.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#describing-data"><i class="fa fa-check"></i><b>1.3</b> Describing Data</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#univariate---graphs-and-tables"><i class="fa fa-check"></i><b>1.3.1</b> Univariate - Graphs and Tables</a>
+<ul>
+<li class="chapter" data-level="1.3.1.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#bar-chart"><i class="fa fa-check"></i><b>1.3.1.1</b> Bar Chart</a></li>
+<li class="chapter" data-level="1.3.1.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#histogram"><i class="fa fa-check"></i><b>1.3.1.2</b> Histogram</a></li>
+<li class="chapter" data-level="1.3.1.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#box-plot"><i class="fa fa-check"></i><b>1.3.1.3</b> Box Plot</a></li>
+<li class="chapter" data-level="1.3.1.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#frequency-table"><i class="fa fa-check"></i><b>1.3.1.4</b> Frequency Table</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#univariate---statistics"><i class="fa fa-check"></i><b>1.3.2</b> Univariate - Statistics</a>
+<ul>
+<li class="chapter" data-level="1.3.2.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#measures-of-centrality"><i class="fa fa-check"></i><b>1.3.2.1</b> Measures of Centrality</a></li>
+<li class="chapter" data-level="1.3.2.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#measures-of-dispersion"><i class="fa fa-check"></i><b>1.3.2.2</b> Measures of Dispersion</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#bivariate---graphs-and-tables"><i class="fa fa-check"></i><b>1.3.3</b> Bivariate - Graphs and Tables</a>
+<ul>
+<li class="chapter" data-level="1.3.3.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#scatterplots"><i class="fa fa-check"></i><b>1.3.3.1</b> Scatterplots</a></li>
+<li class="chapter" data-level="1.3.3.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#crosstabs"><i class="fa fa-check"></i><b>1.3.3.2</b> Crosstabs</a></li>
+<li class="chapter" data-level="1.3.3.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#box-plot-1"><i class="fa fa-check"></i><b>1.3.3.3</b> Box Plot</a></li>
+<li class="chapter" data-level="1.3.3.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#bar-chart-1"><i class="fa fa-check"></i><b>1.3.3.4</b> Bar Chart</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#statistics"><i class="fa fa-check"></i><b>1.3.4</b> Statistics</a>
+<ul>
+<li class="chapter" data-level="1.3.4.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#correlation"><i class="fa fa-check"></i><b>1.3.4.1</b> Correlation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#suggested-readings"><i class="fa fa-check"></i><b>1.4</b> Suggested Readings</a></li>
+<li class="chapter" data-level="1.5" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#r-code"><i class="fa fa-check"></i><b>1.5</b> R Code</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table11"><i class="fa fa-check"></i><b>1.5.1</b> Table1.1</a></li>
+<li class="chapter" data-level="1.5.2" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table12"><i class="fa fa-check"></i><b>1.5.2</b> Table1.2</a></li>
+<li class="chapter" data-level="1.5.3" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table13"><i class="fa fa-check"></i><b>1.5.3</b> Table1.3</a></li>
+<li class="chapter" data-level="1.5.4" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table14"><i class="fa fa-check"></i><b>1.5.4</b> Table1.4</a></li>
+<li class="chapter" data-level="1.5.5" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#table15"><i class="fa fa-check"></i><b>1.5.5</b> Table1.5</a></li>
+<li class="chapter" data-level="1.5.6" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure11"><i class="fa fa-check"></i><b>1.5.6</b> Figure 1.1</a></li>
+<li class="chapter" data-level="1.5.7" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure12"><i class="fa fa-check"></i><b>1.5.7</b> Figure 1.2</a></li>
+<li class="chapter" data-level="1.5.8" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure13"><i class="fa fa-check"></i><b>1.5.8</b> Figure 1.3</a></li>
+<li class="chapter" data-level="1.5.9" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure14"><i class="fa fa-check"></i><b>1.5.9</b> Figure 1.4</a></li>
+<li class="chapter" data-level="1.5.10" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure15"><i class="fa fa-check"></i><b>1.5.10</b> Figure 1.5</a></li>
+<li class="chapter" data-level="1.5.11" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure16"><i class="fa fa-check"></i><b>1.5.11</b> Figure 1.6</a></li>
+<li class="chapter" data-level="1.5.12" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure17"><i class="fa fa-check"></i><b>1.5.12</b> Figure 1.7</a></li>
+<li class="chapter" data-level="1.5.13" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure18"><i class="fa fa-check"></i><b>1.5.13</b> Figure 1.8</a></li>
+<li class="chapter" data-level="1.5.14" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure19"><i class="fa fa-check"></i><b>1.5.14</b> Figure 1.9</a></li>
+<li class="chapter" data-level="1.5.15" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure110"><i class="fa fa-check"></i><b>1.5.15</b> Figure 1.10</a></li>
+<li class="chapter" data-level="1.5.16" data-path="examining-and-summarizing-data.html"><a href="examining-and-summarizing-data.html#figure111"><i class="fa fa-check"></i><b>1.5.16</b> Figure 1.11</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="linear-regression.html"><a href="linear-regression.html"><i class="fa fa-check"></i><b>2</b> Linear Regression</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="linear-regression.html"><a href="linear-regression.html#motivation-1"><i class="fa fa-check"></i><b>2.1</b> Motivation</a></li>
+<li class="chapter" data-level="2.2" data-path="linear-regression.html"><a href="linear-regression.html#r-packages-and-datasets-for-topic-2"><i class="fa fa-check"></i><b>2.2</b> R Packages and Datasets for Topic 2</a></li>
+<li class="chapter" data-level="2.3" data-path="linear-regression.html"><a href="linear-regression.html#understanding-regression-analysis"><i class="fa fa-check"></i><b>2.3</b> Understanding Regression Analysis</a></li>
+<li class="chapter" data-level="2.4" data-path="linear-regression.html"><a href="linear-regression.html#conducting-linear-regression"><i class="fa fa-check"></i><b>2.4</b> Conducting Linear Regression</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="linear-regression.html"><a href="linear-regression.html#check-data-requirements"><i class="fa fa-check"></i><b>2.4.1</b> Check Data Requirements</a></li>
+<li class="chapter" data-level="2.4.2" data-path="linear-regression.html"><a href="linear-regression.html#model-specification"><i class="fa fa-check"></i><b>2.4.2</b> Model Specification</a></li>
+<li class="chapter" data-level="2.4.3" data-path="linear-regression.html"><a href="linear-regression.html#model-estimation"><i class="fa fa-check"></i><b>2.4.3</b> Model Estimation</a></li>
+<li class="chapter" data-level="2.4.4" data-path="linear-regression.html"><a href="linear-regression.html#model-interpetation"><i class="fa fa-check"></i><b>2.4.4</b> Model Interpetation</a></li>
+<li class="chapter" data-level="2.4.5" data-path="linear-regression.html"><a href="linear-regression.html#model-prediction"><i class="fa fa-check"></i><b>2.4.5</b> Model Prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="linear-regression.html"><a href="linear-regression.html#linear-regression-example"><i class="fa fa-check"></i><b>2.5</b> Linear Regression Example</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="linear-regression.html"><a href="linear-regression.html#overview"><i class="fa fa-check"></i><b>2.5.1</b> Overview</a></li>
+<li class="chapter" data-level="2.5.2" data-path="linear-regression.html"><a href="linear-regression.html#summarize-data"><i class="fa fa-check"></i><b>2.5.2</b> Summarize Data</a>
+<ul>
+<li class="chapter" data-level="2.5.2.1" data-path="linear-regression.html"><a href="linear-regression.html#univariate-summary-statistics"><i class="fa fa-check"></i><b>2.5.2.1</b> Univariate Summary Statistics</a></li>
+<li class="chapter" data-level="2.5.2.2" data-path="linear-regression.html"><a href="linear-regression.html#scatterplot-and-correlation-matrix"><i class="fa fa-check"></i><b>2.5.2.2</b> Scatterplot and Correlation Matrix</a></li>
+<li class="chapter" data-level="2.5.2.3" data-path="linear-regression.html"><a href="linear-regression.html#box-plots"><i class="fa fa-check"></i><b>2.5.2.3</b> Box Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5.3" data-path="linear-regression.html"><a href="linear-regression.html#results"><i class="fa fa-check"></i><b>2.5.3</b> Results</a>
+<ul>
+<li class="chapter" data-level="2.5.3.1" data-path="linear-regression.html"><a href="linear-regression.html#r-output"><i class="fa fa-check"></i><b>2.5.3.1</b> R Output</a></li>
+<li class="chapter" data-level="2.5.3.2" data-path="linear-regression.html"><a href="linear-regression.html#assessing-overall-model-fit"><i class="fa fa-check"></i><b>2.5.3.2</b> Assessing Overall Model Fit</a></li>
+<li class="chapter" data-level="2.5.3.3" data-path="linear-regression.html"><a href="linear-regression.html#individual-independent-variables"><i class="fa fa-check"></i><b>2.5.3.3</b> Individual Independent Variables</a></li>
+<li class="chapter" data-level="2.5.3.4" data-path="linear-regression.html"><a href="linear-regression.html#model-prediction-1"><i class="fa fa-check"></i><b>2.5.3.4</b> Model Prediction</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="linear-regression.html"><a href="linear-regression.html#categorical-ivs"><i class="fa fa-check"></i><b>2.6</b> Categorical IVs</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="linear-regression.html"><a href="linear-regression.html#overview-1"><i class="fa fa-check"></i><b>2.6.1</b> Overview</a></li>
+<li class="chapter" data-level="2.6.2" data-path="linear-regression.html"><a href="linear-regression.html#intercept-shifter"><i class="fa fa-check"></i><b>2.6.2</b> Intercept Shifter</a></li>
+<li class="chapter" data-level="2.6.3" data-path="linear-regression.html"><a href="linear-regression.html#slope-shifter"><i class="fa fa-check"></i><b>2.6.3</b> Slope Shifter</a></li>
+<li class="chapter" data-level="2.6.4" data-path="linear-regression.html"><a href="linear-regression.html#intercept-and-slope-shifter"><i class="fa fa-check"></i><b>2.6.4</b> Intercept and Slope Shifter</a></li>
+<li class="chapter" data-level="2.6.5" data-path="linear-regression.html"><a href="linear-regression.html#multiple-levels"><i class="fa fa-check"></i><b>2.6.5</b> Multiple Levels</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="linear-regression.html"><a href="linear-regression.html#categorical-ivs-example"><i class="fa fa-check"></i><b>2.7</b> Categorical IVs Example</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="linear-regression.html"><a href="linear-regression.html#overview-2"><i class="fa fa-check"></i><b>2.7.1</b> Overview</a></li>
+<li class="chapter" data-level="2.7.2" data-path="linear-regression.html"><a href="linear-regression.html#intercept-shift"><i class="fa fa-check"></i><b>2.7.2</b> Intercept Shift</a></li>
+<li class="chapter" data-level="2.7.3" data-path="linear-regression.html"><a href="linear-regression.html#slope-shift"><i class="fa fa-check"></i><b>2.7.3</b> Slope Shift</a></li>
+<li class="chapter" data-level="2.7.4" data-path="linear-regression.html"><a href="linear-regression.html#intercept-and-slope-shift"><i class="fa fa-check"></i><b>2.7.4</b> Intercept and Slope Shift</a></li>
+<li class="chapter" data-level="2.7.5" data-path="linear-regression.html"><a href="linear-regression.html#intercept-shift-with-multiple-levels"><i class="fa fa-check"></i><b>2.7.5</b> Intercept Shift with Multiple Levels</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="linear-regression.html"><a href="linear-regression.html#suggested-readings-1"><i class="fa fa-check"></i><b>2.8</b> Suggested Readings</a></li>
+<li class="chapter" data-level="2.9" data-path="linear-regression.html"><a href="linear-regression.html#r-code-1"><i class="fa fa-check"></i><b>2.9</b> R Code</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="linear-regression.html"><a href="linear-regression.html#table21"><i class="fa fa-check"></i><b>2.9.1</b> Table 2.1</a></li>
+<li class="chapter" data-level="2.9.2" data-path="linear-regression.html"><a href="linear-regression.html#table22"><i class="fa fa-check"></i><b>2.9.2</b> Table 2.2</a></li>
+<li class="chapter" data-level="2.9.3" data-path="linear-regression.html"><a href="linear-regression.html#table23"><i class="fa fa-check"></i><b>2.9.3</b> Table 2.3</a></li>
+<li class="chapter" data-level="2.9.4" data-path="linear-regression.html"><a href="linear-regression.html#table24"><i class="fa fa-check"></i><b>2.9.4</b> Table 2.4</a></li>
+<li class="chapter" data-level="2.9.5" data-path="linear-regression.html"><a href="linear-regression.html#table25"><i class="fa fa-check"></i><b>2.9.5</b> Table 2.5</a></li>
+<li class="chapter" data-level="2.9.6" data-path="linear-regression.html"><a href="linear-regression.html#table26"><i class="fa fa-check"></i><b>2.9.6</b> Table 2.6</a></li>
+<li class="chapter" data-level="2.9.7" data-path="linear-regression.html"><a href="linear-regression.html#table27"><i class="fa fa-check"></i><b>2.9.7</b> Table 2.7</a></li>
+<li class="chapter" data-level="2.9.8" data-path="linear-regression.html"><a href="linear-regression.html#table28"><i class="fa fa-check"></i><b>2.9.8</b> Table 2.8</a></li>
+<li class="chapter" data-level="2.9.9" data-path="linear-regression.html"><a href="linear-regression.html#table29"><i class="fa fa-check"></i><b>2.9.9</b> Table 2.9</a></li>
+<li class="chapter" data-level="2.9.10" data-path="linear-regression.html"><a href="linear-regression.html#figure21"><i class="fa fa-check"></i><b>2.9.10</b> Figure 2.1</a></li>
+<li class="chapter" data-level="2.9.11" data-path="linear-regression.html"><a href="linear-regression.html#figure22"><i class="fa fa-check"></i><b>2.9.11</b> Figure 2.2</a></li>
+<li class="chapter" data-level="2.9.12" data-path="linear-regression.html"><a href="linear-regression.html#figure23"><i class="fa fa-check"></i><b>2.9.12</b> Figure 2.3</a></li>
+<li class="chapter" data-level="2.9.13" data-path="linear-regression.html"><a href="linear-regression.html#figure24"><i class="fa fa-check"></i><b>2.9.13</b> Figure 2.4</a></li>
+<li class="chapter" data-level="2.9.14" data-path="linear-regression.html"><a href="linear-regression.html#figure25"><i class="fa fa-check"></i><b>2.9.14</b> Figure 2.5</a></li>
+<li class="chapter" data-level="2.9.15" data-path="linear-regression.html"><a href="linear-regression.html#figure26"><i class="fa fa-check"></i><b>2.9.15</b> Figure 2.6</a></li>
+<li class="chapter" data-level="2.9.16" data-path="linear-regression.html"><a href="linear-regression.html#figure27"><i class="fa fa-check"></i><b>2.9.16</b> Figure 2.7</a></li>
+<li class="chapter" data-level="2.9.17" data-path="linear-regression.html"><a href="linear-regression.html#figure28"><i class="fa fa-check"></i><b>2.9.17</b> Figure 2.8</a></li>
+<li class="chapter" data-level="2.9.18" data-path="linear-regression.html"><a href="linear-regression.html#figure29"><i class="fa fa-check"></i><b>2.9.18</b> Figure 2.9</a></li>
+<li class="chapter" data-level="2.9.19" data-path="linear-regression.html"><a href="linear-regression.html#figure210"><i class="fa fa-check"></i><b>2.9.19</b> Figure 2.10</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="logistic-regression.html"><a href="logistic-regression.html"><i class="fa fa-check"></i><b>3</b> Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="logistic-regression.html"><a href="logistic-regression.html#motivation-2"><i class="fa fa-check"></i><b>3.1</b> Motivation</a></li>
+<li class="chapter" data-level="3.2" data-path="logistic-regression.html"><a href="logistic-regression.html#r-packages-and-datasets-for-topic-3"><i class="fa fa-check"></i><b>3.2</b> R Packages and Datasets for Topic 3</a></li>
+<li class="chapter" data-level="3.3" data-path="logistic-regression.html"><a href="logistic-regression.html#why-not-use-linear-regression"><i class="fa fa-check"></i><b>3.3</b> Why not use linear regression?</a></li>
+<li class="chapter" data-level="3.4" data-path="logistic-regression.html"><a href="logistic-regression.html#understanding-logistic-regression"><i class="fa fa-check"></i><b>3.4</b> Understanding Logistic Regression</a></li>
+<li class="chapter" data-level="3.5" data-path="logistic-regression.html"><a href="logistic-regression.html#conducting-logistic-regression"><i class="fa fa-check"></i><b>3.5</b> Conducting Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="logistic-regression.html"><a href="logistic-regression.html#model-estimation-1"><i class="fa fa-check"></i><b>3.5.1</b> Model Estimation</a></li>
+<li class="chapter" data-level="3.5.2" data-path="logistic-regression.html"><a href="logistic-regression.html#assessing-model-fit"><i class="fa fa-check"></i><b>3.5.2</b> Assessing Model Fit</a>
+<ul>
+<li class="chapter" data-level="3.5.2.1" data-path="logistic-regression.html"><a href="logistic-regression.html#goodness-of-fit-measures"><i class="fa fa-check"></i><b>3.5.2.1</b> Goodness-of-Fit Measures</a></li>
+<li class="chapter" data-level="3.5.2.2" data-path="logistic-regression.html"><a href="logistic-regression.html#classification-matrix"><i class="fa fa-check"></i><b>3.5.2.2</b> Classification Matrix</a></li>
+<li class="chapter" data-level="3.5.2.3" data-path="logistic-regression.html"><a href="logistic-regression.html#roc-curve"><i class="fa fa-check"></i><b>3.5.2.3</b> ROC Curve</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5.3" data-path="logistic-regression.html"><a href="logistic-regression.html#interpreting-coefficients"><i class="fa fa-check"></i><b>3.5.3</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="3.5.4" data-path="logistic-regression.html"><a href="logistic-regression.html#gain-and-lift"><i class="fa fa-check"></i><b>3.5.4</b> Gain and Lift</a>
+<ul>
+<li class="chapter" data-level="3.5.4.1" data-path="logistic-regression.html"><a href="logistic-regression.html#gain"><i class="fa fa-check"></i><b>3.5.4.1</b> Gain</a></li>
+<li class="chapter" data-level="3.5.4.2" data-path="logistic-regression.html"><a href="logistic-regression.html#lift"><i class="fa fa-check"></i><b>3.5.4.2</b> Lift</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5.5" data-path="logistic-regression.html"><a href="logistic-regression.html#sensitivityspecificity-plots"><i class="fa fa-check"></i><b>3.5.5</b> Sensitivity/Specificity Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="logistic-regression.html"><a href="logistic-regression.html#logistic-regression-example"><i class="fa fa-check"></i><b>3.6</b> Logistic Regression Example</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="logistic-regression.html"><a href="logistic-regression.html#overview-3"><i class="fa fa-check"></i><b>3.6.1</b> Overview</a></li>
+<li class="chapter" data-level="3.6.2" data-path="logistic-regression.html"><a href="logistic-regression.html#estimation-results"><i class="fa fa-check"></i><b>3.6.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="3.6.3" data-path="logistic-regression.html"><a href="logistic-regression.html#overall-model-fit"><i class="fa fa-check"></i><b>3.6.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="3.6.4" data-path="logistic-regression.html"><a href="logistic-regression.html#interpreting-coefficients-1"><i class="fa fa-check"></i><b>3.6.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="3.6.5" data-path="logistic-regression.html"><a href="logistic-regression.html#gain-1"><i class="fa fa-check"></i><b>3.6.5</b> Gain</a></li>
+<li class="chapter" data-level="3.6.6" data-path="logistic-regression.html"><a href="logistic-regression.html#lift-1"><i class="fa fa-check"></i><b>3.6.6</b> Lift</a></li>
+<li class="chapter" data-level="3.6.7" data-path="logistic-regression.html"><a href="logistic-regression.html#sensitivityspecificity-plots-1"><i class="fa fa-check"></i><b>3.6.7</b> Sensitivity/Specificity Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="logistic-regression.html"><a href="logistic-regression.html#suggested-readings-2"><i class="fa fa-check"></i><b>3.7</b> Suggested Readings</a></li>
+<li class="chapter" data-level="3.8" data-path="logistic-regression.html"><a href="logistic-regression.html#r-code-2"><i class="fa fa-check"></i><b>3.8</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html"><i class="fa fa-check"></i><b>4</b> Targeting and Retaining Customers</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#r-packages-and-datasets-for-topic-4"><i class="fa fa-check"></i><b>4.1</b> R Packages and Datasets for Topic 4</a></li>
+<li class="chapter" data-level="4.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#targeting-customers"><i class="fa fa-check"></i><b>4.2</b> Targeting Customers</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#goal"><i class="fa fa-check"></i><b>4.2.1</b> Goal</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#retaining-customers"><i class="fa fa-check"></i><b>4.3</b> Retaining Customers</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#goal-1"><i class="fa fa-check"></i><b>4.3.1</b> Goal</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#targeting-customers-linear-regression-example"><i class="fa fa-check"></i><b>4.4</b> Targeting Customers (Linear Regression) Example</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#overview-4"><i class="fa fa-check"></i><b>4.4.1</b> Overview</a></li>
+<li class="chapter" data-level="4.4.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#summarize-data-1"><i class="fa fa-check"></i><b>4.4.2</b> Summarize Data</a></li>
+<li class="chapter" data-level="4.4.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#model-specification-1"><i class="fa fa-check"></i><b>4.4.3</b> Model Specification</a></li>
+<li class="chapter" data-level="4.4.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#model-interpretation"><i class="fa fa-check"></i><b>4.4.4</b> Model Interpretation</a>
+<ul>
+<li class="chapter" data-level="4.4.4.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#results-1"><i class="fa fa-check"></i><b>4.4.4.1</b> Results</a></li>
+<li class="chapter" data-level="4.4.4.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#testing-overall-model-significance"><i class="fa fa-check"></i><b>4.4.4.2</b> Testing Overall Model Significance</a></li>
+<li class="chapter" data-level="4.4.4.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#assessing-overall-model-fit-1"><i class="fa fa-check"></i><b>4.4.4.3</b> Assessing overall model fit</a></li>
+<li class="chapter" data-level="4.4.4.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpret-individual-ivs"><i class="fa fa-check"></i><b>4.4.4.4</b> Interpret Individual IVs</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#conclusion"><i class="fa fa-check"></i><b>4.4.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#targeting-customers-logistic-regression"><i class="fa fa-check"></i><b>4.5</b> Targeting Customers (Logistic Regression)</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#overview-5"><i class="fa fa-check"></i><b>4.5.1</b> Overview</a></li>
+<li class="chapter" data-level="4.5.2" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#estimation-results-1"><i class="fa fa-check"></i><b>4.5.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="4.5.3" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#overall-model-fit-1"><i class="fa fa-check"></i><b>4.5.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="4.5.4" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpreting-coefficients-2"><i class="fa fa-check"></i><b>4.5.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="4.5.5" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#interpreting-coefficients-visually"><i class="fa fa-check"></i><b>4.5.5</b> Interpreting Coefficients Visually</a></li>
+<li class="chapter" data-level="4.5.6" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#gain-chart"><i class="fa fa-check"></i><b>4.5.6</b> Gain Chart</a></li>
+<li class="chapter" data-level="4.5.7" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#lift-chart"><i class="fa fa-check"></i><b>4.5.7</b> Lift Chart</a></li>
+<li class="chapter" data-level="4.5.8" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#conclusion-1"><i class="fa fa-check"></i><b>4.5.8</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#suggested-readings-3"><i class="fa fa-check"></i><b>4.6</b> Suggested Readings</a></li>
+<li class="chapter" data-level="4.7" data-path="targeting-and-retaining-customers.html"><a href="targeting-and-retaining-customers.html#r-code-3"><i class="fa fa-check"></i><b>4.7</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="segmentation.html"><a href="segmentation.html"><i class="fa fa-check"></i><b>5</b> Segmentation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="segmentation.html"><a href="segmentation.html#r-packages-and-datasets-for-topic-5"><i class="fa fa-check"></i><b>5.1</b> R Packages and Datasets for Topic 5</a></li>
+<li class="chapter" data-level="5.2" data-path="segmentation.html"><a href="segmentation.html#segmentation-overview"><i class="fa fa-check"></i><b>5.2</b> Segmentation Overview</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="segmentation.html"><a href="segmentation.html#why-segment-the-market"><i class="fa fa-check"></i><b>5.2.1</b> Why segment the market?</a></li>
+<li class="chapter" data-level="5.2.2" data-path="segmentation.html"><a href="segmentation.html#market-segment-vs.-segmentation"><i class="fa fa-check"></i><b>5.2.2</b> Market Segment vs. Segmentation</a></li>
+<li class="chapter" data-level="5.2.3" data-path="segmentation.html"><a href="segmentation.html#criteria-for-successful-segmentation"><i class="fa fa-check"></i><b>5.2.3</b> Criteria for Successful Segmentation</a></li>
+<li class="chapter" data-level="5.2.4" data-path="segmentation.html"><a href="segmentation.html#bases-for-consumer-markets"><i class="fa fa-check"></i><b>5.2.4</b> Bases for Consumer Markets</a>
+<ul>
+<li class="chapter" data-level="5.2.4.1" data-path="segmentation.html"><a href="segmentation.html#which-base-to-use"><i class="fa fa-check"></i><b>5.2.4.1</b> Which base to use?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="segmentation.html"><a href="segmentation.html#cluster-analysis"><i class="fa fa-check"></i><b>5.3</b> Cluster Analysis</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="segmentation.html"><a href="segmentation.html#overview-6"><i class="fa fa-check"></i><b>5.3.1</b> Overview</a></li>
+<li class="chapter" data-level="5.3.2" data-path="segmentation.html"><a href="segmentation.html#measures-of-similarity"><i class="fa fa-check"></i><b>5.3.2</b> Measures of Similarity</a>
+<ul>
+<li class="chapter" data-level="5.3.2.1" data-path="segmentation.html"><a href="segmentation.html#continuous-data"><i class="fa fa-check"></i><b>5.3.2.1</b> Continuous data</a></li>
+<li class="chapter" data-level="5.3.2.2" data-path="segmentation.html"><a href="segmentation.html#binary-data"><i class="fa fa-check"></i><b>5.3.2.2</b> Binary Data</a></li>
+<li class="chapter" data-level="5.3.2.3" data-path="segmentation.html"><a href="segmentation.html#mixed-data"><i class="fa fa-check"></i><b>5.3.2.3</b> Mixed data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3.3" data-path="segmentation.html"><a href="segmentation.html#assigning-objects"><i class="fa fa-check"></i><b>5.3.3</b> Assigning Objects</a>
+<ul>
+<li class="chapter" data-level="5.3.3.1" data-path="segmentation.html"><a href="segmentation.html#hierarchical-agglomerative"><i class="fa fa-check"></i><b>5.3.3.1</b> Hierarchical: Agglomerative</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3.4" data-path="segmentation.html"><a href="segmentation.html#describe-the-segments"><i class="fa fa-check"></i><b>5.3.4</b> Describe the Segments</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="segmentation.html"><a href="segmentation.html#segmentation-cluster-analysis-example"><i class="fa fa-check"></i><b>5.4</b> Segmentation (Cluster Analysis) Example</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="segmentation.html"><a href="segmentation.html#overview-7"><i class="fa fa-check"></i><b>5.4.1</b> Overview</a></li>
+<li class="chapter" data-level="5.4.2" data-path="segmentation.html"><a href="segmentation.html#examine-the-data"><i class="fa fa-check"></i><b>5.4.2</b> Examine the Data</a></li>
+<li class="chapter" data-level="5.4.3" data-path="segmentation.html"><a href="segmentation.html#hierarchical-cluster-analysis"><i class="fa fa-check"></i><b>5.4.3</b> Hierarchical Cluster Analysis</a></li>
+<li class="chapter" data-level="5.4.4" data-path="segmentation.html"><a href="segmentation.html#k-means-cluster-analysis"><i class="fa fa-check"></i><b>5.4.4</b> <em>k-Means</em> Cluster Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="segmentation.html"><a href="segmentation.html#suggested-readings-4"><i class="fa fa-check"></i><b>5.5</b> Suggested Readings</a></li>
+<li class="chapter" data-level="5.6" data-path="segmentation.html"><a href="segmentation.html#r-code-4"><i class="fa fa-check"></i><b>5.6</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="positioning.html"><a href="positioning.html"><i class="fa fa-check"></i><b>6</b> Positioning</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="positioning.html"><a href="positioning.html#r-packages-and-datasets-for-topic-5-1"><i class="fa fa-check"></i><b>6.1</b> R Packages and Datasets for Topic 5</a></li>
+<li class="chapter" data-level="6.2" data-path="positioning.html"><a href="positioning.html#positioning-overview"><i class="fa fa-check"></i><b>6.2</b> Positioning Overview</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="positioning.html"><a href="positioning.html#the-concept-of-positioning"><i class="fa fa-check"></i><b>6.2.1</b> The Concept of Positioning</a></li>
+<li class="chapter" data-level="6.2.2" data-path="positioning.html"><a href="positioning.html#position-vs.-positioning"><i class="fa fa-check"></i><b>6.2.2</b> Position vs. Positioning</a></li>
+<li class="chapter" data-level="6.2.3" data-path="positioning.html"><a href="positioning.html#difficulty-of-positioning"><i class="fa fa-check"></i><b>6.2.3</b> Difficulty of Positioning</a></li>
+<li class="chapter" data-level="6.2.4" data-path="positioning.html"><a href="positioning.html#competitive-market-structure"><i class="fa fa-check"></i><b>6.2.4</b> Competitive Market Structure</a></li>
+<li class="chapter" data-level="6.2.5" data-path="positioning.html"><a href="positioning.html#positioning-with-product-parity"><i class="fa fa-check"></i><b>6.2.5</b> Positioning with Product Parity</a></li>
+<li class="chapter" data-level="6.2.6" data-path="positioning.html"><a href="positioning.html#requirements-for-effective-positioning"><i class="fa fa-check"></i><b>6.2.6</b> Requirements for Effective Positioning</a>
+<ul>
+<li class="chapter" data-level="6.2.6.1" data-path="positioning.html"><a href="positioning.html#uniqueness"><i class="fa fa-check"></i><b>6.2.6.1</b> Uniqueness</a></li>
+<li class="chapter" data-level="6.2.6.2" data-path="positioning.html"><a href="positioning.html#desirability"><i class="fa fa-check"></i><b>6.2.6.2</b> Desirability</a></li>
+<li class="chapter" data-level="6.2.6.3" data-path="positioning.html"><a href="positioning.html#believability"><i class="fa fa-check"></i><b>6.2.6.3</b> Believability</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2.7" data-path="positioning.html"><a href="positioning.html#steps-in-positioning"><i class="fa fa-check"></i><b>6.2.7</b> Steps in Positioning</a></li>
+<li class="chapter" data-level="6.2.8" data-path="positioning.html"><a href="positioning.html#positioning-research-methods"><i class="fa fa-check"></i><b>6.2.8</b> Positioning Research Methods</a>
+<ul>
+<li class="chapter" data-level="6.2.8.1" data-path="positioning.html"><a href="positioning.html#image-profile"><i class="fa fa-check"></i><b>6.2.8.1</b> Image Profile</a></li>
+<li class="chapter" data-level="6.2.8.2" data-path="positioning.html"><a href="positioning.html#quadrant-analysis"><i class="fa fa-check"></i><b>6.2.8.2</b> Quadrant Analysis</a></li>
+<li class="chapter" data-level="6.2.8.3" data-path="positioning.html"><a href="positioning.html#perceptual-maps"><i class="fa fa-check"></i><b>6.2.8.3</b> Perceptual Maps</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="positioning.html"><a href="positioning.html#factor-analysis"><i class="fa fa-check"></i><b>6.3</b> Factor Analysis</a></li>
+<li class="chapter" data-level="6.4" data-path="positioning.html"><a href="positioning.html#principal-components-analysis-pca"><i class="fa fa-check"></i><b>6.4</b> Principal Components Analysis (PCA)</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="positioning.html"><a href="positioning.html#pca-process"><i class="fa fa-check"></i><b>6.4.1</b> PCA Process</a>
+<ul>
+<li class="chapter" data-level="6.4.1.1" data-path="positioning.html"><a href="positioning.html#step-1-determine-number-of-factors-to-retain"><i class="fa fa-check"></i><b>6.4.1.1</b> Step 1: Determine number of factors to retain</a></li>
+<li class="chapter" data-level="6.4.1.2" data-path="positioning.html"><a href="positioning.html#step-2-rotate-factors-to-aid-interpretation"><i class="fa fa-check"></i><b>6.4.1.2</b> Step 2: Rotate factors to aid interpretation</a></li>
+<li class="chapter" data-level="6.4.1.3" data-path="positioning.html"><a href="positioning.html#step-3-interpret-factors"><i class="fa fa-check"></i><b>6.4.1.3</b> Step 3: Interpret factors</a></li>
+<li class="chapter" data-level="6.4.1.4" data-path="positioning.html"><a href="positioning.html#step-4-use-results-in-further-analysis"><i class="fa fa-check"></i><b>6.4.1.4</b> Step 4: Use results in further analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="positioning.html"><a href="positioning.html#creating-a-percptual-map-using-pca"><i class="fa fa-check"></i><b>6.5</b> Creating a Percptual Map using PCA</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="positioning.html"><a href="positioning.html#map-brands"><i class="fa fa-check"></i><b>6.5.1</b> Map Brands</a></li>
+<li class="chapter" data-level="6.5.2" data-path="positioning.html"><a href="positioning.html#map-attributes"><i class="fa fa-check"></i><b>6.5.2</b> Map Attributes</a></li>
+<li class="chapter" data-level="6.5.3" data-path="positioning.html"><a href="positioning.html#interpret-map"><i class="fa fa-check"></i><b>6.5.3</b> Interpret Map</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="positioning.html"><a href="positioning.html#joint-space-maps"><i class="fa fa-check"></i><b>6.6</b> Joint-Space Maps</a></li>
+<li class="chapter" data-level="6.7" data-path="positioning.html"><a href="positioning.html#positioning-example"><i class="fa fa-check"></i><b>6.7</b> Positioning Example</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="positioning.html"><a href="positioning.html#overview-8"><i class="fa fa-check"></i><b>6.7.1</b> Overview</a></li>
+<li class="chapter" data-level="6.7.2" data-path="positioning.html"><a href="positioning.html#examine-the-data-1"><i class="fa fa-check"></i><b>6.7.2</b> Examine the Data</a></li>
+<li class="chapter" data-level="6.7.3" data-path="positioning.html"><a href="positioning.html#how-many-factors"><i class="fa fa-check"></i><b>6.7.3</b> How many factors</a></li>
+<li class="chapter" data-level="6.7.4" data-path="positioning.html"><a href="positioning.html#rotate-factors"><i class="fa fa-check"></i><b>6.7.4</b> Rotate factors</a></li>
+<li class="chapter" data-level="6.7.5" data-path="positioning.html"><a href="positioning.html#create-perceptual-map"><i class="fa fa-check"></i><b>6.7.5</b> Create perceptual map</a></li>
+<li class="chapter" data-level="6.7.6" data-path="positioning.html"><a href="positioning.html#create-joint-space-map"><i class="fa fa-check"></i><b>6.7.6</b> Create joint-space map</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="positioning.html"><a href="positioning.html#suggested-readings-5"><i class="fa fa-check"></i><b>6.8</b> Suggested Readings</a></li>
+<li class="chapter" data-level="6.9" data-path="positioning.html"><a href="positioning.html#r-code-5"><i class="fa fa-check"></i><b>6.9</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="customer-choice.html"><a href="customer-choice.html"><i class="fa fa-check"></i><b>7</b> Customer Choice</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="customer-choice.html"><a href="customer-choice.html#r-packages-and-datasets-for-topic-7"><i class="fa fa-check"></i><b>7.1</b> R Packages and Datasets for Topic 7</a></li>
+<li class="chapter" data-level="7.2" data-path="customer-choice.html"><a href="customer-choice.html#motivation-3"><i class="fa fa-check"></i><b>7.2</b> Motivation</a></li>
+<li class="chapter" data-level="7.3" data-path="customer-choice.html"><a href="customer-choice.html#understanding-multinomial-logistic"><i class="fa fa-check"></i><b>7.3</b> Understanding Multinomial Logistic</a></li>
+<li class="chapter" data-level="7.4" data-path="customer-choice.html"><a href="customer-choice.html#conducting-multinomial-logistic"><i class="fa fa-check"></i><b>7.4</b> Conducting Multinomial Logistic</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="customer-choice.html"><a href="customer-choice.html#model-estimation-2"><i class="fa fa-check"></i><b>7.4.1</b> Model Estimation</a></li>
+<li class="chapter" data-level="7.4.2" data-path="customer-choice.html"><a href="customer-choice.html#assessing-model-fit-1"><i class="fa fa-check"></i><b>7.4.2</b> Assessing Model Fit</a>
+<ul>
+<li class="chapter" data-level="7.4.2.1" data-path="customer-choice.html"><a href="customer-choice.html#goodness-of-fit-measures-1"><i class="fa fa-check"></i><b>7.4.2.1</b> Goodness-of-Fit Measures</a></li>
+<li class="chapter" data-level="7.4.2.2" data-path="customer-choice.html"><a href="customer-choice.html#classification-matrix-1"><i class="fa fa-check"></i><b>7.4.2.2</b> Classification Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4.3" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-3"><i class="fa fa-check"></i><b>7.4.3</b> Interpreting Coefficients</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="customer-choice.html"><a href="customer-choice.html#standard-mnl-regression-example-1"><i class="fa fa-check"></i><b>7.5</b> Standard MNL Regression Example 1</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="customer-choice.html"><a href="customer-choice.html#data"><i class="fa fa-check"></i><b>7.5.1</b> Data</a></li>
+<li class="chapter" data-level="7.5.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-2"><i class="fa fa-check"></i><b>7.5.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="7.5.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-2"><i class="fa fa-check"></i><b>7.5.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="7.5.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-4"><i class="fa fa-check"></i><b>7.5.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="7.5.5" data-path="customer-choice.html"><a href="customer-choice.html#average-predicted-probabilities"><i class="fa fa-check"></i><b>7.5.5</b> Average Predicted Probabilities</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="customer-choice.html"><a href="customer-choice.html#standard-mnl-regression-example-2"><i class="fa fa-check"></i><b>7.6</b> Standard MNL Regression Example 2</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="customer-choice.html"><a href="customer-choice.html#data-1"><i class="fa fa-check"></i><b>7.6.1</b> Data</a></li>
+<li class="chapter" data-level="7.6.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-3"><i class="fa fa-check"></i><b>7.6.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="7.6.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-3"><i class="fa fa-check"></i><b>7.6.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="7.6.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-5"><i class="fa fa-check"></i><b>7.6.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="7.6.5" data-path="customer-choice.html"><a href="customer-choice.html#average-predicted-probabilities-1"><i class="fa fa-check"></i><b>7.6.5</b> Average Predicted Probabilities</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="customer-choice.html"><a href="customer-choice.html#alternative-specific-mnl-example"><i class="fa fa-check"></i><b>7.7</b> Alternative Specific MNL Example</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="customer-choice.html"><a href="customer-choice.html#data-2"><i class="fa fa-check"></i><b>7.7.1</b> Data</a></li>
+<li class="chapter" data-level="7.7.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-4"><i class="fa fa-check"></i><b>7.7.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="7.7.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-4"><i class="fa fa-check"></i><b>7.7.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="7.7.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-6"><i class="fa fa-check"></i><b>7.7.4</b> Interpreting Coefficients</a>
+<ul>
+<li class="chapter" data-level="7.7.4.1" data-path="customer-choice.html"><a href="customer-choice.html#choice-specific-results"><i class="fa fa-check"></i><b>7.7.4.1</b> Choice specific results</a></li>
+<li class="chapter" data-level="7.7.4.2" data-path="customer-choice.html"><a href="customer-choice.html#case-specific-results"><i class="fa fa-check"></i><b>7.7.4.2</b> Case Specific Results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="customer-choice.html"><a href="customer-choice.html#suggested-readings-6"><i class="fa fa-check"></i><b>7.8</b> Suggested Readings</a></li>
+<li class="chapter" data-level="7.9" data-path="customer-choice.html"><a href="customer-choice.html#r-code-6"><i class="fa fa-check"></i><b>7.9</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html"><i class="fa fa-check"></i><b>8</b> Conjoint Analysis</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#r-packages-and-datasets-for-topic-8"><i class="fa fa-check"></i><b>8.1</b> R Packages and Datasets for Topic 8</a></li>
+<li class="chapter" data-level="8.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#why-conjoint"><i class="fa fa-check"></i><b>8.2</b> Why Conjoint?</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#buyers-versus-sellers"><i class="fa fa-check"></i><b>8.2.1</b> Buyers versus Sellers</a></li>
+<li class="chapter" data-level="8.2.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#breaking-down-products"><i class="fa fa-check"></i><b>8.2.2</b> Breaking Down Products</a></li>
+<li class="chapter" data-level="8.2.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#learning-what-customers-want"><i class="fa fa-check"></i><b>8.2.3</b> Learning What Customers Want</a></li>
+<li class="chapter" data-level="8.2.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#how-is-conjoint-analysis-different"><i class="fa fa-check"></i><b>8.2.4</b> How is Conjoint Analysis Different?</a></li>
+<li class="chapter" data-level="8.2.5" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#why-does-conjoint-analysis-work"><i class="fa fa-check"></i><b>8.2.5</b> Why Does Conjoint Analysis Work?</a></li>
+<li class="chapter" data-level="8.2.6" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#practical-guidelines"><i class="fa fa-check"></i><b>8.2.6</b> Practical Guidelines</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#how-conjoint-analysis-works"><i class="fa fa-check"></i><b>8.3</b> How Conjoint Analysis Works</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#rules-for-creating-the-attribute-list"><i class="fa fa-check"></i><b>8.3.1</b> Rules for Creating the Attribute List</a></li>
+<li class="chapter" data-level="8.3.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#build-concepts"><i class="fa fa-check"></i><b>8.3.2</b> Build Concepts</a></li>
+<li class="chapter" data-level="8.3.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#raterankchoose-concepts"><i class="fa fa-check"></i><b>8.3.3</b> Rate/Rank/Choose Concepts</a></li>
+<li class="chapter" data-level="8.3.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#use-statistics-to-derive-unique-value"><i class="fa fa-check"></i><b>8.3.4</b> Use Statistics to Derive Unique Value</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#part-worth-utilities-and-importances"><i class="fa fa-check"></i><b>8.4</b> Part-Worth Utilities and Importances</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#characteristics-of-part-worth-utilities"><i class="fa fa-check"></i><b>8.4.1</b> Characteristics of Part-Worth Utilities</a></li>
+<li class="chapter" data-level="8.4.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#calculating-part-worth-utilities-traditional-conjoint"><i class="fa fa-check"></i><b>8.4.2</b> Calculating Part-Worth Utilities (traditional conjoint)</a></li>
+<li class="chapter" data-level="8.4.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#from-utilities-to-importances"><i class="fa fa-check"></i><b>8.4.3</b> From Utilities to Importances</a></li>
+<li class="chapter" data-level="8.4.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#calculating-conjoint-importances"><i class="fa fa-check"></i><b>8.4.4</b> Calculating Conjoint Importances</a></li>
+<li class="chapter" data-level="8.4.5" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#interpreting-conjoint-importances"><i class="fa fa-check"></i><b>8.4.5</b> Interpreting Conjoint Importances</a></li>
+<li class="chapter" data-level="8.4.6" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#further-analysis"><i class="fa fa-check"></i><b>8.4.6</b> Further Analysis</a></li>
+<li class="chapter" data-level="8.4.7" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#prediction"><i class="fa fa-check"></i><b>8.4.7</b> Prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#traditional-conjoint-example"><i class="fa fa-check"></i><b>8.5</b> Traditional Conjoint Example</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#data-3"><i class="fa fa-check"></i><b>8.5.1</b> Data</a></li>
+<li class="chapter" data-level="8.5.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#summarize"><i class="fa fa-check"></i><b>8.5.2</b> Summarize</a></li>
+<li class="chapter" data-level="8.5.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#regression-results-for-one-respondent"><i class="fa fa-check"></i><b>8.5.3</b> Regression results for one respondent</a></li>
+<li class="chapter" data-level="8.5.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#importances-for-one-respondent"><i class="fa fa-check"></i><b>8.5.4</b> Importances for one respondent</a></li>
+<li class="chapter" data-level="8.5.5" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#average-part-worth-utilities-and-importances"><i class="fa fa-check"></i><b>8.5.5</b> Average Part-Worth Utilities and Importances</a></li>
+<li class="chapter" data-level="8.5.6" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#explain-importances-by-other-variables"><i class="fa fa-check"></i><b>8.5.6</b> Explain Importances by Other Variables</a></li>
+<li class="chapter" data-level="8.5.7" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#predict-part-worths-for-new-profiles"><i class="fa fa-check"></i><b>8.5.7</b> Predict Part-Worths for New Profiles</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#suggested-readings-7"><i class="fa fa-check"></i><b>8.6</b> Suggested Readings</a></li>
+<li class="chapter" data-level="8.7" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#r-code-7"><i class="fa fa-check"></i><b>8.7</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html"><i class="fa fa-check"></i><b>9</b> Marketing Mix Decisions</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#r-packages-and-datasets-for-topic-9"><i class="fa fa-check"></i><b>9.1</b> R Packages and Datasets for Topic 9</a></li>
+<li class="chapter" data-level="9.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#overview-9"><i class="fa fa-check"></i><b>9.2</b> Overview</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#the-marketing-mix"><i class="fa fa-check"></i><b>9.2.1</b> The Marketing Mix</a></li>
+<li class="chapter" data-level="9.2.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#market-response-models"><i class="fa fa-check"></i><b>9.2.2</b> Market Response Models</a></li>
+<li class="chapter" data-level="9.2.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#marketing-decision-models"><i class="fa fa-check"></i><b>9.2.3</b> Marketing Decision Models</a></li>
+<li class="chapter" data-level="9.2.4" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#advantages-of-response-models"><i class="fa fa-check"></i><b>9.2.4</b> Advantages of Response Models</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#elasticity"><i class="fa fa-check"></i><b>9.3</b> Elasticity</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#elasticity-of-demand"><i class="fa fa-check"></i><b>9.3.1</b> Elasticity of Demand</a></li>
+<li class="chapter" data-level="9.3.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#inelastic-demand"><i class="fa fa-check"></i><b>9.3.2</b> Inelastic Demand</a></li>
+<li class="chapter" data-level="9.3.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#elastic-demand"><i class="fa fa-check"></i><b>9.3.3</b> Elastic Demand</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-advertising-response"><i class="fa fa-check"></i><b>9.4</b> Modeling Advertising Response</a></li>
+<li class="chapter" data-level="9.5" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-price-response"><i class="fa fa-check"></i><b>9.5</b> Modeling Price Response</a></li>
+<li class="chapter" data-level="9.6" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-advertising-response-example"><i class="fa fa-check"></i><b>9.6</b> Modeling Advertising Response Example</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-4"><i class="fa fa-check"></i><b>9.6.1</b> Data</a></li>
+<li class="chapter" data-level="9.6.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#scatterplots-1"><i class="fa fa-check"></i><b>9.6.2</b> Scatterplots</a></li>
+<li class="chapter" data-level="9.6.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#estimation"><i class="fa fa-check"></i><b>9.6.3</b> Estimation</a></li>
+<li class="chapter" data-level="9.6.4" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#results-2"><i class="fa fa-check"></i><b>9.6.4</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-price-response-example"><i class="fa fa-check"></i><b>9.7</b> Modeling Price Response Example</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-5"><i class="fa fa-check"></i><b>9.7.1</b> Data</a></li>
+<li class="chapter" data-level="9.7.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#scatterplot"><i class="fa fa-check"></i><b>9.7.2</b> Scatterplot</a></li>
+<li class="chapter" data-level="9.7.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#estimation-1"><i class="fa fa-check"></i><b>9.7.3</b> Estimation</a></li>
+<li class="chapter" data-level="9.7.4" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#results-3"><i class="fa fa-check"></i><b>9.7.4</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-price-and-advertising-response-example"><i class="fa fa-check"></i><b>9.8</b> Modeling Price and Advertising Response Example</a>
+<ul>
+<li class="chapter" data-level="9.8.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-6"><i class="fa fa-check"></i><b>9.8.1</b> Data</a></li>
+<li class="chapter" data-level="9.8.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#scatterplot-1"><i class="fa fa-check"></i><b>9.8.2</b> Scatterplot</a></li>
+<li class="chapter" data-level="9.8.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#estimation-2"><i class="fa fa-check"></i><b>9.8.3</b> Estimation</a></li>
+<li class="chapter" data-level="9.8.4" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#results-4"><i class="fa fa-check"></i><b>9.8.4</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#suggested-readings-8"><i class="fa fa-check"></i><b>9.9</b> Suggested Readings</a></li>
+<li class="chapter" data-level="9.10" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#r-code-8"><i class="fa fa-check"></i><b>9.10</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="forecasting-i.html"><a href="forecasting-i.html"><i class="fa fa-check"></i><b>10</b> Forecasting I</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="forecasting-i.html"><a href="forecasting-i.html#r-packages-and-datasets-for-topic-10"><i class="fa fa-check"></i><b>10.1</b> R Packages and Datasets for Topic 10</a></li>
+<li class="chapter" data-level="10.2" data-path="forecasting-i.html"><a href="forecasting-i.html#overview-10"><i class="fa fa-check"></i><b>10.2</b> Overview</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="forecasting-i.html"><a href="forecasting-i.html#the-concept-of-forecasting"><i class="fa fa-check"></i><b>10.2.1</b> The Concept of Forecasting</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="forecasting-i.html"><a href="forecasting-i.html#forecasting-methods"><i class="fa fa-check"></i><b>10.3</b> Forecasting Methods</a></li>
+<li class="chapter" data-level="10.4" data-path="forecasting-i.html"><a href="forecasting-i.html#forecasting---time-series"><i class="fa fa-check"></i><b>10.4</b> Forecasting - Time Series</a></li>
+<li class="chapter" data-level="10.5" data-path="forecasting-i.html"><a href="forecasting-i.html#naïve-methods"><i class="fa fa-check"></i><b>10.5</b> Naïve Methods</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="forecasting-i.html"><a href="forecasting-i.html#naïve"><i class="fa fa-check"></i><b>10.5.1</b> Naïve</a></li>
+<li class="chapter" data-level="10.5.2" data-path="forecasting-i.html"><a href="forecasting-i.html#seasonal-naïve"><i class="fa fa-check"></i><b>10.5.2</b> Seasonal Naïve</a></li>
+<li class="chapter" data-level="10.5.3" data-path="forecasting-i.html"><a href="forecasting-i.html#naïve-with-drift"><i class="fa fa-check"></i><b>10.5.3</b> Naïve with Drift</a></li>
+<li class="chapter" data-level="10.5.4" data-path="forecasting-i.html"><a href="forecasting-i.html#seasonal-naïve-with-drift"><i class="fa fa-check"></i><b>10.5.4</b> Seasonal Naïve with Drift</a></li>
+<li class="chapter" data-level="10.5.5" data-path="forecasting-i.html"><a href="forecasting-i.html#summary"><i class="fa fa-check"></i><b>10.5.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="forecasting-i.html"><a href="forecasting-i.html#smoothing-techniques"><i class="fa fa-check"></i><b>10.6</b> Smoothing Techniques</a>
+<ul>
+<li class="chapter" data-level="10.6.1" data-path="forecasting-i.html"><a href="forecasting-i.html#moving-average"><i class="fa fa-check"></i><b>10.6.1</b> Moving Average</a></li>
+<li class="chapter" data-level="10.6.2" data-path="forecasting-i.html"><a href="forecasting-i.html#exponential-smoothing"><i class="fa fa-check"></i><b>10.6.2</b> Exponential Smoothing</a></li>
+<li class="chapter" data-level="10.6.3" data-path="forecasting-i.html"><a href="forecasting-i.html#holt-winters-smoothing"><i class="fa fa-check"></i><b>10.6.3</b> Holt-Winters Smoothing</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="forecasting-i.html"><a href="forecasting-i.html#regression-based"><i class="fa fa-check"></i><b>10.7</b> Regression-based</a>
+<ul>
+<li class="chapter" data-level="10.7.1" data-path="forecasting-i.html"><a href="forecasting-i.html#trend-only"><i class="fa fa-check"></i><b>10.7.1</b> Trend only</a></li>
+<li class="chapter" data-level="10.7.2" data-path="forecasting-i.html"><a href="forecasting-i.html#trend-and-seasonality"><i class="fa fa-check"></i><b>10.7.2</b> Trend and Seasonality</a></li>
+</ul></li>
+<li class="chapter" data-level="10.8" data-path="forecasting-i.html"><a href="forecasting-i.html#forecast-accuracy"><i class="fa fa-check"></i><b>10.8</b> Forecast Accuracy</a>
+<ul>
+<li class="chapter" data-level="10.8.1" data-path="forecasting-i.html"><a href="forecasting-i.html#measures"><i class="fa fa-check"></i><b>10.8.1</b> Measures</a></li>
+<li class="chapter" data-level="10.8.2" data-path="forecasting-i.html"><a href="forecasting-i.html#visual"><i class="fa fa-check"></i><b>10.8.2</b> Visual</a></li>
+</ul></li>
+<li class="chapter" data-level="10.9" data-path="forecasting-i.html"><a href="forecasting-i.html#forecasting-example-1"><i class="fa fa-check"></i><b>10.9</b> Forecasting Example 1</a>
+<ul>
+<li class="chapter" data-level="10.9.1" data-path="forecasting-i.html"><a href="forecasting-i.html#data-7"><i class="fa fa-check"></i><b>10.9.1</b> Data</a></li>
+<li class="chapter" data-level="10.9.2" data-path="forecasting-i.html"><a href="forecasting-i.html#examine-data"><i class="fa fa-check"></i><b>10.9.2</b> Examine Data</a></li>
+<li class="chapter" data-level="10.9.3" data-path="forecasting-i.html"><a href="forecasting-i.html#naïve-methods-1"><i class="fa fa-check"></i><b>10.9.3</b> Naïve Methods</a></li>
+<li class="chapter" data-level="10.9.4" data-path="forecasting-i.html"><a href="forecasting-i.html#smoothing-methods"><i class="fa fa-check"></i><b>10.9.4</b> Smoothing Methods</a></li>
+<li class="chapter" data-level="10.9.5" data-path="forecasting-i.html"><a href="forecasting-i.html#regression-methods"><i class="fa fa-check"></i><b>10.9.5</b> Regression Methods</a></li>
+<li class="chapter" data-level="10.9.6" data-path="forecasting-i.html"><a href="forecasting-i.html#compare-best-models"><i class="fa fa-check"></i><b>10.9.6</b> Compare Best Models</a></li>
+</ul></li>
+<li class="chapter" data-level="10.10" data-path="forecasting-i.html"><a href="forecasting-i.html#forecasting-example-2"><i class="fa fa-check"></i><b>10.10</b> Forecasting Example 2</a>
+<ul>
+<li class="chapter" data-level="10.10.1" data-path="forecasting-i.html"><a href="forecasting-i.html#data-8"><i class="fa fa-check"></i><b>10.10.1</b> Data</a></li>
+<li class="chapter" data-level="10.10.2" data-path="forecasting-i.html"><a href="forecasting-i.html#examine-data-1"><i class="fa fa-check"></i><b>10.10.2</b> Examine Data</a></li>
+<li class="chapter" data-level="10.10.3" data-path="forecasting-i.html"><a href="forecasting-i.html#naïve-methods-2"><i class="fa fa-check"></i><b>10.10.3</b> Naïve Methods</a></li>
+<li class="chapter" data-level="10.10.4" data-path="forecasting-i.html"><a href="forecasting-i.html#smoothing-methods-1"><i class="fa fa-check"></i><b>10.10.4</b> Smoothing Methods</a></li>
+<li class="chapter" data-level="10.10.5" data-path="forecasting-i.html"><a href="forecasting-i.html#regression-methods-1"><i class="fa fa-check"></i><b>10.10.5</b> Regression Methods</a></li>
+<li class="chapter" data-level="10.10.6" data-path="forecasting-i.html"><a href="forecasting-i.html#compare-best-models-1"><i class="fa fa-check"></i><b>10.10.6</b> Compare Best Models</a></li>
+</ul></li>
+<li class="chapter" data-level="10.11" data-path="forecasting-i.html"><a href="forecasting-i.html#suggested-readings-9"><i class="fa fa-check"></i><b>10.11</b> Suggested Readings</a></li>
+<li class="chapter" data-level="10.12" data-path="forecasting-i.html"><a href="forecasting-i.html#r-code-9"><i class="fa fa-check"></i><b>10.12</b> R Code</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MKT 4320: Marketing Analytics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="forecasting-i" class="section level1" number="10">
+<h1><span class="header-section-number">Topic 10</span> Forecasting I</h1>
+<div id="r-packages-and-datasets-for-topic-10" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> R Packages and Datasets for Topic 10</h2>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="forecasting-i.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb143-2"><a href="forecasting-i.html#cb143-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb143-3"><a href="forecasting-i.html#cb143-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fpp3)</span>
+<span id="cb143-4"><a href="forecasting-i.html#cb143-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(slider)</span>
+<span id="cb143-5"><a href="forecasting-i.html#cb143-5" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic10/monthlysales.rdata&quot;</span>)</span></code></pre></div>
+</div>
+<div id="overview-10" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Overview</h2>
+<div id="the-concept-of-forecasting" class="section level3" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> The Concept of Forecasting</h3>
+<ul>
+<li>Firms must make forecasts, but…<br>…Forecasing is difficult and challenging</li>
+<li>Marketing strategy focuses on the long term…<br>…Making the task more difficult and challenging</li>
+<li>Forecasting <em>is not</em> about “getting the future right”</li>
+<li>Forecasting <em>is</em> about helping manage uncertainty</li>
+<li><strong>Question to Ask</strong>
+<ul>
+<li>What are we forecasting?</li>
+<li>Why do we need the forecast?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="forecasting-methods" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Forecasting Methods</h2>
+<ul>
+<li>Judgmental
+<ul>
+<li>Sales force estimates</li>
+<li>Jury of experts</li>
+<li>Structured processes</li>
+</ul></li>
+<li>Market/Product Analysis
+<ul>
+<li>Surveys</li>
+<li>Market tests</li>
+<li>ATAR</li>
+</ul></li>
+<li>Time Series
+<ul>
+<li>Naïve methods</li>
+<li>Smoothing techniques</li>
+<li>Box-Jenkins methods</li>
+</ul></li>
+<li>Regression/Econometric
+<ul>
+<li>Linear</li>
+<li>Non-Linear</li>
+</ul></li>
+</ul>
+</div>
+<div id="forecasting---time-series" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> Forecasting - Time Series</h2>
+<ul>
+<li>Decomposition: splitting data into components
+<ul>
+<li>Trend</li>
+<li>Seasonality</li>
+<li>Reaminder</li>
+</ul></li>
+</ul>
+<p><img src="Topic10/ForecastingTimeSeries.png" width="300" /></p>
+</div>
+<div id="naïve-methods" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> Naïve Methods</h2>
+<div id="naïve" class="section level3" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> Naïve</h3>
+<ul>
+<li>Forecast future values to be same as the last observation<br><span class="math inline">\(\hat{y_t}=y_{t-1}\)</span><br />
+</li>
+<li>Easy to use, but…<br />
+</li>
+<li>What about…
+<ul>
+<li>Seasonality?<br />
+</li>
+<li>Trend?</li>
+</ul></li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+</div>
+<div id="seasonal-naïve" class="section level3" number="10.5.2">
+<h3><span class="header-section-number">10.5.2</span> Seasonal Naïve</h3>
+<ul>
+<li>Forecast future values to be same as the last observation of the same period<br><span class="math inline">\(\hat{y_t}=y_{t-m}\)</span><br />
+</li>
+<li>Easy to use, but…<br />
+</li>
+<li>What about…
+<ul>
+<li>Trend?</li>
+</ul></li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+</div>
+<div id="naïve-with-drift" class="section level3" number="10.5.3">
+<h3><span class="header-section-number">10.5.3</span> Naïve with Drift</h3>
+<ul>
+<li>Forecast future values to be same as the last observation plus the average change per period<br><span class="math inline">\(\hat{y_t}=y_{t-1}+(\frac{y_{t-1}-y_1}{T-1})\)</span><br />
+</li>
+<li>Easy to use, but…<br />
+</li>
+<li>What about…
+<ul>
+<li>Seasonality?</li>
+</ul></li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+</div>
+<div id="seasonal-naïve-with-drift" class="section level3" number="10.5.4">
+<h3><span class="header-section-number">10.5.4</span> Seasonal Naïve with Drift</h3>
+<ul>
+<li>Forecast future values to be same as the last observation of the same time period plus the average change per period</li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+</div>
+<div id="summary" class="section level3" number="10.5.5">
+<h3><span class="header-section-number">10.5.5</span> Summary</h3>
+<ul>
+<li>Naïve models may work, but…<br />
+</li>
+<li>Usually serve as a benchmark rather than preferred method</li>
+</ul>
+</div>
+</div>
+<div id="smoothing-techniques" class="section level2" number="10.6">
+<h2><span class="header-section-number">10.6</span> Smoothing Techniques</h2>
+<div id="moving-average" class="section level3" number="10.6.1">
+<h3><span class="header-section-number">10.6.1</span> Moving Average</h3>
+<ul>
+<li>Classic method to smooth randomness<br>
+<span class="math inline">\(\begin{aligned}  \hat{y_t}=\frac{1}{m}\sum_{j=1}^{m}y_{t-j} \end{aligned}\)</span></li>
+<li>Short-range forecast
+<ul>
+<li>Best for one-step ahead forecast<br />
+</li>
+</ul></li>
+<li>Doesn’t account for trend or seasonality</li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-55-1.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-55-2.png" width="672" /></p>
+</div>
+<div id="exponential-smoothing" class="section level3" number="10.6.2">
+<h3><span class="header-section-number">10.6.2</span> Exponential Smoothing</h3>
+<ul>
+<li>Weighted moving average approach with geometrically declining weights<br />
+</li>
+<li>Uses smoothing parameter
+<ul>
+<li>A larger parameter puts more weight on recent periods</li>
+</ul></li>
+</ul>
+<p><img src="Topic10/ESParameters.png" width="574" /></p>
+<ul>
+<li>Parameter can be manually input…<br />
+</li>
+<li>Better to optimize parameter by minimizing the error<br />
+</li>
+<li>Doesn’t really account for trend and seasonality</li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
+</div>
+<div id="holt-winters-smoothing" class="section level3" number="10.6.3">
+<h3><span class="header-section-number">10.6.3</span> Holt-Winters Smoothing</h3>
+<ul>
+<li>Extends exponential smoothing
+<ul>
+<li>Adds additional smoothing parameters for:
+<ul>
+<li>Trend<br />
+</li>
+<li>Seasonality<br />
+</li>
+</ul></li>
+</ul></li>
+<li>Better if forecasting multiple periods</li>
+<li>Two methods: Additive and Multiplicative</li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
+</div>
+</div>
+<div id="regression-based" class="section level2" number="10.7">
+<h2><span class="header-section-number">10.7</span> Regression-based</h2>
+<ul>
+<li>Can be used to model simple trend and seasonality</li>
+<li>Linear model: <span class="math inline">\(y_t=\alpha+\beta x_t\)</span></li>
+<li>To model trend, substitute <span class="math inline">\(t\)</span> for <span class="math inline">\(x_t\)</span><br><span class="math inline">\(y_t=\alpha+\beta t\)</span></li>
+<li>To model seasonality, substitute <span class="math inline">\(s\)</span> dummies for <span class="math inline">\(x_t\)</span>:<br><span class="math inline">\(y_t=\alpha+\gamma_1 S_1+\dots+\gamma_{s-1}S_{s-1}\)</span></li>
+<li>Combine to model trend and seasonality:<br><span class="math inline">\(y_t=\alpha+\beta t+\gamma_1 S_1+\dots+\gamma_{s-1}S_{s-1}\)</span></li>
+</ul>
+<div id="trend-only" class="section level3" number="10.7.1">
+<h3><span class="header-section-number">10.7.1</span> Trend only</h3>
+<ul>
+<li><span class="math inline">\(y_t=\alpha+\beta t\)</span></li>
+<li>Forecast is simply a straight line</li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+</div>
+<div id="trend-and-seasonality" class="section level3" number="10.7.2">
+<h3><span class="header-section-number">10.7.2</span> Trend and Seasonality</h3>
+<ul>
+<li><span class="math inline">\(y_t=\alpha+\beta t+\gamma_1 S_1+\dots+\gamma_{s-1}S_{s-1}\)</span><br />
+</li>
+<li>Forecast follows pattern</li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+</div>
+</div>
+<div id="forecast-accuracy" class="section level2" number="10.8">
+<h2><span class="header-section-number">10.8</span> Forecast Accuracy</h2>
+<ul>
+<li>Important to evaluate forecast accuracy<br />
+</li>
+<li>Predicted values of test data time periods<br />
+<img src="Topic10/ForecastAcc.png" width="75%" /></li>
+</ul>
+<div id="measures" class="section level3" number="10.8.1">
+<h3><span class="header-section-number">10.8.1</span> Measures</h3>
+<ul>
+<li>Calculate error in each test data time period:<br><span class="math inline">\(e_{T+h}=y_{T+h}-\hat{y}_{T+h}\)</span><br />
+</li>
+<li>Use Mean Absolute Error, Root Mean Squared Error, and Mean Absolute Percentage Error to compare models</li>
+<li>Mean Absolute Error (MAE):<br>
+<span class="math inline">\(\begin{aligned} \frac{\sum_{t=T+1}^{T+h}|e_t|}{n} \end{aligned}\)</span></li>
+<li>Root Mean Squared Error (RMSE):<br>
+<span class="math inline">\(\begin{aligned} \sqrt\frac{\sum_{t=T+1}^{T+h}e_t^2}{n} \end{aligned}\)</span></li>
+<li>Mean Absolute Percentage Error (MAPE):<br>
+<span class="math inline">\(\begin{aligned} \frac{\sum_{t=T+1}^{T+h}|e_t/y_t|}{n}\times 100 \end{aligned}\)</span></li>
+<li>Lower values indicate better forecast accuracy</li>
+</ul>
+</div>
+<div id="visual" class="section level3" number="10.8.2">
+<h3><span class="header-section-number">10.8.2</span> Visual</h3>
+<ul>
+<li>Visually examine forecast errors for test data</li>
+<li>Forecast errors closer to 0 indicate better forecast</li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+</div>
+</div>
+<div id="forecasting-example-1" class="section level2" number="10.9">
+<h2><span class="header-section-number">10.9</span> Forecasting Example 1</h2>
+<div id="data-7" class="section level3" number="10.9.1">
+<h3><span class="header-section-number">10.9.1</span> Data</h3>
+<ul>
+<li>Quarterly sales data from 1990 through 2012</li>
+<li>Variables:
+<ul>
+<li>Time period (<span class="math inline">\(t\)</span>)</li>
+<li>Sales from 1990 through 2010 (<span class="math inline">\(sales\)</span>)</li>
+</ul></li>
+<li>Goal: Forecast quarterly sales for the next two years</li>
+</ul>
+</div>
+<div id="examine-data" class="section level3" number="10.9.2">
+<h3><span class="header-section-number">10.9.2</span> Examine Data</h3>
+<div class="figure"><span style="display:block;" id="fig:t101tsplot01"></span>
+<img src="_main_files/figure-html/t101tsplot01-1.png" alt="Time Series Plot ([R code](#figure-reffigt101tsplot01))" width="672" />
+<p class="caption">
+Figure 10.1: Time Series Plot (<a href="forecasting-i.html#figure-reffigt101tsplot01">R code</a>)
+</p>
+</div>
+<ul>
+<li>Trend? <em>Yes</em></li>
+<li>Seasonlity? <em>No</em></li>
+<li>Potential Models?
+<ul>
+<li>Naïve with Drift</li>
+<li>Moving Average</li>
+<li>Holt-Winters</li>
+<li>Regression Trend</li>
+</ul></li>
+</ul>
+</div>
+<div id="naïve-methods-1" class="section level3" number="10.9.3">
+<h3><span class="header-section-number">10.9.3</span> Naïve Methods</h3>
+<ul>
+<li>Run all methods</li>
+<li>Plot dynamic forecasts
+<ul>
+<li>Naïve underestimates</li>
+<li>Naïve with Drift over estimates</li>
+<li>Seasonal methods not appropriate
+<div class="figure"><span style="display:block;" id="fig:t101naive01"></span>
+<img src="_main_files/figure-html/t101naive01-1.png" alt="Naive Methods Plot ([R code](#figure-reffigt101naive01))" width="672" />
+<p class="caption">
+Figure 10.2: Naive Methods Plot (<a href="forecasting-i.html#figure-reffigt101naive01">R code</a>)
+</p>
+</div></li>
+</ul></li>
+<li>Examine accuracy
+<ul>
+<li>Surprisingly, Naïve performs slightly better, than Naïve with Drift
+<ul>
+<li>Lowest RMSE, MAE, and MAPE</li>
+</ul></li>
+</ul></li>
+</ul>
+<caption>
+<span id="tab:t101naive02">Table 10.1: </span> Naive Methods Accuracy (<a href="#table-reftabt101naive02">R code</a>)
+</caption>
+<template id="cd82fd05-2eb1-46be-a3ec-c431c6dcc972"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-f6d194ca{}.cl-f6ca6dc6{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f6ca6dc7{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f6ca6dc8{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f6ca94b8{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6ca94b9{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6ca94ba{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6ca94bb{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6ca94bc{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6ca94bd{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-f6d194ca'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f6ca94bd"><p class="cl-f6ca6dc7"><span class="cl-f6ca6dc6">Model</span></p></td><td class="cl-f6ca94bc"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">RMSE</span></p></td><td class="cl-f6ca94bc"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">MAE</span></p></td><td class="cl-f6ca94bc"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">MAPE</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f6ca94b9"><p class="cl-f6ca6dc7"><span class="cl-f6ca6dc6">Naive</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">47.561</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">43.933</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">0.570</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6ca94b9"><p class="cl-f6ca6dc7"><span class="cl-f6ca6dc6">Naive.Drift</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">52.606</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">44.515</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">0.577</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6ca94b9"><p class="cl-f6ca6dc7"><span class="cl-f6ca6dc6">Seas.Naive</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">63.075</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">61.138</span></p></td><td class="cl-f6ca94b8"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">0.793</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6ca94bb"><p class="cl-f6ca6dc7"><span class="cl-f6ca6dc6">Seas.Naive.Drift</span></p></td><td class="cl-f6ca94ba"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">62.954</span></p></td><td class="cl-f6ca94ba"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">57.381</span></p></td><td class="cl-f6ca94ba"><p class="cl-f6ca6dc8"><span class="cl-f6ca6dc6">0.744</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="f36f9643-5faf-426b-9626-f38f02025277"></div>
+<script>
+var dest = document.getElementById("f36f9643-5faf-426b-9626-f38f02025277");
+var template = document.getElementById("cd82fd05-2eb1-46be-a3ec-c431c6dcc972");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<ul>
+<li>Examine forecast residuals
+<ul>
+<li>Naïve and Naïve with Drift appear similar
+<div class="figure"><span style="display:block;" id="fig:t101naive03"></span>
+<img src="_main_files/figure-html/t101naive03-1.png" alt="Naive Methods Forecast Residuals ([R code](#figure-reffigt101naive03))" width="672" />
+<p class="caption">
+Figure 10.3: Naive Methods Forecast Residuals (<a href="forecasting-i.html#figure-reffigt101naive03">R code</a>)
+</p>
+</div></li>
+</ul></li>
+</ul>
+</div>
+<div id="smoothing-methods" class="section level3" number="10.9.4">
+<h3><span class="header-section-number">10.9.4</span> Smoothing Methods</h3>
+<ul>
+<li>Run all methods</li>
+<li>Plot dynamic forecasts
+<ul>
+<li>Moving Average underestimates</li>
+<li>Both Holt-Winters overestimate, but not by much</li>
+<li>Exponential Smoothing a poor fit
+<div class="figure"><span style="display:block;" id="fig:t101smooth01"></span>
+<img src="_main_files/figure-html/t101smooth01-1.png" alt="Smoothing Methods Plot ([R code](#figure-reffigt101smooth01))" width="672" />
+<p class="caption">
+Figure 10.4: Smoothing Methods Plot (<a href="forecasting-i.html#figure-reffigt101smooth01">R code</a>)
+</p>
+</div></li>
+</ul></li>
+<li>Examine accuracy
+<ul>
+<li>Holt-Winters Additive is clearly the best model
+<ul>
+<li>Much lower RMSE, MAE, and MAPE</li>
+</ul></li>
+</ul></li>
+</ul>
+<caption>
+<span id="tab:t101smooth02">Table 10.2: </span> Smoothing Methods Accuracy (<a href="#table-reftabt101smooth02">R code</a>)
+</caption>
+<template id="640e17c8-c2be-489e-a85d-fb7bea8e8ffd"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-f7a127ee{}.cl-f79a4ece{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f79a75c0{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f79a75c1{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f79a9cbc{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f79a9cbd{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f79a9cbe{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f79a9cbf{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f79a9cc0{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f79a9cc1{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-f7a127ee'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f79a9cc1"><p class="cl-f79a75c0"><span class="cl-f79a4ece">Model</span></p></td><td class="cl-f79a9cc0"><p class="cl-f79a75c1"><span class="cl-f79a4ece">RMSE</span></p></td><td class="cl-f79a9cc0"><p class="cl-f79a75c1"><span class="cl-f79a4ece">MAE</span></p></td><td class="cl-f79a9cc0"><p class="cl-f79a75c1"><span class="cl-f79a4ece">MAPE</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f79a9cbd"><p class="cl-f79a75c0"><span class="cl-f79a4ece">Exp.Smooth</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">47.562</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">43.933</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">0.570</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f79a9cbd"><p class="cl-f79a75c0"><span class="cl-f79a4ece">H-W.Add</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">29.721</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">24.660</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">0.320</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f79a9cbd"><p class="cl-f79a75c0"><span class="cl-f79a4ece">H-W.Mult</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">49.578</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">42.339</span></p></td><td class="cl-f79a9cbc"><p class="cl-f79a75c1"><span class="cl-f79a4ece">0.549</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f79a9cbf"><p class="cl-f79a75c0"><span class="cl-f79a4ece">Mov.Ave</span></p></td><td class="cl-f79a9cbe"><p class="cl-f79a75c1"><span class="cl-f79a4ece">67.934</span></p></td><td class="cl-f79a9cbe"><p class="cl-f79a75c1"><span class="cl-f79a4ece">67.774</span></p></td><td class="cl-f79a9cbe"><p class="cl-f79a75c1"><span class="cl-f79a4ece">0.880</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="fd577dc3-25de-4884-a6f4-8688069107a5"></div>
+<script>
+var dest = document.getElementById("fd577dc3-25de-4884-a6f4-8688069107a5");
+var template = document.getElementById("640e17c8-c2be-489e-a85d-fb7bea8e8ffd");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<ul>
+<li>Examine forecast residuals
+<ul>
+<li>Holt-Winters Additive consistently closer to 0
+<div class="figure"><span style="display:block;" id="fig:t101smooth03"></span>
+<img src="_main_files/figure-html/t101smooth03-1.png" alt="Smoothing Methods Forecast Residuals ([R code](#figure-reffigt101smooth03))" width="672" />
+<p class="caption">
+Figure 10.5: Smoothing Methods Forecast Residuals (<a href="forecasting-i.html#figure-reffigt101smooth03">R code</a>)
+</p>
+</div></li>
+</ul></li>
+</ul>
+</div>
+<div id="regression-methods" class="section level3" number="10.9.5">
+<h3><span class="header-section-number">10.9.5</span> Regression Methods</h3>
+<ul>
+<li>Run all methods</li>
+<li>Plot dynamic forecasts
+<ul>
+<li>Both methods nearly identical…</li>
+<li>But we know there isn’t seasonality
+<div class="figure"><span style="display:block;" id="fig:t101reg01"></span>
+<img src="_main_files/figure-html/t101reg01-1.png" alt="Regression Methods Plot ([R code](#figure-reffigt101reg01))" width="672" />
+<p class="caption">
+Figure 10.6: Regression Methods Plot (<a href="forecasting-i.html#figure-reffigt101reg01">R code</a>)
+</p>
+</div></li>
+</ul></li>
+<li>Examine accuracy
+<ul>
+<li>Both methods nearly identical…</li>
+<li>But we know there isn’t seasonality</li>
+</ul></li>
+</ul>
+<caption>
+<span id="tab:t101reg02">Table 10.3: </span> Regression Methods Accuracy (<a href="#table-reftabt101reg02">R code</a>)
+</caption>
+<template id="392e9a82-3bc7-4f2f-a749-68173b78a099"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-f840cb3c{}.cl-f83a190e{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f83a190f{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f83a1910{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f83a400a{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f83a400b{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f83a400c{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f83a400d{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f83a400e{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f83a400f{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-f840cb3c'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f83a400f"><p class="cl-f83a190f"><span class="cl-f83a190e">Model</span></p></td><td class="cl-f83a400e"><p class="cl-f83a1910"><span class="cl-f83a190e">RMSE</span></p></td><td class="cl-f83a400e"><p class="cl-f83a1910"><span class="cl-f83a190e">MAE</span></p></td><td class="cl-f83a400e"><p class="cl-f83a1910"><span class="cl-f83a190e">MAPE</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f83a400b"><p class="cl-f83a190f"><span class="cl-f83a190e">Lin.Reg.Seas.Trend</span></p></td><td class="cl-f83a400a"><p class="cl-f83a1910"><span class="cl-f83a190e">84.118</span></p></td><td class="cl-f83a400a"><p class="cl-f83a1910"><span class="cl-f83a190e">79.090</span></p></td><td class="cl-f83a400a"><p class="cl-f83a1910"><span class="cl-f83a190e">1.026</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f83a400c"><p class="cl-f83a190f"><span class="cl-f83a190e">Lin.Reg.Trend</span></p></td><td class="cl-f83a400d"><p class="cl-f83a1910"><span class="cl-f83a190e">84.204</span></p></td><td class="cl-f83a400d"><p class="cl-f83a1910"><span class="cl-f83a190e">78.972</span></p></td><td class="cl-f83a400d"><p class="cl-f83a1910"><span class="cl-f83a190e">1.024</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="71e8282f-0ee9-4baa-adaa-dccf3c49a4cc"></div>
+<script>
+var dest = document.getElementById("71e8282f-0ee9-4baa-adaa-dccf3c49a4cc");
+var template = document.getElementById("392e9a82-3bc7-4f2f-a749-68173b78a099");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<ul>
+<li>Examine forecast residuals
+<ul>
+<li>Both methods nearly identical…</li>
+<li>But we know there isn’t seasonality
+<div class="figure"><span style="display:block;" id="fig:t101reg03"></span>
+<img src="_main_files/figure-html/t101reg03-1.png" alt="Regression Methods Forecast Residuals ([R code](#figure-reffigt101reg03))" width="672" />
+<p class="caption">
+Figure 10.7: Regression Methods Forecast Residuals (<a href="forecasting-i.html#figure-reffigt101reg03">R code</a>)
+</p>
+</div></li>
+</ul></li>
+</ul>
+</div>
+<div id="compare-best-models" class="section level3" number="10.9.6">
+<h3><span class="header-section-number">10.9.6</span> Compare Best Models</h3>
+<ul>
+<li>Examine RMSE, MAE, MAPE, and Forecast Error Plot
+<div class="figure"><span style="display:block;" id="fig:t101comp01"></span>
+<img src="_main_files/figure-html/t101comp01-1.png" alt="Forecase Residuals Comparison ([R code](#figure-reffigt101comp1))" width="672" />
+<p class="caption">
+Figure 10.8: Forecase Residuals Comparison (<a href="#figure-reffigt101comp1">R code</a>)
+</p>
+</div></li>
+</ul>
+<caption>
+<span id="tab:t101comp011">Table 10.4: </span> Accuracy Comparison (<a href="#table-reftabt101comp011">R code</a>)
+</caption>
+<template id="755df62c-a0aa-4c73-85b6-35f31548bdea"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-f8ab5204{}.cl-f8a36832{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f8a38f24{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f8a38f25{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f8a3b620{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8a3b621{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8a3b622{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8a3b623{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8a3b624{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8a3b625{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-f8ab5204'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f8a3b625"><p class="cl-f8a38f24"><span class="cl-f8a36832">Model</span></p></td><td class="cl-f8a3b624"><p class="cl-f8a38f25"><span class="cl-f8a36832">RMSE</span></p></td><td class="cl-f8a3b624"><p class="cl-f8a38f25"><span class="cl-f8a36832">MAE</span></p></td><td class="cl-f8a3b624"><p class="cl-f8a38f25"><span class="cl-f8a36832">MAPE</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f8a3b621"><p class="cl-f8a38f24"><span class="cl-f8a36832">Naive</span></p></td><td class="cl-f8a3b620"><p class="cl-f8a38f25"><span class="cl-f8a36832">47.561</span></p></td><td class="cl-f8a3b620"><p class="cl-f8a38f25"><span class="cl-f8a36832">43.933</span></p></td><td class="cl-f8a3b620"><p class="cl-f8a38f25"><span class="cl-f8a36832">0.570</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8a3b621"><p class="cl-f8a38f24"><span class="cl-f8a36832">H-W.Add</span></p></td><td class="cl-f8a3b620"><p class="cl-f8a38f25"><span class="cl-f8a36832">29.721</span></p></td><td class="cl-f8a3b620"><p class="cl-f8a38f25"><span class="cl-f8a36832">24.660</span></p></td><td class="cl-f8a3b620"><p class="cl-f8a38f25"><span class="cl-f8a36832">0.320</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8a3b623"><p class="cl-f8a38f24"><span class="cl-f8a36832">Lin.Reg.Trend</span></p></td><td class="cl-f8a3b622"><p class="cl-f8a38f25"><span class="cl-f8a36832">84.204</span></p></td><td class="cl-f8a3b622"><p class="cl-f8a38f25"><span class="cl-f8a36832">78.972</span></p></td><td class="cl-f8a3b622"><p class="cl-f8a38f25"><span class="cl-f8a36832">1.024</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="7fea3dcf-a54b-4931-bd0e-b0b03fc2d264"></div>
+<script>
+var dest = document.getElementById("7fea3dcf-a54b-4931-bd0e-b0b03fc2d264");
+var template = document.getElementById("755df62c-a0aa-4c73-85b6-35f31548bdea");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<ul>
+<li>None of the models do a great job, especially farther out</li>
+<li>Holt-Winters and Naïve with Drift seem to do the best</li>
+</ul>
+</div>
+</div>
+<div id="forecasting-example-2" class="section level2" number="10.10">
+<h2><span class="header-section-number">10.10</span> Forecasting Example 2</h2>
+<div id="data-8" class="section level3" number="10.10.1">
+<h3><span class="header-section-number">10.10.1</span> Data</h3>
+<ul>
+<li>Monthly Sales from 2005 through 2016</li>
+<li>Variables:
+<ul>
+<li>Time period (<span class="math inline">\(t\)</span>)</li>
+<li>Sales per period (<span class="math inline">\(sales\)</span>)</li>
+</ul></li>
+<li>Goal: Forecast quarterly sales for the next 12 months</li>
+</ul>
+</div>
+<div id="examine-data-1" class="section level3" number="10.10.2">
+<h3><span class="header-section-number">10.10.2</span> Examine Data</h3>
+<div class="figure"><span style="display:block;" id="fig:t101tsplot02"></span>
+<img src="_main_files/figure-html/t101tsplot02-1.png" alt="Time Series Plot ([R code](#figure-reffigt101tsplot02))" width="672" />
+<p class="caption">
+Figure 10.9: Time Series Plot (<a href="forecasting-i.html#figure-reffigt101tsplot02">R code</a>)
+</p>
+</div>
+<ul>
+<li>Trend? <em>Yes</em></li>
+<li>Seasonlity? <em>Yes</em></li>
+<li>Potential Models?
+<ul>
+<li>Seasonal Naïve with Drift</li>
+<li>Holt-Winters</li>
+<li>Regression Seasonal Trend</li>
+</ul></li>
+</ul>
+</div>
+<div id="naïve-methods-2" class="section level3" number="10.10.3">
+<h3><span class="header-section-number">10.10.3</span> Naïve Methods</h3>
+<ul>
+<li>Run all methods</li>
+<li>Plot dynamic forecasts
+<ul>
+<li>Naïve and Naïve with Drift mostly under estimate due to seasonality and drift</li>
+<li>Seasonal Naïve and Seasonal Naïve with Drift seem pretty good
+<div class="figure"><span style="display:block;" id="fig:t101naive04"></span>
+<img src="_main_files/figure-html/t101naive04-1.png" alt="Naive Methods Plot ([R code](#figure-reffigt101naive04))" width="672" />
+<p class="caption">
+Figure 10.10: Naive Methods Plot (<a href="forecasting-i.html#figure-reffigt101naive04">R code</a>)
+</p>
+</div></li>
+</ul></li>
+<li>Examine accuracy
+<ul>
+<li>Seasonal Naïve with Drift is by far the best model
+<ul>
+<li>Lowest RMSE, MAE, and MAPE</li>
+</ul></li>
+</ul></li>
+</ul>
+<caption>
+<span id="tab:t101naive05">Table 10.5: </span> Naive Methods Accuracy (<a href="#table-reftabt101naive05">R code</a>)
+</caption>
+<template id="0ff9b3ac-7195-4afe-8be7-0fec24ba7b7d"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-f97b0c24{}.cl-f9740c12{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f974330e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f974330f{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f97459f6{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f97459f7{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f97459f8{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f97459f9{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f97459fa{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f97459fb{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-f97b0c24'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f97459fb"><p class="cl-f974330e"><span class="cl-f9740c12">Model</span></p></td><td class="cl-f97459fa"><p class="cl-f974330f"><span class="cl-f9740c12">RMSE</span></p></td><td class="cl-f97459fa"><p class="cl-f974330f"><span class="cl-f9740c12">MAE</span></p></td><td class="cl-f97459fa"><p class="cl-f974330f"><span class="cl-f9740c12">MAPE</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f97459f7"><p class="cl-f974330e"><span class="cl-f9740c12">Naive</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">323.496</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">263.917</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">0.945</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f97459f7"><p class="cl-f974330e"><span class="cl-f9740c12">Naive.Drift</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">253.103</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">185.868</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">0.665</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f97459f7"><p class="cl-f974330e"><span class="cl-f9740c12">Seas.Naive</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">133.710</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">127.417</span></p></td><td class="cl-f97459f6"><p class="cl-f974330f"><span class="cl-f9740c12">0.459</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f97459f9"><p class="cl-f974330e"><span class="cl-f9740c12">Seas.Naive.Drift</span></p></td><td class="cl-f97459f8"><p class="cl-f974330f"><span class="cl-f9740c12">45.769</span></p></td><td class="cl-f97459f8"><p class="cl-f974330f"><span class="cl-f9740c12">41.417</span></p></td><td class="cl-f97459f8"><p class="cl-f974330f"><span class="cl-f9740c12">0.149</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="bfaff100-35b5-4555-ba42-d379bcf75d70"></div>
+<script>
+var dest = document.getElementById("bfaff100-35b5-4555-ba42-d379bcf75d70");
+var template = document.getElementById("0ff9b3ac-7195-4afe-8be7-0fec24ba7b7d");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<ul>
+<li>Examine forecast residuals
+<ul>
+<li>Seasonal Naïve and Seasonal Naïve with Drift appear similar, but the latter hugs the <span class="math inline">\(0\)</span> line very closely
+<div class="figure"><span style="display:block;" id="fig:t101naive06"></span>
+<img src="_main_files/figure-html/t101naive06-1.png" alt="Naive Methods Forecast Residuals ([R code](#figure-reffigt101naive06))" width="672" />
+<p class="caption">
+Figure 10.11: Naive Methods Forecast Residuals (<a href="forecasting-i.html#figure-reffigt101naive06">R code</a>)
+</p>
+</div></li>
+</ul></li>
+</ul>
+</div>
+<div id="smoothing-methods-1" class="section level3" number="10.10.4">
+<h3><span class="header-section-number">10.10.4</span> Smoothing Methods</h3>
+<ul>
+<li>Run all methods</li>
+<li>Plot dynamic forecasts
+<ul>
+<li>Moving Average underestimates</li>
+<li>Both Holt-Winters seem very good fits</li>
+<li>Exponential Smoothing a poor fit
+<div class="figure"><span style="display:block;" id="fig:t101smooth04"></span>
+<img src="_main_files/figure-html/t101smooth04-1.png" alt="Smoothing Methods Plot ([R code](#figure-reffigt101smooth04))" width="672" />
+<p class="caption">
+Figure 10.12: Smoothing Methods Plot (<a href="forecasting-i.html#figure-reffigt101smooth04">R code</a>)
+</p>
+</div></li>
+</ul></li>
+<li>Examine accuracy
+<ul>
+<li>Both Holt-Winters are good, but Multiplicative is slightly better
+<ul>
+<li>Lower RMSE, MAE, and MAPE</li>
+</ul></li>
+</ul></li>
+</ul>
+<caption>
+<span id="tab:t101smooth05">Table 10.6: </span> Smoothing Methods Accuracy (<a href="#table-reftabt101smooth05">R code</a>)
+</caption>
+<template id="29ca1032-ef3e-4458-bf14-07afe546c605"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-fa807e88{}.cl-fa79cc64{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-fa79cc65{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-fa79cc66{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-fa79f356{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fa79f357{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fa7a1a48{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fa7a1a49{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fa7a1a4a{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fa7a1a4b{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-fa807e88'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-fa7a1a4b"><p class="cl-fa79cc65"><span class="cl-fa79cc64">Model</span></p></td><td class="cl-fa7a1a4a"><p class="cl-fa79cc66"><span class="cl-fa79cc64">RMSE</span></p></td><td class="cl-fa7a1a4a"><p class="cl-fa79cc66"><span class="cl-fa79cc64">MAE</span></p></td><td class="cl-fa7a1a4a"><p class="cl-fa79cc66"><span class="cl-fa79cc64">MAPE</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-fa79f357"><p class="cl-fa79cc65"><span class="cl-fa79cc64">Exp.Smooth</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">323.495</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">263.915</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">0.945</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-fa79f357"><p class="cl-fa79cc65"><span class="cl-fa79cc64">H-W.Add</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">54.469</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">46.754</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">0.168</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-fa79f357"><p class="cl-fa79cc65"><span class="cl-fa79cc64">H-W.Mult</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">43.857</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">40.626</span></p></td><td class="cl-fa79f356"><p class="cl-fa79cc66"><span class="cl-fa79cc64">0.146</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-fa7a1a49"><p class="cl-fa79cc65"><span class="cl-fa79cc64">Mov.Ave</span></p></td><td class="cl-fa7a1a48"><p class="cl-fa79cc66"><span class="cl-fa79cc64">225.685</span></p></td><td class="cl-fa7a1a48"><p class="cl-fa79cc66"><span class="cl-fa79cc64">191.245</span></p></td><td class="cl-fa7a1a48"><p class="cl-fa79cc66"><span class="cl-fa79cc64">0.686</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="4ced3dd9-1519-432b-b63b-61b55028a0c7"></div>
+<script>
+var dest = document.getElementById("4ced3dd9-1519-432b-b63b-61b55028a0c7");
+var template = document.getElementById("29ca1032-ef3e-4458-bf14-07afe546c605");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<ul>
+<li>Examine forecast residuals
+<ul>
+<li>Both Holt-Winters hug the <span class="math inline">\(0\)</span> line
+<div class="figure"><span style="display:block;" id="fig:t101smooth06"></span>
+<img src="_main_files/figure-html/t101smooth06-1.png" alt="Smoothing Methods Forecast Residuals ([R code](#figure-reffigt101smooth06))" width="672" />
+<p class="caption">
+Figure 10.13: Smoothing Methods Forecast Residuals (<a href="forecasting-i.html#figure-reffigt101smooth06">R code</a>)
+</p>
+</div></li>
+</ul></li>
+</ul>
+</div>
+<div id="regression-methods-1" class="section level3" number="10.10.5">
+<h3><span class="header-section-number">10.10.5</span> Regression Methods</h3>
+<ul>
+<li>Run all methods</li>
+<li>Plot dynamic forecasts
+<ul>
+<li>Seasonal method very good forecast</li>
+<li>Trend alone not effective
+<div class="figure"><span style="display:block;" id="fig:t101reg04"></span>
+<img src="_main_files/figure-html/t101reg04-1.png" alt="Regression Methods Plot ([R code](#figure-reffigt101reg03))" width="672" />
+<p class="caption">
+Figure 10.14: Regression Methods Plot (<a href="forecasting-i.html#figure-reffigt101reg03">R code</a>)
+</p>
+</div></li>
+</ul></li>
+<li>Examine accuracy
+<ul>
+<li>Seasonal method much better
+<ul>
+<li>Lower RMSE, MAE, and MAPE</li>
+</ul></li>
+</ul></li>
+</ul>
+<caption>
+<span id="tab:t101reg05">Table 10.7: </span> Regression Methods Accuracy (<a href="#table-reftabt101reg05">R code</a>)
+</caption>
+<template id="89d02131-3966-4204-a533-3c8c10560197"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-fb31c8fa{}.cl-fb29b82c{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-fb29b82d{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-fb29b82e{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-fb29df28{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fb29df29{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fb29df2a{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fb29df2b{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fb29df2c{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fb29df2d{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-fb31c8fa'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-fb29df2d"><p class="cl-fb29b82d"><span class="cl-fb29b82c">Model</span></p></td><td class="cl-fb29df2c"><p class="cl-fb29b82e"><span class="cl-fb29b82c">RMSE</span></p></td><td class="cl-fb29df2c"><p class="cl-fb29b82e"><span class="cl-fb29b82c">MAE</span></p></td><td class="cl-fb29df2c"><p class="cl-fb29b82e"><span class="cl-fb29b82c">MAPE</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-fb29df29"><p class="cl-fb29b82d"><span class="cl-fb29b82c">Lin.Reg.Seas.Trend</span></p></td><td class="cl-fb29df28"><p class="cl-fb29b82e"><span class="cl-fb29b82c">55.212</span></p></td><td class="cl-fb29df28"><p class="cl-fb29b82e"><span class="cl-fb29b82c">47.898</span></p></td><td class="cl-fb29df28"><p class="cl-fb29b82e"><span class="cl-fb29b82c">0.172</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-fb29df2a"><p class="cl-fb29b82d"><span class="cl-fb29b82c">Lin.Reg.Trend</span></p></td><td class="cl-fb29df2b"><p class="cl-fb29b82e"><span class="cl-fb29b82c">199.198</span></p></td><td class="cl-fb29df2b"><p class="cl-fb29b82e"><span class="cl-fb29b82c">168.985</span></p></td><td class="cl-fb29df2b"><p class="cl-fb29b82e"><span class="cl-fb29b82c">0.607</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="7c6f54c0-f1f6-47dc-975b-7cd26a26bd24"></div>
+<script>
+var dest = document.getElementById("7c6f54c0-f1f6-47dc-975b-7cd26a26bd24");
+var template = document.getElementById("89d02131-3966-4204-a533-3c8c10560197");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<ul>
+<li>Examine forecast residuals
+<ul>
+<li>Seasonal method hugs the <span class="math inline">\(0\)</span> line
+<div class="figure"><span style="display:block;" id="fig:t101reg06"></span>
+<img src="_main_files/figure-html/t101reg06-1.png" alt="Regression Methods Forecast Residuals ([R code](#figure-reffigt101reg06))" width="672" />
+<p class="caption">
+Figure 10.15: Regression Methods Forecast Residuals (<a href="forecasting-i.html#figure-reffigt101reg06">R code</a>)
+</p>
+</div></li>
+</ul></li>
+</ul>
+</div>
+<div id="compare-best-models-1" class="section level3" number="10.10.6">
+<h3><span class="header-section-number">10.10.6</span> Compare Best Models</h3>
+<ul>
+<li>Examine RMSE, MAE, MAPE, and Forecast Error Plot
+<div class="figure"><span style="display:block;" id="fig:t101comp02"></span>
+<img src="_main_files/figure-html/t101comp02-1.png" alt="Forecase Residuals Comparison ([R code](#figure-reffigt101comp2))" width="672" />
+<p class="caption">
+Figure 10.16: Forecase Residuals Comparison (<a href="#figure-reffigt101comp2">R code</a>)
+</p>
+</div></li>
+</ul>
+<caption>
+<span id="tab:t101comp021">Table 10.8: </span> Accuracy Comparison (<a href="#table-reftabt101comp021">R code</a>)
+</caption>
+<template id="077a3492-d6b7-4c34-a593-259dc81be522"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-fbace63e{}.cl-fba4fc76{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-fba52368{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-fba52369{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-fba54a5a{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fba54a5b{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fba54a5c{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fba54a5d{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fba54a5e{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fba54a5f{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-fbace63e'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-fba54a5f"><p class="cl-fba52368"><span class="cl-fba4fc76">Model</span></p></td><td class="cl-fba54a5e"><p class="cl-fba52369"><span class="cl-fba4fc76">RMSE</span></p></td><td class="cl-fba54a5e"><p class="cl-fba52369"><span class="cl-fba4fc76">MAE</span></p></td><td class="cl-fba54a5e"><p class="cl-fba52369"><span class="cl-fba4fc76">MAPE</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-fba54a5b"><p class="cl-fba52368"><span class="cl-fba4fc76">Seas.Naive.Drift</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">45.769</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">41.417</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">0.149</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-fba54a5b"><p class="cl-fba52368"><span class="cl-fba4fc76">H-W.Add</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">54.469</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">46.754</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">0.168</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-fba54a5b"><p class="cl-fba52368"><span class="cl-fba4fc76">H-W.Mult</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">43.857</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">40.626</span></p></td><td class="cl-fba54a5a"><p class="cl-fba52369"><span class="cl-fba4fc76">0.146</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-fba54a5d"><p class="cl-fba52368"><span class="cl-fba4fc76">Lin.Reg.Seas.Trend</span></p></td><td class="cl-fba54a5c"><p class="cl-fba52369"><span class="cl-fba4fc76">55.212</span></p></td><td class="cl-fba54a5c"><p class="cl-fba52369"><span class="cl-fba4fc76">47.898</span></p></td><td class="cl-fba54a5c"><p class="cl-fba52369"><span class="cl-fba4fc76">0.172</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="a0a2c71d-0dda-456e-91f3-862571eb85bc"></div>
+<script>
+var dest = document.getElementById("a0a2c71d-0dda-456e-91f3-862571eb85bc");
+var template = document.getElementById("077a3492-d6b7-4c34-a593-259dc81be522");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<ul>
+<li>Holt-Winters Multiplicative does slightly better than Seasonal Naïve with Drift</li>
+<li>Both are better than the other two options</li>
+</ul>
+</div>
+</div>
+<div id="suggested-readings-9" class="section level2" number="10.11">
+<h2><span class="header-section-number">10.11</span> Suggested Readings</h2>
+<ul>
+<li><em>Principles of Marketing Engineering and Analytics, 3rd Edition</em> (2017). Lilien, Gary L., Rangaswamy, Arvind, and De Bruyn, Arnaud.
+<ul>
+<li>Course reserves
+<ul>
+<li>Chapter 5: Forecasting</li>
+</ul></li>
+</ul></li>
+<li><em>Forecasting: Principles and Practice, 3rd Edition</em> (2021). Hyndman, Rob J., and Athanasopoulos, George.
+<ul>
+<li>Online Texts<br><a href="https://otexts.com/fpp3/" target="_blank" rel="noopener noreferrer">https://otexts.com/fpp3/</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="r-code-9" class="section level2" number="10.12">
+<h2><span class="header-section-number">10.12</span> R Code</h2>
+<div id="figure-reffigt101tsplot01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101tsplot01">10.1</a></h3>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="forecasting-i.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;qsales.rdata&quot;</span>)    <span class="co"># Load Data</span></span>
+<span id="cb144-2"><a href="forecasting-i.html#cb144-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;tsplot.R&quot;</span>)      <span class="co"># Source tsplot user defined function</span></span>
+<span id="cb144-3"><a href="forecasting-i.html#cb144-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tsplot</span>(<span class="at">data=</span>qsales,     <span class="co"># Data frame</span></span>
+<span id="cb144-4"><a href="forecasting-i.html#cb144-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">tvar=</span><span class="st">&quot;t&quot;</span>,        <span class="co"># Date variable</span></span>
+<span id="cb144-5"><a href="forecasting-i.html#cb144-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">obs=</span><span class="st">&quot;sales&quot;</span>,     <span class="co"># Measure variable</span></span>
+<span id="cb144-6"><a href="forecasting-i.html#cb144-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">datetype=</span><span class="st">&quot;yq&quot;</span>,   <span class="co"># Date type</span></span>
+<span id="cb144-7"><a href="forecasting-i.html#cb144-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">h=</span><span class="dv">8</span>)             <span class="co"># Number of holdout periods</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101naive01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101naive01">10.2</a></h3>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="forecasting-i.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;naivefc.R&quot;</span>)    <span class="co"># Source naive methods user defined function</span></span>
+<span id="cb145-2"><a href="forecasting-i.html#cb145-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Save results to object</span></span>
+<span id="cb145-3"><a href="forecasting-i.html#cb145-3" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">naivefc</span>(qsales,   <span class="co"># Data frame</span></span>
+<span id="cb145-4"><a href="forecasting-i.html#cb145-4" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;t&quot;</span>,      <span class="co"># Date variable</span></span>
+<span id="cb145-5"><a href="forecasting-i.html#cb145-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;sales&quot;</span>,  <span class="co"># Measure variable </span></span>
+<span id="cb145-6"><a href="forecasting-i.html#cb145-6" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;yq&quot;</span>,     <span class="co"># Date type</span></span>
+<span id="cb145-7"><a href="forecasting-i.html#cb145-7" aria-hidden="true" tabindex="-1"></a>                   <span class="dv">8</span>)        <span class="co"># Number of holdout periods</span></span>
+<span id="cb145-8"><a href="forecasting-i.html#cb145-8" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>plot  <span class="co"># Request plot</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101naive03" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101naive03">10.3</a></h3>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="forecasting-i.html#cb146-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>fcresplot    <span class="co"># Request forecast residual plot from previous saved results</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101smooth01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101smooth01">10.4</a></h3>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="forecasting-i.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;smoothfc.R&quot;</span>)    <span class="co"># Source smooth methods user defined function</span></span>
+<span id="cb147-2"><a href="forecasting-i.html#cb147-2" aria-hidden="true" tabindex="-1"></a>results2 <span class="ot">&lt;-</span> <span class="fu">smoothfc</span>(qsales, <span class="st">&quot;t&quot;</span>, <span class="st">&quot;sales&quot;</span>, <span class="st">&quot;yq&quot;</span>, <span class="dv">8</span>)   <span class="co"># Save results to object</span></span>
+<span id="cb147-3"><a href="forecasting-i.html#cb147-3" aria-hidden="true" tabindex="-1"></a>results2<span class="sc">$</span>plot  <span class="co"># Request plot</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101smooth03" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101smooth03">10.5</a></h3>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="forecasting-i.html#cb148-1" aria-hidden="true" tabindex="-1"></a>results2<span class="sc">$</span>fcresplot  <span class="co"># Request forecast residual plot from previous saved results</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101reg01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101reg01">10.6</a></h3>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="forecasting-i.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;linregfc.R&quot;</span>)    <span class="co"># Source regression methods user defined function</span></span>
+<span id="cb149-2"><a href="forecasting-i.html#cb149-2" aria-hidden="true" tabindex="-1"></a>results3 <span class="ot">&lt;-</span> <span class="fu">linregfc</span>(qsales, <span class="st">&quot;t&quot;</span>, <span class="st">&quot;sales&quot;</span>, <span class="st">&quot;yq&quot;</span>, <span class="dv">8</span>)   <span class="co"># Save results to object</span></span>
+<span id="cb149-3"><a href="forecasting-i.html#cb149-3" aria-hidden="true" tabindex="-1"></a>results3<span class="sc">$</span>plot  <span class="co"># Request plot</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101reg03" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101reg03">10.7</a></h3>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="forecasting-i.html#cb150-1" aria-hidden="true" tabindex="-1"></a>results3<span class="sc">$</span>fcresplot  <span class="co"># Request forecast residual plot from previous saved results</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101comp01" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101comp01">10.8</a></h3>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="forecasting-i.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;fccompare.R&quot;</span>)    <span class="co"># Source forecast compare user defined function</span></span>
+<span id="cb151-2"><a href="forecasting-i.html#cb151-2" aria-hidden="true" tabindex="-1"></a>resultslist <span class="ot">&lt;-</span> <span class="fu">list</span>(results, results2, results3)  <span class="co"># Create list of result objects</span></span>
+<span id="cb151-3"><a href="forecasting-i.html#cb151-3" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Naive&quot;</span>, <span class="st">&quot;H-W.Add&quot;</span>, <span class="st">&quot;Lin.Reg.Trend&quot;</span>)  <span class="co"># Create object with requested models</span></span>
+<span id="cb151-4"><a href="forecasting-i.html#cb151-4" aria-hidden="true" tabindex="-1"></a>compare <span class="ot">&lt;-</span> <span class="fu">fccompare</span>(resultslist,   <span class="co"># List of results created above</span></span>
+<span id="cb151-5"><a href="forecasting-i.html#cb151-5" aria-hidden="true" tabindex="-1"></a>                     models)        <span class="co"># Models we want to compare</span></span>
+<span id="cb151-6"><a href="forecasting-i.html#cb151-6" aria-hidden="true" tabindex="-1"></a>compare<span class="sc">$</span>fcresplot  <span class="co"># Request plot</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101tsplot02" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101tsplot02">10.9</a></h3>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="forecasting-i.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;msales.rdata&quot;</span>)    <span class="co"># Load Data</span></span>
+<span id="cb152-2"><a href="forecasting-i.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tsplot</span>(<span class="at">data=</span>msales,     <span class="co"># Data frame</span></span>
+<span id="cb152-3"><a href="forecasting-i.html#cb152-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">tvar=</span><span class="st">&quot;t&quot;</span>,        <span class="co"># Date variable</span></span>
+<span id="cb152-4"><a href="forecasting-i.html#cb152-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">obs=</span><span class="st">&quot;sales&quot;</span>,     <span class="co"># Measure variable</span></span>
+<span id="cb152-5"><a href="forecasting-i.html#cb152-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">datetype=</span><span class="st">&quot;ym&quot;</span>,   <span class="co"># Date type</span></span>
+<span id="cb152-6"><a href="forecasting-i.html#cb152-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">h=</span><span class="dv">12</span>)             <span class="co"># Number of holdout periods</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101naive04" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101naive04">10.10</a></h3>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="forecasting-i.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save results to object</span></span>
+<span id="cb153-2"><a href="forecasting-i.html#cb153-2" aria-hidden="true" tabindex="-1"></a>na.results <span class="ot">&lt;-</span> <span class="fu">naivefc</span>(msales, <span class="st">&quot;t&quot;</span>, <span class="st">&quot;sales&quot;</span>, <span class="st">&quot;ym&quot;</span>, <span class="dv">12</span>) </span>
+<span id="cb153-3"><a href="forecasting-i.html#cb153-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb153-4"><a href="forecasting-i.html#cb153-4" aria-hidden="true" tabindex="-1"></a>na.results<span class="sc">$</span>plot  <span class="co"># Request plot</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101naive06" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101naive06">10.11</a></h3>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="forecasting-i.html#cb154-1" aria-hidden="true" tabindex="-1"></a>na.results<span class="sc">$</span>fcresplot    <span class="co"># Request forecast residual plot from previous saved results</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101smooth04" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101smooth04">10.12</a></h3>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="forecasting-i.html#cb155-1" aria-hidden="true" tabindex="-1"></a>sm.results <span class="ot">&lt;-</span> <span class="fu">smoothfc</span>(msales, <span class="st">&quot;t&quot;</span>, <span class="st">&quot;sales&quot;</span>, <span class="st">&quot;ym&quot;</span>, <span class="dv">12</span>)   <span class="co"># Save results to object</span></span>
+<span id="cb155-2"><a href="forecasting-i.html#cb155-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb155-3"><a href="forecasting-i.html#cb155-3" aria-hidden="true" tabindex="-1"></a>sm.results<span class="sc">$</span>plot  <span class="co"># Request plot</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101smooth06" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101smooth06">10.13</a></h3>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="forecasting-i.html#cb156-1" aria-hidden="true" tabindex="-1"></a>sm.results<span class="sc">$</span>fcresplot  <span class="co"># Request forecast residual plot from previous saved results</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101reg04" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101reg04">10.14</a></h3>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="forecasting-i.html#cb157-1" aria-hidden="true" tabindex="-1"></a>lr.results <span class="ot">&lt;-</span> <span class="fu">linregfc</span>(msales, <span class="st">&quot;t&quot;</span>, <span class="st">&quot;sales&quot;</span>, <span class="st">&quot;ym&quot;</span>, <span class="dv">12</span>)   <span class="co"># Save results to object</span></span>
+<span id="cb157-2"><a href="forecasting-i.html#cb157-2" aria-hidden="true" tabindex="-1"></a>lr.results<span class="sc">$</span>plot  <span class="co"># Request plot</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101reg06" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101reg06">10.15</a></h3>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="forecasting-i.html#cb158-1" aria-hidden="true" tabindex="-1"></a>lr.results<span class="sc">$</span>fcresplot  <span class="co"># Request forecast residual plot from previous saved results</span></span></code></pre></div>
+</div>
+<div id="figure-reffigt101comp02" class="section level3 unlisted unnumbered">
+<h3>Figure <a href="forecasting-i.html#fig:t101comp02">10.16</a></h3>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="forecasting-i.html#cb159-1" aria-hidden="true" tabindex="-1"></a>resultslist <span class="ot">&lt;-</span> <span class="fu">list</span>(na.results, sm.results, lr.results)  <span class="co"># Create list of result objects</span></span>
+<span id="cb159-2"><a href="forecasting-i.html#cb159-2" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Seas.Naive.Drift&quot;</span>, <span class="st">&quot;H-W.Add&quot;</span>, <span class="st">&quot;H-W.Mult&quot;</span>, <span class="st">&quot;Lin.Reg.Seas.Trend&quot;</span>)  <span class="co"># Create object with requested models</span></span>
+<span id="cb159-3"><a href="forecasting-i.html#cb159-3" aria-hidden="true" tabindex="-1"></a>compare <span class="ot">&lt;-</span> <span class="fu">fccompare</span>(resultslist,   <span class="co"># List of results created above</span></span>
+<span id="cb159-4"><a href="forecasting-i.html#cb159-4" aria-hidden="true" tabindex="-1"></a>                     models)        <span class="co"># Models we want to compare</span></span>
+<span id="cb159-5"><a href="forecasting-i.html#cb159-5" aria-hidden="true" tabindex="-1"></a>compare<span class="sc">$</span>fcresplot  <span class="co"># Request plot</span></span></code></pre></div>
+</div>
+<div id="table-reftabt101naive02code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t101naive02code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="forecasting-i.html#cb160-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>acc  <span class="co"># Request accuracy table from previous saved results</span></span></code></pre></div>
+</div>
+<div id="table-reftabt101smooth02code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t101smooth02code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="forecasting-i.html#cb161-1" aria-hidden="true" tabindex="-1"></a>results2<span class="sc">$</span>acc  <span class="co"># Request accuracy table from previous saved results</span></span></code></pre></div>
+</div>
+<div id="table-reftabt101reg02code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t101reg02code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="forecasting-i.html#cb162-1" aria-hidden="true" tabindex="-1"></a>results3<span class="sc">$</span>acc  <span class="co"># Request accuracy table from previous saved results</span></span></code></pre></div>
+</div>
+<div id="table-reftabt101comp011code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t101comp011code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="forecasting-i.html#cb163-1" aria-hidden="true" tabindex="-1"></a>compare<span class="sc">$</span>acc   <span class="co"># Request accuracy table</span></span></code></pre></div>
+</div>
+<div id="table-reftabt101naive05code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t101naive05code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="forecasting-i.html#cb164-1" aria-hidden="true" tabindex="-1"></a>na.results<span class="sc">$</span>acc  <span class="co"># Request accuracy table from previous saved results</span></span></code></pre></div>
+</div>
+<div id="table-reftabt101smooth05code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t101smooth05code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="forecasting-i.html#cb165-1" aria-hidden="true" tabindex="-1"></a>sm.results<span class="sc">$</span>acc  <span class="co"># Request accuracy table from previous saved results</span></span></code></pre></div>
+</div>
+<div id="table-reftabt101reg05code" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t101reg05code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="forecasting-i.html#cb166-1" aria-hidden="true" tabindex="-1"></a>lr.results<span class="sc">$</span>acc  <span class="co"># Request accuracy table from previous saved results</span></span></code></pre></div>
+</div>
+<div id="table-reftabt101comp011code-1" class="section level3 unlisted unnumbered">
+<h3>Table <a href="#tab:t101comp011code"><strong>??</strong></a></h3>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="forecasting-i.html#cb167-1" aria-hidden="true" tabindex="-1"></a>compare<span class="sc">$</span>acc   <span class="co"># Request accuracy table</span></span></code></pre></div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="marketing-mix-decisions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"number_sections": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

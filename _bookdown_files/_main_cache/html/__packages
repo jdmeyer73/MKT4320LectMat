@@ -40,3 +40,11 @@ stringr
 survival
 Formula
 Hmisc
+fpp3
+tsibble
+tsibbledata
+fabletools
+feasts
+fable
+slider
+purrr
