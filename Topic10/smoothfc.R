@@ -28,7 +28,7 @@ smoothfc <- function(data, tvar, obs, datetype=c("ym", "yq", "yw"), h) {
    madata <- madata %>% 
       mutate(MA=slide_dbl(Measure2, .f=~mean(.x, na.rm=T), .before=h, .after=-1, .complete=TRUE))
    madatafc <- madata[(nrow(tsdata)-fc):nrow(tsdata), ] %>% 
-      mutate(".model"="Moving Average",".mean"=MA, Measure=MA) %>% 
+      mutate(".model"="Mov.Ave",".mean"=MA, Measure=MA) %>% 
       select(".model", ".mean", Measure, Date)
    maresid <- madata[(nrow(madata)-fc):nrow(tsdata), ] %>%
       mutate(resid=Measure-MA)
