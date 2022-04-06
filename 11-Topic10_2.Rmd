@@ -309,6 +309,16 @@ out$pacf
     ```
 
     * For $p$: Run model with estimated $p$ term
+        * Generate residuals from predicted values
+        * Plot ACF and PACF residuals to see if significant auto-correlations still exist
+        
+    ``` {r, echo=FALSE, warning=FALSE, cache=TRUE}
+    source("Topic10/autoarima.R")
+    outarima <- autoarima(msales.noseas, "t", "units",
+                          "ym", 12, c(2,1,0), c(0,0,0), "N")
+    outarima$acresid
+    ```
+
         * Use white noise test to see if the data come from a "white noise" process (i.e., uncorrelated with constant mean and variance)
             * $H_0$ is white noise
 
