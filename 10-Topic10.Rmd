@@ -13,6 +13,7 @@ library(dplyr)         # Easier programming
 library(fpp3)
 library(slider)
 library(cowplot)
+library(MKT4320BGSU)
 load("Topic10/monthlysales.rdata")
 ```
 ``` {r, echo=FALSE}
@@ -270,11 +271,10 @@ train %>% autoplot(sales) +
 ``` {r t101hwaddmult1, echo=FALSE, warning=FALSE}
 load("Topic10/elecsales.rdata")
 load("Topic10/msales.rdata")
-source("Topic10/tsplot.R")
 es2 <- elecsales %>%
    mutate(Month=yearmonth(t)) %>% 
    as_tsibble(index=Month) %>% 
-   filter_index(~"1979-12")
+   filter_index("1956-1"~"1967-12")
 ms2 <-  msales %>% 
    mutate(Month=yearmonth(t)) %>% 
    as_tsibble(index=Month)
@@ -383,10 +383,6 @@ $\begin{aligned}
 * Forecast errors closer to 0 indicate better forecast
 
 ```{r echo=FALSE, cache=TRUE, message=FALSE}
-source("Topic10/naivefc.R")
-source("Topic10/smoothfc.R")
-source("Topic10/linregfc.R")
-source("Topic10/fccompare.R")
 nam <- naivefc(monthlysales, "t", "sales", "ym", 12)
 smm <- smoothfc(monthlysales, "t", "sales", "ym", 12)
 lrm <- linregfc(monthlysales, "t", "sales", "ym", 12)
@@ -410,7 +406,6 @@ fc$fcresplot
 
 ```{r t101tsplot01, echo=FALSE, fig.cap="Time Series Plot ([R code](#figure-reffigt101tsplot01))"}
 load("Topic10/qsales.rdata")    # Load Data
-source("Topic10/tsplot.R")      # Source tsplot user defined function
 tsplot(data=qsales,     # Data frame
        tvar="t",        # Date variable
        obs="sales",     # Measure variable
@@ -434,7 +429,6 @@ tsplot(data=qsales,     # Data frame
     * Naïve with Drift over estimates
     * Seasonal methods not appropriate
 ```{r t101naive01, echo=FALSE, fig.cap="Naive Methods Plot ([R code](#figure-reffigt101naive01))"}
-source("Topic10/naivefc.R")    # Source naive methods user defined function
 results <- naivefc(qsales, "t", "sales", "yq", 8)   # Save results to object
 results$plot
 ```
@@ -463,7 +457,6 @@ results$fcresplot
     * Both Holt-Winters overestimate, but not by much
     * Exponential Smoothing a poor fit
 ```{r t101smooth01, echo=FALSE, fig.cap="Smoothing Methods Plot ([R code](#figure-reffigt101smooth01))"}
-source("Topic10/smoothfc.R")    # Source smooth methods user defined function
 results2 <- smoothfc(qsales, "t", "sales", "yq", 8)   # Save results to object
 results2$plot
 ```
@@ -491,7 +484,7 @@ results2$fcresplot
     * Both methods nearly identical...
     * But we know there isn't seasonality
 ```{r t101reg01, echo=FALSE, fig.cap="Regression Methods Plot ([R code](#figure-reffigt101reg01))"}
-source("Topic10/linregfc.R")    # Source regression methods user defined function
+
 results3 <- linregfc(qsales, "t", "sales", "yq", 8)   # Save results to object
 results3$plot
 ```
@@ -517,7 +510,6 @@ results3$fcresplot
 
 * Examine RMSE, MAE, MAPE, and Forecast Error Plot
 ```{r t101comp01, echo=FALSE, fig.cap="Forecase Residuals Comparison ([R code](#figure-reffigt101comp1))"}
-source("Topic10/fccompare.R")    # Source forecast compare user defined function
 resultslist <- list(results, results2, results3)  # Create list of result objects
 models <- c("Naive", "H-W.Add", "Lin.Reg.Trend")  # Create object with requested models
 compare <- fccompare(resultslist,   # List of results created above
@@ -677,7 +669,6 @@ flextable(compare$acc)   # Request accuracy table
 
 ```{r t101tsplot01code, eval=FALSE}
 load("qsales.rdata")    # Load Data
-source("tsplot.R")      # Source tsplot user defined function
 tsplot(data=qsales,     # Data frame
        tvar="t",        # Date variable
        obs="sales",     # Measure variable
@@ -688,7 +679,6 @@ tsplot(data=qsales,     # Data frame
 ### Figure \@ref(fig:t101naive01) {.unlisted .unnumbered}
 
 ```{r t101naive01code, eval=FALSE}
-source("naivefc.R")    # Source naive methods user defined function
 # Save results to object
 results <- naivefc(qsales,   # Data frame
                    "t",      # Date variable
@@ -707,7 +697,6 @@ results$fcresplot    # Request forecast residual plot from previous saved result
 ### Figure \@ref(fig:t101smooth01) {.unlisted .unnumbered}
 
 ```{r t101smooth01code, eval=FALSE}
-source("smoothfc.R")    # Source smooth methods user defined function
 results2 <- smoothfc(qsales, "t", "sales", "yq", 8)   # Save results to object
 results2$plot  # Request plot
 ```
@@ -721,7 +710,6 @@ results2$fcresplot  # Request forecast residual plot from previous saved results
 ### Figure \@ref(fig:t101reg01) {.unlisted .unnumbered}
 
 ```{r t101reg01code, eval=FALSE}
-source("linregfc.R")    # Source regression methods user defined function
 results3 <- linregfc(qsales, "t", "sales", "yq", 8)   # Save results to object
 results3$plot  # Request plot
 ```
@@ -735,7 +723,6 @@ results3$fcresplot  # Request forecast residual plot from previous saved results
 ### Figure \@ref(fig:t101comp01) {.unlisted .unnumbered}
 
 ```{r t101comp01code, eval=FALSE}
-source("fccompare.R")    # Source forecast compare user defined function
 resultslist <- list(results, results2, results3)  # Create list of result objects
 models <- c("Naive", "H-W.Add", "Lin.Reg.Trend")  # Create object with requested models
 compare <- fccompare(resultslist,   # List of results created above

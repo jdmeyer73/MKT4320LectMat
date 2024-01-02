@@ -26,6 +26,7 @@ library(lubridate)     # Easily work with dates
 library(jtools)        # Concise regression results
 library(dplyr)         # Easier programming
 library(GGally)        # Scatterplot Matrix
+library(MKT4320BGSU)
 ```
 
 The following datasets are used for this topic and are loaded now.
@@ -289,8 +290,6 @@ summary(results)
 <div class="hr" id="t24">
 ***Table 2.4: Standardized Beta Coefficients***
 ``` {r t2stdbetas1, echo=FALSE, cache=TRUE}
-# Use user-defined function 'lm_beta.R'
-source("Topic02/lm_beta.R")
 htmlTable(lm_beta(results, digits=4))
 ```
 [R Code](#table24)

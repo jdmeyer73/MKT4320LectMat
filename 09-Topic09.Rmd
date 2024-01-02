@@ -11,6 +11,7 @@ options(scipen=5)  # Turns off scientific notation
 library(ggplot2)       # Advanced graphing capabilities
 library(dplyr)         # Easier programming
 library(cowplot)
+library(MKT4320BGSU)
 load("Topic09/adsales.rdata")
 load("Topic09/cereal.rdata")
 load("Topic09/cheese.rdata")

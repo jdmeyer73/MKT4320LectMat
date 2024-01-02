@@ -13,6 +13,8 @@ library(flextable)     # Better HTML Tables
 library(dplyr)         # Easier programming
 library(dendextend)    # Nicer dendrograms
 library(vtable)        # Nicer tables
+library(MKT4320BGSU)
+data(greekbrands)
 load("Topic06/ffattrib.rdata")
 ```
 ``` {r t6packagesdata2, echo=FALSE, message=FALSE}
@@ -168,8 +170,6 @@ Recomputes a set of variables in terms of linear equations (components) that cap
         * E.g., Keep two components, accounting for about 85% of variation
 
     ``` {r echo=FALSE, message=FALSE}
-    source("Topic06/pcaex.R")
-    load("Topic06/greekbrands.rdata")
     gb.results <- pcaex(greekbrands[,-9], "brand")
     kable(gb.results$table) %>%
       kable_styling("basic", full_width=FALSE)
@@ -318,7 +318,6 @@ Joint-space maps:
 * Preference “driven” by attributes vectors most parallel to preference vector
 
     ```{r echo=FALSE}
-    source("Topic06/percmap.R")
     percmap(greekbrands, group="brand", pref="pref")
     ```
 
@@ -388,7 +387,6 @@ Joint-space maps:
     <caption>(\#tab:t06pca01) Eigenvalue Table ([R code](#table-reftabt06pca01))</caption>
 
     ``` {r t06pca01, echo=FALSE}
-    source("Topic06/pcaex.R")
     numfact <- pcaex(ffpos, group="rest", pref="pref")
     numfact$table %>% kbl()
     ```
@@ -427,7 +425,6 @@ Joint-space maps:
 * Which attribute is least described by the map?
 
     ``` {r t06prefmap01, echo=FALSE, fig.dim=c(8,8), fig.cap="Perceptual Map"}
-    source("Topic06/percmap.R")
     ffpos2 <- ffpos[,-8]
     percmap(ffpos2, group="rest")
     ```
@@ -502,9 +499,6 @@ cor(ffpos[,-c(1,8)])
 ### Table \@ref(tab:t06pca01) {.unlisted .unnumbered}
 
 ``` {r t06pca01code, eval=FALSE}
-# Load user defined function
-source("Topic06/pcaex.R")  
-
 # Use user defined function and store results
 numfact <- pcaex(ffpos, # Data
                  group="rest", # Group/Brand variable

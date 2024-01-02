@@ -17,6 +17,7 @@ library(htmlTable)     # Better HTML Tables
 library(jtools)        # Concise regression results
 library(dplyr)         # Easier programming
 library(caret)         # Create data partitions
+library(MKT4320BGSU)
 load("Topic04/bankmktg.rdata")
 load("Topic04/telecom.rdata")
 ```
@@ -315,8 +316,6 @@ cat("Model p-value =",sprintf("%.4f",p),"\ ")
 Mrsq <- 1-tgt.log$deviance/tgt.log$null.deviance
 cat("McFadden's Pseudo-Rsquared = ", round(Mrsq, digits=4))
 
-# Use the 'or_table.R' user-defined script to get Odds Ratio estimates
-source("Topic03/or_table.R")
 flextable(or_table(tgt.log))
 ```
 
@@ -329,8 +328,6 @@ flextable(or_table(tgt.log))
 
     <caption>(\#tab:t4cmtrain1) Classification Matrix for Training Sample ([R code](#table-reftabt4cmtrain1))</caption>
     ```{r t4cmtrain1, echo=FALSE, cache=TRUE}
-    # Use the 'logreg_cm.R' user-defined script
-    source("Topic03/logreg_cm.R")
     # Requires package 'caret', loaded above
     logreg_cm(tgt.log,    # Object with model results
               train,      # Data to use (i.e., training vs. testing)
@@ -340,8 +337,6 @@ flextable(or_table(tgt.log))
 * Sensitivity/Specificity Plot
 
     ```{r t4sensspec01, echo=FALSE, fig.cap="Sensitivity/Specificity Plot for Training Sample ([R code](#figure-reffigt4sensspec01))"}
-    # Use the 'logreg_cut.R' user-defined script
-    source("Topic03/logreg_cut.R")
     logreg_cut(tgt.log, train, "Yes")
     ```
 
@@ -370,8 +365,6 @@ flextable(or_table(tgt.log))
     * Area between $.5$ and $.7$ suggests poor model fit
 
     ```{r t4roctest1, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve for Test/Holdout Sample ([R code](#figure-reffigt4roctest1))"}
-    # Use the 'logreg_roc.R' user-defined script
-    source("Topic03/logreg_roc.R")
     # Requires package 'pROC' and 'ggplot2
     library(pROC)
     logreg_roc(tgt.log,   # Object with model results
@@ -438,8 +431,6 @@ flextable(or_table(tgt.log))
 * Contacting top $30\%$ of predicted buyers yields about $52\%$ of actual buyers
 
     ```{r t4gainlift01, echo=FALSE, fig.cap="Gain Chart ([R code](#figure-reffigt4gainlift01))"}
-    # Load user-defined object 'gainlift'
-    source("Topic03/gainlift.R")
 
     # Call the function and assign to object named 'glresults'
     glresults <- gainlift(tgt.log,  # Name of the glm results object
@@ -627,8 +618,6 @@ plot_grid(p6, p7, p8, p9, nrow=2)
 ### Figure \@ref(fig:t4gainlift01) {.unlisted .unnumbered}
 
 ```{r t4gainlift01code, eval=FALSE}
-# Load user-defined object 'gainlift'
-source("Topic03/gainlift.R")
 # Call the function and assign to object named 'glresults'
 glresults <- gainlift(tgt.log,  # Name of the glm results object
                       train,  # Name of the training data frame
@@ -700,7 +689,5 @@ cat("Model p-value =",sprintf("%.4f",p),"\ ")
 Mrsq <- 1-tgt.log$deviance/tgt.log$null.deviance
 cat("McFadden's Pseudo-Rsquared = ", round(Mrsq, digits=4))
 
-# Use the 'or_table.R' user-defined script to get Odds Ratio estimates
-source("Topic03/or_table.R")
 flextable(or_table(tgt.log))
 ```

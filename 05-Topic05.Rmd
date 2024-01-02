@@ -13,7 +13,8 @@ library(flextable)     # Better HTML Tables
 library(dplyr)         # Easier programming
 library(dendextend)    # Nicer dendrograms
 library(vtable)        # Nicer tables
-load("Topic05/ffseg.rdata")
+library(MKT4320BGSU)
+data(ffseg)
 ```
 ``` {r t5packagesdata2, echo=FALSE, message=FALSE}
 library(kableExtra)
@@ -236,7 +237,6 @@ Special measures
     df <- matrix( sample(seq(1,2000),80), ncol = 10)
     rownames(df) <- paste0("obj_" , seq(1,8))
     colnames(df) <- paste0("variable",seq(1,10))
-    source("Topic05/myhc.R")
     out <- myhc(df, dist="euc", method="ave", clustop="N")
     ```
 
@@ -332,7 +332,6 @@ Four main linkage rules
     df <- ffseg %>%
       select(clean, variety, quality, location, 
              speed, healthy, price, friendly)
-    source("Topic05/clustop.R")
     out <- clustop(df, dist="euc", method="ward")
     kbl(out, align="ccc") %>%
       kable_styling("basic", full_width=FALSE) %>%
@@ -396,7 +395,6 @@ Four main linkage rules
 * Compare solutions around the scree
 * Consider managerial implications  
     ```{r t5scree01, echo=FALSE, cache=TRUE, fig.cap="Example Scree Plot"}
-    source("Topic05/wssplot.R")
     data(USArrests)
     wssplot(scale(USArrests), 15)
     ```
@@ -468,7 +466,6 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
     segdata <- data.frame(scale(segdata))
     # Use 'clustop.R' user defined function
     #   Requires package 'NbClust', which isn't available in virtual env.
-    source("TOpic05/clustop.R")
     library(NbClust)
     dh <- clustop(segdata,   # Dataframe with cluster variables
                   dist="euc",   # Use 'euclidean' distance measure
@@ -483,7 +480,6 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
 
     ```{r t5top5dend01, echo=FALSE, fig.cap="Dendrogram with Top 6 Branches Only ([R code](#figure-reffigt5top5dend01))"}
     # Load 'mydend.R' user defined function
-    source("Topic05/myhc.R")
     out <- myhc(segdata,    # Dataframe with cluster variables
          dist="euc",    # Use 'euclidean' distance measure
          method="ward",   # Use 'Wards' linkage
@@ -517,7 +513,6 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
                  "location", "speed", "healthy", 
                  "price", "friendly")
     # Use 'cldescr.R' user defined function
-    source("Topic05/cldescr.R")
     outseg <- cldescr(ffseg,  # Orig data with cluster membership added
                       segvars,  # Segmentation variables
                       "C",  # Indication that variables are continuous
@@ -575,7 +570,6 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
 * Somewhere between $3$ and $5$ clusters looks best
 
     ```{r t5scree02, echo=FALSE, fig.cap="Scree Plot for Fast Food Data ([R code](#figure-reffigt5scree02))"}
-    source("Topic05/wssplot.R")   # User defined function for scree plot
     g <- wssplot(segdata,   # Standardized data from earlier
             15,   # Max clusters
             seed=4320)
@@ -593,8 +587,6 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
     <caption>(\#tab:t5clstsizes) Cluster Sizes  3, 4, and 5 Cluster Solutions  ([R code](#table-reftabt5clstsizes))</caption>
     
     ```{r t5clstsizes, echo=FALSE}
-    # 'ksize.R' must first be sourced (if not already)
-    source("Topic05/ksize.R")
     ks <- ksize(segdata,   # Scaled cluster variables from earlier
             centers=c(3,4,5),   # Request for 3, 4, and 5 cluster solutions
             nstart=25,  # Request 25 random starting sets
@@ -615,8 +607,6 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
     <caption>(\#tab:t5desckmseg1) Cluster Centers for 3 Cluster Solution  ([R code](#table-reftabt5desckmseg1))</caption>
     
     ```{r t5desckmseg1, echo=FALSE}
-    # Use user-defined function 'kcenters.R'
-    source("Topic05/kcenters.R")
     set.seed(4320)  # Match seed from above
     k3 <- kmeans(segdata,  # Scaled segmentation variables
                  centers=3,  # 3 cluster solution
@@ -681,8 +671,7 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
 ### Figure \@ref(fig:t5top5dend01) {.unlisted .unnumbered}
 
 ```{r t5top5dend01code, eval=FALSE}
-# Load 'myhc.R' user defined function
-source("Topic05/myhc.R")
+
 out <- myhc(segdata,    # Dataframe with cluster variables
        dist="euc",    # Use 'euclidean' distance measure
        method="ward",   # Use 'Wards' linkage
@@ -715,7 +704,6 @@ geom_col(position="dodge") +
 ### Figure \@ref(fig:t5scree02) {.unlisted .unnumbered}
 
 ```{r t5scree02code, eval=FALSE}
-source("Topic05/wssplot.R")   # User defined function for scree plot
 wssplot(segdata,   # Standardized data from earlier
         15,   # Max clusters
         seed=4320)  # Random number seed
@@ -744,9 +732,7 @@ sumtable(segdata, out="return") %>% kable(caption=NULL)
 # Stardarize data using 'scale()' function
 segdata <- data.frame(scale(segdata))
 
-# Use 'clustop.R' user defined function
 #   Requires package 'NbClust', which isn't availabe in virtual env.
-source("TOpic05/clustop.R")
 library(NbClust)
 
 dh <- clustop(segdata,   # Dataframe to with cluster variables
@@ -773,8 +759,6 @@ ffseg$c4 <- as.factor(cutree(out$hc,4))  # Add cluster membership to original
 segvars <- c("clean", "variety", "quality", 
              "location", "speed", "healthy", 
              "price", "friendly")
-# Use 'cldescr.R' user defined function
-source("Topic05/cldescr.R")
 outseg <- cldescr(ffseg,  # Orig data with cluster membership added
                   segvars,  # Segmentation variables
                   "C",  # Indication that variables are continuous
@@ -786,7 +770,6 @@ outseg$means
 ### Table \@ref(tab:t5descnseg1) {.unlisted .unnumbered}
 
 ```{r t5descnseg1code, eval=FALSE}
-# Use 'cldescr.R' user defined function
 outnseg <- cldescr(ffseg,  # Orig data with cluster membership added
                    "eatin",  # Prefer to eat in (1) vs. get to go (5)
                    "C",  # Indication that variable is continuous
@@ -805,8 +788,6 @@ outnseg$means
 ### Table \@ref(tab:t5clstsizes) {.unlisted .unnumbered}
 
 ```{r t5clstsizescode, eval=FALSE}
-# 'ksize.R' must first be sourced (if not already)
-source("Topic05/ksize.R")
 ks <- ksize(segdata,   # Scaled cluster variables from earlier
         centers=c(3,4,5),   # Request for 3, 4, and 5 cluster solutions
         nstart=25,  # Request 25 random starting sets
@@ -818,8 +799,6 @@ ks$kperc
 ### Table \@ref(tab:t5desckmseg1) {.unlisted .unnumbered}
 
 ```{r t5desckmseg1code, eval=FALSE}
-# Use user-defined function 'kcenters.R'
-source("Topic05/kcenters.R")
 set.seed(4320)  # Match seed from above
 k3 <- kmeans(segdata,  # Scaled segmentation variables
              centers=3,  # 3 cluster solution

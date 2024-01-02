@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Topic 5 Segmentation | MKT 4320: Marketing Analytics</title>
   <meta name="description" content="Lecture materials for MKT 4320 in bookdown style." />
-  <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Topic 5 Segmentation | MKT 4320: Marketing Analytics" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Lecture materials for MKT 4320 in bookdown style." />
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Jeffrey Meyer" />
 
 
-<meta name="date" content="2022-04-07" />
+<meta name="date" content="2024-01-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="targeting-and-retaining-customers.html"/>
 <link rel="next" href="positioning.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,9 +49,11 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/tabwid-1.1.3/tabwid.css" rel="stylesheet" />
+<script src="libs/tabwid-1.1.3/tabwid.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -94,11 +94,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
+code span.at { color: #204a87; } /* Attribute */
 code span.bn { color: #0000cf; } /* BaseN */
 code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
+code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #8f5902; font-style: italic; } /* Comment */
 code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
 code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
@@ -107,14 +107,14 @@ code span.dv { color: #0000cf; } /* DecVal */
 code span.er { color: #a40000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
 code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
 code span.ot { color: #8f5902; } /* Other */
 code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
 code span.ss { color: #4e9a06; } /* SpecialString */
 code span.st { color: #4e9a06; } /* String */
 code span.va { color: #000000; } /* Variable */
@@ -122,6 +122,10 @@ code span.vs { color: #4e9a06; } /* VerbatimString */
 code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -425,92 +429,51 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.8" data-path="positioning.html"><a href="positioning.html#suggested-readings-5"><i class="fa fa-check"></i><b>6.8</b> Suggested Readings</a></li>
 <li class="chapter" data-level="6.9" data-path="positioning.html"><a href="positioning.html#r-code-5"><i class="fa fa-check"></i><b>6.9</b> R Code</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="customer-choice.html"><a href="customer-choice.html"><i class="fa fa-check"></i><b>7</b> Customer Choice</a>
+<li class="chapter" data-level="7" data-path="ab-testing.html"><a href="ab-testing.html"><i class="fa fa-check"></i><b>7</b> A/B Testing</a></li>
+<li class="chapter" data-level="8" data-path="customer-choice.html"><a href="customer-choice.html"><i class="fa fa-check"></i><b>8</b> Customer Choice</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="customer-choice.html"><a href="customer-choice.html#r-packages-and-datasets-for-topic-7"><i class="fa fa-check"></i><b>7.1</b> R Packages and Datasets for Topic 7</a></li>
-<li class="chapter" data-level="7.2" data-path="customer-choice.html"><a href="customer-choice.html#motivation-3"><i class="fa fa-check"></i><b>7.2</b> Motivation</a></li>
-<li class="chapter" data-level="7.3" data-path="customer-choice.html"><a href="customer-choice.html#understanding-multinomial-logistic"><i class="fa fa-check"></i><b>7.3</b> Understanding Multinomial Logistic</a></li>
-<li class="chapter" data-level="7.4" data-path="customer-choice.html"><a href="customer-choice.html#conducting-multinomial-logistic"><i class="fa fa-check"></i><b>7.4</b> Conducting Multinomial Logistic</a>
+<li class="chapter" data-level="8.1" data-path="customer-choice.html"><a href="customer-choice.html#r-packages-and-datasets-for-topic-8"><i class="fa fa-check"></i><b>8.1</b> R Packages and Datasets for Topic 8</a></li>
+<li class="chapter" data-level="8.2" data-path="customer-choice.html"><a href="customer-choice.html#motivation-3"><i class="fa fa-check"></i><b>8.2</b> Motivation</a></li>
+<li class="chapter" data-level="8.3" data-path="customer-choice.html"><a href="customer-choice.html#understanding-multinomial-logistic"><i class="fa fa-check"></i><b>8.3</b> Understanding Multinomial Logistic</a></li>
+<li class="chapter" data-level="8.4" data-path="customer-choice.html"><a href="customer-choice.html#conducting-multinomial-logistic"><i class="fa fa-check"></i><b>8.4</b> Conducting Multinomial Logistic</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="customer-choice.html"><a href="customer-choice.html#model-estimation-2"><i class="fa fa-check"></i><b>7.4.1</b> Model Estimation</a></li>
-<li class="chapter" data-level="7.4.2" data-path="customer-choice.html"><a href="customer-choice.html#assessing-model-fit-1"><i class="fa fa-check"></i><b>7.4.2</b> Assessing Model Fit</a>
+<li class="chapter" data-level="8.4.1" data-path="customer-choice.html"><a href="customer-choice.html#model-estimation-2"><i class="fa fa-check"></i><b>8.4.1</b> Model Estimation</a></li>
+<li class="chapter" data-level="8.4.2" data-path="customer-choice.html"><a href="customer-choice.html#assessing-model-fit-1"><i class="fa fa-check"></i><b>8.4.2</b> Assessing Model Fit</a>
 <ul>
-<li class="chapter" data-level="7.4.2.1" data-path="customer-choice.html"><a href="customer-choice.html#goodness-of-fit-measures-1"><i class="fa fa-check"></i><b>7.4.2.1</b> Goodness-of-Fit Measures</a></li>
-<li class="chapter" data-level="7.4.2.2" data-path="customer-choice.html"><a href="customer-choice.html#classification-matrix-1"><i class="fa fa-check"></i><b>7.4.2.2</b> Classification Matrix</a></li>
+<li class="chapter" data-level="8.4.2.1" data-path="customer-choice.html"><a href="customer-choice.html#goodness-of-fit-measures-1"><i class="fa fa-check"></i><b>8.4.2.1</b> Goodness-of-Fit Measures</a></li>
+<li class="chapter" data-level="8.4.2.2" data-path="customer-choice.html"><a href="customer-choice.html#classification-matrix-1"><i class="fa fa-check"></i><b>8.4.2.2</b> Classification Matrix</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4.3" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-3"><i class="fa fa-check"></i><b>7.4.3</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="8.4.3" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-3"><i class="fa fa-check"></i><b>8.4.3</b> Interpreting Coefficients</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="customer-choice.html"><a href="customer-choice.html#standard-mnl-regression-example-1"><i class="fa fa-check"></i><b>7.5</b> Standard MNL Regression Example 1</a>
+<li class="chapter" data-level="8.5" data-path="customer-choice.html"><a href="customer-choice.html#standard-mnl-regression-example-1"><i class="fa fa-check"></i><b>8.5</b> Standard MNL Regression Example 1</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="customer-choice.html"><a href="customer-choice.html#data"><i class="fa fa-check"></i><b>7.5.1</b> Data</a></li>
-<li class="chapter" data-level="7.5.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-2"><i class="fa fa-check"></i><b>7.5.2</b> Estimation Results</a></li>
-<li class="chapter" data-level="7.5.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-2"><i class="fa fa-check"></i><b>7.5.3</b> Overall Model Fit</a></li>
-<li class="chapter" data-level="7.5.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-4"><i class="fa fa-check"></i><b>7.5.4</b> Interpreting Coefficients</a></li>
-<li class="chapter" data-level="7.5.5" data-path="customer-choice.html"><a href="customer-choice.html#average-predicted-probabilities"><i class="fa fa-check"></i><b>7.5.5</b> Average Predicted Probabilities</a></li>
+<li class="chapter" data-level="8.5.1" data-path="customer-choice.html"><a href="customer-choice.html#data"><i class="fa fa-check"></i><b>8.5.1</b> Data</a></li>
+<li class="chapter" data-level="8.5.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-2"><i class="fa fa-check"></i><b>8.5.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="8.5.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-2"><i class="fa fa-check"></i><b>8.5.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="8.5.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-4"><i class="fa fa-check"></i><b>8.5.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="8.5.5" data-path="customer-choice.html"><a href="customer-choice.html#average-predicted-probabilities"><i class="fa fa-check"></i><b>8.5.5</b> Average Predicted Probabilities</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="customer-choice.html"><a href="customer-choice.html#standard-mnl-regression-example-2"><i class="fa fa-check"></i><b>7.6</b> Standard MNL Regression Example 2</a>
+<li class="chapter" data-level="8.6" data-path="customer-choice.html"><a href="customer-choice.html#standard-mnl-regression-example-2"><i class="fa fa-check"></i><b>8.6</b> Standard MNL Regression Example 2</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="customer-choice.html"><a href="customer-choice.html#data-1"><i class="fa fa-check"></i><b>7.6.1</b> Data</a></li>
-<li class="chapter" data-level="7.6.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-3"><i class="fa fa-check"></i><b>7.6.2</b> Estimation Results</a></li>
-<li class="chapter" data-level="7.6.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-3"><i class="fa fa-check"></i><b>7.6.3</b> Overall Model Fit</a></li>
-<li class="chapter" data-level="7.6.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-5"><i class="fa fa-check"></i><b>7.6.4</b> Interpreting Coefficients</a></li>
-<li class="chapter" data-level="7.6.5" data-path="customer-choice.html"><a href="customer-choice.html#average-predicted-probabilities-1"><i class="fa fa-check"></i><b>7.6.5</b> Average Predicted Probabilities</a></li>
+<li class="chapter" data-level="8.6.1" data-path="customer-choice.html"><a href="customer-choice.html#data-1"><i class="fa fa-check"></i><b>8.6.1</b> Data</a></li>
+<li class="chapter" data-level="8.6.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-3"><i class="fa fa-check"></i><b>8.6.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="8.6.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-3"><i class="fa fa-check"></i><b>8.6.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="8.6.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-5"><i class="fa fa-check"></i><b>8.6.4</b> Interpreting Coefficients</a></li>
+<li class="chapter" data-level="8.6.5" data-path="customer-choice.html"><a href="customer-choice.html#average-predicted-probabilities-1"><i class="fa fa-check"></i><b>8.6.5</b> Average Predicted Probabilities</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="customer-choice.html"><a href="customer-choice.html#alternative-specific-mnl-example"><i class="fa fa-check"></i><b>7.7</b> Alternative Specific MNL Example</a>
+<li class="chapter" data-level="8.7" data-path="customer-choice.html"><a href="customer-choice.html#alternative-specific-mnl-example"><i class="fa fa-check"></i><b>8.7</b> Alternative Specific MNL Example</a>
 <ul>
-<li class="chapter" data-level="7.7.1" data-path="customer-choice.html"><a href="customer-choice.html#data-2"><i class="fa fa-check"></i><b>7.7.1</b> Data</a></li>
-<li class="chapter" data-level="7.7.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-4"><i class="fa fa-check"></i><b>7.7.2</b> Estimation Results</a></li>
-<li class="chapter" data-level="7.7.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-4"><i class="fa fa-check"></i><b>7.7.3</b> Overall Model Fit</a></li>
-<li class="chapter" data-level="7.7.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-6"><i class="fa fa-check"></i><b>7.7.4</b> Interpreting Coefficients</a>
+<li class="chapter" data-level="8.7.1" data-path="customer-choice.html"><a href="customer-choice.html#data-2"><i class="fa fa-check"></i><b>8.7.1</b> Data</a></li>
+<li class="chapter" data-level="8.7.2" data-path="customer-choice.html"><a href="customer-choice.html#estimation-results-4"><i class="fa fa-check"></i><b>8.7.2</b> Estimation Results</a></li>
+<li class="chapter" data-level="8.7.3" data-path="customer-choice.html"><a href="customer-choice.html#overall-model-fit-4"><i class="fa fa-check"></i><b>8.7.3</b> Overall Model Fit</a></li>
+<li class="chapter" data-level="8.7.4" data-path="customer-choice.html"><a href="customer-choice.html#interpreting-coefficients-6"><i class="fa fa-check"></i><b>8.7.4</b> Interpreting Coefficients</a>
 <ul>
-<li class="chapter" data-level="7.7.4.1" data-path="customer-choice.html"><a href="customer-choice.html#choice-specific-results"><i class="fa fa-check"></i><b>7.7.4.1</b> Choice specific results</a></li>
-<li class="chapter" data-level="7.7.4.2" data-path="customer-choice.html"><a href="customer-choice.html#case-specific-results"><i class="fa fa-check"></i><b>7.7.4.2</b> Case Specific Results</a></li>
+<li class="chapter" data-level="8.7.4.1" data-path="customer-choice.html"><a href="customer-choice.html#choice-specific-results"><i class="fa fa-check"></i><b>8.7.4.1</b> Choice specific results</a></li>
+<li class="chapter" data-level="8.7.4.2" data-path="customer-choice.html"><a href="customer-choice.html#case-specific-results"><i class="fa fa-check"></i><b>8.7.4.2</b> Case Specific Results</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7.8" data-path="customer-choice.html"><a href="customer-choice.html#suggested-readings-6"><i class="fa fa-check"></i><b>7.8</b> Suggested Readings</a></li>
-<li class="chapter" data-level="7.9" data-path="customer-choice.html"><a href="customer-choice.html#r-code-6"><i class="fa fa-check"></i><b>7.9</b> R Code</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html"><i class="fa fa-check"></i><b>8</b> Conjoint Analysis</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#r-packages-and-datasets-for-topic-8"><i class="fa fa-check"></i><b>8.1</b> R Packages and Datasets for Topic 8</a></li>
-<li class="chapter" data-level="8.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#why-conjoint"><i class="fa fa-check"></i><b>8.2</b> Why Conjoint?</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#buyers-versus-sellers"><i class="fa fa-check"></i><b>8.2.1</b> Buyers versus Sellers</a></li>
-<li class="chapter" data-level="8.2.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#breaking-down-products"><i class="fa fa-check"></i><b>8.2.2</b> Breaking Down Products</a></li>
-<li class="chapter" data-level="8.2.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#learning-what-customers-want"><i class="fa fa-check"></i><b>8.2.3</b> Learning What Customers Want</a></li>
-<li class="chapter" data-level="8.2.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#how-is-conjoint-analysis-different"><i class="fa fa-check"></i><b>8.2.4</b> How is Conjoint Analysis Different?</a></li>
-<li class="chapter" data-level="8.2.5" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#why-does-conjoint-analysis-work"><i class="fa fa-check"></i><b>8.2.5</b> Why Does Conjoint Analysis Work?</a></li>
-<li class="chapter" data-level="8.2.6" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#practical-guidelines"><i class="fa fa-check"></i><b>8.2.6</b> Practical Guidelines</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#how-conjoint-analysis-works"><i class="fa fa-check"></i><b>8.3</b> How Conjoint Analysis Works</a>
-<ul>
-<li class="chapter" data-level="8.3.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#rules-for-creating-the-attribute-list"><i class="fa fa-check"></i><b>8.3.1</b> Rules for Creating the Attribute List</a></li>
-<li class="chapter" data-level="8.3.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#build-concepts"><i class="fa fa-check"></i><b>8.3.2</b> Build Concepts</a></li>
-<li class="chapter" data-level="8.3.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#raterankchoose-concepts"><i class="fa fa-check"></i><b>8.3.3</b> Rate/Rank/Choose Concepts</a></li>
-<li class="chapter" data-level="8.3.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#use-statistics-to-derive-unique-value"><i class="fa fa-check"></i><b>8.3.4</b> Use Statistics to Derive Unique Value</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#part-worth-utilities-and-importances"><i class="fa fa-check"></i><b>8.4</b> Part-Worth Utilities and Importances</a>
-<ul>
-<li class="chapter" data-level="8.4.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#characteristics-of-part-worth-utilities"><i class="fa fa-check"></i><b>8.4.1</b> Characteristics of Part-Worth Utilities</a></li>
-<li class="chapter" data-level="8.4.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#calculating-part-worth-utilities-traditional-conjoint"><i class="fa fa-check"></i><b>8.4.2</b> Calculating Part-Worth Utilities (traditional conjoint)</a></li>
-<li class="chapter" data-level="8.4.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#from-utilities-to-importances"><i class="fa fa-check"></i><b>8.4.3</b> From Utilities to Importances</a></li>
-<li class="chapter" data-level="8.4.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#calculating-conjoint-importances"><i class="fa fa-check"></i><b>8.4.4</b> Calculating Conjoint Importances</a></li>
-<li class="chapter" data-level="8.4.5" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#interpreting-conjoint-importances"><i class="fa fa-check"></i><b>8.4.5</b> Interpreting Conjoint Importances</a></li>
-<li class="chapter" data-level="8.4.6" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#further-analysis"><i class="fa fa-check"></i><b>8.4.6</b> Further Analysis</a></li>
-<li class="chapter" data-level="8.4.7" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#prediction"><i class="fa fa-check"></i><b>8.4.7</b> Prediction</a></li>
-</ul></li>
-<li class="chapter" data-level="8.5" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#traditional-conjoint-example"><i class="fa fa-check"></i><b>8.5</b> Traditional Conjoint Example</a>
-<ul>
-<li class="chapter" data-level="8.5.1" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#data-3"><i class="fa fa-check"></i><b>8.5.1</b> Data</a></li>
-<li class="chapter" data-level="8.5.2" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#summarize"><i class="fa fa-check"></i><b>8.5.2</b> Summarize</a></li>
-<li class="chapter" data-level="8.5.3" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#regression-results-for-one-respondent"><i class="fa fa-check"></i><b>8.5.3</b> Regression results for one respondent</a></li>
-<li class="chapter" data-level="8.5.4" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#importances-for-one-respondent"><i class="fa fa-check"></i><b>8.5.4</b> Importances for one respondent</a></li>
-<li class="chapter" data-level="8.5.5" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#average-part-worth-utilities-and-importances"><i class="fa fa-check"></i><b>8.5.5</b> Average Part-Worth Utilities and Importances</a></li>
-<li class="chapter" data-level="8.5.6" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#explain-importances-by-other-variables"><i class="fa fa-check"></i><b>8.5.6</b> Explain Importances by Other Variables</a></li>
-<li class="chapter" data-level="8.5.7" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#predict-part-worths-for-new-profiles"><i class="fa fa-check"></i><b>8.5.7</b> Predict Part-Worths for New Profiles</a></li>
-</ul></li>
-<li class="chapter" data-level="8.6" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#suggested-readings-7"><i class="fa fa-check"></i><b>8.6</b> Suggested Readings</a></li>
-<li class="chapter" data-level="8.7" data-path="conjoint-analysis.html"><a href="conjoint-analysis.html#r-code-7"><i class="fa fa-check"></i><b>8.7</b> R Code</a></li>
+<li class="chapter" data-level="8.8" data-path="customer-choice.html"><a href="customer-choice.html#suggested-readings-6"><i class="fa fa-check"></i><b>8.8</b> Suggested Readings</a></li>
+<li class="chapter" data-level="8.9" data-path="customer-choice.html"><a href="customer-choice.html#r-code-6"><i class="fa fa-check"></i><b>8.9</b> R Code</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html"><i class="fa fa-check"></i><b>9</b> Marketing Mix Decisions</a>
 <ul>
@@ -532,27 +495,27 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.5" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-price-response"><i class="fa fa-check"></i><b>9.5</b> Modeling Price Response</a></li>
 <li class="chapter" data-level="9.6" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-advertising-response-example"><i class="fa fa-check"></i><b>9.6</b> Modeling Advertising Response Example</a>
 <ul>
-<li class="chapter" data-level="9.6.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-4"><i class="fa fa-check"></i><b>9.6.1</b> Data</a></li>
+<li class="chapter" data-level="9.6.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-3"><i class="fa fa-check"></i><b>9.6.1</b> Data</a></li>
 <li class="chapter" data-level="9.6.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#scatterplots-1"><i class="fa fa-check"></i><b>9.6.2</b> Scatterplots</a></li>
 <li class="chapter" data-level="9.6.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#estimation"><i class="fa fa-check"></i><b>9.6.3</b> Estimation</a></li>
 <li class="chapter" data-level="9.6.4" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#results-2"><i class="fa fa-check"></i><b>9.6.4</b> Results</a></li>
 </ul></li>
 <li class="chapter" data-level="9.7" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-price-response-example"><i class="fa fa-check"></i><b>9.7</b> Modeling Price Response Example</a>
 <ul>
-<li class="chapter" data-level="9.7.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-5"><i class="fa fa-check"></i><b>9.7.1</b> Data</a></li>
+<li class="chapter" data-level="9.7.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-4"><i class="fa fa-check"></i><b>9.7.1</b> Data</a></li>
 <li class="chapter" data-level="9.7.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#scatterplot"><i class="fa fa-check"></i><b>9.7.2</b> Scatterplot</a></li>
 <li class="chapter" data-level="9.7.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#estimation-1"><i class="fa fa-check"></i><b>9.7.3</b> Estimation</a></li>
 <li class="chapter" data-level="9.7.4" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#results-3"><i class="fa fa-check"></i><b>9.7.4</b> Results</a></li>
 </ul></li>
 <li class="chapter" data-level="9.8" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#modeling-price-and-advertising-response-example"><i class="fa fa-check"></i><b>9.8</b> Modeling Price and Advertising Response Example</a>
 <ul>
-<li class="chapter" data-level="9.8.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-6"><i class="fa fa-check"></i><b>9.8.1</b> Data</a></li>
+<li class="chapter" data-level="9.8.1" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#data-5"><i class="fa fa-check"></i><b>9.8.1</b> Data</a></li>
 <li class="chapter" data-level="9.8.2" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#scatterplot-1"><i class="fa fa-check"></i><b>9.8.2</b> Scatterplot</a></li>
 <li class="chapter" data-level="9.8.3" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#estimation-2"><i class="fa fa-check"></i><b>9.8.3</b> Estimation</a></li>
 <li class="chapter" data-level="9.8.4" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#results-4"><i class="fa fa-check"></i><b>9.8.4</b> Results</a></li>
 </ul></li>
-<li class="chapter" data-level="9.9" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#suggested-readings-8"><i class="fa fa-check"></i><b>9.9</b> Suggested Readings</a></li>
-<li class="chapter" data-level="9.10" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#r-code-8"><i class="fa fa-check"></i><b>9.10</b> R Code</a></li>
+<li class="chapter" data-level="9.9" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#suggested-readings-7"><i class="fa fa-check"></i><b>9.9</b> Suggested Readings</a></li>
+<li class="chapter" data-level="9.10" data-path="marketing-mix-decisions.html"><a href="marketing-mix-decisions.html#r-code-7"><i class="fa fa-check"></i><b>9.10</b> R Code</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="forecasting-i.html"><a href="forecasting-i.html"><i class="fa fa-check"></i><b>10</b> Forecasting I</a>
 <ul>
@@ -589,7 +552,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10.9" data-path="forecasting-i.html"><a href="forecasting-i.html#forecasting-example-1"><i class="fa fa-check"></i><b>10.9</b> Forecasting Example 1</a>
 <ul>
-<li class="chapter" data-level="10.9.1" data-path="forecasting-i.html"><a href="forecasting-i.html#data-7"><i class="fa fa-check"></i><b>10.9.1</b> Data</a></li>
+<li class="chapter" data-level="10.9.1" data-path="forecasting-i.html"><a href="forecasting-i.html#data-6"><i class="fa fa-check"></i><b>10.9.1</b> Data</a></li>
 <li class="chapter" data-level="10.9.2" data-path="forecasting-i.html"><a href="forecasting-i.html#examine-data"><i class="fa fa-check"></i><b>10.9.2</b> Examine Data</a></li>
 <li class="chapter" data-level="10.9.3" data-path="forecasting-i.html"><a href="forecasting-i.html#naïve-methods-1"><i class="fa fa-check"></i><b>10.9.3</b> Naïve Methods</a></li>
 <li class="chapter" data-level="10.9.4" data-path="forecasting-i.html"><a href="forecasting-i.html#smoothing-methods"><i class="fa fa-check"></i><b>10.9.4</b> Smoothing Methods</a></li>
@@ -598,69 +561,111 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10.10" data-path="forecasting-i.html"><a href="forecasting-i.html#forecasting-example-2"><i class="fa fa-check"></i><b>10.10</b> Forecasting Example 2</a>
 <ul>
-<li class="chapter" data-level="10.10.1" data-path="forecasting-i.html"><a href="forecasting-i.html#data-8"><i class="fa fa-check"></i><b>10.10.1</b> Data</a></li>
+<li class="chapter" data-level="10.10.1" data-path="forecasting-i.html"><a href="forecasting-i.html#data-7"><i class="fa fa-check"></i><b>10.10.1</b> Data</a></li>
 <li class="chapter" data-level="10.10.2" data-path="forecasting-i.html"><a href="forecasting-i.html#examine-data-1"><i class="fa fa-check"></i><b>10.10.2</b> Examine Data</a></li>
 <li class="chapter" data-level="10.10.3" data-path="forecasting-i.html"><a href="forecasting-i.html#naïve-methods-2"><i class="fa fa-check"></i><b>10.10.3</b> Naïve Methods</a></li>
 <li class="chapter" data-level="10.10.4" data-path="forecasting-i.html"><a href="forecasting-i.html#smoothing-methods-1"><i class="fa fa-check"></i><b>10.10.4</b> Smoothing Methods</a></li>
 <li class="chapter" data-level="10.10.5" data-path="forecasting-i.html"><a href="forecasting-i.html#regression-methods-1"><i class="fa fa-check"></i><b>10.10.5</b> Regression Methods</a></li>
 <li class="chapter" data-level="10.10.6" data-path="forecasting-i.html"><a href="forecasting-i.html#compare-best-models-1"><i class="fa fa-check"></i><b>10.10.6</b> Compare Best Models</a></li>
 </ul></li>
-<li class="chapter" data-level="10.11" data-path="forecasting-i.html"><a href="forecasting-i.html#suggested-readings-9"><i class="fa fa-check"></i><b>10.11</b> Suggested Readings</a></li>
-<li class="chapter" data-level="10.12" data-path="forecasting-i.html"><a href="forecasting-i.html#r-code-9"><i class="fa fa-check"></i><b>10.12</b> R Code</a></li>
+<li class="chapter" data-level="10.11" data-path="forecasting-i.html"><a href="forecasting-i.html#suggested-readings-8"><i class="fa fa-check"></i><b>10.11</b> Suggested Readings</a></li>
+<li class="chapter" data-level="10.12" data-path="forecasting-i.html"><a href="forecasting-i.html#r-code-8"><i class="fa fa-check"></i><b>10.12</b> R Code</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="forecasting-ii.html"><a href="forecasting-ii.html"><i class="fa fa-check"></i><b>11</b> Forecasting II</a>
+<li class="chapter" data-level="11" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html"><i class="fa fa-check"></i><b>11</b> Conjoint Analysis (Not Covered)</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="forecasting-ii.html"><a href="forecasting-ii.html#r-packages-and-datasets-for-topic-10-1"><i class="fa fa-check"></i><b>11.1</b> R Packages and Datasets for Topic 10</a></li>
-<li class="chapter" data-level="11.2" data-path="forecasting-ii.html"><a href="forecasting-ii.html#forecasting-methods-1"><i class="fa fa-check"></i><b>11.2</b> Forecasting Methods</a></li>
-<li class="chapter" data-level="11.3" data-path="forecasting-ii.html"><a href="forecasting-ii.html#the-box-jenkins-method"><i class="fa fa-check"></i><b>11.3</b> The Box-Jenkins Method</a>
+<li class="chapter" data-level="11.1" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#r-packages-and-datasets-for-topic-11"><i class="fa fa-check"></i><b>11.1</b> R Packages and Datasets for Topic 11</a></li>
+<li class="chapter" data-level="11.2" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#why-conjoint"><i class="fa fa-check"></i><b>11.2</b> Why Conjoint?</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="forecasting-ii.html"><a href="forecasting-ii.html#stationary-time-series"><i class="fa fa-check"></i><b>11.3.1</b> Stationary Time Series</a></li>
-<li class="chapter" data-level="11.3.2" data-path="forecasting-ii.html"><a href="forecasting-ii.html#autocorrelation"><i class="fa fa-check"></i><b>11.3.2</b> Autocorrelation</a></li>
-<li class="chapter" data-level="11.3.3" data-path="forecasting-ii.html"><a href="forecasting-ii.html#autocorrelation-function"><i class="fa fa-check"></i><b>11.3.3</b> Autocorrelation Function</a></li>
-<li class="chapter" data-level="11.3.4" data-path="forecasting-ii.html"><a href="forecasting-ii.html#partial-autocorrelation-function"><i class="fa fa-check"></i><b>11.3.4</b> Partial Autocorrelation Function</a></li>
-<li class="chapter" data-level="11.3.5" data-path="forecasting-ii.html"><a href="forecasting-ii.html#forecasting-arma"><i class="fa fa-check"></i><b>11.3.5</b> Forecasting ARMA</a></li>
-<li class="chapter" data-level="11.3.6" data-path="forecasting-ii.html"><a href="forecasting-ii.html#nonstationary-time-series"><i class="fa fa-check"></i><b>11.3.6</b> Nonstationary Time Series</a></li>
-<li class="chapter" data-level="11.3.7" data-path="forecasting-ii.html"><a href="forecasting-ii.html#forecasting-arima"><i class="fa fa-check"></i><b>11.3.7</b> Forecasting ARIMA</a></li>
-<li class="chapter" data-level="11.3.8" data-path="forecasting-ii.html"><a href="forecasting-ii.html#arima-with-seasonal-time-series"><i class="fa fa-check"></i><b>11.3.8</b> ARIMA with Seasonal Time Series</a></li>
+<li class="chapter" data-level="11.2.1" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#buyers-versus-sellers"><i class="fa fa-check"></i><b>11.2.1</b> Buyers versus Sellers</a></li>
+<li class="chapter" data-level="11.2.2" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#breaking-down-products"><i class="fa fa-check"></i><b>11.2.2</b> Breaking Down Products</a></li>
+<li class="chapter" data-level="11.2.3" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#learning-what-customers-want"><i class="fa fa-check"></i><b>11.2.3</b> Learning What Customers Want</a></li>
+<li class="chapter" data-level="11.2.4" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#how-is-conjoint-analysis-different"><i class="fa fa-check"></i><b>11.2.4</b> How is Conjoint Analysis Different?</a></li>
+<li class="chapter" data-level="11.2.5" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#why-does-conjoint-analysis-work"><i class="fa fa-check"></i><b>11.2.5</b> Why Does Conjoint Analysis Work?</a></li>
+<li class="chapter" data-level="11.2.6" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#practical-guidelines"><i class="fa fa-check"></i><b>11.2.6</b> Practical Guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="forecasting-ii.html"><a href="forecasting-ii.html#box-jenkins-method-overview"><i class="fa fa-check"></i><b>11.4</b> Box-Jenkins Method Overview</a>
+<li class="chapter" data-level="11.3" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#how-conjoint-analysis-works"><i class="fa fa-check"></i><b>11.3</b> How Conjoint Analysis Works</a>
 <ul>
-<li class="chapter" data-level="11.4.1" data-path="forecasting-ii.html"><a href="forecasting-ii.html#arima"><i class="fa fa-check"></i><b>11.4.1</b> ARIMA</a>
+<li class="chapter" data-level="11.3.1" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#rules-for-creating-the-attribute-list"><i class="fa fa-check"></i><b>11.3.1</b> Rules for Creating the Attribute List</a></li>
+<li class="chapter" data-level="11.3.2" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#build-concepts"><i class="fa fa-check"></i><b>11.3.2</b> Build Concepts</a></li>
+<li class="chapter" data-level="11.3.3" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#raterankchoose-concepts"><i class="fa fa-check"></i><b>11.3.3</b> Rate/Rank/Choose Concepts</a></li>
+<li class="chapter" data-level="11.3.4" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#use-statistics-to-derive-unique-value"><i class="fa fa-check"></i><b>11.3.4</b> Use Statistics to Derive Unique Value</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#part-worth-utilities-and-importances"><i class="fa fa-check"></i><b>11.4</b> Part-Worth Utilities and Importances</a>
 <ul>
-<li class="chapter" data-level="11.4.1.1" data-path="forecasting-ii.html"><a href="forecasting-ii.html#model-identification"><i class="fa fa-check"></i><b>11.4.1.1</b> Model Identification</a></li>
-<li class="chapter" data-level="11.4.1.2" data-path="forecasting-ii.html"><a href="forecasting-ii.html#model-estimation-3"><i class="fa fa-check"></i><b>11.4.1.2</b> Model Estimation</a></li>
-<li class="chapter" data-level="11.4.1.3" data-path="forecasting-ii.html"><a href="forecasting-ii.html#diagnostic-checking"><i class="fa fa-check"></i><b>11.4.1.3</b> Diagnostic Checking</a></li>
+<li class="chapter" data-level="11.4.1" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#characteristics-of-part-worth-utilities"><i class="fa fa-check"></i><b>11.4.1</b> Characteristics of Part-Worth Utilities</a></li>
+<li class="chapter" data-level="11.4.2" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#calculating-part-worth-utilities-traditional-conjoint"><i class="fa fa-check"></i><b>11.4.2</b> Calculating Part-Worth Utilities (traditional conjoint)</a></li>
+<li class="chapter" data-level="11.4.3" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#from-utilities-to-importances"><i class="fa fa-check"></i><b>11.4.3</b> From Utilities to Importances</a></li>
+<li class="chapter" data-level="11.4.4" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#calculating-conjoint-importances"><i class="fa fa-check"></i><b>11.4.4</b> Calculating Conjoint Importances</a></li>
+<li class="chapter" data-level="11.4.5" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#interpreting-conjoint-importances"><i class="fa fa-check"></i><b>11.4.5</b> Interpreting Conjoint Importances</a></li>
+<li class="chapter" data-level="11.4.6" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#further-analysis"><i class="fa fa-check"></i><b>11.4.6</b> Further Analysis</a></li>
+<li class="chapter" data-level="11.4.7" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#prediction"><i class="fa fa-check"></i><b>11.4.7</b> Prediction</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4.2" data-path="forecasting-ii.html"><a href="forecasting-ii.html#seasonal-arima"><i class="fa fa-check"></i><b>11.4.2</b> Seasonal ARIMA</a>
+<li class="chapter" data-level="11.5" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#traditional-conjoint-example"><i class="fa fa-check"></i><b>11.5</b> Traditional Conjoint Example</a>
 <ul>
-<li class="chapter" data-level="11.4.2.1" data-path="forecasting-ii.html"><a href="forecasting-ii.html#model-identification-1"><i class="fa fa-check"></i><b>11.4.2.1</b> Model Identification</a></li>
+<li class="chapter" data-level="11.5.1" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#data-8"><i class="fa fa-check"></i><b>11.5.1</b> Data</a></li>
+<li class="chapter" data-level="11.5.2" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#summarize"><i class="fa fa-check"></i><b>11.5.2</b> Summarize</a></li>
+<li class="chapter" data-level="11.5.3" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#regression-results-for-one-respondent"><i class="fa fa-check"></i><b>11.5.3</b> Regression results for one respondent</a></li>
+<li class="chapter" data-level="11.5.4" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#importances-for-one-respondent"><i class="fa fa-check"></i><b>11.5.4</b> Importances for one respondent</a></li>
+<li class="chapter" data-level="11.5.5" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#average-part-worth-utilities-and-importances"><i class="fa fa-check"></i><b>11.5.5</b> Average Part-Worth Utilities and Importances</a></li>
+<li class="chapter" data-level="11.5.6" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#explain-importances-by-other-variables"><i class="fa fa-check"></i><b>11.5.6</b> Explain Importances by Other Variables</a></li>
+<li class="chapter" data-level="11.5.7" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#predict-part-worths-for-new-profiles"><i class="fa fa-check"></i><b>11.5.7</b> Predict Part-Worths for New Profiles</a></li>
 </ul></li>
+<li class="chapter" data-level="11.6" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#suggested-readings-9"><i class="fa fa-check"></i><b>11.6</b> Suggested Readings</a></li>
+<li class="chapter" data-level="11.7" data-path="conjoint-analysis-not-covered.html"><a href="conjoint-analysis-not-covered.html#r-code-9"><i class="fa fa-check"></i><b>11.7</b> R Code</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="forecasting-ii.html"><a href="forecasting-ii.html#arima-forecasting-example-1"><i class="fa fa-check"></i><b>11.5</b> ARIMA Forecasting Example 1</a>
+<li class="chapter" data-level="12" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html"><i class="fa fa-check"></i><b>12</b> Forecasting II (NOT COVERED)</a>
 <ul>
-<li class="chapter" data-level="11.5.1" data-path="forecasting-ii.html"><a href="forecasting-ii.html#data-9"><i class="fa fa-check"></i><b>11.5.1</b> Data</a></li>
-<li class="chapter" data-level="11.5.2" data-path="forecasting-ii.html"><a href="forecasting-ii.html#examine-data-2"><i class="fa fa-check"></i><b>11.5.2</b> Examine Data</a></li>
-<li class="chapter" data-level="11.5.3" data-path="forecasting-ii.html"><a href="forecasting-ii.html#deterime-d"><i class="fa fa-check"></i><b>11.5.3</b> Deterime <span class="math inline">\(d\)</span></a></li>
-<li class="chapter" data-level="11.5.4" data-path="forecasting-ii.html"><a href="forecasting-ii.html#determine-p"><i class="fa fa-check"></i><b>11.5.4</b> Determine <span class="math inline">\(p\)</span></a></li>
-<li class="chapter" data-level="11.5.5" data-path="forecasting-ii.html"><a href="forecasting-ii.html#determine-q"><i class="fa fa-check"></i><b>11.5.5</b> Determine <span class="math inline">\(q\)</span></a></li>
-<li class="chapter" data-level="11.5.6" data-path="forecasting-ii.html"><a href="forecasting-ii.html#check-white-noise"><i class="fa fa-check"></i><b>11.5.6</b> Check White Noise</a></li>
-<li class="chapter" data-level="11.5.7" data-path="forecasting-ii.html"><a href="forecasting-ii.html#model-selection"><i class="fa fa-check"></i><b>11.5.7</b> Model Selection</a></li>
-<li class="chapter" data-level="11.5.8" data-path="forecasting-ii.html"><a href="forecasting-ii.html#model-forecast"><i class="fa fa-check"></i><b>11.5.8</b> Model Forecast</a></li>
-</ul></li>
-<li class="chapter" data-level="11.6" data-path="forecasting-ii.html"><a href="forecasting-ii.html#arima-forecasting-example-2"><i class="fa fa-check"></i><b>11.6</b> ARIMA Forecasting Example 2</a>
+<li class="chapter" data-level="12.1" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#r-packages-and-datasets-for-topic-12"><i class="fa fa-check"></i><b>12.1</b> R Packages and Datasets for Topic 12</a></li>
+<li class="chapter" data-level="12.2" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#forecasting-methods-1"><i class="fa fa-check"></i><b>12.2</b> Forecasting Methods</a></li>
+<li class="chapter" data-level="12.3" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#the-box-jenkins-method"><i class="fa fa-check"></i><b>12.3</b> The Box-Jenkins Method</a>
 <ul>
-<li class="chapter" data-level="11.6.1" data-path="forecasting-ii.html"><a href="forecasting-ii.html#data-10"><i class="fa fa-check"></i><b>11.6.1</b> Data</a></li>
-<li class="chapter" data-level="11.6.2" data-path="forecasting-ii.html"><a href="forecasting-ii.html#examine-data-3"><i class="fa fa-check"></i><b>11.6.2</b> Examine Data</a></li>
-<li class="chapter" data-level="11.6.3" data-path="forecasting-ii.html"><a href="forecasting-ii.html#deterime-d-and-d"><i class="fa fa-check"></i><b>11.6.3</b> Deterime <span class="math inline">\(d\)</span> and <span class="math inline">\(D\)</span></a></li>
-<li class="chapter" data-level="11.6.4" data-path="forecasting-ii.html"><a href="forecasting-ii.html#determine-p-1"><i class="fa fa-check"></i><b>11.6.4</b> Determine <span class="math inline">\(p\)</span></a></li>
-<li class="chapter" data-level="11.6.5" data-path="forecasting-ii.html"><a href="forecasting-ii.html#determine-q-1"><i class="fa fa-check"></i><b>11.6.5</b> Determine <span class="math inline">\(q\)</span></a></li>
-<li class="chapter" data-level="11.6.6" data-path="forecasting-ii.html"><a href="forecasting-ii.html#determine-p-and-q"><i class="fa fa-check"></i><b>11.6.6</b> Determine <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span></a></li>
-<li class="chapter" data-level="11.6.7" data-path="forecasting-ii.html"><a href="forecasting-ii.html#check-white-noise-1"><i class="fa fa-check"></i><b>11.6.7</b> Check White Noise</a></li>
-<li class="chapter" data-level="11.6.8" data-path="forecasting-ii.html"><a href="forecasting-ii.html#model-selection-1"><i class="fa fa-check"></i><b>11.6.8</b> Model Selection</a></li>
-<li class="chapter" data-level="11.6.9" data-path="forecasting-ii.html"><a href="forecasting-ii.html#model-forecast-1"><i class="fa fa-check"></i><b>11.6.9</b> Model Forecast</a></li>
+<li class="chapter" data-level="12.3.1" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#stationary-time-series"><i class="fa fa-check"></i><b>12.3.1</b> Stationary Time Series</a></li>
+<li class="chapter" data-level="12.3.2" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#autocorrelation"><i class="fa fa-check"></i><b>12.3.2</b> Autocorrelation</a></li>
+<li class="chapter" data-level="12.3.3" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#autocorrelation-function"><i class="fa fa-check"></i><b>12.3.3</b> Autocorrelation Function</a></li>
+<li class="chapter" data-level="12.3.4" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#partial-autocorrelation-function"><i class="fa fa-check"></i><b>12.3.4</b> Partial Autocorrelation Function</a></li>
+<li class="chapter" data-level="12.3.5" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#forecasting-arma"><i class="fa fa-check"></i><b>12.3.5</b> Forecasting ARMA</a></li>
+<li class="chapter" data-level="12.3.6" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#nonstationary-time-series"><i class="fa fa-check"></i><b>12.3.6</b> Nonstationary Time Series</a></li>
+<li class="chapter" data-level="12.3.7" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#forecasting-arima"><i class="fa fa-check"></i><b>12.3.7</b> Forecasting ARIMA</a></li>
+<li class="chapter" data-level="12.3.8" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#arima-with-seasonal-time-series"><i class="fa fa-check"></i><b>12.3.8</b> ARIMA with Seasonal Time Series</a></li>
 </ul></li>
-<li class="chapter" data-level="11.7" data-path="forecasting-ii.html"><a href="forecasting-ii.html#suggested-readings-10"><i class="fa fa-check"></i><b>11.7</b> Suggested Readings</a></li>
-<li class="chapter" data-level="11.8" data-path="forecasting-ii.html"><a href="forecasting-ii.html#r-code-10"><i class="fa fa-check"></i><b>11.8</b> R Code</a></li>
+<li class="chapter" data-level="12.4" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#box-jenkins-method-overview"><i class="fa fa-check"></i><b>12.4</b> Box-Jenkins Method Overview</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#arima"><i class="fa fa-check"></i><b>12.4.1</b> ARIMA</a>
+<ul>
+<li class="chapter" data-level="12.4.1.1" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#model-identification"><i class="fa fa-check"></i><b>12.4.1.1</b> Model Identification</a></li>
+<li class="chapter" data-level="12.4.1.2" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#model-estimation-3"><i class="fa fa-check"></i><b>12.4.1.2</b> Model Estimation</a></li>
+<li class="chapter" data-level="12.4.1.3" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#diagnostic-checking"><i class="fa fa-check"></i><b>12.4.1.3</b> Diagnostic Checking</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4.2" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#seasonal-arima"><i class="fa fa-check"></i><b>12.4.2</b> Seasonal ARIMA</a>
+<ul>
+<li class="chapter" data-level="12.4.2.1" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#model-identification-1"><i class="fa fa-check"></i><b>12.4.2.1</b> Model Identification</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#arima-forecasting-example-1"><i class="fa fa-check"></i><b>12.5</b> ARIMA Forecasting Example 1</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#data-9"><i class="fa fa-check"></i><b>12.5.1</b> Data</a></li>
+<li class="chapter" data-level="12.5.2" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#examine-data-2"><i class="fa fa-check"></i><b>12.5.2</b> Examine Data</a></li>
+<li class="chapter" data-level="12.5.3" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#deterime-d"><i class="fa fa-check"></i><b>12.5.3</b> Deterime <span class="math inline">\(d\)</span></a></li>
+<li class="chapter" data-level="12.5.4" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#determine-p"><i class="fa fa-check"></i><b>12.5.4</b> Determine <span class="math inline">\(p\)</span></a></li>
+<li class="chapter" data-level="12.5.5" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#determine-q"><i class="fa fa-check"></i><b>12.5.5</b> Determine <span class="math inline">\(q\)</span></a></li>
+<li class="chapter" data-level="12.5.6" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#check-white-noise"><i class="fa fa-check"></i><b>12.5.6</b> Check White Noise</a></li>
+<li class="chapter" data-level="12.5.7" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#model-selection"><i class="fa fa-check"></i><b>12.5.7</b> Model Selection</a></li>
+<li class="chapter" data-level="12.5.8" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#model-forecast"><i class="fa fa-check"></i><b>12.5.8</b> Model Forecast</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#arima-forecasting-example-2"><i class="fa fa-check"></i><b>12.6</b> ARIMA Forecasting Example 2</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#data-10"><i class="fa fa-check"></i><b>12.6.1</b> Data</a></li>
+<li class="chapter" data-level="12.6.2" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#examine-data-3"><i class="fa fa-check"></i><b>12.6.2</b> Examine Data</a></li>
+<li class="chapter" data-level="12.6.3" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#deterime-d-and-d"><i class="fa fa-check"></i><b>12.6.3</b> Deterime <span class="math inline">\(d\)</span> and <span class="math inline">\(D\)</span></a></li>
+<li class="chapter" data-level="12.6.4" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#determine-p-1"><i class="fa fa-check"></i><b>12.6.4</b> Determine <span class="math inline">\(p\)</span></a></li>
+<li class="chapter" data-level="12.6.5" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#determine-q-1"><i class="fa fa-check"></i><b>12.6.5</b> Determine <span class="math inline">\(q\)</span></a></li>
+<li class="chapter" data-level="12.6.6" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#determine-p-and-q"><i class="fa fa-check"></i><b>12.6.6</b> Determine <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span></a></li>
+<li class="chapter" data-level="12.6.7" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#check-white-noise-1"><i class="fa fa-check"></i><b>12.6.7</b> Check White Noise</a></li>
+<li class="chapter" data-level="12.6.8" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#model-selection-1"><i class="fa fa-check"></i><b>12.6.8</b> Model Selection</a></li>
+<li class="chapter" data-level="12.6.9" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#model-forecast-1"><i class="fa fa-check"></i><b>12.6.9</b> Model Forecast</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#suggested-readings-10"><i class="fa fa-check"></i><b>12.7</b> Suggested Readings</a></li>
+<li class="chapter" data-level="12.8" data-path="forecasting-ii-not-covered.html"><a href="forecasting-ii-not-covered.html#r-code-10"><i class="fa fa-check"></i><b>12.8</b> R Code</a></li>
 </ul></li>
 </ul>
 
@@ -679,21 +684,22 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="segmentation" class="section level1" number="5">
-<h1><span class="header-section-number">Topic 5</span> Segmentation</h1>
-<div id="r-packages-and-datasets-for-topic-5" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> R Packages and Datasets for Topic 5</h2>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="segmentation.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
-<span id="cb83-2"><a href="segmentation.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
-<span id="cb83-3"><a href="segmentation.html#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
-<span id="cb83-4"><a href="segmentation.html#cb83-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
-<span id="cb83-5"><a href="segmentation.html#cb83-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
-<span id="cb83-6"><a href="segmentation.html#cb83-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;Topic05/ffseg.rdata&quot;</span>)</span></code></pre></div>
+<div id="segmentation" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Topic 5</span> Segmentation<a href="segmentation.html#segmentation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="r-packages-and-datasets-for-topic-5" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> R Packages and Datasets for Topic 5<a href="segmentation.html#r-packages-and-datasets-for-topic-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="segmentation.html#cb83-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)       <span class="co"># Advanced graphing capabilities</span></span>
+<span id="cb83-2"><a href="segmentation.html#cb83-2" tabindex="-1"></a><span class="fu">library</span>(flextable)     <span class="co"># Better HTML Tables</span></span>
+<span id="cb83-3"><a href="segmentation.html#cb83-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)         <span class="co"># Easier programming</span></span>
+<span id="cb83-4"><a href="segmentation.html#cb83-4" tabindex="-1"></a><span class="fu">library</span>(dendextend)    <span class="co"># Nicer dendrograms</span></span>
+<span id="cb83-5"><a href="segmentation.html#cb83-5" tabindex="-1"></a><span class="fu">library</span>(vtable)        <span class="co"># Nicer tables</span></span>
+<span id="cb83-6"><a href="segmentation.html#cb83-6" tabindex="-1"></a><span class="fu">library</span>(MKT4320BGSU)</span>
+<span id="cb83-7"><a href="segmentation.html#cb83-7" tabindex="-1"></a><span class="fu">data</span>(ffseg)</span></code></pre></div>
 </div>
-<div id="segmentation-overview" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Segmentation Overview</h2>
-<div id="why-segment-the-market" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Why segment the market?</h3>
+<div id="segmentation-overview" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Segmentation Overview<a href="segmentation.html#segmentation-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="why-segment-the-market" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Why segment the market?<a href="segmentation.html#why-segment-the-market" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Markets are heterogeneous
 <ul>
@@ -705,15 +711,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="market-segment-vs.-segmentation" class="section level3" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> Market Segment vs. Segmentation</h3>
+<div id="market-segment-vs.-segmentation" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Market Segment vs. Segmentation<a href="segmentation.html#market-segment-vs.-segmentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong><em>Market Segment</em></strong><br />
 Subgroup of people or organizations sharing one or more characteristics that cause them to have similar product needs.</p>
 <p><strong><em>Market Segmentation</em></strong><br />
 Process of dividing a market into meaningful, relatively similar, and identifiable segments or groups.</p>
 </div>
-<div id="criteria-for-successful-segmentation" class="section level3" number="5.2.3">
-<h3><span class="header-section-number">5.2.3</span> Criteria for Successful Segmentation</h3>
+<div id="criteria-for-successful-segmentation" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Criteria for Successful Segmentation<a href="segmentation.html#criteria-for-successful-segmentation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Identifiable and Measurable</strong><br />
 Characteristics provide a basis for segmentation</p>
 <p><strong>Substantial</strong><br />
@@ -723,8 +729,8 @@ Able to receive communications and distributions</p>
 <p><strong>Responsive</strong><br />
 Respond to marketing efforts and changes in mix</p>
 </div>
-<div id="bases-for-consumer-markets" class="section level3" number="5.2.4">
-<h3><span class="header-section-number">5.2.4</span> Bases for Consumer Markets</h3>
+<div id="bases-for-consumer-markets" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Bases for Consumer Markets<a href="segmentation.html#bases-for-consumer-markets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Behavioral Segmentation</strong></p>
 <ul>
 <li>Benefits sought (<em>e.g., quality, taste, convenience, excitement, etc.</em>)</li>
@@ -756,8 +762,8 @@ Respond to marketing efforts and changes in mix</p>
 <li>Block group</li>
 <li>Climate</li>
 </ul>
-<div id="which-base-to-use" class="section level4" number="5.2.4.1">
-<h4><span class="header-section-number">5.2.4.1</span> Which base to use?</h4>
+<div id="which-base-to-use" class="section level4 hasAnchor" number="5.2.4.1">
+<h4><span class="header-section-number">5.2.4.1</span> Which base to use?<a href="segmentation.html#which-base-to-use" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Using Geographics or Demographics is easy, but it won’t help determine needs.</li>
 <li>Knowing how a product fits a lifestyle or benefits consumers seek is important, but it won’t help identify specific customers.</li>
@@ -766,10 +772,10 @@ Respond to marketing efforts and changes in mix</p>
 </div>
 </div>
 </div>
-<div id="cluster-analysis" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Cluster Analysis</h2>
-<div id="overview-6" class="section level3" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Overview</h3>
+<div id="cluster-analysis" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Cluster Analysis<a href="segmentation.html#cluster-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="overview-6" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Overview<a href="segmentation.html#overview-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong><em>Cluster analysis</em></strong> classifies objects so that objects are similar to others in the cluster with respect to some predetermined criterion.</p>
 <ul>
 <li>Resulting clusters exhibit:
@@ -793,16 +799,16 @@ Figure 5.1: Cluster Example
 </ul></li>
 </ul>
 </div>
-<div id="measures-of-similarity" class="section level3" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Measures of Similarity</h3>
+<div id="measures-of-similarity" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Measures of Similarity<a href="segmentation.html#measures-of-similarity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Similarity measure depends on data type</p>
 <ul>
 <li>For continuous data…<br>Use distance-type measures</li>
 <li>For binary data…<br>Use similarity coefficients</li>
 <li>For mixed data…<br>Use special measures</li>
 </ul>
-<div id="continuous-data" class="section level4" number="5.3.2.1">
-<h4><span class="header-section-number">5.3.2.1</span> Continuous data</h4>
+<div id="continuous-data" class="section level4 hasAnchor" number="5.3.2.1">
+<h4><span class="header-section-number">5.3.2.1</span> Continuous data<a href="segmentation.html#continuous-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Distance-type measures</p>
 <ul>
 <li>Euclidean: <span class="math inline">\(\sqrt{(x_{1i}-x_{1j})^2 + \cdots +(x_{ni}-x_{nj})^2}\)</span></li>
@@ -957,8 +963,8 @@ Pat
 </tbody>
 </table>
 </div>
-<div id="binary-data" class="section level4" number="5.3.2.2">
-<h4><span class="header-section-number">5.3.2.2</span> Binary Data</h4>
+<div id="binary-data" class="section level4 hasAnchor" number="5.3.2.2">
+<h4><span class="header-section-number">5.3.2.2</span> Binary Data<a href="segmentation.html#binary-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Similarity Coefficients</p>
 <ul>
 <li><p>Based on a <span class="math inline">\(2×2\)</span> cross-tab between objects</p>
@@ -1110,8 +1116,8 @@ Research
 </table></li>
 </ul>
 </div>
-<div id="mixed-data" class="section level4" number="5.3.2.3">
-<h4><span class="header-section-number">5.3.2.3</span> Mixed data</h4>
+<div id="mixed-data" class="section level4 hasAnchor" number="5.3.2.3">
+<h4><span class="header-section-number">5.3.2.3</span> Mixed data<a href="segmentation.html#mixed-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Special measures</p>
 <ul>
 <li>Gower coefficent
@@ -1129,16 +1135,16 @@ Research
 </ul>
 </div>
 </div>
-<div id="assigning-objects" class="section level3" number="5.3.3">
-<h3><span class="header-section-number">5.3.3</span> Assigning Objects</h3>
+<div id="assigning-objects" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Assigning Objects<a href="segmentation.html#assigning-objects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>Heirarchical</strong>: Construct a treelike structure up (agglomerative) or down (divisive) based on similarity of objects</li>
 <li><strong>Partitioning</strong>: Assign objects to one of a specified number of clusters based on similarity of object to the cluster</li>
 </ul>
-<div id="hierarchical-agglomerative" class="section level4" number="5.3.3.1">
-<h4><span class="header-section-number">5.3.3.1</span> Hierarchical: Agglomerative</h4>
-<div id="stages" class="section level5" number="5.3.3.1.1">
-<h5><span class="header-section-number">5.3.3.1.1</span> Stages</h5>
+<div id="hierarchical-agglomerative" class="section level4 hasAnchor" number="5.3.3.1">
+<h4><span class="header-section-number">5.3.3.1</span> Hierarchical: Agglomerative<a href="segmentation.html#hierarchical-agglomerative" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="stages" class="section level5 hasAnchor" number="5.3.3.1.1">
+<h5><span class="header-section-number">5.3.3.1.1</span> Stages<a href="segmentation.html#stages" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ol style="list-style-type: decimal">
 <li><p>Consider each object as its own cluster</p></li>
 <li><p>Join two closest objects based on similarity measure and algorithm</p></li>
@@ -1152,8 +1158,8 @@ Figure 5.2: Sample Dendrogram
 </div></li>
 </ol>
 </div>
-<div id="linkage-rules" class="section level5" number="5.3.3.1.2">
-<h5><span class="header-section-number">5.3.3.1.2</span> Linkage Rules</h5>
+<div id="linkage-rules" class="section level5 hasAnchor" number="5.3.3.1.2">
+<h5><span class="header-section-number">5.3.3.1.2</span> Linkage Rules<a href="segmentation.html#linkage-rules" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>How to compute distance between clusters?</p>
 <p>Four main linkage rules</p>
 <p><strong>Single</strong></p>
@@ -1208,8 +1214,8 @@ Figure 5.5: Average Linkage Visualization
 <li>Join clusters with a minimum increase in the sum of squared distances within all clusters combined</li>
 </ul>
 </div>
-<div id="problems" class="section level5" number="5.3.3.1.3">
-<h5><span class="header-section-number">5.3.3.1.3</span> Problems</h5>
+<div id="problems" class="section level5 hasAnchor" number="5.3.3.1.3">
+<h5><span class="header-section-number">5.3.3.1.3</span> Problems<a href="segmentation.html#problems" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ul>
 <li>Which linkage rule?
 <ul>
@@ -1223,8 +1229,8 @@ Figure 5.5: Average Linkage Visualization
 </ul></li>
 </ul>
 </div>
-<div id="how-many-clusters" class="section level5" number="5.3.3.1.4">
-<h5><span class="header-section-number">5.3.3.1.4</span> How Many Clusters?</h5>
+<div id="how-many-clusters" class="section level5 hasAnchor" number="5.3.3.1.4">
+<h5><span class="header-section-number">5.3.3.1.4</span> How Many Clusters?<a href="segmentation.html#how-many-clusters" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ul>
 <li>Using a dendrogram for small samples
 <ul>
@@ -1434,12 +1440,12 @@ pseudo.t.2
 </tr>
 </tbody>
 </table>
-<h4 id="partitioning-k-means">Partitioning: <span class="math inline">\(k\)</span>-means</h4></li>
+<h4 id="partitioning-k-means" class="hasAnchor">Partitioning: <span class="math inline">\(k\)</span>-means<a href="segmentation.html#partitioning-k-means" class="anchor-section" aria-label="Anchor link to header"></a></h4></li>
 </ul></li>
 </ul>
 </div>
-<div id="stages-1" class="section level5" number="5.3.3.1.5">
-<h5><span class="header-section-number">5.3.3.1.5</span> Stages</h5>
+<div id="stages-1" class="section level5 hasAnchor" number="5.3.3.1.5">
+<h5><span class="header-section-number">5.3.3.1.5</span> Stages<a href="segmentation.html#stages-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ol style="list-style-type: decimal">
 <li>Identify number of clusters desired</li>
 <li>Identify the cluster “seeds”</li>
@@ -1449,8 +1455,8 @@ pseudo.t.2
 <li>Repeat 4 &amp; 5 until within-cluster variability is minimized</li>
 </ol>
 </div>
-<div id="illustration-for-3-cluster-solution" class="section level5" number="5.3.3.1.6">
-<h5><span class="header-section-number">5.3.3.1.6</span> Illustration for 3-cluster solution</h5>
+<div id="illustration-for-3-cluster-solution" class="section level5 hasAnchor" number="5.3.3.1.6">
+<h5><span class="header-section-number">5.3.3.1.6</span> Illustration for 3-cluster solution<a href="segmentation.html#illustration-for-3-cluster-solution" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ol style="list-style-type: decimal">
 <li><p>Ask for 3-cluster solution</p></li>
 <li><p>Randomly assign cluster seeds<br />
@@ -1472,8 +1478,8 @@ pseudo.t.2
 <li>At this point, no further reallocation can make the within cluster variance smaller, so this is the best 3-cluster solution</li>
 </ul>
 </div>
-<div id="how-many-clusters-1" class="section level5" number="5.3.3.1.7">
-<h5><span class="header-section-number">5.3.3.1.7</span> How many clusters?</h5>
+<div id="how-many-clusters-1" class="section level5 hasAnchor" number="5.3.3.1.7">
+<h5><span class="header-section-number">5.3.3.1.7</span> How many clusters?<a href="segmentation.html#how-many-clusters-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <ul>
 <li>Create a scree plot based on the within sum of squares (WSS) for about 1 to 15 different solutions</li>
 <li>Compare solutions around the scree</li>
@@ -1489,8 +1495,8 @@ Figure 5.9: Example Scree Plot
 </div>
 </div>
 </div>
-<div id="describe-the-segments" class="section level3" number="5.3.4">
-<h3><span class="header-section-number">5.3.4</span> Describe the Segments</h3>
+<div id="describe-the-segments" class="section level3 hasAnchor" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Describe the Segments<a href="segmentation.html#describe-the-segments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Answers the question: How do the clusters differ on relevant dimensions?</li>
 <li>Create a profile using measures of central tendency, dispersion, etc. for variables used in clustering</li>
@@ -1499,10 +1505,10 @@ Figure 5.9: Example Scree Plot
 </ul>
 </div>
 </div>
-<div id="segmentation-cluster-analysis-example" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Segmentation (Cluster Analysis) Example</h2>
-<div id="overview-7" class="section level3" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> Overview</h3>
+<div id="segmentation-cluster-analysis-example" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Segmentation (Cluster Analysis) Example<a href="segmentation.html#segmentation-cluster-analysis-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="overview-7" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Overview<a href="segmentation.html#overview-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>Goal</em></p>
 <ul>
 <li>Segment students based on importance of attributes when choosing a fast food restaurant</li>
@@ -1529,8 +1535,8 @@ Figure 5.9: Example Scree Plot
 <li>College</li>
 </ul>
 </div>
-<div id="examine-the-data" class="section level3" number="5.4.2">
-<h3><span class="header-section-number">5.4.2</span> Examine the Data</h3>
+<div id="examine-the-data" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Examine the Data<a href="segmentation.html#examine-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <caption>
 <span id="tab:t5exdata01">Table 5.1: </span> Summary Statistics for Cluster Variables (<a href="segmentation.html#table-reftabt5exdata01">R code</a>)
 </caption>
@@ -1572,10 +1578,10 @@ clean
 752
 </td>
 <td style="text-align:left;">
-4.093
+4.1
 </td>
 <td style="text-align:left;">
-0.898
+0.9
 </td>
 <td style="text-align:left;">
 1
@@ -1598,10 +1604,10 @@ variety
 752
 </td>
 <td style="text-align:left;">
-3.339
+3.3
 </td>
 <td style="text-align:left;">
-0.989
+0.99
 </td>
 <td style="text-align:left;">
 1
@@ -1624,10 +1630,10 @@ quality
 752
 </td>
 <td style="text-align:left;">
-4.165
+4.2
 </td>
 <td style="text-align:left;">
-0.814
+0.81
 </td>
 <td style="text-align:left;">
 1
@@ -1650,10 +1656,10 @@ location
 752
 </td>
 <td style="text-align:left;">
-3.701
+3.7
 </td>
 <td style="text-align:left;">
-0.971
+0.97
 </td>
 <td style="text-align:left;">
 1
@@ -1676,7 +1682,7 @@ speed
 752
 </td>
 <td style="text-align:left;">
-3.652
+3.7
 </td>
 <td style="text-align:left;">
 0.9
@@ -1702,10 +1708,10 @@ healthy
 752
 </td>
 <td style="text-align:left;">
-3.045
+3
 </td>
 <td style="text-align:left;">
-1.204
+1.2
 </td>
 <td style="text-align:left;">
 1
@@ -1728,10 +1734,10 @@ price
 752
 </td>
 <td style="text-align:left;">
-4.004
+4
 </td>
 <td style="text-align:left;">
-0.903
+0.9
 </td>
 <td style="text-align:left;">
 1
@@ -1754,10 +1760,10 @@ friendly
 752
 </td>
 <td style="text-align:left;">
-3.318
+3.3
 </td>
 <td style="text-align:left;">
-1.024
+1
 </td>
 <td style="text-align:left;">
 1
@@ -1778,8 +1784,8 @@ friendly
 <li>Nothing out of the ordinary for survey data</li>
 </ul>
 </div>
-<div id="hierarchical-cluster-analysis" class="section level3" number="5.4.3">
-<h3><span class="header-section-number">5.4.3</span> Hierarchical Cluster Analysis</h3>
+<div id="hierarchical-cluster-analysis" class="section level3 hasAnchor" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Hierarchical Cluster Analysis<a href="segmentation.html#hierarchical-cluster-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>Distance measure: Euclidean</p>
 <ul>
@@ -2060,6 +2066,17 @@ Figure 5.10: Dendrogram with Top 6 Branches Only (<a href="segmentation.html#fig
 <p><span id="tab:t5c4describe1">Table 5.4: </span> Cluster Variable Means by Cluster (<a href="segmentation.html#table-reftabt5c4describe1">R code</a>)</p>
 </caption>
 <table>
+<colgroup>
+<col width="11%" />
+<col width="8%" />
+<col width="11%" />
+<col width="11%" />
+<col width="13%" />
+<col width="8%" />
+<col width="11%" />
+<col width="8%" />
+<col width="13%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Cluster</th>
@@ -2191,8 +2208,8 @@ Figure 5.11: Mean Attribute Importance by Cluster (<a href="segmentation.html#fi
 </table></li>
 </ul>
 </div>
-<div id="k-means-cluster-analysis" class="section level3" number="5.4.4">
-<h3><span class="header-section-number">5.4.4</span> <em>k-Means</em> Cluster Analysis</h3>
+<div id="k-means-cluster-analysis" class="section level3 hasAnchor" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> <em>k-Means</em> Cluster Analysis<a href="segmentation.html#k-means-cluster-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>Distance Measure</p>
 <ul>
@@ -2324,6 +2341,17 @@ Figure 5.12: Scree Plot for Fast Food Data (<a href="segmentation.html#figure-re
 <p><span id="tab:t5desckmseg1">Table 5.7: </span> Cluster Centers for 3 Cluster Solution (<a href="segmentation.html#table-reftabt5desckmseg1">R code</a>)</p>
 </caption>
 <table>
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="12%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="12%" />
+<col width="10%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="right">clean</th>
@@ -2468,8 +2496,8 @@ Figure 5.13: Cluster Centers by Cluster (<a href="segmentation.html#figure-reffi
 </ul>
 </div>
 </div>
-<div id="suggested-readings-4" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Suggested Readings</h2>
+<div id="suggested-readings-4" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Suggested Readings<a href="segmentation.html#suggested-readings-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><em>Marketing Data Science</em> (2015). Miller, Thomas W.
 <ul>
@@ -2497,162 +2525,150 @@ Figure 5.13: Cluster Centers by Cluster (<a href="segmentation.html#figure-reffi
 </ul></li>
 </ul>
 </div>
-<div id="r-code-4" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> R Code</h2>
-<div id="figure-reffigt5top5dend01" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="segmentation.html#fig:t5top5dend01">5.10</a></h3>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="segmentation.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load &#39;myhc.R&#39; user defined function</span></span>
-<span id="cb85-2"><a href="segmentation.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/myhc.R&quot;</span>)</span>
-<span id="cb85-3"><a href="segmentation.html#cb85-3" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">myhc</span>(segdata,    <span class="co"># Dataframe with cluster variables</span></span>
-<span id="cb85-4"><a href="segmentation.html#cb85-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,    <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
-<span id="cb85-5"><a href="segmentation.html#cb85-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
-<span id="cb85-6"><a href="segmentation.html#cb85-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">cuts=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>),   <span class="co"># Get data for 4 cut levels</span></span>
-<span id="cb85-7"><a href="segmentation.html#cb85-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">clustop=</span><span class="st">&quot;N&quot;</span>)  <span class="co"># Do not get Duda-Hart</span></span>
-<span id="cb85-8"><a href="segmentation.html#cb85-8" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
-<span id="cb85-9"><a href="segmentation.html#cb85-9" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
+<div id="r-code-4" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> R Code<a href="segmentation.html#r-code-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="figure-reffigt5top5dend01" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Figure <a href="segmentation.html#fig:t5top5dend01">5.10</a><a href="segmentation.html#figure-reffigt5top5dend01" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="segmentation.html#cb85-1" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">myhc</span>(segdata,    <span class="co"># Dataframe with cluster variables</span></span>
+<span id="cb85-2"><a href="segmentation.html#cb85-2" tabindex="-1"></a>       <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,    <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
+<span id="cb85-3"><a href="segmentation.html#cb85-3" tabindex="-1"></a>       <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
+<span id="cb85-4"><a href="segmentation.html#cb85-4" tabindex="-1"></a>       <span class="at">cuts=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>),   <span class="co"># Get data for 4 cut levels</span></span>
+<span id="cb85-5"><a href="segmentation.html#cb85-5" tabindex="-1"></a>       <span class="at">clustop=</span><span class="st">&quot;N&quot;</span>)  <span class="co"># Do not get Duda-Hart</span></span>
+<span id="cb85-6"><a href="segmentation.html#cb85-6" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
+<span id="cb85-7"><a href="segmentation.html#cb85-7" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
 </div>
-<div id="figure-reffigt5c4describe2" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="segmentation.html#fig:t5c4describe2">5.11</a></h3>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="segmentation.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)  <span class="co"># Used to covert data from wide to long</span></span>
-<span id="cb86-2"><a href="segmentation.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert &#39;wide&#39; table to &#39;long&#39; table</span></span>
-<span id="cb86-3"><a href="segmentation.html#cb86-3" aria-hidden="true" tabindex="-1"></a>sumsegl <span class="ot">&lt;-</span> <span class="fu">melt</span>(outseg<span class="sc">$</span>means,    <span class="co"># Wide table of summary statistics</span></span>
-<span id="cb86-4"><a href="segmentation.html#cb86-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">id.vars=</span><span class="st">&quot;Cluster&quot;</span>,  <span class="co"># ID variable</span></span>
-<span id="cb86-5"><a href="segmentation.html#cb86-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">variable.name=</span><span class="st">&quot;attr&quot;</span>, <span class="co"># Column name identifying attribute</span></span>
-<span id="cb86-6"><a href="segmentation.html#cb86-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">value.name=</span><span class="st">&quot;mean&quot;</span>)   <span class="co"># Column name identifying value</span></span>
-<span id="cb86-7"><a href="segmentation.html#cb86-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot data</span></span>
-<span id="cb86-8"><a href="segmentation.html#cb86-8" aria-hidden="true" tabindex="-1"></a>sumsegl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>attr, <span class="at">y=</span>mean, <span class="at">fill=</span>Cluster)) <span class="sc">+</span></span>
-<span id="cb86-9"><a href="segmentation.html#cb86-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb86-10"><a href="segmentation.html#cb86-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">7</span>)) <span class="sc">+</span></span>
-<span id="cb86-11"><a href="segmentation.html#cb86-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb86-12"><a href="segmentation.html#cb86-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(mean,<span class="dv">2</span>)), <span class="at">hjust=</span><span class="fl">1.1</span>, <span class="at">fontface=</span><span class="st">&quot;bold&quot;</span>,</span>
-<span id="cb86-13"><a href="segmentation.html#cb86-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">angle=</span><span class="dv">90</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>)) <span class="sc">+</span></span>
-<span id="cb86-14"><a href="segmentation.html#cb86-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb86-15"><a href="segmentation.html#cb86-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Attribute&quot;</span>, <span class="at">y=</span><span class="st">&quot;Mean Importance&quot;</span>, <span class="at">fill=</span><span class="st">&quot;Cluster&quot;</span>)</span></code></pre></div>
+<div id="figure-reffigt5c4describe2" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Figure <a href="segmentation.html#fig:t5c4describe2">5.11</a><a href="segmentation.html#figure-reffigt5c4describe2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="segmentation.html#cb86-1" tabindex="-1"></a><span class="fu">library</span>(reshape2)  <span class="co"># Used to covert data from wide to long</span></span>
+<span id="cb86-2"><a href="segmentation.html#cb86-2" tabindex="-1"></a><span class="co"># Convert &#39;wide&#39; table to &#39;long&#39; table</span></span>
+<span id="cb86-3"><a href="segmentation.html#cb86-3" tabindex="-1"></a>sumsegl <span class="ot">&lt;-</span> <span class="fu">melt</span>(outseg<span class="sc">$</span>means,    <span class="co"># Wide table of summary statistics</span></span>
+<span id="cb86-4"><a href="segmentation.html#cb86-4" tabindex="-1"></a>                <span class="at">id.vars=</span><span class="st">&quot;Cluster&quot;</span>,  <span class="co"># ID variable</span></span>
+<span id="cb86-5"><a href="segmentation.html#cb86-5" tabindex="-1"></a>                <span class="at">variable.name=</span><span class="st">&quot;attr&quot;</span>, <span class="co"># Column name identifying attribute</span></span>
+<span id="cb86-6"><a href="segmentation.html#cb86-6" tabindex="-1"></a>                <span class="at">value.name=</span><span class="st">&quot;mean&quot;</span>)   <span class="co"># Column name identifying value</span></span>
+<span id="cb86-7"><a href="segmentation.html#cb86-7" tabindex="-1"></a><span class="co"># Plot data</span></span>
+<span id="cb86-8"><a href="segmentation.html#cb86-8" tabindex="-1"></a>sumsegl <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>attr, <span class="at">y=</span>mean, <span class="at">fill=</span>Cluster)) <span class="sc">+</span></span>
+<span id="cb86-9"><a href="segmentation.html#cb86-9" tabindex="-1"></a><span class="fu">geom_col</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb86-10"><a href="segmentation.html#cb86-10" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">7</span>)) <span class="sc">+</span></span>
+<span id="cb86-11"><a href="segmentation.html#cb86-11" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb86-12"><a href="segmentation.html#cb86-12" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(mean,<span class="dv">2</span>)), <span class="at">hjust=</span><span class="fl">1.1</span>, <span class="at">fontface=</span><span class="st">&quot;bold&quot;</span>,</span>
+<span id="cb86-13"><a href="segmentation.html#cb86-13" tabindex="-1"></a>            <span class="at">angle=</span><span class="dv">90</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width=</span>.<span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb86-14"><a href="segmentation.html#cb86-14" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb86-15"><a href="segmentation.html#cb86-15" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Attribute&quot;</span>, <span class="at">y=</span><span class="st">&quot;Mean Importance&quot;</span>, <span class="at">fill=</span><span class="st">&quot;Cluster&quot;</span>)</span></code></pre></div>
 </div>
-<div id="figure-reffigt5scree02" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="segmentation.html#fig:t5scree02">5.12</a></h3>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="segmentation.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/wssplot.R&quot;</span>)   <span class="co"># User defined function for scree plot</span></span>
-<span id="cb87-2"><a href="segmentation.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wssplot</span>(segdata,   <span class="co"># Standardized data from earlier</span></span>
-<span id="cb87-3"><a href="segmentation.html#cb87-3" aria-hidden="true" tabindex="-1"></a>        <span class="dv">15</span>,   <span class="co"># Max clusters</span></span>
-<span id="cb87-4"><a href="segmentation.html#cb87-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Random number seed</span></span></code></pre></div>
+<div id="figure-reffigt5scree02" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Figure <a href="segmentation.html#fig:t5scree02">5.12</a><a href="segmentation.html#figure-reffigt5scree02" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="segmentation.html#cb87-1" tabindex="-1"></a><span class="fu">wssplot</span>(segdata,   <span class="co"># Standardized data from earlier</span></span>
+<span id="cb87-2"><a href="segmentation.html#cb87-2" tabindex="-1"></a>        <span class="dv">15</span>,   <span class="co"># Max clusters</span></span>
+<span id="cb87-3"><a href="segmentation.html#cb87-3" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Random number seed</span></span></code></pre></div>
 </div>
-<div id="figure-reffigt5desckmseg2" class="section level3 unlisted unnumbered">
-<h3>Figure <a href="segmentation.html#fig:t5desckmseg2">5.13</a></h3>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="segmentation.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># outkc was created using the code for thetable</span></span>
-<span id="cb88-2"><a href="segmentation.html#cb88-2" aria-hidden="true" tabindex="-1"></a>outkc<span class="sc">$</span>plot</span></code></pre></div>
+<div id="figure-reffigt5desckmseg2" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Figure <a href="segmentation.html#fig:t5desckmseg2">5.13</a><a href="segmentation.html#figure-reffigt5desckmseg2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="segmentation.html#cb88-1" tabindex="-1"></a><span class="co"># outkc was created using the code for thetable</span></span>
+<span id="cb88-2"><a href="segmentation.html#cb88-2" tabindex="-1"></a>outkc<span class="sc">$</span>plot</span></code></pre></div>
 </div>
-<div id="table-reftabt5exdata01" class="section level3 unlisted unnumbered">
-<h3>Table <a href="segmentation.html#tab:t5exdata01">5.1</a></h3>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="segmentation.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create df with attribute importance variables</span></span>
-<span id="cb89-2"><a href="segmentation.html#cb89-2" aria-hidden="true" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> ffseg <span class="sc">%&gt;%</span> </span>
-<span id="cb89-3"><a href="segmentation.html#cb89-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(clean, variety, quality, location, speed, healthy, price, friendly)</span>
-<span id="cb89-4"><a href="segmentation.html#cb89-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create summary table with package &#39;vtable&#39; (not availalbe in virtual env.)</span></span>
-<span id="cb89-5"><a href="segmentation.html#cb89-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sumtable</span>(segdata, <span class="at">out=</span><span class="st">&quot;return&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">caption=</span><span class="cn">NULL</span>)</span></code></pre></div>
+<div id="table-reftabt5exdata01" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Table <a href="segmentation.html#tab:t5exdata01">5.1</a><a href="segmentation.html#table-reftabt5exdata01" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="segmentation.html#cb89-1" tabindex="-1"></a><span class="co"># Create df with attribute importance variables</span></span>
+<span id="cb89-2"><a href="segmentation.html#cb89-2" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> ffseg <span class="sc">%&gt;%</span> </span>
+<span id="cb89-3"><a href="segmentation.html#cb89-3" tabindex="-1"></a>  <span class="fu">select</span>(clean, variety, quality, location, speed, healthy, price, friendly)</span>
+<span id="cb89-4"><a href="segmentation.html#cb89-4" tabindex="-1"></a><span class="co"># Create summary table with package &#39;vtable&#39; (not availalbe in virtual env.)</span></span>
+<span id="cb89-5"><a href="segmentation.html#cb89-5" tabindex="-1"></a><span class="fu">sumtable</span>(segdata, <span class="at">out=</span><span class="st">&quot;return&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">caption=</span><span class="cn">NULL</span>)</span></code></pre></div>
 </div>
-<div id="table-reftabt5dh01" class="section level3 unlisted unnumbered">
-<h3>Table <a href="segmentation.html#tab:t5dh01">5.2</a></h3>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="segmentation.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stardarize data using &#39;scale()&#39; function</span></span>
-<span id="cb90-2"><a href="segmentation.html#cb90-2" aria-hidden="true" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">scale</span>(segdata))</span>
-<span id="cb90-3"><a href="segmentation.html#cb90-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-4"><a href="segmentation.html#cb90-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;clustop.R&#39; user defined function</span></span>
-<span id="cb90-5"><a href="segmentation.html#cb90-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   Requires package &#39;NbClust&#39;, which isn&#39;t availabe in virtual env.</span></span>
-<span id="cb90-6"><a href="segmentation.html#cb90-6" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;TOpic05/clustop.R&quot;</span>)</span>
-<span id="cb90-7"><a href="segmentation.html#cb90-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NbClust)</span>
-<span id="cb90-8"><a href="segmentation.html#cb90-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-9"><a href="segmentation.html#cb90-9" aria-hidden="true" tabindex="-1"></a>dh <span class="ot">&lt;-</span> <span class="fu">clustop</span>(segdata,   <span class="co"># Dataframe to with cluster variables</span></span>
-<span id="cb90-10"><a href="segmentation.html#cb90-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,   <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
-<span id="cb90-11"><a href="segmentation.html#cb90-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
-<span id="cb90-12"><a href="segmentation.html#cb90-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">minclust=</span><span class="dv">1</span>, <span class="at">maxclust=</span><span class="dv">10</span>)  <span class="co"># Only complete for up to 10 clusters</span></span>
-<span id="cb90-13"><a href="segmentation.html#cb90-13" aria-hidden="true" tabindex="-1"></a>dh</span></code></pre></div>
+<div id="table-reftabt5dh01" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Table <a href="segmentation.html#tab:t5dh01">5.2</a><a href="segmentation.html#table-reftabt5dh01" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="segmentation.html#cb90-1" tabindex="-1"></a><span class="co"># Stardarize data using &#39;scale()&#39; function</span></span>
+<span id="cb90-2"><a href="segmentation.html#cb90-2" tabindex="-1"></a>segdata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">scale</span>(segdata))</span>
+<span id="cb90-3"><a href="segmentation.html#cb90-3" tabindex="-1"></a></span>
+<span id="cb90-4"><a href="segmentation.html#cb90-4" tabindex="-1"></a><span class="co">#   Requires package &#39;NbClust&#39;, which isn&#39;t availabe in virtual env.</span></span>
+<span id="cb90-5"><a href="segmentation.html#cb90-5" tabindex="-1"></a><span class="fu">library</span>(NbClust)</span>
+<span id="cb90-6"><a href="segmentation.html#cb90-6" tabindex="-1"></a></span>
+<span id="cb90-7"><a href="segmentation.html#cb90-7" tabindex="-1"></a>dh <span class="ot">&lt;-</span> <span class="fu">clustop</span>(segdata,   <span class="co"># Dataframe to with cluster variables</span></span>
+<span id="cb90-8"><a href="segmentation.html#cb90-8" tabindex="-1"></a>              <span class="at">dist=</span><span class="st">&quot;euc&quot;</span>,   <span class="co"># Use &#39;euclidean&#39; distance measure</span></span>
+<span id="cb90-9"><a href="segmentation.html#cb90-9" tabindex="-1"></a>              <span class="at">method=</span><span class="st">&quot;ward&quot;</span>,   <span class="co"># Use &#39;Wards&#39; linkage</span></span>
+<span id="cb90-10"><a href="segmentation.html#cb90-10" tabindex="-1"></a>              <span class="at">minclust=</span><span class="dv">1</span>, <span class="at">maxclust=</span><span class="dv">10</span>)  <span class="co"># Only complete for up to 10 clusters</span></span>
+<span id="cb90-11"><a href="segmentation.html#cb90-11" tabindex="-1"></a>dh</span></code></pre></div>
 </div>
-<div id="table-reftabt5clustsize01" class="section level3 unlisted unnumbered">
-<h3>Table <a href="segmentation.html#tab:t5clustsize01">5.3</a></h3>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="segmentation.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;out&#39; was a list of two data frame (&#39;kcount&#39; and &#39;kperc&#39;) returned from the</span></span>
-<span id="cb91-2"><a href="segmentation.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="co"># call to the &#39;myhc&#39; user defined function</span></span>
-<span id="cb91-3"><a href="segmentation.html#cb91-3" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
-<span id="cb91-4"><a href="segmentation.html#cb91-4" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
+<div id="table-reftabt5clustsize01" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Table <a href="segmentation.html#tab:t5clustsize01">5.3</a><a href="segmentation.html#table-reftabt5clustsize01" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="segmentation.html#cb91-1" tabindex="-1"></a><span class="co"># &#39;out&#39; was a list of two data frame (&#39;kcount&#39; and &#39;kperc&#39;) returned from the</span></span>
+<span id="cb91-2"><a href="segmentation.html#cb91-2" tabindex="-1"></a><span class="co"># call to the &#39;myhc&#39; user defined function</span></span>
+<span id="cb91-3"><a href="segmentation.html#cb91-3" tabindex="-1"></a>out<span class="sc">$</span>kcount    <span class="co"># Table with cluster sizes</span></span>
+<span id="cb91-4"><a href="segmentation.html#cb91-4" tabindex="-1"></a>out<span class="sc">$</span>kperc     <span class="co"># Table with cluster size proportions</span></span></code></pre></div>
 </div>
-<div id="table-reftabt5c4describe1" class="section level3 unlisted unnumbered">
-<h3>Table <a href="segmentation.html#tab:t5c4describe1">5.4</a></h3>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="segmentation.html#cb92-1" aria-hidden="true" tabindex="-1"></a>ffseg<span class="sc">$</span>c4 <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">cutree</span>(out<span class="sc">$</span>hc,<span class="dv">4</span>))  <span class="co"># Add cluster membership to original</span></span>
-<span id="cb92-2"><a href="segmentation.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create object with segmentation variables listed</span></span>
-<span id="cb92-3"><a href="segmentation.html#cb92-3" aria-hidden="true" tabindex="-1"></a>segvars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;clean&quot;</span>, <span class="st">&quot;variety&quot;</span>, <span class="st">&quot;quality&quot;</span>, </span>
-<span id="cb92-4"><a href="segmentation.html#cb92-4" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;location&quot;</span>, <span class="st">&quot;speed&quot;</span>, <span class="st">&quot;healthy&quot;</span>, </span>
-<span id="cb92-5"><a href="segmentation.html#cb92-5" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;price&quot;</span>, <span class="st">&quot;friendly&quot;</span>)</span>
-<span id="cb92-6"><a href="segmentation.html#cb92-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
-<span id="cb92-7"><a href="segmentation.html#cb92-7" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/cldescr.R&quot;</span>)</span>
-<span id="cb92-8"><a href="segmentation.html#cb92-8" aria-hidden="true" tabindex="-1"></a>outseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb92-9"><a href="segmentation.html#cb92-9" aria-hidden="true" tabindex="-1"></a>                  segvars,  <span class="co"># Segmentation variables</span></span>
-<span id="cb92-10"><a href="segmentation.html#cb92-10" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variables are continuous</span></span>
-<span id="cb92-11"><a href="segmentation.html#cb92-11" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb92-12"><a href="segmentation.html#cb92-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb92-13"><a href="segmentation.html#cb92-13" aria-hidden="true" tabindex="-1"></a>outseg<span class="sc">$</span>means</span></code></pre></div>
+<div id="table-reftabt5c4describe1" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Table <a href="segmentation.html#tab:t5c4describe1">5.4</a><a href="segmentation.html#table-reftabt5c4describe1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="segmentation.html#cb92-1" tabindex="-1"></a>ffseg<span class="sc">$</span>c4 <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">cutree</span>(out<span class="sc">$</span>hc,<span class="dv">4</span>))  <span class="co"># Add cluster membership to original</span></span>
+<span id="cb92-2"><a href="segmentation.html#cb92-2" tabindex="-1"></a><span class="co"># Create object with segmentation variables listed</span></span>
+<span id="cb92-3"><a href="segmentation.html#cb92-3" tabindex="-1"></a>segvars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;clean&quot;</span>, <span class="st">&quot;variety&quot;</span>, <span class="st">&quot;quality&quot;</span>, </span>
+<span id="cb92-4"><a href="segmentation.html#cb92-4" tabindex="-1"></a>             <span class="st">&quot;location&quot;</span>, <span class="st">&quot;speed&quot;</span>, <span class="st">&quot;healthy&quot;</span>, </span>
+<span id="cb92-5"><a href="segmentation.html#cb92-5" tabindex="-1"></a>             <span class="st">&quot;price&quot;</span>, <span class="st">&quot;friendly&quot;</span>)</span>
+<span id="cb92-6"><a href="segmentation.html#cb92-6" tabindex="-1"></a>outseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb92-7"><a href="segmentation.html#cb92-7" tabindex="-1"></a>                  segvars,  <span class="co"># Segmentation variables</span></span>
+<span id="cb92-8"><a href="segmentation.html#cb92-8" tabindex="-1"></a>                  <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variables are continuous</span></span>
+<span id="cb92-9"><a href="segmentation.html#cb92-9" tabindex="-1"></a>                  <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb92-10"><a href="segmentation.html#cb92-10" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb92-11"><a href="segmentation.html#cb92-11" tabindex="-1"></a>outseg<span class="sc">$</span>means</span></code></pre></div>
 </div>
-<div id="table-reftabt5descnseg1" class="section level3 unlisted unnumbered">
-<h3>Table <a href="segmentation.html#tab:t5descnseg1">5.5</a></h3>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="segmentation.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
-<span id="cb93-2"><a href="segmentation.html#cb93-2" aria-hidden="true" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb93-3"><a href="segmentation.html#cb93-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
-<span id="cb93-4"><a href="segmentation.html#cb93-4" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
-<span id="cb93-5"><a href="segmentation.html#cb93-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb93-6"><a href="segmentation.html#cb93-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb93-7"><a href="segmentation.html#cb93-7" aria-hidden="true" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span>
-<span id="cb93-8"><a href="segmentation.html#cb93-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb93-9"><a href="segmentation.html#cb93-9" aria-hidden="true" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb93-10"><a href="segmentation.html#cb93-10" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
-<span id="cb93-11"><a href="segmentation.html#cb93-11" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
-<span id="cb93-12"><a href="segmentation.html#cb93-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb93-13"><a href="segmentation.html#cb93-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb93-14"><a href="segmentation.html#cb93-14" aria-hidden="true" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span></code></pre></div>
+<div id="table-reftabt5descnseg1" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Table <a href="segmentation.html#tab:t5descnseg1">5.5</a><a href="segmentation.html#table-reftabt5descnseg1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="segmentation.html#cb93-1" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb93-2"><a href="segmentation.html#cb93-2" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
+<span id="cb93-3"><a href="segmentation.html#cb93-3" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
+<span id="cb93-4"><a href="segmentation.html#cb93-4" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb93-5"><a href="segmentation.html#cb93-5" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb93-6"><a href="segmentation.html#cb93-6" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span>
+<span id="cb93-7"><a href="segmentation.html#cb93-7" tabindex="-1"></a>  </span>
+<span id="cb93-8"><a href="segmentation.html#cb93-8" tabindex="-1"></a>outnseg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb93-9"><a href="segmentation.html#cb93-9" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
+<span id="cb93-10"><a href="segmentation.html#cb93-10" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb93-11"><a href="segmentation.html#cb93-11" tabindex="-1"></a>                   <span class="st">&quot;c4&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb93-12"><a href="segmentation.html#cb93-12" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb93-13"><a href="segmentation.html#cb93-13" tabindex="-1"></a>outnseg<span class="sc">$</span>means</span></code></pre></div>
 </div>
-<div id="table-reftabt5clstsizes" class="section level3 unlisted unnumbered">
-<h3>Table <a href="segmentation.html#tab:t5clstsizes">5.6</a></h3>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="segmentation.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;ksize.R&#39; must first be sourced (if not already)</span></span>
-<span id="cb94-2"><a href="segmentation.html#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/ksize.R&quot;</span>)</span>
-<span id="cb94-3"><a href="segmentation.html#cb94-3" aria-hidden="true" tabindex="-1"></a>ks <span class="ot">&lt;-</span> <span class="fu">ksize</span>(segdata,   <span class="co"># Scaled cluster variables from earlier</span></span>
-<span id="cb94-4"><a href="segmentation.html#cb94-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">centers=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>),   <span class="co"># Request for 3, 4, and 5 cluster solutions</span></span>
-<span id="cb94-5"><a href="segmentation.html#cb94-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">nstart=</span><span class="dv">25</span>,  <span class="co"># Request 25 random starting sets</span></span>
-<span id="cb94-6"><a href="segmentation.html#cb94-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Set seed to 4320 for reproducible results</span></span>
-<span id="cb94-7"><a href="segmentation.html#cb94-7" aria-hidden="true" tabindex="-1"></a>ks<span class="sc">$</span>kcount</span>
-<span id="cb94-8"><a href="segmentation.html#cb94-8" aria-hidden="true" tabindex="-1"></a>ks<span class="sc">$</span>kperc</span></code></pre></div>
+<div id="table-reftabt5clstsizes" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Table <a href="segmentation.html#tab:t5clstsizes">5.6</a><a href="segmentation.html#table-reftabt5clstsizes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="segmentation.html#cb94-1" tabindex="-1"></a>ks <span class="ot">&lt;-</span> <span class="fu">ksize</span>(segdata,   <span class="co"># Scaled cluster variables from earlier</span></span>
+<span id="cb94-2"><a href="segmentation.html#cb94-2" tabindex="-1"></a>        <span class="at">centers=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>),   <span class="co"># Request for 3, 4, and 5 cluster solutions</span></span>
+<span id="cb94-3"><a href="segmentation.html#cb94-3" tabindex="-1"></a>        <span class="at">nstart=</span><span class="dv">25</span>,  <span class="co"># Request 25 random starting sets</span></span>
+<span id="cb94-4"><a href="segmentation.html#cb94-4" tabindex="-1"></a>        <span class="at">seed=</span><span class="dv">4320</span>)  <span class="co"># Set seed to 4320 for reproducible results</span></span>
+<span id="cb94-5"><a href="segmentation.html#cb94-5" tabindex="-1"></a>ks<span class="sc">$</span>kcount</span>
+<span id="cb94-6"><a href="segmentation.html#cb94-6" tabindex="-1"></a>ks<span class="sc">$</span>kperc</span></code></pre></div>
 </div>
-<div id="table-reftabt5desckmseg1" class="section level3 unlisted unnumbered">
-<h3>Table <a href="segmentation.html#tab:t5desckmseg1">5.7</a></h3>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="segmentation.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use user-defined function &#39;kcenters.R&#39;</span></span>
-<span id="cb95-2"><a href="segmentation.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;Topic05/kcenters.R&quot;</span>)</span>
-<span id="cb95-3"><a href="segmentation.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4320</span>)  <span class="co"># Match seed from above</span></span>
-<span id="cb95-4"><a href="segmentation.html#cb95-4" aria-hidden="true" tabindex="-1"></a>k3 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(segdata,  <span class="co"># Scaled segmentation variables</span></span>
-<span id="cb95-5"><a href="segmentation.html#cb95-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">centers=</span><span class="dv">3</span>,  <span class="co"># 3 cluster solution</span></span>
-<span id="cb95-6"><a href="segmentation.html#cb95-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">nstart=</span><span class="dv">25</span>)  <span class="co"># 25 random starting sets</span></span>
-<span id="cb95-7"><a href="segmentation.html#cb95-7" aria-hidden="true" tabindex="-1"></a>outkc <span class="ot">&lt;-</span> <span class="fu">kcenters</span>(k3)  <span class="co"># Call to &#39;kcenters&#39; passing the &#39;k3&#39; cluster object</span></span>
-<span id="cb95-8"><a href="segmentation.html#cb95-8" aria-hidden="true" tabindex="-1"></a><span class="co"># outkc contains two objects: &#39;table&#39; and &#39;plot&#39;</span></span>
-<span id="cb95-9"><a href="segmentation.html#cb95-9" aria-hidden="true" tabindex="-1"></a>outkc<span class="sc">$</span>table  <span class="co"># Print table</span></span></code></pre></div>
+<div id="table-reftabt5desckmseg1" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Table <a href="segmentation.html#tab:t5desckmseg1">5.7</a><a href="segmentation.html#table-reftabt5desckmseg1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="segmentation.html#cb95-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4320</span>)  <span class="co"># Match seed from above</span></span>
+<span id="cb95-2"><a href="segmentation.html#cb95-2" tabindex="-1"></a>k3 <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(segdata,  <span class="co"># Scaled segmentation variables</span></span>
+<span id="cb95-3"><a href="segmentation.html#cb95-3" tabindex="-1"></a>             <span class="at">centers=</span><span class="dv">3</span>,  <span class="co"># 3 cluster solution</span></span>
+<span id="cb95-4"><a href="segmentation.html#cb95-4" tabindex="-1"></a>             <span class="at">nstart=</span><span class="dv">25</span>)  <span class="co"># 25 random starting sets</span></span>
+<span id="cb95-5"><a href="segmentation.html#cb95-5" tabindex="-1"></a>outkc <span class="ot">&lt;-</span> <span class="fu">kcenters</span>(k3)  <span class="co"># Call to &#39;kcenters&#39; passing the &#39;k3&#39; cluster object</span></span>
+<span id="cb95-6"><a href="segmentation.html#cb95-6" tabindex="-1"></a><span class="co"># outkc contains two objects: &#39;table&#39; and &#39;plot&#39;</span></span>
+<span id="cb95-7"><a href="segmentation.html#cb95-7" tabindex="-1"></a>outkc<span class="sc">$</span>table  <span class="co"># Print table</span></span></code></pre></div>
 </div>
-<div id="table-reftabt5desck3seg1" class="section level3 unlisted unnumbered">
-<h3>Table <a href="segmentation.html#tab:t5desck3seg1">5.8</a></h3>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="segmentation.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add cluster membership to original data</span></span>
-<span id="cb96-2"><a href="segmentation.html#cb96-2" aria-hidden="true" tabindex="-1"></a>fseg<span class="sc">$</span>k3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(k3<span class="sc">$</span>cluster)</span>
-<span id="cb96-3"><a href="segmentation.html#cb96-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
-<span id="cb96-4"><a href="segmentation.html#cb96-4" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb96-5"><a href="segmentation.html#cb96-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
-<span id="cb96-6"><a href="segmentation.html#cb96-6" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
-<span id="cb96-7"><a href="segmentation.html#cb96-7" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb96-8"><a href="segmentation.html#cb96-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb96-9"><a href="segmentation.html#cb96-9" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
-<span id="cb96-10"><a href="segmentation.html#cb96-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb96-11"><a href="segmentation.html#cb96-11" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb96-12"><a href="segmentation.html#cb96-12" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
-<span id="cb96-13"><a href="segmentation.html#cb96-13" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
-<span id="cb96-14"><a href="segmentation.html#cb96-14" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb96-15"><a href="segmentation.html#cb96-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb96-16"><a href="segmentation.html#cb96-16" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
-<span id="cb96-17"><a href="segmentation.html#cb96-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-18"><a href="segmentation.html#cb96-18" aria-hidden="true" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
-<span id="cb96-19"><a href="segmentation.html#cb96-19" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;live&quot;</span>,  <span class="co"># Where they live</span></span>
-<span id="cb96-20"><a href="segmentation.html#cb96-20" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
-<span id="cb96-21"><a href="segmentation.html#cb96-21" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
-<span id="cb96-22"><a href="segmentation.html#cb96-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Table of means</span></span>
-<span id="cb96-23"><a href="segmentation.html#cb96-23" aria-hidden="true" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span></code></pre></div>
+<div id="table-reftabt5desck3seg1" class="section level3 unlisted unnumbered hasAnchor">
+<h3>Table <a href="segmentation.html#tab:t5desck3seg1">5.8</a><a href="segmentation.html#table-reftabt5desck3seg1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="segmentation.html#cb96-1" tabindex="-1"></a><span class="co"># Add cluster membership to original data</span></span>
+<span id="cb96-2"><a href="segmentation.html#cb96-2" tabindex="-1"></a>fseg<span class="sc">$</span>k3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(k3<span class="sc">$</span>cluster)</span>
+<span id="cb96-3"><a href="segmentation.html#cb96-3" tabindex="-1"></a><span class="co"># Use &#39;cldescr.R&#39; user defined function</span></span>
+<span id="cb96-4"><a href="segmentation.html#cb96-4" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb96-5"><a href="segmentation.html#cb96-5" tabindex="-1"></a>                   <span class="st">&quot;eatin&quot;</span>,  <span class="co"># Prefer to eat in (1) vs. get to go (5)</span></span>
+<span id="cb96-6"><a href="segmentation.html#cb96-6" tabindex="-1"></a>                   <span class="st">&quot;C&quot;</span>,  <span class="co"># Indication that variable is continuous</span></span>
+<span id="cb96-7"><a href="segmentation.html#cb96-7" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb96-8"><a href="segmentation.html#cb96-8" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb96-9"><a href="segmentation.html#cb96-9" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
+<span id="cb96-10"><a href="segmentation.html#cb96-10" tabindex="-1"></a>    </span>
+<span id="cb96-11"><a href="segmentation.html#cb96-11" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb96-12"><a href="segmentation.html#cb96-12" tabindex="-1"></a>                   <span class="st">&quot;gender&quot;</span>,  <span class="co"># Male or Female</span></span>
+<span id="cb96-13"><a href="segmentation.html#cb96-13" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb96-14"><a href="segmentation.html#cb96-14" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb96-15"><a href="segmentation.html#cb96-15" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb96-16"><a href="segmentation.html#cb96-16" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span>
+<span id="cb96-17"><a href="segmentation.html#cb96-17" tabindex="-1"></a></span>
+<span id="cb96-18"><a href="segmentation.html#cb96-18" tabindex="-1"></a>outk3seg <span class="ot">&lt;-</span> <span class="fu">cldescr</span>(ffseg,  <span class="co"># Orig data with cluster membership added</span></span>
+<span id="cb96-19"><a href="segmentation.html#cb96-19" tabindex="-1"></a>                   <span class="st">&quot;live&quot;</span>,  <span class="co"># Where they live</span></span>
+<span id="cb96-20"><a href="segmentation.html#cb96-20" tabindex="-1"></a>                   <span class="st">&quot;F&quot;</span>,  <span class="co"># Indication that variable is factor</span></span>
+<span id="cb96-21"><a href="segmentation.html#cb96-21" tabindex="-1"></a>                   <span class="st">&quot;k3&quot;</span>)   <span class="co"># Cluster membership variable name</span></span>
+<span id="cb96-22"><a href="segmentation.html#cb96-22" tabindex="-1"></a><span class="co"># Table of means</span></span>
+<span id="cb96-23"><a href="segmentation.html#cb96-23" tabindex="-1"></a>outk3seg<span class="sc">$</span>means</span></code></pre></div>
 
 </div>
 </div>
@@ -2722,7 +2738,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

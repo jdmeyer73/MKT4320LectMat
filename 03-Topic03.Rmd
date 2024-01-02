@@ -30,14 +30,9 @@ library(htmlTable)     # Better HTML Tables
 library(jtools)        # Concise regression results
 library(dplyr)         # Easier programming
 library(caret)         # Create data partitions
-load("Topic03/directmktg.rdata")
-source("Topic03/or_table.R")
-source("Topic03/logreg_cm.R")
-source("Topic03/logreg_roc.R")
-source("Topic03/gainlift.R")
-source("Topic03/logreg_cut.R")
+library(MKT4320BGSU)
+data(directmktg)
 ```
-[Download directmktg.rdata](Topic03/directmktg.rdata)
 
 ## Why not use linear regression?
 
@@ -423,8 +418,6 @@ knitr::include_graphics("Topic03/ClassMat.png")
 <caption>(\#tab:t3logit01or) Logistic Regression Odds Ratio Coefficients ([R code](#table-reftabt3logit01or))</caption>
 
     ```{r t3logit01or, echo=FALSE}
-    # Use the 'or_table.R' user-defined script
-    # It was loaded above with the packages
     flextable(or_table(model))
     ```
 
@@ -439,8 +432,6 @@ knitr::include_graphics("Topic03/ClassMat.png")
     
     <caption>(\#tab:t3cmtrain) Classification Matrix for Training Sample ([R code](#table-reftabt3cmtrain))</caption>
     ```{r t3cmtrain, echo=FALSE, cache=TRUE}
-    # Use the 'logreg_cm.R' user-defined script
-    # It was loaded above with the packages
     # Requires package 'caret'
     logreg_cm(model,      # Object with model results
               train,      # Data to use (i.e., training vs. testing)
@@ -454,8 +445,6 @@ knitr::include_graphics("Topic03/ClassMat.png")
 
     <caption>(\#tab:t3cmtest) Classification Matrix for Test/Holdout Data ([R code](#table-reftabt3cmtest))</caption>
     ```{r t3cmtest, echo=FALSE, cache=TRUE}
-    # Use the 'logreg_cm.R' user-defined script
-    # It was loaded above with the packages
     # Requires package 'caret'
     logreg_cm(model,      # Object with model results
               test,      # Data to use (i.e., training vs. testing)
@@ -466,8 +455,6 @@ knitr::include_graphics("Topic03/ClassMat.png")
     * Area $>.90$ suggests an outstanding model fit
 
     ```{r t3roctrain, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve for Training Sample ([R code](#figure-reffigt3roctrain))"}
-    # Use the 'logreg_roc.R' user-defined script
-    # It was loaded above with the packages
     # Requires package 'pROC' and 'ggplot2
     logreg_roc(model,      # Object with model results
                train)      # Data to use (i.e., training vs. testing)
@@ -477,8 +464,6 @@ knitr::include_graphics("Topic03/ClassMat.png")
     * Area $>.90$ suggests an outstanding model fit
 
     ```{r t3roctest, echo=FALSE, cache=TRUE, message=FALSE, fig.cap="ROC Curve for Test/Holdout Sample ([R code](#figure-reffigt3roctest))"}
-    # Use the 'logreg_roc.R' user-defined script
-    # It was loaded above with the packages
     # Requires package 'pROC' and 'ggplot2
     logreg_roc(model,      # Object with model results
                test)      # Data to use (i.e., training vs. testing)
@@ -550,8 +535,6 @@ knitr::include_graphics("Topic03/ClassMat.png")
     <caption>(\#tab:t3gaintable) Gain Table for Training and Test/Holdout Samples ([R code](#table-reftabt3gaintable))</caption>
 
     ```{r t3gaintable, echo=FALSE}
-    # Use the 'gainlift.R' user-defined script
-    # It was loaded above with the packages
     # Requires packages 'ggplot2', 'dplyr', and 'tidyr'
     # Returns a list of four things:
     #   gainplot, liftplot, gaintable, lifttable
@@ -588,14 +571,10 @@ knitr::include_graphics("Topic03/ClassMat.png")
     * Looking at the plots for both the training sample (see Figure \@ref(fig:t3sensspec01)) and the test/holdout sample (see Figure \@ref(fig:t3sensspec02)), it might be worthwhile to try a cutoff threshold between 0.35 and 0.40
         * Doing so will balance specificity and sensitivity without hurting accuracy
     ```{r t3sensspec01, echo=FALSE, fig.cap="Sensitivity/Specificity Plot for Training Sample ([R code](#figure-reffigt3sensspec01))"}
-    # Use the 'logreg_cut.R' user-defined script
-    # It was loaded above with the packages
     # Requires packages 'ggplot2'
     logreg_cut(model, train, "Yes")
     ```
     ```{r t3sensspec02, echo=FALSE, fig.cap="Sensitivity/Specificity Plot for Test/Holdout Sample ([R code](#figure-reffigt3sensspec02))"}
-    # Use the 'logreg_cut.R' user-defined script
-    # It was loaded above with the packages
     # Requires packages 'ggplot2'
     logreg_cut(model, test, "Yes")
     ```
@@ -699,8 +678,6 @@ ufz %>%
 ### Figure \@ref(fig:t3roctrain) {.unlisted .unnumbered}
 
 ```{r t3roctraincode, eval=FALSE}
-# Use the 'logreg_roc.R' user-defined script
-# It was loaded above with the packages
 # Requires package 'pROC' and 'ggplot2
 logreg_roc(model,      # Object with model results
            train)      # Data to use (i.e., training vs. testing)
@@ -709,8 +686,6 @@ logreg_roc(model,      # Object with model results
 ### Figure \@ref(fig:t3roctest) {.unlisted .unnumbered}
 
 ```{r t3roctestcode, eval=FALSE}
-# Use the 'logreg_roc.R' user-defined script
-# It was loaded above with the packages
 # Requires package 'pROC' and 'ggplot2
 logreg_roc(model,      # Object with model results
            test)      # Data to use (i.e., training vs. testing)
@@ -779,8 +754,6 @@ glresults$gainlift
 ### Figure \@ref(fig:t3sensspec01) {.unlisted .unnumbered}
 
 ```{r t3sensspec01code, eval=FALSE}
-# Use the 'logreg_cut.R' user-defined script
-# It was loaded above with the packages
 # Requires packages 'ggplot2'
 logreg_cut(model, train, "Yes")
 ```
@@ -788,8 +761,6 @@ logreg_cut(model, train, "Yes")
 ### Figure \@ref(fig:t3sensspec02) {.unlisted .unnumbered}
 
 ```{r t3sensspec02code, eval=FALSE}
-# Use the 'logreg_cut.R' user-defined script
-# It was loaded above with the packages
 # Requires packages 'ggplot2'
 logreg_cut(model, test, "Yes")
 ```
@@ -829,16 +800,12 @@ summ(model, model.info=FALSE, digits=4)
 ### Table \@ref(tab:t3logit01or) {.unlisted .unnumbered}
 
 ```{r t3logit01orcode, eval=FALSE}
-# Use the 'or_table.R' user-defined script
-# It was loaded above with the packages
 flextable(or_table(model))
 ```
 
 ### Table \@ref(tab:t3cmtrain) {.unlisted .unnumbered}
 
 ```{r t3cmtraincode, eval=FALSE}
-# Use the 'logreg_cm.R' user-defined script
-# It was loaded above with the packages
 # Requires package 'caret'
 logreg_cm(model,      # Object with model results
           train,      # Data to use (i.e., training vs. testing)
@@ -848,8 +815,6 @@ logreg_cm(model,      # Object with model results
 ### Table \@ref(tab:t3cmtest) {.unlisted .unnumbered}
 
 ```{r t3cmtestcode, eval=FALSE}
-# Use the 'logreg_cm.R' user-defined script
-# It was loaded above with the packages
 # Requires package 'caret'
 logreg_cm(model,      # Object with model results
           test,      # Data to use (i.e., training vs. testing)
@@ -859,8 +824,6 @@ logreg_cm(model,      # Object with model results
 ### Table \@ref(tab:t3gaintable) {.unlisted .unnumbered}
 
 ```{r t3gaintablecode, eval=FALSE}
-# Use the 'gainlift.R' user-defined script
-# It was loaded above with the packages
 # Requires packages 'ggplot2', 'dplyr', and 'tidyr'
 # Returns a list of four things:
 #   gainplot, liftplot, gaintable, lifttable

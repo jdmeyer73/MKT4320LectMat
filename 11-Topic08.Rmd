@@ -1,0 +1,454 @@
+```{r echo=FALSE}
+knitr::opts_chunk$set(comment=NA)
+options(scipen=5)  # Turns off scientific notation
+```
+
+# Conjoint Analysis (Not Covered)
+
+## R Packages and Datasets for Topic 11
+
+``` {r t11packagesdata, message=FALSE}
+library(ggplot2)       # Advanced graphing capabilities
+library(dplyr)         # Easier programming
+data(airlineca)
+```
+``` {r t11packagesdata2, echo=FALSE, message=FALSE}
+library(flextable)
+library(kableExtra)
+```
+
+## Why Conjoint?
+
+### Buyers versus Sellers
+
+* Buyers want to *Maximize Utility*
+    * Most desirable features
+    * Lowest possible price
+* Sellers want to *Maximize Profits*
+    * Lower costs
+    * Greater value
+    
+### Breaking Down Products
+
+* Buyers value products based on the sum of their parts
+    * If we can learn how buyers value components, we can design better positioned products, and improve profitability
+    
+### Learning What Customers Want
+
+* Ask direct questions about preference
+    * Unfortunately, responses are often unenlightening
+    * No information about sensitivities within ranges
+* Ask direct questions about importance
+    * Typically results if everything being important
+    * Problem of low discrimination
+    
+### How is Conjoint Analysis Different?
+
+* Present consumers with realistic tradeoffs
+    * For example: ***Which would you prefer in your next automobile?***
+        a) 210 Horsepower, 18 MPG
+        b) 140 Horsepower, 28 MPG
+    * If "a" is selected, we infer that they prefer power
+    * If "b" is selected, we infer that they prefer fuel economy
+* Doesn't ask directly about preferences or importance
+    * Preferences and importance inferred from tradeoffs made
+
+### Why Does Conjoint Analysis Work?
+
+* Consumers:
+    * Make tradeoffs similar to those in the real market
+    * Are discouraged from saying all features are equally desirable
+    * Must make difficult tradeoffs, which provides more valuable info
+    
+### Practical Guidelines
+
+* Should be able to specify product as a bundle of attributes  
+* Need to know the determinant attributes
+* Respondents should be familiar with category and attributes
+* Firm should be able to act on results
+
+## How Conjoint Analysis Works
+
+1) Break down product into component parts or features
+2) Vary features to “build” many product concepts
+3) Ask respondents to rank/rate or choose between concepts
+4) Use statistics to derive each feature’s unique value  $\leftarrow$ Marketing analytics
+
+### Rules for Creating the Attribute List
+
+* Each attribute has varying levels
+    * EXAMPLE
+        * **Attribute**: Brand<br>*Levels*: Apple; Samsung; Moto
+        * **Attribute**: Screen Size<br>*Levels*: 5"; 5.5"; 6"
+        * **Attribute**: Battery<br>*Levels*: 12 hrs.; 18 hrs.; 24 hrs.
+        * **Attribute**: Price<br>*Levels*: \$400; \$700; \$1000
+        * **Attribute**: Storage<br>*Levels*: 32GB; 64GB; 128GB
+* Try to balance number of levels across attributes
+    * Reduces the number of levels bias: Holding all else constant, attributes with more levels than others will be biased upwards in importance
+    * EXAMPLE
+        * A PRICE attribute with levels of \$10, \$12, \$14,\$16, \$18, \$20 will have a higher relative importance compared to other attributes than if the PRICE attribute levels were \$10, \$15, \$20
+* Attribute levels should be mutually exclusive
+    * EXAMPLE
+        * **Attribute**: Accessories<br>*Levels*: Screen protector; Phone case; Protection plan
+        * We could not determine the value of providing these features at the same time
+        
+### Build Concepts
+
+* Suppose three attributes, each with three levels
+    * There would be $3\times 3\times 3=27$ different profiles
+    
+### Rate/Rank/Choose Concepts
+
+* EXAMPLE
+    * **Rate**: On a scale of 1 to 100, how likely would you be to purchase the following product combination?
+    * **Rank**: Please rate the following combinations from most likely to least likely to purchase.
+    * **Choose**: Which of the following product combinations would you choose?
+* Traditional Conjoint
+    * Rate or rank profiles
+    * Good for small number of attributes
+    * Can work for small samples
+* Adaptive Conjoint
+    * Rate attributes and choose profiles
+    * Good for high number of attributes
+    * Bad for pricing research
+* Choice-Based Conjoint
+    * Choose profiles
+    * Best mirrors real-world purchase
+    * Requires larger sample sizes
+    
+### Use Statistics to Derive Unique Value
+
+* Traditional Conjoint
+    * Uses regression-based methods
+* Adaptive Conjoint
+    * Use hierarchical Bayesian methods
+* Choice-Based Conjoint
+    * Uses multinomial choice models with hierarchical Bayesian methods
+* QUESTION: What type of data output do we get from conjoint analysis?<BR>
+ANSWER: Part-worth utilities
+    * Numerical values that	reflect how desirable different features are
+        * How consumers value each level of each attribute
+    * Can be created for each respondent
+    
+## Part-Worth Utilities and Importances
+
+### Characteristics of Part-Worth Utilities
+
+* EXAMPLE:
+    * Suppose we studied burritos and used two attributes: *Price* and *Meat*
+    * We might end up with the following part-worth utilities for a single respondent
+    
+    ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+    Level <- c("$6", "$8", "$10")
+    Utility <- c(48,32,24)
+    df <- data.frame(cbind(Level, Utility))
+    kable(df, format="html") %>% 
+      kable_styling("striped", full_width=FALSE) %>% 
+      add_header_above(c("Price"=2))
+    
+    Level <- c("Chicken", "Steak")
+    Utility <- c(29,13)
+    df <- data.frame(cbind(Level, Utility))
+    kable(df, format="html") %>% 
+      kable_styling("striped", full_width=FALSE) %>% 
+      add_header_above(c("Meat"=2))
+    ```
+
+* Higher is more preferred
+    * EXAMPLE:
+        * \$6 preferred to \$8
+        * \$8 preferred to \$10
+        * Chicken preferred to Steak
+* Can be positive or negative
+    * Higher is still more preferred
+* Estimated on an interval scale
+    * Addition/subtraction allowed
+    * Multiplication/division not allowed
+    * EXAMPLE: 
+        * Can't say \$6 is "twice as preferred" as \$10
+* CANNOT compare level from one attribute with level from another attribute
+    * EXAMPLE:
+        * Can’t say \$6 is more preferred than Chicken
+* CAN compare differences between levels of one attribute with levels of another attribute
+    * EXAMPLE: 
+        * Preference difference between \$6 and \$8 is same as between Chicken and Steak
+* Total utility for a profile is additive
+    * EXAMPLE: 
+        * $3\times 2=6$ product combinations with the following utilities:
+            * \$6	–	Chicken: 48 + 29 = 77
+            * \$8	–	Chicken: 32 + 29 = 61
+            * \$6	–	Steak: 48 + 13 = 61
+            * \$10 –	Chicken: 24 + 29 = 53
+            * \$8	–	Steak: 32 + 13 = 45
+            * \$10	–	Steak: 24 + 13 = 37
+            
+### Calculating Part-Worth Utilities (traditional conjoint)
+
+* Each respondent provided ratings on many product profiles
+* For each respondent, run a linear regression:
+    * $profilerating_i=\alpha+\beta_kattr_{ik}$
+* Works if: profiles rated > attribute levels in the regression equation
+* Regression coefficients become the part-worth utilities
+    * Not concerned with significance
+
+### From Utilities to Importances
+
+* Part-worth utilities
+    * DO… directly provide a measure of preference within attributes
+    * DON’T… directly provide a measure of each attributes importance
+* Conjoint Importances
+    * Measures how much influence each attribute has on choice
+    * Considers the difference each attribute could make in total utility
+
+### Calculating Conjoint Importances
+
+1) Calculate utility range for each attribute
+2) Sum up ranges
+3) Calculate percent of "total range" each attribute contributes
+
+* EXAMPLE:
+    * Suppose we add a third attribute to our burrito example: *Guacamole*
+    * We might end up with the following part-worth utilities for a single respondent
+    
+    ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+    Level <- c("$6", "$8", "$10")
+    Utility <- c(48,32,24)
+    df <- data.frame(cbind(Level, Utility))
+    kable(df, format="html") %>% 
+      kable_styling("striped", full_width=FALSE) %>% 
+      add_header_above(c("Price"=2))
+    
+    Level <- c("Chicken", "Steak")
+    Utility <- c(29,13)
+    df <- data.frame(cbind(Level, Utility))
+    kable(df, format="html") %>% 
+      kable_styling("striped", full_width=FALSE) %>% 
+      add_header_above(c("Meat"=2))
+    
+    Level <- c("Yes", "No")
+    Utility <- c(47,15)
+    df <- data.frame(cbind(Level, Utility))
+    kable(df, format="html") %>% 
+      kable_styling("striped", full_width=FALSE) %>% 
+      add_header_above(c("Guacamole"=2))
+    ```
+
+    * Step 1: Calculate range for each attirbute
+        * **Price**: \$6 (high) - \$10 (low) = 48 - 24 = 24
+        * **Meat**: Chicken (high) - Steak (low) = 29 - 13 = 16
+        * **Guacamole**: Yes (high) - No (low) = 47 - 15 = 24
+    * Step 2: Sum up the ranges
+        * 24 + 16 + 32 = 72
+    * Step 3: Calculate percent of "total range" each attribute contributes
+        * **Price**: 24/72 = 33.4%
+        * **Meat**: 16/72 = 22.2%
+        * **Guacamole**: 32/72 = 44.4%
+        
+### Interpreting Conjoint Importances
+
+* Higher is more important
+    * *Guac* is most important, followed by *Price*, then *Meat*
+* Ratio scaled
+    * Can say that *Guac* is twice as important as *Meat*
+* Computing average importances
+    * Compute for each respondent and then average
+    
+### Further Analysis
+
+* If respondent characteristics are available, further analysis can be performed to understand relationships between characteristics and part-worths and importances
+    * Correlation analysis between part-worths/importances and continuous respondent characteristics
+    * Regression analysis with importances as the DV and characteristics as the IVs
+    
+### Prediction
+
+* Can predict value of different profiles to see which is preferred
+    * Can be done overall or on a case-by-case basis
+    
+## Traditional Conjoint Example
+
+### Data
+
+* Conjoint ratings from 40 people ($caseid$) on nine bundles
+    * Value ($value$): (0 = Not at all; 100 = Very much)
+    * Attributes:
+        * $airline$
+            * 1: Delta
+            * 2: Spirit
+            * 3: SW
+        * $connect$
+            * 1: None (No connections)
+            * 2: One (One connection)
+        * $price
+            * 1: \$300
+            * 2: \$450
+            * 3: \$600
+* Goal: Generate individual and average part-worths and importances
+
+### Summarize
+
+* Average value ratings by attribute levels
+
+<caption>(\#tab:t11summ) Average Value Ratings by Attribute Levels ([R code](#table-reftabt11summ))</caption>
+
+```{r t11summ, echo=FALSE}
+airlineca %>% 
+  group_by(airline) %>%
+  summarise(mean=mean(value)) %>% flextable()
+
+airlineca %>% 
+  group_by(connect) %>%
+  summarise(mean=mean(value)) %>% flextable()
+  
+airlineca %>% 
+  group_by(price) %>%
+  summarise(mean=mean(value)) %>% flextable()
+```
+
+### Regression results for one respondent
+
+* For $caseid=13$
+
+    ```{r echo=FALSE}
+    aca13 <- airlineca %>% filter(caseid==13)
+    
+    lmaca13 <- lm(value~airline+connect+price, data=aca13)
+    summary(lmaca13)$coefficients
+    ```
+
+* Part-Worth Utilities
+    * Airline
+        * SW = 13.33<br>Delta = 16.67<br>Spirit = 0
+    * Connections
+        * None = 5<br>One = 0
+    * Price
+        * \$300 = 81<br>\$450 = 47<br>\$600 = 0
+        
+### Importances for one respondent
+
+* Sum of ranges:
+    * $16.67+5+81=102.37$
+* Airline Importance:
+    * $\frac{16.67}{102.37}=16.28\%$
+* Connections Importance:
+    * $\frac{5}{102.37}=4.88\%$
+* Price Importance:
+    * $\frac{81}{102.37}=79.12\%$
+    
+### Average Part-Worth Utilities and Importances
+
+``` {r t11avepw, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Part-Worth Plots ([R code](#figure-reffigt11avepw))"}
+caform <- value ~ airline + connect + price
+results <- tradca(formula=caform,
+                  data=airlineca,
+                  idvar="caseid")
+results$pwplot
+```
+``` {r t11aveimp, echo=FALSE, fig.cap="Importance Plot ([R code](#figure-reffigt11aveimp))"}
+results$impplot
+```
+
+### Explain Importances by Other Variables
+
+<caption>(\#tab:t11expl) Explanation by Other Variables ([R code](#table-reftabt11expl))</caption>
+
+``` {r t11expl, echo=FALSE, message=FALSE, warning=FALSE}
+demos <- airlineca %>%
+  group_by(caseid) %>%
+  summarise(inc=first(inc),
+            type=first(type)) %>%
+  bind_cols(.,results$casetable[,2:12])
+
+cademo(caform, demos, c("inc", "type"))
+```
+
+* $income$ has significant positive correlations with *Delta* and *SW* part-worths
+* $income$ has a significant negative correlation with *\$300* price
+* $income$ has a significant positive correlation with the importance of $airline$ and a significant negative correlation with the importance of $price$
+* For a $\$1000$ increase in $income$, we would expect a $.33\%$ increase in the importance of $airline$
+* For a $\$1000$ increase in $income$, we would expect a $.41\%$ decrease in the importance of $price$
+* We would expect the importance of $price$ to be $14.5\%$ greater for *Pleasure* travelers than for *Business* travelers
+
+### Predict Part-Worths for New Profiles
+
+<caption>(\#tab:t11pred) Profile Predictions ([R code](#table-reftabt11expl))</caption>
+
+```{r t11pred, echo=FALSE}
+prof1 <- c("airline_1", "connect_1", "price_2")
+prof2 <- c("airline_2", "connect_1", "price_1")
+capred(caform,results$casetable,prof1,prof2)
+```
+
+* On average, would prefer a cheaper flight on *Spirit* versus a more expensive flight on *Delta*
+    * Although the difference is not significant ($95\%\text{ CIs}$ overlap)
+
+## Suggested Readings
+
+* *Multivariate Data Analysis*. Hair, Joseph F.; Black, William C.; Babin, Barry J.; Anderson, Rolph E.
+    * 7th Edition: Search for “multivariate data analysis 7th edition hair”
+        * Chapter 7: Conjoint Analysis
+    * 5th Edition: Course reserves
+        * Chapter 7: Conjoint Analysis
+* Techincal papers on general conjoint analysis
+    * [https://sawtoothsoftware.com/resources/technical-papers/categories/general-conjoint-analysis](https://sawtoothsoftware.com/resources/technical-papers/categories/general-conjoint-analysis)
+        
+## R Code
+
+### Figure \@ref(fig:t11avepw) {.unlisted .unnumbered}
+
+``` {r t11avepwcode, eval=FALSE}
+caform <- value ~ airline + connect + price   # Set formula
+results <- tradca(formula=caform,  # Pass formula
+                  data=airlineca,  # Pass data set
+                  idvar="caseid")  # Pass ID variable
+results$pwplot   # Request plot
+```
+
+### Figure \@ref(fig:t11aveimp) {.unlisted .unnumbered}
+
+``` {r t11aveimpcode, eval=FALSE}
+results$impplot  # Request importance plot from previous results
+```
+
+### Table \@ref(tab:t11summ) {.unlisted .unnumbered}
+
+```{r t11summcode, eval=FALSE}
+airlineca %>% 
+  group_by(airline) %>%
+  summarise(mean=mean(value))
+
+airlineca %>% 
+  group_by(connect) %>%
+  summarise(mean=mean(value))
+    
+airlineca %>% 
+  group_by(price) %>%
+  summarise(mean=mean(value))
+```
+
+### Table \@ref(tab:t11expl) {.unlisted .unnumbered}
+
+``` {r t11explcode, eval=FALSE}
+# Create new dataframe with demographic variables attached to case-level
+# part-worths and importances
+demos <- airlineca %>%
+  group_by(caseid) %>%
+  summarise(inc=first(inc),
+            type=first(type)) %>%
+  bind_cols(.,results$casetable[,2:12])
+
+cademo(caform,  # Pass formula
+       demos,   # Pass demos dataframe
+       c("inc", "type"))  # Provide demographic variable names
+```
+
+
+### Table \@ref(tab:t11pred) {.unlisted .unnumbered}
+
+```{r t11predcode, eval=FALSE}
+prof1 <- c("airline_1", "connect_1", "price_2")   # Set first profile
+prof2 <- c("airline_2", "connect_1", "price_1")   # Set second profile
+capred(caform,             # Pass formula
+       results$casetable,  # Pass case-by-case part-worths and importances
+       prof1,              # Pass profile 1
+       prof2)              # Pass Profile 2
+```

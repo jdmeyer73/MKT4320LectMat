@@ -20,10 +20,9 @@ library(questionr)   # Easier frequency tables
 library(htmlTable)   # Better HTML Tables
 library(mosaic)      # Statistical functions
 library(sjPlot)      # Easily create cross-tabs
-load("Topic01/airlinesat.rdata")
+library(MKT4320BGSU)
+data(airlinesat)
 ```
-
-[Download airlinesat.rdata](Topic01/airlinesat.rdata)
 
 ## Describing Data
 

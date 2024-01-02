@@ -13,7 +13,7 @@ description: |
 link-citations: yes
 ---
 ```{r echo=FALSE}
-knitr::opts_chunk$set(comment=NA)
+knitr::opts_chunk$set(comment=NA, messages=FALSE, warning=FALSE)
 ```
 
 # Introduction {-}
